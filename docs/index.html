@@ -24,6 +24,7 @@
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Makes the OPPO Snap Key open any app or link, without root."}
 </script>
@@ -56,7 +57,7 @@
 </svg>
 
 <!-- Fond : halos qui dérivent lentement, trame de points -->
-<div class="sky" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="dots"></i></div>
+<div class="sky" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
 
 <header class="nav">
   <div class="nav-in">
@@ -86,6 +87,7 @@
 <main id="main">
 
   <section class="hero">
+    <div class="gridbg" aria-hidden="true"><i class="cell" style="--cx:-6;--cy:1;--c:#2FD39A;--d:0s"></i><i class="cell" style="--cx:5;--cy:2;--c:#5B8DEF;--d:1.2s"></i><i class="cell" style="--cx:-3;--cy:4;--c:#F08A3E;--d:2.4s"></i><i class="cell" style="--cx:7;--cy:5;--c:#8B6CF0;--d:3.1s"></i><i class="cell" style="--cx:-8;--cy:6;--c:#4CC9E0;--d:0.6s"></i><i class="cell" style="--cx:3;--cy:0;--c:#E2557A;--d:4.2s"></i><i class="cell" style="--cx:-5;--cy:9;--c:#2FD39A;--d:1.8s"></i><i class="cell" style="--cx:6;--cy:9;--c:#E3B23C;--d:3.6s"></i><i class="cell" style="--cx:-2;--cy:1;--c:#4CC9E0;--d:5s"></i><i class="cell" style="--cx:9;--cy:3;--c:#2FD39A;--d:2.8s"></i><i class="cell" style="--cx:-9;--cy:3;--c:#E2557A;--d:4.6s"></i><i class="cell" style="--cx:2;--cy:7;--c:#5B8DEF;--d:0.3s"></i></div>
     <div class="hero-copy">
       <p class="eyebrow"><span class="dot"></span>Open source · OPPO Find X9 series · No root</p>
       <h1>Remap the OPPO Snap Key to open <em>any app</em></h1>
@@ -148,7 +150,7 @@
     <p class="sub">Pick an installed app, or paste a link. If Android can open it, the Snap Key can open it. A few ideas:</p>
 
     <ul class="bento" id="bento">
-      <li class="tile big dark reveal">
+      <li class="tile big dark">
         <div class="tile-top"><span class="ico" style="--h:#2FD39A"><svg><use href="#g-term"/></svg></span><span class="kind">Link</span></div>
         <h3>Jump into Claude Code</h3>
         <p>Your running Claude Code session, one press away. Talk to your agent like a walkie-talkie, from the street, Wi-Fi off.</p>
@@ -163,7 +165,7 @@
         <code>https://claude.ai/code/…</code>
       </li>
 
-      <li class="tile w2 reveal" style="--tint:var(--t-sky)">
+      <li class="tile w2" style="--tint:var(--t-sky)">
         <div class="tile-top"><span class="ico" style="--h:#5B8DEF"><svg><use href="#g-route"/></svg></span><span class="kind">Link</span></div>
         <h3>Navigate, hands busy</h3>
         <p>Google Maps turn-by-turn to a saved place, by bike or by car.</p>
@@ -171,35 +173,35 @@
         <code>google.navigation:q=Central+Station&amp;mode=b</code>
       </li>
 
-      <li class="tile reveal" style="--tint:var(--t-rose)">
+      <li class="tile" style="--tint:var(--t-rose)">
         <div class="tile-top"><span class="ico" style="--h:#E2557A"><svg><use href="#g-music"/></svg></span><span class="kind">Link</span></div>
         <h3>Your run playlist</h3>
         <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         <code>spotify:playlist:…</code>
       </li>
 
-      <li class="tile reveal" style="--tint:var(--t-amber)">
+      <li class="tile" style="--tint:var(--t-amber)">
         <div class="tile-top"><span class="ico" style="--h:#F08A3E"><svg><use href="#g-run"/></svg></span><span class="kind">App</span></div>
         <h3>Strava, ready to record</h3>
         <div class="rec" aria-hidden="true"><i></i><span>Record</span></div>
         <code>App: Strava</code>
       </li>
 
-      <li class="tile reveal" style="--tint:var(--t-slate)">
+      <li class="tile" style="--tint:var(--t-slate)">
         <div class="tile-top"><span class="ico" style="--h:#4E9C7E"><svg><use href="#g-doc"/></svg></span><span class="kind">Link</span></div>
         <h3>Today's notes doc</h3>
         <div class="lines" aria-hidden="true"><i></i><i></i><i></i></div>
         <code>docs.google.com/document/d/…</code>
       </li>
 
-      <li class="tile reveal" style="--tint:var(--t-amber)">
+      <li class="tile" style="--tint:var(--t-amber)">
         <div class="tile-top"><span class="ico" style="--h:#E3B23C"><svg><use href="#g-clock"/></svg></span><span class="kind">App</span></div>
         <h3>Your alarms</h3>
         <svg class="viz-clock" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="24"/><path class="hh" d="M30 30V18"/><path class="mh" d="M30 30h14"/></svg>
         <code>App: Clock</code>
       </li>
 
-      <li class="tile w2 reveal" style="--tint:var(--t-mint)">
+      <li class="tile w2" style="--tint:var(--t-mint)">
         <div class="tile-top"><span class="ico" style="--h:#2FA37A"><svg><use href="#g-home"/></svg></span><span class="kind">Link</span></div>
         <h3>The garage dashboard</h3>
         <p>Home Assistant opens straight on the right page. Lights, door, heating.</p>
@@ -207,7 +209,7 @@
         <code>homeassistant://navigate/lovelace/garage</code>
       </li>
 
-      <li class="tile w2 reveal" style="--tint:var(--t-lilac)">
+      <li class="tile w2" style="--tint:var(--t-lilac)">
         <div class="tile-top"><span class="ico" style="--h:#8B6CF0"><svg><use href="#g-hook"/></svg></span><span class="kind">Link</span></div>
         <h3>Fire a workflow</h3>
         <p>Open a webhook URL that accepts GET (n8n, for example): log a coffee, start a timer, ping your team.</p>
@@ -215,35 +217,35 @@
         <code>https://n8n.example.com/webhook/…</code>
       </li>
 
-      <li class="tile reveal" style="--tint:var(--t-mint)">
+      <li class="tile" style="--tint:var(--t-mint)">
         <div class="tile-top"><span class="ico" style="--h:#25B865"><svg><use href="#g-chat"/></svg></span><span class="kind">Link</span></div>
         <h3>One WhatsApp chat</h3>
         <div class="bubbles" aria-hidden="true"><i></i><i></i></div>
         <code>https://wa.me/&lt;number&gt;</code>
       </li>
 
-      <li class="tile txt reveal" style="--tint:var(--t-sky)">
+      <li class="tile txt" style="--tint:var(--t-sky)">
         <div class="tile-top"><span class="ico" style="--h:#3E8EDE"><svg><use href="#g-phone"/></svg></span><span class="kind">Link</span></div>
         <h3>Call someone</h3>
         <p>The dialer opens with the number ready.</p>
         <code>tel:&lt;number&gt;</code>
       </li>
 
-      <li class="tile txt reveal" style="--tint:var(--t-slate)">
+      <li class="tile txt" style="--tint:var(--t-slate)">
         <div class="tile-top"><span class="ico" style="--h:#6B7A72"><svg><use href="#g-book"/></svg></span><span class="kind">Link</span></div>
         <h3>A Notion page</h3>
         <p>Your inbox, journal or shopping list.</p>
         <code>https://www.notion.so/…</code>
       </li>
 
-      <li class="tile txt reveal" style="--tint:var(--t-lilac)">
+      <li class="tile txt" style="--tint:var(--t-lilac)">
         <div class="tile-top"><span class="ico" style="--h:#8B6CF0"><svg><use href="#g-spark"/></svg></span><span class="kind">App</span></div>
         <h3>Your AI assistant</h3>
         <p>Gemini, ChatGPT, Claude: whichever you prefer to OPPO's.</p>
         <code>App: any</code>
       </li>
 
-      <li class="tile w2 reveal" style="--tint:var(--t-slate)">
+      <li class="tile w2" style="--tint:var(--t-slate)">
         <div class="tile-top"><span class="ico" style="--h:#0A8A63"><svg><use href="#g-grid"/></svg></span><span class="kind">App</span></div>
         <h3>Or any installed app</h3>
         <p>Camera alternatives, password manager, voice recorder, banking, translator. Pick it from the list in SnapKey Mapper.</p>
@@ -283,9 +285,9 @@
     <p class="kicker">Gestures</p>
     <h2 id="gest-h">Choose how you press</h2>
     <ul class="gestures">
-      <li class="reveal"><span class="g g-single" aria-hidden="true"><i></i></span><h3>Single press</h3><p>The fastest, if you do not use the key for anything else.</p></li>
-      <li class="reveal"><span class="g g-double" aria-hidden="true"><i></i><i></i></span><h3>Double press</h3><p>Two quick presses, so a press in your pocket never opens anything.</p></li>
-      <li class="reveal"><span class="g g-long" aria-hidden="true"><i></i></span><h3>Long press</h3><p>Hold for half a second.</p></li>
+      <li><span class="g g-single" aria-hidden="true"><i></i></span><h3>Single press</h3><p>The fastest, if you do not use the key for anything else.</p></li>
+      <li><span class="g g-double" aria-hidden="true"><i></i><i></i></span><h3>Double press</h3><p>Two quick presses, so a press in your pocket never opens anything.</p></li>
+      <li><span class="g g-long" aria-hidden="true"><i></i></span><h3>Long press</h3><p>Hold for half a second.</p></li>
     </ul>
   </section>
 
@@ -300,9 +302,9 @@
     <p class="kicker">Under the hood</p>
     <h2 id="how">How it works, honestly</h2>
     <ul class="cards">
-      <li class="reveal"><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS logs every press</h3><p>The system log gets a line with <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper reads the log, spots that line and opens your app or link.</p></li>
-      <li class="reveal"><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>No root, no accessibility</h3><p>Reading the log needs one permission, <code>READ_LOGS</code>, granted once with a single command. It stays after a reboot.</p></li>
-      <li class="reveal"><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Nothing leaves your phone</h3><p>No internet permission, so the app cannot send anything anywhere. It keeps only your target, the key name and the gesture.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS logs every press</h3><p>The system log gets a line with <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper reads the log, spots that line and opens your app or link.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>No root, no accessibility</h3><p>Reading the log needs one permission, <code>READ_LOGS</code>, granted once with a single command. It stays after a reboot.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Nothing leaves your phone</h3><p>No internet permission, so the app cannot send anything anywhere. It keeps only your target, the key name and the gesture.</p></li>
     </ul>
   </section>
 
@@ -458,7 +460,7 @@
   ];
   var i = 0, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
       launch = document.getElementById('launch'), use = launch.querySelector('use');
-  setInterval(function () {
+  function cycle() {
     if (document.hidden) return;
     i = (i + 1) % T.length;
     var t = T[i];
@@ -472,7 +474,9 @@
       rot.textContent = t[0];
       rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
     }, 260);
-  }, 2800);
+  }
+  // La scène d'ouverture joue d'abord (icônes, appui, Claude Code), puis le cycle démarre
+  setTimeout(function () { setInterval(cycle, 2800); }, 1800);
 
   if (!matchMedia('(pointer: fine)').matches) return;
   var hero = document.querySelector('.hero'), raf = 0, mx = 0, my = 0;
@@ -489,6 +493,38 @@
     var r = t.getBoundingClientRect();
     t.style.setProperty('--x', (e.clientX - r.left) + 'px'); t.style.setProperty('--y', (e.clientY - r.top) + 'px');
   });
+})();
+// Apparitions au défilement, façon Audit Greenwashing : léger glissement et fondu rapide, en cascade
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('main > section:not(.hero) > .kicker, main > section:not(.hero) > h2, main > section > .sub, .facts, .split-copy > *, .console, .narrow > p, .table-wrap, .faq details, .final-card, .bento > li, .gestures > li, .cards > li, .steps > li, .note');
+  var steps = document.querySelector('.steps');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function (e) { e.classList.add('in'); });
+    steps.style.setProperty('--p', 1);
+    return;
+  }
+  els.forEach(function (e) { e.setAttribute('data-r', e.matches('.steps > li') ? 'side' : ''); });
+  var io = new IntersectionObserver(function (entries) {
+    var k = 0;
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      en.target.style.setProperty('--i', Math.min(k++, 6));
+      en.target.classList.add('in');
+      io.unobserve(en.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  els.forEach(function (e) { io.observe(e); });
+
+  // La frise des étapes se remplit à mesure qu'on descend
+  var raf = 0;
+  function fill() {
+    raf = 0;
+    var r = steps.getBoundingClientRect(), p = (innerHeight * 0.65 - r.top) / r.height;
+    steps.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(3));
+  }
+  addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(fill); }, { passive: true });
+  fill();
 })();
 </script>
 </body>
