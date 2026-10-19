@@ -1,4 +1,4 @@
-package io.github.owner.snapkey;
+package io.github.damienllado.snapkeymapper;
 
 import android.Manifest;
 import android.app.Activity;
@@ -34,7 +34,7 @@ import java.util.regex.Pattern;
 
 /** Single screen: permissions, target to open, side key detection in the log, start and stop. */
 public class MainActivity extends Activity {
-    private static final String COMMAND = "pm grant io.github.owner.snapkey android.permission.READ_LOGS";
+    private static final String COMMAND = "pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS";
     // Lines likely to be about a key
     private static final Pattern HINT = Pattern.compile(
             "key|snap|button|gpio|trigger|shortcut|quick|hotkey|keycode|key_", Pattern.CASE_INSENSITIVE);
@@ -82,7 +82,7 @@ public class MainActivity extends Activity {
         title(top, "2. What the side key opens");
         RadioGroup targets = new RadioGroup(this);
         RadioButton asLink = new RadioButton(this), asApp = new RadioButton(this);
-        asLink.setText("A link (web address or deep link)");
+        asLink.setText("A link (web address, deep link or intent: link)");
         asApp.setText("An installed app");
         asLink.setChecked(!Prefs.targetType(this).equals("app"));
         asApp.setChecked(Prefs.targetType(this).equals("app"));
@@ -96,7 +96,14 @@ public class MainActivity extends Activity {
         link.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_URI);
         appName = text(top, "");
         button(top, "Choose an app", v -> chooseApp());
-        button(top, "Test the launch", v -> { save(); Prefs.openTarget(this); });
+        button(top, "Test the launch", v -> {
+            save();
+            try {
+                Prefs.openTarget(this);
+            } catch (RuntimeException e) {
+                Toast.makeText(this, "Cannot open it: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
 
         title(top, "3. Find the side key in the log");
         text(top, "Start the capture (accept the log access prompt if Android shows one), press the side key 2 or 3 times, stop. Then tap the line that comes back at every press.");

@@ -1,4 +1,4 @@
-package io.github.owner.snapkey;
+package io.github.damienllado.snapkeymapper;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.net.Uri;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
 
 /** App settings, launching the target and reading the system log. */
 final class Prefs {
@@ -34,14 +35,21 @@ final class Prefs {
         p(c).edit().putString("link", link.trim()).putString("pattern", pattern.trim()).apply();
     }
 
-    /** Opens the chosen link (any app that handles it) or launches the chosen app. */
+    /** Opens the chosen link (any app that handles it, or an intent: link) or launches the chosen app. */
     static void openTarget(Context c) {
         Intent i;
         if (targetType(c).equals("app")) {
             i = c.getPackageManager().getLaunchIntentForPackage(appPackage(c));
         } else {
             String link = link(c);
-            i = link.isEmpty() ? null : new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+            if (link.isEmpty()) return;
+            try {
+                // "intent:" links describe a full Android intent (set a timer, open the camera...); anything else is opened as a link
+                i = link.startsWith("intent:") ? Intent.parseUri(link, Intent.URI_INTENT_SCHEME) : new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+            } catch (URISyntaxException e) {
+                throw new IllegalArgumentException("Invalid intent link", e);
+            }
+            i.setSelector(null);
         }
         if (i == null) return;
         c.startActivity(i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));

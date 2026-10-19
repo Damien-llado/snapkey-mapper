@@ -1,0 +1,14 @@
+{
+  "name": "snapkey-mapper",
+  "owner": {
+    "name": "Damien-llado"
+  },
+  "description": "Claude Code plugin for SnapKey Mapper, the app that remaps the OPPO Snap Key.",
+  "plugins": [
+    {
+      "name": "snapkey-mapper",
+      "source": "./plugins/snapkey-mapper",
+      "description": "Set up the OPPO Snap Key with SnapKey Mapper: finds the link or Android intent for what you want, tests it over adb, installs the app and grants its permission."
+    }
+  ]
+}

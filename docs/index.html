@@ -102,6 +102,7 @@
           <span class="stars" aria-label="GitHub stars">★ <span data-stars>0</span></span>
         </a>
       </div>
+      <p class="live" aria-live="polite"><span class="pulse" aria-hidden="true"></span><strong data-downloads>0</strong> downloads · <strong data-stars>0</strong> stars on GitHub</p>
       <p class="meta">Version 1.0 · Android 11+ · about 40 KB · MIT · tested on Find X9 Pro, ColorOS 16</p>
     </div>
 
@@ -147,7 +148,7 @@
   <section id="examples" class="wide" aria-labelledby="ex-h">
     <p class="kicker">Examples</p>
     <h2 id="ex-h">One key. Anything that opens from a link.</h2>
-    <p class="sub">Pick an installed app, or paste a link. If Android can open it, the Snap Key can open it. A few ideas:</p>
+    <p class="sub">Pick an installed app, paste a link, or write an <code>intent:</code> link for anything Android can do. A few ideas:</p>
 
     <ul class="bento" id="bento">
       <li class="tile big dark">
@@ -195,10 +196,10 @@
       </li>
 
       <li class="tile" style="--tint:var(--t-amber)">
-        <div class="tile-top"><span class="ico" style="--h:#E3B23C"><svg><use href="#g-clock"/></svg></span><span class="kind">App</span></div>
-        <h3>Your alarms</h3>
+        <div class="tile-top"><span class="ico" style="--h:#E3B23C"><svg><use href="#g-clock"/></svg></span><span class="kind">Intent</span></div>
+        <h3>A 5-minute timer</h3>
         <svg class="viz-clock" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="24"/><path class="hh" d="M30 30V18"/><path class="mh" d="M30 30h14"/></svg>
-        <code>App: Clock</code>
+        <code>intent:#Intent;action=android.intent.action.SET_TIMER;…</code>
       </li>
 
       <li class="tile w2" style="--tint:var(--t-mint)">
@@ -264,7 +265,10 @@
           <li>Finds the right link for the app and the screen you want</li>
           <li>Tests it before you touch the phone settings</li>
           <li>Writes the webhook or shortcut behind it when there is no link yet</li>
+          <li>Can even install SnapKey Mapper and grant its permission for you</li>
         </ul>
+        <p class="plug-label">Add the SnapKey Mapper plugin to Claude Code:</p>
+        <pre class="plug"><code>/plugin install snapkey-mapper --marketplace Damien-llado/snapkey-mapper</code></pre>
         <p class="muted small">The use case that started it: the author runs Claude Code on a home server and talks to it from the phone through Remote Control. OPPO's settings could not open that conversation, Key Mapper only could while Wi-Fi was on. So this app was written, and it has been in daily use since October 2026.</p>
       </div>
       <div class="console" aria-label="Example conversation with Claude Code">
@@ -308,6 +312,30 @@
     </ul>
   </section>
 
+  <section id="safety" class="narrow" aria-labelledby="safety-h">
+    <p class="kicker">Safe to install</p>
+    <h2 id="safety-h">What Android will show you, and why it is fine</h2>
+    <p class="sub">SnapKey Mapper is not on Google Play, so Android adds a few checks. They are normal for any app installed from a website. The exact wording depends on your phone.</p>
+    <ol class="checks">
+      <li><strong>A warning that the file might be harmful</strong>, in Chrome. It shows for every APK downloaded from the web. Confirm the download.</li>
+      <li><strong>"Install unknown apps"</strong>. Android asks you to allow your browser or file manager to install apps. Allow it, install, then switch it back off if you like.</li>
+      <li><strong>"Play Protect hasn't seen this app before"</strong>. The app is new, so Google offers to check it. Tap <em>Scan app</em>: it takes a few seconds.</li>
+    </ol>
+    <div class="cando">
+      <div><h3>What it can do</h3><ul>
+        <li>Read the system log, only after you grant it with one command</li>
+        <li>Open the app or link you chose</li>
+        <li>Show one notification while it listens</li>
+      </ul></div>
+      <div><h3>What it cannot do</h3><ul>
+        <li>Use the internet: it has no internet permission</li>
+        <li>Access your messages, notifications or screen: it has no permission for them</li>
+        <li>Show ads, track you or ask for an account</li>
+      </ul></div>
+    </div>
+    <p class="muted small">Download it only from the <a href="https://github.com/Damien-llado/snapkey-mapper/releases">GitHub releases</a>. Each release lists the SHA-256 of the APK and the fingerprint of the signing certificate, so you can check the file with <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a>. The whole source code is public.</p>
+  </section>
+
   <section id="setup" class="narrow" aria-labelledby="setup-h">
     <p class="kicker">Setup</p>
     <h2 id="setup-h">Set it up in 6 steps</h2>
@@ -332,7 +360,7 @@
       </li>
       <li>
         <h3>Choose what the Snap Key opens</h3>
-        <p>Pick an installed app, or paste a link. Then choose single press, double press or long press, and tap <em>Test</em> to check it opens.</p>
+        <p>Pick an installed app, or paste a link (a web address, a deep link or an <code>intent:</code> link). Then choose single press, double press or long press, and tap <em>Test</em> to check it opens.</p>
         <figure class="shot"><div class="ph">Screenshot: target and gesture</div></figure>
       </li>
       <li>
@@ -380,7 +408,7 @@
 
     <details><summary>Why is "Disable system optimisation" needed?</summary><div><p>Without it, ColorOS refuses the <code>pm grant</code> command ("Neither user 2000 nor current process has GRANT_RUNTIME_PERMISSIONS"). Turn it on, grant the permission, then turn it off again if you like.</p></div></details>
 
-    <details><summary>Is it safe? What can the app see?</summary><div><p><code>READ_LOGS</code> lets an app read the system log, which can contain details from other apps. That is why SnapKey Mapper has no internet permission: it cannot send anything. It stores only your target, the key name and the gesture. The code is short and public: read it on GitHub, and only install builds from the official releases.</p></div></details>
+    <details><summary>Is it safe? What can the app see?</summary><div><p><code>READ_LOGS</code> lets an app read the system log, which can contain details from other apps. That is why SnapKey Mapper has no internet permission: it cannot send anything. It stores only your target, the key name and the gesture. The code is short and public: read it on GitHub, and only install builds from the official releases. See <a href="#safety">Safe to install</a>.</p></div></details>
 
     <details><summary>Why does Android ask for log access again?</summary><div><p>Since Android 13, every new log reading session needs your consent, and only while the app is on screen. SnapKey Mapper keeps one session open, so you only answer again after a reboot or if the system stops the app.</p></div></details>
 
@@ -401,6 +429,28 @@
     <details><summary>How do I uninstall it?</summary><div><p>Like any app. The permission goes away with it. Turn wireless debugging off if you left it on.</p></div></details>
 
     <details><summary>Is it affiliated with OPPO?</summary><div><p>No. SnapKey Mapper is an independent open source project, not affiliated with OPPO, OnePlus, Key Mapper, Anthropic or any app shown on this page. These names only describe compatibility.</p></div></details>
+  </section>
+
+  <section id="stories" class="narrow" aria-labelledby="stories-h">
+    <p class="kicker">Your turn</p>
+    <h2 id="stories-h">What did you put on your Snap Key?</h2>
+    <p class="sub">Share your setup: the best ones get added to the examples above. It opens a prefilled post in the project's GitHub Discussions, so you can check it before sending.</p>
+    <form class="story" id="story">
+      <label for="s-what">What does your key open?</label>
+      <input id="s-what" name="what" required maxlength="120" placeholder="Starts a 25-minute focus timer">
+      <div class="story-row">
+        <div><label for="s-phone">Phone</label>
+          <select id="s-phone" name="phone"><option>Find X9 Pro</option><option>Find X9</option><option>Find X9 Ultra</option><option>Find X9s</option><option>Find N6</option><option>Other</option></select></div>
+        <div><label for="s-gesture">Gesture</label>
+          <select id="s-gesture" name="gesture"><option>Double press</option><option>Single press</option><option>Long press</option></select></div>
+      </div>
+      <label for="s-link">The link or app <span class="opt">(optional, remove any private token)</span></label>
+      <input id="s-link" name="link" maxlength="300" placeholder="intent:#Intent;action=android.intent.action.SET_TIMER;…">
+      <label for="s-why">Why it helps you <span class="opt">(optional)</span></label>
+      <textarea id="s-why" name="why" rows="3" maxlength="600" placeholder="One press when I sit down at my desk, no unlocking, no searching."></textarea>
+      <button class="btn primary" type="submit"><svg aria-hidden="true"><use href="#g-gh"/></svg>Share on GitHub</button>
+      <p class="muted small">Needs a GitHub account. <a href="https://github.com/Damien-llado/snapkey-mapper/discussions/categories/show-and-tell">See what others did</a>.</p>
+    </form>
   </section>
 
   <section class="final" aria-labelledby="final">
@@ -428,23 +478,52 @@
 </footer>
 
 <script>
-// Étoiles GitHub en direct (affichées même à 0), en cache une heure pour rester sous la limite de l'API
+// Mesure d'audience Microsoft Clarity (clics, défilement, cartes de chaleur) : coupée tant que l'identifiant du projet est vide
+(function (id) {
+  if (!id) return;
+  (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+    t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, 'clarity', 'script', id);
+  // Événements utiles : téléchargement, GitHub, histoire partagée
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    if (a.href.indexOf('/releases') > -1) clarity('event', 'download');
+    else if (a.href.indexOf('github.com') > -1) clarity('event', 'github');
+  });
+  document.getElementById('story').addEventListener('submit', function () { clarity('event', 'story'); });
+})('');
+
+// Étoiles et téléchargements GitHub en direct (affichés même à 0), en cache une heure pour rester sous la limite de l'API
 (function () {
-  var els = document.querySelectorAll('[data-stars]'), key = 'skm-stars', now = Date.now();
-  function show(n) { els.forEach(function (e) { e.textContent = n; }); }
+  var key = 'skm-counts', now = Date.now(), api = 'https://api.github.com/repos/Damien-llado/snapkey-mapper';
+  function show(c) {
+    document.querySelectorAll('[data-stars]').forEach(function (e) { e.textContent = c.stars; });
+    document.querySelectorAll('[data-downloads]').forEach(function (e) { e.textContent = c.downloads; });
+  }
   try {
     var c = JSON.parse(localStorage.getItem(key) || 'null');
-    if (c && now - c.t < 3600e3) return show(c.n);
+    if (c && now - c.t < 3600e3) return show(c);
   } catch (e) {}
-  fetch('https://api.github.com/repos/Damien-llado/snapkey-mapper')
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (d) {
-      if (!d) return;
-      show(d.stargazers_count);
-      try { localStorage.setItem(key, JSON.stringify({ n: d.stargazers_count, t: now })); } catch (e) {}
-    })
-    .catch(function () {});
+  function get(u) { return fetch(u).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
+  Promise.all([get(api), get(api + '/releases?per_page=100')]).then(function (r) {
+    if (!r[0]) return;
+    var d = 0;
+    (r[1] || []).forEach(function (rel) { rel.assets.forEach(function (a) { d += a.download_count; }); });
+    var c = { stars: r[0].stargazers_count, downloads: d, t: now };
+    show(c);
+    try { localStorage.setItem(key, JSON.stringify(c)); } catch (e) {}
+  });
 })();
+
+// Histoires : ouvre une discussion GitHub préremplie, rien n'est envoyé par la page elle-même
+document.getElementById('story').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target.elements, what = f.what.value.trim();
+  var body = '**What the Snap Key opens:** ' + what + '\n**Phone:** ' + f.phone.value + '\n**Gesture:** ' + f.gesture.value +
+    (f.link.value.trim() ? '\n**Link or app:** `' + f.link.value.trim().replace(/`/g, '') + '`' : '') +
+    (f.why.value.trim() ? '\n\n' + f.why.value.trim() : '');
+  location.href = 'https://github.com/Damien-llado/snapkey-mapper/discussions/new?category=show-and-tell&title=' +
+    encodeURIComponent('My Snap Key: ' + what) + '&body=' + encodeURIComponent(body);
+});
 
 // Animations : appui sur la Snap Key, l'écran ouvre la cible suivante ; inclinaison au pointeur
 (function () {
@@ -497,7 +576,7 @@
 // Apparitions au défilement, façon Audit Greenwashing : léger glissement et fondu rapide, en cascade
 (function () {
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('main > section:not(.hero) > .kicker, main > section:not(.hero) > h2, main > section > .sub, .facts, .split-copy > *, .console, .narrow > p, .table-wrap, .faq details, .final-card, .bento > li, .gestures > li, .cards > li, .steps > li, .note');
+  var els = document.querySelectorAll('main > section:not(.hero) > .kicker, main > section:not(.hero) > h2, main > section > .sub, .facts, .split-copy > *, .console, .narrow > p, .table-wrap, .faq details, .story, .checks > li, .cando > div, .final-card, .bento > li, .gestures > li, .cards > li, .steps > li, .note');
   var steps = document.querySelector('.steps');
   if (reduce || !('IntersectionObserver' in window)) {
     els.forEach(function (e) { e.classList.add('in'); });

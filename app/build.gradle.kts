@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "io.github.owner.snapkey"
+    namespace = "io.github.damienllado.snapkeymapper"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "io.github.owner.snapkey"
+        applicationId = "io.github.damienllado.snapkeymapper"
         minSdk = 30
         targetSdk = 35
         versionCode = 1

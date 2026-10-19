@@ -1,0 +1,9 @@
+{
+  "name": "snapkey-mapper",
+  "version": "1.0.0",
+  "description": "Set up the OPPO Snap Key with SnapKey Mapper: finds the link or Android intent for what you want, tests it over adb, installs the app and grants its permission.",
+  "author": { "name": "Damien-llado" },
+  "homepage": "https://remapsnapkey.com",
+  "repository": "https://github.com/Damien-llado/snapkey-mapper",
+  "license": "MIT"
+}

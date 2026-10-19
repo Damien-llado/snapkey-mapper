@@ -1,4 +1,4 @@
-package io.github.owner.snapkey;
+package io.github.damienllado.snapkeymapper;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

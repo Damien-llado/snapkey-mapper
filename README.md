@@ -8,7 +8,7 @@ A small Android app (Java, no dependencies, no INTERNET permission). It reads th
 
 My own use: one press opens a Claude Code Remote Control session, so I can pick up a coding conversation from my pocket. It works just as well for a web page, a note app, a camera app or a deep link.
 
-Website with a longer FAQ: https://\<owner\>.github.io/snapkey-mapper/
+Website with a longer FAQ: https://remapsnapkey.com/
 
 ## Tested and probable devices
 
@@ -22,7 +22,7 @@ The app only needs two things: Android 11 or later, and a key press that appears
 
 ## Install
 
-1. Download the APK from the [latest release](https://github.com/<owner>/snapkey-mapper/releases/latest) and install it.
+1. Download the APK from the [latest release](https://github.com/Damien-llado/snapkey-mapper/releases/latest) and install it.
 2. If Android blocks the install, allow your browser or file manager to install unknown apps. Then, in the app info page of SnapKey Mapper, open the three dot menu and choose **Allow restricted settings** (Android shows this for apps installed outside the Play Store). Without it some permissions stay greyed out.
 3. Open the app. Allow notifications. Tap **Allow display over other apps** and **Battery: do not restrict**, and enable them. On ColorOS also open the app settings, Battery usage, and pick "No restrictions" or "Allow background activity". Lock the app in the recent apps list.
 4. Grant the log permission once (next section).
@@ -34,7 +34,7 @@ The app needs `READ_LOGS`, which Android only lets you grant with a shell comman
 **With a computer and adb** (wireless debugging or USB):
 
 ```
-adb shell pm grant io.github.owner.snapkey android.permission.READ_LOGS
+adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS
 ```
 
 **Without a computer, using Key Mapper:**
@@ -59,9 +59,27 @@ KEYLOG_PhoneWindowManagerExtImpl ... KeyEvent { action=ACTION_UP, keyCode=KEYCOD
 
 ## Settings
 
-- **Target**: a link (web address or deep link, opened by whichever app handles it) or an installed app picked from a list. **Test the launch** checks it right away.
+- **Target**: a link (web address or deep link, opened by whichever app handles it), an `intent:` link (any Android intent: set a timer, an alarm, open the camera...) or an installed app picked from a list. **Test the launch** checks it right away.
+
+Examples of `intent:` links:
+
+```
+intent:#Intent;action=android.intent.action.SET_TIMER;i.android.intent.extra.alarm.LENGTH=300;B.android.intent.extra.alarm.SKIP_UI=true;end
+intent:#Intent;action=android.intent.action.SET_ALARM;i.android.intent.extra.alarm.HOUR=6;i.android.intent.extra.alarm.MINUTES=30;end
+intent:#Intent;action=android.media.action.STILL_IMAGE_CAMERA;end
+```
 - **Gesture**: one press, two quick presses (default), or long press (500 ms and more). Restart listening after changing it.
 - **Start listening**. A notification shows how many presses were seen and what happened at the last one, which makes problems easy to spot.
+
+## Set it up with Claude Code
+
+The repository is also a [Claude Code](https://code.claude.com) plugin. It finds the link or intent for what you want the key to do, tests it on your phone over adb, and can install the app and grant its permission for you:
+
+```
+/plugin install snapkey-mapper --marketplace Damien-llado/snapkey-mapper
+```
+
+Then ask, for example: "make my Snap Key start a 25-minute focus timer". Without the plugin system, copy `plugins/snapkey-mapper/skills/snapkey-mapper` to `~/.claude/skills/`.
 
 ## Security and privacy
 
@@ -70,6 +88,8 @@ KEYLOG_PhoneWindowManagerExtImpl ... KeyEvent { action=ACTION_UP, keyCode=KEYCOD
 - The source is short enough to read in one sitting. Please do.
 - After the grant you can switch wireless debugging off again.
 - To remove everything: uninstall the app.
+- Install only from the [GitHub releases](https://github.com/Damien-llado/snapkey-mapper/releases). Each release lists the SHA-256 of the APK and the fingerprint of the signing certificate, so you can check the file (for example with [AppVerifier](https://github.com/soupslurpr/AppVerifier)).
+- What Android shows when you install it, and why it is expected: see [Safe to install](https://remapsnapkey.com/#safety) on the website.
 
 ## Limits
 

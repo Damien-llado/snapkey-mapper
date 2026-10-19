@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Normal permission, granted at install: lets intent: links set an alarm or a timer -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <!-- Lets the app list launchable apps for the app picker, without QUERY_ALL_PACKAGES -->
     <queries>

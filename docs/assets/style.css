@@ -137,7 +137,10 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .btn.primary:hover { box-shadow: 0 16px 36px -12px var(--accent), inset 0 1px 0 rgb(255 255 255 / .25); }
 .btn.ghost { background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .stars { font-variant-numeric: tabular-nums; border-left: 1px solid var(--line-2); padding-left: .65rem; margin-left: .1rem; }
-.meta { color: var(--muted); font-size: .88rem; margin: 1rem 0 0; }
+.meta { color: var(--muted); font-size: .88rem; margin: .35rem 0 0; }
+.live { display: inline-flex; align-items: center; gap: .5rem; margin: 1.1rem 0 0; font-size: .92rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.live strong { color: var(--ink); }
+.pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: beacon 2.4s ease-out infinite; }
 
 /* Entrée au chargement, reprise d'Audit Greenwashing : fadeUp court, en cascade */
 @keyframes fadeUp { from { opacity: 0; translate: 0 12px; } }
@@ -339,6 +342,21 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .console-body pre { margin: 0; background: rgb(0 0 0 / .35); color: #A9EDCB; font-size: .8rem; }
 .console-body .out code { display: inline-block; background: rgb(59 217 154 / .14); color: #6FE3B4; padding: .35rem .6rem; }
 
+.plug-label { margin: 1.2rem 0 .4rem; font-weight: 600; font-size: .95rem; }
+.plug { margin: 0; font-size: .82rem; }
+
+/* Installer sans crainte */
+.checks { list-style: none; counter-reset: chk; margin: 0 0 1.4rem; padding: 0; display: grid; gap: .7rem; }
+.checks li { counter-increment: chk; position: relative; padding: 1rem 1.1rem 1rem 3.2rem; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
+.checks li::before { content: counter(chk); position: absolute; left: 1rem; top: 1rem; width: 1.6rem; height: 1.6rem; display: grid; place-items: center; border-radius: 50%;
+  background: color-mix(in oklab, var(--accent) 16%, transparent); color: var(--accent); font: 700 .85rem var(--display); }
+.cando { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: .8rem; margin-bottom: 1rem; }
+.cando > div { padding: 1.1rem 1.2rem; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
+.cando ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; font-size: .95rem; }
+.cando li { position: relative; padding-left: 1.6rem; }
+.cando > div:first-child li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+.cando > div:last-child li::before { content: "✕"; position: absolute; left: 0; color: var(--warn); font-weight: 700; }
+
 /* Gestes */
 .gestures, .cards { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; }
 .gestures li, .cards li { min-width: 0; padding: 1.3rem; border-radius: 22px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
@@ -394,6 +412,17 @@ th { color: var(--muted); font-weight: 600; font-size: .85rem; }
 .faq details > div p { margin: 0; }
 .faq details::details-content { block-size: 0; overflow: hidden; transition: block-size .35s ease, content-visibility .35s allow-discrete; }
 .faq details[open]::details-content { block-size: auto; }
+
+/* Formulaire d'histoires */
+.story { display: grid; gap: .45rem; padding: 1.4rem; border-radius: 24px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.story label { font-weight: 600; font-size: .92rem; margin-top: .5rem; }
+.story .opt { font-weight: 400; color: var(--muted); }
+.story input, .story select, .story textarea { width: 100%; min-width: 0; font: inherit; font-size: 1rem; color: var(--ink); background: var(--bg); border: 1px solid var(--line-2); border-radius: 12px; padding: .7rem .85rem; }
+.story input:focus, .story select:focus, .story textarea:focus { outline: 3px solid color-mix(in oklab, var(--accent) 35%, transparent); border-color: var(--accent); }
+.story-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: .8rem; }
+.story-row > div { display: grid; gap: .45rem; }
+.story .btn { justify-self: start; margin-top: .9rem; border: 0; cursor: pointer; font: inherit; font-weight: 650; }
+.story p { margin: .2rem 0 0; }
 
 /* Appel final */
 .final { max-width: calc(var(--wide) + 2 * var(--gut)); margin-inline: auto; }
