@@ -9,8 +9,8 @@
 <link rel="alternate" hreflang="en" href="https://remapsnapkey.com/">
 <link rel="alternate" hreflang="x-default" href="https://remapsnapkey.com/">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F7F8F6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0E1512" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F5F8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0F0D" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SnapKey Mapper">
 <meta property="og:title" content="Remap the OPPO Snap Key to open any app">
@@ -22,6 +22,7 @@
 <meta property="og:image:alt" content="SnapKey Mapper: the Snap Key of an OPPO phone opening the app of your choice">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Makes the OPPO Snap Key open any app or link, without root."}
@@ -30,88 +31,285 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="wrap">
-  <header class="top">
+<!-- Pictogrammes, définis une fois et réutilisés partout -->
+<svg class="sprite" aria-hidden="true">
+  <defs>
+    <symbol id="g-term" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 10l3 2-3 2M12.5 15H17"/></symbol>
+    <symbol id="g-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h5a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h5"/></symbol>
+    <symbol id="g-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
+    <symbol id="g-run" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
+    <symbol id="g-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 2M5 4 3 6M19 4l2 2"/></symbol>
+    <symbol id="g-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol>
+    <symbol id="g-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"/></symbol>
+    <symbol id="g-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="g-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4.5-2 1.3a11 11 0 0 0 5.7 5.7l1.3-2 4.5 1.5v3a2 2 0 0 1-2 2A15.5 15.5 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="g-book" viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 2-2h12v15H7a2 2 0 0 0-2 2zM5 20a2 2 0 0 0 2 1h12v-3M9 7h6"/></symbol>
+    <symbol id="g-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM18.5 16l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+    <symbol id="g-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></symbol>
+    <symbol id="g-hook" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M11 8.3 7.2 14.8M13 8.3l3.8 6.5M8.5 17h7"/></symbol>
+    <symbol id="g-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="g-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="g-wifi" viewBox="0 0 24 24"><path d="M4.5 9.5a11 11 0 0 1 15 0M7.5 12.8a6.5 6.5 0 0 1 9 0M10.5 16a2 2 0 0 1 3 0M3 3l18 18"/></symbol>
+    <symbol id="g-gh" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.6.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></symbol>
+    <symbol id="g-down" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<!-- Fond : halos qui dérivent lentement, trame de points -->
+<div class="sky" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="dots"></i></div>
+
+<header class="nav">
+  <div class="nav-in">
     <a class="brand" href="/">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="2" width="18" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="8" width="3" height="6" rx="1.5" fill="#0B7A5C"/></svg>
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="2.5" width="17" height="27" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><rect class="brand-key" x="3.5" y="8" width="3" height="7" rx="1.5"/></svg>
       SnapKey Mapper
     </a>
-    <nav class="top-links" aria-label="Site">
+    <nav class="nav-links" aria-label="Site">
+      <a href="#examples">Examples</a>
+      <a href="#setup">Setup</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-end">
       <details class="lang">
-        <summary aria-label="Language">EN ▾</summary>
+        <summary aria-label="Language">EN</summary>
         <ul>
           <li><a href="/" hreflang="en" lang="en" aria-current="page">English</a></li>
         </ul>
       </details>
-      <a href="https://github.com/Damien-llado/snapkey-mapper">GitHub</a>
-    </nav>
-  </header>
-</div>
-
-<main id="main" class="wrap">
-
-  <section class="hero" style="border-top:0">
-    <h1>Remap the OPPO Snap Key to open any app</h1>
-    <p class="lead">SnapKey Mapper turns the Snap Key of the Find X9 and Find X9 Pro into a launcher for the app or link you choose. Single press, double press or long press. No root.</p>
-    <ul class="pills" aria-label="Key facts">
-      <li>No root</li><li>No Wi-Fi needed</li><li>No internet permission</li><li>Free and open source</li>
-    </ul>
-    <div class="ctas">
-      <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 3h2v9.6l3.3-3.3 1.4 1.4L12 16.4l-5.7-5.7 1.4-1.4 3.3 3.3V3zM5 19h14v2H5z"/></svg>
-        Download the APK
-      </a>
-      <a class="btn" href="https://github.com/Damien-llado/snapkey-mapper">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.6.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
-        Star on GitHub
-        <span class="stars" aria-label="GitHub stars">★ <span id="star-count">0</span></span>
+      <a class="gh-pill" href="https://github.com/Damien-llado/snapkey-mapper" aria-label="SnapKey Mapper on GitHub, star count">
+        <svg aria-hidden="true"><use href="#g-gh"/></svg><span class="star-n" data-stars>0</span>
       </a>
     </div>
-    <p class="meta">Version 1.0 · Android 11 or newer · about 40 KB · MIT licence · tested on Find X9 Pro, ColorOS 16</p>
+  </div>
+</header>
 
-    <figure class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 480 300">
-        <rect x="70" y="20" width="150" height="260" rx="26" fill="none" stroke="currentColor" stroke-opacity=".55" stroke-width="3"/>
-        <rect x="84" y="36" width="122" height="228" rx="16" fill="currentColor" fill-opacity=".05"/>
-        <g class="press"><rect x="58" y="62" width="12" height="40" rx="5" fill="#0B7A5C"/></g>
-        <circle class="ping" cx="46" cy="82" r="18" fill="none" stroke="#0B7A5C" stroke-width="3"/>
-        <text x="16" y="132" font-size="13" fill="currentColor" fill-opacity=".7" font-family="system-ui, sans-serif">Snap Key</text>
-        <path d="M232 150 H300" stroke="#0B7A5C" stroke-opacity=".6" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 8"/>
-        <path d="M296 140 L310 150 L296 160" fill="none" stroke="#0B7A5C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        <g font-family="system-ui, sans-serif" font-size="13" fill="currentColor">
-          <rect x="330" y="70" width="56" height="56" rx="14" fill="#0B7A5C"/><text x="358" y="106" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">✦</text>
-          <rect x="398" y="70" width="56" height="56" rx="14" fill="currentColor" fill-opacity=".12"/>
-          <rect x="330" y="138" width="56" height="56" rx="14" fill="currentColor" fill-opacity=".12"/>
-          <rect x="398" y="138" width="56" height="56" rx="14" fill="currentColor" fill-opacity=".12"/>
-          <text x="392" y="226" text-anchor="middle" fill-opacity=".7">any app or link</text>
-        </g>
-      </svg>
-    </figure>
+<main id="main">
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>Open source · OPPO Find X9 series · No root</p>
+      <h1>Remap the OPPO Snap Key to open <em>any app</em></h1>
+      <p class="say">Press the key, land in <span class="rot" id="rot">Claude Code</span></p>
+      <p class="lead">SnapKey Mapper turns the Snap Key of the Find X9 and Find X9 Pro into a launcher for the app or link you choose. Single press, double press or long press.</p>
+      <div class="ctas">
+        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
+          <svg aria-hidden="true"><use href="#g-down"/></svg>Download the APK
+        </a>
+        <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper">
+          <svg aria-hidden="true"><use href="#g-gh"/></svg>Star on GitHub
+          <span class="stars" aria-label="GitHub stars">★ <span data-stars>0</span></span>
+        </a>
+      </div>
+      <p class="meta">Version 1.0 · Android 11+ · about 40 KB · MIT · tested on Find X9 Pro, ColorOS 16</p>
+    </div>
+
+    <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
+    <div class="stage" id="stage" aria-hidden="true">
+      <div class="floaters">
+        <span class="cap c1" style="--h:#2FD39A"><b></b><b></b><b></b><b></b><b><svg><use href="#g-term"/></svg></b></span>
+        <span class="cap c2" style="--h:#F08A3E"><b></b><b></b><b></b><b></b><b><svg><use href="#g-run"/></svg></b></span>
+        <span class="cap c3" style="--h:#5B8DEF"><b></b><b></b><b></b><b></b><b><svg><use href="#g-route"/></svg></b></span>
+        <span class="cap c4" style="--h:#E2557A"><b></b><b></b><b></b><b></b><b><svg><use href="#g-music"/></svg></b></span>
+        <span class="cap c5" style="--h:#8B6CF0"><b></b><b></b><b></b><b></b><b><svg><use href="#g-spark"/></svg></b></span>
+        <span class="cap c6" style="--h:#E3B23C"><b></b><b></b><b></b><b></b><b><svg><use href="#g-clock"/></svg></b></span>
+        <i class="ring r1"></i><i class="ring r2"></i>
+      </div>
+      <div class="phone">
+        <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i>
+        <i class="snapkey" id="snapkey"></i><i class="ping"></i>
+        <div class="face">
+          <div class="screen">
+            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="launch" id="launch" style="--h:#2FD39A">
+              <span class="launch-ico"><svg><use href="#g-term"/></svg></span>
+              <strong id="launch-t">Claude Code</strong>
+              <small id="launch-s">claude.ai/code/…</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="stage-label">Snap Key <span>upper left side</span></p>
+    </div>
   </section>
 
-  <section aria-labelledby="why">
+  <section class="band" aria-label="Key facts">
+    <ul class="facts">
+      <li><svg aria-hidden="true"><use href="#g-shield"/></svg><span><strong>No root</strong> No bootloader unlock</span></li>
+      <li><svg aria-hidden="true"><use href="#g-wifi"/></svg><span><strong>No Wi-Fi needed</strong> Works on mobile data</span></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><span><strong>No internet permission</strong> Nothing leaves the phone</span></li>
+      <li><svg aria-hidden="true"><use href="#g-gh"/></svg><span><strong>Open source</strong> About 500 lines, MIT</span></li>
+    </ul>
+  </section>
+
+  <section id="examples" class="wide" aria-labelledby="ex-h">
+    <p class="kicker">Examples</p>
+    <h2 id="ex-h">One key. Anything that opens from a link.</h2>
+    <p class="sub">Pick an installed app, or paste a link. If Android can open it, the Snap Key can open it. A few ideas:</p>
+
+    <ul class="bento" id="bento">
+      <li class="tile big dark reveal">
+        <div class="tile-top"><span class="ico" style="--h:#2FD39A"><svg><use href="#g-term"/></svg></span><span class="kind">Link</span></div>
+        <h3>Jump into Claude Code</h3>
+        <p>Your running Claude Code session, one press away. Talk to your agent like a walkie-talkie, from the street, Wi-Fi off.</p>
+        <div class="term" aria-hidden="true">
+          <span class="l l1"><b>›</b> check the deploy logs</span>
+          <span class="l l2">Reading deploy.log…</span>
+          <span class="l l3">Fixed a missing env var</span>
+          <span class="l l4">Redeploying…</span>
+          <span class="l l5">Build passed, site is live ✓</span>
+          <span class="l l6"><b>›</b> <i class="caret"></i></span>
+        </div>
+        <code>https://claude.ai/code/…</code>
+      </li>
+
+      <li class="tile w2 reveal" style="--tint:var(--t-sky)">
+        <div class="tile-top"><span class="ico" style="--h:#5B8DEF"><svg><use href="#g-route"/></svg></span><span class="kind">Link</span></div>
+        <h3>Navigate, hands busy</h3>
+        <p>Google Maps turn-by-turn to a saved place, by bike or by car.</p>
+        <svg class="viz-route" viewBox="0 0 220 60" aria-hidden="true"><path d="M8 50 C 50 50, 50 12, 100 14 S 160 48, 210 12"/><circle cx="210" cy="12" r="5"/></svg>
+        <code>google.navigation:q=Central+Station&amp;mode=b</code>
+      </li>
+
+      <li class="tile reveal" style="--tint:var(--t-rose)">
+        <div class="tile-top"><span class="ico" style="--h:#E2557A"><svg><use href="#g-music"/></svg></span><span class="kind">Link</span></div>
+        <h3>Your run playlist</h3>
+        <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <code>spotify:playlist:…</code>
+      </li>
+
+      <li class="tile reveal" style="--tint:var(--t-amber)">
+        <div class="tile-top"><span class="ico" style="--h:#F08A3E"><svg><use href="#g-run"/></svg></span><span class="kind">App</span></div>
+        <h3>Strava, ready to record</h3>
+        <div class="rec" aria-hidden="true"><i></i><span>Record</span></div>
+        <code>App: Strava</code>
+      </li>
+
+      <li class="tile reveal" style="--tint:var(--t-slate)">
+        <div class="tile-top"><span class="ico" style="--h:#4E9C7E"><svg><use href="#g-doc"/></svg></span><span class="kind">Link</span></div>
+        <h3>Today's notes doc</h3>
+        <div class="lines" aria-hidden="true"><i></i><i></i><i></i></div>
+        <code>docs.google.com/document/d/…</code>
+      </li>
+
+      <li class="tile reveal" style="--tint:var(--t-amber)">
+        <div class="tile-top"><span class="ico" style="--h:#E3B23C"><svg><use href="#g-clock"/></svg></span><span class="kind">App</span></div>
+        <h3>Your alarms</h3>
+        <svg class="viz-clock" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="24"/><path class="hh" d="M30 30V18"/><path class="mh" d="M30 30h14"/></svg>
+        <code>App: Clock</code>
+      </li>
+
+      <li class="tile w2 reveal" style="--tint:var(--t-mint)">
+        <div class="tile-top"><span class="ico" style="--h:#2FA37A"><svg><use href="#g-home"/></svg></span><span class="kind">Link</span></div>
+        <h3>The garage dashboard</h3>
+        <p>Home Assistant opens straight on the right page. Lights, door, heating.</p>
+        <div class="toggles" aria-hidden="true"><span><i class="sw"></i>Garage door</span><span><i class="sw on"></i>Porch light</span></div>
+        <code>homeassistant://navigate/lovelace/garage</code>
+      </li>
+
+      <li class="tile w2 reveal" style="--tint:var(--t-lilac)">
+        <div class="tile-top"><span class="ico" style="--h:#8B6CF0"><svg><use href="#g-hook"/></svg></span><span class="kind">Link</span></div>
+        <h3>Fire a workflow</h3>
+        <p>Open a webhook URL that accepts GET (n8n, for example): log a coffee, start a timer, ping your team.</p>
+        <div class="flow" aria-hidden="true"><i></i><b></b><i></i><b></b><i></i></div>
+        <code>https://n8n.example.com/webhook/…</code>
+      </li>
+
+      <li class="tile reveal" style="--tint:var(--t-mint)">
+        <div class="tile-top"><span class="ico" style="--h:#25B865"><svg><use href="#g-chat"/></svg></span><span class="kind">Link</span></div>
+        <h3>One WhatsApp chat</h3>
+        <div class="bubbles" aria-hidden="true"><i></i><i></i></div>
+        <code>https://wa.me/&lt;number&gt;</code>
+      </li>
+
+      <li class="tile txt reveal" style="--tint:var(--t-sky)">
+        <div class="tile-top"><span class="ico" style="--h:#3E8EDE"><svg><use href="#g-phone"/></svg></span><span class="kind">Link</span></div>
+        <h3>Call someone</h3>
+        <p>The dialer opens with the number ready.</p>
+        <code>tel:&lt;number&gt;</code>
+      </li>
+
+      <li class="tile txt reveal" style="--tint:var(--t-slate)">
+        <div class="tile-top"><span class="ico" style="--h:#6B7A72"><svg><use href="#g-book"/></svg></span><span class="kind">Link</span></div>
+        <h3>A Notion page</h3>
+        <p>Your inbox, journal or shopping list.</p>
+        <code>https://www.notion.so/…</code>
+      </li>
+
+      <li class="tile txt reveal" style="--tint:var(--t-lilac)">
+        <div class="tile-top"><span class="ico" style="--h:#8B6CF0"><svg><use href="#g-spark"/></svg></span><span class="kind">App</span></div>
+        <h3>Your AI assistant</h3>
+        <p>Gemini, ChatGPT, Claude: whichever you prefer to OPPO's.</p>
+        <code>App: any</code>
+      </li>
+
+      <li class="tile w2 reveal" style="--tint:var(--t-slate)">
+        <div class="tile-top"><span class="ico" style="--h:#0A8A63"><svg><use href="#g-grid"/></svg></span><span class="kind">App</span></div>
+        <h3>Or any installed app</h3>
+        <p>Camera alternatives, password manager, voice recorder, banking, translator. Pick it from the list in SnapKey Mapper.</p>
+        <div class="minigrid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="claude" class="wide" aria-labelledby="cc-h">
+    <div class="split">
+      <div class="split-copy">
+        <p class="kicker">With Claude Code</p>
+        <h2 id="cc-h">If it can be launched, Claude Code can wire it to the key</h2>
+        <p>Most apps open from a link, but nobody knows those links by heart. Ask <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a> what you want the Snap Key to do. It finds the deep link, tests it on your phone over ADB, and gives you the line to paste in SnapKey Mapper.</p>
+        <ul class="ticks">
+          <li>Finds the right link for the app and the screen you want</li>
+          <li>Tests it before you touch the phone settings</li>
+          <li>Writes the webhook or shortcut behind it when there is no link yet</li>
+        </ul>
+        <p class="muted small">The use case that started it: the author runs Claude Code on a home server and talks to it from the phone through Remote Control. OPPO's settings could not open that conversation, Key Mapper only could while Wi-Fi was on. So this app was written, and it has been in daily use since October 2026.</p>
+      </div>
+      <div class="console" aria-label="Example conversation with Claude Code">
+        <div class="console-bar"><i></i><i></i><i></i><span>claude</span></div>
+        <div class="console-body">
+          <p class="you">I want my Snap Key to start bike navigation to the climbing gym.</p>
+          <p class="cl">Google Maps accepts a navigation link. Testing it on your phone:</p>
+          <pre><code>adb shell am start -a android.intent.action.VIEW \
+  -d "google.navigation:q=Climbing+Gym+Lyon&amp;mode=b"</code></pre>
+          <p class="cl">Navigation started. Paste this link in SnapKey Mapper:</p>
+          <p class="out"><code>google.navigation:q=Climbing+Gym+Lyon&amp;mode=b</code></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wide" aria-labelledby="gest-h">
+    <p class="kicker">Gestures</p>
+    <h2 id="gest-h">Choose how you press</h2>
+    <ul class="gestures">
+      <li class="reveal"><span class="g g-single" aria-hidden="true"><i></i></span><h3>Single press</h3><p>The fastest, if you do not use the key for anything else.</p></li>
+      <li class="reveal"><span class="g g-double" aria-hidden="true"><i></i><i></i></span><h3>Double press</h3><p>Two quick presses, so a press in your pocket never opens anything.</p></li>
+      <li class="reveal"><span class="g g-long" aria-hidden="true"><i></i></span><h3>Long press</h3><p>Hold for half a second.</p></li>
+    </ul>
+  </section>
+
+  <section class="narrow" aria-labelledby="why">
+    <p class="kicker">Why</p>
     <h2 id="why">Why the Snap Key needed a mapper</h2>
     <p>On ColorOS 16, the Snap Key (the customizable button on the upper left side of the Find X9 and Find X9 Pro) can only do what OPPO lists: AI Mind Space, camera, flashlight, recorder, translate, screenshot, sound mode or do not disturb. There is no "open an app" option, and button remapping apps cannot see the key unless a debugging connection stays on.</p>
-    <p>SnapKey Mapper removes that limit. Choose any installed app, or any link (a web page, a deep link, a chat, a shortcut), then pick the gesture:</p>
-    <ul class="cards">
-      <li><strong>Single press</strong>: the fastest, if you do not use the key for anything else.</li>
-      <li><strong>Double press</strong>: two quick presses, so a press in your pocket never opens anything.</li>
-      <li><strong>Long press</strong>: hold for half a second.</li>
-    </ul>
+    <p>SnapKey Mapper removes that limit. It does not change the button or patch the system: it works around the OS by watching what ColorOS already records.</p>
   </section>
 
-  <section aria-labelledby="how">
+  <section class="wide" aria-labelledby="how">
+    <p class="kicker">Under the hood</p>
     <h2 id="how">How it works, honestly</h2>
     <ul class="cards">
-      <li><strong>ColorOS writes every Snap Key press in the system log.</strong> The line contains <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper reads the log, spots that line and opens your app or link.</li>
-      <li><strong>No root, no accessibility service, no Wi-Fi.</strong> Reading the log needs one permission, <code>READ_LOGS</code>, granted once with a single command. It stays after a reboot.</li>
-      <li><strong>Nothing leaves your phone.</strong> The app has no internet permission, so it cannot send anything anywhere. It keeps only your target, the key name and the gesture.</li>
+      <li class="reveal"><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS logs every press</h3><p>The system log gets a line with <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper reads the log, spots that line and opens your app or link.</p></li>
+      <li class="reveal"><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>No root, no accessibility</h3><p>Reading the log needs one permission, <code>READ_LOGS</code>, granted once with a single command. It stays after a reboot.</p></li>
+      <li class="reveal"><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Nothing leaves your phone</h3><p>No internet permission, so the app cannot send anything anywhere. It keeps only your target, the key name and the gesture.</p></li>
     </ul>
   </section>
 
-  <section aria-labelledby="setup">
-    <h2 id="setup">Set it up in 6 steps</h2>
-    <p class="center muted">About 10 minutes, once. You need Wi-Fi only for step 2.</p>
+  <section id="setup" class="narrow" aria-labelledby="setup-h">
+    <p class="kicker">Setup</p>
+    <h2 id="setup-h">Set it up in 6 steps</h2>
+    <p class="sub">About 10 minutes, once. You need Wi-Fi only for step 2.</p>
     <ol class="steps">
       <li>
         <h3>Install the APK and allow restricted settings</h3>
@@ -149,30 +347,26 @@
     <p class="note"><strong>Security tip.</strong> When you are done, turn off wireless debugging in Developer options. SnapKey Mapper does not need it.</p>
   </section>
 
-  <section aria-labelledby="usecase">
-    <h2 id="usecase">The use case that started it</h2>
-    <p>The author runs <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a> on a home server and talks to it from the phone through Remote Control. He wanted the Snap Key to jump straight into that conversation, like a walkie-talkie button. OPPO's settings could not do it, and Key Mapper could only while Wi-Fi was on. So this app was written, and it has been in daily use since October 2026.</p>
-    <p>Other ideas: a note app, a voice recorder you like better, a smart home scene, a WhatsApp chat, Google Maps navigation home, a Spotify playlist, a password manager.</p>
-  </section>
-
-  <section aria-labelledby="compat">
+  <section class="narrow" aria-labelledby="compat">
+    <p class="kicker">Phones</p>
     <h2 id="compat">Compatibility</h2>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Phone</th><th>System</th><th>Status</th></tr></thead>
         <tbody>
-          <tr><td>OPPO Find X9 Pro</td><td>ColorOS 16, Android 16</td><td>Works, daily use</td></tr>
-          <tr><td>OPPO Find X9</td><td>ColorOS 16</td><td>Same Snap Key, not tested yet</td></tr>
-          <tr><td>OPPO Find X9 Ultra, Find X9s, Find N6</td><td>ColorOS 16</td><td>Have a Snap Key, not tested yet</td></tr>
-          <tr><td>OnePlus phones with a Plus Key</td><td>OxygenOS</td><td>Different key, may work through the log capture, not tested</td></tr>
+          <tr><td>OPPO Find X9 Pro</td><td>ColorOS 16, Android 16</td><td><span class="st ok">Works, daily use</span></td></tr>
+          <tr><td>OPPO Find X9</td><td>ColorOS 16</td><td><span class="st">Same Snap Key, not tested yet</span></td></tr>
+          <tr><td>OPPO Find X9 Ultra, Find X9s, Find N6</td><td>ColorOS 16</td><td><span class="st">Have a Snap Key, not tested yet</span></td></tr>
+          <tr><td>OnePlus phones with a Plus Key</td><td>OxygenOS</td><td><span class="st">Different key, may work through the log capture</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="muted">Tried it on another phone? <a href="https://github.com/Damien-llado/snapkey-mapper/issues">Open an issue</a> with the log line of your key and it will be added here.</p>
+    <p class="muted small">Tried it on another phone? <a href="https://github.com/Damien-llado/snapkey-mapper/issues">Open an issue</a> with the log line of your key and it will be added here.</p>
   </section>
 
-  <section aria-labelledby="faq" class="faq">
-    <h2 id="faq">FAQ</h2>
+  <section id="faq" class="narrow faq" aria-labelledby="faq-h">
+    <p class="kicker">FAQ</p>
+    <h2 id="faq-h">Questions</h2>
 
     <details><summary>Can the Snap Key open any app on the Find X9 Pro?</summary><div><p>Not with OPPO's settings alone: ColorOS offers a fixed list of actions. With SnapKey Mapper, yes: any installed app or any link, on single, double or long press.</p></div></details>
 
@@ -198,51 +392,103 @@
 
     <details><summary>Can it open a Claude Code, ChatGPT or WhatsApp conversation directly?</summary><div><p>Yes, if the app accepts a link to that conversation. Paste the link as the target: Android opens it in the matching app when that app supports it, otherwise in the browser.</p></div></details>
 
+    <details><summary>How do I find the link for an app?</summary><div><p>Many apps document their links (Google Maps, Spotify, Home Assistant). Otherwise ask Claude Code or another assistant, then test the link with <code>adb shell am start -a android.intent.action.VIEW -d "&lt;link&gt;"</code> or with the <em>Test</em> button in SnapKey Mapper.</p></div></details>
+
     <details><summary>Will it be on Google Play?</summary><div><p>No: install the APK from the GitHub releases. Google is also rolling out developer verification for apps installed outside the Play Store (2026 in some countries, worldwide in 2027); this page will explain any change for SnapKey Mapper.</p></div></details>
 
     <details><summary>How do I uninstall it?</summary><div><p>Like any app. The permission goes away with it. Turn wireless debugging off if you left it on.</p></div></details>
 
-    <details><summary>Is it affiliated with OPPO?</summary><div><p>No. SnapKey Mapper is an independent open source project, not affiliated with OPPO, OnePlus, Key Mapper or Anthropic. These names only describe compatibility.</p></div></details>
+    <details><summary>Is it affiliated with OPPO?</summary><div><p>No. SnapKey Mapper is an independent open source project, not affiliated with OPPO, OnePlus, Key Mapper, Anthropic or any app shown on this page. These names only describe compatibility.</p></div></details>
   </section>
 
-  <section class="center" aria-labelledby="final">
-    <h2 id="final">Make the Snap Key yours</h2>
-    <div class="ctas">
-      <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">Download the APK</a>
-      <a class="btn" href="https://github.com/Damien-llado/snapkey-mapper">Read the code</a>
+  <section class="final" aria-labelledby="final">
+    <div class="final-card">
+      <span class="cap c7" style="--h:#2FD39A" aria-hidden="true"><b></b><b></b><b></b><b></b><b><svg><use href="#g-spark"/></svg></b></span>
+      <h2 id="final">Make the Snap Key yours</h2>
+      <p>Free, open source, about 40 KB.</p>
+      <div class="ctas">
+        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>Download the APK</a>
+        <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper"><svg aria-hidden="true"><use href="#g-gh"/></svg>Read the code <span class="stars">★ <span data-stars>0</span></span></a>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap">
-    <p>SnapKey Mapper is free software under the MIT licence. Independent project, not affiliated with OPPO.</p>
-    <ul>
-      <li><a href="https://github.com/Damien-llado/snapkey-mapper">Source code</a></li>
-      <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">Report a bug</a></li>
-      <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">All versions</a></li>
-    </ul>
-    <ul aria-label="Languages"><li><a href="/" hreflang="en" lang="en">English</a></li></ul>
-  </div>
+  <p>SnapKey Mapper is free software under the MIT licence. Independent project, not affiliated with OPPO.</p>
+  <ul>
+    <li><a href="https://github.com/Damien-llado/snapkey-mapper">Source code</a></li>
+    <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">Report a bug</a></li>
+    <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">All versions</a></li>
+  </ul>
+  <ul aria-label="Languages"><li><a href="/" hreflang="en" lang="en">English</a></li></ul>
 </footer>
 
 <script>
-// Live GitHub star count (shown even at 0), cached one hour to stay under the API limit
+// Étoiles GitHub en direct (affichées même à 0), en cache une heure pour rester sous la limite de l'API
 (function () {
-  var el = document.getElementById('star-count'), key = 'skm-stars', now = Date.now();
+  var els = document.querySelectorAll('[data-stars]'), key = 'skm-stars', now = Date.now();
+  function show(n) { els.forEach(function (e) { e.textContent = n; }); }
   try {
     var c = JSON.parse(localStorage.getItem(key) || 'null');
-    if (c && now - c.t < 3600e3) { el.textContent = c.n; return; }
+    if (c && now - c.t < 3600e3) return show(c.n);
   } catch (e) {}
   fetch('https://api.github.com/repos/Damien-llado/snapkey-mapper')
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) {
       if (!d) return;
-      el.textContent = d.stargazers_count;
+      show(d.stargazers_count);
       try { localStorage.setItem(key, JSON.stringify({ n: d.stargazers_count, t: now })); } catch (e) {}
     })
     .catch(function () {});
+})();
+
+// Animations : appui sur la Snap Key, l'écran ouvre la cible suivante ; inclinaison au pointeur
+(function () {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var T = [
+    ['Claude Code', 'claude.ai/code/…', '#2FD39A', 'g-term', 'Claude Code'],
+    ['your run playlist', 'spotify:playlist:…', '#E2557A', 'g-music', 'Run playlist'],
+    ['navigation home', 'google.navigation:q=…', '#5B8DEF', 'g-route', 'Maps'],
+    ['Strava', 'App: Strava', '#F08A3E', 'g-run', 'Strava'],
+    ["today's notes", 'docs.google.com/…', '#4E9C7E', 'g-doc', 'Notes'],
+    ['the garage dashboard', 'homeassistant://navigate/…', '#2FA37A', 'g-home', 'Home Assistant'],
+    ['a WhatsApp chat', 'wa.me/…', '#25B865', 'g-chat', 'WhatsApp']
+  ];
+  var i = 0, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
+      launch = document.getElementById('launch'), use = launch.querySelector('use');
+  setInterval(function () {
+    if (document.hidden) return;
+    i = (i + 1) % T.length;
+    var t = T[i];
+    stage.classList.remove('pressed'); void stage.offsetWidth; stage.classList.add('pressed');
+    setTimeout(function () {
+      launch.style.setProperty('--h', t[2]);
+      use.setAttribute('href', '#' + t[3]);
+      document.getElementById('launch-t').textContent = t[4];
+      document.getElementById('launch-s').textContent = t[1];
+      launch.classList.remove('go'); void launch.offsetWidth; launch.classList.add('go');
+      rot.textContent = t[0];
+      rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
+    }, 260);
+  }, 2800);
+
+  if (!matchMedia('(pointer: fine)').matches) return;
+  var hero = document.querySelector('.hero'), raf = 0, mx = 0, my = 0;
+  hero.addEventListener('pointermove', function (e) {
+    var r = hero.getBoundingClientRect();
+    mx = (e.clientX - r.left) / r.width * 2 - 1; my = (e.clientY - r.top) / r.height * 2 - 1;
+    if (!raf) raf = requestAnimationFrame(function () { raf = 0; hero.style.setProperty('--mx', mx.toFixed(3)); hero.style.setProperty('--my', my.toFixed(3)); });
+  });
+  hero.addEventListener('pointerleave', function () { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
+
+  // Halo qui suit le pointeur sur les tuiles
+  document.getElementById('bento').addEventListener('pointermove', function (e) {
+    var t = e.target.closest('.tile'); if (!t) return;
+    var r = t.getBoundingClientRect();
+    t.style.setProperty('--x', (e.clientX - r.left) + 'px'); t.style.setProperty('--y', (e.clientY - r.top) + 'px');
+  });
 })();
 </script>
 </body>
