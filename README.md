@@ -1,0 +1,119 @@
+# SnapKey Mapper
+
+Make the side key of your OPPO phone (the "Snap Key") open any app or link you want, with a single press, a double press or a long press. No root, no always-on Wi-Fi, no accessibility service.
+
+![SnapKey Mapper main screen](docs/img/main-screen.png)
+
+A small Android app (Java, no dependencies, no INTERNET permission). It reads the system log, spots the line ColorOS writes each time the side key is pressed, and opens the link or app you chose.
+
+My own use: one press opens a Claude Code Remote Control session, so I can pick up a coding conversation from my pocket. It works just as well for a web page, a note app, a camera app or a deep link.
+
+Website with a longer FAQ: https://\<owner\>.github.io/snapkey-mapper/
+
+## Tested and probable devices
+
+| Device | Status |
+|---|---|
+| OPPO Find X9 Pro, ColorOS 16 (Android 16) | Tested, works |
+| OnePlus 15 and other phones with a "Plus Key" or "Action button" built on the same base | Not tested, probably works if the key shows up in the log |
+| Any other Android 11+ phone with a hardware key that writes to the log | Not tested |
+
+The app only needs two things: Android 11 or later, and a key press that appears in the system log. Step 3 below tells you how to check that on your phone.
+
+## Install
+
+1. Download the APK from the [latest release](https://github.com/<owner>/snapkey-mapper/releases/latest) and install it.
+2. If Android blocks the install, allow your browser or file manager to install unknown apps. Then, in the app info page of SnapKey Mapper, open the three dot menu and choose **Allow restricted settings** (Android shows this for apps installed outside the Play Store). Without it some permissions stay greyed out.
+3. Open the app. Allow notifications. Tap **Allow display over other apps** and **Battery: do not restrict**, and enable them. On ColorOS also open the app settings, Battery usage, and pick "No restrictions" or "Allow background activity". Lock the app in the recent apps list.
+4. Grant the log permission once (next section).
+
+### Grant the log permission (once)
+
+The app needs `READ_LOGS`, which Android only lets you grant with a shell command. Two ways:
+
+**With a computer and adb** (wireless debugging or USB):
+
+```
+adb shell pm grant io.github.owner.snapkey android.permission.READ_LOGS
+```
+
+**Without a computer, using Key Mapper:**
+
+1. Install Key Mapper (it can run shell commands through ADB mode, using wireless debugging once).
+2. On ColorOS 16, open Developer options and switch on **Disable system optimisation**. It is only visible when the phone language is English. Without it the grant fails with `GRANT_RUNTIME_PERMISSIONS` denied. Switching it off again afterwards does not remove the permission.
+3. In Key Mapper create a trigger with the action **Shell command**, execution mode **ADB**, and paste the command above (the app has a "Copy the command" button). Press **Test**.
+4. The app screen now shows "Log reading: OK".
+
+## Find the name of your key
+
+1. In the app, tap **Start capture**. Android shows a one-time access prompt for the logs: accept.
+2. Press the side key two or three times, then tap **Stop capture**.
+3. The list shows lines that mention a key. Look for the one that comes back at every press. On the Find X9 Pro it looks like this:
+
+```
+KEYLOG_PhoneWindowManagerExtImpl ... KeyEvent { action=ACTION_UP, keyCode=KEYCODE_ACTION_BUTTON_CLICK, scanCode=735 ... eventTime=..., downTime=... }
+```
+
+4. Tap that line. The app keeps the stable part of it as the pattern. You can edit the pattern by hand.
+5. Nothing shown? Tick "Show all lines", or use **Save the capture to a file** and search it on a computer for the moment you pressed.
+
+## Settings
+
+- **Target**: a link (web address or deep link, opened by whichever app handles it) or an installed app picked from a list. **Test the launch** checks it right away.
+- **Gesture**: one press, two quick presses (default), or long press (500 ms and more). Restart listening after changing it.
+- **Start listening**. A notification shows how many presses were seen and what happened at the last one, which makes problems easy to spot.
+
+## Security and privacy
+
+- No INTERNET permission: the app cannot send anything out of the phone.
+- `READ_LOGS` lets an app read the whole system log, which can contain details of what other apps do. The app only looks for your pattern and a few time stamps and keeps nothing; the capture screen holds lines in memory until you close it, and saves a file only when you ask.
+- The source is short enough to read in one sitting. Please do.
+- After the grant you can switch wireless debugging off again.
+- To remove everything: uninstall the app.
+
+## Limits
+
+- Since Android 13, reading the log asks for a one-time access each time listening starts, and the app must be in the foreground at that moment. So after a reboot, tap the notification (or open the app) and start listening again. This is an Android rule, not something the app can skip.
+- Not tested outside OPPO phones. Whether the key reaches the log depends on the manufacturer.
+- The key keeps appearing in the log even if the Snap Key action is disabled in the OPPO settings, so there is nothing to undo there.
+- Some skins kill background services aggressively: follow the battery steps above.
+
+## How it came about
+
+OPPO's settings only let the Snap Key start a closed list of actions. I wanted it to open a specific conversation, so I tried Key Mapper. It only sees the key in its expert mode, which dies as soon as Wi-Fi goes off, so not an option on the road.
+
+Then I noticed ColorOS writes every press into logcat. A capture of the log gave the key's name, `KEYCODE_ACTION_BUTTON_CLICK` with scan code 735. Reading the log needs `READ_LOGS`, which I granted once with Key Mapper's shell command action, after switching on "Disable system optimisation" in the developer options (English only on ColorOS 16, otherwise the grant is refused). Android's "Allow restricted settings" covers an app installed outside the Play Store. And Android 13 and later ask for one-time log access each time listening starts, with the app in the foreground; this comes from the AOSP `LogcatManagerService`.
+
+The result is a small app that has worked daily since 19 October 2026.
+
+## FAQ
+
+**Does it need root?** No.
+
+**Does it need Wi-Fi?** No. Wireless debugging is only needed once, for the grant.
+
+**Will it work after a reboot?** You have to start listening again (see Limits).
+
+**Is it safe?** No INTERNET permission, short open source code. See Security.
+
+**Can I use it on a phone that is not an OPPO?** Maybe. Capture the log and see whether your key shows up.
+
+More answers on the website.
+
+## Build
+
+Android SDK 35, JDK 17, Gradle 8.11 or later:
+
+```
+gradle assembleRelease
+```
+
+To sign the release, set `SNAPKEY_KEYSTORE` (path) and `SNAPKEY_KEY_PASSWORD`; the key alias is `snapkey`. Without them you get an unsigned APK.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
+
+## Disclaimer
+
+SnapKey Mapper is an independent project. It is not affiliated with, endorsed by or sponsored by OPPO, OnePlus or Anthropic. OPPO, ColorOS, OnePlus and Claude are trademarks of their respective owners, used here only to describe compatibility.
