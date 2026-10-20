@@ -30,6 +30,7 @@ public class SetupService extends Service {
     private static final String CODE = "code";
     private volatile int pairingPort = -1;
     private volatile String pairingHost = "127.0.0.1";
+    private volatile boolean pairing;
     private AdbMdns mdns;
 
     @Override
@@ -50,30 +51,47 @@ public class SetupService extends Service {
         startForeground(2, build(getString(R.string.setup_waiting_title),
                 getString(R.string.setup_waiting_text), false),
                 ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE);
-        if (mdns == null) {
-            mdns = new AdbMdns(this, AdbMdns.SERVICE_TYPE_TLS_PAIRING, (host, port) -> {
-                if (port <= 0) return;
-                pairingPort = port;
-                if (host != null) pairingHost = host.getHostAddress();
-                say(getString(R.string.setup_code_title), getString(R.string.setup_code_text), true);
-            });
-            mdns.start();
-        }
+        if (mdns == null) mdns = discover();
         return START_NOT_STICKY;
     }
 
+    /** Finds the pairing service that Android announces while it shows the code; asks for the code once it is there. */
+    private AdbMdns discover() {
+        AdbMdns m = new AdbMdns(this, AdbMdns.SERVICE_TYPE_TLS_PAIRING, (host, port) -> {
+            if (port <= 0) return;
+            pairingPort = port;
+            if (host != null) pairingHost = host.getHostAddress();
+            if (!pairing) say(getString(R.string.setup_code_title), getString(R.string.setup_code_text), true);
+        });
+        m.start();
+        return m;
+    }
+
     private void pairAndGrant(String code) {
+        pairing = true;
         String result;
         try {
-            if (mdns != null) mdns.stop();
             AbsAdbConnectionManager adb = new Adb(this);
-            boolean paired;
-            try {
-                paired = adb.pair(pairingHost, pairingPort, code);
-            } catch (Exception e) {
-                android.util.Log.w("SnapKeySetup", "pairing failed", e);
-                paired = false; // wrong code: Android closes the pairing screen
+            boolean paired = false;
+            // The pairing port can be an old announcement (connection refused): discovery keeps running, so the next
+            // try uses the latest port, with the same code (it stays valid while Android shows it).
+            for (int tries = 0; tries < 3 && !paired; tries++) {
+                try {
+                    paired = adb.pair(pairingHost, pairingPort, code);
+                } catch (java.net.ConnectException e) {
+                    // Android announces each new pairing screen under the same name, so a running discovery keeps the
+                    // old port: a fresh discovery gets the current one
+                    android.util.Log.w("SnapKeySetup", "pairing port refused, discovering again", e);
+                    int refused = pairingPort;
+                    if (mdns != null) mdns.stop();
+                    mdns = discover();
+                    for (int wait = 0; wait < 50 && pairingPort == refused; wait++) Thread.sleep(100);
+                } catch (Exception e) {
+                    android.util.Log.w("SnapKeySetup", "pairing failed", e);
+                    break; // wrong code: Android closes the pairing screen
+                }
             }
+            if (mdns != null) mdns.stop();
             if (!paired) throw new IllegalStateException(getString(R.string.setup_fail_pair));
             boolean connected = false;
             for (int tries = 0; !connected; tries++) {
@@ -91,11 +109,12 @@ public class SetupService extends Service {
             StringBuilder out = new StringBuilder();
             // Android kills this app as soon as the permission is granted, and adbd then closes the shell: anything written after
             // "pm grant" never runs. So the final message comes from a detached process (setsid) started BEFORE the grant, which
-            // waits until the permission is really granted and then posts it (text in base64 so no quote can break the command).
+            // waits until the permission is really granted, posts it (text in base64 so no quote can break the command) and brings the app
+            // back, on the next setup step.
             String text = android.util.Base64.encodeToString(getString(R.string.setup_done).getBytes(java.nio.charset.StandardCharsets.UTF_8), android.util.Base64.NO_WRAP);
             String pkg = getPackageName();
             String waitAndPost = "for i in 1 2 3 4 5 6 7 8 9 10; do sleep 1; dumpsys package " + pkg + " | grep -q \"READ_LOGS: granted=true\" && "
-                    + "{ cmd notification post -S bigtext -t \"SnapKey Mapper\" setup \"$(echo " + text + " | base64 -d)\"; exit; }; done";
+                    + "{ cmd notification post -S bigtext -t \"SnapKey Mapper\" setup \"$(echo " + text + " | base64 -d)\"; am start -n " + pkg + "/.MainActivity; exit; }; done";
             try (BufferedReader r = new BufferedReader(new InputStreamReader(adb.openStream(
                     "shell:{ setsid sh -c '" + waitAndPost + "' >/dev/null 2>&1 & }; pm grant " + pkg + " android.permission.READ_LOGS").openInputStream()))) {
                 for (String l; (l = r.readLine()) != null; ) out.append(l).append('\n');
@@ -111,6 +130,7 @@ public class SetupService extends Service {
             result = e.getMessage() != null ? e.getMessage() : e.toString(); // never show a bare "null"
             Adb.forget(this);
         }
+        Prefs.setupResult(this, result); // shown by the setup screen too
         say(getString(R.string.setup_notif_title), result, false);
         stopForeground(STOP_FOREGROUND_DETACH);
         stopSelf();
@@ -123,9 +143,14 @@ public class SetupService extends Service {
     private Notification build(String title, String text, boolean input) {
         NotificationManager nm = getSystemService(NotificationManager.class);
         nm.createNotificationChannel(new NotificationChannel("setup", getString(R.string.setup_channel), NotificationManager.IMPORTANCE_HIGH));
-        Notification.Builder b = new Notification.Builder(this, "setup")
+        // waiting for the pairing screen: a silent notification; the one to type the code in drops down when Android shows the code
+        nm.createNotificationChannel(new NotificationChannel("setup_wait", getString(R.string.setup_channel), NotificationManager.IMPORTANCE_MIN));
+        Notification.Builder b = new Notification.Builder(this, title.equals(getString(R.string.setup_waiting_title)) ? "setup_wait" : "setup")
                 .setSmallIcon(android.R.drawable.ic_menu_send).setContentTitle(title).setContentText(text)
-                .setStyle(new Notification.BigTextStyle().bigText(text)).setOnlyAlertOnce(true);
+                .setStyle(new Notification.BigTextStyle().bigText(text)).setOnlyAlertOnce(true)
+                // a tap brings the user back to the setup screen, where the step shows as done (or what to do next)
+                .setContentIntent(PendingIntent.getActivity(this, 1, new Intent(this, SetupActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK), PendingIntent.FLAG_IMMUTABLE)).setAutoCancel(!input);
         if (input) {
             PendingIntent pi = PendingIntent.getService(this, 0, new Intent(this, SetupService.class),
                     PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);

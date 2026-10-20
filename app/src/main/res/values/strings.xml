@@ -14,7 +14,7 @@
     <string name="btn_stop">Stop listening</string>
     <string name="perm_title">Permissions</string>
     <string name="perm_sub">Three switches, once. The key itself needs nothing else.</string>
-    <string name="perm_auto_btn">Set up log reading automatically</string>
+    <string name="perm_auto_btn">Open Wireless debugging</string>
     <string name="perm_auto_help">Join your Wi-Fi, tap the button, then in Developer options turn on Wireless debugging, tap \"Pair device with pairing code\" and type the 6 digits in the notification. On ColorOS, turn on \"Disable system optimisation\" first.</string>
     <string name="perm_log">Log reading</string>
     <string name="perm_overlay">Display over other apps</string>
@@ -140,4 +140,28 @@
         <item>Go back home, start listening and press the key to check.</item>
     </string-array>
     <string name="recipe_help">Not working on your phone? On a computer, ask Claude Code with the SnapKey Mapper plugin: it finds a link that works and tests it on your phone, connected with a USB cable or wireless debugging.</string>
+    <string name="setup_progress">Step %1$d of %2$d</string>
+    <string name="wiz_wifi_title">Connect to Wi-Fi</string>
+    <string name="wiz_wifi_text">The app gives itself the log permission through the phone\'s wireless debugging, which only works on Wi-Fi. Connect the phone, then come back here.</string>
+    <string name="wiz_wifi_btn">Open Wi-Fi</string>
+    <string name="wiz_dev_title">Turn on Developer options</string>
+    <string name="wiz_dev_text">Tap the button, then tap the build number 7 times (on ColorOS: Version). Android says you are a developer. Come back here.</string>
+    <string name="wiz_dev_btn">Open About phone</string>
+    <string name="wiz_pair_title">Pair the app with your phone</string>
+    <string name="wiz_pair_text">1. Tap the button: Wireless debugging opens.\n2. Turn on \"Use wireless debugging\" and allow your network.\n3. Tap \"Pair device with pairing code\".\n4. A SnapKey Mapper notification drops down: type the 6 digits in it. That is all, the app does the rest.</string>
+    <string name="wiz_sysopt_title">One more switch on ColorOS</string>
+    <string name="wiz_sysopt_text">ColorOS refused the permission. In Developer options, turn on \"Disable system optimisation\" (near the bottom), come back here and pair again.</string>
+    <string name="wiz_sysopt_btn">Open Developer options</string>
+    <string name="wiz_last">Last attempt: %1$s</string>
+    <string name="wiz_computer_text">The lite edition has no network access, so the permission is given from a computer, once: turn on USB debugging in Developer options, connect the phone with a cable and run this command.</string>
+    <string name="wiz_overlay_text">Lets the key open your target even when the screen is off or another app is in front. Tap the button, then SnapKey Mapper in the list, and turn the switch on.</string>
+    <string name="wiz_restricted">Switch greyed out, or \"access denied\"? Android blocks it for apps installed from outside the Play Store: open the app settings, tap ⋮ at the top right, then \"Allow restricted settings\", and come back.</string>
+    <string name="wiz_battery_text">So that Android does not stop the app in the background. Tap the button and confirm. On ColorOS, also lock the app in the recent apps.</string>
+    <string name="wiz_native_text">So that the phone does not run its own Snap Key action at the same time: in the phone settings, search for \"Snap Key\" and set it to no action.</string>
+    <string name="wiz_done_title">All set</string>
+    <string name="wiz_done_text">Now choose what the key opens, and start listening.</string>
+    <string name="wiz_done_btn">Continue</string>
+    <string name="home_setup_title">Set up SnapKey Mapper</string>
+    <string name="home_setup_text">A few steps, once. The app opens each setting for you and checks it.</string>
+    <string name="home_finder">The key does nothing? Another phone: find your key</string>
 </resources>

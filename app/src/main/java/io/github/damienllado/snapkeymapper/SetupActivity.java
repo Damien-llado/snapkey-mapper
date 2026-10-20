@@ -5,12 +5,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Typeface;
+import android.net.ConnectivityManager;
+import android.net.NetworkCapabilities;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.provider.Settings;
-import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.CheckBox;
@@ -19,13 +19,11 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-/** The four setup steps, one card each: what to do as a short numbered list, one button, and a state that checks itself. */
+/** Guided setup: one screen per step, a single button that opens the exact setting, and the next step as soon as the phone says it is done. */
 public class SetupActivity extends Activity {
     static final int TOTAL = 4;
     private static final String COMMAND = "adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS";
-    private final TextView[] state = new TextView[TOTAL];
-    private final TextView[] mark = new TextView[TOTAL];
-    private final LinearLayout[] cards = new LinearLayout[TOTAL];
+    private LinearLayout page;
 
     /** Which steps are done: log reading, display over other apps, battery, native Snap Key action off (ticked by the user). */
     static boolean[] steps(Context c) {
@@ -52,84 +50,114 @@ public class SetupActivity extends Activity {
         super.onCreate(b);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         LinearLayout root = Ui.page(this);
-        LinearLayout top = new LinearLayout(this);
-        top.setOrientation(LinearLayout.VERTICAL);
+        page = new LinearLayout(this);
+        page.setOrientation(LinearLayout.VERTICAL);
         int side = Ui.dp(this, 16);
-        top.setPadding(side, Ui.dp(this, 12), side, Ui.dp(this, 32));
-        top.addView(Ui.title(this, getString(R.string.setup_title)));
-        Ui.add(top, Ui.body(this, getString(R.string.setup_intro)), 4);
-
-        String pkg = "package:" + getPackageName();
-        LinearLayout log = step(top, 0, R.string.perm_log, AdbSetup.AVAILABLE ? R.array.steps_log_auto : R.array.steps_log_computer);
-        if (AdbSetup.AVAILABLE) {
-            Ui.add(log, Ui.button(this, getString(R.string.perm_auto_btn), true, v -> AdbSetup.start(this)), 12);
-            TextView other = Ui.button(this, getString(R.string.setup_other_way), false, null);
-            View box = commandBox();
-            box.setVisibility(View.GONE);
-            other.setOnClickListener(v -> box.setVisibility(box.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE));
-            Ui.add(log, other, 8);
-            Ui.add(log, box, 8);
-        } else {
-            Ui.add(log, commandBox(), 10);
-        }
-
-        LinearLayout overlay = step(top, 1, R.string.perm_overlay, R.array.steps_overlay);
-        Ui.add(overlay, Ui.button(this, getString(R.string.setup_open_setting), true, v -> startActivity(
-                new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse(pkg)))), 12);
-        Ui.add(overlay, Ui.button(this, getString(R.string.perm_app_settings), false, v -> appInfo()), 8);
-
-        LinearLayout battery = step(top, 2, R.string.perm_battery, R.array.steps_battery);
-        Ui.add(battery, Ui.button(this, getString(R.string.perm_allow), true, v -> startActivity(
-                new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse(pkg)))), 12);
-        Ui.add(battery, Ui.button(this, getString(R.string.perm_app_settings), false, v -> appInfo()), 8);
-
-        LinearLayout key = step(top, 3, R.string.setup_native_title, R.array.steps_native);
-        Ui.add(key, Ui.button(this, getString(R.string.setup_open_phone_settings), false,
-                v -> startActivity(new Intent(Settings.ACTION_SETTINGS))), 12);
-        CheckBox ok = new CheckBox(this);
-        ok.setText(getString(R.string.setup_native_done));
-        ok.setTextColor(Ui.ink);
-        ok.setChecked(Prefs.nativeKeyOff(this));
-        ok.setOnCheckedChangeListener((c, checked) -> { Prefs.nativeKeyOff(this, checked); refresh(); });
-        Ui.add(key, ok, 8);
-
+        page.setPadding(side, Ui.dp(this, 12), side, Ui.dp(this, 32));
         ScrollView scroll = new ScrollView(this);
-        scroll.addView(top);
+        scroll.addView(page);
         root.addView(scroll, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
         setContentView(root);
         Ui.barsAppearance(this);
     }
 
-    /** One card: done mark and number, title, state, then the numbered instructions. */
-    private LinearLayout step(LinearLayout top, int i, int title, int lines) {
-        LinearLayout card = Ui.card(this);
-        LinearLayout head = new LinearLayout(this);
-        head.setGravity(Gravity.CENTER_VERTICAL);
-        TextView n = Ui.text(this, String.valueOf(i + 1), 15, Ui.accentInk);
-        n.setGravity(Gravity.CENTER);
-        n.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
-        mark[i] = n;
-        head.addView(n, new LinearLayout.LayoutParams(Ui.dp(this, 30), Ui.dp(this, 30)));
-        LinearLayout texts = new LinearLayout(this);
-        texts.setOrientation(LinearLayout.VERTICAL);
-        TextView t = Ui.text(this, getString(title), 16, Ui.ink);
-        t.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
-        texts.addView(t);
-        state[i] = Ui.text(this, "", 13, Ui.muted);
-        texts.addView(state[i]);
-        LinearLayout.LayoutParams tp = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
-        tp.leftMargin = Ui.dp(this, 12);
-        head.addView(texts, tp);
-        card.addView(head);
-        String[] items = getResources().getStringArray(lines);
-        for (int k = 0; k < items.length; k++) {
-            TextView line = Ui.body(this, (k + 1) + ".  " + items[k]);
-            line.setPadding(Ui.dp(this, 42), 0, 0, 0);
-            Ui.add(card, line, k == 0 ? 12 : 6);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        show(); // back from a settings screen: the step may be done now
+    }
+
+    /** Draws the first step that is not done yet, or the end screen. */
+    private void show() {
+        page.removeAllViews();
+        boolean[] ok = steps(this);
+        int current = 0;
+        while (current < TOTAL && ok[current]) current++;
+        if (current == TOTAL) {
+            page.addView(Ui.title(this, getString(R.string.wiz_done_title)));
+            Ui.add(page, Ui.body(this, getString(R.string.wiz_done_text)), 6);
+            Ui.add(page, Ui.button(this, getString(R.string.wiz_done_btn), true, v -> finish()), 20);
+            return;
         }
-        Ui.add(top, card, 14);
-        cards[i] = card;
-        return card;
+        page.addView(Ui.text(this, getString(R.string.setup_progress, current + 1, TOTAL), 13, Ui.muted));
+        String pkg = "package:" + getPackageName();
+        switch (current) {
+            case 0: logStep(); break;
+            case 1:
+                card(R.string.perm_overlay, getString(R.string.wiz_overlay_text),
+                        getString(R.string.setup_open_setting), () -> {
+                            // the switch of this app itself; since Android 11 the public action only shows the list of all apps
+                            try {
+                                startActivity(new Intent("android.settings.MANAGE_APP_OVERLAY_PERMISSION", Uri.parse(pkg)));
+                            } catch (RuntimeException e) {
+                                startActivity(new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse(pkg)));
+                            }
+                        });
+                Ui.add(page, Ui.body(this, getString(R.string.wiz_restricted)), 16);
+                Ui.add(page, Ui.button(this, getString(R.string.perm_app_settings), false, v -> appInfo()), 8);
+                break;
+            case 2:
+                card(R.string.perm_battery, getString(R.string.wiz_battery_text),
+                        getString(R.string.perm_allow), () -> startActivity(new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse(pkg))));
+                break;
+            default:
+                card(R.string.setup_native_title, getString(R.string.wiz_native_text),
+                        getString(R.string.setup_open_phone_settings), () -> startActivity(new Intent(Settings.ACTION_SETTINGS)));
+                CheckBox box = new CheckBox(this);
+                box.setText(getString(R.string.setup_native_done));
+                box.setTextColor(Ui.ink);
+                box.setOnCheckedChangeListener((c, checked) -> { Prefs.nativeKeyOff(this, checked); show(); });
+                Ui.add(page, box, 14);
+        }
+    }
+
+    /** Step 1, in small parts: Wi-Fi, Developer options, then pairing (full edition); a command for a computer (lite). */
+    private void logStep() {
+        if (!AdbSetup.AVAILABLE) {
+            card(R.string.perm_log, getString(R.string.wiz_computer_text), null, null);
+            Ui.add(page, commandBox(), 12);
+            return;
+        }
+        String last = Prefs.setupResult(this);
+        if (!wifi()) {
+            card(R.string.wiz_wifi_title, getString(R.string.wiz_wifi_text),
+                    getString(R.string.wiz_wifi_btn), () -> startActivity(new Intent(Settings.Panel.ACTION_WIFI)));
+        } else if (Settings.Global.getInt(getContentResolver(), Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 1) {
+            card(R.string.wiz_dev_title, getString(R.string.wiz_dev_text),
+                    getString(R.string.wiz_dev_btn), () -> Ui.openSetting(this, Settings.ACTION_DEVICE_INFO_SETTINGS, "build_number"));
+        } else if (last.equals(getString(R.string.setup_refused))) {
+            // ColorOS refused the grant: one more switch, then pair again
+            card(R.string.wiz_sysopt_title, getString(R.string.wiz_sysopt_text),
+                    getString(R.string.wiz_sysopt_btn), () -> {
+                        Prefs.setupResult(this, "");
+                        Ui.openSetting(this, Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS, null);
+                    });
+        } else {
+            card(R.string.wiz_pair_title, getString(R.string.wiz_pair_text),
+                    getString(R.string.perm_auto_btn), () -> AdbSetup.start(this));
+            if (!last.isEmpty() && !last.equals(getString(R.string.setup_done))) {
+                Ui.add(page, Ui.body(this, getString(R.string.wiz_last, last)), 14);
+            }
+        }
+        TextView other = Ui.button(this, getString(R.string.setup_other_way), false, null);
+        View box = commandBox();
+        box.setVisibility(View.GONE);
+        other.setOnClickListener(v -> box.setVisibility(box.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE));
+        Ui.add(page, other, 24);
+        Ui.add(page, box, 8);
+    }
+
+    /** Title, what to do, and the one button that opens the right screen. */
+    private void card(int title, String text, String button, Runnable action) {
+        Ui.add(page, Ui.title(this, getString(title)), 6);
+        Ui.add(page, Ui.body(this, text), 8);
+        if (button != null) Ui.add(page, Ui.button(this, button, true, v -> action.run()), 18);
+    }
+
+    private boolean wifi() {
+        ConnectivityManager cm = getSystemService(ConnectivityManager.class);
+        NetworkCapabilities n = cm.getNetworkCapabilities(cm.getActiveNetwork());
+        return n != null && n.hasTransport(NetworkCapabilities.TRANSPORT_WIFI);
     }
 
     /** The command for a computer (lite edition, or when the automatic setup cannot be used). */
@@ -151,23 +179,5 @@ public class SetupActivity extends Activity {
 
     private void appInfo() {
         startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName())));
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        refresh();
-    }
-
-    private void refresh() {
-        boolean[] ok = steps(this);
-        for (int i = 0; i < TOTAL; i++) {
-            mark[i].setText(ok[i] ? "✓" : String.valueOf(i + 1));
-            mark[i].setBackground(Ui.shape(this, ok[i] ? Ui.accent : 0xFFE0A030, 15, 0));
-            state[i].setText(ok[i] ? getString(R.string.perm_granted) : getString(R.string.perm_needed));
-            // a done step folds its instructions away (the last step keeps its box, to untick it)
-            int keep = i == TOTAL - 1 ? cards[i].getChildCount() - 1 : cards[i].getChildCount();
-            for (int k = 1; k < keep; k++) cards[i].getChildAt(k).setVisibility(ok[i] ? View.GONE : View.VISIBLE);
-        }
     }
 }

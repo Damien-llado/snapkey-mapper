@@ -14,7 +14,7 @@
     <string name="btn_stop">Dejar de escuchar</string>
     <string name="perm_title">Permisos</string>
     <string name="perm_sub">Tres interruptores, una sola vez. La tecla no necesita nada más.</string>
-    <string name="perm_auto_btn">Configurar la lectura del registro automáticamente</string>
+    <string name="perm_auto_btn">Abrir Depuración inalámbrica</string>
     <string name="perm_auto_help">Conéctate a tu Wi-Fi, toca el botón y, en Opciones para desarrolladores, activa Depuración inalámbrica, toca \"Vincular dispositivo con código de sincronización\" y escribe los 6 dígitos de la notificación. En ColorOS, activa antes \"Disable system optimisation\".</string>
     <string name="perm_log">Lectura del registro</string>
     <string name="perm_overlay">Mostrar sobre otras apps</string>
@@ -140,4 +140,28 @@
         <item>Vuelve al inicio, empieza a escuchar y pulsa la tecla para comprobar.</item>
     </string-array>
     <string name="recipe_help">¿No funciona en tu móvil? En un ordenador, pregunta a Claude Code con el plugin de SnapKey Mapper: encuentra un enlace que funcione y lo prueba en tu móvil, conectado por cable USB o por depuración inalámbrica.</string>
+    <string name="setup_progress">Paso %1$d de %2$d</string>
+    <string name="wiz_wifi_title">Conéctate al Wi-Fi</string>
+    <string name="wiz_wifi_text">La app se concede a sí misma el permiso del registro mediante la depuración inalámbrica del teléfono, que solo funciona con Wi-Fi. Conecta el teléfono y vuelve aquí.</string>
+    <string name="wiz_wifi_btn">Abrir Wi-Fi</string>
+    <string name="wiz_dev_title">Activa las Opciones para desarrolladores</string>
+    <string name="wiz_dev_text">Toca el botón y luego toca 7 veces el número de compilación (en ColorOS: Versión). Android dice que ya eres desarrollador. Vuelve aquí.</string>
+    <string name="wiz_dev_btn">Abrir Información del teléfono</string>
+    <string name="wiz_pair_title">Vincula la app con tu teléfono</string>
+    <string name="wiz_pair_text">1. Toca el botón: se abre Depuración inalámbrica.\n2. Activa \"Usar depuración inalámbrica\" y permite tu red.\n3. Toca \"Vincular dispositivo con código de sincronización\".\n4. Aparece una notificación de SnapKey Mapper: escribe en ella los 6 dígitos. Eso es todo, la app hace el resto.</string>
+    <string name="wiz_sysopt_title">Un ajuste más en ColorOS</string>
+    <string name="wiz_sysopt_text">ColorOS ha rechazado el permiso. En Opciones para desarrolladores, activa \"Disable system optimisation\" (cerca del final), vuelve aquí y vincula de nuevo.</string>
+    <string name="wiz_sysopt_btn">Abrir Opciones para desarrolladores</string>
+    <string name="wiz_last">Último intento: %1$s</string>
+    <string name="wiz_computer_text">La edición lite no tiene acceso a la red, así que el permiso se concede desde un ordenador, una sola vez: activa Depuración por USB en Opciones para desarrolladores, conecta el teléfono con un cable y ejecuta este comando.</string>
+    <string name="wiz_overlay_text">Permite que la tecla abra tu destino aunque la pantalla esté apagada u otra app esté delante. Toca el botón, luego SnapKey Mapper en la lista, y activa el interruptor.</string>
+    <string name="wiz_restricted">¿Interruptor en gris o \"acceso denegado\"? Android lo bloquea en las apps instaladas fuera de Play Store: abre los ajustes de la app, toca ⋮ arriba a la derecha y luego \"Permitir ajustes restringidos\", y vuelve.</string>
+    <string name="wiz_battery_text">Para que Android no detenga la app en segundo plano. Toca el botón y confirma. En ColorOS, bloquea también la app en las apps recientes.</string>
+    <string name="wiz_native_text">Para que el teléfono no ejecute a la vez su propia acción de Snap Key: en los ajustes del teléfono, busca \"Snap Key\" y ponla sin ninguna acción.</string>
+    <string name="wiz_done_title">Todo listo</string>
+    <string name="wiz_done_text">Ahora elige qué abre la tecla y empieza a escuchar.</string>
+    <string name="wiz_done_btn">Continuar</string>
+    <string name="home_setup_title">Configura SnapKey Mapper</string>
+    <string name="home_setup_text">Unos pasos, una sola vez. La app abre cada ajuste por ti y lo comprueba.</string>
+    <string name="home_finder">¿La tecla no hace nada? Otro teléfono: encuentra tu tecla</string>
 </resources>

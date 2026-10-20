@@ -35,6 +35,10 @@ final class Prefs {
     static boolean nativeKeyOff(Context c) { return p(c).getBoolean("native_off", false); }
     static void nativeKeyOff(Context c, boolean off) { p(c).edit().putBoolean("native_off", off).apply(); }
 
+    /** Outcome of the last automatic setup, shown on the setup screen. */
+    static String setupResult(Context c) { return p(c).getString("setup_result", ""); }
+    static void setupResult(Context c, String text) { p(c).edit().putString("setup_result", text).apply(); }
+
     static void save(Context c, String link, String pattern) {
         p(c).edit().putString("link", link.trim()).putString("pattern", pattern.trim()).apply();
     }

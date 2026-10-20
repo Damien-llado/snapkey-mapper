@@ -14,7 +14,7 @@
     <string name="btn_stop">停止监听</string>
     <string name="perm_title">权限设置</string>
     <string name="perm_sub">三个开关，只需设置一次。按键本身不需要其他任何权限。</string>
-    <string name="perm_auto_btn">自动设置日志读取权限</string>
+    <string name="perm_auto_btn">打开无线调试</string>
     <string name="perm_auto_help">连上 Wi-Fi，点按钮，然后在开发者选项中开启无线调试，点“使用配对码配对设备”，在通知里输入 6 位数字。在 ColorOS 上，请先开启“Disable system optimisation”。</string>
     <string name="perm_log">日志读取</string>
     <string name="perm_overlay">显示在其他应用上层</string>
@@ -140,4 +140,28 @@
         <item>回到主页，开始监听，再按一下按键进行验证。</item>
     </string-array>
     <string name="recipe_help">在你的手机上不管用？在电脑上用 SnapKey Mapper 插件问问 Claude Code：它会找到能用的链接，并在通过 USB 数据线或无线调试连接的手机上测试。</string>
+    <string name="setup_progress">第 %1$d 步，共 %2$d 步</string>
+    <string name="wiz_wifi_title">连接 Wi-Fi</string>
+    <string name="wiz_wifi_text">应用通过手机的无线调试给自己授予日志权限，而无线调试只能在 Wi-Fi 下使用。请先连接 Wi-Fi，然后回到这里。</string>
+    <string name="wiz_wifi_btn">打开 Wi-Fi</string>
+    <string name="wiz_dev_title">开启开发者选项</string>
+    <string name="wiz_dev_text">点按钮，然后连续点按版本号 7 次（ColorOS 上是：版本信息）。Android 会提示你已成为开发者。然后回到这里。</string>
+    <string name="wiz_dev_btn">打开关于手机</string>
+    <string name="wiz_pair_title">把应用与手机配对</string>
+    <string name="wiz_pair_text">1. 点按钮：无线调试会打开。\n2. 开启“使用无线调试”，并允许你的网络。\n3. 点“使用配对码配对设备”。\n4. 会弹出一条 SnapKey Mapper 的通知：在里面输入 6 位数字。就这样，其余由应用完成。</string>
+    <string name="wiz_sysopt_title">ColorOS 上还有一个开关</string>
+    <string name="wiz_sysopt_text">ColorOS 拒绝了该权限。请在开发者选项中开启“Disable system optimisation”（靠近底部），回到这里再配对一次。</string>
+    <string name="wiz_sysopt_btn">打开开发者选项</string>
+    <string name="wiz_last">上次尝试：%1$s</string>
+    <string name="wiz_computer_text">精简版没有网络访问权限，所以权限要在电脑上授予，只需一次：在开发者选项中开启 USB 调试，用数据线连接手机，然后运行这条命令。</string>
+    <string name="wiz_overlay_text">这样即使屏幕关闭或其他应用在前台，按键也能打开你的目标。点按按钮，在列表中选择 SnapKey Mapper，然后打开开关。</string>
+    <string name="wiz_restricted">开关是灰色，或提示“访问被拒绝”？Android 会对不是从 Play 商店安装的应用限制该权限：打开应用设置，点右上角 ⋮，再点“允许受限制的设置”，然后回来。</string>
+    <string name="wiz_battery_text">避免 Android 在后台停止应用。点按钮并确认。在 ColorOS 上，还要在最近任务中锁定本应用。</string>
+    <string name="wiz_native_text">避免手机同时执行自己的 Snap Key 操作：在手机设置中搜索“Snap Key”，设为无操作。</string>
+    <string name="wiz_done_title">全部就绪</string>
+    <string name="wiz_done_text">现在选择按键要打开什么，然后开始监听。</string>
+    <string name="wiz_done_btn">继续</string>
+    <string name="home_setup_title">设置 SnapKey Mapper</string>
+    <string name="home_setup_text">只需几步，只做一次。应用会为你打开每个设置项并检查。</string>
+    <string name="home_finder">按键没反应？换了手机：找到你的按键</string>
 </resources>

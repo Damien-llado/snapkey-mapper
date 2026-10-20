@@ -15,5 +15,5 @@ If either differs, do not install.
 
 ## What the app can and cannot do
 - The **lite** edition has no INTERNET permission: Android does not let it open network connections itself.
-- The **full** edition adds INTERNET, ACCESS_WIFI_STATE and CHANGE_WIFI_MULTICAST_STATE, only to pair with your own phone's wireless debugging once. It deletes its pairing key afterwards.
+- The **full** edition adds INTERNET, ACCESS_WIFI_STATE, CHANGE_WIFI_MULTICAST_STATE and ACCESS_NETWORK_STATE, only to pair with your own phone's wireless debugging once. It deletes its pairing key afterwards.
 - Both read the system log (READ_LOGS) to detect the Snap Key press. Other apps may write fragments of their own activity there. The app uses it only to spot the key press.

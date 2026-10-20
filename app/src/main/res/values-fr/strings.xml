@@ -14,7 +14,7 @@
     <string name="btn_stop">Arrêter l\'écoute</string>
     <string name="perm_title">Autorisations</string>
     <string name="perm_sub">Trois réglages, une seule fois. La touche n\'a besoin de rien d\'autre.</string>
-    <string name="perm_auto_btn">Configurer la lecture du journal automatiquement</string>
+    <string name="perm_auto_btn">Ouvrir le débogage sans fil</string>
     <string name="perm_auto_help">Connectez-vous au Wi-Fi, touchez le bouton, puis dans les Options pour les développeurs activez le débogage sans fil, touchez « Associer l\'appareil avec un code d\'association » et saisissez les 6 chiffres dans la notification. Sur ColorOS, activez d\'abord « Disable system optimisation ».</string>
     <string name="perm_log">Lecture du journal</string>
     <string name="perm_overlay">Affichage par-dessus les autres applis</string>
@@ -97,7 +97,7 @@
     <string name="setup_continue">Continuer la configuration</string>
     <string name="setup_other_way">Autre méthode : depuis un ordinateur</string>
     <string name="setup_open_setting">Ouvrir le réglage</string>
-    <string name="setup_native_title">Action propre à la Snap Key du téléphone désactivée</string>
+    <string name="setup_native_title">Couper l\'action d\'origine de la Snap Key</string>
     <string name="setup_open_phone_settings">Ouvrir les paramètres du téléphone</string>
     <string name="setup_native_done">Fait : la Snap Key ne fait rien d\'elle-même</string>
     <string name="finder_intro">La touche du Find X9 est déjà connue : rien à faire ici. Sur un autre téléphone, l\'appli doit apprendre quelle ligne Android écrit dans son journal quand vous appuyez sur votre touche.</string>
@@ -140,4 +140,28 @@
         <item>Revenez à l\'accueil, démarrez l\'écoute et appuyez sur la touche pour vérifier.</item>
     </string-array>
     <string name="recipe_help">Ça ne marche pas sur votre téléphone ? Sur un ordinateur, demandez à Claude Code avec le plugin SnapKey Mapper : il trouve un lien qui marche et le teste sur votre téléphone, relié par câble USB ou par le débogage sans fil.</string>
+    <string name="setup_progress">Étape %1$d sur %2$d</string>
+    <string name="wiz_wifi_title">Connectez-vous au Wi-Fi</string>
+    <string name="wiz_wifi_text">L\'appli s\'accorde elle-même l\'autorisation du journal grâce au débogage sans fil du téléphone, qui ne fonctionne que sur le Wi-Fi. Connectez le téléphone, puis revenez ici.</string>
+    <string name="wiz_wifi_btn">Ouvrir le Wi-Fi</string>
+    <string name="wiz_dev_title">Activez les Options pour les développeurs</string>
+    <string name="wiz_dev_text">Touchez le bouton, puis touchez 7 fois le numéro de build (sur ColorOS : Version). Android indique que vous êtes développeur. Revenez ici.</string>
+    <string name="wiz_dev_btn">Ouvrir À propos du téléphone</string>
+    <string name="wiz_pair_title">Associez l\'appli à votre téléphone</string>
+    <string name="wiz_pair_text">1. Touchez le bouton : le débogage sans fil s\'ouvre.\n2. Activez « Utiliser le débogage sans fil » et autorisez votre réseau.\n3. Touchez « Associer l\'appareil avec un code d\'association ».\n4. Une notification SnapKey Mapper s\'affiche : saisissez-y les 6 chiffres. C\'est tout, l\'appli fait le reste.</string>
+    <string name="wiz_sysopt_title">Un réglage de plus sur ColorOS</string>
+    <string name="wiz_sysopt_text">ColorOS a refusé l\'autorisation. Dans les Options pour les développeurs, activez « Disable system optimisation » (près du bas), revenez ici et associez de nouveau.</string>
+    <string name="wiz_sysopt_btn">Ouvrir les Options pour les développeurs</string>
+    <string name="wiz_last">Dernière tentative : %1$s</string>
+    <string name="wiz_computer_text">L\'édition lite n\'a pas accès au réseau : l\'autorisation se donne donc depuis un ordinateur, une seule fois. Activez le débogage USB dans les Options pour les développeurs, branchez le téléphone avec un câble et lancez cette commande.</string>
+    <string name="wiz_overlay_text">Permet à la touche d\'ouvrir votre cible même écran éteint ou quand une autre appli est au premier plan. Touchez le bouton, puis SnapKey Mapper dans la liste, et activez l\'interrupteur.</string>
+    <string name="wiz_restricted">Interrupteur grisé, ou « accès refusé » ? Android le bloque pour les applis installées hors du Play Store : ouvrez les paramètres de l\'appli, touchez ⋮ en haut à droite, puis « Autoriser les paramètres restreints », et revenez.</string>
+    <string name="wiz_battery_text">Pour qu\'Android n\'arrête pas l\'appli en arrière-plan. Touchez le bouton et confirmez. Sur ColorOS, verrouillez aussi l\'appli dans les applis récentes.</string>
+    <string name="wiz_native_text">Pour que le téléphone ne lance pas sa propre action Snap Key en même temps : dans les paramètres du téléphone, cherchez « Snap Key » et réglez-la sur aucune action.</string>
+    <string name="wiz_done_title">Tout est prêt</string>
+    <string name="wiz_done_text">Choisissez maintenant ce que la touche ouvre, puis lancez l\'écoute.</string>
+    <string name="wiz_done_btn">Continuer</string>
+    <string name="home_setup_title">Configurer SnapKey Mapper</string>
+    <string name="home_setup_text">Quelques étapes, une seule fois. L\'appli ouvre chaque réglage pour vous et le vérifie.</string>
+    <string name="home_finder">La touche ne fait rien ? Autre téléphone : trouver votre touche</string>
 </resources>

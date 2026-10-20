@@ -166,6 +166,18 @@ final class Ui {
         a.getWindow().getInsetsController().setSystemBarsAppearance(night ? 0 : bars, bars);
     }
 
+    /** Opens a settings screen; the Settings app highlights the line whose key is given (AOSP keys, ignored if unknown). */
+    static void openSetting(Context c, String action, String highlight) {
+        android.content.Intent i = new android.content.Intent(action).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (highlight != null) {
+            i.putExtra(":settings:fragment_args_key", highlight);
+            android.os.Bundle args = new android.os.Bundle();
+            args.putString(":settings:fragment_args_key", highlight);
+            i.putExtra(":settings:show_fragment_args", args);
+        }
+        c.startActivity(i);
+    }
+
     /** Rounded tile with the logo of an app or of an Android function. */
     static ImageView logo(Context c, Recipes.App app, int sizeDp) {
         ImageView v = new ImageView(c);

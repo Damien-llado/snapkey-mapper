@@ -5,6 +5,8 @@
     <!-- Only used to talk to this phone's own wireless debugging (local sockets). Nothing is sent anywhere. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- the setup screen checks that the phone is on Wi-Fi before pairing -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
 
     <!-- Declared by a library, never needed here -->

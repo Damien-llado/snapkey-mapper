@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 
     private TextView heroState, listen, targetName;
     private ImageView targetIcon;
-    private View setupCard;
+    private View setupCard, heroCard, targetCard, gestureCard, finderLink;
     private PhoneView phone;
 
     @Override
@@ -55,12 +55,18 @@ public class MainActivity extends Activity {
         setup(content);
         target(content);
         gesture(content);
+        TextView finder = Ui.text(this, getString(R.string.home_finder), 14, Ui.accent);
+        finder.setPadding(Ui.dp(this, 4), Ui.dp(this, 12), Ui.dp(this, 4), Ui.dp(this, 12));
+        finder.setOnClickListener(v -> startActivity(new Intent(this, FinderActivity.class)));
+        finderLink = Ui.add(content, finder, 10);
         ScrollView scroll = new ScrollView(this);
         scroll.addView(content);
         root.addView(scroll, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
         setContentView(root);
         Ui.barsAppearance(this);
         if (getIntent().getBooleanExtra("restart", false)) startListening();
+        // first launch, or setup not finished: the guided setup comes first
+        else if (SetupActivity.done(this) < SetupActivity.TOTAL) startActivity(new Intent(this, SetupActivity.class));
     }
 
     /** Name, language and the menu that leads to the other screens. */
@@ -130,13 +136,17 @@ public class MainActivity extends Activity {
         card.addView(left, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
         phone = new PhoneView(this);
         card.addView(phone, new LinearLayout.LayoutParams(Ui.dp(this, 110), Ui.dp(this, 150)));
-        Ui.add(top, card, 0);
+        heroCard = Ui.add(top, card, 0);
     }
 
     /** Shown until every setup step is done. */
     private void setup(LinearLayout top) {
-        setupCard = Ui.add(top, Ui.button(this, getString(R.string.setup_continue), true,
+        LinearLayout card = Ui.card(this);
+        card.addView(Ui.title(this, getString(R.string.home_setup_title)));
+        Ui.add(card, Ui.body(this, getString(R.string.home_setup_text)), 4);
+        Ui.add(card, Ui.button(this, getString(R.string.setup_continue), true,
                 v -> startActivity(new Intent(this, SetupActivity.class))), 14);
+        setupCard = Ui.add(top, card, 0);
     }
 
     private void target(LinearLayout top) {
@@ -155,16 +165,9 @@ public class MainActivity extends Activity {
         Ui.add(card, row, 12);
         Ui.add(card, Ui.button(this, getString(R.string.library_open), true,
                 v -> startActivityForResult(new Intent(this, LibraryActivity.class), PICKED)), 14);
-        LinearLayout two = new LinearLayout(this);
-        TextView app = Ui.button(this, getString(R.string.app_choose), false,
-                v -> startActivityForResult(new Intent(this, AppPickerActivity.class), PICKED));
-        TextView link = Ui.button(this, getString(R.string.target_link_enter), false, v -> enterLink());
-        LinearLayout.LayoutParams half = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
-        two.addView(app, half);
-        LinearLayout.LayoutParams half2 = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
-        half2.leftMargin = Ui.dp(this, 8);
-        two.addView(link, half2);
-        Ui.add(card, two, 8);
+        Ui.add(card, Ui.button(this, getString(R.string.app_choose), false,
+                v -> startActivityForResult(new Intent(this, AppPickerActivity.class), PICKED)), 8);
+        Ui.add(card, Ui.button(this, getString(R.string.target_link_enter), false, v -> enterLink()), 8);
         Ui.add(card, Ui.button(this, getString(R.string.target_test), false, v -> {
             try {
                 Prefs.openTarget(this);
@@ -172,7 +175,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, getString(R.string.toast_cannot_open, e.getMessage()), Toast.LENGTH_LONG).show();
             }
         }), 8);
-        Ui.add(top, card, 14);
+        targetCard = Ui.add(top, card, 14);
     }
 
     private void gesture(LinearLayout top) {
@@ -182,7 +185,7 @@ public class MainActivity extends Activity {
         int current = java.util.Arrays.asList(GESTURES).indexOf(Prefs.gesture(this));
         Ui.add(card, new Ui.Segmented(this, new String[]{getString(R.string.gesture_single), getString(R.string.gesture_double), getString(R.string.gesture_long)}, Math.max(current, 0),
                 i -> Prefs.gesture(this, GESTURES[i])), 12);
-        Ui.add(top, card, 14);
+        gestureCard = Ui.add(top, card, 14);
     }
 
     @Override
@@ -197,7 +200,9 @@ public class MainActivity extends Activity {
         heroState.setText(on ? getString(R.string.state_listening) : done == total ? getString(R.string.state_ready) : getString(R.string.state_setup, done, total));
         listen.setText(on ? getString(R.string.btn_stop) : getString(R.string.btn_start));
         phone.setListening(on);
-        setupCard.setVisibility(done == total ? View.GONE : View.VISIBLE);
+        boolean ready = done == total;
+        setupCard.setVisibility(ready ? View.GONE : View.VISIBLE);
+        for (View v : new View[]{heroCard, targetCard, gestureCard, finderLink}) v.setVisibility(ready ? View.VISIBLE : View.GONE);
         if (Prefs.targetType(this).equals("app") && !Prefs.appPackage(this).isEmpty()) {
             String pkg = Prefs.appPackage(this);
             try {

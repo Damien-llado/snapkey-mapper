@@ -14,7 +14,7 @@
     <string name="btn_stop">Luisteren stoppen</string>
     <string name="perm_title">Toestemmingen</string>
     <string name="perm_sub">Drie schakelaars, één keer. De toets zelf heeft verder niets nodig.</string>
-    <string name="perm_auto_btn">Logboek lezen automatisch instellen</string>
+    <string name="perm_auto_btn">Draadloze foutopsporing openen</string>
     <string name="perm_auto_help">Maak verbinding met je wifi, tik op de knop en zet daarna in Ontwikkelaarsopties Draadloze foutopsporing aan, tik op \"Apparaat koppelen met koppelingscode\" en typ de 6 cijfers in de melding. Zet op ColorOS eerst \"Disable system optimisation\" aan.</string>
     <string name="perm_log">Logboek lezen</string>
     <string name="perm_overlay">Weergeven over andere apps</string>
@@ -140,4 +140,28 @@
         <item>Ga terug naar het startscherm, begin met luisteren en druk ter controle op de toets.</item>
     </string-array>
     <string name="recipe_help">Werkt het niet op je telefoon? Vraag het op een computer aan Claude Code met de SnapKey Mapper-plug-in: die vindt een link die werkt en test hem op je telefoon, verbonden via een USB-kabel of draadloze foutopsporing.</string>
+    <string name="setup_progress">Stap %1$d van %2$d</string>
+    <string name="wiz_wifi_title">Maak verbinding met wifi</string>
+    <string name="wiz_wifi_text">De app geeft zichzelf de logboekrechten via de draadloze foutopsporing van de telefoon, die alleen op wifi werkt. Verbind de telefoon en kom dan hier terug.</string>
+    <string name="wiz_wifi_btn">Wifi openen</string>
+    <string name="wiz_dev_title">Zet Ontwikkelaarsopties aan</string>
+    <string name="wiz_dev_text">Tik op de knop en tik daarna 7 keer op het buildnummer (op ColorOS: Versie). Android meldt dat je ontwikkelaar bent. Kom hier terug.</string>
+    <string name="wiz_dev_btn">Over de telefoon openen</string>
+    <string name="wiz_pair_title">Koppel de app aan je telefoon</string>
+    <string name="wiz_pair_text">1. Tik op de knop: Draadloze foutopsporing gaat open.\n2. Zet \"Draadloze foutopsporing gebruiken\" aan en sta je netwerk toe.\n3. Tik op \"Apparaat koppelen met koppelingscode\".\n4. Er verschijnt een melding van SnapKey Mapper: typ daarin de 6 cijfers. Dat is alles, de app doet de rest.</string>
+    <string name="wiz_sysopt_title">Nog een schakelaar op ColorOS</string>
+    <string name="wiz_sysopt_text">ColorOS heeft de toestemming geweigerd. Zet in Ontwikkelaarsopties \"Disable system optimisation\" aan (onderaan), kom hier terug en koppel opnieuw.</string>
+    <string name="wiz_sysopt_btn">Ontwikkelaarsopties openen</string>
+    <string name="wiz_last">Laatste poging: %1$s</string>
+    <string name="wiz_computer_text">De lite-versie heeft geen netwerktoegang, dus de toestemming wordt eenmalig vanaf een computer gegeven: zet USB-foutopsporing aan in Ontwikkelaarsopties, verbind de telefoon met een kabel en voer deze opdracht uit.</string>
+    <string name="wiz_overlay_text">Zo opent de toets je doel ook met het scherm uit of als een andere app voorop staat. Tik op de knop, dan op SnapKey Mapper in de lijst, en zet de schakelaar aan.</string>
+    <string name="wiz_restricted">Schakelaar grijs, of \"toegang geweigerd\"? Android blokkeert dit voor apps die buiten de Play Store zijn geïnstalleerd: open de app-instellingen, tik rechtsboven op ⋮ en dan op \"Beperkte instellingen toestaan\", en kom terug.</string>
+    <string name="wiz_battery_text">Zodat Android de app niet op de achtergrond stopt. Tik op de knop en bevestig. Vergrendel de app op ColorOS ook in de recente apps.</string>
+    <string name="wiz_native_text">Zodat de telefoon niet tegelijk zijn eigen Snap Key-actie uitvoert: zoek in de telefooninstellingen naar \"Snap Key\" en zet hem op geen actie.</string>
+    <string name="wiz_done_title">Alles klaar</string>
+    <string name="wiz_done_text">Kies nu wat de toets opent en begin met luisteren.</string>
+    <string name="wiz_done_btn">Doorgaan</string>
+    <string name="home_setup_title">SnapKey Mapper instellen</string>
+    <string name="home_setup_text">Een paar stappen, eenmalig. De app opent elke instelling voor je en controleert hem.</string>
+    <string name="home_finder">Doet de toets niets? Andere telefoon: zoek je toets</string>
 </resources>
