@@ -31,6 +31,9 @@ final class Prefs {
     /** "single", "double" or "long". */
     static String gesture(Context c) { return p(c).getString("gesture", "double"); }
     static void gesture(Context c, String gesture) { p(c).edit().putString("gesture", gesture).apply(); }
+    /** The user confirmed that the native Snap Key action is set to nothing (cannot be checked from an app). */
+    static boolean nativeKeyOff(Context c) { return p(c).getBoolean("native_off", false); }
+    static void nativeKeyOff(Context c, boolean off) { p(c).edit().putBoolean("native_off", off).apply(); }
 
     static void save(Context c, String link, String pattern) {
         p(c).edit().putString("link", link.trim()).putString("pattern", pattern.trim()).apply();
@@ -61,7 +64,7 @@ final class Prefs {
 
     /** Runs logcat continuously (lines from now on); onEnd is called if the process stops. */
     static Process readLog(Line line, Runnable onEnd) throws IOException {
-        Process p = new ProcessBuilder("logcat", "-v", "brief", "-T", "1", "-b", "main,system,events")
+        Process p = new ProcessBuilder("logcat", "-v", "brief", "-v", "uid", "-T", "1", "-b", "main,system,events")
                 .redirectErrorStream(true).start();
         Thread t = new Thread(() -> {
             try (BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()))) {

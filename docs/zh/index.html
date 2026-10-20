@@ -333,20 +333,20 @@
   <section id="library" class="wide" aria-labelledby="lib-h">
     <div class="split">
       <div class="split-copy">
-        <p class="kicker">模板库</p>
-        <h2 id="lib-h">不知道链接？选一个模板</h2>
-        <p>应用自带一个现成的模板库，按应用分组：开始计时器、设置闹钟、打开相机、拨打号码、写短信、导航到某地、打开播放列表或聊天。选一个，填好你的内容，测试一下，然后设为按键的目标。</p>
+        <p class="kicker">快捷方式库</p>
+        <h2 id="lib-h">不知道链接？选一个快捷方式</h2>
+        <p>应用自带一个现成的快捷方式库，按应用分组：开始计时器、设置闹钟、打开相机、拨打号码、写短信、导航到某地、打开播放列表或聊天。选一个，填好你的内容，测试一下，然后设为按键的目标。</p>
         <ul class="ticks">
           <li>按应用分组，配有官方图标</li>
           <li>每项内容一个字段，并提示去哪里找</li>
           <li>实时预览最终链接，可一键复制和测试</li>
-          <li>每个模板都在 Android 模拟器上验证过，并附有说明它的官方文档链接</li>
+          <li>每个快捷方式都在 Android 模拟器上验证过，并附有说明它的官方文档链接</li>
         </ul>
-        <p class="muted small">在模拟器上验证过，不等于在每部手机上都验证过：ColorOS 上的时钟、相机和设置应用有所不同，有些应用还需要登录账号。每个模板里的测试按钮，点一下就能告诉你结果。</p>
+        <p class="muted small">在模拟器上验证过，不等于在每部手机上都验证过：ColorOS 上的时钟、相机和设置应用有所不同，有些应用还需要登录账号。每个快捷方式里的测试按钮，点一下就能告诉你结果。</p>
       </div>
       <div class="appshots">
-        <img src="/img/library.png" width="540" height="1200" alt="SnapKey Mapper 的模板库：各应用的图标及其模板数量" loading="lazy">
-        <img src="/img/recipe.png" width="540" height="1200" alt="一个模板：每项内容一个字段，最终链接实时生成" loading="lazy">
+        <img src="/img/library.png" width="540" height="1200" alt="SnapKey Mapper 的快捷方式库：各应用的图标及其快捷方式数量" loading="lazy">
+        <img src="/img/recipe.png" width="540" height="1200" alt="一个快捷方式：每项内容一个字段，最终链接实时生成" loading="lazy">
       </div>
     </div>
   </section>
@@ -370,6 +370,8 @@
       <li><strong>提示文件可能有害</strong>，出现在 Chrome 中。从网上下载的每个 APK 都会这样提示。确认下载即可。</li>
       <li><strong>“安装未知应用”</strong>。Android 会请你允许浏览器或文件管理器安装应用。允许、安装，之后想关回去也可以。</li>
       <li><strong>“Play Protect hasn't seen this app before”</strong>（Play 保护机制未见过此应用）。应用是新的，所以 Google 提出帮你检查。点 <em>扫描应用</em>，几秒钟就好。</li>
+      <li><strong>“已阻止有害应用”</strong>。Google Play Protect 可能会显示这条提示并中止安装。原因是这个应用来自 GitHub 而不是 Google Play，并且向一位 Google 尚未验证的开发者申请敏感权限（读取系统日志、显示在其他应用上层）。这并不表示应用是恶意的。继续之前，请核对 APK 的签名证书 SHA-256 是否为 <code>a4a6d83d2298e8a88a6da748a3cc9ae9051e459a1d6e06b098a27d2b87f8f796</code>（用 AppVerifier，或 <code>apksigner verify --print-certs</code>）。一致的话，点按<em>仍要安装</em>。</li>
+      <li><strong>无法开启“显示在其他应用上层”</strong>。在你为该应用允许受限设置之前，Android 可能会拒绝这项权限：<em>应用信息 › ⋮ › 允许受限设置</em>。然后返回再授予权限。</li>
     </ol>
     <div class="cando">
       <div><h3>它能做什么</h3><ul>
@@ -473,9 +475,11 @@
 
     <details><summary>它和 OPPO 有关系吗？</summary><div><p>没有。SnapKey Mapper 是独立的开源项目，与 OPPO、OnePlus、Key Mapper、Anthropic 以及本页出现的任何应用均无关联。这些名称仅用于说明兼容性。</p></div></details>
 
-    <details><summary>什么是模板库？</summary><div><p>一份按应用分组的现成链接列表：计时器、闹钟、相机、通话、短信、地图、音乐、聊天等等。在应用里打开它，选一个模板，填好空白处，测试一下，然后设为 Snap Key 的目标。每个模板都附有说明它的官方文档链接。</p></div></details>
+    <details><summary>什么是快捷方式库？</summary><div><p>一份按应用分组的现成链接列表：计时器、闹钟、相机、通话、短信、地图、音乐、聊天等等。在应用里打开它，选一个快捷方式，填好空白处，测试一下，然后设为 Snap Key 的目标。每个快捷方式都附有说明它的官方文档链接。</p></div></details>
 
-    <details><summary>怎么知道某个模板在我的手机上能用？</summary><div><p>模板是在 Android 模拟器上验证的，并非在每部手机上都验证过。ColorOS 上的时钟、相机和设置应用有所不同，有些应用还需要登录账号。每个模板里的测试按钮，点一下就能告诉你结果。如果某个模板在你的手机上不能用，请在 GitHub 上告诉我们，我们会修复或删除它。</p></div></details>
+    <details><summary>怎么知道某个快捷方式在我的手机上能用？</summary><div><p>快捷方式是在 Android 模拟器上验证的，并非在每部手机上都验证过。ColorOS 上的时钟、相机和设置应用有所不同，有些应用还需要登录账号。每个快捷方式里的测试按钮，点一下就能告诉你结果。如果某个快捷方式在你的手机上不能用，请在 GitHub 上告诉我们，我们会修复或删除它。</p></div></details>
+
+    <details id="privacy"><summary>这个网站会追踪我吗？</summary><div><p>网站使用 Microsoft Clarity 统计访问情况（点击、滚动、访问录制），但只有在你于横幅中同意后才会这样做。如果你拒绝，Clarity 不会加载，也不会设置任何 Cookie。你可以随时通过页面底部的“Cookie 设置”改变主意。页面还会向 api.github.com 请求星标数和下载数，这会把你的 IP 地址发送给 GitHub，并把这些数字在你的浏览器里保存一小时。应用本身不收集任何数据：没有账号，没有追踪器，没有广告。</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">
@@ -520,163 +524,11 @@
     <li><a href="https://github.com/Damien-llado/snapkey-mapper">源代码</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">报告问题</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">所有版本</a></li>
+    <li><button class="cc-reopen" type="button" data-cc-reopen>Cookie 设置</button></li>
   </ul>
   <ul aria-label="语言"><li><a href="/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li></ul>
 </footer>
 
-<script>
-// Mesure d'audience Microsoft Clarity (clics, défilement, cartes de chaleur) : coupée si l'identifiant du projet est vide
-(function (id) {
-  if (!id) return;
-  (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-    t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, 'clarity', 'script', id);
-  // Événements utiles : téléchargement, GitHub, histoire partagée
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('a'); if (!a) return;
-    if (a.href.indexOf('/releases') > -1) clarity('event', 'download');
-    else if (a.href.indexOf('github.com') > -1) clarity('event', 'github');
-  });
-  document.getElementById('story').addEventListener('submit', function () { clarity('event', 'story'); });
-})('z0nfap9rs6');
-
-// Étoiles et téléchargements GitHub en direct (affichés même à 0), en cache une heure pour rester sous la limite de l'API
-(function () {
-  var key = 'skm-counts', now = Date.now(), api = 'https://api.github.com/repos/Damien-llado/snapkey-mapper';
-  function show(c) {
-    document.querySelectorAll('[data-stars]').forEach(function (e) { e.textContent = c.stars; });
-    document.querySelectorAll('[data-downloads]').forEach(function (e) { e.textContent = c.downloads; });
-  }
-  try {
-    var c = JSON.parse(localStorage.getItem(key) || 'null');
-    if (c && now - c.t < 3600e3) return show(c);
-  } catch (e) {}
-  function get(u) { return fetch(u).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
-  Promise.all([get(api), get(api + '/releases?per_page=100')]).then(function (r) {
-    if (!r[0]) return;
-    var d = 0;
-    (r[1] || []).forEach(function (rel) { rel.assets.forEach(function (a) { d += a.download_count; }); });
-    var c = { stars: r[0].stargazers_count, downloads: d, t: now };
-    show(c);
-    try { localStorage.setItem(key, JSON.stringify(c)); } catch (e) {}
-  });
-})();
-
-// Histoires : ouvre une discussion GitHub préremplie, rien n'est envoyé par la page elle-même
-document.getElementById('story').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var f = e.target.elements, what = f.what.value.trim();
-  var body = '**What the Snap Key opens:** ' + what + '\n**Phone:** ' + f.phone.value + '\n**Gesture:** ' + f.gesture.value +
-    (f.link.value.trim() ? '\n**Link or app:** `' + f.link.value.trim().replace(/`/g, '') + '`' : '') +
-    (f.why.value.trim() ? '\n\n' + f.why.value.trim() : '');
-  location.href = 'https://github.com/Damien-llado/snapkey-mapper/discussions/new?category=show-and-tell&title=' +
-    encodeURIComponent('My Snap Key: ' + what) + '&body=' + encodeURIComponent(body);
-});
-
-// Mobile : le bouton Download passe dans l'en-tête quand celui du héros sort de l'écran
-(function () {
-  var cta = document.querySelector('.hero .ctas'); if (!cta || !window.IntersectionObserver) return;
-  new IntersectionObserver(function (e) { document.body.classList.toggle('past-hero', !e[0].isIntersecting && e[0].boundingClientRect.top < 0); }).observe(cta);
-})();
-
-// Animations : appui sur la Snap Key, l'écran ouvre la cible suivante ; inclinaison au pointeur
-(function () {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var T = [
-    ['Claude Code', 'claude.ai/code/…', '#D97757', 'b-claude', 'Claude Code'],
-    ['your run playlist', 'spotify:playlist:…', '#1ED760', 'b-spotify', 'Run playlist'],
-    ['navigation home', 'google.navigation:q=…', '#4285F4', 'b-maps', 'Maps'],
-    ['Strava', 'App: Strava', '#FC4C02', 'b-strava', 'Strava'],
-    ["today's notes", 'docs.google.com/…', '#4285F4', 'b-gdocs', 'Notes'],
-    ['the garage dashboard', 'homeassistant://navigate/…', '#18BCF2', 'b-ha', 'Home Assistant'],
-    ['a WhatsApp chat', 'wa.me/…', '#25D366', 'b-wa', 'WhatsApp']
-  ];
-  var i = 0, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
-      launch = document.getElementById('launch'), use = launch.querySelector('use');
-  function cycle() {
-    if (document.hidden) return;
-    i = (i + 1) % T.length;
-    var t = T[i];
-    stage.classList.remove('pressed'); void stage.offsetWidth; stage.classList.add('pressed');
-    setTimeout(function () {
-      launch.style.setProperty('--h', t[2]);
-      use.setAttribute('href', '#' + t[3]);
-      document.getElementById('launch-t').textContent = t[4];
-      document.getElementById('launch-s').textContent = t[1];
-      launch.classList.remove('go'); void launch.offsetWidth; launch.classList.add('go');
-      rot.textContent = t[0];
-      rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
-    }, 260);
-  }
-  // La scène d'ouverture joue d'abord (icônes, appui, Claude Code), puis le cycle démarre
-  setTimeout(function () { setInterval(cycle, 2800); }, 1800);
-
-  if (!matchMedia('(pointer: fine)').matches) return;
-  var hero = document.querySelector('.hero'), raf = 0, mx = 0, my = 0;
-  hero.addEventListener('pointermove', function (e) {
-    var r = hero.getBoundingClientRect();
-    mx = (e.clientX - r.left) / r.width * 2 - 1; my = (e.clientY - r.top) / r.height * 2 - 1;
-    if (!raf) raf = requestAnimationFrame(function () { raf = 0; hero.style.setProperty('--mx', mx.toFixed(3)); hero.style.setProperty('--my', my.toFixed(3)); });
-  });
-  hero.addEventListener('pointerleave', function () { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
-
-  // Halo qui suit le pointeur sur les tuiles
-  document.getElementById('bento').addEventListener('pointermove', function (e) {
-    var t = e.target.closest('.tile'); if (!t) return;
-    var r = t.getBoundingClientRect();
-    t.style.setProperty('--x', (e.clientX - r.left) + 'px'); t.style.setProperty('--y', (e.clientY - r.top) + 'px');
-  });
-})();
-// Apparitions au défilement, façon Audit Greenwashing : léger glissement et fondu rapide, en cascade
-(function () {
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('main > section:not(.hero) > .kicker, main > section:not(.hero) > h2, main > section > .sub, .facts, .split-copy > *, .console, .narrow > p, .table-wrap, .faq details, .story, .checks > li, .cando > div, .final-card, .bento > li, .gestures > li, .cards > li, .steps > li, .note');
-  var steps = document.querySelector('.steps');
-  if (reduce || !('IntersectionObserver' in window)) {
-    els.forEach(function (e) { e.classList.add('in'); });
-    steps.style.setProperty('--p', 1);
-    return;
-  }
-  els.forEach(function (e) { e.setAttribute('data-r', e.matches('.steps > li') ? 'side' : ''); });
-  var io = new IntersectionObserver(function (entries) {
-    var k = 0;
-    entries.forEach(function (en) {
-      if (!en.isIntersecting) return;
-      en.target.style.setProperty('--i', Math.min(k++, 6));
-      en.target.classList.add('in');
-      io.unobserve(en.target);
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-  els.forEach(function (e) { io.observe(e); });
-
-  // La frise des étapes se remplit à mesure qu'on descend
-  var raf = 0;
-  function fill() {
-    raf = 0;
-    var r = steps.getBoundingClientRect(), p = (innerHeight * 0.65 - r.top) / r.height;
-    steps.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(3));
-  }
-  addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(fill); }, { passive: true });
-  fill();
-})();
-document.querySelectorAll('[data-copy]').forEach(function (el) {
-  var box = document.createElement('div');
-  box.className = 'copybox';
-  el.parentNode.insertBefore(box, el);
-  box.appendChild(el);
-  var ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>';
-  var DONE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
-  var b = document.createElement('button');
-  b.type = 'button';
-  b.className = 'copy-ico';
-  b.setAttribute('aria-label', document.body.getAttribute('data-copy-label') || 'Copy');
-  b.innerHTML = ICON;
-  b.addEventListener('click', function () {
-    var text = el.getAttribute('data-copy') || el.textContent.trim();
-    function done() { b.innerHTML = DONE; b.classList.add('ok'); setTimeout(function () { b.innerHTML = ICON; b.classList.remove('ok'); }, 1500); }
-    try { navigator.clipboard.writeText(text).then(done); } catch (e) {}
-  });
-  box.appendChild(b);
-});
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

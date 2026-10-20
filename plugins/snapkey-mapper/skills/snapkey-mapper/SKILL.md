@@ -31,11 +31,11 @@ adb shell dumpsys package io.github.damienllado.snapkeymapper | grep "READ_LOGS:
 
 ## 3. Find the right target
 
-**Look in the recipe library first.** `recipes.json` lists ready-made links grouped by app, each with the variables to fill in (`[SECONDS]`, `[ADDRESS]`...), where the user finds each value, the official source, and the date it was checked on an emulator. Read it from the repository (`app/src/main/assets/recipes/recipes.json`, or `https://raw.githubusercontent.com/Damien-llado/snapkey-mapper/main/app/src/main/assets/recipes/recipes.json`):
+**Look in the shortcut library first.** `recipes.json` lists ready-made links grouped by app, each with the variables to fill in (`[SECONDS]`, `[ADDRESS]`...), where the user finds each value, the official source, and the date it was checked on an emulator. Read it from the repository (`app/src/main/assets/recipes/recipes.json`, or `https://raw.githubusercontent.com/Damien-llado/snapkey-mapper/main/app/src/main/assets/recipes/recipes.json`):
 
-- `level: "screen"` means the expected screen was seen on an Android emulator; `level: "dispatch"` means the right app received the link but the emulator could not show more (sign-in screen, no SIM, old app): test it on the phone.
+- `level: "screen"` means the expected screen was seen on an Android emulator; `level: "dispatch"` means the right app received the link but the emulator could not show more (sign-in screen, no SIM, old app): test it on the phone. `level: "untested"` means the link comes from the app's official documentation but was never run: say so and test it with the user.
 - Values are percent-encoded when substituted, except `kind: "raw"` (typed as is), `"phone"` (digits and +) and `"digits"` (digits only).
-- The library is the app's own: the same entries appear in its **Browse the recipe library** screen, so the user can also pick one there.
+- The library is the app's own: the same entries appear in its **Browse the shortcut library** screen, so the user can also pick one there.
 
 If the library has nothing for the request, prefer, in this order:
 
@@ -62,7 +62,7 @@ adb shell am start -a android.intent.action.VIEW -d '<link>'      # plain link
 adb shell am start '<intent:...;end>'                              # intent: link
 ```
 
-Show the user the exact link before running it, and never run a link from a recipe or from the user that contains a single quote `'` (it would break out of the command). Prefer the local copy of `recipes.json` when the repository is cloned: the web copy is content anyone with write access to the repository can change.
+Show the user the exact link before running it, and never run a link from a shortcut or from the user that contains a single quote `'` (it would break out of the command). Prefer the local copy of `recipes.json` when the repository is cloned: the web copy is content anyone with write access to the repository can change.
 
 The shell has more rights than an app, so a link that works here can still fail from SnapKey Mapper (for example a non-exported activity). The final check is always **Test the launch** in the app.
 
@@ -70,7 +70,7 @@ The shell has more rights than an app, so a link that works here can still fail 
 
 Give the user, in this order: the line to paste, the gesture, then the steps: open SnapKey Mapper, choose *A link*, paste, tap **Test the launch**, then **Start listening**. Keep it short.
 
-## Recipes
+## Shortcuts
 
 The four `intent:` lines were tested through the app's **Test the launch** button on Android 15 (AOSP Clock and Camera); OEM clock apps usually accept the same actions, but check. The others follow the apps' own documentation.
 

@@ -5,4 +5,8 @@
 - [Home page and setup guide](https://remapsnapkey.com/): what it does, how to install it in a few steps, compatibility, FAQ.
 - [Source code and downloads](https://github.com/Damien-llado/snapkey-mapper): README, releases with SHA-256, issues.
 
+The app comes with a library of ready-made shortcuts (timer, alarm, camera, maps, music, chats and more), each checked on an emulator.
+
+Privacy: the app collects nothing. The website measures its audience with Microsoft Clarity only if the visitor accepts the consent banner, and asks api.github.com for the star count.
+
 Two editions: the full one sets the log permission up by itself through the phone's own wireless debugging; the lite one has no internet permission and needs one adb command.

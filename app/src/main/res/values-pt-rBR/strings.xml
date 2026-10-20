@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SnapKey Mapper</string>
-    <string name="state_setup">Configuração: %1$d de 3 permissões</string>
+    <string name="state_setup">Configuração: %1$d de %2$d passos concluídos</string>
     <string name="toast_cannot_open">Não foi possível abrir: %1$s</string>
     <string name="toast_cannot_read">Não foi possível ler o log: %1$s</string>
     <string name="toast_failed">Falhou: %1$s</string>
@@ -24,7 +24,7 @@
     <string name="perm_needed">Necessária</string>
     <string name="perm_coloros">No ColorOS, defina também o uso de bateria como \"Sem restrições\" nas configurações do app e bloqueie o app nos apps recentes.</string>
     <string name="perm_app_settings">Abrir as configurações do app</string>
-    <string name="perm_by_hand">Leitura do log manualmente, pelo computador:</string>
+    <string name="perm_by_hand">Pelo computador, com adb:</string>
     <string name="perm_copy">Copiar o comando</string>
     <string name="toast_copied">Comando copiado</string>
     <string name="perm_by_hand_or">Ou manualmente:</string>
@@ -51,7 +51,7 @@
     <string name="toast_pattern_saved">Padrão salvo, você já pode começar a escutar</string>
     <string name="toast_no_lines">Nenhuma linha: marque \"Mostrar todas as linhas\" ou confira a permissão</string>
     <string name="toast_saved">Captura salva</string>
-    <string name="toast_choose_pattern">Escolha o padrão primeiro (passo 3)</string>
+    <string name="toast_choose_pattern">Escolha o padrão primeiro (menu › Outro telefone)</string>
     <string name="notif_listening_title">O SnapKey Mapper está escutando</string>
     <string name="notif_listening_text">Pressione a tecla lateral para abrir seu destino</string>
     <string name="notif_stopped_title">O SnapKey Mapper está desligado</string>
@@ -75,20 +75,71 @@
     <string name="err_invalid_intent">Link intent inválido</string>
     <string name="setup_fail_pair">Falha no pareamento. Toque de novo no botão de configuração do app, depois em “Parear o dispositivo com um código de pareamento” e digite o novo código. Se falhar de novo, desative e reative a Depuração por Wi-Fi.</string>
     <string name="lang_title">Idioma</string>
-    <string name="library_open">Ver a biblioteca de receitas</string>
-    <string name="library_title">Biblioteca de receitas</string>
-    <string name="library_intro">Links prontos, agrupados por app. Escolha um, preencha seus valores, teste e depois use na Snap Key.</string>
+    <string name="library_open">Ver a biblioteca de atalhos</string>
+    <string name="library_title">Biblioteca de atalhos</string>
+    <string name="library_intro">Atalhos prontos, agrupados por app. Escolha um, preencha seus valores, teste e depois use na Snap Key.</string>
     <string name="library_search">Pesquisar um app ou uma ação</string>
-    <string name="library_count">Receitas: %1$d</string>
+    <string name="library_count">Atalhos: %1$d</string>
     <string name="library_not_installed">Não instalado</string>
     <string name="library_empty">Nada corresponde à sua pesquisa.</string>
     <string name="recipe_fields">Seus valores</string>
     <string name="recipe_link">Link final</string>
-    <string name="recipe_use">Usar esta receita</string>
+    <string name="recipe_use">Usar este atalho</string>
     <string name="recipe_fill_all">Preencha todos os campos primeiro.</string>
     <string name="recipe_saved">Salvo como seu destino.</string>
     <string name="recipe_missing">Nada abriu. O app está instalado?</string>
-    <string name="recipe_verified">Verificada em um emulador Android em %1$s.</string>
+    <string name="recipe_verified">Verificado em um emulador Android em %1$s.</string>
     <string name="recipe_verified_partial">Em um emulador Android (%1$s), o app certo recebeu este link, mas o emulador não conseguiu mostrar mais que isso. Confirme com o botão de teste.</string>
     <string name="recipe_source">Documentação oficial</string>
+    <string name="menu">Menu</string>
+    <string name="menu_help">Ajuda e site</string>
+    <string name="help_url">https://remapsnapkey.com/pt-br/</string>
+    <string name="setup_title">Configuração</string>
+    <string name="setup_intro">Quatro passos, uma vez só. Cada um se marca sozinho quando fica pronto.</string>
+    <string name="setup_continue">Continuar a configuração</string>
+    <string name="setup_other_way">Outro jeito: pelo computador</string>
+    <string name="setup_open_setting">Abrir a configuração</string>
+    <string name="setup_native_title">Ação própria da Snap Key do telefone desativada</string>
+    <string name="setup_open_phone_settings">Abrir as configurações do telefone</string>
+    <string name="setup_native_done">Pronto: a Snap Key não faz nada por conta própria</string>
+    <string name="finder_intro">A tecla do Find X9 já é conhecida: nada a fazer aqui. Em outro telefone, o app precisa aprender qual linha o Android escreve no log quando você aperta a tecla.</string>
+    <string name="finder_privacy">A captura pode conter informações pessoais de outros apps: confira o arquivo antes de compartilhar.</string>
+    <string name="finder_need_log">Antes é preciso ler o log: conclua o passo 1 da configuração.</string>
+    <string name="app_search">Pesquisar um app</string>
+    <string name="target_link_enter">Digite um link</string>
+    <string name="target_none">Nada escolhido ainda</string>
+    <string name="recipe_untested">Ainda não testado: tirado da documentação oficial do app. Confira com o botão de teste.</string>
+    <string-array name="steps_log_auto">
+        <item>Conecte o telefone ao seu Wi-Fi.</item>
+        <item>Se as Opções do desenvolvedor estiverem ocultas: Configurações › Sobre o telefone › Versão, toque 7 vezes no número da versão.</item>
+        <item>Nas Opções do desenvolvedor, ative \"Disable system optimisation\" (ColorOS).</item>
+        <item>Toque em \"Configurar a leitura do log automaticamente\" abaixo.</item>
+        <item>Ative a Depuração por Wi-Fi e toque em \"Parear o dispositivo com um código de pareamento\".</item>
+        <item>Puxe as notificações para baixo e digite os 6 dígitos na notificação do SnapKey Mapper.</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>No computador, instale as platform-tools do Android (adb).</item>
+        <item>Nas Opções do desenvolvedor, ative a Depuração USB e \"Disable system optimisation\" (ColorOS), e conecte o telefone com um cabo.</item>
+        <item>Execute o comando abaixo no computador.</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>Toque em \"Abrir a configuração\" e ative a chave.</item>
+        <item>Se a chave estiver cinza ou o Android disser que o acesso foi negado: toque em \"Abrir as configurações do app\", depois em ⋮ no canto superior direito › \"Permitir configurações restritas\" e volte aqui.</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>Toque em \"Permitir\" e confirme.</item>
+        <item>No ColorOS, abra também as configurações do app › Uso da bateria › \"Sem restrições\" e bloqueie o app nos apps recentes.</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>Abra as configurações do telefone e pesquise \"Snap Key\".</item>
+        <item>Defina como nenhuma ação, para o telefone não executar a ação própria ao mesmo tempo.</item>
+        <item>Marque a caixa abaixo.</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>Toque em \"Iniciar captura\".</item>
+        <item>Aperte a tecla 3 vezes, com alguns segundos de intervalo.</item>
+        <item>Toque em \"Parar captura\".</item>
+        <item>Na lista abaixo, toque na linha que voltou a cada aperto: ela vira o padrão.</item>
+        <item>Volte à tela inicial, comece a escutar e aperte a tecla para conferir.</item>
+    </string-array>
 </resources>

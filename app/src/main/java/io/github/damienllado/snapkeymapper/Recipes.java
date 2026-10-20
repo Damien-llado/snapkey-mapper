@@ -51,7 +51,7 @@ final class Recipes {
     private static List<App> cache;
     private static String cachedLang;
 
-    /** Apps in display order: groups of Android functions first, then installed apps, then the others. */
+    /** Apps in display order: installed apps first, then apps that are not installed, then the Android functions (timer, settings...). */
     static synchronized List<App> load(Context c) {
         String lang = Lang.current(c);
         if (cache == null || !lang.equals(cachedLang)) {
@@ -59,9 +59,9 @@ final class Recipes {
             cachedLang = lang;
         }
         List<App> sorted = new ArrayList<>();
-        for (App a : cache) if (a.system) sorted.add(a);
         for (App a : cache) if (!a.system && a.installed(c)) sorted.add(a);
         for (App a : cache) if (!a.system && !a.installed(c)) sorted.add(a);
+        for (App a : cache) if (a.system) sorted.add(a);
         return sorted;
     }
 

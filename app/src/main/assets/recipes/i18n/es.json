@@ -661,6 +661,375 @@
      "where": "Abre la página en la interfaz web de Home Assistant y copia la ruta que va después de la dirección y el puerto, sin la primera barra."
     }
    }
+  },
+  "spotify-open-playlist": {
+   "title": "Abrir una lista de reproducción",
+   "desc": "Abre una lista de reproducción de Spotify.",
+   "note": "Abre la lista. No empieza a sonar sola.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID de la lista",
+     "where": "En Spotify, toca los tres puntos, luego Compartir y Copiar enlace. El ID es la parte después de /playlist/ y antes de un posible ?si=."
+    }
+   }
+  },
+  "spotify-open-artist": {
+   "title": "Abrir la página de un artista",
+   "desc": "Abre la página de un artista de Spotify.",
+   "note": "Abre la página del artista.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID del artista",
+     "where": "En Spotify, toca los tres puntos, luego Compartir y Copiar enlace. El ID es la parte después de /artist/ y antes de un posible ?si=."
+    }
+   }
+  },
+  "spotify-open-album": {
+   "title": "Abrir un álbum",
+   "desc": "Abre un álbum de Spotify.",
+   "note": "Abre el álbum.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID del álbum",
+     "where": "En Spotify, toca los tres puntos, luego Compartir y Copiar enlace. El ID es la parte después de /album/ y antes de un posible ?si=."
+    }
+   }
+  },
+  "spotify-open-track": {
+   "title": "Abrir una canción",
+   "desc": "Abre una canción de Spotify.",
+   "note": "Abre la canción.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID de la canción",
+     "where": "En Spotify, toca los tres puntos, luego Compartir y Copiar enlace. El ID es la parte después de /track/ y antes de un posible ?si=."
+    }
+   }
+  },
+  "spotify-search": {
+   "title": "Buscar en Spotify",
+   "desc": "Abre los resultados de una búsqueda fija en Spotify.",
+   "note": "Abre los resultados de la búsqueda.",
+   "vars": {
+    "QUERY": {
+     "label": "Texto de búsqueda",
+     "where": "Las palabras que quieres buscar, por ejemplo el nombre de un artista."
+    }
+   }
+  },
+  "deezer-open-playlist": {
+   "title": "Abrir una lista de reproducción",
+   "desc": "Abre una lista de reproducción de Deezer.",
+   "note": "Abre la lista.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID de la lista",
+     "where": "Abre la lista en deezer.com desde un navegador. El ID es el número al final de la dirección."
+    }
+   }
+  },
+  "deezer-open-artist": {
+   "title": "Abrir la página de un artista",
+   "desc": "Abre la página de un artista de Deezer.",
+   "note": "Abre la página del artista.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID del artista",
+     "where": "Abre el artista en deezer.com desde un navegador. El ID es el número al final de la dirección."
+    }
+   }
+  },
+  "deezer-open-album": {
+   "title": "Abrir un álbum",
+   "desc": "Abre un álbum de Deezer.",
+   "note": "Abre el álbum.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID del álbum",
+     "where": "Abre el álbum en deezer.com desde un navegador. El ID es el número al final de la dirección."
+    }
+   }
+  },
+  "deezer-open-track": {
+   "title": "Abrir una canción",
+   "desc": "Abre una canción de Deezer.",
+   "note": "Abre la canción.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID de la canción",
+     "where": "Abre la canción en deezer.com desde un navegador. El ID es el número al final de la dirección."
+    }
+   }
+  },
+  "deezer-search": {
+   "title": "Buscar en Deezer",
+   "desc": "Abre los resultados de una búsqueda fija en Deezer.",
+   "note": "Abre los resultados de la búsqueda.",
+   "vars": {
+    "QUERY": {
+     "label": "Texto de búsqueda",
+     "where": "Las palabras que quieres buscar, por ejemplo el nombre de un artista."
+    }
+   }
+  },
+  "apple-music-open-link": {
+   "title": "Abrir una página de Apple Music",
+   "desc": "Abre un álbum, una lista o un artista desde su enlace de Apple Music.",
+   "note": "Se abre en la app Apple Music si tu teléfono le deja gestionar el enlace; si no, en el navegador.",
+   "vars": {
+    "LINK": {
+     "label": "Enlace de Apple Music",
+     "where": "Abre la página en music.apple.com, pulsa Más y luego Copiar enlace, y pega la dirección completa."
+    }
+   }
+  },
+  "waze-navigate-home": {
+   "title": "Ir a casa",
+   "desc": "Inicia la navegación a la dirección de Casa guardada en Waze.",
+   "note": "Necesita una dirección de Casa guardada en Waze."
+  },
+  "waze-navigate-work": {
+   "title": "Ir al trabajo",
+   "desc": "Inicia la navegación a la dirección de Trabajo guardada en Waze.",
+   "note": "Necesita una dirección de Trabajo guardada en Waze."
+  },
+  "waze-navigate-to-address": {
+   "title": "Ir a una dirección",
+   "desc": "Inicia la navegación a una dirección o lugar fijo.",
+   "note": "Añade la ciudad para evitar confusiones.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Dirección o lugar",
+     "where": "Dirección postal o nombre del lugar con la ciudad, como lo escribirías en Waze."
+    }
+   }
+  },
+  "waze-navigate-to-coordinates": {
+   "title": "Ir a unas coordenadas",
+   "desc": "Inicia la navegación a un punto dado por su latitud y longitud.",
+   "vars": {
+    "LATITUDE": {
+     "label": "Latitud",
+     "where": "En Google Maps, mantén pulsado el sitio: es el primer número de la barra de búsqueda."
+    },
+    "LONGITUDE": {
+     "label": "Longitud",
+     "where": "En Google Maps, mantén pulsado el sitio: es el segundo número de la barra de búsqueda."
+    }
+   }
+  },
+  "waze-search-place": {
+   "title": "Buscar un lugar en Waze",
+   "desc": "Muestra un lugar o una dirección en Waze sin iniciar la navegación.",
+   "vars": {
+    "SEARCH": {
+     "label": "Lugar o dirección",
+     "where": "Las palabras que escribirías en la barra de búsqueda de Waze."
+    }
+   }
+  },
+  "netflix-open-title": {
+   "title": "Abrir una película o serie",
+   "desc": "Abre la página de Netflix de una película o serie.",
+   "note": "Abre la página del título. No se reproduce sola.",
+   "vars": {
+    "TITLE_ID": {
+     "label": "ID del título",
+     "where": "En netflix.com, abre el título. El ID es el número después de /title/ en la dirección."
+    }
+   }
+  },
+  "netflix-open-my-list": {
+   "title": "Abrir Mi lista",
+   "desc": "Abre tu lista de Netflix."
+  },
+  "notion-open-page": {
+   "title": "Abrir una página",
+   "desc": "Abre una página concreta de Notion.",
+   "note": "Abre la página en la app Notion.",
+   "vars": {
+    "PAGE_ADDRESS": {
+     "label": "Dirección de la página",
+     "where": "En Notion, abre la página, toca los tres puntos y Copiar enlace. Conserva solo lo que sigue a https://www.notion.so/."
+    }
+   }
+  },
+  "claude-code-new-session": {
+   "title": "Nueva sesión de Claude Code",
+   "desc": "Inicia una sesión de Claude Code con tu instrucción ya escrita.",
+   "note": "No se envía nada hasta que lo envíes tú.",
+   "vars": {
+    "PROMPT": {
+     "label": "Instrucción",
+     "where": "La instrucción que se rellena de antemano. Solo se escribe: tú la envías."
+    }
+   }
+  },
+  "claude-code-sessions": {
+   "title": "Abrir sesiones de Claude Code",
+   "desc": "Abre la lista de tus sesiones de Claude Code."
+  },
+  "claude-new-chat": {
+   "title": "Nuevo chat",
+   "desc": "Abre Claude en un chat nuevo."
+  },
+  "docs-new-document": {
+   "title": "Nuevo documento",
+   "desc": "Crea un documento de Google Docs en blanco.",
+   "note": "Se abre en el navegador o en la app Docs, según tu teléfono."
+  },
+  "n8n-trigger-webhook": {
+   "title": "Ejecutar un flujo (webhook)",
+   "desc": "Llama al webhook de un flujo de n8n.",
+   "note": "El flujo debe estar activo y aceptar GET. El enlace se abre en el navegador.",
+   "vars": {
+    "N8N_HOST": {
+     "label": "Dirección del servidor n8n",
+     "where": "La dirección de tu servidor n8n, antes de /webhook/ en la URL de producción."
+    },
+    "WEBHOOK_PATH": {
+     "label": "Ruta del webhook",
+     "where": "En el flujo, abre el nodo Webhook y copia su campo Path."
+    }
+   }
+  },
+  "todoist-add-task": {
+   "title": "Añadir una tarea",
+   "desc": "Abre una tarea nueva de Todoist con tu texto ya escrito.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Texto de la tarea",
+     "where": "Escribe la tarea como lo harías en Todoist."
+    }
+   }
+  },
+  "todoist-add-task-today": {
+   "title": "Añadir una tarea para hoy",
+   "desc": "Igual, con hoy como fecha límite.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Texto de la tarea",
+     "where": "Escribe la tarea como lo harías en Todoist."
+    }
+   }
+  },
+  "todoist-open-today": {
+   "title": "Abrir Hoy",
+   "desc": "Abre la vista Hoy."
+  },
+  "todoist-open-inbox": {
+   "title": "Abrir la bandeja de entrada",
+   "desc": "Abre la bandeja de entrada."
+  },
+  "todoist-open-upcoming": {
+   "title": "Abrir Próximamente",
+   "desc": "Abre la vista Próximamente."
+  },
+  "todoist-search": {
+   "title": "Buscar tareas",
+   "desc": "Busca una palabra fija en tus tareas.",
+   "vars": {
+    "SEARCH_TEXT": {
+     "label": "Texto de búsqueda",
+     "where": "La palabra que buscar en tus tareas."
+    }
+   }
+  },
+  "twitch-open-channel": {
+   "title": "Abrir un canal en directo",
+   "desc": "Abre el directo de un canal.",
+   "note": "Muestra la página del canal si el streamer no está en directo.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Nombre del canal",
+     "where": "La última parte de la dirección del canal, twitch.tv/nombre."
+    }
+   }
+  },
+  "twitch-open-channel-videos": {
+   "title": "Abrir los vídeos de un canal",
+   "desc": "Abre la actividad y los vídeos de un canal.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Nombre del canal",
+     "where": "La última parte de la dirección del canal, twitch.tv/nombre."
+    }
+   }
+  },
+  "twitch-open-following": {
+   "title": "Abrir Siguiendo",
+   "desc": "Abre la pestaña Siguiendo."
+  },
+  "twitch-open-game": {
+   "title": "Abrir una categoría de juego",
+   "desc": "Abre la página de un juego o categoría.",
+   "vars": {
+    "GAME_NAME": {
+     "label": "Nombre del juego",
+     "where": "El nombre de la categoría tal como aparece en la pestaña Explorar."
+    }
+   }
+  },
+  "twitch-open-app": {
+   "title": "Abrir Twitch",
+   "desc": "Abre la app de Twitch."
+  },
+  "twitch-search": {
+   "title": "Buscar en Twitch",
+   "desc": "Abre los resultados de una búsqueda fija en Twitch.",
+   "vars": {
+    "QUERY": {
+     "label": "Texto de búsqueda",
+     "where": "Un canal, un juego o un tema."
+    }
+   }
+  },
+  "instagram-send-dm": {
+   "title": "Escribir a una cuenta",
+   "desc": "Abre una conversación privada con una cuenta de Instagram.",
+   "note": "Abre la conversación. No se envía nada.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nombre de usuario de Instagram",
+     "where": "El nombre bajo la foto de perfil, sin la @."
+    }
+   }
+  },
+  "x-compose-post": {
+   "title": "Escribir una publicación",
+   "desc": "Abre X con tu publicación ya escrita, lista para enviar.",
+   "note": "No se publica nada hasta que pulses Publicar.",
+   "vars": {
+    "TEXT": {
+     "label": "Texto de la publicación",
+     "where": "Tu texto, tal como lo escribirías."
+    }
+   }
+  },
+  "x-share-link": {
+   "title": "Publicar un enlace",
+   "desc": "Abre X con un enlace y un texto ya escritos.",
+   "note": "No se publica nada hasta que pulses Publicar.",
+   "vars": {
+    "URL": {
+     "label": "Dirección web",
+     "where": "La dirección completa que compartir, empezando por https://."
+    },
+    "TEXT": {
+     "label": "Texto de la publicación",
+     "where": "Tu texto, tal como lo escribirías."
+    }
+   }
+  },
+  "x-open-profile": {
+   "title": "Abrir un perfil",
+   "desc": "Abre una cuenta de X.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nombre de usuario de X",
+     "where": "El @nombre de la cuenta, sin la @."
+    }
+   }
   }
  }
 }

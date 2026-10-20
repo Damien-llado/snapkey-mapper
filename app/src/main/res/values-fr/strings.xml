@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SnapKey Mapper</string>
-    <string name="state_setup">Configuration : %1$d autorisation(s) sur 3</string>
+    <string name="state_setup">Configuration : %1$d sur %2$d étapes faites</string>
     <string name="toast_cannot_open">Impossible de l\'ouvrir : %1$s</string>
     <string name="toast_cannot_read">Impossible de lire le journal : %1$s</string>
     <string name="toast_failed">Échec : %1$s</string>
@@ -24,7 +24,7 @@
     <string name="perm_needed">Requise</string>
     <string name="perm_coloros">Sur ColorOS, réglez aussi l\'utilisation de la batterie sur « Aucune restriction » dans les paramètres de l\'appli, et verrouillez l\'appli dans les applis récentes.</string>
     <string name="perm_app_settings">Ouvrir les paramètres de l\'appli</string>
-    <string name="perm_by_hand">Lecture du journal à la main, depuis un ordinateur :</string>
+    <string name="perm_by_hand">Depuis un ordinateur, avec adb :</string>
     <string name="perm_copy">Copier la commande</string>
     <string name="toast_copied">Commande copiée</string>
     <string name="perm_by_hand_or">Ou à la main :</string>
@@ -51,7 +51,7 @@
     <string name="toast_pattern_saved">Motif enregistré, vous pouvez démarrer l\'écoute</string>
     <string name="toast_no_lines">Aucune ligne : cochez « Afficher toutes les lignes » ou vérifiez l\'autorisation</string>
     <string name="toast_saved">Capture enregistrée</string>
-    <string name="toast_choose_pattern">Choisissez d\'abord le motif (étape 3)</string>
+    <string name="toast_choose_pattern">Choisissez d\'abord le motif (menu › Un autre téléphone)</string>
     <string name="notif_listening_title">SnapKey Mapper écoute</string>
     <string name="notif_listening_text">Appuyez sur la touche latérale pour ouvrir votre cible</string>
     <string name="notif_stopped_title">SnapKey Mapper est arrêté</string>
@@ -75,20 +75,71 @@
     <string name="err_invalid_intent">Lien intent invalide</string>
     <string name="setup_fail_pair">L\'association a échoué. Touchez de nouveau le bouton de configuration de l\'appli, puis « Associer l\'appareil avec un code d\'association », et saisissez le nouveau code. Si cela échoue encore, désactivez puis réactivez le débogage sans fil.</string>
     <string name="lang_title">Langue</string>
-    <string name="library_open">Parcourir la bibliothèque de recettes</string>
-    <string name="library_title">Bibliothèque de recettes</string>
-    <string name="library_intro">Des liens prêts à l\'emploi, classés par appli. Choisissez-en un, remplissez vos valeurs, testez-le, puis utilisez-le pour la Snap Key.</string>
+    <string name="library_open">Parcourir la bibliothèque de raccourcis</string>
+    <string name="library_title">Bibliothèque de raccourcis</string>
+    <string name="library_intro">Des raccourcis prêts à l\'emploi, classés par appli. Choisissez-en un, remplissez vos valeurs, testez-le, puis utilisez-le pour la Snap Key.</string>
     <string name="library_search">Chercher une appli ou une action</string>
-    <string name="library_count">Recettes : %1$d</string>
+    <string name="library_count">Raccourcis : %1$d</string>
     <string name="library_not_installed">Non installée</string>
     <string name="library_empty">Aucun résultat pour votre recherche.</string>
     <string name="recipe_fields">Vos valeurs</string>
     <string name="recipe_link">Lien final</string>
-    <string name="recipe_use">Utiliser cette recette</string>
+    <string name="recipe_use">Utiliser ce raccourci</string>
     <string name="recipe_fill_all">Remplissez d\'abord tous les champs.</string>
     <string name="recipe_saved">Enregistré comme cible.</string>
     <string name="recipe_missing">Rien ne s\'est ouvert. L\'appli est-elle installée ?</string>
-    <string name="recipe_verified">Vérifiée sur un émulateur Android le %1$s.</string>
+    <string name="recipe_verified">Vérifié sur un émulateur Android le %1$s.</string>
     <string name="recipe_verified_partial">Sur un émulateur Android (%1$s), la bonne appli a bien reçu ce lien, mais l\'émulateur n\'a pas pu en montrer plus. Confirmez avec le bouton de test.</string>
     <string name="recipe_source">Documentation officielle</string>
+    <string name="menu">Menu</string>
+    <string name="menu_help">Aide et site web</string>
+    <string name="help_url">https://remapsnapkey.com/fr/</string>
+    <string name="setup_title">Configuration</string>
+    <string name="setup_intro">Quatre étapes, une seule fois. Chacune se coche toute seule quand elle est faite.</string>
+    <string name="setup_continue">Continuer la configuration</string>
+    <string name="setup_other_way">Autre méthode : depuis un ordinateur</string>
+    <string name="setup_open_setting">Ouvrir le réglage</string>
+    <string name="setup_native_title">Action propre à la Snap Key du téléphone désactivée</string>
+    <string name="setup_open_phone_settings">Ouvrir les paramètres du téléphone</string>
+    <string name="setup_native_done">Fait : la Snap Key ne fait rien d\'elle-même</string>
+    <string name="finder_intro">La touche du Find X9 est déjà connue : rien à faire ici. Sur un autre téléphone, l\'appli doit apprendre quelle ligne Android écrit dans son journal quand vous appuyez sur votre touche.</string>
+    <string name="finder_privacy">La capture peut contenir des informations personnelles venant d\'autres applis : vérifiez le fichier avant de le partager.</string>
+    <string name="finder_need_log">La lecture du journal est nécessaire d\'abord : terminez l\'étape 1 de la configuration.</string>
+    <string name="app_search">Chercher une appli</string>
+    <string name="target_link_enter">Saisir un lien</string>
+    <string name="target_none">Rien de choisi pour l\'instant</string>
+    <string name="recipe_untested">Pas encore testé : repris de la documentation officielle de l\'appli. Vérifiez avec le bouton de test.</string>
+    <string-array name="steps_log_auto">
+        <item>Connectez le téléphone à votre Wi-Fi.</item>
+        <item>Si les Options pour les développeurs sont masquées : Paramètres › À propos du téléphone › Version, touchez 7 fois le numéro de build.</item>
+        <item>Dans les Options pour les développeurs, activez « Disable system optimisation » (ColorOS).</item>
+        <item>Touchez « Configurer la lecture du journal automatiquement » ci-dessous.</item>
+        <item>Activez le débogage sans fil, puis touchez « Associer l\'appareil avec un code d\'association ».</item>
+        <item>Déroulez les notifications et saisissez les 6 chiffres dans la notification de SnapKey Mapper.</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>Sur un ordinateur, installez les platform-tools Android (adb).</item>
+        <item>Dans les Options pour les développeurs, activez le débogage USB et « Disable system optimisation » (ColorOS), puis branchez le téléphone avec un câble.</item>
+        <item>Lancez la commande ci-dessous sur l\'ordinateur.</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>Touchez « Ouvrir le réglage » et activez l\'interrupteur.</item>
+        <item>Si l\'interrupteur est grisé ou si Android refuse l\'accès : touchez « Ouvrir les paramètres de l\'appli », puis ⋮ en haut à droite › « Autoriser les paramètres restreints », puis revenez ici.</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>Touchez « Autoriser » et confirmez.</item>
+        <item>Sur ColorOS, ouvrez aussi les paramètres de l\'appli › Utilisation de la batterie › « Aucune restriction », et verrouillez l\'appli dans les applis récentes.</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>Ouvrez les paramètres du téléphone et cherchez « Snap Key ».</item>
+        <item>Réglez-la sur aucune action, pour que le téléphone ne lance pas sa propre action en même temps.</item>
+        <item>Cochez la case ci-dessous.</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>Touchez « Lancer la capture ».</item>
+        <item>Appuyez 3 fois sur votre touche, à quelques secondes d\'intervalle.</item>
+        <item>Touchez « Arrêter la capture ».</item>
+        <item>Dans la liste ci-dessous, touchez la ligne qui est revenue à chaque appui : elle devient le motif.</item>
+        <item>Revenez à l\'accueil, démarrez l\'écoute et appuyez sur la touche pour vérifier.</item>
+    </string-array>
 </resources>

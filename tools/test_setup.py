@@ -44,6 +44,8 @@ def step(msg):
 
 
 def main():
+    sh("input keyevent KEYCODE_HOME; am force-stop com.android.settings")  # boîte de dialogue restée ouverte par un essai précédent
+    sh(f"cmd locale set-app-locales {P} --locales en-US")  # les textes cherchés sont en anglais
     sh("svc wifi enable")
     sh("settings put global development_settings_enabled 1")
     sh("settings put global adb_wifi_enabled 0")  # coupe puis rallume : efface les annonces mDNS (ports) des essais précédents

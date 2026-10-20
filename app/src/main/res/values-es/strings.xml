@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SnapKey Mapper</string>
-    <string name="state_setup">Configuración: %1$d de 3 permisos</string>
+    <string name="state_setup">Configuración: %1$d de %2$d pasos hechos</string>
     <string name="toast_cannot_open">No se puede abrir: %1$s</string>
     <string name="toast_cannot_read">No se puede leer el registro: %1$s</string>
     <string name="toast_failed">Error: %1$s</string>
@@ -24,7 +24,7 @@
     <string name="perm_needed">Necesario</string>
     <string name="perm_coloros">En ColorOS, pon también el uso de batería en \"Sin restricciones\" en los ajustes de la app y bloquea la app en las apps recientes.</string>
     <string name="perm_app_settings">Abrir los ajustes de la app</string>
-    <string name="perm_by_hand">Lectura del registro a mano, desde un ordenador:</string>
+    <string name="perm_by_hand">Desde un ordenador, con adb:</string>
     <string name="perm_copy">Copiar el comando</string>
     <string name="toast_copied">Comando copiado</string>
     <string name="perm_by_hand_or">O a mano:</string>
@@ -51,7 +51,7 @@
     <string name="toast_pattern_saved">Patrón guardado, ya puedes empezar a escuchar</string>
     <string name="toast_no_lines">Ninguna línea: marca \"Mostrar todas las líneas\" o revisa el permiso</string>
     <string name="toast_saved">Captura guardada</string>
-    <string name="toast_choose_pattern">Elige primero el patrón (paso 3)</string>
+    <string name="toast_choose_pattern">Elige primero el patrón (menú › Otro teléfono)</string>
     <string name="notif_listening_title">SnapKey Mapper está escuchando</string>
     <string name="notif_listening_text">Pulsa la tecla lateral para abrir tu destino</string>
     <string name="notif_stopped_title">SnapKey Mapper está detenido</string>
@@ -75,20 +75,71 @@
     <string name="err_invalid_intent">Enlace intent no válido</string>
     <string name="setup_fail_pair">La vinculación ha fallado. Vuelve a tocar el botón de configuración de la app, luego \"Vincular dispositivo con código de sincronización\" y escribe el código nuevo. Si vuelve a fallar, desactiva y activa la depuración inalámbrica.</string>
     <string name="lang_title">Idioma</string>
-    <string name="library_open">Ver la biblioteca de recetas</string>
-    <string name="library_title">Biblioteca de recetas</string>
-    <string name="library_intro">Enlaces listos para usar, agrupados por app. Elige uno, rellena tus datos, pruébalo y úsalo para la Snap Key.</string>
+    <string name="library_open">Ver la biblioteca de atajos</string>
+    <string name="library_title">Biblioteca de atajos</string>
+    <string name="library_intro">Atajos listos para usar, agrupados por app. Elige uno, rellena tus datos, pruébalo y úsalo para la Snap Key.</string>
     <string name="library_search">Buscar una app o una acción</string>
-    <string name="library_count">Recetas: %1$d</string>
+    <string name="library_count">Atajos: %1$d</string>
     <string name="library_not_installed">No instalada</string>
     <string name="library_empty">Nada coincide con tu búsqueda.</string>
     <string name="recipe_fields">Tus datos</string>
     <string name="recipe_link">Enlace final</string>
-    <string name="recipe_use">Usar esta receta</string>
+    <string name="recipe_use">Usar este atajo</string>
     <string name="recipe_fill_all">Rellena primero todos los campos.</string>
     <string name="recipe_saved">Guardado como tu destino.</string>
     <string name="recipe_missing">No se ha abierto nada. ¿Está instalada la app?</string>
-    <string name="recipe_verified">Comprobada en un emulador de Android el %1$s.</string>
+    <string name="recipe_verified">Comprobado en un emulador de Android el %1$s.</string>
     <string name="recipe_verified_partial">En un emulador de Android (%1$s), la app correcta recibió este enlace, pero el emulador no pudo mostrar más. Confírmalo con el botón de prueba.</string>
     <string name="recipe_source">Documentación oficial</string>
+    <string name="menu">Menú</string>
+    <string name="menu_help">Ayuda y sitio web</string>
+    <string name="help_url">https://remapsnapkey.com/es/</string>
+    <string name="setup_title">Configuración</string>
+    <string name="setup_intro">Cuatro pasos, una sola vez. Cada uno se marca solo cuando está hecho.</string>
+    <string name="setup_continue">Continuar la configuración</string>
+    <string name="setup_other_way">Otra forma: desde un ordenador</string>
+    <string name="setup_open_setting">Abrir el ajuste</string>
+    <string name="setup_native_title">Acción propia de la Snap Key del teléfono desactivada</string>
+    <string name="setup_open_phone_settings">Abrir los ajustes del teléfono</string>
+    <string name="setup_native_done">Hecho: la Snap Key no hace nada por sí sola</string>
+    <string name="finder_intro">La tecla del Find X9 ya se conoce: aquí no hay nada que hacer. En otro teléfono, la app tiene que aprender qué línea escribe Android en su registro cuando pulsas tu tecla.</string>
+    <string name="finder_privacy">La captura puede contener información personal de otras apps: revisa el archivo antes de compartirlo.</string>
+    <string name="finder_need_log">Primero hace falta la lectura del registro: termina el paso 1 de la configuración.</string>
+    <string name="app_search">Buscar una app</string>
+    <string name="target_link_enter">Escribe un enlace</string>
+    <string name="target_none">Todavía no has elegido nada</string>
+    <string name="recipe_untested">Aún sin probar: sacado de la documentación oficial de la app. Compruébalo con el botón de prueba.</string>
+    <string-array name="steps_log_auto">
+        <item>Conecta el teléfono a tu Wi-Fi.</item>
+        <item>Si las Opciones para desarrolladores están ocultas: Ajustes › Información del teléfono › Versión, toca 7 veces el número de compilación.</item>
+        <item>En Opciones para desarrolladores, activa \"Disable system optimisation\" (ColorOS).</item>
+        <item>Toca \"Configurar la lectura del registro automáticamente\" más abajo.</item>
+        <item>Activa Depuración inalámbrica y toca \"Vincular dispositivo con código de sincronización\".</item>
+        <item>Baja las notificaciones y escribe los 6 dígitos en la notificación de SnapKey Mapper.</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>En un ordenador, instala las platform-tools de Android (adb).</item>
+        <item>En Opciones para desarrolladores, activa Depuración por USB y \"Disable system optimisation\" (ColorOS), y conecta el teléfono con un cable.</item>
+        <item>Ejecuta el comando de abajo en el ordenador.</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>Toca \"Abrir el ajuste\" y activa el interruptor.</item>
+        <item>Si el interruptor está en gris o Android dice que se deniega el acceso: toca \"Abrir los ajustes de la app\", luego ⋮ arriba a la derecha › \"Permitir ajustes restringidos\" y vuelve aquí.</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>Toca \"Permitir\" y confirma.</item>
+        <item>En ColorOS, abre también los ajustes de la app › Uso de la batería › \"Sin restricciones\" y bloquea la app en las apps recientes.</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>Abre los ajustes del teléfono y busca \"Snap Key\".</item>
+        <item>Ponla sin ninguna acción, para que el teléfono no ejecute su propia acción a la vez.</item>
+        <item>Marca la casilla de abajo.</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>Toca \"Iniciar captura\".</item>
+        <item>Pulsa tu tecla 3 veces, con unos segundos entre cada una.</item>
+        <item>Toca \"Detener captura\".</item>
+        <item>En la lista de abajo, toca la línea que volvió a salir en cada pulsación: pasa a ser el patrón.</item>
+        <item>Vuelve al inicio, empieza a escuchar y pulsa la tecla para comprobar.</item>
+    </string-array>
 </resources>

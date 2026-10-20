@@ -333,20 +333,20 @@
   <section id="library" class="wide" aria-labelledby="lib-h">
     <div class="split">
       <div class="split-copy">
-        <p class="kicker">Biblioteca de recetas</p>
-        <h2 id="lib-h">¿No sabes el enlace? Elige una receta</h2>
-        <p>La app incluye una biblioteca de recetas listas para usar, agrupadas por app: iniciar un temporizador, poner una alarma, abrir la cámara, llamar a un número, escribir un SMS, ir a un lugar, abrir una lista de reproducción o un chat. Elige una, rellena tus datos, pruébala y úsala para la tecla.</p>
+        <p class="kicker">Biblioteca de atajos</p>
+        <h2 id="lib-h">¿No sabes el enlace? Elige un atajo</h2>
+        <p>La app incluye una biblioteca de atajos listos para usar, agrupados por app: iniciar un temporizador, poner una alarma, abrir la cámara, llamar a un número, escribir un SMS, ir a un lugar, abrir una lista de reproducción o un chat. Elige uno, rellena tus datos, pruébalo y úsalo para la tecla.</p>
         <ul class="ticks">
           <li>Agrupadas por app, con los logotipos oficiales</li>
           <li>Un campo por dato, con una pista sobre dónde encontrarlo</li>
           <li>Vista previa en directo del enlace final, con botones para copiarlo y probarlo</li>
-          <li>Cada receta comprobada en un emulador de Android, con un enlace a la página oficial que la documenta</li>
+          <li>Cada atajo comprobado en un emulador de Android, con un enlace a la página oficial que lo documenta</li>
         </ul>
-        <p class="muted small">Comprobada en un emulador no significa comprobada en todos los móviles: las apps de reloj, cámara y ajustes son distintas en ColorOS, y algunas apps necesitan una cuenta. El botón de prueba de cada receta te lo dice con un toque.</p>
+        <p class="muted small">Comprobado en un emulador no significa comprobado en todos los móviles: las apps de reloj, cámara y ajustes son distintas en ColorOS, y algunas apps necesitan una cuenta. El botón de prueba de cada atajo te lo dice con un toque.</p>
       </div>
       <div class="appshots">
-        <img src="/img/library.png" width="540" height="1200" alt="La biblioteca de recetas de SnapKey Mapper: apps con sus logotipos y el número de recetas" loading="lazy">
-        <img src="/img/recipe.png" width="540" height="1200" alt="Una receta con un campo para cada dato y el enlace final construido en directo" loading="lazy">
+        <img src="/img/library.png" width="540" height="1200" alt="La biblioteca de atajos de SnapKey Mapper: apps con sus logotipos y el número de atajos" loading="lazy">
+        <img src="/img/recipe.png" width="540" height="1200" alt="Un atajo con un campo para cada dato y el enlace final construido en directo" loading="lazy">
       </div>
     </div>
   </section>
@@ -370,6 +370,8 @@
       <li><strong>Un aviso de que el archivo podría ser dañino</strong>, en Chrome. Aparece con cualquier APK descargado de internet. Confirma la descarga.</li>
       <li><strong>«Instalar aplicaciones desconocidas»</strong>. Android te pide que permitas a tu navegador o a tu gestor de archivos instalar apps. Permítelo, instala y, si quieres, vuelve a desactivarlo.</li>
       <li><strong>«Play Protect no ha analizado esta aplicación antes»</strong>. La app es nueva, así que Google te ofrece analizarla. Toca <em>Analizar app</em>: tarda unos segundos.</li>
+      <li><strong>«Aplicación peligrosa bloqueada»</strong>. Google Play Protect puede mostrar este mensaje y detener la instalación. Ocurre porque la app viene de GitHub y no de Google Play, y pide permisos sensibles (leer el registro del sistema, mostrarse sobre otras apps) a un desarrollador que Google aún no ha verificado. No significa que la app sea maliciosa. Antes de seguir, comprueba que el certificado de firma del APK tiene el SHA-256 <code>a4a6d83d2298e8a88a6da748a3cc9ae9051e459a1d6e06b098a27d2b87f8f796</code> (con AppVerifier, o <code>apksigner verify --print-certs</code>). Si coincide, toca <em>Instalar de todos modos</em>.</li>
+      <li><strong>«Mostrar sobre otras apps» no se puede activar</strong>. Android puede rechazar este permiso hasta que permitas los ajustes restringidos de la app: <em>Información de la app › ⋮ › Permitir ajustes restringidos</em>. Después vuelve y concédelo.</li>
     </ol>
     <div class="cando">
       <div><h3>Lo que puede hacer</h3><ul>
@@ -473,9 +475,11 @@
 
     <details><summary>¿Tiene relación con OPPO?</summary><div><p>No. SnapKey Mapper es un proyecto independiente de código abierto, sin relación con OPPO, OnePlus, Key Mapper, Anthropic ni ninguna app que aparezca en esta página. Estos nombres solo indican compatibilidad.</p></div></details>
 
-    <details><summary>¿Qué es la biblioteca de recetas?</summary><div><p>Una lista de enlaces listos para usar, agrupados por app: temporizadores, alarmas, cámara, llamadas, SMS, mapas, música, chats y más. Ábrela desde la app, elige una receta, rellena los huecos, pruébala y úsala para la Snap Key. Cada receta enlaza a la página oficial que la documenta.</p></div></details>
+    <details><summary>¿Qué es la biblioteca de atajos?</summary><div><p>Una lista de enlaces listos para usar, agrupados por app: temporizadores, alarmas, cámara, llamadas, SMS, mapas, música, chats y más. Ábrela desde la app, elige un atajo, rellena los huecos, pruébalo y úsalo para la Snap Key. Cada atajo enlaza a la página oficial que lo documenta.</p></div></details>
 
-    <details><summary>¿Cómo sé si una receta funciona en mi móvil?</summary><div><p>Las recetas se comprueban en un emulador de Android, no en todos los móviles. Las apps de reloj, cámara y ajustes son distintas en ColorOS, y algunas apps necesitan una cuenta. El botón de prueba de cada receta te lo dice con un toque. Si alguna falla en tu móvil, avísanos en GitHub para corregirla o quitarla.</p></div></details>
+    <details><summary>¿Cómo sé si un atajo funciona en mi móvil?</summary><div><p>Los atajos se comprueban en un emulador de Android, no en todos los móviles. Las apps de reloj, cámara y ajustes son distintas en ColorOS, y algunas apps necesitan una cuenta. El botón de prueba de cada atajo te lo dice con un toque. Si alguno falla en tu móvil, avísanos en GitHub para corregirlo o quitarlo.</p></div></details>
+
+    <details id="privacy"><summary>¿Me rastrea este sitio web?</summary><div><p>El sitio mide su audiencia con Microsoft Clarity (clics, desplazamiento, grabaciones de visitas), pero solo si aceptas en el aviso. Si rechazas, Clarity no se carga y no deja ninguna cookie. Puedes cambiar de opinión en cualquier momento con «Gestionar cookies» al pie de la página. La página también consulta api.github.com para mostrar las estrellas y las descargas, lo que envía tu dirección IP a GitHub, y guarda esas cifras una hora en tu navegador. La app no recoge nada: ni cuenta, ni rastreadores, ni anuncios.</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">
@@ -520,163 +524,11 @@
     <li><a href="https://github.com/Damien-llado/snapkey-mapper">Código fuente</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">Informar de un error</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">Todas las versiones</a></li>
+    <li><button class="cc-reopen" type="button" data-cc-reopen>Gestionar cookies</button></li>
   </ul>
   <ul aria-label="Idiomas"><li><a href="/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li></ul>
 </footer>
 
-<script>
-// Mesure d'audience Microsoft Clarity (clics, défilement, cartes de chaleur) : coupée si l'identifiant du projet est vide
-(function (id) {
-  if (!id) return;
-  (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-    t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, 'clarity', 'script', id);
-  // Événements utiles : téléchargement, GitHub, histoire partagée
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('a'); if (!a) return;
-    if (a.href.indexOf('/releases') > -1) clarity('event', 'download');
-    else if (a.href.indexOf('github.com') > -1) clarity('event', 'github');
-  });
-  document.getElementById('story').addEventListener('submit', function () { clarity('event', 'story'); });
-})('z0nfap9rs6');
-
-// Étoiles et téléchargements GitHub en direct (affichés même à 0), en cache une heure pour rester sous la limite de l'API
-(function () {
-  var key = 'skm-counts', now = Date.now(), api = 'https://api.github.com/repos/Damien-llado/snapkey-mapper';
-  function show(c) {
-    document.querySelectorAll('[data-stars]').forEach(function (e) { e.textContent = c.stars; });
-    document.querySelectorAll('[data-downloads]').forEach(function (e) { e.textContent = c.downloads; });
-  }
-  try {
-    var c = JSON.parse(localStorage.getItem(key) || 'null');
-    if (c && now - c.t < 3600e3) return show(c);
-  } catch (e) {}
-  function get(u) { return fetch(u).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
-  Promise.all([get(api), get(api + '/releases?per_page=100')]).then(function (r) {
-    if (!r[0]) return;
-    var d = 0;
-    (r[1] || []).forEach(function (rel) { rel.assets.forEach(function (a) { d += a.download_count; }); });
-    var c = { stars: r[0].stargazers_count, downloads: d, t: now };
-    show(c);
-    try { localStorage.setItem(key, JSON.stringify(c)); } catch (e) {}
-  });
-})();
-
-// Histoires : ouvre une discussion GitHub préremplie, rien n'est envoyé par la page elle-même
-document.getElementById('story').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var f = e.target.elements, what = f.what.value.trim();
-  var body = '**What the Snap Key opens:** ' + what + '\n**Phone:** ' + f.phone.value + '\n**Gesture:** ' + f.gesture.value +
-    (f.link.value.trim() ? '\n**Link or app:** `' + f.link.value.trim().replace(/`/g, '') + '`' : '') +
-    (f.why.value.trim() ? '\n\n' + f.why.value.trim() : '');
-  location.href = 'https://github.com/Damien-llado/snapkey-mapper/discussions/new?category=show-and-tell&title=' +
-    encodeURIComponent('My Snap Key: ' + what) + '&body=' + encodeURIComponent(body);
-});
-
-// Mobile : le bouton Download passe dans l'en-tête quand celui du héros sort de l'écran
-(function () {
-  var cta = document.querySelector('.hero .ctas'); if (!cta || !window.IntersectionObserver) return;
-  new IntersectionObserver(function (e) { document.body.classList.toggle('past-hero', !e[0].isIntersecting && e[0].boundingClientRect.top < 0); }).observe(cta);
-})();
-
-// Animations : appui sur la Snap Key, l'écran ouvre la cible suivante ; inclinaison au pointeur
-(function () {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var T = [
-    ['Claude Code', 'claude.ai/code/…', '#D97757', 'b-claude', 'Claude Code'],
-    ['your run playlist', 'spotify:playlist:…', '#1ED760', 'b-spotify', 'Run playlist'],
-    ['navigation home', 'google.navigation:q=…', '#4285F4', 'b-maps', 'Maps'],
-    ['Strava', 'App: Strava', '#FC4C02', 'b-strava', 'Strava'],
-    ["today's notes", 'docs.google.com/…', '#4285F4', 'b-gdocs', 'Notes'],
-    ['the garage dashboard', 'homeassistant://navigate/…', '#18BCF2', 'b-ha', 'Home Assistant'],
-    ['a WhatsApp chat', 'wa.me/…', '#25D366', 'b-wa', 'WhatsApp']
-  ];
-  var i = 0, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
-      launch = document.getElementById('launch'), use = launch.querySelector('use');
-  function cycle() {
-    if (document.hidden) return;
-    i = (i + 1) % T.length;
-    var t = T[i];
-    stage.classList.remove('pressed'); void stage.offsetWidth; stage.classList.add('pressed');
-    setTimeout(function () {
-      launch.style.setProperty('--h', t[2]);
-      use.setAttribute('href', '#' + t[3]);
-      document.getElementById('launch-t').textContent = t[4];
-      document.getElementById('launch-s').textContent = t[1];
-      launch.classList.remove('go'); void launch.offsetWidth; launch.classList.add('go');
-      rot.textContent = t[0];
-      rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
-    }, 260);
-  }
-  // La scène d'ouverture joue d'abord (icônes, appui, Claude Code), puis le cycle démarre
-  setTimeout(function () { setInterval(cycle, 2800); }, 1800);
-
-  if (!matchMedia('(pointer: fine)').matches) return;
-  var hero = document.querySelector('.hero'), raf = 0, mx = 0, my = 0;
-  hero.addEventListener('pointermove', function (e) {
-    var r = hero.getBoundingClientRect();
-    mx = (e.clientX - r.left) / r.width * 2 - 1; my = (e.clientY - r.top) / r.height * 2 - 1;
-    if (!raf) raf = requestAnimationFrame(function () { raf = 0; hero.style.setProperty('--mx', mx.toFixed(3)); hero.style.setProperty('--my', my.toFixed(3)); });
-  });
-  hero.addEventListener('pointerleave', function () { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
-
-  // Halo qui suit le pointeur sur les tuiles
-  document.getElementById('bento').addEventListener('pointermove', function (e) {
-    var t = e.target.closest('.tile'); if (!t) return;
-    var r = t.getBoundingClientRect();
-    t.style.setProperty('--x', (e.clientX - r.left) + 'px'); t.style.setProperty('--y', (e.clientY - r.top) + 'px');
-  });
-})();
-// Apparitions au défilement, façon Audit Greenwashing : léger glissement et fondu rapide, en cascade
-(function () {
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('main > section:not(.hero) > .kicker, main > section:not(.hero) > h2, main > section > .sub, .facts, .split-copy > *, .console, .narrow > p, .table-wrap, .faq details, .story, .checks > li, .cando > div, .final-card, .bento > li, .gestures > li, .cards > li, .steps > li, .note');
-  var steps = document.querySelector('.steps');
-  if (reduce || !('IntersectionObserver' in window)) {
-    els.forEach(function (e) { e.classList.add('in'); });
-    steps.style.setProperty('--p', 1);
-    return;
-  }
-  els.forEach(function (e) { e.setAttribute('data-r', e.matches('.steps > li') ? 'side' : ''); });
-  var io = new IntersectionObserver(function (entries) {
-    var k = 0;
-    entries.forEach(function (en) {
-      if (!en.isIntersecting) return;
-      en.target.style.setProperty('--i', Math.min(k++, 6));
-      en.target.classList.add('in');
-      io.unobserve(en.target);
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-  els.forEach(function (e) { io.observe(e); });
-
-  // La frise des étapes se remplit à mesure qu'on descend
-  var raf = 0;
-  function fill() {
-    raf = 0;
-    var r = steps.getBoundingClientRect(), p = (innerHeight * 0.65 - r.top) / r.height;
-    steps.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(3));
-  }
-  addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(fill); }, { passive: true });
-  fill();
-})();
-document.querySelectorAll('[data-copy]').forEach(function (el) {
-  var box = document.createElement('div');
-  box.className = 'copybox';
-  el.parentNode.insertBefore(box, el);
-  box.appendChild(el);
-  var ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>';
-  var DONE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
-  var b = document.createElement('button');
-  b.type = 'button';
-  b.className = 'copy-ico';
-  b.setAttribute('aria-label', document.body.getAttribute('data-copy-label') || 'Copy');
-  b.innerHTML = ICON;
-  b.addEventListener('click', function () {
-    var text = el.getAttribute('data-copy') || el.textContent.trim();
-    function done() { b.innerHTML = DONE; b.classList.add('ok'); setTimeout(function () { b.innerHTML = ICON; b.classList.remove('ok'); }, 1500); }
-    try { navigator.clipboard.writeText(text).then(done); } catch (e) {}
-  });
-  box.appendChild(b);
-});
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

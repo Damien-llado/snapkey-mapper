@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SnapKey Mapper</string>
-    <string name="state_setup">Instellen: %1$d van 3 toestemmingen</string>
+    <string name="state_setup">Instellen: %1$d van %2$d stappen gedaan</string>
     <string name="toast_cannot_open">Kan niet openen: %1$s</string>
     <string name="toast_cannot_read">Kan het logboek niet lezen: %1$s</string>
     <string name="toast_failed">Mislukt: %1$s</string>
@@ -24,7 +24,7 @@
     <string name="perm_needed">Nodig</string>
     <string name="perm_coloros">Zet op ColorOS in de app-instellingen ook Batterijgebruik op \"Geen beperkingen\" en vergrendel de app in de recente apps.</string>
     <string name="perm_app_settings">App-instellingen openen</string>
-    <string name="perm_by_hand">Logboek lezen met de hand, vanaf een computer:</string>
+    <string name="perm_by_hand">Vanaf een computer, met adb:</string>
     <string name="perm_copy">Commando kopiëren</string>
     <string name="toast_copied">Commando gekopieerd</string>
     <string name="perm_by_hand_or">Of met de hand:</string>
@@ -51,7 +51,7 @@
     <string name="toast_pattern_saved">Patroon opgeslagen, je kunt beginnen met luisteren</string>
     <string name="toast_no_lines">Geen regel: vink \"Alle regels tonen\" aan of controleer de toestemming</string>
     <string name="toast_saved">Capture opgeslagen</string>
-    <string name="toast_choose_pattern">Kies eerst het patroon (stap 3)</string>
+    <string name="toast_choose_pattern">Kies eerst het patroon (menu › Andere telefoon)</string>
     <string name="notif_listening_title">SnapKey Mapper luistert</string>
     <string name="notif_listening_text">Druk op de zijknop om je doel te openen</string>
     <string name="notif_stopped_title">SnapKey Mapper staat uit</string>
@@ -75,20 +75,71 @@
     <string name="err_invalid_intent">Ongeldige intent-link</string>
     <string name="setup_fail_pair">Koppelen mislukt. Tik opnieuw op de instelknop van de app, daarna op “Apparaat koppelen met koppelingscode” en typ de nieuwe code. Lukt het weer niet, zet Draadloze foutopsporing dan uit en weer aan.</string>
     <string name="lang_title">Taal</string>
-    <string name="library_open">Bekijk de receptenbibliotheek</string>
-    <string name="library_title">Receptenbibliotheek</string>
-    <string name="library_intro">Kant-en-klare links, per app gegroepeerd. Kies er een, vul je eigen waarden in, test hem en gebruik hem dan voor de Snap Key.</string>
+    <string name="library_open">Bekijk de snelkoppelingenbibliotheek</string>
+    <string name="library_title">Snelkoppelingenbibliotheek</string>
+    <string name="library_intro">Kant-en-klare snelkoppelingen, per app gegroepeerd. Kies er een, vul je eigen waarden in, test hem en gebruik hem dan voor de Snap Key.</string>
     <string name="library_search">Zoek een app of een actie</string>
-    <string name="library_count">Recepten: %1$d</string>
+    <string name="library_count">Snelkoppelingen: %1$d</string>
     <string name="library_not_installed">Niet geïnstalleerd</string>
     <string name="library_empty">Niets gevonden voor je zoekopdracht.</string>
     <string name="recipe_fields">Je waarden</string>
     <string name="recipe_link">Uiteindelijke link</string>
-    <string name="recipe_use">Dit recept gebruiken</string>
+    <string name="recipe_use">Deze snelkoppeling gebruiken</string>
     <string name="recipe_fill_all">Vul eerst alle velden in.</string>
     <string name="recipe_saved">Opgeslagen als je doel.</string>
     <string name="recipe_missing">Er is niets geopend. Is de app geïnstalleerd?</string>
     <string name="recipe_verified">Gecontroleerd op een Android-emulator op %1$s.</string>
     <string name="recipe_verified_partial">Op een Android-emulator (%1$s) kreeg de juiste app deze link, maar de emulator kon niet meer laten zien. Controleer het met de testknop.</string>
     <string name="recipe_source">Officiële documentatie</string>
+    <string name="menu">Menu</string>
+    <string name="menu_help">Help en website</string>
+    <string name="help_url">https://remapsnapkey.com/nl/</string>
+    <string name="setup_title">Instellen</string>
+    <string name="setup_intro">Vier stappen, één keer. Elke stap vinkt zichzelf af als hij klaar is.</string>
+    <string name="setup_continue">Doorgaan met instellen</string>
+    <string name="setup_other_way">Andere manier: vanaf een computer</string>
+    <string name="setup_open_setting">Instelling openen</string>
+    <string name="setup_native_title">Eigen Snap Key-actie van de telefoon uit</string>
+    <string name="setup_open_phone_settings">Telefooninstellingen openen</string>
+    <string name="setup_native_done">Klaar: de Snap Key doet zelf niets</string>
+    <string name="finder_intro">De toets van de Find X9 is al bekend: hier hoef je niets te doen. Bij een andere telefoon moet de app leren welke regel Android in het logboek schrijft als je op je toets drukt.</string>
+    <string name="finder_privacy">De capture kan persoonlijke gegevens uit andere apps bevatten: controleer het bestand voordat je het deelt.</string>
+    <string name="finder_need_log">Eerst is logboek lezen nodig: rond stap 1 van het instellen af.</string>
+    <string name="app_search">Zoek een app</string>
+    <string name="target_link_enter">Typ een link</string>
+    <string name="target_none">Nog niets gekozen</string>
+    <string name="recipe_untested">Nog niet getest: overgenomen uit de officiële documentatie van de app. Controleer het met de testknop.</string>
+    <string-array name="steps_log_auto">
+        <item>Verbind de telefoon met je wifi.</item>
+        <item>Als Ontwikkelaarsopties verborgen zijn: Instellingen › Over de telefoon › Versie, tik 7 keer op het buildnummer.</item>
+        <item>Zet in Ontwikkelaarsopties \"Disable system optimisation\" aan (ColorOS).</item>
+        <item>Tik hieronder op \"Logboek lezen automatisch instellen\".</item>
+        <item>Zet Draadloze foutopsporing aan en tik dan op \"Apparaat koppelen met koppelingscode\".</item>
+        <item>Trek de meldingen omlaag en typ de 6 cijfers in de melding van SnapKey Mapper.</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>Installeer op een computer de Android platform-tools (adb).</item>
+        <item>Zet in Ontwikkelaarsopties USB-foutopsporing en \"Disable system optimisation\" (ColorOS) aan en verbind de telefoon met een kabel.</item>
+        <item>Voer onderstaande opdracht uit op de computer.</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>Tik op \"Instelling openen\" en zet de schakelaar aan.</item>
+        <item>Als de schakelaar grijs is of Android zegt dat toegang is geweigerd: tik op \"App-instellingen openen\", dan op ⋮ rechtsboven › \"Beperkte instellingen toestaan\" en kom daarna hier terug.</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>Tik op \"Toestaan\" en bevestig.</item>
+        <item>Open op ColorOS ook de app-instellingen › Batterijgebruik › \"Geen beperkingen\" en vergrendel de app in de recente apps.</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>Open de telefooninstellingen en zoek naar \"Snap Key\".</item>
+        <item>Zet hem op geen actie, zodat de telefoon niet tegelijk zijn eigen actie uitvoert.</item>
+        <item>Vink hieronder het vakje aan.</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>Tik op \"Capture starten\".</item>
+        <item>Druk 3 keer op je toets, met een paar seconden ertussen.</item>
+        <item>Tik op \"Capture stoppen\".</item>
+        <item>Tik in de lijst hieronder op de regel die bij elke druk terugkwam: die wordt het patroon.</item>
+        <item>Ga terug naar het startscherm, begin met luisteren en druk ter controle op de toets.</item>
+    </string-array>
 </resources>

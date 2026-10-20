@@ -1356,6 +1356,768 @@
           "level": "dispatch"
         }
       ]
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "kind": "app",
+      "package": "com.spotify.music",
+      "logo": "si:spotify",
+      "recipes": [
+        {
+          "id": "spotify-open-playlist",
+          "title": "Open a playlist",
+          "desc": "Opens a Spotify playlist.",
+          "link": "spotify:playlist:[PLAYLIST_ID]",
+          "vars": [
+            {
+              "name": "PLAYLIST_ID",
+              "label": "Playlist ID",
+              "where": "In Spotify tap the three dots, then Share, then Copy link. The ID is the part after /playlist/ and before any ?si=.",
+              "example": "37i9dQZF1DXcBWIGoYBM5M"
+            }
+          ],
+          "source": "https://developer.spotify.com/documentation/soloist/reference/websocket-api",
+          "confidence": "documented",
+          "note": "Opens the playlist. It does not start playing by itself.",
+          "level": "untested"
+        },
+        {
+          "id": "spotify-open-artist",
+          "title": "Open an artist page",
+          "desc": "Opens the page of a Spotify artist.",
+          "link": "spotify:artist:[ARTIST_ID]",
+          "vars": [
+            {
+              "name": "ARTIST_ID",
+              "label": "Artist ID",
+              "where": "In Spotify tap the three dots, then Share, then Copy link. The ID is the part after /artist/ and before any ?si=.",
+              "example": "4Z8W4fKeB5YxbusRsdQVPb"
+            }
+          ],
+          "source": "https://support.spotify.com/us/artists/article/finding-your-artist-track-release-links/",
+          "confidence": "documented",
+          "note": "Opens the artist page.",
+          "level": "untested"
+        },
+        {
+          "id": "spotify-open-album",
+          "title": "Open an album",
+          "desc": "Opens a Spotify album.",
+          "link": "spotify:album:[ALBUM_ID]",
+          "vars": [
+            {
+              "name": "ALBUM_ID",
+              "label": "Album ID",
+              "where": "In Spotify tap the three dots, then Share, then Copy link. The ID is the part after /album/ and before any ?si=.",
+              "example": "2up3OPMp9Tb4dAKM2erWXQ"
+            }
+          ],
+          "source": "https://www.iana.org/assignments/uri-schemes/prov/spotify",
+          "confidence": "documented",
+          "note": "Opens the album.",
+          "level": "untested"
+        },
+        {
+          "id": "spotify-open-track",
+          "title": "Open a track",
+          "desc": "Opens a Spotify track.",
+          "link": "spotify:track:[TRACK_ID]",
+          "vars": [
+            {
+              "name": "TRACK_ID",
+              "label": "Track ID",
+              "where": "In Spotify tap the three dots, then Share, then Copy link. The ID is the part after /track/ and before any ?si=.",
+              "example": "6rqhFgbbKwnb9MLmUQDhG6"
+            }
+          ],
+          "source": "https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids",
+          "confidence": "documented",
+          "note": "Opens the track.",
+          "level": "untested"
+        },
+        {
+          "id": "spotify-search",
+          "title": "Search Spotify",
+          "desc": "Opens Spotify search results for a fixed query.",
+          "link": "spotify:search:[QUERY]",
+          "vars": [
+            {
+              "name": "QUERY",
+              "label": "Search text",
+              "where": "Any words you want to look up, for example an artist name.",
+              "example": "daft punk"
+            }
+          ],
+          "source": "https://www.iana.org/assignments/uri-schemes/prov/spotify",
+          "confidence": "documented",
+          "note": "Opens the search results.",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "deezer",
+      "name": "Deezer",
+      "kind": "app",
+      "package": "deezer.android.app",
+      "logo": "si:deezer",
+      "recipes": [
+        {
+          "id": "deezer-open-playlist",
+          "title": "Open a playlist",
+          "desc": "Opens a Deezer playlist.",
+          "link": "deezer://www.deezer.com/playlist/[PLAYLIST_ID]",
+          "vars": [
+            {
+              "name": "PLAYLIST_ID",
+              "label": "Playlist ID",
+              "where": "Open the playlist on deezer.com in a browser. The ID is the number at the end of the address.",
+              "example": "908622995"
+            }
+          ],
+          "source": "https://www.deezer.com/us/playlist/908622995",
+          "confidence": "widely-used",
+          "note": "Opens the playlist.",
+          "level": "untested"
+        },
+        {
+          "id": "deezer-open-artist",
+          "title": "Open an artist page",
+          "desc": "Opens the page of a Deezer artist.",
+          "link": "deezer://www.deezer.com/artist/[ARTIST_ID]",
+          "vars": [
+            {
+              "name": "ARTIST_ID",
+              "label": "Artist ID",
+              "where": "Open the artist on deezer.com in a browser. The ID is the number at the end of the address.",
+              "example": "27"
+            }
+          ],
+          "source": "https://www.deezer.com/us/artist/27",
+          "confidence": "widely-used",
+          "note": "Opens the artist page.",
+          "level": "untested"
+        },
+        {
+          "id": "deezer-open-album",
+          "title": "Open an album",
+          "desc": "Opens a Deezer album.",
+          "link": "deezer://www.deezer.com/album/[ALBUM_ID]",
+          "vars": [
+            {
+              "name": "ALBUM_ID",
+              "label": "Album ID",
+              "where": "Open the album on deezer.com in a browser. The ID is the number at the end of the address.",
+              "example": "302127"
+            }
+          ],
+          "source": "https://www.deezer.com/us/album/302127",
+          "confidence": "widely-used",
+          "note": "Opens the album.",
+          "level": "untested"
+        },
+        {
+          "id": "deezer-open-track",
+          "title": "Open a track",
+          "desc": "Opens a Deezer track.",
+          "link": "deezer://www.deezer.com/track/[TRACK_ID]",
+          "vars": [
+            {
+              "name": "TRACK_ID",
+              "label": "Track ID",
+              "where": "Open the track on deezer.com in a browser. The ID is the number at the end of the address.",
+              "example": "3135556"
+            }
+          ],
+          "source": "https://www.deezer.com/us/track/3135556",
+          "confidence": "widely-used",
+          "note": "Opens the track.",
+          "level": "untested"
+        },
+        {
+          "id": "deezer-search",
+          "title": "Search Deezer",
+          "desc": "Opens Deezer search results for a fixed query.",
+          "link": "intent://www.deezer.com/search/[QUERY]#Intent;scheme=https;package=deezer.android.app;end",
+          "vars": [
+            {
+              "name": "QUERY",
+              "label": "Search text",
+              "where": "Any words you want to look up, for example an artist name.",
+              "example": "daft punk"
+            }
+          ],
+          "source": "https://cdn-files.dzcdn.net/xml/opensearch.xml",
+          "confidence": "widely-used",
+          "note": "Opens the search results.",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "apple-music",
+      "name": "Apple Music",
+      "kind": "app",
+      "package": "com.apple.android.music",
+      "logo": "si:applemusic",
+      "recipes": [
+        {
+          "id": "apple-music-open-link",
+          "title": "Open an Apple Music page",
+          "desc": "Opens an album, playlist or artist from its Apple Music link.",
+          "link": "[LINK]",
+          "vars": [
+            {
+              "name": "LINK",
+              "label": "Apple Music link",
+              "where": "Open the page on music.apple.com, click More, then Copy Link, and paste the whole address.",
+              "example": "https://music.apple.com/us/album/random-access-memories/617154241",
+              "kind": "raw"
+            }
+          ],
+          "source": "https://support.apple.com/guide/music-web/apdm0783785d/web",
+          "confidence": "widely-used",
+          "note": "Opens in the Apple Music app if your phone lets it handle the link, otherwise in the browser.",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "waze",
+      "name": "Waze",
+      "kind": "app",
+      "package": "com.waze",
+      "logo": "si:waze",
+      "recipes": [
+        {
+          "id": "waze-navigate-home",
+          "title": "Navigate home",
+          "desc": "Starts navigation to the Home address saved in Waze.",
+          "link": "intent://waze.com/ul?favorite=home&navigate=yes#Intent;scheme=https;package=com.waze;end",
+          "vars": [],
+          "source": "https://developers.google.com/waze/deeplinks",
+          "confidence": "documented",
+          "note": "Needs a Home address saved in Waze.",
+          "level": "untested"
+        },
+        {
+          "id": "waze-navigate-work",
+          "title": "Navigate to work",
+          "desc": "Starts navigation to the Work address saved in Waze.",
+          "link": "intent://waze.com/ul?favorite=work&navigate=yes#Intent;scheme=https;package=com.waze;end",
+          "vars": [],
+          "source": "https://developers.google.com/waze/deeplinks",
+          "confidence": "documented",
+          "note": "Needs a Work address saved in Waze.",
+          "level": "untested"
+        },
+        {
+          "id": "waze-navigate-to-address",
+          "title": "Navigate to an address",
+          "desc": "Starts navigation to a fixed address or place.",
+          "link": "intent://waze.com/ul?q=[ADDRESS]&navigate=yes#Intent;scheme=https;package=com.waze;end",
+          "vars": [
+            {
+              "name": "ADDRESS",
+              "label": "Address or place",
+              "where": "Street address or place name with the city, as you would type it in Waze.",
+              "example": "66 Acacia Avenue"
+            }
+          ],
+          "source": "https://developers.google.com/waze/deeplinks",
+          "confidence": "documented",
+          "note": "Add the city to avoid mix-ups.",
+          "level": "untested"
+        },
+        {
+          "id": "waze-navigate-to-coordinates",
+          "title": "Navigate to coordinates",
+          "desc": "Starts navigation to a point given by latitude and longitude.",
+          "link": "intent://waze.com/ul?ll=[LATITUDE],[LONGITUDE]&navigate=yes#Intent;scheme=https;package=com.waze;end",
+          "vars": [
+            {
+              "name": "LATITUDE",
+              "label": "Latitude",
+              "where": "In Google Maps long-press the spot: the first number in the search bar.",
+              "example": "40.758895"
+            },
+            {
+              "name": "LONGITUDE",
+              "label": "Longitude",
+              "where": "In Google Maps long-press the spot: the second number in the search bar.",
+              "example": "-73.985131"
+            }
+          ],
+          "source": "https://developers.google.com/waze/deeplinks",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "waze-search-place",
+          "title": "Search a place in Waze",
+          "desc": "Shows a place or address in Waze without starting navigation.",
+          "link": "intent://waze.com/ul?q=[SEARCH]#Intent;scheme=https;package=com.waze;end",
+          "vars": [
+            {
+              "name": "SEARCH",
+              "label": "Place or address",
+              "where": "The words you would type in the Waze search bar.",
+              "example": "Eiffel Tower"
+            }
+          ],
+          "source": "https://developers.google.com/waze/deeplinks",
+          "confidence": "documented",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "kind": "app",
+      "package": "com.netflix.mediaclient",
+      "logo": "si:netflix",
+      "recipes": [
+        {
+          "id": "netflix-open-title",
+          "title": "Open a movie or series",
+          "desc": "Opens the Netflix page of a movie or series.",
+          "link": "intent://www.netflix.com/title/[TITLE_ID]#Intent;scheme=https;package=com.netflix.mediaclient;end",
+          "vars": [
+            {
+              "name": "TITLE_ID",
+              "label": "Title ID",
+              "where": "On netflix.com open the title. The ID is the number after /title/ in the address.",
+              "example": "80100172"
+            }
+          ],
+          "source": "https://www.netflix.com/title/80100172",
+          "confidence": "widely-used",
+          "note": "Opens the title page. It does not start playing by itself.",
+          "level": "untested"
+        },
+        {
+          "id": "netflix-open-my-list",
+          "title": "Open My List",
+          "desc": "Opens your Netflix list.",
+          "link": "intent://www.netflix.com/browse/my-list#Intent;scheme=https;package=com.netflix.mediaclient;end",
+          "vars": [],
+          "source": "https://help.netflix.com/en/node/10523",
+          "confidence": "widely-used",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "kind": "app",
+      "package": "notion.id",
+      "logo": "si:notion",
+      "recipes": [
+        {
+          "id": "notion-open-page",
+          "title": "Open a page",
+          "desc": "Opens a specific Notion page.",
+          "link": "intent://www.notion.so/[PAGE_ADDRESS]#Intent;scheme=https;package=notion.id;end",
+          "vars": [
+            {
+              "name": "PAGE_ADDRESS",
+              "label": "Page address",
+              "where": "In Notion open the page, tap the three dots, then Copy link. Keep only what follows https://www.notion.so/.",
+              "example": "Meeting-notes-1f2a3b4c5d6e7f8091a2b3c4d5e6f708"
+            }
+          ],
+          "source": "https://www.notion.so/.well-known/assetlinks.json",
+          "confidence": "widely-used",
+          "note": "Opens the page in the Notion app.",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "kind": "app",
+      "package": "com.anthropic.claude",
+      "logo": "si:claude",
+      "recipes": [
+        {
+          "id": "claude-code-new-session",
+          "title": "New Claude Code session",
+          "desc": "Starts a Claude Code session with your prompt typed in.",
+          "link": "claude://code/new?q=[PROMPT]",
+          "vars": [
+            {
+              "name": "PROMPT",
+              "label": "Prompt",
+              "where": "The instruction to pre-fill. It is only typed in: you still send it.",
+              "example": "Fix the failing test"
+            }
+          ],
+          "source": "https://support.claude.com/en/articles/14898120-open-the-claude-mobile-app-with-a-link",
+          "confidence": "documented",
+          "note": "Nothing is sent until you send it.",
+          "level": "untested"
+        },
+        {
+          "id": "claude-code-sessions",
+          "title": "Open Claude Code sessions",
+          "desc": "Opens the list of your Claude Code sessions.",
+          "link": "claude://code",
+          "vars": [],
+          "source": "https://support.claude.com/en/articles/14898120-open-the-claude-mobile-app-with-a-link",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "claude-new-chat",
+          "title": "New chat",
+          "desc": "Opens Claude on a new chat.",
+          "link": "intent://claude.ai/new#Intent;scheme=https;package=com.anthropic.claude;end",
+          "vars": [],
+          "source": "https://claude.ai/.well-known/assetlinks.json",
+          "confidence": "widely-used",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "google-docs",
+      "name": "Google Docs",
+      "kind": "app",
+      "package": "com.google.android.apps.docs.editors.docs",
+      "logo": "si:googledocs",
+      "recipes": [
+        {
+          "id": "docs-new-document",
+          "title": "New document",
+          "desc": "Creates a blank Google Doc.",
+          "link": "https://docs.new",
+          "vars": [],
+          "source": "https://support.google.com/a/users/answer/13004165",
+          "confidence": "documented",
+          "note": "Opens in the browser or the Docs app, depending on your phone.",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "kind": "app",
+      "package": "",
+      "logo": "si:n8n",
+      "recipes": [
+        {
+          "id": "n8n-trigger-webhook",
+          "title": "Run a workflow (webhook)",
+          "desc": "Calls the webhook of an n8n workflow.",
+          "link": "https://[N8N_HOST]/webhook/[WEBHOOK_PATH]",
+          "vars": [
+            {
+              "name": "N8N_HOST",
+              "label": "n8n server address",
+              "where": "The address of your n8n server, before /webhook/ in the Production URL.",
+              "example": "n8n.example.com"
+            },
+            {
+              "name": "WEBHOOK_PATH",
+              "label": "Webhook path",
+              "where": "In the workflow, open the Webhook node and copy its Path field.",
+              "example": "snapkey-lights-on"
+            }
+          ],
+          "source": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/",
+          "confidence": "documented",
+          "note": "The workflow must be active and accept GET. The link opens in the browser.",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "todoist",
+      "name": "Todoist",
+      "kind": "app",
+      "package": "com.todoist",
+      "logo": "si:todoist",
+      "recipes": [
+        {
+          "id": "todoist-add-task",
+          "title": "Add a task",
+          "desc": "Opens Todoist's new task with your text typed in.",
+          "link": "todoist://addtask?content=[TASK_TEXT]",
+          "vars": [
+            {
+              "name": "TASK_TEXT",
+              "label": "Task text",
+              "where": "Type the task as you would in Todoist.",
+              "example": "Call the accountant"
+            }
+          ],
+          "source": "https://developer.todoist.com/api/v1/#url-schemes",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "todoist-add-task-today",
+          "title": "Add a task due today",
+          "desc": "Same, with today as the due date.",
+          "link": "todoist://addtask?content=[TASK_TEXT]&date=today",
+          "vars": [
+            {
+              "name": "TASK_TEXT",
+              "label": "Task text",
+              "where": "Type the task as you would in Todoist.",
+              "example": "Pay the invoice"
+            }
+          ],
+          "source": "https://developer.todoist.com/api/v1/#url-schemes",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "todoist-open-today",
+          "title": "Open Today",
+          "desc": "Opens the Today view.",
+          "link": "todoist://today",
+          "vars": [],
+          "source": "https://developer.todoist.com/api/v1/#url-schemes",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "todoist-open-inbox",
+          "title": "Open Inbox",
+          "desc": "Opens the Inbox.",
+          "link": "todoist://inbox",
+          "vars": [],
+          "source": "https://developer.todoist.com/api/v1/#url-schemes",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "todoist-open-upcoming",
+          "title": "Open Upcoming",
+          "desc": "Opens the Upcoming view.",
+          "link": "todoist://upcoming",
+          "vars": [],
+          "source": "https://developer.todoist.com/api/v1/#url-schemes",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "todoist-search",
+          "title": "Search tasks",
+          "desc": "Searches your tasks for a fixed word.",
+          "link": "todoist://search?query=[SEARCH_TEXT]",
+          "vars": [
+            {
+              "name": "SEARCH_TEXT",
+              "label": "Search text",
+              "where": "The word to look for in your tasks.",
+              "example": "contract"
+            }
+          ],
+          "source": "https://developer.todoist.com/api/v1/#url-schemes",
+          "confidence": "documented",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "kind": "app",
+      "package": "tv.twitch.android.app",
+      "logo": "si:twitch",
+      "recipes": [
+        {
+          "id": "twitch-open-channel",
+          "title": "Open a live channel",
+          "desc": "Opens a channel's live stream.",
+          "link": "twitch://stream/[CHANNEL_NAME]",
+          "vars": [
+            {
+              "name": "CHANNEL_NAME",
+              "label": "Channel name",
+              "where": "The last part of the channel address, twitch.tv/name.",
+              "example": "twitch"
+            }
+          ],
+          "source": "https://dev.twitch.tv/docs/mobile-deeplinks/",
+          "confidence": "documented",
+          "note": "Shows the offline channel page if the streamer is not live.",
+          "level": "untested"
+        },
+        {
+          "id": "twitch-open-channel-videos",
+          "title": "Open a channel's videos",
+          "desc": "Opens a channel's activity and videos.",
+          "link": "twitch://channel/[CHANNEL_NAME]",
+          "vars": [
+            {
+              "name": "CHANNEL_NAME",
+              "label": "Channel name",
+              "where": "The last part of the channel address, twitch.tv/name.",
+              "example": "twitch"
+            }
+          ],
+          "source": "https://dev.twitch.tv/docs/mobile-deeplinks/",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "twitch-open-following",
+          "title": "Open Following",
+          "desc": "Opens the Following tab.",
+          "link": "twitch://following",
+          "vars": [],
+          "source": "https://dev.twitch.tv/docs/mobile-deeplinks/",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "twitch-open-game",
+          "title": "Open a game category",
+          "desc": "Opens the page of a game or category.",
+          "link": "twitch://game/[GAME_NAME]",
+          "vars": [
+            {
+              "name": "GAME_NAME",
+              "label": "Game name",
+              "where": "The category name as shown in the Browse tab.",
+              "example": "Minecraft"
+            }
+          ],
+          "source": "https://dev.twitch.tv/docs/mobile-deeplinks/",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "twitch-open-app",
+          "title": "Open Twitch",
+          "desc": "Opens the Twitch app.",
+          "link": "twitch://open",
+          "vars": [],
+          "source": "https://dev.twitch.tv/docs/mobile-deeplinks/",
+          "confidence": "documented",
+          "level": "untested"
+        },
+        {
+          "id": "twitch-search",
+          "title": "Search Twitch",
+          "desc": "Opens Twitch search results for a fixed query.",
+          "link": "intent://www.twitch.tv/search?term=[QUERY]#Intent;scheme=https;package=tv.twitch.android.app;end",
+          "vars": [
+            {
+              "name": "QUERY",
+              "label": "Search text",
+              "where": "A channel, game or topic.",
+              "example": "speedrun"
+            }
+          ],
+          "source": "https://www.twitch.tv/opensearch.xml",
+          "confidence": "widely-used",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "kind": "app",
+      "package": "com.instagram.android",
+      "logo": "si:instagram",
+      "recipes": [
+        {
+          "id": "instagram-send-dm",
+          "title": "Message an account",
+          "desc": "Opens a direct message conversation with an Instagram account.",
+          "link": "intent://ig.me/m/[USERNAME]#Intent;scheme=https;package=com.instagram.android;end",
+          "vars": [
+            {
+              "name": "USERNAME",
+              "label": "Instagram username",
+              "where": "The handle under the profile photo, without the @.",
+              "example": "example_account"
+            }
+          ],
+          "source": "https://developers.facebook.com/documentation/business-messaging/instagram-messaging/features/ig-me-links",
+          "confidence": "documented",
+          "note": "Opens the conversation. Nothing is sent.",
+          "level": "untested"
+        }
+      ]
+    },
+    {
+      "id": "x",
+      "name": "X",
+      "kind": "app",
+      "package": "com.twitter.android",
+      "logo": "si:x",
+      "recipes": [
+        {
+          "id": "x-compose-post",
+          "title": "Write a post",
+          "desc": "Opens X with your post typed in, ready to send.",
+          "link": "intent://x.com/intent/tweet?text=[TEXT]#Intent;scheme=https;package=com.twitter.android;end",
+          "vars": [
+            {
+              "name": "TEXT",
+              "label": "Post text",
+              "where": "Your text, as you would type it.",
+              "example": "Hello world"
+            }
+          ],
+          "source": "https://docs.x.com/x-for-websites/post-button/overview.md",
+          "confidence": "documented",
+          "note": "Nothing is posted until you press Post.",
+          "level": "untested"
+        },
+        {
+          "id": "x-share-link",
+          "title": "Post a link",
+          "desc": "Opens X with a link and a text typed in.",
+          "link": "intent://x.com/intent/tweet?url=[URL]&text=[TEXT]#Intent;scheme=https;package=com.twitter.android;end",
+          "vars": [
+            {
+              "name": "URL",
+              "label": "Web address",
+              "where": "The full address to share, starting with https://.",
+              "example": "https://example.com/page"
+            },
+            {
+              "name": "TEXT",
+              "label": "Post text",
+              "where": "Your text, as you would type it.",
+              "example": "Worth reading"
+            }
+          ],
+          "source": "https://docs.x.com/x-for-websites/post-button/overview.md",
+          "confidence": "documented",
+          "note": "Nothing is posted until you press Post.",
+          "level": "untested"
+        },
+        {
+          "id": "x-open-profile",
+          "title": "Open a profile",
+          "desc": "Opens an X account.",
+          "link": "intent://x.com/intent/user?screen_name=[USERNAME]#Intent;scheme=https;package=com.twitter.android;end",
+          "vars": [
+            {
+              "name": "USERNAME",
+              "label": "X username",
+              "where": "The @name of the account, without the @.",
+              "example": "example_account"
+            }
+          ],
+          "source": "https://docs.x.com/x-for-websites/web-intents/overview.md",
+          "confidence": "documented",
+          "level": "untested"
+        }
+      ]
     }
   ]
 }

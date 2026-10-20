@@ -565,3 +565,22 @@ mark { background: color-mix(in oklab, var(--accent) 22%, transparent); color: i
 :lang(hi) body, :lang(hi) p, :lang(hi) li { line-height: 1.75; }
 :lang(zh) { line-break: strict; word-break: normal; }
 :lang(zh) p, :lang(zh) li { line-height: 1.8; }
+
+/* Bandeau de consentement (vanilla-cookieconsent) aux couleurs du site ; Refuser et Accepter ont exactement le même style */
+#cc-main { --cc-font-family: var(--sans); --cc-bg: var(--surface); --cc-primary-color: var(--ink); --cc-secondary-color: var(--muted);
+  --cc-btn-primary-bg: var(--accent); --cc-btn-primary-color: var(--accent-ink); --cc-btn-primary-border-color: var(--accent);
+  --cc-btn-primary-hover-bg: var(--accent); --cc-btn-primary-hover-color: var(--accent-ink); --cc-btn-primary-hover-border-color: var(--ink);
+  --cc-btn-secondary-bg: var(--accent); --cc-btn-secondary-color: var(--accent-ink); --cc-btn-secondary-border-color: var(--accent);
+  --cc-btn-secondary-hover-bg: var(--accent); --cc-btn-secondary-hover-color: var(--accent-ink); --cc-btn-secondary-hover-border-color: var(--ink);
+  --cc-separator-border-color: var(--line); --cc-link-color: var(--accent); --cc-modal-border-radius: 14px; --cc-btn-border-radius: 10px; }
+#cc-main .cm { border: 1px solid var(--line-2); box-shadow: var(--shadow); }
+
+/* Lien « Gérer les cookies » du pied de page : un bouton qui a l'allure d'un lien */
+.cc-reopen { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: .18em; }
+html:not(.js) .cc-reopen { display: none; }
+
+/* Page 404 (styles sortis de la page pour la politique CSP) */
+.nf { min-height: 100svh; display: grid; place-content: center; text-align: center; gap: 1rem; padding: 2rem; }
+.nf h1 { font-family: var(--display); font-size: clamp(3rem, 12vw, 6rem); margin: 0; letter-spacing: -.03em; color: var(--accent); }
+.nf p { margin: 0; color: var(--muted); }
+.checks code { overflow-wrap: anywhere; }

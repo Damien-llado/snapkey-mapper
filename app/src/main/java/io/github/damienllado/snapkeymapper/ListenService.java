@@ -24,6 +24,8 @@ public class ListenService extends Service {
     private Process log;
     private static final Pattern RELEASE = Pattern.compile("eventTime=(\\d+)");
     private static final Pattern PRESS = Pattern.compile("downTime=(\\d+)");
+    // "logcat -v uid" writes "I/Tag(  1000: 1234): ..." (or "system:" on some builds): the writer of the line
+    private static final Pattern SYSTEM = Pattern.compile("^./[^(]*\\(\\s*(1000|system)\\s*:");
     private volatile long lastRelease, alreadySeen;
     private volatile int presses;
     private volatile boolean stopRequested;
@@ -49,6 +51,9 @@ public class ListenService extends Service {
                     }
                     // Only the release line is read: it carries press and release times (in nanoseconds)
                     if (pattern.isEmpty() || !l.contains(pattern) || !l.contains("ACTION_UP")) return;
+                    // Any app can write to the log: only lines written by Android itself (uid 1000, "system") count,
+                    // so an app cannot fire the target by writing a fake key line
+                    if (!SYSTEM.matcher(l).find()) return;
                     Matcher end = RELEASE.matcher(l), start = PRESS.matcher(l);
                     if (!end.find() || !start.find()) return;
                     long release = Long.parseLong(end.group(1)) / 1_000_000, press = Long.parseLong(start.group(1)) / 1_000_000;

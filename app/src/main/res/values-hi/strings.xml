@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SnapKey Mapper</string>
-    <string name="state_setup">सेटअप: 3 में से %1$d अनुमतियाँ</string>
+    <string name="state_setup">सेटअप: %2$d में से %1$d स्टेप पूरे</string>
     <string name="toast_cannot_open">नहीं खुल सका: %1$s</string>
     <string name="toast_cannot_read">लॉग नहीं पढ़ सका: %1$s</string>
     <string name="toast_failed">विफल: %1$s</string>
@@ -24,7 +24,7 @@
     <string name="perm_needed">ज़रूरी</string>
     <string name="perm_coloros">ColorOS पर, ऐप की सेटिंग में बैटरी इस्तेमाल को भी \"कोई पाबंदी नहीं\" पर सेट करें और ऐप को हाल के ऐप्स में लॉक करें।</string>
     <string name="perm_app_settings">ऐप की सेटिंग खोलें</string>
-    <string name="perm_by_hand">लॉग की अनुमति हाथ से, कंप्यूटर से:</string>
+    <string name="perm_by_hand">कंप्यूटर से, adb के साथ:</string>
     <string name="perm_copy">कमांड कॉपी करें</string>
     <string name="toast_copied">कमांड कॉपी हो गई</string>
     <string name="perm_by_hand_or">या हाथ से:</string>
@@ -51,7 +51,7 @@
     <string name="toast_pattern_saved">पैटर्न सेव हो गया, अब आप सुनना शुरू कर सकते हैं</string>
     <string name="toast_no_lines">कोई लाइन नहीं: \"सभी लाइनें दिखाएँ\" पर टिक करें या अनुमति जाँचें</string>
     <string name="toast_saved">कैप्चर सेव हो गया</string>
-    <string name="toast_choose_pattern">पहले पैटर्न चुनें (स्टेप 3)</string>
+    <string name="toast_choose_pattern">पहले पैटर्न चुनें (मेन्यू › दूसरा फ़ोन)</string>
     <string name="notif_listening_title">SnapKey Mapper सुन रहा है</string>
     <string name="notif_listening_text">अपना टारगेट खोलने के लिए साइड बटन दबाएँ</string>
     <string name="notif_stopped_title">SnapKey Mapper बंद है</string>
@@ -75,20 +75,71 @@
     <string name="err_invalid_intent">गलत intent लिंक</string>
     <string name="setup_fail_pair">पेयरिंग विफल रही। ऐप का सेटअप बटन फिर से टैप करें, फिर “Pair device with pairing code” और नया कोड लिखें। फिर भी न हो, तो वायरलेस डीबगिंग बंद करके फिर चालू करें।</string>
     <string name="lang_title">भाषा</string>
-    <string name="library_open">रेसिपी लाइब्रेरी देखें</string>
-    <string name="library_title">रेसिपी लाइब्रेरी</string>
-    <string name="library_intro">तैयार लिंक, ऐप के हिसाब से ग्रुप किए हुए। एक चुनें, अपनी वैल्यू भरें, टेस्ट करें, फिर उसे Snap Key के लिए इस्तेमाल करें।</string>
+    <string name="library_open">शॉर्टकट लाइब्रेरी देखें</string>
+    <string name="library_title">शॉर्टकट लाइब्रेरी</string>
+    <string name="library_intro">तैयार शॉर्टकट, ऐप के हिसाब से ग्रुप किए हुए। एक चुनें, अपनी वैल्यू भरें, टेस्ट करें, फिर उसे Snap Key के लिए इस्तेमाल करें।</string>
     <string name="library_search">कोई ऐप या ऐक्शन खोजें</string>
-    <string name="library_count">रेसिपी: %1$d</string>
+    <string name="library_count">शॉर्टकट: %1$d</string>
     <string name="library_not_installed">इंस्टॉल नहीं है</string>
     <string name="library_empty">आपकी खोज से कुछ नहीं मिला।</string>
     <string name="recipe_fields">आपकी वैल्यू</string>
     <string name="recipe_link">फ़ाइनल लिंक</string>
-    <string name="recipe_use">यह रेसिपी इस्तेमाल करें</string>
+    <string name="recipe_use">यह शॉर्टकट इस्तेमाल करें</string>
     <string name="recipe_fill_all">पहले हर फ़ील्ड भरें।</string>
     <string name="recipe_saved">आपके टारगेट के रूप में सेव हो गया।</string>
     <string name="recipe_missing">कुछ नहीं खुला। क्या ऐप इंस्टॉल है?</string>
     <string name="recipe_verified">%1$s को Android एमुलेटर पर जाँचा गया।</string>
     <string name="recipe_verified_partial">Android एमुलेटर (%1$s) पर यह लिंक सही ऐप तक पहुँचा, पर एमुलेटर इससे ज़्यादा नहीं दिखा सका। टेस्ट बटन से पक्का करें।</string>
     <string name="recipe_source">आधिकारिक दस्तावेज़</string>
+    <string name="menu">मेन्यू</string>
+    <string name="menu_help">मदद और वेबसाइट</string>
+    <string name="help_url">https://remapsnapkey.com/hi/</string>
+    <string name="setup_title">सेटअप</string>
+    <string name="setup_intro">चार स्टेप, सिर्फ़ एक बार। हर स्टेप पूरा होते ही अपने आप टिक हो जाता है।</string>
+    <string name="setup_continue">सेटअप जारी रखें</string>
+    <string name="setup_other_way">दूसरा तरीका: कंप्यूटर से</string>
+    <string name="setup_open_setting">सेटिंग खोलें</string>
+    <string name="setup_native_title">फ़ोन की अपनी Snap Key कार्रवाई बंद</string>
+    <string name="setup_open_phone_settings">फ़ोन की सेटिंग खोलें</string>
+    <string name="setup_native_done">हो गया: Snap Key अपने आप कुछ नहीं करती</string>
+    <string name="finder_intro">Find X9 का बटन पहले से पता है: यहाँ कुछ करने की ज़रूरत नहीं। दूसरे फ़ोन पर ऐप को सीखना होगा कि आपका बटन दबाने पर Android अपने लॉग में कौन-सी लाइन लिखता है।</string>
+    <string name="finder_privacy">कैप्चर में दूसरे ऐप की निजी जानकारी हो सकती है: शेयर करने से पहले फ़ाइल जाँच लें।</string>
+    <string name="finder_need_log">पहले लॉग पढ़ने की अनुमति चाहिए: सेटअप का स्टेप 1 पूरा करें।</string>
+    <string name="app_search">कोई ऐप खोजें</string>
+    <string name="target_link_enter">लिंक लिखें</string>
+    <string name="target_none">अभी कुछ चुना नहीं गया</string>
+    <string name="recipe_untested">अभी टेस्ट नहीं हुआ: ऐप के आधिकारिक दस्तावेज़ से लिया गया है। टेस्ट बटन से जाँचें।</string>
+    <string-array name="steps_log_auto">
+        <item>फ़ोन को अपने Wi-Fi से जोड़ें।</item>
+        <item>अगर Developer options छिपे हैं: सेटिंग › फ़ोन के बारे में › वर्शन, बिल्ड नंबर पर 7 बार टैप करें।</item>
+        <item>Developer options में \"Disable system optimisation\" चालू करें (ColorOS)।</item>
+        <item>नीचे \"लॉग पढ़ने की अनुमति अपने आप सेट करें\" पर टैप करें।</item>
+        <item>वायरलेस डीबगिंग चालू करें, फिर \"Pair device with pairing code\" पर टैप करें।</item>
+        <item>नोटिफ़िकेशन नीचे खींचें और SnapKey Mapper के नोटिफ़िकेशन में 6 अंक लिखें।</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>कंप्यूटर पर Android platform-tools (adb) इंस्टॉल करें।</item>
+        <item>Developer options में USB डीबगिंग और \"Disable system optimisation\" (ColorOS) चालू करें, फिर फ़ोन को केबल से जोड़ें।</item>
+        <item>कंप्यूटर पर नीचे दी गई कमांड चलाएँ।</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>\"सेटिंग खोलें\" पर टैप करें और स्विच चालू करें।</item>
+        <item>अगर स्विच ग्रे है या Android कहे कि एक्सेस नहीं मिला: \"ऐप की सेटिंग खोलें\" पर टैप करें, फिर ऊपर दाईं ओर ⋮ › \"प्रतिबंधित सेटिंग की अनुमति दें\", फिर यहाँ लौट आएँ।</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>\"अनुमति दें\" पर टैप करें और पुष्टि करें।</item>
+        <item>ColorOS पर ऐप की सेटिंग › बैटरी इस्तेमाल › \"कोई पाबंदी नहीं\" भी चुनें, और ऐप को हाल के ऐप्स में लॉक करें।</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>फ़ोन की सेटिंग खोलें और \"Snap Key\" खोजें।</item>
+        <item>उसे कोई कार्रवाई नहीं पर सेट करें, ताकि फ़ोन अपनी कार्रवाई साथ-साथ न चलाए।</item>
+        <item>नीचे का बॉक्स टिक करें।</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>\"कैप्चर शुरू करें\" पर टैप करें।</item>
+        <item>अपना बटन 3 बार दबाएँ, हर बार कुछ सेकंड के अंतर से।</item>
+        <item>\"कैप्चर रोकें\" पर टैप करें।</item>
+        <item>नीचे की सूची में वह लाइन टैप करें जो हर दबाव पर लौटी: वही पैटर्न बन जाती है।</item>
+        <item>होम पर लौटें, सुनना शुरू करें और जाँचने के लिए बटन दबाएँ।</item>
+    </string-array>
 </resources>

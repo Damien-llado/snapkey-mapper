@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SnapKey Mapper</string>
-    <string name="state_setup">Setup: %1$d of 3 permissions</string>
+    <string name="state_setup">Setup: %1$d of %2$d steps done</string>
     <string name="toast_cannot_open">Cannot open it: %1$s</string>
     <string name="toast_cannot_read">Cannot read the log: %1$s</string>
     <string name="toast_failed">Failed: %1$s</string>
@@ -24,7 +24,7 @@
     <string name="perm_needed">Needed</string>
     <string name="perm_coloros">On ColorOS, also set Battery usage to \"No restrictions\" in the app settings and lock the app in the recent apps.</string>
     <string name="perm_app_settings">Open the app settings</string>
-    <string name="perm_by_hand">Log reading by hand, from a computer:</string>
+    <string name="perm_by_hand">From a computer, with adb:</string>
     <string name="perm_copy">Copy the command</string>
     <string name="toast_copied">Command copied</string>
     <string name="perm_by_hand_or">Or by hand:</string>
@@ -51,7 +51,7 @@
     <string name="toast_pattern_saved">Pattern saved, you can start listening</string>
     <string name="toast_no_lines">No line: tick \"Show all lines\" or check the permission</string>
     <string name="toast_saved">Capture saved</string>
-    <string name="toast_choose_pattern">Choose the pattern first (step 3)</string>
+    <string name="toast_choose_pattern">Choose the pattern first (menu › Another phone)</string>
     <string name="notif_listening_title">SnapKey Mapper is listening</string>
     <string name="notif_listening_text">Press the side key to open your target</string>
     <string name="notif_stopped_title">SnapKey Mapper is stopped</string>
@@ -75,20 +75,71 @@
     <string name="err_invalid_intent">Invalid intent link</string>
     <string name="setup_fail_pair">Pairing failed. Tap the app’s setup button again, then “Pair device with pairing code” and type the new code. If it fails again, turn Wireless debugging off and on.</string>
     <string name="lang_title">Language</string>
-    <string name="library_open">Browse the recipe library</string>
-    <string name="library_title">Recipe library</string>
-    <string name="library_intro">Ready-made links, grouped by app. Pick one, fill in your values, test it, then use it for the Snap Key.</string>
+    <string name="library_open">Browse the shortcut library</string>
+    <string name="library_title">Shortcut library</string>
+    <string name="library_intro">Ready-made shortcuts, grouped by app. Pick one, fill in your values, test it, then use it for the Snap Key.</string>
     <string name="library_search">Search an app or an action</string>
-    <string name="library_count">Recipes: %1$d</string>
+    <string name="library_count">Shortcuts: %1$d</string>
     <string name="library_not_installed">Not installed</string>
     <string name="library_empty">Nothing matches your search.</string>
     <string name="recipe_fields">Your values</string>
     <string name="recipe_link">Final link</string>
-    <string name="recipe_use">Use this recipe</string>
+    <string name="recipe_use">Use this shortcut</string>
     <string name="recipe_fill_all">Fill in every field first.</string>
     <string name="recipe_saved">Saved as your target.</string>
     <string name="recipe_missing">Nothing opened. Is the app installed?</string>
     <string name="recipe_verified">Checked on an Android emulator on %1$s.</string>
     <string name="recipe_verified_partial">On an Android emulator (%1$s) the right app received this link, but the emulator could not show more. Confirm it with the test button.</string>
     <string name="recipe_source">Official documentation</string>
+    <string name="menu">Menu</string>
+    <string name="menu_help">Help and website</string>
+    <string name="help_url">https://remapsnapkey.com/</string>
+    <string name="setup_title">Setup</string>
+    <string name="setup_intro">Four steps, once. Each one ticks itself when it is done.</string>
+    <string name="setup_continue">Continue the setup</string>
+    <string name="setup_other_way">Other way: from a computer</string>
+    <string name="setup_open_setting">Open the setting</string>
+    <string name="setup_native_title">Phone\'s own Snap Key action off</string>
+    <string name="setup_open_phone_settings">Open the phone settings</string>
+    <string name="setup_native_done">Done: the Snap Key does nothing on its own</string>
+    <string name="finder_intro">The Find X9 key is already known: nothing to do here. On another phone, the app has to learn which line Android writes in its log when you press your key.</string>
+    <string name="finder_privacy">The capture can contain personal information from other apps: check the file before sharing it.</string>
+    <string name="finder_need_log">Log reading is needed first: finish step 1 of the setup.</string>
+    <string name="app_search">Search an app</string>
+    <string name="target_link_enter">Type a link</string>
+    <string name="target_none">Nothing chosen yet</string>
+    <string name="recipe_untested">Not tested yet: taken from the app\'s official documentation. Check it with the test button.</string>
+    <string-array name="steps_log_auto">
+        <item>Connect the phone to your Wi-Fi.</item>
+        <item>If Developer options are hidden: Settings › About device › Version, tap the build number 7 times.</item>
+        <item>In Developer options, turn on \"Disable system optimisation\" (ColorOS).</item>
+        <item>Tap \"Set up log reading automatically\" below.</item>
+        <item>Turn Wireless debugging on, then tap \"Pair device with pairing code\".</item>
+        <item>Pull the notifications down and type the 6 digits in the SnapKey Mapper notification.</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>On a computer, install Android platform-tools (adb).</item>
+        <item>In Developer options, turn on USB debugging and \"Disable system optimisation\" (ColorOS), then connect the phone with a cable.</item>
+        <item>Run the command below on the computer.</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>Tap \"Open the setting\" and turn the switch on.</item>
+        <item>If the switch is grey or Android says access is denied: tap \"Open the app settings\", then ⋮ at the top right › \"Allow restricted settings\", then come back here.</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>Tap \"Allow\" and confirm.</item>
+        <item>On ColorOS, also open the app settings › Battery usage › \"No restrictions\", and lock the app in the recent apps.</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>Open the phone settings and search for \"Snap Key\".</item>
+        <item>Set it to no action, so the phone does not run its own action at the same time.</item>
+        <item>Tick the box below.</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>Tap \"Start capture\".</item>
+        <item>Press your key 3 times, a few seconds apart.</item>
+        <item>Tap \"Stop capture\".</item>
+        <item>In the list below, tap the line that came back at each press: it becomes the pattern.</item>
+        <item>Go back home, start listening and press the key to check.</item>
+    </string-array>
 </resources>

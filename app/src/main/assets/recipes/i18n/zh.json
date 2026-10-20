@@ -661,6 +661,375 @@
      "where": "在 Home Assistant 网页界面中打开该页面，复制地址和端口之后的路径，不要开头的斜杠。"
     }
    }
+  },
+  "spotify-open-playlist": {
+   "title": "打开播放列表",
+   "desc": "打开一个 Spotify 播放列表。",
+   "note": "打开该播放列表，不会自动播放。",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "播放列表 ID",
+     "where": "在 Spotify 中点三个点，再点分享和复制链接。ID 是 /playlist/ 之后、可能出现的 ?si= 之前的部分。"
+    }
+   }
+  },
+  "spotify-open-artist": {
+   "title": "打开艺人页面",
+   "desc": "打开一位 Spotify 艺人的页面。",
+   "note": "打开该艺人的页面。",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "艺人 ID",
+     "where": "在 Spotify 中点三个点，再点分享和复制链接。ID 是 /artist/ 之后、可能出现的 ?si= 之前的部分。"
+    }
+   }
+  },
+  "spotify-open-album": {
+   "title": "打开专辑",
+   "desc": "打开一张 Spotify 专辑。",
+   "note": "打开该专辑。",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "专辑 ID",
+     "where": "在 Spotify 中点三个点，再点分享和复制链接。ID 是 /album/ 之后、可能出现的 ?si= 之前的部分。"
+    }
+   }
+  },
+  "spotify-open-track": {
+   "title": "打开歌曲",
+   "desc": "打开一首 Spotify 歌曲。",
+   "note": "打开该歌曲。",
+   "vars": {
+    "TRACK_ID": {
+     "label": "歌曲 ID",
+     "where": "在 Spotify 中点三个点，再点分享和复制链接。ID 是 /track/ 之后、可能出现的 ?si= 之前的部分。"
+    }
+   }
+  },
+  "spotify-search": {
+   "title": "在 Spotify 中搜索",
+   "desc": "打开 Spotify 中一次固定搜索的结果。",
+   "note": "打开搜索结果。",
+   "vars": {
+    "QUERY": {
+     "label": "搜索文字",
+     "where": "要搜索的词，例如艺人的名字。"
+    }
+   }
+  },
+  "deezer-open-playlist": {
+   "title": "打开播放列表",
+   "desc": "打开一个 Deezer 播放列表。",
+   "note": "打开该播放列表。",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "播放列表 ID",
+     "where": "在浏览器中打开 deezer.com 上的播放列表。ID 是地址末尾的数字。"
+    }
+   }
+  },
+  "deezer-open-artist": {
+   "title": "打开艺人页面",
+   "desc": "打开一位 Deezer 艺人的页面。",
+   "note": "打开该艺人的页面。",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "艺人 ID",
+     "where": "在浏览器中打开 deezer.com 上的艺人。ID 是地址末尾的数字。"
+    }
+   }
+  },
+  "deezer-open-album": {
+   "title": "打开专辑",
+   "desc": "打开一张 Deezer 专辑。",
+   "note": "打开该专辑。",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "专辑 ID",
+     "where": "在浏览器中打开 deezer.com 上的专辑。ID 是地址末尾的数字。"
+    }
+   }
+  },
+  "deezer-open-track": {
+   "title": "打开歌曲",
+   "desc": "打开一首 Deezer 歌曲。",
+   "note": "打开该歌曲。",
+   "vars": {
+    "TRACK_ID": {
+     "label": "歌曲 ID",
+     "where": "在浏览器中打开 deezer.com 上的歌曲。ID 是地址末尾的数字。"
+    }
+   }
+  },
+  "deezer-search": {
+   "title": "在 Deezer 中搜索",
+   "desc": "打开 Deezer 中一次固定搜索的结果。",
+   "note": "打开搜索结果。",
+   "vars": {
+    "QUERY": {
+     "label": "搜索文字",
+     "where": "要搜索的词，例如艺人的名字。"
+    }
+   }
+  },
+  "apple-music-open-link": {
+   "title": "打开 Apple Music 页面",
+   "desc": "通过 Apple Music 链接打开专辑、播放列表或艺人。",
+   "note": "如果手机允许 Apple Music 应用处理该链接，就在应用中打开，否则在浏览器中打开。",
+   "vars": {
+    "LINK": {
+     "label": "Apple Music 链接",
+     "where": "在 music.apple.com 上打开该页面，点更多，再点复制链接，然后粘贴完整地址。"
+    }
+   }
+  },
+  "waze-navigate-home": {
+   "title": "导航回家",
+   "desc": "开始导航到 Waze 中保存的家的地址。",
+   "note": "需要先在 Waze 中保存家的地址。"
+  },
+  "waze-navigate-work": {
+   "title": "导航去公司",
+   "desc": "开始导航到 Waze 中保存的工作地址。",
+   "note": "需要先在 Waze 中保存工作地址。"
+  },
+  "waze-navigate-to-address": {
+   "title": "导航到某个地址",
+   "desc": "开始导航到一个固定的地址或地点。",
+   "note": "加上城市以免混淆。",
+   "vars": {
+    "ADDRESS": {
+     "label": "地址或地点",
+     "where": "街道地址或地点名称，加上城市，就像在 Waze 中输入的那样。"
+    }
+   }
+  },
+  "waze-navigate-to-coordinates": {
+   "title": "导航到坐标",
+   "desc": "开始导航到由纬度和经度确定的点。",
+   "vars": {
+    "LATITUDE": {
+     "label": "纬度",
+     "where": "在 Google 地图中长按该位置：它是搜索栏中的第一个数字。"
+    },
+    "LONGITUDE": {
+     "label": "经度",
+     "where": "在 Google 地图中长按该位置：它是搜索栏中的第二个数字。"
+    }
+   }
+  },
+  "waze-search-place": {
+   "title": "在 Waze 中搜索地点",
+   "desc": "在 Waze 中显示某个地点或地址，不开始导航。",
+   "vars": {
+    "SEARCH": {
+     "label": "地点或地址",
+     "where": "你会在 Waze 搜索栏中输入的词。"
+    }
+   }
+  },
+  "netflix-open-title": {
+   "title": "打开电影或剧集",
+   "desc": "打开某部电影或剧集的 Netflix 页面。",
+   "note": "打开该作品的页面，不会自动播放。",
+   "vars": {
+    "TITLE_ID": {
+     "label": "作品 ID",
+     "where": "在 netflix.com 上打开该作品。ID 是地址中 /title/ 之后的数字。"
+    }
+   }
+  },
+  "netflix-open-my-list": {
+   "title": "打开我的列表",
+   "desc": "打开你的 Netflix 列表。"
+  },
+  "notion-open-page": {
+   "title": "打开页面",
+   "desc": "打开一个指定的 Notion 页面。",
+   "note": "在 Notion 应用中打开该页面。",
+   "vars": {
+    "PAGE_ADDRESS": {
+     "label": "页面地址",
+     "where": "在 Notion 中打开该页面，点三个点，再点复制链接。只保留 https://www.notion.so/ 之后的部分。"
+    }
+   }
+  },
+  "claude-code-new-session": {
+   "title": "新建 Claude Code 会话",
+   "desc": "开始一个 Claude Code 会话，并填好你的提示。",
+   "note": "在你发送之前不会发送任何内容。",
+   "vars": {
+    "PROMPT": {
+     "label": "提示",
+     "where": "预先填入的指令。它只是被输入：由你自己发送。"
+    }
+   }
+  },
+  "claude-code-sessions": {
+   "title": "打开 Claude Code 会话",
+   "desc": "打开你的 Claude Code 会话列表。"
+  },
+  "claude-new-chat": {
+   "title": "新对话",
+   "desc": "在新对话中打开 Claude。"
+  },
+  "docs-new-document": {
+   "title": "新建文档",
+   "desc": "创建一个空白的 Google 文档。",
+   "note": "会在浏览器或 Docs 应用中打开，取决于你的手机。"
+  },
+  "n8n-trigger-webhook": {
+   "title": "运行工作流（Webhook）",
+   "desc": "调用 n8n 工作流的 Webhook。",
+   "note": "工作流必须处于启用状态并接受 GET。链接会在浏览器中打开。",
+   "vars": {
+    "N8N_HOST": {
+     "label": "n8n 服务器地址",
+     "where": "你的 n8n 服务器地址，即生产 URL 中 /webhook/ 之前的部分。"
+    },
+    "WEBHOOK_PATH": {
+     "label": "Webhook 路径",
+     "where": "在工作流中打开 Webhook 节点，复制它的 Path 字段。"
+    }
+   }
+  },
+  "todoist-add-task": {
+   "title": "添加任务",
+   "desc": "打开 Todoist 的新任务，并填好你的文字。",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "任务文字",
+     "where": "像在 Todoist 中那样输入任务。"
+    }
+   }
+  },
+  "todoist-add-task-today": {
+   "title": "添加今天到期的任务",
+   "desc": "同上，到期日为今天。",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "任务文字",
+     "where": "像在 Todoist 中那样输入任务。"
+    }
+   }
+  },
+  "todoist-open-today": {
+   "title": "打开今天",
+   "desc": "打开“今天”视图。"
+  },
+  "todoist-open-inbox": {
+   "title": "打开收件箱",
+   "desc": "打开收件箱。"
+  },
+  "todoist-open-upcoming": {
+   "title": "打开即将到来",
+   "desc": "打开“即将到来”视图。"
+  },
+  "todoist-search": {
+   "title": "搜索任务",
+   "desc": "在你的任务中搜索一个固定的词。",
+   "vars": {
+    "SEARCH_TEXT": {
+     "label": "搜索文字",
+     "where": "要在任务中搜索的词。"
+    }
+   }
+  },
+  "twitch-open-channel": {
+   "title": "打开直播频道",
+   "desc": "打开某个频道的直播。",
+   "note": "如果主播没有开播，则显示频道页面。",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "频道名称",
+     "where": "频道地址的最后一部分，twitch.tv/名称。"
+    }
+   }
+  },
+  "twitch-open-channel-videos": {
+   "title": "打开频道的视频",
+   "desc": "打开某个频道的动态和视频。",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "频道名称",
+     "where": "频道地址的最后一部分，twitch.tv/名称。"
+    }
+   }
+  },
+  "twitch-open-following": {
+   "title": "打开关注",
+   "desc": "打开“关注”标签。"
+  },
+  "twitch-open-game": {
+   "title": "打开游戏分类",
+   "desc": "打开某个游戏或分类的页面。",
+   "vars": {
+    "GAME_NAME": {
+     "label": "游戏名称",
+     "where": "分类名称，与“浏览”标签中显示的一致。"
+    }
+   }
+  },
+  "twitch-open-app": {
+   "title": "打开 Twitch",
+   "desc": "打开 Twitch 应用。"
+  },
+  "twitch-search": {
+   "title": "在 Twitch 中搜索",
+   "desc": "打开 Twitch 中一次固定搜索的结果。",
+   "vars": {
+    "QUERY": {
+     "label": "搜索文字",
+     "where": "一个频道、游戏或主题。"
+    }
+   }
+  },
+  "instagram-send-dm": {
+   "title": "给账号发私信",
+   "desc": "打开与某个 Instagram 账号的私信对话。",
+   "note": "打开该对话，不会发送任何内容。",
+   "vars": {
+    "USERNAME": {
+     "label": "Instagram 用户名",
+     "where": "头像下方的名称，不带 @。"
+    }
+   }
+  },
+  "x-compose-post": {
+   "title": "写一条帖子",
+   "desc": "打开 X，并填好你的帖子，随时可发。",
+   "note": "在你点发布之前不会发布任何内容。",
+   "vars": {
+    "TEXT": {
+     "label": "帖子文字",
+     "where": "你的文字，就像你会输入的那样。"
+    }
+   }
+  },
+  "x-share-link": {
+   "title": "发布链接",
+   "desc": "打开 X，并填好一个链接和一段文字。",
+   "note": "在你点发布之前不会发布任何内容。",
+   "vars": {
+    "URL": {
+     "label": "网址",
+     "where": "要分享的完整地址，以 https:// 开头。"
+    },
+    "TEXT": {
+     "label": "帖子文字",
+     "where": "你的文字，就像你会输入的那样。"
+    }
+   }
+  },
+  "x-open-profile": {
+   "title": "打开个人主页",
+   "desc": "打开一个 X 账号。",
+   "vars": {
+    "USERNAME": {
+     "label": "X 用户名",
+     "where": "账号的 @名称，不带 @。"
+    }
+   }
   }
  }
 }

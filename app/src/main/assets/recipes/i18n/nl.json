@@ -661,6 +661,375 @@
      "where": "Open de pagina in de webinterface van Home Assistant en kopieer het pad na het adres en de poort, zonder de eerste schuine streep."
     }
    }
+  },
+  "spotify-open-playlist": {
+   "title": "Een afspeellijst openen",
+   "desc": "Opent een Spotify-afspeellijst.",
+   "note": "Opent de afspeellijst. Hij begint niet vanzelf te spelen.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID van de afspeellijst",
+     "where": "Tik in Spotify op de drie puntjes, dan op Delen en Link kopiëren. De ID is het deel na /playlist/ en vóór een eventuele ?si=."
+    }
+   }
+  },
+  "spotify-open-artist": {
+   "title": "De pagina van een artiest openen",
+   "desc": "Opent de pagina van een Spotify-artiest.",
+   "note": "Opent de artiestenpagina.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID van de artiest",
+     "where": "Tik in Spotify op de drie puntjes, dan op Delen en Link kopiëren. De ID is het deel na /artist/ en vóór een eventuele ?si=."
+    }
+   }
+  },
+  "spotify-open-album": {
+   "title": "Een album openen",
+   "desc": "Opent een Spotify-album.",
+   "note": "Opent het album.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID van het album",
+     "where": "Tik in Spotify op de drie puntjes, dan op Delen en Link kopiëren. De ID is het deel na /album/ en vóór een eventuele ?si=."
+    }
+   }
+  },
+  "spotify-open-track": {
+   "title": "Een nummer openen",
+   "desc": "Opent een Spotify-nummer.",
+   "note": "Opent het nummer.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID van het nummer",
+     "where": "Tik in Spotify op de drie puntjes, dan op Delen en Link kopiëren. De ID is het deel na /track/ en vóór een eventuele ?si=."
+    }
+   }
+  },
+  "spotify-search": {
+   "title": "Zoeken in Spotify",
+   "desc": "Opent de resultaten van een vaste zoekopdracht in Spotify.",
+   "note": "Opent de zoekresultaten.",
+   "vars": {
+    "QUERY": {
+     "label": "Zoektekst",
+     "where": "De woorden waarnaar je zoekt, bijvoorbeeld de naam van een artiest."
+    }
+   }
+  },
+  "deezer-open-playlist": {
+   "title": "Een afspeellijst openen",
+   "desc": "Opent een Deezer-afspeellijst.",
+   "note": "Opent de afspeellijst.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID van de afspeellijst",
+     "where": "Open de afspeellijst op deezer.com in een browser. De ID is het getal aan het eind van het adres."
+    }
+   }
+  },
+  "deezer-open-artist": {
+   "title": "De pagina van een artiest openen",
+   "desc": "Opent de pagina van een Deezer-artiest.",
+   "note": "Opent de artiestenpagina.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID van de artiest",
+     "where": "Open de artiest op deezer.com in een browser. De ID is het getal aan het eind van het adres."
+    }
+   }
+  },
+  "deezer-open-album": {
+   "title": "Een album openen",
+   "desc": "Opent een Deezer-album.",
+   "note": "Opent het album.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID van het album",
+     "where": "Open het album op deezer.com in een browser. De ID is het getal aan het eind van het adres."
+    }
+   }
+  },
+  "deezer-open-track": {
+   "title": "Een nummer openen",
+   "desc": "Opent een Deezer-nummer.",
+   "note": "Opent het nummer.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID van het nummer",
+     "where": "Open het nummer op deezer.com in een browser. De ID is het getal aan het eind van het adres."
+    }
+   }
+  },
+  "deezer-search": {
+   "title": "Zoeken in Deezer",
+   "desc": "Opent de resultaten van een vaste zoekopdracht in Deezer.",
+   "note": "Opent de zoekresultaten.",
+   "vars": {
+    "QUERY": {
+     "label": "Zoektekst",
+     "where": "De woorden waarnaar je zoekt, bijvoorbeeld de naam van een artiest."
+    }
+   }
+  },
+  "apple-music-open-link": {
+   "title": "Een Apple Music-pagina openen",
+   "desc": "Opent een album, afspeellijst of artiest via de Apple Music-link.",
+   "note": "Opent in de Apple Music-app als je telefoon de link daarmee laat afhandelen, anders in de browser.",
+   "vars": {
+    "LINK": {
+     "label": "Apple Music-link",
+     "where": "Open de pagina op music.apple.com, klik op Meer, dan op Link kopiëren, en plak het volledige adres."
+    }
+   }
+  },
+  "waze-navigate-home": {
+   "title": "Naar huis navigeren",
+   "desc": "Start de navigatie naar het in Waze opgeslagen adres Thuis.",
+   "note": "Vereist een in Waze opgeslagen adres Thuis."
+  },
+  "waze-navigate-work": {
+   "title": "Naar het werk navigeren",
+   "desc": "Start de navigatie naar het in Waze opgeslagen adres Werk.",
+   "note": "Vereist een in Waze opgeslagen adres Werk."
+  },
+  "waze-navigate-to-address": {
+   "title": "Naar een adres navigeren",
+   "desc": "Start de navigatie naar een vast adres of een vaste plek.",
+   "note": "Voeg de plaats toe om verwarring te voorkomen.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Adres of plek",
+     "where": "Straatadres of naam van de plek met de plaats, zoals je het in Waze zou typen."
+    }
+   }
+  },
+  "waze-navigate-to-coordinates": {
+   "title": "Naar coördinaten navigeren",
+   "desc": "Start de navigatie naar een punt met breedte- en lengtegraad.",
+   "vars": {
+    "LATITUDE": {
+     "label": "Breedtegraad",
+     "where": "Houd in Google Maps de plek ingedrukt: het is het eerste getal in de zoekbalk."
+    },
+    "LONGITUDE": {
+     "label": "Lengtegraad",
+     "where": "Houd in Google Maps de plek ingedrukt: het is het tweede getal in de zoekbalk."
+    }
+   }
+  },
+  "waze-search-place": {
+   "title": "Een plek zoeken in Waze",
+   "desc": "Toont een plek of adres in Waze zonder de navigatie te starten.",
+   "vars": {
+    "SEARCH": {
+     "label": "Plek of adres",
+     "where": "De woorden die je in de zoekbalk van Waze zou typen."
+    }
+   }
+  },
+  "netflix-open-title": {
+   "title": "Een film of serie openen",
+   "desc": "Opent de Netflix-pagina van een film of serie.",
+   "note": "Opent de titelpagina. Het afspelen begint niet vanzelf.",
+   "vars": {
+    "TITLE_ID": {
+     "label": "ID van de titel",
+     "where": "Open de titel op netflix.com. De ID is het getal na /title/ in het adres."
+    }
+   }
+  },
+  "netflix-open-my-list": {
+   "title": "Mijn lijst openen",
+   "desc": "Opent je Netflix-lijst."
+  },
+  "notion-open-page": {
+   "title": "Een pagina openen",
+   "desc": "Opent een bepaalde Notion-pagina.",
+   "note": "Opent de pagina in de Notion-app.",
+   "vars": {
+    "PAGE_ADDRESS": {
+     "label": "Adres van de pagina",
+     "where": "Open de pagina in Notion, tik op de drie puntjes en dan op Link kopiëren. Houd alleen over wat na https://www.notion.so/ staat."
+    }
+   }
+  },
+  "claude-code-new-session": {
+   "title": "Nieuwe Claude Code-sessie",
+   "desc": "Start een Claude Code-sessie met je prompt al ingetypt.",
+   "note": "Er wordt niets verstuurd tot jij het verstuurt.",
+   "vars": {
+    "PROMPT": {
+     "label": "Prompt",
+     "where": "De vooraf ingevulde opdracht. Ze wordt alleen ingetypt: jij verstuurt haar zelf."
+    }
+   }
+  },
+  "claude-code-sessions": {
+   "title": "Claude Code-sessies openen",
+   "desc": "Opent de lijst met je Claude Code-sessies."
+  },
+  "claude-new-chat": {
+   "title": "Nieuwe chat",
+   "desc": "Opent Claude met een nieuwe chat."
+  },
+  "docs-new-document": {
+   "title": "Nieuw document",
+   "desc": "Maakt een leeg Google Docs-document.",
+   "note": "Opent in de browser of in de Docs-app, afhankelijk van je telefoon."
+  },
+  "n8n-trigger-webhook": {
+   "title": "Een workflow starten (webhook)",
+   "desc": "Roept de webhook van een n8n-workflow aan.",
+   "note": "De workflow moet actief zijn en GET accepteren. De link opent in de browser.",
+   "vars": {
+    "N8N_HOST": {
+     "label": "Adres van de n8n-server",
+     "where": "Het adres van je n8n-server, vóór /webhook/ in de productie-URL."
+    },
+    "WEBHOOK_PATH": {
+     "label": "Webhookpad",
+     "where": "Open in de workflow het Webhook-knooppunt en kopieer het veld Path."
+    }
+   }
+  },
+  "todoist-add-task": {
+   "title": "Een taak toevoegen",
+   "desc": "Opent een nieuwe Todoist-taak met je tekst al ingetypt.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Tekst van de taak",
+     "where": "Typ de taak zoals je dat in Todoist zou doen."
+    }
+   }
+  },
+  "todoist-add-task-today": {
+   "title": "Een taak voor vandaag toevoegen",
+   "desc": "Hetzelfde, met vandaag als deadline.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Tekst van de taak",
+     "where": "Typ de taak zoals je dat in Todoist zou doen."
+    }
+   }
+  },
+  "todoist-open-today": {
+   "title": "Vandaag openen",
+   "desc": "Opent de weergave Vandaag."
+  },
+  "todoist-open-inbox": {
+   "title": "Inbox openen",
+   "desc": "Opent de Inbox."
+  },
+  "todoist-open-upcoming": {
+   "title": "Binnenkort openen",
+   "desc": "Opent de weergave Binnenkort."
+  },
+  "todoist-search": {
+   "title": "Taken zoeken",
+   "desc": "Zoekt een vast woord in je taken.",
+   "vars": {
+    "SEARCH_TEXT": {
+     "label": "Zoektekst",
+     "where": "Het woord waarnaar in je taken wordt gezocht."
+    }
+   }
+  },
+  "twitch-open-channel": {
+   "title": "Een live kanaal openen",
+   "desc": "Opent de livestream van een kanaal.",
+   "note": "Toont de kanaalpagina als de streamer niet live is.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Naam van het kanaal",
+     "where": "Het laatste deel van het kanaaladres, twitch.tv/naam."
+    }
+   }
+  },
+  "twitch-open-channel-videos": {
+   "title": "De video's van een kanaal openen",
+   "desc": "Opent de activiteit en de video's van een kanaal.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Naam van het kanaal",
+     "where": "Het laatste deel van het kanaaladres, twitch.tv/naam."
+    }
+   }
+  },
+  "twitch-open-following": {
+   "title": "Gevolgd openen",
+   "desc": "Opent het tabblad Gevolgd."
+  },
+  "twitch-open-game": {
+   "title": "Een gamecategorie openen",
+   "desc": "Opent de pagina van een game of categorie.",
+   "vars": {
+    "GAME_NAME": {
+     "label": "Naam van de game",
+     "where": "De categorienaam zoals die in het tabblad Verkennen staat."
+    }
+   }
+  },
+  "twitch-open-app": {
+   "title": "Twitch openen",
+   "desc": "Opent de Twitch-app."
+  },
+  "twitch-search": {
+   "title": "Zoeken in Twitch",
+   "desc": "Opent de resultaten van een vaste zoekopdracht in Twitch.",
+   "vars": {
+    "QUERY": {
+     "label": "Zoektekst",
+     "where": "Een kanaal, game of onderwerp."
+    }
+   }
+  },
+  "instagram-send-dm": {
+   "title": "Een account een bericht sturen",
+   "desc": "Opent een privégesprek met een Instagram-account.",
+   "note": "Opent het gesprek. Er wordt niets verstuurd.",
+   "vars": {
+    "USERNAME": {
+     "label": "Instagram-gebruikersnaam",
+     "where": "De naam onder de profielfoto, zonder @."
+    }
+   }
+  },
+  "x-compose-post": {
+   "title": "Een bericht schrijven",
+   "desc": "Opent X met je bericht al ingetypt, klaar om te plaatsen.",
+   "note": "Er wordt niets geplaatst tot je op Plaatsen tikt.",
+   "vars": {
+    "TEXT": {
+     "label": "Tekst van het bericht",
+     "where": "Je tekst, zoals je hem zou typen."
+    }
+   }
+  },
+  "x-share-link": {
+   "title": "Een link plaatsen",
+   "desc": "Opent X met een link en een tekst al ingetypt.",
+   "note": "Er wordt niets geplaatst tot je op Plaatsen tikt.",
+   "vars": {
+    "URL": {
+     "label": "Webadres",
+     "where": "Het volledige adres om te delen, beginnend met https://."
+    },
+    "TEXT": {
+     "label": "Tekst van het bericht",
+     "where": "Je tekst, zoals je hem zou typen."
+    }
+   }
+  },
+  "x-open-profile": {
+   "title": "Een profiel openen",
+   "desc": "Opent een X-account.",
+   "vars": {
+    "USERNAME": {
+     "label": "X-gebruikersnaam",
+     "where": "De @naam van het account, zonder @."
+    }
+   }
   }
  }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SnapKey Mapper</string>
-    <string name="state_setup">设置：已授予 %1$d/3 项权限</string>
+    <string name="state_setup">设置：已完成 %1$d/%2$d 步</string>
     <string name="toast_cannot_open">无法打开：%1$s</string>
     <string name="toast_cannot_read">无法读取日志：%1$s</string>
     <string name="toast_failed">失败：%1$s</string>
@@ -24,7 +24,7 @@
     <string name="perm_needed">需要</string>
     <string name="perm_coloros">在 ColorOS 上，还要在应用设置中把耗电设为“无限制”，并在最近任务中锁定本应用。</string>
     <string name="perm_app_settings">打开应用设置</string>
-    <string name="perm_by_hand">在电脑上手动授予日志读取权限：</string>
+    <string name="perm_by_hand">在电脑上用 adb：</string>
     <string name="perm_copy">复制命令</string>
     <string name="toast_copied">命令已复制</string>
     <string name="perm_by_hand_or">或手动设置：</string>
@@ -51,7 +51,7 @@
     <string name="toast_pattern_saved">特征已保存，可以开始监听了</string>
     <string name="toast_no_lines">没有日志行：勾选“显示所有行”或检查权限</string>
     <string name="toast_saved">捕获结果已保存</string>
-    <string name="toast_choose_pattern">请先选择特征（第 3 步）</string>
+    <string name="toast_choose_pattern">请先选择特征（菜单 › 其他手机）</string>
     <string name="notif_listening_title">SnapKey Mapper 正在监听</string>
     <string name="notif_listening_text">按侧键打开你的目标</string>
     <string name="notif_stopped_title">SnapKey Mapper 已停止</string>
@@ -75,20 +75,71 @@
     <string name="err_invalid_intent">intent 链接无效</string>
     <string name="setup_fail_pair">配对失败。再点一次应用里的设置按钮，然后点“使用配对码配对设备”，输入新的配对码。如果仍然失败，请关闭再重新开启无线调试。</string>
     <string name="lang_title">语言</string>
-    <string name="library_open">浏览模板库</string>
-    <string name="library_title">模板库</string>
-    <string name="library_intro">现成的链接，按应用分组。选一个，填好你的内容，测试一下，然后设为 Snap Key 的目标。</string>
+    <string name="library_open">浏览快捷方式库</string>
+    <string name="library_title">快捷方式库</string>
+    <string name="library_intro">现成的快捷方式，按应用分组。选一个，填好你的内容，测试一下，然后设为 Snap Key 的目标。</string>
     <string name="library_search">搜索应用或操作</string>
-    <string name="library_count">模板：%1$d 个</string>
+    <string name="library_count">快捷方式：%1$d 个</string>
     <string name="library_not_installed">未安装</string>
     <string name="library_empty">没有符合搜索条件的结果。</string>
     <string name="recipe_fields">你的内容</string>
     <string name="recipe_link">最终链接</string>
-    <string name="recipe_use">使用此模板</string>
+    <string name="recipe_use">使用此快捷方式</string>
     <string name="recipe_fill_all">请先填写所有字段。</string>
     <string name="recipe_saved">已保存为你的目标。</string>
     <string name="recipe_missing">什么都没有打开。应用是否已安装？</string>
     <string name="recipe_verified">已于 %1$s 在 Android 模拟器上验证。</string>
     <string name="recipe_verified_partial">在 Android 模拟器上（%1$s），正确的应用收到了这个链接，但模拟器无法显示更多内容。请用测试按钮确认。</string>
     <string name="recipe_source">官方文档</string>
+    <string name="menu">菜单</string>
+    <string name="menu_help">帮助和网站</string>
+    <string name="help_url">https://remapsnapkey.com/zh/</string>
+    <string name="setup_title">设置</string>
+    <string name="setup_intro">共四步，只需做一次。每一步完成后会自动打勾。</string>
+    <string name="setup_continue">继续设置</string>
+    <string name="setup_other_way">其他方式：用电脑</string>
+    <string name="setup_open_setting">打开设置项</string>
+    <string name="setup_native_title">关闭手机自带的 Snap Key 操作</string>
+    <string name="setup_open_phone_settings">打开手机设置</string>
+    <string name="setup_native_done">完成：Snap Key 自己不会执行任何操作</string>
+    <string name="finder_intro">Find X9 的按键已经内置：这里无需操作。换成其他手机时，应用需要学会你按键时 Android 在日志里写下的是哪一行。</string>
+    <string name="finder_privacy">捕获内容可能包含其他应用的个人信息：分享前请先检查文件。</string>
+    <string name="finder_need_log">需要先有日志读取权限：请先完成设置的第 1 步。</string>
+    <string name="app_search">搜索应用</string>
+    <string name="target_link_enter">输入链接</string>
+    <string name="target_none">还没有选择</string>
+    <string name="recipe_untested">尚未测试：取自该应用的官方文档。请用测试按钮确认。</string>
+    <string-array name="steps_log_auto">
+        <item>让手机连上 Wi-Fi。</item>
+        <item>如果开发者选项被隐藏：设置 › 关于手机 › 版本信息，连续点按版本号 7 次。</item>
+        <item>在开发者选项中开启“Disable system optimisation”（ColorOS）。</item>
+        <item>点下方的“自动设置日志读取权限”。</item>
+        <item>开启无线调试，然后点“使用配对码配对设备”。</item>
+        <item>下拉通知，在 SnapKey Mapper 的通知里输入 6 位数字。</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>在电脑上安装 Android platform-tools（adb）。</item>
+        <item>在开发者选项中开启 USB 调试和“Disable system optimisation”（ColorOS），再用数据线连接手机。</item>
+        <item>在电脑上运行下面的命令。</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>点“打开设置项”，开启开关。</item>
+        <item>如果开关是灰色，或 Android 提示访问被拒绝：点“打开应用设置”，再点右上角 ⋮ ›“允许受限制的设置”，然后回到这里。</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>点“允许”并确认。</item>
+        <item>在 ColorOS 上，还要打开应用设置 › 耗电管理 ›“无限制”，并在最近任务中锁定本应用。</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>打开手机设置，搜索“Snap Key”。</item>
+        <item>设为无操作，避免手机同时执行自己的操作。</item>
+        <item>勾选下方的复选框。</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>点“开始捕获”。</item>
+        <item>按你的按键 3 次，每次间隔几秒。</item>
+        <item>点“停止捕获”。</item>
+        <item>在下方列表中，点每次按键都会出现的那一行：它将成为特征。</item>
+        <item>回到主页，开始监听，再按一下按键进行验证。</item>
+    </string-array>
 </resources>

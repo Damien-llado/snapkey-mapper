@@ -31,6 +31,18 @@
         <package android:name="org.thoughtcrime.securesms" />
         <package android:name="md.obsidian" />
         <package android:name="io.homeassistant.companion.android" />
+        <package android:name="com.spotify.music" />
+        <package android:name="deezer.android.app" />
+        <package android:name="com.apple.android.music" />
+        <package android:name="com.waze" />
+        <package android:name="com.netflix.mediaclient" />
+        <package android:name="notion.id" />
+        <package android:name="com.anthropic.claude" />
+        <package android:name="com.google.android.apps.docs.editors.docs" />
+        <package android:name="com.todoist" />
+        <package android:name="tv.twitch.android.app" />
+        <package android:name="com.instagram.android" />
+        <package android:name="com.twitter.android" />
         <!-- recipes:end -->
     </queries>
 
@@ -49,6 +61,9 @@
 
         <activity android:name=".LibraryActivity" android:exported="false" />
         <activity android:name=".RecipeActivity" android:exported="false" />
+        <activity android:name=".SetupActivity" android:exported="false" />
+        <activity android:name=".FinderActivity" android:exported="false" />
+        <activity android:name=".AppPickerActivity" android:exported="false" />
 
         <service
             android:name=".ListenService"

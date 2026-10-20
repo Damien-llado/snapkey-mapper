@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SnapKey Mapper</string>
-    <string name="state_setup">Einrichtung: %1$d von 3 Berechtigungen</string>
+    <string name="state_setup">Einrichtung: %1$d von %2$d Schritten erledigt</string>
     <string name="toast_cannot_open">Öffnen nicht möglich: %1$s</string>
     <string name="toast_cannot_read">Protokoll nicht lesbar: %1$s</string>
     <string name="toast_failed">Fehlgeschlagen: %1$s</string>
@@ -24,7 +24,7 @@
     <string name="perm_needed">Erforderlich</string>
     <string name="perm_coloros">Stell unter ColorOS in den App-Einstellungen außerdem die Akkunutzung auf „Keine Einschränkungen“ und fixiere die App in den zuletzt verwendeten Apps.</string>
     <string name="perm_app_settings">App-Einstellungen öffnen</string>
-    <string name="perm_by_hand">Log-Zugriff von Hand, über einen Computer:</string>
+    <string name="perm_by_hand">Über einen Computer, mit adb:</string>
     <string name="perm_copy">Befehl kopieren</string>
     <string name="toast_copied">Befehl kopiert</string>
     <string name="perm_by_hand_or">Oder von Hand:</string>
@@ -51,7 +51,7 @@
     <string name="toast_pattern_saved">Muster gespeichert, du kannst die Erkennung starten</string>
     <string name="toast_no_lines">Keine Zeile: Aktiviere „Alle Zeilen anzeigen“ oder prüf die Berechtigung</string>
     <string name="toast_saved">Aufzeichnung gespeichert</string>
-    <string name="toast_choose_pattern">Wähl zuerst das Muster (Schritt 3)</string>
+    <string name="toast_choose_pattern">Wähl zuerst das Muster (Menü › Anderes Telefon)</string>
     <string name="notif_listening_title">SnapKey Mapper ist aktiv</string>
     <string name="notif_listening_text">Drück die Seitentaste, um dein Ziel zu öffnen</string>
     <string name="notif_stopped_title">SnapKey Mapper ist aus</string>
@@ -75,20 +75,71 @@
     <string name="err_invalid_intent">Ungültiger intent:-Link</string>
     <string name="setup_fail_pair">Kopplung fehlgeschlagen. Tipp erneut auf die Einrichtungsschaltfläche der App, dann auf „Gerät über einen Kopplungscode koppeln“ und gib den neuen Code ein. Klappt es wieder nicht, schalte Debugging über WLAN aus und wieder ein.</string>
     <string name="lang_title">Sprache</string>
-    <string name="library_open">Vorlagen durchsuchen</string>
-    <string name="library_title">Vorlagenbibliothek</string>
-    <string name="library_intro">Fertige Links, nach App sortiert. Wähl eine Vorlage, trag deine Werte ein, teste sie und leg sie dann auf die Snap Key.</string>
+    <string name="library_open">Verknüpfungsbibliothek durchsuchen</string>
+    <string name="library_title">Verknüpfungsbibliothek</string>
+    <string name="library_intro">Fertige Verknüpfungen, nach App sortiert. Wähl eine aus, trag deine Werte ein, teste sie und leg sie dann auf die Snap Key.</string>
     <string name="library_search">App oder Aktion suchen</string>
-    <string name="library_count">Vorlagen: %1$d</string>
+    <string name="library_count">Verknüpfungen: %1$d</string>
     <string name="library_not_installed">Nicht installiert</string>
     <string name="library_empty">Keine Treffer für deine Suche.</string>
     <string name="recipe_fields">Deine Werte</string>
     <string name="recipe_link">Fertiger Link</string>
-    <string name="recipe_use">Diese Vorlage verwenden</string>
+    <string name="recipe_use">Diese Verknüpfung verwenden</string>
     <string name="recipe_fill_all">Füll zuerst alle Felder aus.</string>
     <string name="recipe_saved">Als dein Ziel gespeichert.</string>
     <string name="recipe_missing">Nichts geöffnet. Ist die App installiert?</string>
     <string name="recipe_verified">Am %1$s auf einem Android-Emulator geprüft.</string>
     <string name="recipe_verified_partial">Auf einem Android-Emulator (%1$s) hat die richtige App diesen Link empfangen, mehr konnte der Emulator nicht zeigen. Prüf es mit der Test-Schaltfläche.</string>
     <string name="recipe_source">Offizielle Dokumentation</string>
+    <string name="menu">Menü</string>
+    <string name="menu_help">Hilfe und Website</string>
+    <string name="help_url">https://remapsnapkey.com/de/</string>
+    <string name="setup_title">Einrichtung</string>
+    <string name="setup_intro">Vier Schritte, einmalig. Jeder hakt sich selbst ab, sobald er erledigt ist.</string>
+    <string name="setup_continue">Einrichtung fortsetzen</string>
+    <string name="setup_other_way">Anderer Weg: über einen Computer</string>
+    <string name="setup_open_setting">Einstellung öffnen</string>
+    <string name="setup_native_title">Eigene Snap-Key-Aktion des Telefons aus</string>
+    <string name="setup_open_phone_settings">Telefoneinstellungen öffnen</string>
+    <string name="setup_native_done">Erledigt: Die Snap Key macht von sich aus nichts</string>
+    <string name="finder_intro">Die Taste des Find X9 ist bereits bekannt: Hier ist nichts zu tun. Bei einem anderen Telefon muss die App lernen, welche Zeile Android in sein Log schreibt, wenn du deine Taste drückst.</string>
+    <string name="finder_privacy">Die Aufzeichnung kann persönliche Informationen aus anderen Apps enthalten: Prüf die Datei, bevor du sie weitergibst.</string>
+    <string name="finder_need_log">Zuerst wird der Log-Zugriff gebraucht: Schließ Schritt 1 der Einrichtung ab.</string>
+    <string name="app_search">App suchen</string>
+    <string name="target_link_enter">Link eingeben</string>
+    <string name="target_none">Noch nichts ausgewählt</string>
+    <string name="recipe_untested">Noch nicht getestet: aus der offiziellen Dokumentation der App übernommen. Prüf es mit der Test-Schaltfläche.</string>
+    <string-array name="steps_log_auto">
+        <item>Verbinde das Telefon mit deinem WLAN.</item>
+        <item>Falls die Entwickleroptionen versteckt sind: Einstellungen › Über das Telefon › Version, tipp 7-mal auf die Build-Nummer.</item>
+        <item>Schalte in den Entwickleroptionen „Disable system optimisation“ ein (ColorOS).</item>
+        <item>Tipp unten auf „Log-Zugriff automatisch einrichten“.</item>
+        <item>Schalte Debugging über WLAN ein und tipp dann auf „Gerät über einen Kopplungscode koppeln“.</item>
+        <item>Zieh die Benachrichtigungen herunter und gib die 6 Ziffern in der Benachrichtigung von SnapKey Mapper ein.</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>Installier auf einem Computer die Android-Platform-Tools (adb).</item>
+        <item>Schalte in den Entwickleroptionen USB-Debugging und „Disable system optimisation“ (ColorOS) ein und verbinde das Telefon per Kabel.</item>
+        <item>Führ den Befehl unten auf dem Computer aus.</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>Tipp auf „Einstellung öffnen“ und schalte den Schalter ein.</item>
+        <item>Ist der Schalter grau oder verweigert Android den Zugriff: Tipp auf „App-Einstellungen öffnen“, dann oben rechts auf ⋮ › „Eingeschränkte Einstellungen zulassen“ und komm danach hierher zurück.</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>Tipp auf „Erlauben“ und bestätige.</item>
+        <item>Öffne unter ColorOS außerdem die App-Einstellungen › Akkunutzung › „Keine Einschränkungen“ und fixiere die App in den zuletzt verwendeten Apps.</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>Öffne die Telefoneinstellungen und such nach „Snap Key“.</item>
+        <item>Stell sie auf keine Aktion, damit das Telefon nicht gleichzeitig seine eigene Aktion ausführt.</item>
+        <item>Setz unten den Haken.</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>Tipp auf „Aufzeichnung starten“.</item>
+        <item>Drück deine Taste 3-mal, mit ein paar Sekunden Abstand.</item>
+        <item>Tipp auf „Aufzeichnung stoppen“.</item>
+        <item>Tipp in der Liste unten auf die Zeile, die bei jedem Druck wiederkam: Sie wird zum Muster.</item>
+        <item>Geh zurück zum Start, starte das Mithören und drück zur Kontrolle die Taste.</item>
+    </string-array>
 </resources>

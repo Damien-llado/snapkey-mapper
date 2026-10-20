@@ -104,6 +104,7 @@ public class RecipeActivity extends Activity {
             Ui.add(top, source, 8);
         }
         if (!recipe.tested.isEmpty()) Ui.add(top, Ui.body(this, getString(recipe.level.equals("dispatch") ? R.string.recipe_verified_partial : R.string.recipe_verified, recipe.tested)), recipe.note.isEmpty() ? 16 : 8);
+        else Ui.add(top, Ui.body(this, getString(R.string.recipe_untested)), recipe.note.isEmpty() ? 16 : 8);
 
         ScrollView scroll = new ScrollView(this);
         scroll.addView(top);
