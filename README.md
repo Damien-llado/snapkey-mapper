@@ -26,7 +26,7 @@ The app only needs two things: Android 11 or later, and a key press that appears
 |---|---|---|
 | Grants the log permission by itself, from the phone | Yes (wireless debugging of the phone, once) | No: you run one `adb` command yourself |
 | Android permissions | adds INTERNET, used only for the phone's own wireless debugging | **no INTERNET permission at all** |
-| Size | about 11 MB (TLS and cryptography libraries) | about 300 KB (the font of the app) |
+| Size | about 12 MB (TLS and cryptography libraries) | about 500 KB (the font of the app) |
 | Dependencies | [libadb-android](https://github.com/MuntashirAkon/libadb-android) (Apache-2.0), Conscrypt, sun-security-android | none |
 
 The full edition also adds ACCESS_WIFI_STATE and CHANGE_WIFI_MULTICAST_STATE (to find the pairing service). Everything else is identical. If you want the strongest guarantee, install the lite edition: it has no INTERNET permission, so Android does not let the app open network connections itself.
