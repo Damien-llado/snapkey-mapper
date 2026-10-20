@@ -64,6 +64,11 @@ public class MainActivity extends Activity {
         status = text(top, "");
 
         title(top, "1. Permissions (once)");
+        if (AdbSetup.AVAILABLE) {
+            text(top, "Log reading, automatic: join your Wi-Fi, tap the button, then in Developer options turn on Wireless debugging and tap \"Pair device with pairing code\". Pull the notification down and type the 6 digits. On ColorOS, turn on \"Disable system optimisation\" first.");
+            button(top, "Set up log reading automatically", v -> AdbSetup.start(this));
+            text(top, "Or by hand:");
+        }
         text(top, "Log reading: run this command once (for example with Key Mapper: \"Shell command\" action, ADB execution mode, Test button), or from a computer with adb:");
         TextView cmd = text(top, COMMAND);
         cmd.setTextIsSelectable(true);

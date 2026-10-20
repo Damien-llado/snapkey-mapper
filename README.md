@@ -4,7 +4,7 @@ Make the side key of your OPPO phone (the "Snap Key") open any app or link you w
 
 ![SnapKey Mapper main screen](docs/img/main-screen.png)
 
-A small Android app (Java, no dependencies, no INTERNET permission). It reads the system log, spots the line ColorOS writes each time the side key is pressed, and opens the link or app you chose.
+A small Android app in Java. It reads the system log, spots the line ColorOS writes each time the side key is pressed, and opens the link or app you chose.
 
 My own use: one press opens a Claude Code Remote Control session, so I can pick up a coding conversation from my pocket. It works just as well for a web page, a note app, a camera app or a deep link.
 
@@ -20,16 +20,39 @@ Website with a longer FAQ: https://remapsnapkey.com/
 
 The app only needs two things: Android 11 or later, and a key press that appears in the system log. Step 3 below tells you how to check that on your phone.
 
+## Two editions
+
+| | `snapkey-mapper.apk` (full, recommended) | `snapkey-mapper-lite.apk` |
+|---|---|---|
+| Grants the log permission by itself, from the phone | Yes (wireless debugging of the phone, once) | No: you run one `adb` command yourself |
+| Android permissions | adds INTERNET, used only for the phone's own wireless debugging | **no INTERNET permission at all** |
+| Size | about 11 MB (TLS and cryptography libraries) | about 40 KB |
+| Dependencies | [libadb-android](https://github.com/MuntashirAkon/libadb-android) (Apache-2.0), Conscrypt, sun-security-android | none |
+
+Everything else is identical. If you want the strongest guarantee, install the lite edition: Android itself then prevents the app from using the network.
+
 ## Install
 
 1. Download the APK from the [latest release](https://github.com/Damien-llado/snapkey-mapper/releases/latest) and install it.
 2. If Android blocks the install, allow your browser or file manager to install unknown apps. Then, in the app info page of SnapKey Mapper, open the three dot menu and choose **Allow restricted settings** (Android shows this for apps installed outside the Play Store). Without it some permissions stay greyed out.
 3. Open the app. Allow notifications. Tap **Allow display over other apps** and **Battery: do not restrict**, and enable them. On ColorOS also open the app settings, Battery usage, and pick "No restrictions" or "Allow background activity". Lock the app in the recent apps list.
-4. Grant the log permission once (next section).
+4. Grant the log permission once (next section). Full edition: the first button of the app does it. Lite edition: with the command.
 
 ### Grant the log permission (once)
 
-The app needs `READ_LOGS`, which Android only lets you grant with a shell command. Two ways:
+The app needs `READ_LOGS`, which Android only lets an app receive from the shell.
+
+**Full edition, from the phone alone:**
+
+1. On ColorOS 16, open Developer options and switch on **Disable system optimisation** (see below).
+2. Join a Wi-Fi network. Tap **Set up log reading automatically** in the app.
+3. In Developer options, turn on **Wireless debugging**, then tap **Pair device with pairing code**.
+4. Pull the notification down and type the 6 digits in the reply field.
+5. The notification says "Done". Turn Wireless debugging off. The app deletes its pairing key right after the grant.
+
+What the app does in those steps: it finds the pairing service of your own phone on the local network, pairs, runs `pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS`, disconnects and deletes its key. The code is in [`SetupService.java`](app/src/full/java/io/github/damienllado/snapkeymapper/SetupService.java) (about 100 lines).
+
+**Other ways (both editions):**
 
 **With a computer and adb** (wireless debugging or USB):
 
@@ -83,10 +106,14 @@ Then ask, for example: "make my Snap Key start a 25-minute focus timer". Without
 
 ## Security and privacy
 
-- No INTERNET permission: the app cannot send anything out of the phone.
+- **Nothing is collected.** No account, no analytics, no ads, no crash reporting in the app. It stores your target, the key name and the gesture, on the phone only. (The website uses Microsoft Clarity for anonymous visit statistics; the app has nothing like it.)
+- **Do not take my word for it, check:**
+  - *Lite edition*: no INTERNET permission, so Android blocks all network use. Check with `aapt dump permissions snapkey-mapper-lite.apk` or with AppVerifier.
+  - *Full edition*: INTERNET is declared for one reason, talking to the phone's own wireless debugging. In the code, the only network calls are in `SetupService.java` and the library; there is no URL, no host name and no other socket in the app. After the setup you can also block the network for the app in the ColorOS settings, or just use the lite edition.
+  - Both: the source is public and short, the release lists the SHA-256 and the signing certificate fingerprint, and you can build the app yourself from the source (section Build).
 - `READ_LOGS` lets an app read the whole system log, which can contain details of what other apps do. The app only looks for your pattern and a few time stamps and keeps nothing; the capture screen holds lines in memory until you close it, and saves a file only when you ask.
 - The source is short enough to read in one sitting. Please do.
-- After the grant you can switch wireless debugging off again.
+- After the grant, switch wireless debugging off. The full edition deletes its pairing key itself; you can also remove "SnapKey Mapper" from Wireless debugging › Paired devices.
 - To remove everything: uninstall the app.
 - Install only from the [GitHub releases](https://github.com/Damien-llado/snapkey-mapper/releases). Each release lists the SHA-256 of the APK and the fingerprint of the signing certificate, so you can check the file (for example with [AppVerifier](https://github.com/soupslurpr/AppVerifier)).
 - What Android shows when you install it, and why it is expected: see [Safe to install](https://remapsnapkey.com/#safety) on the website.
@@ -125,8 +152,10 @@ More answers on the website.
 Android SDK 35, JDK 17, Gradle 8.11 or later:
 
 ```
-gradle assembleRelease
+gradle assembleFullRelease assembleLiteRelease
 ```
+
+The full edition downloads its three libraries from Maven Central, Google and JitPack at build time.
 
 To sign the release, set `SNAPKEY_KEYSTORE` (path) and `SNAPKEY_KEY_PASSWORD`; the key alias is `snapkey`. Without them you get an unsigned APK.
 
