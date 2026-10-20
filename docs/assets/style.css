@@ -473,3 +473,6 @@ footer ul { list-style: none; padding: 0; margin: .8rem 0; display: flex; flex-w
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js [data-r] { opacity: 1; translate: none; scale: none; }
 }
+.brands { display: flex; gap: .4rem; margin-top: .6rem; }
+.brands span { width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; color: #fff; background: var(--h); }
+.brands svg { width: 16px; height: 16px; }

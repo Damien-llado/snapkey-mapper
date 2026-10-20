@@ -35,6 +35,17 @@
 <!-- Pictogrammes, définis une fois et réutilisés partout -->
 <svg class="sprite" aria-hidden="true">
   <defs>
+    <symbol id="b-maps" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z"/></symbol>
+    <symbol id="b-spotify" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></symbol>
+    <symbol id="b-strava" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></symbol>
+    <symbol id="b-gdocs" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M14.727 6.727H14V0H4.91c-.905 0-1.637.732-1.637 1.636v20.728c0 .904.732 1.636 1.636 1.636h14.182c.904 0 1.636-.732 1.636-1.636V6.727h-6zm-.545 10.455H7.09v-1.364h7.09v1.364zm2.727-3.273H7.091v-1.364h9.818v1.364zm0-3.273H7.091V9.273h9.818v1.363zM14.727 6h6l-6-6v6z"/></symbol>
+    <symbol id="b-ha" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M22.939 10.627 13.061.749a1.505 1.505 0 0 0-2.121 0l-9.879 9.878C.478 11.21 0 12.363 0 13.187v9c0 .826.675 1.5 1.5 1.5h9.227l-4.063-4.062a2.034 2.034 0 0 1-.664.113c-1.13 0-2.05-.92-2.05-2.05s.92-2.05 2.05-2.05 2.05.92 2.05 2.05c0 .233-.041.456-.113.665l3.163 3.163V9.928a2.05 2.05 0 0 1-1.15-1.84c0-1.13.92-2.05 2.05-2.05s2.05.92 2.05 2.05a2.05 2.05 0 0 1-1.15 1.84v8.127l3.146-3.146A2.051 2.051 0 0 1 18 12.239c1.13 0 2.05.92 2.05 2.05s-.92 2.05-2.05 2.05c-.25 0-.488-.047-.709-.13L12.9 20.602v3.088h9.6c.825 0 1.5-.675 1.5-1.5v-9c0-.825-.477-1.977-1.061-2.561z"/></symbol>
+    <symbol id="b-n8n" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></symbol>
+    <symbol id="b-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="b-notion" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></symbol>
+    <symbol id="b-claude" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></symbol>
+    <symbol id="b-gemini" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></symbol>
+    <symbol id="b-deezer" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M.693 10.024c.381 0 .693-1.256.693-2.807 0-1.55-.312-2.807-.693-2.807C.312 4.41 0 5.666 0 7.217s.312 2.808.693 2.808ZM21.038 1.56c-.364 0-.684.805-.91 2.096C19.765 1.446 19.184 0 18.526 0c-.78 0-1.464 2.036-1.784 5-.312-2.158-.788-3.536-1.325-3.536-.745 0-1.386 2.704-1.62 6.472-.442-1.932-1.083-3.145-1.793-3.145s-1.35 1.213-1.793 3.145c-.242-3.76-.874-6.463-1.628-6.463-.537 0-1.013 1.378-1.325 3.535C6.938 2.036 6.262 0 5.474 0c-.658 0-1.247 1.447-1.602 3.665-.217-1.291-.546-2.105-.91-2.105-.675 0-1.221 2.807-1.221 6.272 0 3.466.546 6.273 1.221 6.273.277 0 .537-.476.736-1.273.32 2.928.996 4.938 1.776 4.938.606 0 1.143-1.204 1.507-3.11.251 3.622.875 6.195 1.602 6.195.46 0 .875-1.023 1.187-2.677C10.142 21.6 11 24 12.004 24c1.005 0 1.863-2.4 2.235-5.822.312 1.654.727 2.677 1.186 2.677.728 0 1.352-2.573 1.603-6.195.364 1.906.9 3.11 1.507 3.11.78 0 1.455-2.01 1.775-4.938.208.797.46 1.273.737 1.273.675 0 1.22-2.807 1.22-6.273-.008-3.457-.553-6.272-1.23-6.272ZM23.307 10.024c.381 0 .693-1.256.693-2.807 0-1.55-.312-2.807-.693-2.807-.381 0-.693 1.256-.693 2.807s.312 2.808.693 2.808Z"/></symbol>
     <symbol id="g-term" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 10l3 2-3 2M12.5 15H17"/></symbol>
     <symbol id="g-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h5a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h5"/></symbol>
     <symbol id="g-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
@@ -109,11 +120,11 @@
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
     <div class="stage" id="stage" aria-hidden="true">
       <div class="floaters">
-        <span class="cap c1" style="--h:#2FD39A"><b></b><b></b><b></b><b></b><b><svg><use href="#g-term"/></svg></b></span>
-        <span class="cap c2" style="--h:#F08A3E"><b></b><b></b><b></b><b></b><b><svg><use href="#g-run"/></svg></b></span>
-        <span class="cap c3" style="--h:#5B8DEF"><b></b><b></b><b></b><b></b><b><svg><use href="#g-route"/></svg></b></span>
-        <span class="cap c4" style="--h:#E2557A"><b></b><b></b><b></b><b></b><b><svg><use href="#g-music"/></svg></b></span>
-        <span class="cap c5" style="--h:#8B6CF0"><b></b><b></b><b></b><b></b><b><svg><use href="#g-spark"/></svg></b></span>
+        <span class="cap c1" style="--h:#D97757"><b></b><b></b><b></b><b></b><b><svg><use href="#b-claude"/></svg></b></span>
+        <span class="cap c2" style="--h:#FC4C02"><b></b><b></b><b></b><b></b><b><svg><use href="#b-strava"/></svg></b></span>
+        <span class="cap c3" style="--h:#4285F4"><b></b><b></b><b></b><b></b><b><svg><use href="#b-maps"/></svg></b></span>
+        <span class="cap c4" style="--h:#1ED760"><b></b><b></b><b></b><b></b><b><svg><use href="#b-spotify"/></svg></b></span>
+        <span class="cap c5" style="--h:#8E75B2"><b></b><b></b><b></b><b></b><b><svg><use href="#b-gemini"/></svg></b></span>
         <span class="cap c6" style="--h:#E3B23C"><b></b><b></b><b></b><b></b><b><svg><use href="#g-clock"/></svg></b></span>
         <i class="ring r1"></i><i class="ring r2"></i>
       </div>
@@ -124,8 +135,8 @@
           <div class="screen">
             <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
             <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="launch" id="launch" style="--h:#2FD39A">
-              <span class="launch-ico"><svg><use href="#g-term"/></svg></span>
+            <div class="launch" id="launch" style="--h:#D97757">
+              <span class="launch-ico"><svg><use href="#b-claude"/></svg></span>
               <strong id="launch-t">Claude Code</strong>
               <small id="launch-s">claude.ai/code/…</small>
             </div>
@@ -152,7 +163,7 @@
 
     <ul class="bento" id="bento">
       <li class="tile big dark">
-        <div class="tile-top"><span class="ico" style="--h:#2FD39A"><svg><use href="#g-term"/></svg></span><span class="kind">Link</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#D97757"><svg><use href="#b-claude"/></svg></span><span class="kind">Link</span></div>
         <h3>Jump into Claude Code</h3>
         <p>Your running Claude Code session, one press away. Talk to your agent like a walkie-talkie, from the street, Wi-Fi off.</p>
         <div class="term" aria-hidden="true">
@@ -167,7 +178,7 @@
       </li>
 
       <li class="tile w2" style="--tint:var(--t-sky)">
-        <div class="tile-top"><span class="ico" style="--h:#5B8DEF"><svg><use href="#g-route"/></svg></span><span class="kind">Link</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#4285F4"><svg><use href="#b-maps"/></svg></span><span class="kind">Link</span></div>
         <h3>Navigate, hands busy</h3>
         <p>Google Maps turn-by-turn to a saved place, by bike or by car.</p>
         <svg class="viz-route" viewBox="0 0 220 60" aria-hidden="true"><path d="M8 50 C 50 50, 50 12, 100 14 S 160 48, 210 12"/><circle cx="210" cy="12" r="5"/></svg>
@@ -175,21 +186,21 @@
       </li>
 
       <li class="tile" style="--tint:var(--t-rose)">
-        <div class="tile-top"><span class="ico" style="--h:#E2557A"><svg><use href="#g-music"/></svg></span><span class="kind">Link</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#1ED760"><svg><use href="#b-spotify"/></svg></span><span class="kind">Link</span></div>
         <h3>Your run playlist</h3>
         <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         <code>spotify:playlist:…</code>
       </li>
 
       <li class="tile" style="--tint:var(--t-amber)">
-        <div class="tile-top"><span class="ico" style="--h:#F08A3E"><svg><use href="#g-run"/></svg></span><span class="kind">App</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#FC4C02"><svg><use href="#b-strava"/></svg></span><span class="kind">App</span></div>
         <h3>Strava, ready to record</h3>
         <div class="rec" aria-hidden="true"><i></i><span>Record</span></div>
         <code>App: Strava</code>
       </li>
 
       <li class="tile" style="--tint:var(--t-slate)">
-        <div class="tile-top"><span class="ico" style="--h:#4E9C7E"><svg><use href="#g-doc"/></svg></span><span class="kind">Link</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#4285F4"><svg><use href="#b-gdocs"/></svg></span><span class="kind">Link</span></div>
         <h3>Today's notes doc</h3>
         <div class="lines" aria-hidden="true"><i></i><i></i><i></i></div>
         <code>docs.google.com/document/d/…</code>
@@ -203,7 +214,7 @@
       </li>
 
       <li class="tile w2" style="--tint:var(--t-mint)">
-        <div class="tile-top"><span class="ico" style="--h:#2FA37A"><svg><use href="#g-home"/></svg></span><span class="kind">Link</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#18BCF2"><svg><use href="#b-ha"/></svg></span><span class="kind">Link</span></div>
         <h3>The garage dashboard</h3>
         <p>Home Assistant opens straight on the right page. Lights, door, heating.</p>
         <div class="toggles" aria-hidden="true"><span><i class="sw"></i>Garage door</span><span><i class="sw on"></i>Porch light</span></div>
@@ -211,7 +222,7 @@
       </li>
 
       <li class="tile w2" style="--tint:var(--t-lilac)">
-        <div class="tile-top"><span class="ico" style="--h:#8B6CF0"><svg><use href="#g-hook"/></svg></span><span class="kind">Link</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#EA4B71"><svg><use href="#b-n8n"/></svg></span><span class="kind">Link</span></div>
         <h3>Fire a workflow</h3>
         <p>Open a webhook URL that accepts GET (n8n, for example): log a coffee, start a timer, ping your team.</p>
         <div class="flow" aria-hidden="true"><i></i><b></b><i></i><b></b><i></i></div>
@@ -219,7 +230,7 @@
       </li>
 
       <li class="tile" style="--tint:var(--t-mint)">
-        <div class="tile-top"><span class="ico" style="--h:#25B865"><svg><use href="#g-chat"/></svg></span><span class="kind">Link</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#25D366"><svg><use href="#b-wa"/></svg></span><span class="kind">Link</span></div>
         <h3>One WhatsApp chat</h3>
         <div class="bubbles" aria-hidden="true"><i></i><i></i></div>
         <code>https://wa.me/&lt;number&gt;</code>
@@ -233,16 +244,17 @@
       </li>
 
       <li class="tile txt" style="--tint:var(--t-slate)">
-        <div class="tile-top"><span class="ico" style="--h:#6B7A72"><svg><use href="#g-book"/></svg></span><span class="kind">Link</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#000000"><svg><use href="#b-notion"/></svg></span><span class="kind">Link</span></div>
         <h3>A Notion page</h3>
         <p>Your inbox, journal or shopping list.</p>
         <code>https://www.notion.so/…</code>
       </li>
 
       <li class="tile txt" style="--tint:var(--t-lilac)">
-        <div class="tile-top"><span class="ico" style="--h:#8B6CF0"><svg><use href="#g-spark"/></svg></span><span class="kind">App</span></div>
+        <div class="tile-top"><span class="ico" style="--h:#8E75B2"><svg><use href="#b-gemini"/></svg></span><span class="kind">App</span></div>
         <h3>Your AI assistant</h3>
         <p>Gemini, ChatGPT, Claude: whichever you prefer to OPPO's.</p>
+        <div class="brands" aria-hidden="true"><span style="--h:#8E75B2"><svg><use href="#b-gemini"/></svg></span><span style="--h:#D97757"><svg><use href="#b-claude"/></svg></span></div>
         <code>App: any</code>
       </li>
 
@@ -529,13 +541,13 @@ document.getElementById('story').addEventListener('submit', function (e) {
 (function () {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var T = [
-    ['Claude Code', 'claude.ai/code/…', '#2FD39A', 'g-term', 'Claude Code'],
-    ['your run playlist', 'spotify:playlist:…', '#E2557A', 'g-music', 'Run playlist'],
-    ['navigation home', 'google.navigation:q=…', '#5B8DEF', 'g-route', 'Maps'],
-    ['Strava', 'App: Strava', '#F08A3E', 'g-run', 'Strava'],
-    ["today's notes", 'docs.google.com/…', '#4E9C7E', 'g-doc', 'Notes'],
-    ['the garage dashboard', 'homeassistant://navigate/…', '#2FA37A', 'g-home', 'Home Assistant'],
-    ['a WhatsApp chat', 'wa.me/…', '#25B865', 'g-chat', 'WhatsApp']
+    ['Claude Code', 'claude.ai/code/…', '#D97757', 'b-claude', 'Claude Code'],
+    ['your run playlist', 'spotify:playlist:…', '#1ED760', 'b-spotify', 'Run playlist'],
+    ['navigation home', 'google.navigation:q=…', '#4285F4', 'b-maps', 'Maps'],
+    ['Strava', 'App: Strava', '#FC4C02', 'b-strava', 'Strava'],
+    ["today's notes", 'docs.google.com/…', '#4285F4', 'b-gdocs', 'Notes'],
+    ['the garage dashboard', 'homeassistant://navigate/…', '#18BCF2', 'b-ha', 'Home Assistant'],
+    ['a WhatsApp chat', 'wa.me/…', '#25D366', 'b-wa', 'WhatsApp']
   ];
   var i = 0, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
       launch = document.getElementById('launch'), use = launch.querySelector('use');
