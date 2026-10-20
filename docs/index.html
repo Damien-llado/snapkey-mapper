@@ -29,7 +29,7 @@
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Makes the OPPO Snap Key open any app or link, without root."}
 </script>
 </head>
-<body>
+<body data-copy-label="Copy">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- Pictogrammes, définis une fois et réutilisés partout -->
@@ -637,7 +637,7 @@ document.querySelectorAll('[data-copy]').forEach(function (el) {
   var b = document.createElement('button');
   b.type = 'button';
   b.className = 'copy-ico';
-  b.setAttribute('aria-label', 'Copy');
+  b.setAttribute('aria-label', document.body.getAttribute('data-copy-label') || 'Copy');
   b.innerHTML = ICON;
   b.addEventListener('click', function () {
     var text = el.getAttribute('data-copy') || el.textContent.trim();

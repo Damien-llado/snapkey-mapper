@@ -553,3 +553,11 @@ mark { background: color-mix(in oklab, var(--accent) 22%, transparent); color: i
 }
 .console-body .out .copybox > code { display: block; padding-right: 2.6rem; }
 .console-body .copybox > pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Languages: long words break cleanly, Devanagari and Chinese get their own spacing */
+:lang(de), :lang(nl) { hyphens: auto; overflow-wrap: break-word; }
+:lang(hi), :lang(zh) { letter-spacing: 0; }
+:lang(hi) h1, :lang(hi) h2, :lang(hi) h3, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 { letter-spacing: 0; line-height: 1.3; }
+:lang(hi) body, :lang(hi) p, :lang(hi) li { line-height: 1.75; }
+:lang(zh) { line-break: strict; word-break: normal; }
+:lang(zh) p, :lang(zh) li { line-height: 1.8; }
