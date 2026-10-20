@@ -63,7 +63,7 @@ final class PhoneView extends View {
         // screen
         paint.setStyle(Paint.Style.FILL);
         r.set(left + 5 * d, top + 5 * d, right - 5 * d, bottom - 5 * d);
-        paint.setShader(new LinearGradient(0, r.top, 0, r.bottom, 0xFF1E8F6B, 0xFF0C3328, Shader.TileMode.CLAMP));
+        paint.setShader(new LinearGradient(0, r.top, 0, r.bottom, 0xFF1E8F6B, 0xFF106048, Shader.TileMode.CLAMP));
         canvas.drawRoundRect(r, 14 * d, 14 * d, paint);
         paint.setShader(null);
         // app tiles

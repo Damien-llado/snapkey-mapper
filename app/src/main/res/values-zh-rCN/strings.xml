@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TEST de rendu seulement : remplacé par la traduction complète (phase 3) -->
+<resources>
+    <string name="perm_title">权限设置</string>
+    <string name="btn_start">开始监听</string>
+    <string name="target_title">按键打开什么</string>
+    <string name="gesture_help">更改后请重新开始监听。单击最快；口袋里的误触不会触发双击。</string>
+    <string name="perm_auto_btn">自动设置日志读取权限</string>
+    <string name="lang_title">语言</string>
+</resources>

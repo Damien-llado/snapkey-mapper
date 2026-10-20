@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TEST de rendu seulement : remplacé par la traduction complète (phase 3) -->
+<resources>
+    <string name="perm_title">अनुमतियाँ</string>
+    <string name="btn_start">सुनना शुरू करें</string>
+    <string name="target_title">कुंजी क्या खोलती है</string>
+    <string name="gesture_help">बदलाव के बाद सुनना फिर से शुरू करें। एक बार दबाना सबसे तेज़ है; जेब में दबने से दो बार दबाना कभी नहीं चलता।</string>
+    <string name="perm_auto_btn">लॉग पढ़ने की अनुमति अपने आप सेट करें</string>
+    <string name="lang_title">भाषा</string>
+</resources>

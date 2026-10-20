@@ -48,7 +48,7 @@ final class Prefs {
                 // "intent:" links describe a full Android intent (set a timer, open the camera...); anything else is opened as a link
                 i = link.startsWith("intent:") ? Intent.parseUri(link, Intent.URI_INTENT_SCHEME) : new Intent(Intent.ACTION_VIEW, Uri.parse(link));
             } catch (URISyntaxException e) {
-                throw new IllegalArgumentException("Invalid intent link", e);
+                throw new IllegalArgumentException(c.getString(R.string.err_invalid_intent), e);
             }
             i.setSelector(null);
         }

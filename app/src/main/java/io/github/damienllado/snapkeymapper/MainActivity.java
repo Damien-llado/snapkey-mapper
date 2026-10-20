@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -22,6 +23,8 @@ import android.view.WindowInsetsController;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -54,6 +57,11 @@ public class MainActivity extends Activity {
     private Process log;
 
     @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(Lang.wrap(base));
+    }
+
+    @Override
     protected void onCreate(Bundle b) {
         super.onCreate(b);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -62,8 +70,6 @@ public class MainActivity extends Activity {
             requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
         }
         getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Ui.bg));
-        int bars = WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS | WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
-        getWindow().getInsetsController().setSystemBarsAppearance(Ui.night ? 0 : bars, bars);
 
         LinearLayout top = new LinearLayout(this);
         top.setOrientation(LinearLayout.VERTICAL);
@@ -94,16 +100,18 @@ public class MainActivity extends Activity {
         list.setOnItemClickListener((p, v, pos, id) -> {
             pattern.setText(suggestion(adapter.getItem(pos - list.getHeaderViewsCount())));
             save();
-            Toast.makeText(this, "Pattern saved, you can start listening", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.toast_pattern_saved), Toast.LENGTH_LONG).show();
         });
         // Android 15+ draws the app under the status bar: shift the content by its height
-        list.setClipToPadding(false);
+        list.setClipToPadding(true);
         list.setOnApplyWindowInsetsListener((v, insets) -> {
             android.graphics.Insets sys = insets.getInsets(WindowInsets.Type.systemBars());
             v.setPadding(0, sys.top, 0, sys.bottom);
             return insets;
         });
         setContentView(list);
+        int bars = WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS | WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
+        getWindow().getInsetsController().setSystemBarsAppearance(Ui.night ? 0 : bars, bars);
 
         if (getIntent().getBooleanExtra("restart", false)) startListening();
     }
@@ -134,39 +142,75 @@ public class MainActivity extends Activity {
         card.addView(left, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
 
         phone = new PhoneView(this);
-        card.addView(phone, new LinearLayout.LayoutParams(Ui.dp(this, 130), Ui.dp(this, 190)));
-        Ui.add(top, card, 0);
+        LinearLayout.LayoutParams pp = new LinearLayout.LayoutParams(Ui.dp(this, 120), Ui.dp(this, 170));
+        pp.topMargin = Ui.dp(this, 26);
+        card.addView(phone, pp);
+        FrameLayout frame = new FrameLayout(this);
+        frame.addView(card);
+        TextView lang = Ui.text(this, Lang.label(this) + " \u25BE", 13, 0xFFF0FFF7);
+        lang.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+        lang.setPadding(Ui.dp(this, 12), Ui.dp(this, 7), Ui.dp(this, 12), Ui.dp(this, 7));
+        Ui.ripple(lang, Ui.shape(this, 0x33FFFFFF, 14, 0x44FFFFFF));
+        lang.setElevation(Ui.dp(this, 8));
+        lang.setContentDescription(getString(R.string.lang_title));
+        lang.setOnClickListener(v -> chooseLanguage());
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.TOP | Gravity.END);
+        lp.setMargins(0, Ui.dp(this, 14), Ui.dp(this, 14), 0);
+        frame.addView(lang, lp);
+        Ui.add(top, frame, 0);
     }
 
     private void permissions(LinearLayout top) {
         LinearLayout card = Ui.card(this);
-        card.addView(Ui.title(this, "Permissions"));
-        Ui.add(card, Ui.body(this, "Three switches, once. The key itself needs nothing else."), 4);
+        card.addView(Ui.title(this, getString(R.string.perm_title)));
+        Ui.add(card, Ui.body(this, getString(R.string.perm_sub)), 4);
         if (AdbSetup.AVAILABLE) {
-            autoSetup = Ui.button(this, "Set up log reading automatically", true, v -> AdbSetup.start(this));
+            autoSetup = Ui.button(this, getString(R.string.perm_auto_btn), true, v -> AdbSetup.start(this));
             Ui.add(card, autoSetup, 14);
-            Ui.add(card, Ui.body(this, "Join your Wi-Fi, tap the button, then in Developer options turn on Wireless debugging, tap \"Pair device with pairing code\" and type the 6 digits in the notification. On ColorOS, turn on \"Disable system optimisation\" first."), 8);
+            Ui.add(card, Ui.body(this, getString(R.string.perm_auto_help)), 8);
         }
-        permissionRow(card, 0, "Log reading", null, null);
-        permissionRow(card, 1, "Display over other apps", "Allow", () -> startActivity(
+        permissionRow(card, 0, getString(R.string.perm_log), null, null);
+        permissionRow(card, 1, getString(R.string.perm_overlay), getString(R.string.perm_allow), () -> startActivity(
                 new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()))));
-        permissionRow(card, 2, "Battery unrestricted", "Allow", () -> startActivity(
+        permissionRow(card, 2, getString(R.string.perm_battery), getString(R.string.perm_allow), () -> startActivity(
                 new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse("package:" + getPackageName()))));
-        Ui.add(card, Ui.body(this, "On ColorOS, also set Battery usage to \"No restrictions\" in the app settings and lock the app in the recent apps."), 10);
-        Ui.add(card, Ui.button(this, "Open the app settings", false, v -> startActivity(
+        Ui.add(card, Ui.body(this, getString(R.string.perm_coloros)), 10);
+        Ui.add(card, Ui.button(this, getString(R.string.perm_app_settings), false, v -> startActivity(
                 new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName())))), 8);
-        Ui.add(card, Ui.body(this, "Log reading by hand, from a computer:"), 14);
+        Ui.add(card, Ui.body(this, getString(R.string.perm_by_hand)), 14);
+        FrameLayout box = new FrameLayout(this);
+        box.setBackground(Ui.shape(this, Ui.soft, 12, Ui.line));
         TextView cmd = Ui.text(this, COMMAND, 11, Ui.ink);
         cmd.setTypeface(Ui.mono);
         cmd.setTextIsSelectable(true);
-        cmd.setBackground(Ui.shape(this, Ui.soft, 12, Ui.line));
-        cmd.setPadding(Ui.dp(this, 12), Ui.dp(this, 10), Ui.dp(this, 12), Ui.dp(this, 10));
-        Ui.add(card, cmd, 6);
-        Ui.add(card, Ui.button(this, "Copy the command", false, v -> {
-            getSystemService(ClipboardManager.class).setPrimaryClip(ClipData.newPlainText("command", COMMAND));
-            Toast.makeText(this, "Command copied", Toast.LENGTH_SHORT).show();
-        }), 8);
+        cmd.setPadding(Ui.dp(this, 12), Ui.dp(this, 12), Ui.dp(this, 48), Ui.dp(this, 12));
+        box.addView(cmd);
+        box.addView(copyIcon(COMMAND), copyIconParams());
+        Ui.add(card, box, 6);
         Ui.add(top, card, 14);
+    }
+
+    /** Lucide "copy" icon at the top right of a field that holds a command; turns into a check mark for a second. */
+    private ImageView copyIcon(String text) {
+        ImageView icon = new ImageView(this);
+        icon.setImageResource(R.drawable.ic_copy);
+        icon.setColorFilter(Ui.muted);
+        icon.setPadding(Ui.dp(this, 7), Ui.dp(this, 7), Ui.dp(this, 7), Ui.dp(this, 7));
+        icon.setContentDescription(getString(R.string.perm_copy));
+        Ui.ripple(icon, Ui.shape(this, 0, 10, 0));
+        icon.setOnClickListener(v -> {
+            getSystemService(ClipboardManager.class).setPrimaryClip(ClipData.newPlainText("command", text));
+            icon.setImageResource(R.drawable.ic_check);
+            icon.setColorFilter(Ui.accent);
+            icon.postDelayed(() -> { icon.setImageResource(R.drawable.ic_copy); icon.setColorFilter(Ui.muted); }, 1500);
+        });
+        return icon;
+    }
+
+    private FrameLayout.LayoutParams copyIconParams() {
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(Ui.dp(this, 36), Ui.dp(this, 36), Gravity.TOP | Gravity.END);
+        lp.setMargins(0, Ui.dp(this, 4), Ui.dp(this, 4), 0);
+        return lp;
     }
 
     /** One line: coloured dot, name, state, and a button while it is not granted. */
@@ -197,9 +241,9 @@ public class MainActivity extends Activity {
 
     private void target(LinearLayout top) {
         LinearLayout card = Ui.card(this);
-        card.addView(Ui.title(this, "What the key opens"));
+        card.addView(Ui.title(this, getString(R.string.target_title)));
         boolean isApp = Prefs.targetType(this).equals("app");
-        Ui.add(card, new Ui.Segmented(this, new String[]{"A link", "An app"}, isApp ? 1 : 0, i -> {
+        Ui.add(card, new Ui.Segmented(this, new String[]{getString(R.string.target_link), getString(R.string.target_app)}, isApp ? 1 : 0, i -> {
             Prefs.targetType(this, i == 1 ? "app" : "link");
             linkBox.setVisibility(i == 1 ? View.GONE : View.VISIBLE);
             appBox.setVisibility(i == 1 ? View.VISIBLE : View.GONE);
@@ -207,7 +251,7 @@ public class MainActivity extends Activity {
 
         linkBox = new LinearLayout(this);
         ((LinearLayout) linkBox).setOrientation(LinearLayout.VERTICAL);
-        Ui.add((LinearLayout) linkBox, Ui.body(this, "A web address, a deep link or an intent: link"), 0);
+        Ui.add((LinearLayout) linkBox, Ui.body(this, getString(R.string.target_link_help)), 0);
         link = Ui.add((LinearLayout) linkBox, Ui.field(this, Prefs.link(this), "https://…"), 8);
         Ui.add(card, linkBox, 12);
         linkBox.setVisibility(isApp ? View.GONE : View.VISIBLE);
@@ -215,16 +259,16 @@ public class MainActivity extends Activity {
         appBox = new LinearLayout(this);
         ((LinearLayout) appBox).setOrientation(LinearLayout.VERTICAL);
         appName = Ui.add((LinearLayout) appBox, Ui.text(this, "", 16, Ui.ink), 0);
-        Ui.add((LinearLayout) appBox, Ui.button(this, "Choose an app", false, v -> chooseApp()), 8);
+        Ui.add((LinearLayout) appBox, Ui.button(this, getString(R.string.app_choose), false, v -> chooseApp()), 8);
         Ui.add(card, appBox, 12);
         appBox.setVisibility(isApp ? View.VISIBLE : View.GONE);
 
-        Ui.add(card, Ui.button(this, "Test the launch", true, v -> {
+        Ui.add(card, Ui.button(this, getString(R.string.target_test), true, v -> {
             save();
             try {
                 Prefs.openTarget(this);
             } catch (RuntimeException e) {
-                Toast.makeText(this, "Cannot open it: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.toast_cannot_open, e.getMessage()), Toast.LENGTH_LONG).show();
             }
         }), 14);
         Ui.add(top, card, 14);
@@ -232,10 +276,10 @@ public class MainActivity extends Activity {
 
     private void gesture(LinearLayout top) {
         LinearLayout card = Ui.card(this);
-        card.addView(Ui.title(this, "Gesture"));
-        Ui.add(card, Ui.body(this, "Restart listening after a change. Single press is the fastest; a double press never fires from a press in your pocket."), 4);
+        card.addView(Ui.title(this, getString(R.string.gesture_title)));
+        Ui.add(card, Ui.body(this, getString(R.string.gesture_help)), 4);
         int current = java.util.Arrays.asList(GESTURES).indexOf(Prefs.gesture(this));
-        Ui.add(card, new Ui.Segmented(this, new String[]{"One press", "Two presses", "Long press"}, Math.max(current, 0),
+        Ui.add(card, new Ui.Segmented(this, new String[]{getString(R.string.gesture_single), getString(R.string.gesture_double), getString(R.string.gesture_long)}, Math.max(current, 0),
                 i -> Prefs.gesture(this, GESTURES[i])), 12);
         Ui.add(top, card, 14);
     }
@@ -243,17 +287,17 @@ public class MainActivity extends Activity {
     /** For phones other than the Find X9: shows what the system log says when the key is pressed. */
     private void finder(LinearLayout top) {
         LinearLayout card = Ui.card(this);
-        card.addView(Ui.title(this, "Another phone? Find your key"));
-        Ui.add(card, Ui.body(this, "The Find X9 key is already known. On another phone: start the capture, press the side key 2 or 3 times, stop, then tap the line that comes back at every press."), 4);
-        capture = Ui.button(this, "Start capture", true, v -> toggleCapture());
+        card.addView(Ui.title(this, getString(R.string.finder_title)));
+        Ui.add(card, Ui.body(this, getString(R.string.finder_help)), 4);
+        capture = Ui.button(this, getString(R.string.capture_start), true, v -> toggleCapture());
         Ui.add(card, capture, 12);
         all = new CheckBox(this);
-        all.setText("Show all lines");
+        all.setText(getString(R.string.finder_all));
         all.setTextColor(Ui.muted);
         all.setOnCheckedChangeListener((c, checked) -> showCapture());
         Ui.add(card, all, 4);
-        Ui.add(card, Ui.button(this, "Save the capture to a file", false, v -> saveCapture()), 4);
-        Ui.add(card, Ui.body(this, "Pattern to recognise (part of the line, without numbers that change)"), 14);
+        Ui.add(card, Ui.button(this, getString(R.string.finder_save), false, v -> saveCapture()), 4);
+        Ui.add(card, Ui.body(this, getString(R.string.finder_pattern)), 14);
         pattern = Ui.add(card, Ui.field(this, Prefs.pattern(this), "KEYCODE_…"), 6);
         Ui.add(top, card, 14);
     }
@@ -285,16 +329,16 @@ public class MainActivity extends Activity {
         for (int i = 0; i < 3; i++) {
             if (ok[i]) done++;
             permDot[i].setBackground(Ui.shape(this, ok[i] ? Ui.accent : 0xFFE0A030, 6, 0));
-            permState[i].setText(ok[i] ? "Granted" : "Needed");
+            permState[i].setText(ok[i] ? getString(R.string.perm_granted) : getString(R.string.perm_needed));
             if (permAction[i] != null) permAction[i].setVisibility(ok[i] ? View.GONE : View.VISIBLE);
         }
         if (autoSetup != null) autoSetup.setVisibility(ok[0] ? View.GONE : View.VISIBLE);
         boolean on = ListenService.running;
-        heroState.setText(on ? "Listening: press the key" : done == 3 ? "Ready" : "Setup: " + done + " of 3 permissions");
-        listen.setText(on ? "Stop listening" : "Start listening");
+        heroState.setText(on ? getString(R.string.state_listening) : done == 3 ? getString(R.string.state_ready) : getString(R.string.state_setup, done));
+        listen.setText(on ? getString(R.string.btn_stop) : getString(R.string.btn_start));
         phone.setListening(on);
         String pkg = Prefs.appPackage(this);
-        appName.setText(pkg.isEmpty() ? "No app chosen" : label(pkg));
+        appName.setText(pkg.isEmpty() ? getString(R.string.app_none) : label(pkg));
     }
 
     private String label(String pkg) {
@@ -305,6 +349,16 @@ public class MainActivity extends Activity {
         }
     }
 
+    /** List of languages with their code and their name in that language. */
+    private void chooseLanguage() {
+        String[] names = new String[Lang.ALL.length];
+        for (int i = 0; i < names.length; i++) names[i] = Lang.ALL[i][1] + "   " + Lang.ALL[i][2];
+        new AlertDialog.Builder(this).setTitle(R.string.lang_title).setItems(names, (d, which) -> {
+            Lang.set(this, Lang.ALL[which][0]);
+            recreate();
+        }).show();
+    }
+
     private void chooseApp() {
         List<ResolveInfo> found = getPackageManager().queryIntentActivities(
                 new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER), 0);
@@ -312,7 +366,7 @@ public class MainActivity extends Activity {
                 .compareToIgnoreCase(b.loadLabel(getPackageManager()).toString()));
         String[] names = new String[found.size()];
         for (int i = 0; i < names.length; i++) names[i] = found.get(i).loadLabel(getPackageManager()).toString();
-        new AlertDialog.Builder(this).setTitle("Choose an app").setItems(names, (d, which) -> {
+        new AlertDialog.Builder(this).setTitle(getString(R.string.app_choose)).setItems(names, (d, which) -> {
             Prefs.appPackage(this, found.get(which).activityInfo.packageName);
             Prefs.targetType(this, "app");
             recreate();
@@ -327,7 +381,7 @@ public class MainActivity extends Activity {
         if (log != null) {
             log.destroy();
             log = null;
-            capture.setText("Start capture");
+            capture.setText(getString(R.string.capture_start));
             showCapture();
             return;
         }
@@ -339,9 +393,9 @@ public class MainActivity extends Activity {
                     if (captured.size() > 3000) captured.remove(0);
                 }
             }, null);
-            capture.setText("Stop capture");
+            capture.setText(getString(R.string.capture_stop));
         } catch (IOException e) {
-            Toast.makeText(this, "Cannot read the log: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.toast_cannot_read, e.getMessage()), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -352,7 +406,7 @@ public class MainActivity extends Activity {
         }
         adapter.clear();
         adapter.addAll(lines);
-        if (lines.isEmpty()) Toast.makeText(this, "No line: tick \"Show all lines\" or check the permission", Toast.LENGTH_LONG).show();
+        if (lines.isEmpty()) Toast.makeText(this, getString(R.string.toast_no_lines), Toast.LENGTH_LONG).show();
     }
 
     /** Saves the capture to a file picked by the user (cloud storage works): the share sheet crashes above ~500 KB. */
@@ -368,9 +422,9 @@ public class MainActivity extends Activity {
             synchronized (captured) {
                 for (String l : captured) out.write((l + "\n").getBytes(java.nio.charset.StandardCharsets.UTF_8));
             }
-            Toast.makeText(this, "Capture saved", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.toast_saved), Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
-            Toast.makeText(this, "Failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.toast_failed, e.getMessage()), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -387,7 +441,7 @@ public class MainActivity extends Activity {
 
     private void startListening() {
         if (Prefs.pattern(this).isEmpty()) {
-            Toast.makeText(this, "Choose the pattern first (step 3)", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.toast_choose_pattern), Toast.LENGTH_LONG).show();
             return;
         }
         startForegroundService(new Intent(this, ListenService.class));

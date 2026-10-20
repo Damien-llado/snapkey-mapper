@@ -29,8 +29,13 @@ public class ListenService extends Service {
     private volatile boolean stopRequested;
 
     @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(Lang.wrap(base));
+    }
+
+    @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        startForeground(1, notification(this, "SnapKey Mapper is listening", "Press the side key to open your target", 0),
+        startForeground(1, notification(this, getString(R.string.notif_listening_title), getString(R.string.notif_listening_text), 0),
                 ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE);
         if (log == null) {
             String pattern = Prefs.pattern(this);
@@ -39,7 +44,7 @@ public class ListenService extends Service {
                 log = Prefs.readLog(l -> {
                     // Diagnostic: Android logs the launches it blocks
                     if (l.contains(getPackageName()) && l.toLowerCase().contains("background activity")) {
-                        diagnostic("Launch blocked by Android");
+                        diagnostic(getString(R.string.diag_blocked));
                         return;
                     }
                     // Only the release line is read: it carries press and release times (in nanoseconds)
@@ -63,9 +68,9 @@ public class ListenService extends Service {
                     presses++;
                     try {
                         Prefs.openTarget(this);
-                        diagnostic("Launch requested");
+                        diagnostic(getString(R.string.diag_requested));
                     } catch (RuntimeException e) {
-                        diagnostic("Error: " + e.getClass().getSimpleName());
+                        diagnostic(getString(R.string.diag_error, e.getClass().getSimpleName()));
                     }
                 }, () -> {
                     if (stopRequested) return;
@@ -84,7 +89,7 @@ public class ListenService extends Service {
     /** Shows in the notification how many presses were seen and what happened at the last one. */
     private void diagnostic(String lastState) {
         getSystemService(NotificationManager.class).notify(1, notification(this,
-                "SnapKey Mapper is listening: " + presses + " press(es) detected", lastState, 0));
+                getString(R.string.notif_count, presses), lastState, 0));
     }
 
     @Override
@@ -99,14 +104,15 @@ public class ListenService extends Service {
     public IBinder onBind(Intent intent) { return null; }
 
     /** "Tap to restart" notification: after a reboot or if the system stopped the listener. */
-    static void warnStopped(Context c) {
+    static void warnStopped(Context base) {
+        Context c = Lang.wrap(base);
         c.getSystemService(NotificationManager.class)
-                .notify(2, notification(c, "SnapKey Mapper is stopped", "Tap here to restart listening", Notification.FLAG_AUTO_CANCEL));
+                .notify(2, notification(c, c.getString(R.string.notif_stopped_title), c.getString(R.string.notif_stopped_text), Notification.FLAG_AUTO_CANCEL));
     }
 
     static Notification notification(Context c, String title, String text, int flags) {
         NotificationManager nm = c.getSystemService(NotificationManager.class);
-        nm.createNotificationChannel(new NotificationChannel("listen", "Side key listener", NotificationManager.IMPORTANCE_LOW));
+        nm.createNotificationChannel(new NotificationChannel("listen", c.getString(R.string.channel_listen), NotificationManager.IMPORTANCE_LOW));
         Intent open = new Intent(c, MainActivity.class).putExtra("restart", flags != 0);
         Notification n = new Notification.Builder(c, "listen")
                 .setSmallIcon(android.R.drawable.ic_menu_send)
