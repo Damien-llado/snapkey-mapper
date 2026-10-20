@@ -159,7 +159,7 @@
     <ul class="facts">
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><span><strong>No root</strong> No bootloader unlock</span></li>
       <li><svg aria-hidden="true"><use href="#g-wifi"/></svg><span><strong>No Wi-Fi needed</strong> Works on mobile data</span></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><span><strong>No internet permission</strong> Nothing leaves the phone</span></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><span><strong>Nothing collected</strong> Open source, verifiable</span></li>
       <li><svg aria-hidden="true"><use href="#g-gh"/></svg><span><strong>Open source</strong> About 500 lines, MIT</span></li>
     </ul>
   </section>
@@ -315,7 +315,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS logs every press</h3><p>The system log gets a line with <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper reads the log, spots that line and opens your app or link.</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>No root, no accessibility</h3><p>Reading the log needs one permission, <code>READ_LOGS</code>, granted once with a single command. It stays after a reboot.</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Nothing leaves your phone</h3><p>No internet permission, so the app cannot send anything anywhere. It keeps only your target, the key name and the gesture.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Nothing collected</h3><p>No account, no tracker, no ads. It keeps only your target, the key name and the gesture, on your phone. The lite edition has no internet permission at all, so Android itself stops it from sending anything.</p></li>
     </ul>
   </section>
 
@@ -335,7 +335,7 @@
         <li>Show one notification while it listens</li>
       </ul></div>
       <div><h3>What it cannot do</h3><ul>
-        <li>Use the internet: it has no internet permission</li>
+        <li>Send anything out: the lite edition has no internet permission; the full edition uses it only to talk to your own phone, once, during setup</li>
         <li>Access your messages, notifications or screen: it has no permission for them</li>
         <li>Show ads, track you or ask for an account</li>
       </ul></div>
@@ -346,7 +346,7 @@
   <section id="setup" class="narrow" aria-labelledby="setup-h">
     <p class="kicker">Setup</p>
     <h2 id="setup-h">Set it up in 6 steps</h2>
-    <p class="sub">About 10 minutes, once. You need Wi-Fi only for step 2.</p>
+    <p class="sub">About 10 minutes, once. You need Wi-Fi only for step 3.</p>
     <ol class="steps">
       <li>
         <h3>Set OPPO's own Snap Key action to nothing</h3>
@@ -359,10 +359,9 @@
         <!-- capture à ajouter : Screenshot: ⋮ menu, "Allow restricted settings" -->
       </li>
       <li>
-        <h3>Grant the log permission, once</h3>
-        <p>This is the only technical step. On ColorOS, first open <em>Settings › Additional settings › Developer options</em> and turn on <strong>Disable system optimisation</strong> (on ColorOS 16 it may only show when the phone is in English: switch the language for a minute if you cannot find it). Then run this command with ADB rights:</p>
-        <pre><code>pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre>
-        <details class="more"><summary>Without a computer, or with one</summary><p><strong>Without a computer</strong>: install <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a>, start its Expert mode (wireless debugging, Wi-Fi needed), create a <em>Shell command</em> action, paste the command, choose <em>ADB</em> and tap <em>Test</em>. Exit code 0 means done; you can uninstall Key Mapper. <strong>With a computer</strong>: <code>adb shell pm grant …</code>. You can turn <em>Disable system optimisation</em> back off afterwards: the permission stays.</p></details>
+        <h3>Let the app grant itself the log permission</h3>
+        <p>On ColorOS, first open <em>Settings › Additional settings › Developer options</em> and turn on <strong>Disable system optimisation</strong> (on ColorOS 16 it may only show when the phone is in English: switch the language for a minute if you cannot find it). Then join your Wi-Fi and tap <strong>Set up log reading automatically</strong> in the app. In Developer options, turn on <strong>Wireless debugging</strong>, tap <strong>Pair device with pairing code</strong>, pull the notification down and type the 6 digits. When the notification says it is set up, turn Wireless debugging off.</p>
+        <details class="more"><summary>With a computer, or the lite edition</summary><p>The lite edition has no internet permission and does not set itself up: run <code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code> from a computer, or from the phone with <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (Expert mode, <em>Shell command</em> action, ADB, then <em>Test</em>). You can turn <em>Disable system optimisation</em> back off afterwards: the permission stays.</p></details>
         <!-- capture à ajouter : Screenshot: Developer options, "Disable system optimisation" -->
       </li>
       <li>
@@ -381,7 +380,7 @@
         <!-- capture à ajouter : Screenshot: "Allow access to all device logs?" -->
       </li>
     </ol>
-    <p class="note"><strong>Security tip.</strong> When you are done, turn off wireless debugging in Developer options. SnapKey Mapper does not need it.</p>
+    <p class="note"><strong>Security tip.</strong> When you are done, turn off wireless debugging in Developer options. SnapKey Mapper does not need it, and it deletes its own pairing key right after the setup.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
@@ -409,13 +408,13 @@
 
     <details><summary>Do I need root?</summary><div><p>No. The app needs one permission, <code>READ_LOGS</code>, which Android lets you grant with an ADB command, without root and without unlocking the bootloader.</p></div></details>
 
-    <details><summary>Do I need a computer?</summary><div><p>No. Key Mapper can run the command from the phone itself through wireless debugging. A computer with <code>adb</code> works too.</p></div></details>
+    <details><summary>Do I need a computer?</summary><div><p>No. The app sets the permission up by itself through your phone’s own wireless debugging, once. A computer with <code>adb</code> works too, and is how the lite edition is set up.</p></div></details>
 
     <details><summary>Does it need Wi-Fi all the time?</summary><div><p>No. Wi-Fi is only needed once, for the wireless debugging used to grant the permission. SnapKey Mapper keeps working on mobile data and with Wi-Fi off.</p></div></details>
 
     <details><summary>Why is "Disable system optimisation" needed?</summary><div><p>Without it, ColorOS refuses the <code>pm grant</code> command ("Neither user 2000 nor current process has GRANT_RUNTIME_PERMISSIONS"). Turn it on, grant the permission, then turn it off again if you like.</p></div></details>
 
-    <details><summary>Is it safe? What can the app see?</summary><div><p><code>READ_LOGS</code> lets an app read the system log, which can contain details from other apps. That is why SnapKey Mapper has no internet permission: it cannot send anything. It stores only your target, the key name and the gesture. The code is short and public: read it on GitHub, and only install builds from the official releases. See <a href="#safety">Safe to install</a>.</p></div></details>
+    <details><summary>Is it safe? What can the app see?</summary><div><p><code>READ_LOGS</code> lets an app read the system log, which can contain details from other apps. So do not take our word for it, check. The app collects nothing and has no tracker or account. The lite edition has no internet permission: Android blocks all network use, and you can check that with AppVerifier. The full edition declares it only to talk to your own phone during setup; the only network code is in one short file, and you can block the network for the app afterwards. The source is public, each release lists the SHA-256 and the signing fingerprint, and you can build it yourself. See <a href="#safety">Safe to install</a>. (This website uses Microsoft Clarity for anonymous visit statistics; the app has nothing like it.)</p></div></details>
 
     <details><summary>Why does Android ask for log access again?</summary><div><p>Since Android 13, every new log reading session needs your consent, and only while the app is on screen. SnapKey Mapper keeps one session open, so you only answer again after a reboot or if the system stops the app.</p></div></details>
 
