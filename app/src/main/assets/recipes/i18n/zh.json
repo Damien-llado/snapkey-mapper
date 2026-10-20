@@ -1,0 +1,666 @@
+{
+ "apps": {
+  "clock": {
+   "name": "时钟"
+  },
+  "camera": {
+   "name": "相机"
+  },
+  "phone": {
+   "name": "电话"
+  },
+  "messages": {
+   "name": "信息"
+  },
+  "email": {
+   "name": "电子邮件"
+  },
+  "web": {
+   "name": "网页"
+  },
+  "calendar": {
+   "name": "日历"
+  },
+  "contacts": {
+   "name": "联系人"
+  },
+  "settings": {
+   "name": "设置"
+  },
+  "assistant": {
+   "name": "语音助手"
+  }
+ },
+ "recipes": {
+  "clock-timer": {
+   "title": "开始计时器",
+   "desc": "立即开始倒计时，不用打开时钟应用。",
+   "vars": {
+    "SECONDS": {
+     "label": "时长（秒）",
+     "where": "分钟数乘以 60：5 分钟是 300，1 小时是 3600。"
+    }
+   }
+  },
+  "clock-timer-label": {
+   "title": "开始带名称的计时器",
+   "desc": "开始一个带名称的倒计时，例如“煮面”。",
+   "vars": {
+    "SECONDS": {
+     "label": "时长（秒）",
+     "where": "分钟数乘以 60：10 分钟是 600。"
+    },
+    "LABEL": {
+     "label": "计时器名称",
+     "where": "任意简短文字。"
+    }
+   }
+  },
+  "clock-alarm": {
+   "title": "设置闹钟",
+   "desc": "在你选的时间创建闹钟，不用打开时钟应用。",
+   "vars": {
+    "HOUR": {
+     "label": "小时（0 到 23）",
+     "where": "24 小时制：早上 7 点填 7，晚上 7 点填 19。"
+    },
+    "MINUTES": {
+     "label": "分钟（0 到 59）",
+     "where": "只填时间里的分钟。"
+    }
+   }
+  },
+  "clock-alarm-label": {
+   "title": "设置带名称的闹钟",
+   "desc": "创建一个带名称的闹钟，例如“健身”。",
+   "vars": {
+    "HOUR": {
+     "label": "小时（0 到 23）",
+     "where": "24 小时制：早上 7 点填 7，晚上 7 点填 19。"
+    },
+    "MINUTES": {
+     "label": "分钟（0 到 59）",
+     "where": "只填时间里的分钟。"
+    },
+    "LABEL": {
+     "label": "闹钟名称",
+     "where": "任意简短文字。"
+    }
+   }
+  },
+  "clock-show-alarms": {
+   "title": "查看闹钟",
+   "desc": "打开你的闹钟列表。"
+  },
+  "clock-show-timers": {
+   "title": "查看计时器",
+   "desc": "打开你的计时器列表。"
+  },
+  "camera-photo": {
+   "title": "以拍照模式打开相机",
+   "desc": "打开默认相机应用，直接就能拍照。"
+  },
+  "camera-video": {
+   "title": "以录像模式打开相机",
+   "desc": "打开默认相机应用，直接就能录像。"
+  },
+  "phone-dial": {
+   "title": "拨打号码",
+   "desc": "打开拨号界面并填好号码。拨出键由你自己按。",
+   "vars": {
+    "NUMBER": {
+     "label": "电话号码",
+     "where": "带国家区号，例如 +33123456789。"
+    }
+   }
+  },
+  "phone-open-dialer": {
+   "title": "打开拨号盘",
+   "desc": "打开电话应用的拨号键盘。"
+  },
+  "messages-compose": {
+   "title": "写短信",
+   "desc": "打开信息应用，收件人和内容都已填好。发送键由你自己按。",
+   "vars": {
+    "NUMBER": {
+     "label": "电话号码",
+     "where": "带国家区号，例如 +33123456789。"
+    },
+    "MESSAGE": {
+     "label": "消息",
+     "where": "要发送的文字。"
+    }
+   }
+  },
+  "email-compose": {
+   "title": "写邮件",
+   "desc": "打开邮件应用，地址、主题和正文都已填好。发送键由你自己按。",
+   "vars": {
+    "ADDRESS": {
+     "label": "邮箱地址",
+     "where": "收件人的地址。"
+    },
+    "SUBJECT": {
+     "label": "主题",
+     "where": "任意简短文字。"
+    },
+    "BODY": {
+     "label": "正文",
+     "where": "邮件的内容。"
+    }
+   }
+  },
+  "web-open": {
+   "title": "打开网站",
+   "desc": "在浏览器（或能处理该网址的应用）中打开任意网址。",
+   "vars": {
+    "URL": {
+     "label": "网址",
+     "where": "从浏览器里复制，以 https:// 开头。"
+    }
+   }
+  },
+  "web-search": {
+   "title": "网页搜索",
+   "desc": "用固定的文字进行网页搜索。",
+   "vars": {
+    "QUERY": {
+     "label": "搜索内容",
+     "where": "你想查找的内容。"
+    }
+   }
+  },
+  "calendar-new-event": {
+   "title": "创建日程",
+   "desc": "打开日历，新建一个日程并填好标题。",
+   "vars": {
+    "TITLE": {
+     "label": "日程标题",
+     "where": "任意简短文字。"
+    }
+   }
+  },
+  "calendar-open": {
+   "title": "打开日历",
+   "desc": "打开日历并显示今天。"
+  },
+  "contacts-new": {
+   "title": "新建联系人",
+   "desc": "新建一个联系人，姓名和电话号码都已填好。",
+   "vars": {
+    "NAME": {
+     "label": "姓名",
+     "where": "任意姓名。"
+    },
+    "NUMBER": {
+     "label": "电话号码",
+     "where": "带国家区号，例如 +33123456789。"
+    }
+   }
+  },
+  "settings-wifi": {
+   "title": "Wi-Fi 设置",
+   "desc": "打开 Wi-Fi 网络列表。"
+  },
+  "settings-bluetooth": {
+   "title": "蓝牙设置",
+   "desc": "打开蓝牙设置。"
+  },
+  "settings-airplane": {
+   "title": "飞行模式设置",
+   "desc": "打开飞行模式设置。"
+  },
+  "settings-display": {
+   "title": "显示设置",
+   "desc": "打开亮度、深色模式和自动锁屏时间设置。"
+  },
+  "settings-sound": {
+   "title": "声音设置",
+   "desc": "打开音量和铃声设置。"
+  },
+  "settings-battery-saver": {
+   "title": "省电模式设置",
+   "desc": "打开省电模式设置。"
+  },
+  "settings-location": {
+   "title": "位置信息设置",
+   "desc": "打开位置信息设置。"
+  },
+  "settings-nfc": {
+   "title": "NFC 设置",
+   "desc": "打开 NFC 设置。"
+  },
+  "settings-data-usage": {
+   "title": "流量使用设置",
+   "desc": "打开移动数据流量使用情况页面。"
+  },
+  "settings-accessibility": {
+   "title": "无障碍设置",
+   "desc": "打开无障碍设置。"
+  },
+  "settings-language": {
+   "title": "语言设置",
+   "desc": "打开语言设置。"
+  },
+  "settings-date": {
+   "title": "日期和时间设置",
+   "desc": "打开日期和时间设置。"
+  },
+  "settings-apps": {
+   "title": "所有应用",
+   "desc": "打开已安装应用的列表。"
+  },
+  "settings-developer": {
+   "title": "开发者选项",
+   "desc": "打开开发者选项（需已开启）。"
+  },
+  "google-maps-navigate-to-address": {
+   "title": "导航到某个地址",
+   "desc": "在 Google Maps 中开始驾车逐向导航，从你当前的位置到某个地址或地点。",
+   "note": "从你当前的位置开始导航。第一次使用时 Google Maps 会请求位置权限。",
+   "vars": {
+    "ADDRESS": {
+     "label": "目的地地址或地点名称",
+     "where": "输入完整的街道地址或知名地点名称，就像在 Google Maps 里搜索时那样输入。"
+    }
+   }
+  },
+  "google-maps-navigate-walking": {
+   "title": "步行到某个地址",
+   "desc": "在 Google Maps 中开始步行导航，从你当前的位置到某个地址或地点。",
+   "note": "从你当前的位置开始步行导航。",
+   "vars": {
+    "ADDRESS": {
+     "label": "目的地地址或地点名称",
+     "where": "输入完整的街道地址或知名地点名称，就像在 Google Maps 里搜索时那样输入。"
+    }
+   }
+  },
+  "google-maps-navigate-cycling": {
+   "title": "骑行到某个地址",
+   "desc": "在 Google Maps 中开始骑行导航，从你当前的位置到某个地址或地点。",
+   "note": "并非所有国家都提供骑行路线。",
+   "vars": {
+    "ADDRESS": {
+     "label": "目的地地址或地点名称",
+     "where": "输入完整的街道地址或知名地点名称，就像在 Google Maps 里搜索时那样输入。"
+    }
+   }
+  },
+  "google-maps-search-nearby": {
+   "title": "搜索附近地点",
+   "desc": "打开 Google Maps 并显示搜索结果，例如你附近的餐厅或药店。",
+   "note": "打开 Google Maps 并显示搜索结果。",
+   "vars": {
+    "SEARCH": {
+     "label": "要搜索什么",
+     "where": "输入地点类型或名称，和你在 Google Maps 搜索框里输入的词一样。"
+    }
+   }
+  },
+  "google-maps-transit-directions": {
+   "title": "乘公共交通去某地",
+   "desc": "在 Google Maps 中显示从你当前位置到目的地的公共交通路线。",
+   "note": "在 Google Maps 中打开路线；如果应用不接收，就在浏览器中打开。",
+   "vars": {
+    "DESTINATION": {
+     "label": "目的地地址或地点名称",
+     "where": "输入地址或地点名称，就像在 Google Maps 里搜索时那样。"
+    }
+   }
+  },
+  "google-maps-street-view": {
+   "title": "按坐标打开街景",
+   "desc": "在 Google Maps 中打开离某个经纬度最近的街景全景图。",
+   "note": "如果这个点附近没有全景图，Google Maps 会提示。",
+   "vars": {
+    "LATITUDE": {
+     "label": "纬度",
+     "where": "在 Google Maps 中长按地图上的某个位置：搜索框里显示的第一个数字就是纬度。"
+    },
+    "LONGITUDE": {
+     "label": "经度",
+     "where": "在 Google Maps 中长按地图上的某个位置：搜索框里显示的第二个数字就是经度。"
+    }
+   }
+  },
+  "assistant-open": {
+   "title": "打开语音助手",
+   "desc": "启动手机的默认助手，效果和系统手势一样。"
+  },
+  "youtube-open-channel": {
+   "title": "打开频道",
+   "desc": "通过频道标识名打开 YouTube 频道页面。",
+   "note": "在 YouTube 应用中打开频道页面。",
+   "vars": {
+    "HANDLE": {
+     "label": "频道标识名（不带 @）",
+     "where": "在 YouTube 中打开该频道：频道名称下方以 @ 开头的就是标识名；在这里填写时去掉 @。"
+    }
+   }
+  },
+  "youtube-open-playlist": {
+   "title": "打开播放列表",
+   "desc": "打开指定的 YouTube 播放列表。",
+   "note": "打开播放列表页面，不会自动开始播放。",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "播放列表 ID",
+     "where": "打开播放列表页面，点“分享”，再点“复制链接”（或在浏览器里查看网址）；ID 就是链接中 list= 后面的部分。"
+    }
+   }
+  },
+  "youtube-open-video": {
+   "title": "打开视频",
+   "desc": "打开指定的视频，例如你常看的直播或教程。",
+   "note": "在 YouTube 应用中打开视频。",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "视频 ID",
+     "where": "打开视频，点“分享”，再点“复制链接”；ID 就是 v= 后面的部分（短链接则是 youtu.be/ 后面的部分）。"
+    }
+   }
+  },
+  "youtube-search": {
+   "title": "搜索 YouTube",
+   "desc": "用固定的关键词打开 YouTube 搜索结果。",
+   "note": "打开搜索结果。",
+   "vars": {
+    "QUERY": {
+     "label": "搜索内容",
+     "where": "任何你想搜索的词。"
+    }
+   }
+  },
+  "ytmusic-open-library": {
+   "title": "打开媒体库",
+   "desc": "打开 YouTube Music 的“媒体库”标签页。",
+   "note": "需要已登录的 YouTube Music 应用。"
+  },
+  "ytmusic-search": {
+   "title": "搜索 YouTube Music",
+   "desc": "用固定的关键词打开 YouTube Music 搜索结果。",
+   "note": "在 YouTube Music 中打开搜索结果。",
+   "vars": {
+    "QUERY": {
+     "label": "搜索内容",
+     "where": "任何你想搜索的词。"
+    }
+   }
+  },
+  "ytmusic-open-playlist": {
+   "title": "打开播放列表",
+   "desc": "在 YouTube Music 中打开指定的播放列表或专辑。",
+   "note": "在 YouTube Music 中打开该播放列表或专辑。",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "播放列表 ID",
+     "where": "在 YouTube Music 中打开播放列表，点菜单，选“分享”，再点“复制链接”；ID 就是链接中 list= 后面的部分。"
+    }
+   }
+  },
+  "ytmusic-open-song": {
+   "title": "打开歌曲",
+   "desc": "在 YouTube Music 播放器中打开指定的歌曲。",
+   "note": "在 YouTube Music 中打开这首歌。",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "歌曲 ID",
+     "where": "打开歌曲，点菜单，选“分享”，再点“复制链接”；ID 就是链接中 v= 后面的部分。"
+    }
+   }
+  },
+  "gmail-compose": {
+   "title": "写新邮件",
+   "desc": "打开 Gmail 的写邮件界面，内容为空。",
+   "note": "点“发送”之前不会发出任何内容。"
+  },
+  "gmail-compose-to-person": {
+   "title": "给某人写邮件",
+   "desc": "打开 Gmail 的写邮件界面，收件人已填好。",
+   "note": "点“发送”之前不会发出任何内容。",
+   "vars": {
+    "EMAIL_ADDRESS": {
+     "label": "收件人邮箱地址",
+     "where": "填写你最常写信的那个人的地址。"
+    }
+   }
+  },
+  "gmail-compose-with-subject": {
+   "title": "写带主题和正文的邮件",
+   "desc": "打开 Gmail 的写邮件界面，主题和正文都已填好。",
+   "note": "点“发送”之前不会发出任何内容。",
+   "vars": {
+    "SUBJECT": {
+     "label": "主题",
+     "where": "填写邮件主题。"
+    },
+    "BODY": {
+     "label": "正文",
+     "where": "填写邮件的正文。"
+    }
+   }
+  },
+  "telegram-open-chat": {
+   "title": "按用户名打开聊天",
+   "desc": "打开与 Telegram 公开用户、群组、频道或机器人的对话。",
+   "note": "适用于有公开用户名的用户、群组、频道和机器人。",
+   "vars": {
+    "USERNAME": {
+     "label": "Telegram 用户名",
+     "where": "不带 @ 的公开名称，显示在个人资料的“用户名”下面。"
+    }
+   }
+  },
+  "telegram-open-chat-with-draft": {
+   "title": "打开聊天并填好消息",
+   "desc": "打开公开聊天，并在输入框中预先填好消息（你点发送之前不会发出任何内容）。",
+   "note": "文字会填入输入框；你点发送之前不会发出任何内容。",
+   "vars": {
+    "USERNAME": {
+     "label": "Telegram 用户名",
+     "where": "不带 @ 的公开名称，显示在个人资料的“用户名”下面。"
+    },
+    "MESSAGE": {
+     "label": "消息",
+     "where": "你的文字，照你平时输入的那样写。"
+    }
+   }
+  },
+  "telegram-open-chat-by-phone": {
+   "title": "按电话号码打开聊天",
+   "desc": "通过电话号码打开与某人的 Telegram 对话。",
+   "note": "仅当对方使用 Telegram 并允许别人通过号码找到自己时有效。",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "电话号码",
+     "where": "国家区号在前，只填数字，例如 33123456789。空格和 + 会被忽略。"
+    }
+   }
+  },
+  "telegram-join-invite": {
+   "title": "通过邀请链接加入私密群组",
+   "desc": "根据邀请码打开 Telegram 私密群组或频道的加入提示。",
+   "note": "打开私密群组或频道的邀请。",
+   "vars": {
+    "INVITE_HASH": {
+     "label": "邀请码",
+     "where": "在类似 https://t.me/+AbCdEf123 的邀请链接中，复制 + 后面的部分（旧链接格式：t.me/joinchat/HASH）。"
+    }
+   }
+  },
+  "telegram-story-composer": {
+   "title": "打开动态发布界面",
+   "desc": "打开 Telegram 的动态相机和编辑界面，发布新动态。",
+   "note": "打开创建动态的界面。"
+  },
+  "telegram-global-search": {
+   "title": "打开全局搜索",
+   "desc": "打开 Telegram 的搜索界面，可搜索所有聊天和公开内容。",
+   "note": "打开搜索界面。"
+  },
+  "whatsapp-open-chat": {
+   "title": "打开聊天",
+   "desc": "打开与指定电话号码的 WhatsApp 对话。",
+   "note": "打开与这个号码的对话。",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "电话号码",
+     "where": "国家区号在前，只填数字，例如 33123456789。空格和 + 会被忽略。"
+    }
+   }
+  },
+  "whatsapp-open-chat-with-message": {
+   "title": "打开聊天并备好消息",
+   "desc": "打开与某个电话号码的 WhatsApp 对话，并在输入框中预先填好消息（你点发送之前不会发出任何内容）。",
+   "note": "文字会填入输入框；你点发送之前不会发出任何内容。",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "电话号码",
+     "where": "国家区号在前，只填数字，例如 33123456789。空格和 + 会被忽略。"
+    },
+    "MESSAGE": {
+     "label": "消息",
+     "where": "你的文字，照你平时输入的那样写。"
+    }
+   }
+  },
+  "whatsapp-share-text": {
+   "title": "把文字发给我选的联系人",
+   "desc": "打开 WhatsApp 的联系人选择界面，消息已经填好，由你选择发给谁。",
+   "note": "WhatsApp 会让你选择发给谁。",
+   "vars": {
+    "MESSAGE": {
+     "label": "消息",
+     "where": "你的文字，照你平时输入的那样写。"
+    }
+   }
+  },
+  "whatsapp-join-group": {
+   "title": "通过邀请链接加入或打开群组",
+   "desc": "根据邀请码打开 WhatsApp 群组（显示加入提示；如果已是成员，则直接打开群组）。",
+   "note": "打开群组邀请。",
+   "vars": {
+    "INVITE_CODE": {
+     "label": "群组邀请码",
+     "where": "群组邀请链接中 chat.whatsapp.com/ 后面的部分（在群组中：打开群组信息，选择通过链接邀请，再复制链接）。"
+    }
+   }
+  },
+  "signal-open-chat-by-phone": {
+   "title": "按电话号码打开聊天",
+   "desc": "通过电话号码打开与某人的 Signal 对话。",
+   "note": "如果对方使用 Signal，就会打开与这个号码的对话。",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "电话号码",
+     "where": "国家区号在前，只填数字，例如 33123456789。空格和 + 会被忽略。"
+    }
+   }
+  },
+  "signal-open-group-link": {
+   "title": "通过群组链接加入或打开群组",
+   "desc": "根据群组链接打开 Signal 群组的加入提示。",
+   "note": "打开 Signal 群组邀请。",
+   "vars": {
+    "GROUP_LINK_CODE": {
+     "label": "群组链接代码",
+     "where": "在 Signal 中：打开群组，点群组名称，进入群组链接，分享或复制；只保留 https://signal.group/#... 中 # 后面的那串长文字。"
+    }
+   }
+  },
+  "obsidian-open-vault": {
+   "title": "打开我的仓库",
+   "desc": "打开选定的 Obsidian 仓库（如果已打开，则切换到它）。",
+   "note": "打开仓库，停留在上次的界面。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "仓库名称",
+     "where": "在 Obsidian 中打开仓库切换界面（侧边栏底部的仓库图标，或仓库列表），复制你的仓库显示的名称；它也就是仓库文件夹的名称。"
+    }
+   }
+  },
+  "obsidian-open-note": {
+   "title": "打开指定笔记",
+   "desc": "打开仓库中的某一篇笔记。",
+   "note": "打开仓库中的这篇笔记。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "仓库名称",
+     "where": "在 Obsidian 中打开仓库切换界面（侧边栏底部的仓库图标，或仓库列表），复制你的仓库显示的名称；它也就是仓库文件夹的名称。"
+    },
+    "NOTE_PATH": {
+     "label": "笔记名称或路径",
+     "where": "笔记的文件名，或从仓库根目录开始的路径；可以省略 .md 扩展名。"
+    }
+   }
+  },
+  "obsidian-daily-note": {
+   "title": "打开今天的日记",
+   "desc": "创建或打开今天的日记。",
+   "note": "打开今天的日记，没有就创建。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "仓库名称",
+     "where": "在 Obsidian 中打开仓库切换界面（侧边栏底部的仓库图标，或仓库列表），复制你的仓库显示的名称；它也就是仓库文件夹的名称。"
+    }
+   }
+  },
+  "obsidian-new-note": {
+   "title": "新建笔记",
+   "desc": "用指定的名称新建笔记（放在仓库默认的新笔记位置）并打开。",
+   "note": "笔记不存在时才会创建。Obsidian 必须能访问该仓库。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "仓库名称",
+     "where": "在 Obsidian 中打开仓库切换界面（侧边栏底部的仓库图标，或仓库列表），复制你的仓库显示的名称；它也就是仓库文件夹的名称。"
+    },
+    "NOTE_NAME": {
+     "label": "新笔记名称",
+     "where": "输入你想要的标题；文件会以 <title>.md 创建。"
+    }
+   }
+  },
+  "obsidian-quick-capture-daily": {
+   "title": "在今天的日记中添加一行",
+   "desc": "把指定的文字追加到今天日记的末尾。",
+   "note": "把文字添加到今天日记的末尾。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "仓库名称",
+     "where": "在 Obsidian 中打开仓库切换界面（侧边栏底部的仓库图标，或仓库列表），复制你的仓库显示的名称；它也就是仓库文件夹的名称。"
+    },
+    "TEXT_TO_ADD": {
+     "label": "要追加的文字",
+     "where": "要添加的文字，照你平时输入的那样写。"
+    }
+   }
+  },
+  "obsidian-search": {
+   "title": "搜索我的仓库",
+   "desc": "在仓库中打开 Obsidian 搜索并执行查询。",
+   "note": "用这段文字打开搜索。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "仓库名称",
+     "where": "在 Obsidian 中打开仓库切换界面（侧边栏底部的仓库图标，或仓库列表），复制你的仓库显示的名称；它也就是仓库文件夹的名称。"
+    },
+    "SEARCH_TEXT": {
+     "label": "搜索内容",
+     "where": "输入要查找的词或短语。"
+    }
+   }
+  },
+  "homeassistant-open-dashboard": {
+   "title": "打开仪表盘页面",
+   "desc": "在 Home Assistant 配套应用中打开选定的仪表盘视图。",
+   "note": "打开 Home Assistant 的某个仪表盘或视图。",
+   "vars": {
+    "DASHBOARD_PATH": {
+     "label": "仪表盘路径",
+     "where": "在 Home Assistant 网页界面中打开该页面，复制地址和端口之后的路径，不要开头的斜杠。"
+    }
+   }
+  }
+ }
+}

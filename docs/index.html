@@ -330,6 +330,27 @@
     </div>
   </section>
 
+  <section id="library" class="wide" aria-labelledby="lib-h">
+    <div class="split">
+      <div class="split-copy">
+        <p class="kicker">Recipe library</p>
+        <h2 id="lib-h">Do not know the link? Pick a recipe</h2>
+        <p>The app comes with a library of ready-made recipes, grouped by app: start a timer, set an alarm, open the camera, call a number, write a text, navigate to a place, open a playlist or a chat. Pick one, fill in your values, test it and use it for the key.</p>
+        <ul class="ticks">
+          <li>Grouped by app, with the official logos</li>
+          <li>One field per value, with a hint on where to find it</li>
+          <li>Live preview of the final link, with copy and test buttons</li>
+          <li>Every recipe checked on an Android emulator, with a link to the official page that documents it</li>
+        </ul>
+        <p class="muted small">Checked on an emulator is not checked on every phone: the clock, camera and settings apps differ on ColorOS, and some apps need an account. The test button in each recipe tells you in one tap.</p>
+      </div>
+      <div class="appshots">
+        <img src="/img/library.png" width="540" height="1200" alt="The recipe library of SnapKey Mapper: apps with their logos and the number of recipes" loading="lazy">
+        <img src="/img/recipe.png" width="540" height="1200" alt="A recipe with a field for each value and the final link built live" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <section class="wide" aria-labelledby="how">
     <p class="kicker">Under the hood</p>
     <h2 id="how">How it works, honestly</h2>
@@ -337,7 +358,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS logs every press</h3><p>The system log gets a line with <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper reads the log, spots that line and opens your app or link.</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>No root, no accessibility</h3><p>Reading the log needs one permission, <code>READ_LOGS</code>, granted once with a single command. It stays after a reboot.</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Nothing collected</h3><p>No account, no tracker, no ads. It keeps only your target, the key name and the gesture, on your phone. The lite edition has no internet permission at all, so Android itself stops it from sending anything.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Nothing collected</h3><p>In the app: no account, no tracker, no ads. It keeps only your target, the key name and the gesture, on your phone. The lite edition has no internet permission at all, so Android does not let it open network connections itself.</p></li>
     </ul>
   </section>
 
@@ -358,7 +379,7 @@
       </ul></div>
       <div><h3>What it cannot do</h3><ul>
         <li>Send anything out: the lite edition has no internet permission; the full edition uses it only to talk to your own phone, once, during setup</li>
-        <li>Access your messages, notifications or screen: it has no permission for them</li>
+        <li>Access your messages, notifications or screen: it has no permission for them (it does read the system log, see the FAQ)</li>
         <li>Show ads, track you or ask for an account</li>
       </ul></div>
     </div>
@@ -396,7 +417,7 @@
         <p>Tap <strong>Start listening</strong>. Android 13 and newer asks "Allow access to all device logs?": choose <strong>Allow one-time access</strong>. That access lasts as long as the listening runs, so you only see it again after a reboot (tap the "SnapKey Mapper is off" notification).</p>
       </li>
     </ol>
-    <p class="note"><strong>Security tip.</strong> When you are done, turn off wireless debugging in Developer options. SnapKey Mapper does not need it, and it deletes its own pairing key right after the setup.</p>
+    <p class="note"><strong>Security tip.</strong> When you are done, turn off wireless debugging in Developer options. SnapKey Mapper does not need it, and it deletes its own pairing key right after the setup. Then remove SnapKey Mapper from Wireless debugging › Paired devices. Do the setup only on a Wi-Fi network you trust.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
@@ -451,6 +472,10 @@
     <details><summary>How do I uninstall it?</summary><div><p>Like any app. The permission goes away with it. Turn wireless debugging off if you left it on.</p></div></details>
 
     <details><summary>Is it affiliated with OPPO?</summary><div><p>No. SnapKey Mapper is an independent open source project, not affiliated with OPPO, OnePlus, Key Mapper, Anthropic or any app shown on this page. These names only describe compatibility.</p></div></details>
+
+    <details><summary>What is the recipe library?</summary><div><p>A list of ready-made links grouped by app: timers, alarms, camera, calls, texts, maps, music, chats and more. Open it from the app, pick a recipe, fill in the blanks, test it, then use it for the Snap Key. Each recipe links to the official page that documents it.</p></div></details>
+
+    <details><summary>How do I know a recipe works on my phone?</summary><div><p>Recipes are checked on an Android emulator, not on every phone. The clock, camera and settings apps differ on ColorOS, and some apps need an account. The test button of each recipe tells you in one tap. If one fails on your phone, tell us on GitHub so we can fix or remove it.</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">

@@ -42,7 +42,7 @@
     <string name="gesture_double">दो बार दबाना</string>
     <string name="gesture_long">देर तक दबाना</string>
     <string name="finder_title">दूसरा फ़ोन? अपना बटन ढूँढें</string>
-    <string name="finder_help">Find X9 का बटन पहले से पता है। दूसरे फ़ोन पर: कैप्चर शुरू करें, साइड बटन 2 या 3 बार दबाएँ, रोकें, फिर वह लाइन टैप करें जो हर बार दबाने पर आती है।</string>
+    <string name="finder_help">Find X9 का बटन पहले से पता है। दूसरे फ़ोन पर: कैप्चर शुरू करें, साइड बटन 2 या 3 बार दबाएँ, रोकें, फिर वह लाइन टैप करें जो हर बार दबाने पर आती है। कैप्चर में दूसरे ऐप्स की निजी जानकारी हो सकती है: साझा करने से पहले उसे जाँच लें।</string>
     <string name="capture_start">कैप्चर शुरू करें</string>
     <string name="capture_stop">कैप्चर रोकें</string>
     <string name="finder_all">सभी लाइनें दिखाएँ</string>
@@ -75,4 +75,20 @@
     <string name="err_invalid_intent">गलत intent लिंक</string>
     <string name="setup_fail_pair">पेयरिंग विफल रही। ऐप का सेटअप बटन फिर से टैप करें, फिर “Pair device with pairing code” और नया कोड लिखें। फिर भी न हो, तो वायरलेस डीबगिंग बंद करके फिर चालू करें।</string>
     <string name="lang_title">भाषा</string>
+    <string name="library_open">रेसिपी लाइब्रेरी देखें</string>
+    <string name="library_title">रेसिपी लाइब्रेरी</string>
+    <string name="library_intro">तैयार लिंक, ऐप के हिसाब से ग्रुप किए हुए। एक चुनें, अपनी वैल्यू भरें, टेस्ट करें, फिर उसे Snap Key के लिए इस्तेमाल करें।</string>
+    <string name="library_search">कोई ऐप या ऐक्शन खोजें</string>
+    <string name="library_count">रेसिपी: %1$d</string>
+    <string name="library_not_installed">इंस्टॉल नहीं है</string>
+    <string name="library_empty">आपकी खोज से कुछ नहीं मिला।</string>
+    <string name="recipe_fields">आपकी वैल्यू</string>
+    <string name="recipe_link">फ़ाइनल लिंक</string>
+    <string name="recipe_use">यह रेसिपी इस्तेमाल करें</string>
+    <string name="recipe_fill_all">पहले हर फ़ील्ड भरें।</string>
+    <string name="recipe_saved">आपके टारगेट के रूप में सेव हो गया।</string>
+    <string name="recipe_missing">कुछ नहीं खुला। क्या ऐप इंस्टॉल है?</string>
+    <string name="recipe_verified">%1$s को Android एमुलेटर पर जाँचा गया।</string>
+    <string name="recipe_verified_partial">Android एमुलेटर (%1$s) पर यह लिंक सही ऐप तक पहुँचा, पर एमुलेटर इससे ज़्यादा नहीं दिखा सका। टेस्ट बटन से पक्का करें।</string>
+    <string name="recipe_source">आधिकारिक दस्तावेज़</string>
 </resources>

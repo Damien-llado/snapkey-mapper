@@ -330,6 +330,27 @@
     </div>
   </section>
 
+  <section id="library" class="wide" aria-labelledby="lib-h">
+    <div class="split">
+      <div class="split-copy">
+        <p class="kicker">Biblioteca de receitas</p>
+        <h2 id="lib-h">Não sabe o link? Escolha uma receita</h2>
+        <p>O app vem com uma biblioteca de receitas prontas, agrupadas por app: iniciar um timer, criar um alarme, abrir a câmera, ligar para um número, escrever um SMS, navegar até um lugar, abrir uma playlist ou uma conversa. Escolha uma, preencha seus valores, teste e use na tecla.</p>
+        <ul class="ticks">
+          <li>Agrupadas por app, com os logos oficiais</li>
+          <li>Um campo por valor, com uma dica de onde encontrar cada um</li>
+          <li>Prévia do link final em tempo real, com botões para copiar e testar</li>
+          <li>Cada receita verificada em um emulador Android, com um link para a página oficial que a documenta</li>
+        </ul>
+        <p class="muted small">Verificada em um emulador não quer dizer verificada em todos os celulares: os apps de relógio, câmera e configurações são diferentes no ColorOS, e alguns apps exigem uma conta. O botão de teste de cada receita tira a dúvida com um toque.</p>
+      </div>
+      <div class="appshots">
+        <img src="/img/library.png" width="540" height="1200" alt="A biblioteca de receitas do SnapKey Mapper: apps com seus logos e o número de receitas" loading="lazy">
+        <img src="/img/recipe.png" width="540" height="1200" alt="Uma receita com um campo para cada valor e o link final montado em tempo real" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <section class="wide" aria-labelledby="how">
     <p class="kicker">Por dentro</p>
     <h2 id="how">Como funciona, sem rodeios</h2>
@@ -337,7 +358,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>O ColorOS registra cada pressão</h3><p>O log do sistema ganha uma linha com <code>KEYCODE_ACTION_BUTTON_CLICK</code>. O SnapKey Mapper lê o log, identifica essa linha e abre seu app ou link.</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>Sem root, sem acessibilidade</h3><p>Ler o log exige uma única permissão, <code>READ_LOGS</code>, concedida uma vez com um só comando. Ela continua valendo depois de reiniciar.</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Nenhum dado coletado</h3><p>Sem conta, sem rastreador, sem anúncios. Ele guarda só o seu destino, o nome da tecla e o gesto, no seu celular. A edição lite não tem nenhuma permissão de internet, então o próprio Android impede que ela envie qualquer coisa.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Nenhum dado coletado</h3><p>No app: sem conta, sem rastreador, sem anúncios. Ele guarda só o seu destino, o nome da tecla e o gesto, no seu celular. A edição lite não tem nenhuma permissão de internet, então o próprio Android não a deixa abrir conexões de rede por conta própria.</p></li>
     </ul>
   </section>
 
@@ -358,7 +379,7 @@
       </ul></div>
       <div><h3>O que ele não pode fazer</h3><ul>
         <li>Enviar qualquer coisa para fora: a edição lite não tem permissão de internet; a edição completa só a usa para falar com o seu próprio celular, uma vez, na configuração</li>
-        <li>Acessar suas mensagens, notificações ou tela: ele não tem permissão para isso</li>
+        <li>Acessar suas mensagens, notificações ou tela: ele não tem permissão para isso (mas ele lê o log do sistema, veja as Perguntas)</li>
         <li>Mostrar anúncios, rastrear você ou pedir uma conta</li>
       </ul></div>
     </div>
@@ -396,7 +417,7 @@
         <p>Toque em <strong>Começar a escutar</strong>. O Android 13 ou mais recente pergunta "Permitir acesso a todos os registros do dispositivo?": escolha <strong>Permitir acesso único</strong>. Esse acesso dura enquanto a escuta estiver ativa, então você só o vê de novo depois de reiniciar (toque na notificação "O SnapKey Mapper está desligado").</p>
       </li>
     </ol>
-    <p class="note"><strong>Dica de segurança.</strong> Quando terminar, desative a depuração por Wi-Fi nas Opções do desenvolvedor. O SnapKey Mapper não precisa dela e apaga a própria chave de pareamento logo após a configuração.</p>
+    <p class="note"><strong>Dica de segurança.</strong> Quando terminar, desative a depuração por Wi-Fi nas Opções do desenvolvedor. O SnapKey Mapper não precisa dela e apaga a própria chave de pareamento logo após a configuração. Depois remova o SnapKey Mapper de Depuração por Wi-Fi › Dispositivos pareados. Faça a configuração só em uma rede Wi-Fi em que você confie.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
@@ -451,6 +472,10 @@
     <details><summary>Como desinstalo?</summary><div><p>Como qualquer app. A permissão vai embora junto. Desative a depuração por Wi-Fi se você a deixou ligada.</p></div></details>
 
     <details><summary>Tem ligação com a OPPO?</summary><div><p>Não. O SnapKey Mapper é um projeto open source independente, sem ligação com a OPPO, a OnePlus, o Key Mapper, a Anthropic ou qualquer app mostrado nesta página. Esses nomes só indicam compatibilidade.</p></div></details>
+
+    <details><summary>O que é a biblioteca de receitas?</summary><div><p>Uma lista de links prontos agrupados por app: timers, alarmes, câmera, ligações, SMS, mapas, música, conversas e mais. Abra pelo app, escolha uma receita, preencha os campos, teste e depois use na Snap Key. Cada receita tem um link para a página oficial que a documenta.</p></div></details>
+
+    <details><summary>Como sei se uma receita funciona no meu celular?</summary><div><p>As receitas são verificadas em um emulador Android, não em todos os celulares. Os apps de relógio, câmera e configurações são diferentes no ColorOS, e alguns apps exigem uma conta. O botão de teste de cada receita tira a dúvida com um toque. Se alguma falhar no seu celular, avise a gente no GitHub para corrigirmos ou removermos.</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">

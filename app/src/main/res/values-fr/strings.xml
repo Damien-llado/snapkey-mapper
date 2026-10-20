@@ -42,7 +42,7 @@
     <string name="gesture_double">Deux appuis</string>
     <string name="gesture_long">Appui long</string>
     <string name="finder_title">Un autre téléphone ? Trouvez votre touche</string>
-    <string name="finder_help">La touche du Find X9 est déjà connue. Sur un autre téléphone : lancez la capture, appuyez 2 ou 3 fois sur la touche latérale, arrêtez, puis touchez la ligne qui revient à chaque appui.</string>
+    <string name="finder_help">La touche du Find X9 est déjà connue. Sur un autre téléphone : lancez la capture, appuyez 2 ou 3 fois sur la touche latérale, arrêtez, puis touchez la ligne qui revient à chaque appui. La capture peut contenir des informations personnelles venant d\'autres applis : vérifiez-la avant de la partager.</string>
     <string name="capture_start">Lancer la capture</string>
     <string name="capture_stop">Arrêter la capture</string>
     <string name="finder_all">Afficher toutes les lignes</string>
@@ -75,4 +75,20 @@
     <string name="err_invalid_intent">Lien intent invalide</string>
     <string name="setup_fail_pair">L\'association a échoué. Touchez de nouveau le bouton de configuration de l\'appli, puis « Associer l\'appareil avec un code d\'association », et saisissez le nouveau code. Si cela échoue encore, désactivez puis réactivez le débogage sans fil.</string>
     <string name="lang_title">Langue</string>
+    <string name="library_open">Parcourir la bibliothèque de recettes</string>
+    <string name="library_title">Bibliothèque de recettes</string>
+    <string name="library_intro">Des liens prêts à l\'emploi, classés par appli. Choisissez-en un, remplissez vos valeurs, testez-le, puis utilisez-le pour la Snap Key.</string>
+    <string name="library_search">Chercher une appli ou une action</string>
+    <string name="library_count">Recettes : %1$d</string>
+    <string name="library_not_installed">Non installée</string>
+    <string name="library_empty">Aucun résultat pour votre recherche.</string>
+    <string name="recipe_fields">Vos valeurs</string>
+    <string name="recipe_link">Lien final</string>
+    <string name="recipe_use">Utiliser cette recette</string>
+    <string name="recipe_fill_all">Remplissez d\'abord tous les champs.</string>
+    <string name="recipe_saved">Enregistré comme cible.</string>
+    <string name="recipe_missing">Rien ne s\'est ouvert. L\'appli est-elle installée ?</string>
+    <string name="recipe_verified">Vérifiée sur un émulateur Android le %1$s.</string>
+    <string name="recipe_verified_partial">Sur un émulateur Android (%1$s), la bonne appli a bien reçu ce lien, mais l\'émulateur n\'a pas pu en montrer plus. Confirmez avec le bouton de test.</string>
+    <string name="recipe_source">Documentation officielle</string>
 </resources>

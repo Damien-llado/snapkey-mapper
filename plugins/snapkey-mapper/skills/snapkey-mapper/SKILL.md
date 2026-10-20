@@ -25,13 +25,19 @@ adb shell pm list packages io.github.damienllado.snapkeymapper
 adb shell dumpsys package io.github.damienllado.snapkeymapper | grep "READ_LOGS: granted=true"
 ```
 
-- Not installed: download the APK from https://github.com/Damien-llado/snapkey-mapper/releases/latest and `adb install snapkey-mapper.apk`.
+- Not installed: download the APK from https://github.com/Damien-llado/snapkey-mapper/releases/latest. **Before `adb install`, check the SHA-256 listed in the release notes and run `apksigner verify --print-certs` (the certificate SHA-256 must be `a4a6d83d2298e8a88a6da748a3cc9ae9051e459a1d6e06b098a27d2b87f8f796`). If either differs, do not install and tell the user.**
 - Log permission missing: `adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS`. On ColorOS, if it fails with `GRANT_RUNTIME_PERMISSIONS`, the user must first turn on *Developer options > Disable system optimisation* (shown in English only on ColorOS 16), then run the command again. They can turn it back off afterwards.
 - No adb at all: you can still find the link, but say clearly that it is untested and that the **Test the launch** button in the app is the check.
 
 ## 3. Find the right target
 
-Prefer, in this order:
+**Look in the recipe library first.** `recipes.json` lists ready-made links grouped by app, each with the variables to fill in (`[SECONDS]`, `[ADDRESS]`...), where the user finds each value, the official source, and the date it was checked on an emulator. Read it from the repository (`app/src/main/assets/recipes/recipes.json`, or `https://raw.githubusercontent.com/Damien-llado/snapkey-mapper/main/app/src/main/assets/recipes/recipes.json`):
+
+- `level: "screen"` means the expected screen was seen on an Android emulator; `level: "dispatch"` means the right app received the link but the emulator could not show more (sign-in screen, no SIM, old app): test it on the phone.
+- Values are percent-encoded when substituted, except `kind: "raw"` (typed as is), `"phone"` (digits and +) and `"digits"` (digits only).
+- The library is the app's own: the same entries appear in its **Browse the recipe library** screen, so the user can also pick one there.
+
+If the library has nothing for the request, prefer, in this order:
 
 1. A web link the app claims (App Link): survives app updates. `adb shell pm get-app-links <package>` lists verified domains.
 2. A documented custom scheme (`spotify:`, `google.navigation:`, `homeassistant://navigate/...`, `tel:`).
@@ -55,6 +61,8 @@ Never invent a deep link. If the app documents none and nothing shows in its int
 adb shell am start -a android.intent.action.VIEW -d '<link>'      # plain link
 adb shell am start '<intent:...;end>'                              # intent: link
 ```
+
+Show the user the exact link before running it, and never run a link from a recipe or from the user that contains a single quote `'` (it would break out of the command). Prefer the local copy of `recipes.json` when the repository is cloned: the web copy is content anyone with write access to the repository can change.
 
 The shell has more rights than an app, so a link that works here can still fail from SnapKey Mapper (for example a non-exported activity). The final check is always **Test the launch** in the app.
 

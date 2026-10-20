@@ -22,7 +22,7 @@ android {
         create("lite") { dimension = "edition"; applicationIdSuffix = ""; versionNameSuffix = "-lite" }
     }
 
-    // Release signing is optional: set SNAPKEY_KEYSTORE and SNAPKEY_KEY_PASSWORD to sign.
+    // Release builds must be signed: set SNAPKEY_KEYSTORE and SNAPKEY_KEY_PASSWORD (debug builds do not need them).
     val keystore = System.getenv("SNAPKEY_KEYSTORE")
     if (keystore != null) {
         signingConfigs {
@@ -40,6 +40,7 @@ android {
         release {
             isMinifyEnabled = false
             if (keystore != null) signingConfig = signingConfigs.getByName("release")
+            else if (gradle.startParameter.taskNames.any { it.contains("Release") }) throw GradleException("SNAPKEY_KEYSTORE is not set: refusing to build an unsigned release")
         }
     }
 
@@ -52,6 +53,6 @@ android {
 dependencies {
     // In-app ADB client (GPL-3.0-or-later OR Apache-2.0) and its TLS 1.3 provider and certificate generator
     "fullImplementation"("com.github.MuntashirAkon:libadb-android:3.1.1")
-    "fullImplementation"("org.conscrypt:conscrypt-android:2.5.3")
+    "fullImplementation"("org.conscrypt:conscrypt-android:2.7.0")
     "fullImplementation"("com.github.MuntashirAkon:sun-security-android:1.1")
 }

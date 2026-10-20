@@ -330,6 +330,27 @@
     </div>
   </section>
 
+  <section id="library" class="wide" aria-labelledby="lib-h">
+    <div class="split">
+      <div class="split-copy">
+        <p class="kicker">Biblioteca de recetas</p>
+        <h2 id="lib-h">¿No sabes el enlace? Elige una receta</h2>
+        <p>La app incluye una biblioteca de recetas listas para usar, agrupadas por app: iniciar un temporizador, poner una alarma, abrir la cámara, llamar a un número, escribir un SMS, ir a un lugar, abrir una lista de reproducción o un chat. Elige una, rellena tus datos, pruébala y úsala para la tecla.</p>
+        <ul class="ticks">
+          <li>Agrupadas por app, con los logotipos oficiales</li>
+          <li>Un campo por dato, con una pista sobre dónde encontrarlo</li>
+          <li>Vista previa en directo del enlace final, con botones para copiarlo y probarlo</li>
+          <li>Cada receta comprobada en un emulador de Android, con un enlace a la página oficial que la documenta</li>
+        </ul>
+        <p class="muted small">Comprobada en un emulador no significa comprobada en todos los móviles: las apps de reloj, cámara y ajustes son distintas en ColorOS, y algunas apps necesitan una cuenta. El botón de prueba de cada receta te lo dice con un toque.</p>
+      </div>
+      <div class="appshots">
+        <img src="/img/library.png" width="540" height="1200" alt="La biblioteca de recetas de SnapKey Mapper: apps con sus logotipos y el número de recetas" loading="lazy">
+        <img src="/img/recipe.png" width="540" height="1200" alt="Una receta con un campo para cada dato y el enlace final construido en directo" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <section class="wide" aria-labelledby="how">
     <p class="kicker">Por dentro</p>
     <h2 id="how">Cómo funciona, sin rodeos</h2>
@@ -337,7 +358,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS registra cada pulsación</h3><p>El registro del sistema recibe una línea con <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper lee el registro, detecta esa línea y abre tu app o tu enlace.</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>Sin root, sin accesibilidad</h3><p>Leer el registro requiere un solo permiso, <code>READ_LOGS</code>, que se concede una vez con un solo comando. Se mantiene tras reiniciar.</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Cero datos recogidos</h3><p>Sin cuenta, sin rastreadores, sin anuncios. Solo guarda tu destino, el nombre de la tecla y el gesto, en tu móvil. La edición lite no tiene ningún permiso de internet, así que el propio Android le impide enviar nada.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Cero datos recogidos</h3><p>En la app: sin cuenta, sin rastreadores, sin anuncios. Solo guarda tu destino, el nombre de la tecla y el gesto, en tu móvil. La edición lite no tiene ningún permiso de internet, así que el propio Android no le deja abrir conexiones de red por sí misma.</p></li>
     </ul>
   </section>
 
@@ -358,7 +379,7 @@
       </ul></div>
       <div><h3>Lo que no puede hacer</h3><ul>
         <li>Enviar nada fuera: la edición lite no tiene permiso de internet; la edición completa solo lo usa para hablar con tu propio móvil, una vez, durante la configuración</li>
-        <li>Acceder a tus mensajes, notificaciones o pantalla: no tiene permiso para ello</li>
+        <li>Acceder a tus mensajes, notificaciones o pantalla: no tiene permiso para ello (sí lee el registro del sistema, mira la FAQ)</li>
         <li>Mostrar anuncios, rastrearte o pedirte una cuenta</li>
       </ul></div>
     </div>
@@ -396,7 +417,7 @@
         <p>Toca <strong>Empezar a escuchar</strong>. Android 13 y posteriores preguntan «¿Permitir el acceso a todos los registros del dispositivo?»: elige <strong>Permitir acceso único</strong>. Ese acceso dura mientras la escucha esté activa, así que solo lo vuelves a ver tras un reinicio (toca la notificación «SnapKey Mapper está detenido»).</p>
       </li>
     </ol>
-    <p class="note"><strong>Consejo de seguridad.</strong> Cuando termines, desactiva la depuración inalámbrica en Opciones para desarrolladores. SnapKey Mapper no la necesita y borra su propia clave de vinculación justo después de la configuración.</p>
+    <p class="note"><strong>Consejo de seguridad.</strong> Cuando termines, desactiva la depuración inalámbrica en Opciones para desarrolladores. SnapKey Mapper no la necesita y borra su propia clave de vinculación justo después de la configuración. Después quita SnapKey Mapper de Depuración inalámbrica › Dispositivos vinculados. Haz la configuración solo en una red Wi-Fi de confianza.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
@@ -451,6 +472,10 @@
     <details><summary>¿Cómo la desinstalo?</summary><div><p>Como cualquier app. El permiso desaparece con ella. Desactiva la depuración inalámbrica si la dejaste activada.</p></div></details>
 
     <details><summary>¿Tiene relación con OPPO?</summary><div><p>No. SnapKey Mapper es un proyecto independiente de código abierto, sin relación con OPPO, OnePlus, Key Mapper, Anthropic ni ninguna app que aparezca en esta página. Estos nombres solo indican compatibilidad.</p></div></details>
+
+    <details><summary>¿Qué es la biblioteca de recetas?</summary><div><p>Una lista de enlaces listos para usar, agrupados por app: temporizadores, alarmas, cámara, llamadas, SMS, mapas, música, chats y más. Ábrela desde la app, elige una receta, rellena los huecos, pruébala y úsala para la Snap Key. Cada receta enlaza a la página oficial que la documenta.</p></div></details>
+
+    <details><summary>¿Cómo sé si una receta funciona en mi móvil?</summary><div><p>Las recetas se comprueban en un emulador de Android, no en todos los móviles. Las apps de reloj, cámara y ajustes son distintas en ColorOS, y algunas apps necesitan una cuenta. El botón de prueba de cada receta te lo dice con un toque. Si alguna falla en tu móvil, avísanos en GitHub para corregirla o quitarla.</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">

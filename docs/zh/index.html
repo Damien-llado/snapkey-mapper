@@ -330,6 +330,27 @@
     </div>
   </section>
 
+  <section id="library" class="wide" aria-labelledby="lib-h">
+    <div class="split">
+      <div class="split-copy">
+        <p class="kicker">模板库</p>
+        <h2 id="lib-h">不知道链接？选一个模板</h2>
+        <p>应用自带一个现成的模板库，按应用分组：开始计时器、设置闹钟、打开相机、拨打号码、写短信、导航到某地、打开播放列表或聊天。选一个，填好你的内容，测试一下，然后设为按键的目标。</p>
+        <ul class="ticks">
+          <li>按应用分组，配有官方图标</li>
+          <li>每项内容一个字段，并提示去哪里找</li>
+          <li>实时预览最终链接，可一键复制和测试</li>
+          <li>每个模板都在 Android 模拟器上验证过，并附有说明它的官方文档链接</li>
+        </ul>
+        <p class="muted small">在模拟器上验证过，不等于在每部手机上都验证过：ColorOS 上的时钟、相机和设置应用有所不同，有些应用还需要登录账号。每个模板里的测试按钮，点一下就能告诉你结果。</p>
+      </div>
+      <div class="appshots">
+        <img src="/img/library.png" width="540" height="1200" alt="SnapKey Mapper 的模板库：各应用的图标及其模板数量" loading="lazy">
+        <img src="/img/recipe.png" width="540" height="1200" alt="一个模板：每项内容一个字段，最终链接实时生成" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <section class="wide" aria-labelledby="how">
     <p class="kicker">技术原理</p>
     <h2 id="how">实话实说：它是怎么做到的</h2>
@@ -337,7 +358,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS 会记录每一次按键</h3><p>系统日志里会出现一行 <code>KEYCODE_ACTION_BUTTON_CLICK</code>。SnapKey Mapper 读取日志，发现这一行，就打开你的应用或链接。</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>无需 root，不用无障碍</h3><p>读取日志只需要一个权限 <code>READ_LOGS</code>，用一条命令授予一次即可，重启后依然有效。</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>不收集任何数据</h3><p>没有账号，没有追踪，没有广告。它只在你手机上保存目标、按键名称和手势。精简版完全没有联网权限，Android 本身就会阻止它发送任何数据。</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>不收集任何数据</h3><p>在应用里：没有账号，没有追踪，没有广告。它只在你手机上保存目标、按键名称和手势。精简版完全没有联网权限，Android 本身不允许它自行建立网络连接。</p></li>
     </ul>
   </section>
 
@@ -358,7 +379,7 @@
       </ul></div>
       <div><h3>它不能做什么</h3><ul>
         <li>向外发送任何东西：精简版没有联网权限；完整版只在设置时用它和你自己的手机通信一次</li>
-        <li>访问你的消息、通知或屏幕：它没有这些权限</li>
+        <li>访问你的消息、通知或屏幕：它没有这些权限（不过它会读取系统日志，见常见问题）</li>
         <li>显示广告、追踪你或要求注册账号</li>
       </ul></div>
     </div>
@@ -396,7 +417,7 @@
         <p>点 <strong>开始监听</strong>。Android 13 及以上会询问“允许访问所有设备日志吗？”：选择 <strong>允许一次性访问</strong>。只要监听在运行，这次授权就一直有效，所以只有重启后才会再看到（点“SnapKey Mapper 已关闭”通知即可）。</p>
       </li>
     </ol>
-    <p class="note"><strong>安全提示。</strong>设置完成后，在开发者选项中关闭无线调试。SnapKey Mapper 不需要它，并且会在设置完成后立即删除自己的配对密钥。</p>
+    <p class="note"><strong>安全提示。</strong>设置完成后，在开发者选项中关闭无线调试。SnapKey Mapper 不需要它，并且会在设置完成后立即删除自己的配对密钥。之后请在无线调试 › 已配对的设备中移除 SnapKey Mapper。只在你信任的 Wi-Fi 网络上进行设置。</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
@@ -451,6 +472,10 @@
     <details><summary>怎么卸载？</summary><div><p>和其他应用一样。权限会随之移除。如果无线调试还开着，记得关掉。</p></div></details>
 
     <details><summary>它和 OPPO 有关系吗？</summary><div><p>没有。SnapKey Mapper 是独立的开源项目，与 OPPO、OnePlus、Key Mapper、Anthropic 以及本页出现的任何应用均无关联。这些名称仅用于说明兼容性。</p></div></details>
+
+    <details><summary>什么是模板库？</summary><div><p>一份按应用分组的现成链接列表：计时器、闹钟、相机、通话、短信、地图、音乐、聊天等等。在应用里打开它，选一个模板，填好空白处，测试一下，然后设为 Snap Key 的目标。每个模板都附有说明它的官方文档链接。</p></div></details>
+
+    <details><summary>怎么知道某个模板在我的手机上能用？</summary><div><p>模板是在 Android 模拟器上验证的，并非在每部手机上都验证过。ColorOS 上的时钟、相机和设置应用有所不同，有些应用还需要登录账号。每个模板里的测试按钮，点一下就能告诉你结果。如果某个模板在你的手机上不能用，请在 GitHub 上告诉我们，我们会修复或删除它。</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">

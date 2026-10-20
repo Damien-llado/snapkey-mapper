@@ -1,0 +1,666 @@
+{
+ "apps": {
+  "clock": {
+   "name": "Klok"
+  },
+  "camera": {
+   "name": "Camera"
+  },
+  "phone": {
+   "name": "Telefoon"
+  },
+  "messages": {
+   "name": "Berichten"
+  },
+  "email": {
+   "name": "E-mail"
+  },
+  "web": {
+   "name": "Web"
+  },
+  "calendar": {
+   "name": "Agenda"
+  },
+  "contacts": {
+   "name": "Contacten"
+  },
+  "settings": {
+   "name": "Instellingen"
+  },
+  "assistant": {
+   "name": "Assistent"
+  }
+ },
+ "recipes": {
+  "clock-timer": {
+   "title": "Een timer starten",
+   "desc": "Start meteen een aftelling, zonder de klok-app te openen.",
+   "vars": {
+    "SECONDS": {
+     "label": "Duur in seconden",
+     "where": "Vermenigvuldig de minuten met 60: 5 minuten is 300, 1 uur is 3600."
+    }
+   }
+  },
+  "clock-timer-label": {
+   "title": "Een timer met naam starten",
+   "desc": "Start een aftelling met een naam, bijvoorbeeld \"Pasta\".",
+   "vars": {
+    "SECONDS": {
+     "label": "Duur in seconden",
+     "where": "Vermenigvuldig de minuten met 60: 10 minuten is 600."
+    },
+    "LABEL": {
+     "label": "Naam van de timer",
+     "where": "Een korte tekst naar keuze."
+    }
+   }
+  },
+  "clock-alarm": {
+   "title": "Een wekker zetten",
+   "desc": "Zet een wekker op de tijd die je kiest, zonder de klok-app te openen.",
+   "vars": {
+    "HOUR": {
+     "label": "Uur (0 tot 23)",
+     "where": "24-uursnotatie: 7 voor 7 uur 's ochtends, 19 voor 7 uur 's avonds."
+    },
+    "MINUTES": {
+     "label": "Minuten (0 tot 59)",
+     "where": "Alleen de minuten van de tijd."
+    }
+   }
+  },
+  "clock-alarm-label": {
+   "title": "Een wekker met naam zetten",
+   "desc": "Zet een wekker met een naam, bijvoorbeeld \"Sportschool\".",
+   "vars": {
+    "HOUR": {
+     "label": "Uur (0 tot 23)",
+     "where": "24-uursnotatie: 7 voor 7 uur 's ochtends, 19 voor 7 uur 's avonds."
+    },
+    "MINUTES": {
+     "label": "Minuten (0 tot 59)",
+     "where": "Alleen de minuten van de tijd."
+    },
+    "LABEL": {
+     "label": "Naam van de wekker",
+     "where": "Een korte tekst naar keuze."
+    }
+   }
+  },
+  "clock-show-alarms": {
+   "title": "Wekkers tonen",
+   "desc": "Opent de lijst met je wekkers."
+  },
+  "clock-show-timers": {
+   "title": "Timers tonen",
+   "desc": "Opent de lijst met je timers."
+  },
+  "camera-photo": {
+   "title": "Camera openen in fotomodus",
+   "desc": "Opent de standaard camera-app, klaar om een foto te maken."
+  },
+  "camera-video": {
+   "title": "Camera openen in videomodus",
+   "desc": "Opent de standaard camera-app, klaar om te filmen."
+  },
+  "phone-dial": {
+   "title": "Een nummer kiezen",
+   "desc": "Opent het toetsenblok met het nummer al ingetypt. Op de belknop druk je zelf.",
+   "vars": {
+    "NUMBER": {
+     "label": "Telefoonnummer",
+     "where": "Met de landcode, bijvoorbeeld +33123456789."
+    }
+   }
+  },
+  "phone-open-dialer": {
+   "title": "Toetsenblok openen",
+   "desc": "Opent het toetsenblok van de telefoon-app."
+  },
+  "messages-compose": {
+   "title": "Een sms schrijven",
+   "desc": "Opent je berichten-app met de ontvanger en de tekst al ingevuld. Op verzenden druk je zelf.",
+   "vars": {
+    "NUMBER": {
+     "label": "Telefoonnummer",
+     "where": "Met de landcode, bijvoorbeeld +33123456789."
+    },
+    "MESSAGE": {
+     "label": "Bericht",
+     "where": "De tekst die je wilt versturen."
+    }
+   }
+  },
+  "email-compose": {
+   "title": "Een e-mail schrijven",
+   "desc": "Opent je mail-app met het adres, het onderwerp en de tekst al ingevuld. Op verzenden druk je zelf.",
+   "vars": {
+    "ADDRESS": {
+     "label": "E-mailadres",
+     "where": "De persoon aan wie je schrijft."
+    },
+    "SUBJECT": {
+     "label": "Onderwerp",
+     "where": "Een korte tekst naar keuze."
+    },
+    "BODY": {
+     "label": "Bericht",
+     "where": "De tekst van de e-mail."
+    }
+   }
+  },
+  "web-open": {
+   "title": "Een website openen",
+   "desc": "Opent elk webadres in je browser (of in de app die het afhandelt).",
+   "vars": {
+    "URL": {
+     "label": "Webadres",
+     "where": "Kopieer het uit je browser, het begint met https://."
+    }
+   }
+  },
+  "web-search": {
+   "title": "Op het web zoeken",
+   "desc": "Zoekt op het web naar een vaste tekst.",
+   "vars": {
+    "QUERY": {
+     "label": "Zoektekst",
+     "where": "Waar je naar wilt zoeken."
+    }
+   }
+  },
+  "calendar-new-event": {
+   "title": "Een afspraak maken",
+   "desc": "Opent je agenda met een nieuwe afspraak waarvan de titel al is ingevuld.",
+   "vars": {
+    "TITLE": {
+     "label": "Titel van de afspraak",
+     "where": "Een korte tekst naar keuze."
+    }
+   }
+  },
+  "calendar-open": {
+   "title": "Agenda openen",
+   "desc": "Opent je agenda op vandaag."
+  },
+  "contacts-new": {
+   "title": "Een contact maken",
+   "desc": "Opent een nieuw contact met de naam en het telefoonnummer al ingevuld.",
+   "vars": {
+    "NAME": {
+     "label": "Naam",
+     "where": "Een naam naar keuze."
+    },
+    "NUMBER": {
+     "label": "Telefoonnummer",
+     "where": "Met de landcode, bijvoorbeeld +33123456789."
+    }
+   }
+  },
+  "settings-wifi": {
+   "title": "Wifi-instellingen",
+   "desc": "Opent de lijst met wifi-netwerken."
+  },
+  "settings-bluetooth": {
+   "title": "Bluetooth-instellingen",
+   "desc": "Opent de bluetooth-instellingen."
+  },
+  "settings-airplane": {
+   "title": "Instellingen voor vliegtuigmodus",
+   "desc": "Opent de instellingen voor vliegtuigmodus."
+  },
+  "settings-display": {
+   "title": "Scherminstellingen",
+   "desc": "Opent helderheid, donkere modus en time-out van het scherm."
+  },
+  "settings-sound": {
+   "title": "Geluidsinstellingen",
+   "desc": "Opent de instellingen voor volume en beltoon."
+  },
+  "settings-battery-saver": {
+   "title": "Instellingen voor batterijbesparing",
+   "desc": "Opent de instellingen voor batterijbesparing."
+  },
+  "settings-location": {
+   "title": "Locatie-instellingen",
+   "desc": "Opent de locatie-instellingen."
+  },
+  "settings-nfc": {
+   "title": "NFC-instellingen",
+   "desc": "Opent de NFC-instellingen."
+  },
+  "settings-data-usage": {
+   "title": "Instellingen voor datagebruik",
+   "desc": "Opent het scherm met je mobiele datagebruik."
+  },
+  "settings-accessibility": {
+   "title": "Toegankelijkheidsinstellingen",
+   "desc": "Opent de toegankelijkheidsinstellingen."
+  },
+  "settings-language": {
+   "title": "Taalinstellingen",
+   "desc": "Opent de taalinstellingen."
+  },
+  "settings-date": {
+   "title": "Instellingen voor datum en tijd",
+   "desc": "Opent de instellingen voor datum en tijd."
+  },
+  "settings-apps": {
+   "title": "Alle apps",
+   "desc": "Opent de lijst met geïnstalleerde apps."
+  },
+  "settings-developer": {
+   "title": "Ontwikkelaarsopties",
+   "desc": "Opent de ontwikkelaarsopties (als die zijn ontgrendeld)."
+  },
+  "google-maps-navigate-to-address": {
+   "title": "Naar een adres navigeren",
+   "desc": "Start stapsgewijze autonavigatie in Google Maps van je huidige positie naar een adres of plaatsnaam.",
+   "note": "Start de navigatie vanaf je huidige positie. De eerste keer vraagt Google Maps om toegang tot je locatie.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Adres of naam van de bestemming",
+     "where": "Typ het volledige adres of de naam van een bekende plek, precies zoals je die in Google Maps zou zoeken."
+    }
+   }
+  },
+  "google-maps-navigate-walking": {
+   "title": "Naar een adres lopen",
+   "desc": "Start wandelnavigatie in Google Maps van je huidige positie naar een adres of plaatsnaam.",
+   "note": "Start de wandelnavigatie vanaf je huidige positie.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Adres of naam van de bestemming",
+     "where": "Typ het volledige adres of de naam van een bekende plek, precies zoals je die in Google Maps zou zoeken."
+    }
+   }
+  },
+  "google-maps-navigate-cycling": {
+   "title": "Naar een adres fietsen",
+   "desc": "Start fietsnavigatie in Google Maps van je huidige positie naar een adres of plaatsnaam.",
+   "note": "Fietsroutes zijn niet in elk land beschikbaar.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Adres of naam van de bestemming",
+     "where": "Typ het volledige adres of de naam van een bekende plek, precies zoals je die in Google Maps zou zoeken."
+    }
+   }
+  },
+  "google-maps-search-nearby": {
+   "title": "Plekken in de buurt zoeken",
+   "desc": "Opent Google Maps met de resultaten van een zoekopdracht, zoals restaurants of apotheken bij jou in de buurt.",
+   "note": "Opent Google Maps met de zoekresultaten.",
+   "vars": {
+    "SEARCH": {
+     "label": "Waar je naar zoekt",
+     "where": "Typ een soort plek of een naam, met dezelfde woorden die je in de zoekbalk van Google Maps zou typen."
+    }
+   }
+  },
+  "google-maps-transit-directions": {
+   "title": "Met het ov naar een plek",
+   "desc": "Toont in Google Maps de route met het openbaar vervoer naar een bestemming, vanaf je huidige locatie.",
+   "note": "Opent de route in Google Maps, of in de browser als de app hem niet overneemt.",
+   "vars": {
+    "DESTINATION": {
+     "label": "Adres of naam van de bestemming",
+     "where": "Typ een adres of de naam van een plek, zoals je die in Google Maps zou zoeken."
+    }
+   }
+  },
+  "google-maps-street-view": {
+   "title": "Street View openen op coördinaten",
+   "desc": "Opent in Google Maps het Street View-panorama dat het dichtst bij een breedte- en lengtegraad ligt.",
+   "note": "Is er geen panorama in de buurt van dit punt, dan meldt Google Maps dat.",
+   "vars": {
+    "LATITUDE": {
+     "label": "Breedtegraad",
+     "where": "Houd in Google Maps een plek op de kaart ingedrukt: de breedtegraad is het eerste getal in de zoekbalk."
+    },
+    "LONGITUDE": {
+     "label": "Lengtegraad",
+     "where": "Houd in Google Maps een plek op de kaart ingedrukt: de lengtegraad is het tweede getal in de zoekbalk."
+    }
+   }
+  },
+  "assistant-open": {
+   "title": "Spraakassistent openen",
+   "desc": "Start de standaardassistent van de telefoon, net als het systeemgebaar."
+  },
+  "youtube-open-channel": {
+   "title": "Een kanaal openen",
+   "desc": "Opent de pagina van een YouTube-kanaal via de handle.",
+   "note": "Opent de kanaalpagina in de YouTube-app.",
+   "vars": {
+    "HANDLE": {
+     "label": "Handle van het kanaal (zonder de @)",
+     "where": "Open het kanaal in YouTube: de handle begint met @ en staat onder de kanaalnaam. Typ hem hier zonder de @."
+    }
+   }
+  },
+  "youtube-open-playlist": {
+   "title": "Een playlist openen",
+   "desc": "Opent een bepaalde YouTube-playlist.",
+   "note": "Opent de pagina van de playlist. Het afspelen start niet vanzelf.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID van de playlist",
+     "where": "Open de pagina van de playlist en tik op Delen > Link kopiëren (of lees het adres af in een browser). De ID is het deel na list= in de link."
+    }
+   }
+  },
+  "youtube-open-video": {
+   "title": "Een video openen",
+   "desc": "Opent een bepaalde video, bijvoorbeeld een favoriete livestream of tutorial.",
+   "note": "Opent de video in de YouTube-app.",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "ID van de video",
+     "where": "Open de video en tik op Delen > Link kopiëren. De ID is het deel na v= (of na youtu.be/ in een korte link)."
+    }
+   }
+  },
+  "youtube-search": {
+   "title": "Zoeken op YouTube",
+   "desc": "Opent de YouTube-zoekresultaten voor een vaste zoekopdracht.",
+   "note": "Opent de zoekresultaten.",
+   "vars": {
+    "QUERY": {
+     "label": "Zoektekst",
+     "where": "De woorden waar je naar wilt zoeken."
+    }
+   }
+  },
+  "ytmusic-open-library": {
+   "title": "Je bibliotheek openen",
+   "desc": "Opent het tabblad Bibliotheek van YouTube Music.",
+   "note": "Je moet in de YouTube Music-app zijn ingelogd."
+  },
+  "ytmusic-search": {
+   "title": "Zoeken in YouTube Music",
+   "desc": "Opent de zoekresultaten van YouTube Music voor een vaste zoekopdracht.",
+   "note": "Opent de zoekresultaten in YouTube Music.",
+   "vars": {
+    "QUERY": {
+     "label": "Zoektekst",
+     "where": "De woorden waar je naar wilt zoeken."
+    }
+   }
+  },
+  "ytmusic-open-playlist": {
+   "title": "Een playlist openen",
+   "desc": "Opent een bepaalde playlist of albumplaylist in YouTube Music.",
+   "note": "Opent de playlist of het album in YouTube Music.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID van de playlist",
+     "where": "Open de playlist in YouTube Music en tik op het menu > Delen > Link kopiëren. De ID is het deel na list= in de link."
+    }
+   }
+  },
+  "ytmusic-open-song": {
+   "title": "Een nummer openen",
+   "desc": "Opent een bepaald nummer in de speler van YouTube Music.",
+   "note": "Opent het nummer in YouTube Music.",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "ID van het nummer",
+     "where": "Open het nummer en tik op het menu > Delen > Link kopiëren. De ID is het deel na v= in de link."
+    }
+   }
+  },
+  "gmail-compose": {
+   "title": "Een nieuwe e-mail schrijven",
+   "desc": "Opent het opstelscherm van Gmail met een leeg bericht.",
+   "note": "Er wordt niets verstuurd tot je op Verzenden tikt."
+  },
+  "gmail-compose-to-person": {
+   "title": "Een e-mail aan iemand schrijven",
+   "desc": "Opent het opstelscherm van Gmail met de ontvanger al ingevuld.",
+   "note": "Er wordt niets verstuurd tot je op Verzenden tikt.",
+   "vars": {
+    "EMAIL_ADDRESS": {
+     "label": "E-mailadres van de ontvanger",
+     "where": "Typ het adres van de persoon aan wie je het vaakst schrijft."
+    }
+   }
+  },
+  "gmail-compose-with-subject": {
+   "title": "Een e-mail met onderwerp en tekst schrijven",
+   "desc": "Opent het opstelscherm van Gmail met het onderwerp en de tekst al ingevuld.",
+   "note": "Er wordt niets verstuurd tot je op Verzenden tikt.",
+   "vars": {
+    "SUBJECT": {
+     "label": "Onderwerp",
+     "where": "Typ de onderwerpregel."
+    },
+    "BODY": {
+     "label": "Tekst van het bericht",
+     "where": "Typ de tekst van de e-mail."
+    }
+   }
+  },
+  "telegram-open-chat": {
+   "title": "Een chat openen via gebruikersnaam",
+   "desc": "Opent het gesprek met een openbare Telegram-gebruiker, -groep, -kanaal of -bot.",
+   "note": "Werkt voor personen, groepen, kanalen en bots met een openbare gebruikersnaam.",
+   "vars": {
+    "USERNAME": {
+     "label": "Telegram-gebruikersnaam",
+     "where": "De openbare naam zonder de @, te zien op het profiel onder Gebruikersnaam."
+    }
+   }
+  },
+  "telegram-open-chat-with-draft": {
+   "title": "Een chat openen met een getypt bericht",
+   "desc": "Opent een openbare chat en vult het berichtvak al in (er wordt niets verstuurd tot je op verzenden drukt).",
+   "note": "De tekst staat in het berichtvak; er wordt niets verstuurd tot je op verzenden drukt.",
+   "vars": {
+    "USERNAME": {
+     "label": "Telegram-gebruikersnaam",
+     "where": "De openbare naam zonder de @, te zien op het profiel onder Gebruikersnaam."
+    },
+    "MESSAGE": {
+     "label": "Bericht",
+     "where": "Je tekst, zoals je hem zelf zou typen."
+    }
+   }
+  },
+  "telegram-open-chat-by-phone": {
+   "title": "Een chat openen via telefoonnummer",
+   "desc": "Opent het Telegram-gesprek met iemand op basis van zijn of haar telefoonnummer.",
+   "note": "Werkt alleen als die persoon Telegram heeft en zich via het nummer laat vinden.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Telefoonnummer",
+     "where": "Eerst de landcode, alleen cijfers, bijvoorbeeld 33123456789. Spaties en + worden genegeerd."
+    }
+   }
+  },
+  "telegram-join-invite": {
+   "title": "Lid worden van een privégroep via uitnodigingslink",
+   "desc": "Opent het scherm om lid te worden van een privégroep of privékanaal op Telegram, op basis van de uitnodigingscode.",
+   "note": "Opent de uitnodiging voor een privégroep of privékanaal.",
+   "vars": {
+    "INVITE_HASH": {
+     "label": "Uitnodigingscode",
+     "where": "Kopieer in een uitnodigingslink zoals https://t.me/+AbCdEf123 wat er na de + staat (oudere links: t.me/joinchat/HASH)."
+    }
+   }
+  },
+  "telegram-story-composer": {
+   "title": "Een verhaal maken",
+   "desc": "Opent de camera van Telegram om een nieuw verhaal te plaatsen.",
+   "note": "Opent het scherm om een verhaal te maken."
+  },
+  "telegram-global-search": {
+   "title": "Overal zoeken",
+   "desc": "Opent het zoekscherm van Telegram, over alle chats en openbare inhoud.",
+   "note": "Opent het zoekscherm."
+  },
+  "whatsapp-open-chat": {
+   "title": "Een chat openen",
+   "desc": "Opent een WhatsApp-gesprek met een bepaald telefoonnummer.",
+   "note": "Opent het gesprek met dit nummer.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Telefoonnummer",
+     "where": "Eerst de landcode, alleen cijfers, bijvoorbeeld 33123456789. Spaties en + worden genegeerd."
+    }
+   }
+  },
+  "whatsapp-open-chat-with-message": {
+   "title": "Een chat openen met een klaargezet bericht",
+   "desc": "Opent een WhatsApp-gesprek met een telefoonnummer en vult het berichtvak al in (er wordt niets verstuurd tot je op verzenden drukt).",
+   "note": "De tekst staat in het berichtvak; er wordt niets verstuurd tot je op verzenden drukt.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Telefoonnummer",
+     "where": "Eerst de landcode, alleen cijfers, bijvoorbeeld 33123456789. Spaties en + worden genegeerd."
+    },
+    "MESSAGE": {
+     "label": "Bericht",
+     "where": "Je tekst, zoals je hem zelf zou typen."
+    }
+   }
+  },
+  "whatsapp-share-text": {
+   "title": "Een tekst sturen naar een contact dat ik kies",
+   "desc": "Opent de contactkeuze van WhatsApp met het bericht al getypt, zodat je zelf kiest wie het krijgt.",
+   "note": "WhatsApp vraagt je te kiezen wie de tekst krijgt.",
+   "vars": {
+    "MESSAGE": {
+     "label": "Bericht",
+     "where": "Je tekst, zoals je hem zelf zou typen."
+    }
+   }
+  },
+  "whatsapp-join-group": {
+   "title": "Een groep openen of lid worden via uitnodigingslink",
+   "desc": "Opent een WhatsApp-groep via de uitnodigingscode (scherm om lid te worden, of de groep zelf als je al lid bent).",
+   "note": "Opent de uitnodiging voor een groep.",
+   "vars": {
+    "INVITE_CODE": {
+     "label": "Uitnodigingscode van de groep",
+     "where": "Het deel na chat.whatsapp.com/ in de uitnodigingslink van de groep (in de groep: open de groepsinfo, kies uitnodigen via link en kopieer de link)."
+    }
+   }
+  },
+  "signal-open-chat-by-phone": {
+   "title": "Een chat openen via telefoonnummer",
+   "desc": "Opent een Signal-gesprek met iemand op basis van zijn of haar telefoonnummer.",
+   "note": "Opent het gesprek met dit nummer als de persoon Signal gebruikt.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Telefoonnummer",
+     "where": "Eerst de landcode, alleen cijfers, bijvoorbeeld 33123456789. Spaties en + worden genegeerd."
+    }
+   }
+  },
+  "signal-open-group-link": {
+   "title": "Een groep openen of lid worden via groepslink",
+   "desc": "Opent in Signal het scherm om lid te worden van een groep, op basis van de groepslink.",
+   "note": "Opent de uitnodiging voor een Signal-groep.",
+   "vars": {
+    "GROUP_LINK_CODE": {
+     "label": "Code van de groepslink",
+     "where": "In Signal: open de groep, tik op de naam, kies de groepslink en deel of kopieer hem. Bewaar alleen de lange tekst na de # in https://signal.group/#..."
+    }
+   }
+  },
+  "obsidian-open-vault": {
+   "title": "Mijn kluis openen",
+   "desc": "Opent de gekozen Obsidian-kluis (of haalt hem naar voren als hij al open is).",
+   "note": "Opent de kluis op het laatste scherm.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Naam van de kluis",
+     "where": "Open in Obsidian de kluiswisselaar (het kluispictogram onderaan de zijbalk, of de lijst met kluizen) en kopieer de naam van je kluis. Dat is ook de naam van de map."
+    }
+   }
+  },
+  "obsidian-open-note": {
+   "title": "Een bepaalde notitie openen",
+   "desc": "Opent één specifieke notitie uit de kluis.",
+   "note": "Opent deze notitie uit de kluis.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Naam van de kluis",
+     "where": "Open in Obsidian de kluiswisselaar (het kluispictogram onderaan de zijbalk, of de lijst met kluizen) en kopieer de naam van je kluis. Dat is ook de naam van de map."
+    },
+    "NOTE_PATH": {
+     "label": "Naam of pad van de notitie",
+     "where": "De bestandsnaam van de notitie, of het pad vanaf de hoofdmap van de kluis. De extensie .md mag je weglaten."
+    }
+   }
+  },
+  "obsidian-daily-note": {
+   "title": "De dagnotitie van vandaag openen",
+   "desc": "Maakt of opent de dagnotitie van vandaag.",
+   "note": "Opent de dagnotitie van vandaag, of maakt hem aan.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Naam van de kluis",
+     "where": "Open in Obsidian de kluiswisselaar (het kluispictogram onderaan de zijbalk, of de lijst met kluizen) en kopieer de naam van je kluis. Dat is ook de naam van de map."
+    }
+   }
+  },
+  "obsidian-new-note": {
+   "title": "Een nieuwe notitie maken",
+   "desc": "Maakt een nieuwe notitie met de opgegeven naam (op de standaardlocatie van de kluis voor nieuwe notities) en opent hem.",
+   "note": "Maakt de notitie aan als die nog niet bestaat. Obsidian moet bij de kluis kunnen.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Naam van de kluis",
+     "where": "Open in Obsidian de kluiswisselaar (het kluispictogram onderaan de zijbalk, of de lijst met kluizen) en kopieer de naam van je kluis. Dat is ook de naam van de map."
+    },
+    "NOTE_NAME": {
+     "label": "Naam van de nieuwe notitie",
+     "where": "Typ de titel die je wilt; het bestand wordt aangemaakt als <titel>.md."
+    }
+   }
+  },
+  "obsidian-quick-capture-daily": {
+   "title": "Een regel toevoegen aan de dagnotitie van vandaag",
+   "desc": "Voegt de opgegeven tekst toe aan het einde van de dagnotitie van vandaag.",
+   "note": "Zet de tekst aan het einde van de dagnotitie van vandaag.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Naam van de kluis",
+     "where": "Open in Obsidian de kluiswisselaar (het kluispictogram onderaan de zijbalk, of de lijst met kluizen) en kopieer de naam van je kluis. Dat is ook de naam van de map."
+    },
+    "TEXT_TO_ADD": {
+     "label": "Tekst om toe te voegen",
+     "where": "De tekst die je wilt toevoegen, zoals je hem zelf zou typen."
+    }
+   }
+  },
+  "obsidian-search": {
+   "title": "Zoeken in mijn kluis",
+   "desc": "Opent de zoekfunctie van Obsidian in de kluis en voert de zoekopdracht uit.",
+   "note": "Opent de zoekfunctie met deze tekst.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Naam van de kluis",
+     "where": "Open in Obsidian de kluiswisselaar (het kluispictogram onderaan de zijbalk, of de lijst met kluizen) en kopieer de naam van je kluis. Dat is ook de naam van de map."
+    },
+    "SEARCH_TEXT": {
+     "label": "Zoektekst",
+     "where": "Typ het woord of de zin waar je naar zoekt."
+    }
+   }
+  },
+  "homeassistant-open-dashboard": {
+   "title": "Een dashboardpagina openen",
+   "desc": "Opent een gekozen dashboardweergave van Home Assistant in de companion-app.",
+   "note": "Opent een dashboard of een weergave van Home Assistant.",
+   "vars": {
+    "DASHBOARD_PATH": {
+     "label": "Pad van het dashboard",
+     "where": "Open de pagina in de webinterface van Home Assistant en kopieer het pad na het adres en de poort, zonder de eerste schuine streep."
+    }
+   }
+  }
+ }
+}

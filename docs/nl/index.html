@@ -330,6 +330,27 @@
     </div>
   </section>
 
+  <section id="library" class="wide" aria-labelledby="lib-h">
+    <div class="split">
+      <div class="split-copy">
+        <p class="kicker">Receptenbibliotheek</p>
+        <h2 id="lib-h">Ken je de link niet? Kies een recept</h2>
+        <p>De app heeft een bibliotheek met kant-en-klare recepten, per app gegroepeerd: een timer starten, een wekker zetten, de camera openen, een nummer bellen, een sms schrijven, naar een plek navigeren, een playlist of een chat openen. Kies er een, vul je eigen waarden in, test het en gebruik het voor de toets.</p>
+        <ul class="ticks">
+          <li>Per app gegroepeerd, met de officiële logo's</li>
+          <li>Eén veld per waarde, met een tip waar je die vindt</li>
+          <li>Live voorbeeld van de uiteindelijke link, met knoppen om te kopiëren en te testen</li>
+          <li>Elk recept gecontroleerd op een Android-emulator, met een link naar de officiële pagina die het beschrijft</li>
+        </ul>
+        <p class="muted small">Gecontroleerd op een emulator is niet gecontroleerd op elke telefoon: de klok-, camera- en instellingen-apps zijn anders op ColorOS, en sommige apps vragen een account. De testknop in elk recept laat het je met één tik weten.</p>
+      </div>
+      <div class="appshots">
+        <img src="/img/library.png" width="540" height="1200" alt="De receptenbibliotheek van SnapKey Mapper: apps met hun logo en het aantal recepten" loading="lazy">
+        <img src="/img/recipe.png" width="540" height="1200" alt="Een recept met een veld voor elke waarde en de uiteindelijke link die live wordt opgebouwd" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <section class="wide" aria-labelledby="how">
     <p class="kicker">Onder de motorkap</p>
     <h2 id="how">Hoe het werkt, eerlijk gezegd</h2>
@@ -337,7 +358,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS logt elke druk</h3><p>Het systeemlogboek krijgt een regel met <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper leest het logboek, ziet die regel en opent je app of link.</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>Geen root, geen toegankelijkheid</h3><p>Voor het lezen van het logboek is één toestemming nodig, <code>READ_LOGS</code>, eenmalig gegeven met één commando. Die blijft na een herstart.</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Niets verzameld</h3><p>Geen account, geen tracker, geen advertenties. Het bewaart alleen je doel, de naam van de toets en het gebaar, op je telefoon. De lite-editie heeft helemaal geen internettoestemming, dus Android zelf voorkomt dat ze iets verstuurt.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Niets verzameld</h3><p>In de app: geen account, geen tracker, geen advertenties. Het bewaart alleen je doel, de naam van de toets en het gebaar, op je telefoon. De lite-editie heeft helemaal geen internettoestemming, dus Android laat ze zelf geen netwerkverbindingen openen.</p></li>
     </ul>
   </section>
 
@@ -358,7 +379,7 @@
       </ul></div>
       <div><h3>Wat het niet kan</h3><ul>
         <li>Iets naar buiten sturen: de lite-editie heeft geen internettoestemming; de volledige editie gebruikt die alleen om met je eigen telefoon te praten, één keer, tijdens de installatie</li>
-        <li>Bij je berichten, meldingen of scherm komen: daar heeft het geen toestemming voor</li>
+        <li>Bij je berichten, meldingen of scherm komen: daar heeft het geen toestemming voor (het leest wel het systeemlogboek, zie de FAQ)</li>
         <li>Advertenties tonen, je volgen of om een account vragen</li>
       </ul></div>
     </div>
@@ -396,7 +417,7 @@
         <p>Tik op <strong>Luisteren starten</strong>. Android 13 en nieuwer vraagt "Toegang geven tot alle apparaatlogboeken?": kies <strong>Eenmalige toegang toestaan</strong>. Die toegang geldt zolang het luisteren loopt, dus je ziet de vraag pas na een herstart terug (tik op de melding "SnapKey Mapper staat uit").</p>
       </li>
     </ol>
-    <p class="note"><strong>Veiligheidstip.</strong> Zet als je klaar bent draadloze foutopsporing uit in Ontwikkelaarsopties. SnapKey Mapper heeft het niet nodig en wist zijn eigen koppelingssleutel direct na de installatie.</p>
+    <p class="note"><strong>Veiligheidstip.</strong> Zet als je klaar bent draadloze foutopsporing uit in Ontwikkelaarsopties. SnapKey Mapper heeft het niet nodig en wist zijn eigen koppelingssleutel direct na de installatie. Verwijder SnapKey Mapper daarna uit Draadloze foutopsporing › Gekoppelde apparaten. Doe de installatie alleen op een wifinetwerk dat je vertrouwt.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
@@ -451,6 +472,10 @@
     <details><summary>Hoe verwijder ik het?</summary><div><p>Zoals elke app. De toestemming verdwijnt mee. Zet draadloze foutopsporing uit als die nog aan stond.</p></div></details>
 
     <details><summary>Is het verbonden aan OPPO?</summary><div><p>Nee. SnapKey Mapper is een onafhankelijk open source project, niet verbonden aan OPPO, OnePlus, Key Mapper, Anthropic of welke app op deze pagina ook. Die namen beschrijven alleen de compatibiliteit.</p></div></details>
+
+    <details><summary>Wat is de receptenbibliotheek?</summary><div><p>Een lijst met kant-en-klare links, per app gegroepeerd: timers, wekkers, camera, bellen, sms, kaarten, muziek, chats en meer. Open hem vanuit de app, kies een recept, vul de lege velden in, test het en gebruik het dan voor de Snap Key. Elk recept linkt naar de officiële pagina die het beschrijft.</p></div></details>
+
+    <details><summary>Hoe weet ik of een recept op mijn telefoon werkt?</summary><div><p>Recepten worden gecontroleerd op een Android-emulator, niet op elke telefoon. De klok-, camera- en instellingen-apps zijn anders op ColorOS, en sommige apps vragen een account. De testknop van elk recept laat het je met één tik weten. Werkt er een niet op je telefoon, laat het ons dan weten op GitHub, zodat we het kunnen verbeteren of weghalen.</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">

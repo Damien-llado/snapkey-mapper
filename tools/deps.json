@@ -1,0 +1,10 @@
+[
+  {"name": "org.conscrypt:conscrypt-android", "kind": "maven", "pinned": "2.7.0", "use": "TLS 1.3 for the wireless debugging pairing (full edition)"},
+  {"name": "com.android.tools.build:gradle", "kind": "google-maven", "pinned": "8.13.2", "major": "8", "use": "Android Gradle Plugin (9.x adds 2.5 MB of Kotlin and stubs to the lite edition: stay on 8.x until checked)"},
+  {"name": "gradle", "kind": "gradle", "pinned": "8.14.6", "major": "8", "use": "build tool"},
+  {"name": "MuntashirAkon/libadb-android", "kind": "github-tags", "pinned": "3.1.1", "use": "ADB client for the in-app setup (full edition)"},
+  {"name": "MuntashirAkon/sun-security-android", "kind": "github-tags", "pinned": "1.1", "use": "certificate generation for libadb-android (full edition)"},
+  {"name": "simple-icons", "kind": "npm", "pinned": "16.35.0", "use": "brand logos (CC0)"},
+  {"name": "lucide-static", "kind": "npm", "pinned": "1.60.0", "use": "generic icons (ISC)"},
+  {"name": "playwright", "kind": "npm", "pinned": "1.64.1", "use": "page checks (Docker image mcr.microsoft.com/playwright:v1.64.1-noble)"}
+]

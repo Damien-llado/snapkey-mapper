@@ -38,21 +38,24 @@ final class Prefs {
 
     /** Opens the chosen link (any app that handles it, or an intent: link) or launches the chosen app. */
     static void openTarget(Context c) {
-        Intent i;
         if (targetType(c).equals("app")) {
-            i = c.getPackageManager().getLaunchIntentForPackage(appPackage(c));
-        } else {
-            String link = link(c);
-            if (link.isEmpty()) return;
-            try {
-                // "intent:" links describe a full Android intent (set a timer, open the camera...); anything else is opened as a link
-                i = link.startsWith("intent:") ? Intent.parseUri(link, Intent.URI_INTENT_SCHEME) : new Intent(Intent.ACTION_VIEW, Uri.parse(link));
-            } catch (URISyntaxException e) {
-                throw new IllegalArgumentException(c.getString(R.string.err_invalid_intent), e);
-            }
-            i.setSelector(null);
+            Intent i = c.getPackageManager().getLaunchIntentForPackage(appPackage(c));
+            if (i != null) c.startActivity(i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        } else if (!link(c).isEmpty()) {
+            open(c, link(c));
         }
-        if (i == null) return;
+    }
+
+    /** Opens a link: "intent:" links describe a full Android intent (set a timer, open the camera...); anything else is opened as a link. */
+    static void open(Context c, String link) {
+        Intent i;
+        try {
+            i = link.startsWith("intent:") ? Intent.parseUri(link, Intent.URI_INTENT_SCHEME) : new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+        } catch (URISyntaxException e) {
+            throw new IllegalArgumentException(c.getString(R.string.err_invalid_intent), e);
+        }
+        i.setSelector(null);
+        i.setFlags(0); // a pasted link must not carry flags of its own (URI permission grants, task flags)
         c.startActivity(i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
     }
 

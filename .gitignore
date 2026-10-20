@@ -8,3 +8,8 @@ signature/
 *.keystore
 *.apk
 *.aab
+.env
+*.pem
+*.p12
+*.key
+secrets*

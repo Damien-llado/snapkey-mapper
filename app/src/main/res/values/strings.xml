@@ -42,7 +42,7 @@
     <string name="gesture_double">Two presses</string>
     <string name="gesture_long">Long press</string>
     <string name="finder_title">Another phone? Find your key</string>
-    <string name="finder_help">The Find X9 key is already known. On another phone: start the capture, press the side key 2 or 3 times, stop, then tap the line that comes back at every press.</string>
+    <string name="finder_help">The Find X9 key is already known. On another phone: start the capture, press the side key 2 or 3 times, stop, then tap the line that comes back at every press. The capture can contain personal information from other apps: check it before sharing it.</string>
     <string name="capture_start">Start capture</string>
     <string name="capture_stop">Stop capture</string>
     <string name="finder_all">Show all lines</string>
@@ -75,4 +75,20 @@
     <string name="err_invalid_intent">Invalid intent link</string>
     <string name="setup_fail_pair">Pairing failed. Tap the app’s setup button again, then “Pair device with pairing code” and type the new code. If it fails again, turn Wireless debugging off and on.</string>
     <string name="lang_title">Language</string>
+    <string name="library_open">Browse the recipe library</string>
+    <string name="library_title">Recipe library</string>
+    <string name="library_intro">Ready-made links, grouped by app. Pick one, fill in your values, test it, then use it for the Snap Key.</string>
+    <string name="library_search">Search an app or an action</string>
+    <string name="library_count">Recipes: %1$d</string>
+    <string name="library_not_installed">Not installed</string>
+    <string name="library_empty">Nothing matches your search.</string>
+    <string name="recipe_fields">Your values</string>
+    <string name="recipe_link">Final link</string>
+    <string name="recipe_use">Use this recipe</string>
+    <string name="recipe_fill_all">Fill in every field first.</string>
+    <string name="recipe_saved">Saved as your target.</string>
+    <string name="recipe_missing">Nothing opened. Is the app installed?</string>
+    <string name="recipe_verified">Checked on an Android emulator on %1$s.</string>
+    <string name="recipe_verified_partial">On an Android emulator (%1$s) the right app received this link, but the emulator could not show more. Confirm it with the test button.</string>
+    <string name="recipe_source">Official documentation</string>
 </resources>

@@ -29,7 +29,7 @@ The app only needs two things: Android 11 or later, and a key press that appears
 | Size | about 11 MB (TLS and cryptography libraries) | about 300 KB (the font of the app) |
 | Dependencies | [libadb-android](https://github.com/MuntashirAkon/libadb-android) (Apache-2.0), Conscrypt, sun-security-android | none |
 
-Everything else is identical. If you want the strongest guarantee, install the lite edition: Android itself then prevents the app from using the network.
+The full edition also adds ACCESS_WIFI_STATE and CHANGE_WIFI_MULTICAST_STATE (to find the pairing service). Everything else is identical. If you want the strongest guarantee, install the lite edition: it has no INTERNET permission, so Android does not let the app open network connections itself.
 
 ## Install
 
@@ -50,7 +50,7 @@ The app needs `READ_LOGS`, which Android only lets an app receive from the shell
 4. Pull the notification down and type the 6 digits in the reply field.
 5. The notification says "Done". Turn Wireless debugging off. The app deletes its pairing key right after the grant.
 
-What the app does in those steps: it finds the pairing service of your own phone on the local network, pairs, runs `pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS`, disconnects and deletes its key. The code is in [`SetupService.java`](app/src/full/java/io/github/damienllado/snapkeymapper/SetupService.java) (about 100 lines).
+What the app does in those steps: it finds the pairing service of your own phone on the local network, pairs, runs `pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS`, disconnects and deletes its key. The code is in [`SetupService.java`](app/src/full/java/io/github/damienllado/snapkeymapper/SetupService.java) (about 150 lines).
 
 **Other ways (both editions):**
 
@@ -108,10 +108,15 @@ Then ask, for example: "make my Snap Key start a 25-minute focus timer". Without
 
 - **Nothing is collected.** No account, no analytics, no ads, no crash reporting in the app. It stores your target, the key name and the gesture, on the phone only.
 - **Do not take my word for it, check:**
-  - *Lite edition*: no INTERNET permission, so Android blocks all network use. Check with `aapt dump permissions snapkey-mapper-lite.apk` or with AppVerifier.
+  - *Lite edition*: no INTERNET permission, so Android does not let the app open network connections itself (it can still hand a link to another app, which is its job). Check with `aapt dump permissions snapkey-mapper-lite.apk` or with AppVerifier.
   - *Full edition*: INTERNET is declared for one reason, talking to the phone's own wireless debugging. In the code, the only network calls are in `SetupService.java` and the library; there is no URL, no host name and no other socket in the app. After the setup you can also block the network for the app in the ColorOS settings, or just use the lite edition.
   - Both: the source is public and short, the release lists the SHA-256 and the signing certificate fingerprint, and you can build the app yourself from the source (section Build).
 - `READ_LOGS` lets an app read the whole system log, which can contain details of what other apps do. The app only looks for your pattern and a few time stamps and keeps nothing; the capture screen holds lines in memory until you close it, and saves a file only when you ask.
+- **Known limit:** the app reacts to a line of the system log, and any app on the phone can write lines there. A malicious app could therefore make SnapKey Mapper fire your target by writing a fake key-press line (it cannot choose the target). Pick targets accordingly, for example not an action you would not want triggered by surprise.
+- Only do the setup on a Wi-Fi network you trust (turned-on wireless debugging can be pinged by other devices on the same network), and switch the ColorOS option *Disable system optimisation* back on afterwards if you changed it.
+- A link in the app that starts with `intent:` runs a full Android intent each time the key is pressed. Paste only links you understand: never one that someone gave you in a chat or a forum without explaining it.
+- Report a vulnerability: see [SECURITY.md](SECURITY.md). Licences of the libraries and the font: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+- Signing certificate SHA-256 of the releases, independent of the release page: `a4a6d83d2298e8a88a6da748a3cc9ae9051e459a1d6e06b098a27d2b87f8f796` (`apksigner verify --print-certs`).
 - The source is short enough to read in one sitting. Please do.
 - After the grant, switch wireless debugging off. The full edition deletes its pairing key itself; you can also remove "SnapKey Mapper" from Wireless debugging › Paired devices.
 - To remove everything: uninstall the app.
@@ -131,7 +136,7 @@ OPPO's settings only let the Snap Key start a closed list of actions. I wanted i
 
 Then I noticed ColorOS writes every press into logcat. A capture of the log gave the key's name, `KEYCODE_ACTION_BUTTON_CLICK` with scan code 735. Reading the log needs `READ_LOGS`, which I granted once with Key Mapper's shell command action, after switching on "Disable system optimisation" in the developer options (English only on ColorOS 16, otherwise the grant is refused). Android's "Allow restricted settings" covers an app installed outside the Play Store. And Android 13 and later ask for one-time log access each time listening starts, with the app in the foreground; this comes from the AOSP `LogcatManagerService`.
 
-The result is a small app that has worked daily since 19 October 2026.
+The result is a small app, tested on the Find X9 Pro since 19 October 2026.
 
 ## FAQ
 
@@ -149,7 +154,7 @@ More answers on the website.
 
 ## Build
 
-Android SDK 35, JDK 17, Gradle 8.11 or later:
+Android SDK 35, JDK 17, Gradle 8.14.6 (the repository includes a wrapper pinned to it and `gradle/verification-metadata.xml`, which checks the checksum of every dependency):
 
 ```
 gradle assembleFullRelease assembleLiteRelease

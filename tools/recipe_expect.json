@@ -1,0 +1,240 @@
+{
+ "clock-timer": {
+  "shell": "dumpsys notification --noredact",
+  "match": "RUNNING.*Σ0:05:00"
+ },
+ "clock-timer-label": {
+  "shell": "dumpsys notification --noredact",
+  "match": "RUNNING.*Σ0:10:00"
+ },
+ "clock-alarm": {
+  "shell": "dumpsys alarm",
+  "match": "origWhen=\\d{4}-\\d\\d-\\d\\d 07:30:00"
+ },
+ "clock-alarm-label": {
+  "shell": "dumpsys alarm",
+  "match": "origWhen=\\d{4}-\\d\\d-\\d\\d 18:00:00"
+ },
+ "clock-show-alarms": "com.google.android.deskclock",
+ "clock-show-timers": "com.google.android.deskclock",
+ "camera-photo": "com.android.camera2/com.android.camera.CameraActivity",
+ "camera-video": "com.android.camera2/com.android.camera.VideoCamera",
+ "phone-dial": {
+  "top": "com.google.android.dialer",
+  "ui": [
+   "+33123456789"
+  ]
+ },
+ "phone-open-dialer": "com.google.android.dialer",
+ "messages-compose": {
+  "top": "com.google.android.apps.messaging",
+  "ui": [
+   "+33123456789"
+  ],
+  "level": "dispatch"
+ },
+ "email-compose": {
+  "top": "com.google.android.gm",
+  "level": "dispatch"
+ },
+ "web-open": "com.android.chrome",
+ "web-search": [
+  "com.google.android.googlequicksearchbox",
+  "com.android.chrome"
+ ],
+ "calendar-new-event": {
+  "top": "com.google.android.calendar",
+  "level": "dispatch"
+ },
+ "calendar-open": {
+  "top": "com.google.android.calendar",
+  "level": "dispatch"
+ },
+ "contacts-new": {
+  "top": "com.google.android.contacts",
+  "ui": [
+   "Alex",
+   "Martin"
+  ]
+ },
+ "settings-wifi": {
+  "top": "com.android.settings",
+  "ui": [
+   "Wi-Fi"
+  ]
+ },
+ "settings-bluetooth": [
+  "ConnectedDeviceDashboardActivity",
+  "BluetoothSettings"
+ ],
+ "settings-airplane": [
+  "NetworkDashboardActivity",
+  "AirplaneModeSettings"
+ ],
+ "settings-display": "DisplaySettingsActivity",
+ "settings-sound": "SoundSettingsActivity",
+ "settings-battery-saver": "BatterySaverSettingsActivity",
+ "settings-location": "LocationSettingsActivity",
+ "settings-nfc": "NfcSettingsActivity",
+ "settings-data-usage": "DataUsageSummaryActivity",
+ "settings-accessibility": "AccessibilitySettingsActivity",
+ "settings-language": "LocalePickerActivity",
+ "settings-date": "DateTimeSettingsActivity",
+ "settings-apps": {
+  "top": "com.android.settings",
+  "ui": [
+   "Allapps"
+  ]
+ },
+ "settings-developer": {
+  "top": "com.android.settings"
+ },
+ "google-maps-navigate-to-address": {
+  "top": "com.google.android.apps.maps",
+  "level": "dispatch"
+ },
+ "google-maps-navigate-walking": {
+  "top": "com.google.android.apps.maps",
+  "level": "dispatch"
+ },
+ "google-maps-navigate-cycling": {
+  "top": "com.google.android.apps.maps",
+  "level": "dispatch"
+ },
+ "google-maps-search-nearby": {
+  "top": "com.google.android.apps.maps",
+  "level": "dispatch"
+ },
+ "google-maps-transit-directions": {
+  "top": "com.google.android.apps.maps",
+  "level": "dispatch"
+ },
+ "google-maps-street-view": {
+  "top": "com.google.android.apps.maps",
+  "level": "dispatch"
+ },
+ "youtube-open-channel": {
+  "log": "act=android.intent.action.VIEW dat=https://www.youtube.com/.*pkg=com.google.android.youtube cmp=com.google.android.youtube/.UrlActivity",
+  "level": "dispatch"
+ },
+ "youtube-open-playlist": {
+  "log": "act=android.intent.action.VIEW dat=https://www.youtube.com/.*pkg=com.google.android.youtube cmp=com.google.android.youtube/.UrlActivity",
+  "level": "dispatch"
+ },
+ "youtube-open-video": {
+  "log": "act=android.intent.action.VIEW dat=https://www.youtube.com/.*pkg=com.google.android.youtube cmp=com.google.android.youtube/.UrlActivity",
+  "level": "dispatch"
+ },
+ "youtube-search": {
+  "log": "act=android.intent.action.VIEW dat=https://www.youtube.com/.*pkg=com.google.android.youtube cmp=com.google.android.youtube/.UrlActivity",
+  "level": "dispatch"
+ },
+ "ytmusic-open-library": {
+  "top": "com.google.android.apps.youtube.music",
+  "level": "dispatch"
+ },
+ "ytmusic-search": {
+  "top": "com.google.android.apps.youtube.music",
+  "level": "dispatch"
+ },
+ "ytmusic-open-playlist": {
+  "top": "com.google.android.apps.youtube.music",
+  "level": "dispatch"
+ },
+ "ytmusic-open-song": {
+  "top": "com.google.android.apps.youtube.music",
+  "level": "dispatch"
+ },
+ "gmail-compose": {
+  "top": "com.google.android.gm",
+  "level": "dispatch"
+ },
+ "gmail-compose-to-person": {
+  "top": "com.google.android.gm",
+  "level": "dispatch"
+ },
+ "gmail-compose-with-subject": {
+  "top": "com.google.android.gm",
+  "level": "dispatch"
+ },
+ "telegram-open-chat": {
+  "log": "dat=tg://.*cmp=org\\.telegram\\.messenger/",
+  "level": "dispatch"
+ },
+ "telegram-open-chat-with-draft": {
+  "log": "dat=tg://.*cmp=org\\.telegram\\.messenger/",
+  "level": "dispatch"
+ },
+ "telegram-open-chat-by-phone": {
+  "log": "dat=tg://.*cmp=org\\.telegram\\.messenger/",
+  "level": "dispatch"
+ },
+ "telegram-join-invite": {
+  "log": "dat=tg://.*cmp=org\\.telegram\\.messenger/",
+  "level": "dispatch"
+ },
+ "telegram-story-composer": {
+  "log": "dat=tg://.*cmp=org\\.telegram\\.messenger/",
+  "level": "dispatch"
+ },
+ "telegram-global-search": {
+  "log": "dat=tg://.*cmp=org\\.telegram\\.messenger/",
+  "level": "dispatch"
+ },
+ "whatsapp-open-chat": {
+  "log": "START u0 \\{act=android\\.intent\\.action\\.VIEW dat=https://(wa\\.me|chat\\.whatsapp\\.com)/.*pkg=com\\.whatsapp ",
+  "level": "dispatch"
+ },
+ "whatsapp-open-chat-with-message": {
+  "log": "START u0 \\{act=android\\.intent\\.action\\.VIEW dat=https://(wa\\.me|chat\\.whatsapp\\.com)/.*pkg=com\\.whatsapp ",
+  "level": "dispatch"
+ },
+ "whatsapp-share-text": {
+  "log": "START u0 \\{act=android\\.intent\\.action\\.VIEW dat=https://(wa\\.me|chat\\.whatsapp\\.com)/.*pkg=com\\.whatsapp ",
+  "level": "dispatch"
+ },
+ "whatsapp-join-group": {
+  "log": "START u0 \\{act=android\\.intent\\.action\\.VIEW dat=https://(wa\\.me|chat\\.whatsapp\\.com)/.*pkg=com\\.whatsapp ",
+  "level": "dispatch"
+ },
+ "signal-open-chat-by-phone": {
+  "log": "dat=https://signal\\.(me|group)/.*pkg=org\\.thoughtcrime\\.securesms ",
+  "level": "dispatch"
+ },
+ "signal-open-group-link": {
+  "log": "dat=https://signal\\.(me|group)/.*pkg=org\\.thoughtcrime\\.securesms ",
+  "level": "dispatch"
+ },
+ "obsidian-open-vault": {
+  "log": "dat=obsidian://.*cmp=md\\.obsidian/",
+  "level": "dispatch"
+ },
+ "obsidian-open-note": {
+  "log": "dat=obsidian://.*cmp=md\\.obsidian/",
+  "level": "dispatch"
+ },
+ "obsidian-daily-note": {
+  "log": "dat=obsidian://.*cmp=md\\.obsidian/",
+  "level": "dispatch"
+ },
+ "obsidian-new-note": {
+  "log": "dat=obsidian://.*cmp=md\\.obsidian/",
+  "level": "dispatch"
+ },
+ "obsidian-quick-capture-daily": {
+  "log": "dat=obsidian://.*cmp=md\\.obsidian/",
+  "level": "dispatch"
+ },
+ "obsidian-search": {
+  "log": "dat=obsidian://.*cmp=md\\.obsidian/",
+  "level": "dispatch"
+ },
+ "homeassistant-open-dashboard": {
+  "log": "dat=homeassistant://navigate.*cmp=io\\.homeassistant\\.companion\\.android/",
+  "level": "dispatch"
+ },
+ "assistant-open": {
+  "log": "act=android\\.intent\\.action\\.ASSIST",
+  "level": "dispatch"
+ }
+}

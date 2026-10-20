@@ -330,6 +330,27 @@
     </div>
   </section>
 
+  <section id="library" class="wide" aria-labelledby="lib-h">
+    <div class="split">
+      <div class="split-copy">
+        <p class="kicker">Vorlagenbibliothek</p>
+        <h2 id="lib-h">Du kennst den Link nicht? Nimm eine Vorlage</h2>
+        <p>Die App bringt eine Bibliothek fertiger Vorlagen mit, nach App sortiert: einen Timer starten, einen Wecker stellen, die Kamera öffnen, eine Nummer anrufen, eine SMS schreiben, zu einem Ort navigieren, eine Playlist oder einen Chat öffnen. Wähl eine aus, trag deine Werte ein, teste sie und leg sie auf die Taste.</p>
+        <ul class="ticks">
+          <li>Nach App sortiert, mit den offiziellen Logos</li>
+          <li>Ein Feld pro Wert, mit einem Hinweis, wo du ihn findest</li>
+          <li>Live-Vorschau des fertigen Links, mit Schaltflächen zum Kopieren und Testen</li>
+          <li>Jede Vorlage auf einem Android-Emulator geprüft, mit Link zur offiziellen Seite, die sie dokumentiert</li>
+        </ul>
+        <p class="muted small">Auf einem Emulator geprüft heißt nicht auf jedem Handy geprüft: Uhr, Kamera und Einstellungen sind unter ColorOS anders, und manche Apps brauchen ein Konto. Die Test-Schaltfläche jeder Vorlage zeigt es dir mit einem Tipp.</p>
+      </div>
+      <div class="appshots">
+        <img src="/img/library.png" width="540" height="1200" alt="Die Vorlagenbibliothek von SnapKey Mapper: Apps mit ihren Logos und der Zahl ihrer Vorlagen" loading="lazy">
+        <img src="/img/recipe.png" width="540" height="1200" alt="Eine Vorlage mit einem Feld pro Wert und dem fertigen Link, der live entsteht" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <section class="wide" aria-labelledby="how">
     <p class="kicker">Unter der Haube</p>
     <h2 id="how">So funktioniert es, ganz ehrlich</h2>
@@ -337,7 +358,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS protokolliert jeden Druck</h3><p>Im Systemprotokoll landet eine Zeile mit <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper liest das Protokoll, erkennt diese Zeile und öffnet deine App oder deinen Link.</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>Ohne Root, ohne Bedienungshilfen</h3><p>Zum Lesen des Protokolls braucht es eine einzige Berechtigung, <code>READ_LOGS</code>, die du einmal mit einem einzigen Befehl erteilst. Sie bleibt auch nach einem Neustart erhalten.</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Keine Datensammlung</h3><p>Kein Konto, kein Tracker, keine Werbung. Gespeichert werden nur dein Ziel, der Tastenname und die Geste, auf deinem Handy. Die Lite-Version hat gar keine Internetberechtigung, Android selbst verhindert also, dass sie irgendetwas sendet.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Keine Datensammlung</h3><p>In der App: kein Konto, kein Tracker, keine Werbung. Gespeichert werden nur dein Ziel, der Tastenname und die Geste, auf deinem Handy. Die Lite-Version hat gar keine Internetberechtigung, Android lässt sie also von sich aus keine Netzwerkverbindungen öffnen.</p></li>
     </ul>
   </section>
 
@@ -358,7 +379,7 @@
       </ul></div>
       <div><h3>Was sie nicht kann</h3><ul>
         <li>Irgendetwas nach außen senden: Die Lite-Version hat keine Internetberechtigung, die Vollversion nutzt sie nur, um bei der Einrichtung einmal mit deinem eigenen Handy zu sprechen</li>
-        <li>Auf deine Nachrichten, Benachrichtigungen oder deinen Bildschirm zugreifen: Dafür hat sie keine Berechtigung</li>
+        <li>Auf deine Nachrichten, Benachrichtigungen oder deinen Bildschirm zugreifen: Dafür hat sie keine Berechtigung (das Systemprotokoll liest sie allerdings, siehe FAQ)</li>
         <li>Werbung zeigen, dich tracken oder ein Konto verlangen</li>
       </ul></div>
     </div>
@@ -396,7 +417,7 @@
         <p>Tipp auf <strong>Erkennung starten</strong>. Ab Android 13 fragt das System „Zugriff auf alle Geräteprotokolle erlauben?“: Wähl <strong>Einmaligen Zugriff erlauben</strong>. Dieser Zugriff gilt, solange die Erkennung läuft, du siehst die Frage also erst nach einem Neustart wieder (tipp dann auf die Benachrichtigung „SnapKey Mapper ist aus“).</p>
       </li>
     </ol>
-    <p class="note"><strong>Sicherheitstipp.</strong> Wenn du fertig bist, schalte Debugging über WLAN in den Entwickleroptionen aus. SnapKey Mapper braucht es nicht und löscht seinen eigenen Kopplungsschlüssel direkt nach der Einrichtung.</p>
+    <p class="note"><strong>Sicherheitstipp.</strong> Wenn du fertig bist, schalte Debugging über WLAN in den Entwickleroptionen aus. SnapKey Mapper braucht es nicht und löscht seinen eigenen Kopplungsschlüssel direkt nach der Einrichtung. Entferne SnapKey Mapper danach unter Debugging über WLAN › Gekoppelte Geräte. Richte es nur in einem WLAN ein, dem du vertraust.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
@@ -451,6 +472,10 @@
     <details><summary>Wie deinstalliere ich sie?</summary><div><p>Wie jede andere App. Die Berechtigung verschwindet mit ihr. Schalte Debugging über WLAN aus, falls du es angelassen hast.</p></div></details>
 
     <details><summary>Gehört das Projekt zu OPPO?</summary><div><p>Nein. SnapKey Mapper ist ein unabhängiges Open-Source-Projekt und nicht mit OPPO, OnePlus, Key Mapper, Anthropic oder einer anderen hier gezeigten App verbunden. Diese Namen beschreiben nur die Kompatibilität.</p></div></details>
+
+    <details><summary>Was ist die Vorlagenbibliothek?</summary><div><p>Eine Liste fertiger Links, nach App sortiert: Timer, Wecker, Kamera, Anrufe, SMS, Karten, Musik, Chats und mehr. Öffne sie in der App, wähl eine Vorlage, füll die Lücken aus, teste sie und leg sie dann auf die Snap Key. Jede Vorlage verlinkt auf die offizielle Seite, die sie dokumentiert.</p></div></details>
+
+    <details><summary>Woher weiß ich, ob eine Vorlage auf meinem Handy funktioniert?</summary><div><p>Die Vorlagen werden auf einem Android-Emulator geprüft, nicht auf jedem Handy. Uhr, Kamera und Einstellungen sind unter ColorOS anders, und manche Apps brauchen ein Konto. Die Test-Schaltfläche jeder Vorlage zeigt es dir mit einem Tipp. Klappt eine auf deinem Handy nicht, sag uns auf GitHub Bescheid, damit wir sie korrigieren oder entfernen.</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">

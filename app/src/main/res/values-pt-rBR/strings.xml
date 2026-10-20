@@ -42,7 +42,7 @@
     <string name="gesture_double">Duas pressões</string>
     <string name="gesture_long">Pressão longa</string>
     <string name="finder_title">Outro celular? Encontre sua tecla</string>
-    <string name="finder_help">A tecla do Find X9 já é conhecida. Em outro celular: inicie a captura, pressione a tecla lateral 2 ou 3 vezes, pare e toque na linha que volta a cada pressão.</string>
+    <string name="finder_help">A tecla do Find X9 já é conhecida. Em outro celular: inicie a captura, pressione a tecla lateral 2 ou 3 vezes, pare e toque na linha que volta a cada pressão. A captura pode conter informações pessoais de outros apps: confira antes de compartilhar.</string>
     <string name="capture_start">Iniciar captura</string>
     <string name="capture_stop">Parar captura</string>
     <string name="finder_all">Mostrar todas as linhas</string>
@@ -75,4 +75,20 @@
     <string name="err_invalid_intent">Link intent inválido</string>
     <string name="setup_fail_pair">Falha no pareamento. Toque de novo no botão de configuração do app, depois em “Parear o dispositivo com um código de pareamento” e digite o novo código. Se falhar de novo, desative e reative a Depuração por Wi-Fi.</string>
     <string name="lang_title">Idioma</string>
+    <string name="library_open">Ver a biblioteca de receitas</string>
+    <string name="library_title">Biblioteca de receitas</string>
+    <string name="library_intro">Links prontos, agrupados por app. Escolha um, preencha seus valores, teste e depois use na Snap Key.</string>
+    <string name="library_search">Pesquisar um app ou uma ação</string>
+    <string name="library_count">Receitas: %1$d</string>
+    <string name="library_not_installed">Não instalado</string>
+    <string name="library_empty">Nada corresponde à sua pesquisa.</string>
+    <string name="recipe_fields">Seus valores</string>
+    <string name="recipe_link">Link final</string>
+    <string name="recipe_use">Usar esta receita</string>
+    <string name="recipe_fill_all">Preencha todos os campos primeiro.</string>
+    <string name="recipe_saved">Salvo como seu destino.</string>
+    <string name="recipe_missing">Nada abriu. O app está instalado?</string>
+    <string name="recipe_verified">Verificada em um emulador Android em %1$s.</string>
+    <string name="recipe_verified_partial">Em um emulador Android (%1$s), o app certo recebeu este link, mas o emulador não conseguiu mostrar mais que isso. Confirme com o botão de teste.</string>
+    <string name="recipe_source">Documentação oficial</string>
 </resources>

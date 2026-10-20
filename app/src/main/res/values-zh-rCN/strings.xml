@@ -42,7 +42,7 @@
     <string name="gesture_double">双击</string>
     <string name="gesture_long">长按</string>
     <string name="finder_title">其他手机？找到你的按键</string>
-    <string name="finder_help">Find X9 的按键已经识别。在其他手机上：开始捕获，按侧键 2 到 3 次，停止，然后点每次按键都会出现的那一行。</string>
+    <string name="finder_help">Find X9 的按键已经识别。在其他手机上：开始捕获，按侧键 2 到 3 次，停止，然后点每次按键都会出现的那一行。捕获内容可能包含其他应用的个人信息，分享前请先检查。</string>
     <string name="capture_start">开始捕获</string>
     <string name="capture_stop">停止捕获</string>
     <string name="finder_all">显示所有行</string>
@@ -75,4 +75,20 @@
     <string name="err_invalid_intent">intent 链接无效</string>
     <string name="setup_fail_pair">配对失败。再点一次应用里的设置按钮，然后点“使用配对码配对设备”，输入新的配对码。如果仍然失败，请关闭再重新开启无线调试。</string>
     <string name="lang_title">语言</string>
+    <string name="library_open">浏览模板库</string>
+    <string name="library_title">模板库</string>
+    <string name="library_intro">现成的链接，按应用分组。选一个，填好你的内容，测试一下，然后设为 Snap Key 的目标。</string>
+    <string name="library_search">搜索应用或操作</string>
+    <string name="library_count">模板：%1$d 个</string>
+    <string name="library_not_installed">未安装</string>
+    <string name="library_empty">没有符合搜索条件的结果。</string>
+    <string name="recipe_fields">你的内容</string>
+    <string name="recipe_link">最终链接</string>
+    <string name="recipe_use">使用此模板</string>
+    <string name="recipe_fill_all">请先填写所有字段。</string>
+    <string name="recipe_saved">已保存为你的目标。</string>
+    <string name="recipe_missing">什么都没有打开。应用是否已安装？</string>
+    <string name="recipe_verified">已于 %1$s 在 Android 模拟器上验证。</string>
+    <string name="recipe_verified_partial">在 Android 模拟器上（%1$s），正确的应用收到了这个链接，但模拟器无法显示更多内容。请用测试按钮确认。</string>
+    <string name="recipe_source">官方文档</string>
 </resources>

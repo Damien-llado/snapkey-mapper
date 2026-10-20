@@ -51,6 +51,7 @@ public class MainActivity extends Activity {
     private View autoSetup;
     private EditText link, pattern;
     private View linkBox, appBox;
+    private Ui.Segmented targetChoice;
     private CheckBox all;
     private ArrayAdapter<String> adapter;
     private final List<String> captured = new ArrayList<>();
@@ -185,32 +186,9 @@ public class MainActivity extends Activity {
         cmd.setTextIsSelectable(true);
         cmd.setPadding(Ui.dp(this, 12), Ui.dp(this, 12), Ui.dp(this, 48), Ui.dp(this, 12));
         box.addView(cmd);
-        box.addView(copyIcon(COMMAND), copyIconParams());
+        box.addView(Ui.copyIcon(this, () -> COMMAND), Ui.copyIconParams(this));
         Ui.add(card, box, 6);
         Ui.add(top, card, 14);
-    }
-
-    /** Lucide "copy" icon at the top right of a field that holds a command; turns into a check mark for a second. */
-    private ImageView copyIcon(String text) {
-        ImageView icon = new ImageView(this);
-        icon.setImageResource(R.drawable.ic_copy);
-        icon.setColorFilter(Ui.muted);
-        icon.setPadding(Ui.dp(this, 7), Ui.dp(this, 7), Ui.dp(this, 7), Ui.dp(this, 7));
-        icon.setContentDescription(getString(R.string.perm_copy));
-        Ui.ripple(icon, Ui.shape(this, 0, 10, 0));
-        icon.setOnClickListener(v -> {
-            getSystemService(ClipboardManager.class).setPrimaryClip(ClipData.newPlainText("command", text));
-            icon.setImageResource(R.drawable.ic_check);
-            icon.setColorFilter(Ui.accent);
-            icon.postDelayed(() -> { icon.setImageResource(R.drawable.ic_copy); icon.setColorFilter(Ui.muted); }, 1500);
-        });
-        return icon;
-    }
-
-    private FrameLayout.LayoutParams copyIconParams() {
-        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(Ui.dp(this, 36), Ui.dp(this, 36), Gravity.TOP | Gravity.END);
-        lp.setMargins(0, Ui.dp(this, 4), Ui.dp(this, 4), 0);
-        return lp;
     }
 
     /** One line: coloured dot, name, state, and a button while it is not granted. */
@@ -243,11 +221,14 @@ public class MainActivity extends Activity {
         LinearLayout card = Ui.card(this);
         card.addView(Ui.title(this, getString(R.string.target_title)));
         boolean isApp = Prefs.targetType(this).equals("app");
-        Ui.add(card, new Ui.Segmented(this, new String[]{getString(R.string.target_link), getString(R.string.target_app)}, isApp ? 1 : 0, i -> {
+        Ui.add(card, Ui.button(this, getString(R.string.library_open), false,
+                v -> startActivityForResult(new Intent(this, LibraryActivity.class), 3)), 12);
+        targetChoice = new Ui.Segmented(this, new String[]{getString(R.string.target_link), getString(R.string.target_app)}, isApp ? 1 : 0, i -> {
             Prefs.targetType(this, i == 1 ? "app" : "link");
             linkBox.setVisibility(i == 1 ? View.GONE : View.VISIBLE);
             appBox.setVisibility(i == 1 ? View.VISIBLE : View.GONE);
-        }), 12);
+        });
+        Ui.add(card, targetChoice, 12);
 
         linkBox = new LinearLayout(this);
         ((LinearLayout) linkBox).setOrientation(LinearLayout.VERTICAL);
@@ -417,6 +398,14 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onActivityResult(int code, int result, Intent data) {
+        if (code == 3 && result == RESULT_OK) {
+            // a recipe was chosen in the library: show it as the link target
+            link.setText(Prefs.link(this));
+            targetChoice.select(0);
+            linkBox.setVisibility(View.VISIBLE);
+            appBox.setVisibility(View.GONE);
+            return;
+        }
         if (code != 2 || result != RESULT_OK || data == null) return;
         try (java.io.OutputStream out = getContentResolver().openOutputStream(data.getData())) {
             synchronized (captured) {

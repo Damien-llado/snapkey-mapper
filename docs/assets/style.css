@@ -353,6 +353,10 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .ticks li { position: relative; padding-left: 1.9rem; }
 .ticks li::before { content: ""; position: absolute; left: 0; top: .2em; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: color-mix(in oklab, var(--accent) 16%, transparent); }
 .ticks li::after { content: ""; position: absolute; left: .42rem; top: .42em; width: .35rem; height: .6rem; border: solid var(--accent); border-width: 0 2px 2px 0; rotate: 45deg; }
+/* Captures de l'appli (bibliothèque) */
+.appshots { display: flex; gap: .9rem; justify-content: center; align-items: flex-start; }
+.appshots img { width: min(46%, 250px); height: auto; border-radius: 26px; border: 1px solid var(--line-2); box-shadow: var(--shadow); background: var(--card, #fff); }
+.appshots img + img { margin-top: 2rem; }
 .console { min-width: 0; border-radius: 22px; overflow: hidden; background: var(--term-bg); color: var(--term-ink); border: 1px solid #1F3A2F;
   box-shadow: 0 30px 60px -30px rgb(0 0 0 / .55), 0 0 0 6px color-mix(in oklab, var(--accent) 10%, transparent); }
 .console-bar { display: flex; align-items: center; gap: 7px; padding: .7rem 1rem; border-bottom: 1px solid #1F3A2F; font: .8rem var(--mono); color: var(--term-dim); }

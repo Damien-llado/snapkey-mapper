@@ -1,5 +1,8 @@
 package io.github.damienllado.snapkeymapper;
 
+import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
@@ -11,6 +14,10 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -112,6 +119,64 @@ final class Ui {
         lp.topMargin = dp(parent.getContext(), topDp);
         parent.addView(child, lp);
         return child;
+    }
+
+    /** Lucide "copy" icon at the top right of a field that holds a command; turns into a check mark for a second. */
+    static ImageView copyIcon(Context c, java.util.function.Supplier<String> text) {
+        ImageView icon = new ImageView(c);
+        icon.setImageResource(R.drawable.ic_copy);
+        icon.setColorFilter(muted);
+        icon.setPadding(dp(c, 7), dp(c, 7), dp(c, 7), dp(c, 7));
+        icon.setContentDescription(c.getString(R.string.perm_copy));
+        ripple(icon, shape(c, 0, 10, 0));
+        icon.setOnClickListener(v -> {
+            String t = text.get();
+            if (t == null) return;
+            c.getSystemService(ClipboardManager.class).setPrimaryClip(ClipData.newPlainText("command", t));
+            icon.setImageResource(R.drawable.ic_check);
+            icon.setColorFilter(accent);
+            icon.postDelayed(() -> { icon.setImageResource(R.drawable.ic_copy); icon.setColorFilter(muted); }, 1500);
+        });
+        return icon;
+    }
+
+    static FrameLayout.LayoutParams copyIconParams(Context c) {
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(dp(c, 36), dp(c, 36), Gravity.TOP | Gravity.END);
+        lp.setMargins(0, dp(c, 4), dp(c, 4), 0);
+        return lp;
+    }
+
+    /** Full-screen vertical page that keeps its content out of the system bars (Android 15 draws under them). */
+    static LinearLayout page(Activity a) {
+        init(a);
+        a.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(bg));
+        LinearLayout root = new LinearLayout(a);
+        root.setOrientation(LinearLayout.VERTICAL);
+        root.setOnApplyWindowInsetsListener((v, insets) -> {
+            android.graphics.Insets sys = insets.getInsets(WindowInsets.Type.systemBars());
+            v.setPadding(0, sys.top, 0, sys.bottom);
+            return insets;
+        });
+        return root;
+    }
+
+    /** Call after setContentView: dark icons in the status and navigation bars in the light theme. */
+    static void barsAppearance(Activity a) {
+        int bars = WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS | WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
+        a.getWindow().getInsetsController().setSystemBarsAppearance(night ? 0 : bars, bars);
+    }
+
+    /** Rounded tile with the logo of an app or of an Android function. */
+    static ImageView logo(Context c, Recipes.App app, int sizeDp) {
+        ImageView v = new ImageView(c);
+        int id = c.getResources().getIdentifier(app.logo, "drawable", c.getPackageName());
+        if (id != 0) v.setImageResource(id);
+        int pad = dp(c, sizeDp * 0.22f);
+        v.setPadding(pad, pad, pad, pad);
+        // system functions sit on a green tint, brand logos on a light tile so dark logos stay readable at night
+        v.setBackground(shape(c, app.system ? (night ? 0x2A3BD99A : 0x1A0A8A63) : (night ? 0xFFF0F4F1 : 0xFFFFFFFF), sizeDp * 0.3f, app.system ? 0 : line));
+        v.setContentDescription(app.name);
+        return v;
     }
 
     /** Pill-shaped choice between a few options. */

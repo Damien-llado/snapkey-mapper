@@ -46,6 +46,7 @@ public class SetupService extends Service {
             new Thread(() -> pairAndGrant(code)).start();
             return START_NOT_STICKY;
         }
+        Adb.forget(this); // leftovers of an interrupted run: the key never outlives one setup
         startForeground(2, build(getString(R.string.setup_waiting_title),
                 getString(R.string.setup_waiting_text), false),
                 ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE);
@@ -74,14 +75,29 @@ public class SetupService extends Service {
                 paired = false; // wrong code: Android closes the pairing screen
             }
             if (!paired) throw new IllegalStateException(getString(R.string.setup_fail_pair));
-            if (!adb.autoConnect(this, 10000)) throw new IllegalStateException(getString(R.string.setup_fail_connect));
+            boolean connected = false;
+            for (int tries = 0; !connected; tries++) {
+                try {
+                    connected = adb.autoConnect(this, 10000);
+                    if (!connected) throw new IllegalStateException(getString(R.string.setup_fail_connect));
+                } catch (java.io.IOException e) { // right after pairing, adbd can still be changing its port (connection refused): ask again
+                    if (tries >= 3) throw e;
+                    Thread.sleep(2000);
+                }
+            }
             // The key is only needed to open the connection: forget it now, because Android kills this app
             // as soon as the permission is granted (the shell posts the final message itself).
             Adb.forget(this);
             StringBuilder out = new StringBuilder();
-            String done = "cmd notification post -S bigtext -t 'SnapKey Mapper' setup '" + getString(R.string.setup_done).replace("'", "'\\''") + "'";
+            // Android kills this app as soon as the permission is granted, and adbd then closes the shell: anything written after
+            // "pm grant" never runs. So the final message comes from a detached process (setsid) started BEFORE the grant, which
+            // waits until the permission is really granted and then posts it (text in base64 so no quote can break the command).
+            String text = android.util.Base64.encodeToString(getString(R.string.setup_done).getBytes(java.nio.charset.StandardCharsets.UTF_8), android.util.Base64.NO_WRAP);
+            String pkg = getPackageName();
+            String waitAndPost = "for i in 1 2 3 4 5 6 7 8 9 10; do sleep 1; dumpsys package " + pkg + " | grep -q \"READ_LOGS: granted=true\" && "
+                    + "{ cmd notification post -S bigtext -t \"SnapKey Mapper\" setup \"$(echo " + text + " | base64 -d)\"; exit; }; done";
             try (BufferedReader r = new BufferedReader(new InputStreamReader(adb.openStream(
-                    "shell:pm grant " + getPackageName() + " android.permission.READ_LOGS && " + done).openInputStream()))) {
+                    "shell:{ setsid sh -c '" + waitAndPost + "' >/dev/null 2>&1 & }; pm grant " + pkg + " android.permission.READ_LOGS").openInputStream()))) {
                 for (String l; (l = r.readLine()) != null; ) out.append(l).append('\n');
             }
             if (checkSelfPermission(Manifest.permission.READ_LOGS) != PackageManager.PERMISSION_GRANTED) {
@@ -91,7 +107,8 @@ public class SetupService extends Service {
             }
             result = getString(R.string.setup_done);
         } catch (Exception e) {
-            result = String.valueOf(e.getMessage());
+            android.util.Log.w("SnapKeySetup", "setup failed", e);
+            result = e.getMessage() != null ? e.getMessage() : e.toString(); // never show a bare "null"
             Adb.forget(this);
         }
         say(getString(R.string.setup_notif_title), result, false);

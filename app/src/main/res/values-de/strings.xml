@@ -42,7 +42,7 @@
     <string name="gesture_double">Zweimal drücken</string>
     <string name="gesture_long">Lang drücken</string>
     <string name="finder_title">Anderes Handy? Finde deine Taste</string>
-    <string name="finder_help">Die Taste des Find X9 ist schon bekannt. Auf einem anderen Handy: Starte die Aufzeichnung, drück die Seitentaste 2- oder 3-mal, stopp und tipp dann auf die Zeile, die bei jedem Druck wiederkommt.</string>
+    <string name="finder_help">Die Taste des Find X9 ist schon bekannt. Auf einem anderen Handy: Starte die Aufzeichnung, drück die Seitentaste 2- oder 3-mal, stopp und tipp dann auf die Zeile, die bei jedem Druck wiederkommt. Die Aufzeichnung kann persönliche Informationen anderer Apps enthalten: Prüfe sie, bevor du sie teilst.</string>
     <string name="capture_start">Aufzeichnung starten</string>
     <string name="capture_stop">Aufzeichnung stoppen</string>
     <string name="finder_all">Alle Zeilen anzeigen</string>
@@ -75,4 +75,20 @@
     <string name="err_invalid_intent">Ungültiger intent:-Link</string>
     <string name="setup_fail_pair">Kopplung fehlgeschlagen. Tipp erneut auf die Einrichtungsschaltfläche der App, dann auf „Gerät über einen Kopplungscode koppeln“ und gib den neuen Code ein. Klappt es wieder nicht, schalte Debugging über WLAN aus und wieder ein.</string>
     <string name="lang_title">Sprache</string>
+    <string name="library_open">Vorlagen durchsuchen</string>
+    <string name="library_title">Vorlagenbibliothek</string>
+    <string name="library_intro">Fertige Links, nach App sortiert. Wähl eine Vorlage, trag deine Werte ein, teste sie und leg sie dann auf die Snap Key.</string>
+    <string name="library_search">App oder Aktion suchen</string>
+    <string name="library_count">Vorlagen: %1$d</string>
+    <string name="library_not_installed">Nicht installiert</string>
+    <string name="library_empty">Keine Treffer für deine Suche.</string>
+    <string name="recipe_fields">Deine Werte</string>
+    <string name="recipe_link">Fertiger Link</string>
+    <string name="recipe_use">Diese Vorlage verwenden</string>
+    <string name="recipe_fill_all">Füll zuerst alle Felder aus.</string>
+    <string name="recipe_saved">Als dein Ziel gespeichert.</string>
+    <string name="recipe_missing">Nichts geöffnet. Ist die App installiert?</string>
+    <string name="recipe_verified">Am %1$s auf einem Android-Emulator geprüft.</string>
+    <string name="recipe_verified_partial">Auf einem Android-Emulator (%1$s) hat die richtige App diesen Link empfangen, mehr konnte der Emulator nicht zeigen. Prüf es mit der Test-Schaltfläche.</string>
+    <string name="recipe_source">Offizielle Dokumentation</string>
 </resources>

@@ -42,7 +42,7 @@
     <string name="gesture_double">Twee keer</string>
     <string name="gesture_long">Lang drukken</string>
     <string name="finder_title">Andere telefoon? Zoek je toets</string>
-    <string name="finder_help">De toets van de Find X9 is al bekend. Op een andere telefoon: start de capture, druk 2 of 3 keer op de zijknop, stop en tik dan op de regel die bij elke druk terugkomt.</string>
+    <string name="finder_help">De toets van de Find X9 is al bekend. Op een andere telefoon: start de capture, druk 2 of 3 keer op de zijknop, stop en tik dan op de regel die bij elke druk terugkomt. De opname kan persoonlijke gegevens van andere apps bevatten: controleer haar voordat je haar deelt.</string>
     <string name="capture_start">Capture starten</string>
     <string name="capture_stop">Capture stoppen</string>
     <string name="finder_all">Alle regels tonen</string>
@@ -75,4 +75,20 @@
     <string name="err_invalid_intent">Ongeldige intent-link</string>
     <string name="setup_fail_pair">Koppelen mislukt. Tik opnieuw op de instelknop van de app, daarna op “Apparaat koppelen met koppelingscode” en typ de nieuwe code. Lukt het weer niet, zet Draadloze foutopsporing dan uit en weer aan.</string>
     <string name="lang_title">Taal</string>
+    <string name="library_open">Bekijk de receptenbibliotheek</string>
+    <string name="library_title">Receptenbibliotheek</string>
+    <string name="library_intro">Kant-en-klare links, per app gegroepeerd. Kies er een, vul je eigen waarden in, test hem en gebruik hem dan voor de Snap Key.</string>
+    <string name="library_search">Zoek een app of een actie</string>
+    <string name="library_count">Recepten: %1$d</string>
+    <string name="library_not_installed">Niet geïnstalleerd</string>
+    <string name="library_empty">Niets gevonden voor je zoekopdracht.</string>
+    <string name="recipe_fields">Je waarden</string>
+    <string name="recipe_link">Uiteindelijke link</string>
+    <string name="recipe_use">Dit recept gebruiken</string>
+    <string name="recipe_fill_all">Vul eerst alle velden in.</string>
+    <string name="recipe_saved">Opgeslagen als je doel.</string>
+    <string name="recipe_missing">Er is niets geopend. Is de app geïnstalleerd?</string>
+    <string name="recipe_verified">Gecontroleerd op een Android-emulator op %1$s.</string>
+    <string name="recipe_verified_partial">Op een Android-emulator (%1$s) kreeg de juiste app deze link, maar de emulator kon niet meer laten zien. Controleer het met de testknop.</string>
+    <string name="recipe_source">Officiële documentatie</string>
 </resources>

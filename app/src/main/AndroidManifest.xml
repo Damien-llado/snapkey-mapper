@@ -20,6 +20,18 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent>
+        <!-- recipes:begin (tools/queries.py) -->
+        <package android:name="com.google.android.apps.maps" />
+        <package android:name="com.google.android.youtube" />
+        <package android:name="com.google.android.apps.youtube.music" />
+        <package android:name="com.google.android.gm" />
+        <package android:name="org.telegram.messenger" />
+        <package android:name="org.telegram.messenger.web" />
+        <package android:name="com.whatsapp" />
+        <package android:name="org.thoughtcrime.securesms" />
+        <package android:name="md.obsidian" />
+        <package android:name="io.homeassistant.companion.android" />
+        <!-- recipes:end -->
     </queries>
 
     <application
@@ -34,6 +46,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".LibraryActivity" android:exported="false" />
+        <activity android:name=".RecipeActivity" android:exported="false" />
 
         <service
             android:name=".ListenService"

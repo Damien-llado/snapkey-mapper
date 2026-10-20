@@ -42,7 +42,7 @@
     <string name="gesture_double">Dos pulsaciones</string>
     <string name="gesture_long">Pulsación larga</string>
     <string name="finder_title">¿Otro móvil? Encuentra tu tecla</string>
-    <string name="finder_help">La tecla del Find X9 ya es conocida. En otro móvil: inicia la captura, pulsa la tecla lateral 2 o 3 veces, detén la captura y toca la línea que se repite en cada pulsación.</string>
+    <string name="finder_help">La tecla del Find X9 ya es conocida. En otro móvil: inicia la captura, pulsa la tecla lateral 2 o 3 veces, detén la captura y toca la línea que se repite en cada pulsación. La captura puede contener información personal de otras apps: revísala antes de compartirla.</string>
     <string name="capture_start">Iniciar captura</string>
     <string name="capture_stop">Detener captura</string>
     <string name="finder_all">Mostrar todas las líneas</string>
@@ -75,4 +75,20 @@
     <string name="err_invalid_intent">Enlace intent no válido</string>
     <string name="setup_fail_pair">La vinculación ha fallado. Vuelve a tocar el botón de configuración de la app, luego \"Vincular dispositivo con código de sincronización\" y escribe el código nuevo. Si vuelve a fallar, desactiva y activa la depuración inalámbrica.</string>
     <string name="lang_title">Idioma</string>
+    <string name="library_open">Ver la biblioteca de recetas</string>
+    <string name="library_title">Biblioteca de recetas</string>
+    <string name="library_intro">Enlaces listos para usar, agrupados por app. Elige uno, rellena tus datos, pruébalo y úsalo para la Snap Key.</string>
+    <string name="library_search">Buscar una app o una acción</string>
+    <string name="library_count">Recetas: %1$d</string>
+    <string name="library_not_installed">No instalada</string>
+    <string name="library_empty">Nada coincide con tu búsqueda.</string>
+    <string name="recipe_fields">Tus datos</string>
+    <string name="recipe_link">Enlace final</string>
+    <string name="recipe_use">Usar esta receta</string>
+    <string name="recipe_fill_all">Rellena primero todos los campos.</string>
+    <string name="recipe_saved">Guardado como tu destino.</string>
+    <string name="recipe_missing">No se ha abierto nada. ¿Está instalada la app?</string>
+    <string name="recipe_verified">Comprobada en un emulador de Android el %1$s.</string>
+    <string name="recipe_verified_partial">En un emulador de Android (%1$s), la app correcta recibió este enlace, pero el emulador no pudo mostrar más. Confírmalo con el botón de prueba.</string>
+    <string name="recipe_source">Documentación oficial</string>
 </resources>

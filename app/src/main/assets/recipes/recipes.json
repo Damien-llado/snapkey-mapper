@@ -1,0 +1,1361 @@
+{
+  "version": 1,
+  "apps": [
+    {
+      "id": "clock",
+      "name": "Clock",
+      "kind": "system",
+      "logo": "lucide:alarm-clock",
+      "recipes": [
+        {
+          "id": "clock-timer",
+          "title": "Start a timer",
+          "desc": "Starts a countdown right away, without opening the clock app.",
+          "link": "intent:#Intent;action=android.intent.action.SET_TIMER;i.android.intent.extra.alarm.LENGTH=[SECONDS];B.android.intent.extra.alarm.SKIP_UI=true;end",
+          "vars": [
+            {
+              "name": "SECONDS",
+              "label": "Duration in seconds",
+              "where": "Multiply minutes by 60: 5 minutes is 300, 1 hour is 3600.",
+              "example": "300"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#CreateTimer",
+          "confidence": "documented"
+        },
+        {
+          "id": "clock-timer-label",
+          "title": "Start a labelled timer",
+          "desc": "Starts a countdown with a name, for example \"Pasta\".",
+          "link": "intent:#Intent;action=android.intent.action.SET_TIMER;i.android.intent.extra.alarm.LENGTH=[SECONDS];S.android.intent.extra.alarm.MESSAGE=[LABEL];B.android.intent.extra.alarm.SKIP_UI=true;end",
+          "vars": [
+            {
+              "name": "SECONDS",
+              "label": "Duration in seconds",
+              "where": "Multiply minutes by 60: 10 minutes is 600.",
+              "example": "600"
+            },
+            {
+              "name": "LABEL",
+              "label": "Name of the timer",
+              "where": "Any short text.",
+              "example": "Pasta"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#CreateTimer",
+          "confidence": "documented"
+        },
+        {
+          "id": "clock-alarm",
+          "title": "Set an alarm",
+          "desc": "Creates an alarm at the time you choose, without opening the clock app.",
+          "link": "intent:#Intent;action=android.intent.action.SET_ALARM;i.android.intent.extra.alarm.HOUR=[HOUR];i.android.intent.extra.alarm.MINUTES=[MINUTES];B.android.intent.extra.alarm.SKIP_UI=true;end",
+          "vars": [
+            {
+              "name": "HOUR",
+              "label": "Hour (0 to 23)",
+              "where": "24-hour clock: 7 for 7 am, 19 for 7 pm.",
+              "example": "7"
+            },
+            {
+              "name": "MINUTES",
+              "label": "Minutes (0 to 59)",
+              "where": "Just the minutes of the time.",
+              "example": "30"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#CreateAlarm",
+          "confidence": "documented"
+        },
+        {
+          "id": "clock-alarm-label",
+          "title": "Set a labelled alarm",
+          "desc": "Creates an alarm with a name, for example \"Gym\".",
+          "link": "intent:#Intent;action=android.intent.action.SET_ALARM;i.android.intent.extra.alarm.HOUR=[HOUR];i.android.intent.extra.alarm.MINUTES=[MINUTES];S.android.intent.extra.alarm.MESSAGE=[LABEL];B.android.intent.extra.alarm.SKIP_UI=true;end",
+          "vars": [
+            {
+              "name": "HOUR",
+              "label": "Hour (0 to 23)",
+              "where": "24-hour clock: 7 for 7 am, 19 for 7 pm.",
+              "example": "18"
+            },
+            {
+              "name": "MINUTES",
+              "label": "Minutes (0 to 59)",
+              "where": "Just the minutes of the time.",
+              "example": "0"
+            },
+            {
+              "name": "LABEL",
+              "label": "Name of the alarm",
+              "where": "Any short text.",
+              "example": "Gym"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#CreateAlarm",
+          "confidence": "documented"
+        },
+        {
+          "id": "clock-show-alarms",
+          "title": "Show the alarms",
+          "desc": "Opens the list of your alarms.",
+          "link": "intent:#Intent;action=android.intent.action.SHOW_ALARMS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#ShowAlarms",
+          "confidence": "documented"
+        },
+        {
+          "id": "clock-show-timers",
+          "title": "Show the timers",
+          "desc": "Opens the list of your timers.",
+          "link": "intent:#Intent;action=android.intent.action.SHOW_TIMERS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#Clock",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "camera",
+      "name": "Camera",
+      "kind": "system",
+      "logo": "lucide:camera",
+      "recipes": [
+        {
+          "id": "camera-photo",
+          "title": "Open the camera in photo mode",
+          "desc": "Opens the default camera app ready to take a photo.",
+          "link": "intent:#Intent;action=android.media.action.STILL_IMAGE_CAMERA;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#CameraStill",
+          "confidence": "documented"
+        },
+        {
+          "id": "camera-video",
+          "title": "Open the camera in video mode",
+          "desc": "Opens the default camera app ready to film.",
+          "link": "intent:#Intent;action=android.media.action.VIDEO_CAMERA;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#CameraVideo",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "phone",
+      "name": "Phone",
+      "kind": "system",
+      "logo": "lucide:phone",
+      "recipes": [
+        {
+          "id": "phone-dial",
+          "title": "Dial a number",
+          "desc": "Opens the dialer with the number typed in. You press the call button yourself.",
+          "link": "tel:[NUMBER]",
+          "vars": [
+            {
+              "name": "NUMBER",
+              "kind": "phone",
+              "label": "Phone number",
+              "where": "With the country code, for example +33123456789.",
+              "example": "+33123456789"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#DialPhone",
+          "confidence": "documented"
+        },
+        {
+          "id": "phone-open-dialer",
+          "title": "Open the dialer",
+          "desc": "Opens the keypad of the phone app.",
+          "link": "intent:#Intent;action=android.intent.action.DIAL;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#DialPhone",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "messages",
+      "name": "Messages",
+      "kind": "system",
+      "logo": "lucide:message-square",
+      "recipes": [
+        {
+          "id": "messages-compose",
+          "title": "Write a text message",
+          "desc": "Opens your messages app with the person and the text already filled in. You press send yourself.",
+          "link": "sms:[NUMBER]?body=[MESSAGE]",
+          "vars": [
+            {
+              "name": "NUMBER",
+              "kind": "phone",
+              "label": "Phone number",
+              "where": "With the country code, for example +33123456789.",
+              "example": "+33123456789"
+            },
+            {
+              "name": "MESSAGE",
+              "label": "Message",
+              "where": "The text to send.",
+              "example": "I am on my way"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "dispatch",
+          "source": "https://developer.android.com/guide/components/intents-common#SendMessage",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "email",
+      "name": "Email",
+      "kind": "system",
+      "logo": "lucide:mail",
+      "recipes": [
+        {
+          "id": "email-compose",
+          "title": "Write an email",
+          "desc": "Opens your mail app with the address, subject and text already filled in. You press send yourself.",
+          "link": "mailto:[ADDRESS]?subject=[SUBJECT]&body=[BODY]",
+          "vars": [
+            {
+              "name": "ADDRESS",
+              "label": "Email address",
+              "where": "The person you write to.",
+              "example": "name@example.com",
+              "kind": "raw"
+            },
+            {
+              "name": "SUBJECT",
+              "label": "Subject",
+              "where": "Any short text.",
+              "example": "Reminder"
+            },
+            {
+              "name": "BODY",
+              "label": "Message",
+              "where": "The text of the email.",
+              "example": "Hello,"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "dispatch",
+          "source": "https://developer.android.com/guide/components/intents-common#ComposeEmail",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "name": "Web",
+      "kind": "system",
+      "logo": "lucide:globe",
+      "recipes": [
+        {
+          "id": "web-open",
+          "title": "Open a website",
+          "desc": "Opens any web address in your browser (or in the app that handles it).",
+          "link": "[URL]",
+          "vars": [
+            {
+              "name": "URL",
+              "kind": "raw",
+              "label": "Web address",
+              "where": "Copy it from your browser, starting with https://.",
+              "example": "https://example.org"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#ViewUrl",
+          "confidence": "documented"
+        },
+        {
+          "id": "web-search",
+          "title": "Search the web",
+          "desc": "Runs a web search for a fixed text.",
+          "link": "intent:#Intent;action=android.intent.action.WEB_SEARCH;S.query=[QUERY];end",
+          "vars": [
+            {
+              "name": "QUERY",
+              "label": "Search text",
+              "where": "What you want to look up.",
+              "example": "weather tomorrow"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#SearchWeb",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "kind": "system",
+      "logo": "lucide:calendar-plus",
+      "recipes": [
+        {
+          "id": "calendar-new-event",
+          "title": "Create an event",
+          "desc": "Opens your calendar with a new event and its title already filled in.",
+          "link": "intent://com.android.calendar/events#Intent;scheme=content;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/event;S.title=[TITLE];end",
+          "vars": [
+            {
+              "name": "TITLE",
+              "label": "Title of the event",
+              "where": "Any short text.",
+              "example": "Call with the team"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "dispatch",
+          "source": "https://developer.android.com/guide/components/intents-common#AddEvent",
+          "confidence": "documented"
+        },
+        {
+          "id": "calendar-open",
+          "title": "Open the calendar",
+          "desc": "Opens your calendar on today.",
+          "link": "intent://com.android.calendar/time/#Intent;scheme=content;action=android.intent.action.VIEW;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "dispatch",
+          "source": "https://developer.android.com/guide/components/intents-common#Calendar",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "contacts",
+      "name": "Contacts",
+      "kind": "system",
+      "logo": "lucide:user-plus",
+      "recipes": [
+        {
+          "id": "contacts-new",
+          "title": "Create a contact",
+          "desc": "Opens a new contact with the name and phone number already filled in.",
+          "link": "intent:#Intent;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/contact;S.name=[NAME];S.phone=[NUMBER];end",
+          "vars": [
+            {
+              "name": "NAME",
+              "label": "Name",
+              "where": "Any name.",
+              "example": "Alex Martin"
+            },
+            {
+              "name": "NUMBER",
+              "kind": "phone",
+              "label": "Phone number",
+              "where": "With the country code, for example +33123456789.",
+              "example": "+33123456789"
+            }
+          ],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/guide/components/intents-common#InsertContact",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "kind": "system",
+      "logo": "lucide:settings",
+      "recipes": [
+        {
+          "id": "settings-wifi",
+          "title": "Wi-Fi settings",
+          "desc": "Opens the list of Wi-Fi networks.",
+          "link": "intent:#Intent;action=android.settings.WIFI_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-bluetooth",
+          "title": "Bluetooth settings",
+          "desc": "Opens the Bluetooth settings.",
+          "link": "intent:#Intent;action=android.settings.BLUETOOTH_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-airplane",
+          "title": "Airplane mode settings",
+          "desc": "Opens the airplane mode settings.",
+          "link": "intent:#Intent;action=android.settings.AIRPLANE_MODE_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-display",
+          "title": "Display settings",
+          "desc": "Opens brightness, dark mode and screen timeout.",
+          "link": "intent:#Intent;action=android.settings.DISPLAY_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-sound",
+          "title": "Sound settings",
+          "desc": "Opens volume and ringtone settings.",
+          "link": "intent:#Intent;action=android.settings.SOUND_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-battery-saver",
+          "title": "Battery saver settings",
+          "desc": "Opens the battery saver settings.",
+          "link": "intent:#Intent;action=android.settings.BATTERY_SAVER_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-location",
+          "title": "Location settings",
+          "desc": "Opens the location settings.",
+          "link": "intent:#Intent;action=android.settings.LOCATION_SOURCE_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-nfc",
+          "title": "NFC settings",
+          "desc": "Opens the NFC settings.",
+          "link": "intent:#Intent;action=android.settings.NFC_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-data-usage",
+          "title": "Data usage settings",
+          "desc": "Opens the mobile data usage screen.",
+          "link": "intent:#Intent;action=android.settings.DATA_USAGE_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-accessibility",
+          "title": "Accessibility settings",
+          "desc": "Opens the accessibility settings.",
+          "link": "intent:#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-language",
+          "title": "Language settings",
+          "desc": "Opens the language settings.",
+          "link": "intent:#Intent;action=android.settings.LOCALE_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-date",
+          "title": "Date and time settings",
+          "desc": "Opens the date and time settings.",
+          "link": "intent:#Intent;action=android.settings.DATE_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-apps",
+          "title": "All apps",
+          "desc": "Opens the list of installed apps.",
+          "link": "intent:#Intent;action=android.settings.MANAGE_ALL_APPLICATIONS_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        },
+        {
+          "id": "settings-developer",
+          "title": "Developer options",
+          "desc": "Opens the developer options (when they are unlocked).",
+          "link": "intent:#Intent;action=android.settings.APPLICATION_DEVELOPMENT_SETTINGS;end",
+          "vars": [],
+          "tested": "2026-10-20",
+          "level": "screen",
+          "source": "https://developer.android.com/reference/android/provider/Settings",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "google-maps",
+      "name": "Google Maps",
+      "kind": "app",
+      "package": "com.google.android.apps.maps",
+      "logo": "si:googlemaps",
+      "recipes": [
+        {
+          "id": "google-maps-navigate-to-address",
+          "title": "Navigate to an address",
+          "desc": "Starts turn-by-turn driving navigation in Google Maps from your current position to an address or place name.",
+          "link": "intent:q=[ADDRESS]#Intent;scheme=google.navigation;package=com.google.android.apps.maps;end",
+          "vars": [
+            {
+              "name": "ADDRESS",
+              "label": "Destination address or place name",
+              "where": "Type the full street address or a well-known place name, exactly as you would search it in Google Maps.",
+              "example": "Eiffel Tower, Paris"
+            }
+          ],
+          "source": "https://developer.android.com/guide/components/google-maps-intents",
+          "confidence": "documented",
+          "note": "Starts guidance from your current position. Google Maps asks for location access the first time.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "google-maps-navigate-walking",
+          "title": "Walk to an address",
+          "desc": "Starts walking navigation in Google Maps from your current position to an address or place name.",
+          "link": "intent:q=[ADDRESS]&mode=w#Intent;scheme=google.navigation;package=com.google.android.apps.maps;end",
+          "vars": [
+            {
+              "name": "ADDRESS",
+              "label": "Destination address or place name",
+              "where": "Type the full street address or a well-known place name, exactly as you would search it in Google Maps.",
+              "example": "Taronga Zoo, Sydney Australia"
+            }
+          ],
+          "source": "https://developer.android.com/guide/components/google-maps-intents",
+          "confidence": "documented",
+          "note": "Starts walking guidance from your current position.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "google-maps-navigate-cycling",
+          "title": "Cycle to an address",
+          "desc": "Starts bicycling navigation in Google Maps from your current position to an address or place name.",
+          "link": "intent:q=[ADDRESS]&mode=b#Intent;scheme=google.navigation;package=com.google.android.apps.maps;end",
+          "vars": [
+            {
+              "name": "ADDRESS",
+              "label": "Destination address or place name",
+              "where": "Type the full street address or a well-known place name, exactly as you would search it in Google Maps.",
+              "example": "Taronga Zoo, Sydney Australia"
+            }
+          ],
+          "source": "https://developer.android.com/guide/components/google-maps-intents",
+          "confidence": "documented",
+          "note": "Cycling directions are not available in every country.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "google-maps-search-nearby",
+          "title": "Search places nearby",
+          "desc": "Opens Google Maps with the results of a search such as restaurants or pharmacies around you.",
+          "link": "intent:0,0?q=[SEARCH]#Intent;scheme=geo;package=com.google.android.apps.maps;end",
+          "vars": [
+            {
+              "name": "SEARCH",
+              "label": "What to search for",
+              "where": "Type a place type or a name, the same words you would type in the Google Maps search bar.",
+              "example": "restaurants"
+            }
+          ],
+          "source": "https://developer.android.com/guide/components/google-maps-intents",
+          "confidence": "documented",
+          "note": "Opens Google Maps with the results of the search.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "google-maps-transit-directions",
+          "title": "Public transport to a place",
+          "desc": "Shows public transport directions to a destination in Google Maps, starting from your current location.",
+          "link": "intent://www.google.com/maps/dir/?api=1&destination=[DESTINATION]&travelmode=transit#Intent;scheme=https;package=com.google.android.apps.maps;end",
+          "vars": [
+            {
+              "name": "DESTINATION",
+              "label": "Destination address or place name",
+              "where": "Type an address or a place name, the way you would search it in Google Maps.",
+              "example": "Louvre Museum, Paris"
+            }
+          ],
+          "source": "https://developers.google.com/maps/documentation/urls/get-started",
+          "confidence": "documented",
+          "note": "Opens the route in Google Maps, or in the browser if the app does not take it.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "google-maps-street-view",
+          "title": "Open Street View at coordinates",
+          "desc": "Opens the Street View panorama closest to a latitude and longitude in Google Maps.",
+          "link": "intent:cbll=[LATITUDE],[LONGITUDE]#Intent;scheme=google.streetview;package=com.google.android.apps.maps;end",
+          "vars": [
+            {
+              "name": "LATITUDE",
+              "label": "Latitude",
+              "where": "In Google Maps, long-press a spot on the map: the latitude is the first number shown in the search bar.",
+              "example": "48.8584"
+            },
+            {
+              "name": "LONGITUDE",
+              "label": "Longitude",
+              "where": "In Google Maps, long-press a spot on the map: the longitude is the second number shown in the search bar.",
+              "example": "2.2945"
+            }
+          ],
+          "source": "https://developer.android.com/guide/components/google-maps-intents",
+          "confidence": "documented",
+          "note": "If there is no panorama near this point, Google Maps says so.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ]
+    },
+    {
+      "id": "assistant",
+      "name": "Assistant",
+      "kind": "system",
+      "package": "",
+      "logo": "lucide:sparkles",
+      "recipes": [
+        {
+          "id": "assistant-open",
+          "title": "Open the voice assistant",
+          "desc": "Starts the default assistant of the phone, like the system gesture does.",
+          "link": "intent:#Intent;action=android.intent.action.ASSIST;end",
+          "vars": [],
+          "source": "https://developer.android.com/reference/android/content/Intent#ACTION_ASSIST",
+          "confidence": "documented",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ]
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "kind": "app",
+      "package": "com.google.android.youtube",
+      "logo": "si:youtube",
+      "recipes": [
+        {
+          "id": "youtube-open-channel",
+          "title": "Open a channel",
+          "desc": "Opens a YouTube channel page from its handle.",
+          "link": "intent://www.youtube.com/@[HANDLE]#Intent;scheme=https;package=com.google.android.youtube;end",
+          "vars": [
+            {
+              "name": "HANDLE",
+              "label": "Channel handle (without the @)",
+              "where": "Open the channel in YouTube: the handle starts with @ under the channel name; type it here without the @.",
+              "example": "youtubecreators"
+            }
+          ],
+          "source": "https://support.google.com/youtube/answer/6180214?hl=en",
+          "confidence": "documented",
+          "note": "Opens the channel page in the YouTube app.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "youtube-open-playlist",
+          "title": "Open a playlist",
+          "desc": "Opens a specific YouTube playlist.",
+          "link": "intent://www.youtube.com/playlist?list=[PLAYLIST_ID]#Intent;scheme=https;package=com.google.android.youtube;end",
+          "vars": [
+            {
+              "name": "PLAYLIST_ID",
+              "label": "Playlist ID",
+              "where": "Open the playlist page and tap Share > Copy link (or read the address in a browser); the ID is the part after list= in the link.",
+              "example": "PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI"
+            }
+          ],
+          "source": "https://support.google.com/youtube/answer/57793?hl=en&co=GENIE.Platform%3DDesktop",
+          "confidence": "documented",
+          "note": "Opens the playlist page. It does not start playing by itself.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "youtube-open-video",
+          "title": "Open a video",
+          "desc": "Opens a specific video, for example a favourite live stream or tutorial.",
+          "link": "intent://www.youtube.com/watch?v=[VIDEO_ID]#Intent;scheme=https;package=com.google.android.youtube;end",
+          "vars": [
+            {
+              "name": "VIDEO_ID",
+              "label": "Video ID",
+              "where": "Open the video, tap Share > Copy link; the ID is the part after v= (or after youtu.be/ in a short link).",
+              "example": "dQw4w9WgXcQ"
+            }
+          ],
+          "source": "https://support.google.com/youtube/answer/57741?hl=en&co=GENIE.Platform%3DDesktop",
+          "confidence": "documented",
+          "note": "Opens the video in the YouTube app.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "youtube-search",
+          "title": "Search YouTube",
+          "desc": "Opens YouTube search results for a fixed query.",
+          "link": "intent://www.youtube.com/results?search_query=[QUERY]#Intent;scheme=https;package=com.google.android.youtube;end",
+          "vars": [
+            {
+              "name": "QUERY",
+              "label": "Search text",
+              "where": "Any words you want to look up.",
+              "example": "lofi hip hop"
+            }
+          ],
+          "source": "https://www.youtube.com/opensearch?locale=en_US",
+          "confidence": "widely-used",
+          "note": "Opens the search results.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ]
+    },
+    {
+      "id": "youtube-music",
+      "name": "YouTube Music",
+      "kind": "app",
+      "package": "com.google.android.apps.youtube.music",
+      "logo": "si:youtubemusic",
+      "recipes": [
+        {
+          "id": "ytmusic-open-library",
+          "title": "Open your library",
+          "desc": "Opens the Library tab of YouTube Music.",
+          "link": "intent://music.youtube.com/library#Intent;scheme=https;package=com.google.android.apps.youtube.music;end",
+          "vars": [],
+          "source": "https://music.youtube.com/library",
+          "confidence": "widely-used",
+          "note": "Needs a signed-in YouTube Music app.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "ytmusic-search",
+          "title": "Search YouTube Music",
+          "desc": "Opens YouTube Music search results for a fixed query.",
+          "link": "intent://music.youtube.com/search?q=[QUERY]#Intent;scheme=https;package=com.google.android.apps.youtube.music;end",
+          "vars": [
+            {
+              "name": "QUERY",
+              "label": "Search text",
+              "where": "Any words you want to look up.",
+              "example": "daft punk"
+            }
+          ],
+          "source": "https://music.youtube.com/opensearch?locale=en_US",
+          "confidence": "widely-used",
+          "note": "Opens the search results in YouTube Music.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "ytmusic-open-playlist",
+          "title": "Open a playlist",
+          "desc": "Opens a specific playlist or album playlist in YouTube Music.",
+          "link": "intent://music.youtube.com/playlist?list=[PLAYLIST_ID]#Intent;scheme=https;package=com.google.android.apps.youtube.music;end",
+          "vars": [
+            {
+              "name": "PLAYLIST_ID",
+              "label": "Playlist ID",
+              "where": "Open the playlist in YouTube Music, tap the menu > Share > Copy link; the ID is the part after list= in the link.",
+              "example": "PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI"
+            }
+          ],
+          "source": "https://support.google.com/youtubemusic/answer/9198182?hl=en",
+          "confidence": "widely-used",
+          "note": "Opens the playlist or album in YouTube Music.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "ytmusic-open-song",
+          "title": "Open a song",
+          "desc": "Opens a specific song in the YouTube Music player.",
+          "link": "intent://music.youtube.com/watch?v=[VIDEO_ID]#Intent;scheme=https;package=com.google.android.apps.youtube.music;end",
+          "vars": [
+            {
+              "name": "VIDEO_ID",
+              "label": "Song ID",
+              "where": "Open the song, tap the menu > Share > Copy link; the ID is the part after v= in the link.",
+              "example": "dQw4w9WgXcQ"
+            }
+          ],
+          "source": "https://support.google.com/youtubemusic/answer/9198182?hl=en",
+          "confidence": "widely-used",
+          "note": "Opens the song in YouTube Music.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ]
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "kind": "app",
+      "package": "com.google.android.gm",
+      "logo": "si:gmail",
+      "recipes": [
+        {
+          "id": "gmail-compose",
+          "title": "Write a new email",
+          "desc": "Opens the Gmail compose screen with an empty message.",
+          "link": "intent:#Intent;action=android.intent.action.SENDTO;scheme=mailto;package=com.google.android.gm;end",
+          "vars": [],
+          "source": "https://developer.android.com/guide/components/intents-common",
+          "confidence": "documented",
+          "note": "Nothing is sent until you tap Send.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "gmail-compose-to-person",
+          "title": "Write an email to someone",
+          "desc": "Opens the Gmail compose screen with the recipient filled in.",
+          "link": "intent:[EMAIL_ADDRESS]#Intent;action=android.intent.action.SENDTO;scheme=mailto;package=com.google.android.gm;end",
+          "vars": [
+            {
+              "name": "EMAIL_ADDRESS",
+              "label": "Recipient email address",
+              "where": "Type the address of the person you write to most often.",
+              "example": "marie@example.com",
+              "kind": "raw"
+            }
+          ],
+          "source": "https://developer.android.com/guide/components/intents-common",
+          "confidence": "documented",
+          "note": "Nothing is sent until you tap Send.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "gmail-compose-with-subject",
+          "title": "Write an email with a subject and text",
+          "desc": "Opens the Gmail compose screen with subject and body already filled in.",
+          "link": "intent:#Intent;action=android.intent.action.SENDTO;scheme=mailto;package=com.google.android.gm;S.android.intent.extra.SUBJECT=[SUBJECT];S.android.intent.extra.TEXT=[BODY];end",
+          "vars": [
+            {
+              "name": "SUBJECT",
+              "label": "Subject",
+              "where": "Type the subject line.",
+              "example": "Weekly report"
+            },
+            {
+              "name": "BODY",
+              "label": "Message text",
+              "where": "Type the body of the email.",
+              "example": "Hello, please find the weekly report below."
+            }
+          ],
+          "source": "https://developer.android.com/guide/components/intents-common",
+          "confidence": "documented",
+          "note": "Nothing is sent until you tap Send.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ]
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "kind": "app",
+      "package": "org.telegram.messenger",
+      "logo": "si:telegram",
+      "recipes": [
+        {
+          "id": "telegram-open-chat",
+          "title": "Open a chat by username",
+          "desc": "Opens the conversation with a public Telegram user, group, channel or bot.",
+          "link": "tg://resolve?domain=[USERNAME]",
+          "vars": [
+            {
+              "name": "USERNAME",
+              "label": "Telegram username",
+              "where": "The public name without the @, shown on the profile under Username.",
+              "example": "example_user"
+            }
+          ],
+          "source": "https://core.telegram.org/api/links",
+          "confidence": "documented",
+          "note": "Works for people, groups, channels and bots that have a public username.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "telegram-open-chat-with-draft",
+          "title": "Open a chat with a message typed",
+          "desc": "Opens a public chat and pre-fills the message box (nothing is sent until you press send).",
+          "link": "tg://resolve?domain=[USERNAME]&text=[MESSAGE]",
+          "vars": [
+            {
+              "name": "USERNAME",
+              "label": "Telegram username",
+              "where": "The public name without the @, shown on the profile under Username.",
+              "example": "example_user"
+            },
+            {
+              "name": "MESSAGE",
+              "label": "Message",
+              "where": "Your text, as you would type it.",
+              "example": "Hello there"
+            }
+          ],
+          "source": "https://core.telegram.org/api/links",
+          "confidence": "documented",
+          "note": "The text is typed in the message box; nothing is sent until you press send.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "telegram-open-chat-by-phone",
+          "title": "Open a chat by phone number",
+          "desc": "Opens the Telegram conversation with a person identified by their phone number.",
+          "link": "tg://resolve?phone=[PHONE_NUMBER]",
+          "vars": [
+            {
+              "name": "PHONE_NUMBER",
+              "label": "Phone number",
+              "where": "Country code first, digits only, for example 33123456789. Spaces and + are ignored.",
+              "example": "15550100123",
+              "kind": "digits"
+            }
+          ],
+          "source": "https://core.telegram.org/api/links",
+          "confidence": "documented",
+          "note": "Works only if that person has Telegram and lets people find them by number.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "telegram-join-invite",
+          "title": "Join a private group by invite link",
+          "desc": "Opens the join prompt of a private Telegram group or channel from its invite hash.",
+          "link": "tg://join?invite=[INVITE_HASH]",
+          "vars": [
+            {
+              "name": "INVITE_HASH",
+              "label": "Invite hash",
+              "where": "In an invite link like https://t.me/+AbCdEf123, copy what follows the + (older links: t.me/joinchat/HASH).",
+              "example": "AbCdEfGhIjKl1234"
+            }
+          ],
+          "source": "https://core.telegram.org/api/links",
+          "confidence": "documented",
+          "note": "Opens the invitation to a private group or channel.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "telegram-story-composer",
+          "title": "Open the story composer",
+          "desc": "Opens Telegram's story camera/composer to post a new story.",
+          "link": "tg://post",
+          "vars": [],
+          "source": "https://core.telegram.org/api/links",
+          "confidence": "documented",
+          "note": "Opens the screen to create a story.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "telegram-global-search",
+          "title": "Open global search",
+          "desc": "Opens Telegram's search screen over all chats and public content.",
+          "link": "tg://chats/search",
+          "vars": [],
+          "source": "https://core.telegram.org/api/links",
+          "confidence": "documented",
+          "note": "Opens the search screen.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ],
+      "also": [
+        "org.telegram.messenger.web"
+      ]
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "kind": "app",
+      "package": "com.whatsapp",
+      "logo": "si:whatsapp",
+      "recipes": [
+        {
+          "id": "whatsapp-open-chat",
+          "title": "Open a chat",
+          "desc": "Opens a WhatsApp conversation with a given phone number.",
+          "link": "intent://wa.me/[PHONE_NUMBER]#Intent;scheme=https;package=com.whatsapp;end",
+          "vars": [
+            {
+              "name": "PHONE_NUMBER",
+              "label": "Phone number",
+              "where": "Country code first, digits only, for example 33123456789. Spaces and + are ignored.",
+              "example": "15550100123",
+              "kind": "digits"
+            }
+          ],
+          "source": "https://faq.whatsapp.com/5913398998672934",
+          "confidence": "documented",
+          "note": "Opens the conversation with this number.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "whatsapp-open-chat-with-message",
+          "title": "Open a chat with a ready message",
+          "desc": "Opens a WhatsApp conversation with a phone number and pre-fills the message box (nothing is sent until you press send).",
+          "link": "intent://wa.me/[PHONE_NUMBER]?text=[MESSAGE]#Intent;scheme=https;package=com.whatsapp;end",
+          "vars": [
+            {
+              "name": "PHONE_NUMBER",
+              "label": "Phone number",
+              "where": "Country code first, digits only, for example 33123456789. Spaces and + are ignored.",
+              "example": "15550100123",
+              "kind": "digits"
+            },
+            {
+              "name": "MESSAGE",
+              "label": "Message",
+              "where": "Your text, as you would type it.",
+              "example": "On my way"
+            }
+          ],
+          "source": "https://faq.whatsapp.com/5913398998672934",
+          "confidence": "documented",
+          "note": "The text is typed in the message box; nothing is sent until you press send.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "whatsapp-share-text",
+          "title": "Send a text to a contact I pick",
+          "desc": "Opens WhatsApp's contact picker with the message already typed, so you choose who receives it.",
+          "link": "intent://wa.me/?text=[MESSAGE]#Intent;scheme=https;package=com.whatsapp;end",
+          "vars": [
+            {
+              "name": "MESSAGE",
+              "label": "Message",
+              "where": "Your text, as you would type it.",
+              "example": "Call me back"
+            }
+          ],
+          "source": "https://faq.whatsapp.com/5913398998672934",
+          "confidence": "documented",
+          "note": "WhatsApp asks you to pick who receives the text.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "whatsapp-join-group",
+          "title": "Join or open a group by invite link",
+          "desc": "Opens a WhatsApp group from its invite code (join prompt, or the group if already a member).",
+          "link": "intent://chat.whatsapp.com/[INVITE_CODE]#Intent;scheme=https;package=com.whatsapp;end",
+          "vars": [
+            {
+              "name": "INVITE_CODE",
+              "label": "Group invite code",
+              "where": "The part after chat.whatsapp.com/ in the group's invite link (in the group: Group info > Invite via link > Copy link).",
+              "example": "AbCdEfGh1234567890"
+            }
+          ],
+          "source": "https://developers.facebook.com/documentation/business-messaging/whatsapp/groups/webhooks",
+          "confidence": "documented",
+          "note": "Opens the invitation to a group.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ]
+    },
+    {
+      "id": "signal",
+      "name": "Signal",
+      "kind": "app",
+      "package": "org.thoughtcrime.securesms",
+      "logo": "si:signal",
+      "recipes": [
+        {
+          "id": "signal-open-chat-by-phone",
+          "title": "Open a chat by phone number",
+          "desc": "Opens a Signal conversation with a person identified by their phone number.",
+          "link": "intent://signal.me/#p/+[PHONE_NUMBER]#Intent;scheme=https;package=org.thoughtcrime.securesms;end",
+          "vars": [
+            {
+              "name": "PHONE_NUMBER",
+              "label": "Phone number",
+              "where": "Country code first, digits only, for example 33123456789. Spaces and + are ignored.",
+              "example": "15550100123",
+              "kind": "digits"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/signalapp/Signal-Android/main/app/src/main/java/org/thoughtcrime/securesms/util/SignalMeUtil.kt",
+          "confidence": "widely-used",
+          "note": "Opens the conversation with this number if the person uses Signal.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "signal-open-group-link",
+          "title": "Join or open a group by group link",
+          "desc": "Opens the Signal join prompt for a group from its group link.",
+          "link": "intent://signal.group/#[GROUP_LINK_CODE]#Intent;scheme=https;package=org.thoughtcrime.securesms;end",
+          "vars": [
+            {
+              "name": "GROUP_LINK_CODE",
+              "label": "Group link code",
+              "where": "In Signal: open the group > tap its name > Group link > Share/Copy; keep only the long text after the # in https://signal.group/#...",
+              "example": "CjQKIExampleFakeCode0000000000"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/signalapp/Signal-Android/main/app/src/main/java/org/thoughtcrime/securesms/groups/v2/GroupInviteLinkUrl.java",
+          "confidence": "widely-used",
+          "note": "Opens the invitation to a Signal group.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ]
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "kind": "app",
+      "package": "md.obsidian",
+      "logo": "si:obsidian",
+      "recipes": [
+        {
+          "id": "obsidian-open-vault",
+          "title": "Open my vault",
+          "desc": "Opens the chosen Obsidian vault (focuses it if already open).",
+          "link": "obsidian://open?vault=[VAULT_NAME]",
+          "vars": [
+            {
+              "name": "VAULT_NAME",
+              "label": "Vault name",
+              "where": "In Obsidian, open the vault switcher (vault icon, bottom of the sidebar or the vault list) and copy the name shown for your vault; it is also the name of its folder.",
+              "example": "Second Brain"
+            }
+          ],
+          "source": "https://obsidian.md/help/Extending+Obsidian/Obsidian+URI",
+          "confidence": "documented",
+          "note": "Opens the vault on its last screen.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "obsidian-open-note",
+          "title": "Open a specific note",
+          "desc": "Opens one precise note of the vault.",
+          "link": "obsidian://open?vault=[VAULT_NAME]&file=[NOTE_PATH]",
+          "vars": [
+            {
+              "name": "VAULT_NAME",
+              "label": "Vault name",
+              "where": "In Obsidian, open the vault switcher (vault icon, bottom of the sidebar or the vault list) and copy the name shown for your vault; it is also the name of its folder.",
+              "example": "Second Brain"
+            },
+            {
+              "name": "NOTE_PATH",
+              "label": "Note name or path",
+              "where": "The note file name, or its path from the vault root; the .md extension can be left out.",
+              "example": "Projects/Todo"
+            }
+          ],
+          "source": "https://obsidian.md/help/Extending+Obsidian/Obsidian+URI",
+          "confidence": "documented",
+          "note": "Opens this note of the vault.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "obsidian-daily-note",
+          "title": "Open today's daily note",
+          "desc": "Creates or opens today's daily note.",
+          "link": "obsidian://daily?vault=[VAULT_NAME]",
+          "vars": [
+            {
+              "name": "VAULT_NAME",
+              "label": "Vault name",
+              "where": "In Obsidian, open the vault switcher (vault icon, bottom of the sidebar or the vault list) and copy the name shown for your vault; it is also the name of its folder.",
+              "example": "Second Brain"
+            }
+          ],
+          "source": "https://obsidian.md/help/Extending+Obsidian/Obsidian+URI",
+          "confidence": "documented",
+          "note": "Opens today's daily note, or creates it.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "obsidian-new-note",
+          "title": "Create a new note",
+          "desc": "Creates a new note with the given name (using the vault's default location for new notes) and opens it.",
+          "link": "obsidian://new?vault=[VAULT_NAME]&name=[NOTE_NAME]",
+          "vars": [
+            {
+              "name": "VAULT_NAME",
+              "label": "Vault name",
+              "where": "In Obsidian, open the vault switcher (vault icon, bottom of the sidebar or the vault list) and copy the name shown for your vault; it is also the name of its folder.",
+              "example": "Second Brain"
+            },
+            {
+              "name": "NOTE_NAME",
+              "label": "Name of the new note",
+              "where": "Type the title you want; the file is created as <title>.md.",
+              "example": "Quick idea"
+            }
+          ],
+          "source": "https://obsidian.md/help/Extending+Obsidian/Obsidian+URI",
+          "confidence": "documented",
+          "note": "Creates the note if it does not exist. Obsidian must be able to reach the vault.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "obsidian-quick-capture-daily",
+          "title": "Add a line to today's daily note",
+          "desc": "Appends the given text to the end of today's daily note.",
+          "link": "obsidian://daily?vault=[VAULT_NAME]&append=true&content=[TEXT_TO_ADD]",
+          "vars": [
+            {
+              "name": "VAULT_NAME",
+              "label": "Vault name",
+              "where": "In Obsidian, open the vault switcher (vault icon, bottom of the sidebar or the vault list) and copy the name shown for your vault; it is also the name of its folder.",
+              "example": "Second Brain"
+            },
+            {
+              "name": "TEXT_TO_ADD",
+              "label": "Text to append",
+              "where": "The text to add, as you would type it.",
+              "example": "- [ ] Call the dentist"
+            }
+          ],
+          "source": "https://obsidian.md/help/Extending+Obsidian/Obsidian+URI",
+          "confidence": "documented",
+          "note": "Adds the text at the end of today's daily note.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        },
+        {
+          "id": "obsidian-search",
+          "title": "Search my vault",
+          "desc": "Opens Obsidian search in the vault and runs the query.",
+          "link": "obsidian://search?vault=[VAULT_NAME]&query=[SEARCH_TEXT]",
+          "vars": [
+            {
+              "name": "VAULT_NAME",
+              "label": "Vault name",
+              "where": "In Obsidian, open the vault switcher (vault icon, bottom of the sidebar or the vault list) and copy the name shown for your vault; it is also the name of its folder.",
+              "example": "Second Brain"
+            },
+            {
+              "name": "SEARCH_TEXT",
+              "label": "Search text",
+              "where": "Type the word or phrase to look for.",
+              "example": "invoice"
+            }
+          ],
+          "source": "https://obsidian.md/help/Extending+Obsidian/Obsidian+URI",
+          "confidence": "documented",
+          "note": "Opens the search with this text.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ]
+    },
+    {
+      "id": "home-assistant",
+      "name": "Home Assistant",
+      "kind": "app",
+      "package": "io.homeassistant.companion.android",
+      "logo": "si:homeassistant",
+      "recipes": [
+        {
+          "id": "homeassistant-open-dashboard",
+          "title": "Open a dashboard page",
+          "desc": "Opens a chosen Home Assistant dashboard view inside the companion app.",
+          "link": "homeassistant://navigate/[DASHBOARD_PATH]?server=default",
+          "vars": [
+            {
+              "name": "DASHBOARD_PATH",
+              "label": "Dashboard path",
+              "where": "Open the page in the Home Assistant web interface and copy the path after the address and port, without the first slash.",
+              "example": "lovelace/cameras"
+            }
+          ],
+          "source": "https://companion.home-assistant.io/docs/integrations/url-handler/",
+          "confidence": "documented",
+          "note": "Opens a dashboard or a view of Home Assistant.",
+          "tested": "2026-10-20",
+          "level": "dispatch"
+        }
+      ]
+    }
+  ]
+}

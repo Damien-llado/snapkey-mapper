@@ -330,6 +330,27 @@
     </div>
   </section>
 
+  <section id="library" class="wide" aria-labelledby="lib-h">
+    <div class="split">
+      <div class="split-copy">
+        <p class="kicker">Bibliothèque de recettes</p>
+        <h2 id="lib-h">Vous ne connaissez pas le lien ? Choisissez une recette</h2>
+        <p>L’appli contient une bibliothèque de recettes prêtes à l’emploi, classées par appli : lancer un minuteur, programmer une alarme, ouvrir l’appareil photo, appeler un numéro, écrire un SMS, partir vers un lieu, ouvrir une playlist ou une discussion. Choisissez-en une, remplissez vos valeurs, testez-la et utilisez-la pour la touche.</p>
+        <ul class="ticks">
+          <li>Classées par appli, avec les logos officiels</li>
+          <li>Un champ par valeur, avec une aide pour savoir où la trouver</li>
+          <li>Aperçu en direct du lien final, avec des boutons pour le copier et le tester</li>
+          <li>Chaque recette vérifiée sur un émulateur Android, avec un lien vers la page officielle qui la documente</li>
+        </ul>
+        <p class="muted small">Vérifiée sur un émulateur ne veut pas dire vérifiée sur tous les téléphones : les applis Horloge, Appareil photo et Paramètres sont différentes sur ColorOS, et certaines applis demandent un compte. Le bouton de test de chaque recette vous le dit en un appui.</p>
+      </div>
+      <div class="appshots">
+        <img src="/img/library.png" width="540" height="1200" alt="La bibliothèque de recettes de SnapKey Mapper : les applis avec leur logo et leur nombre de recettes" loading="lazy">
+        <img src="/img/recipe.png" width="540" height="1200" alt="Une recette avec un champ pour chaque valeur et le lien final construit en direct" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <section class="wide" aria-labelledby="how">
     <p class="kicker">Sous le capot</p>
     <h2 id="how">Comment ça marche, en toute franchise</h2>
@@ -337,7 +358,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS note chaque appui</h3><p>Le journal système reçoit une ligne avec <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper lit le journal, repère cette ligne et ouvre votre appli ou votre lien.</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>Sans root, sans accessibilité</h3><p>Lire le journal demande une seule autorisation, <code>READ_LOGS</code>, accordée une fois par une seule commande. Elle reste après un redémarrage.</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Aucune collecte</h3><p>Pas de compte, pas de traceur, pas de pub. L’appli ne garde que votre cible, le nom de la touche et le geste, sur votre téléphone. L’édition lite n’a aucune autorisation Internet : Android l’empêche lui-même d’envoyer quoi que ce soit.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Aucune collecte</h3><p>Dans l’appli : pas de compte, pas de traceur, pas de pub. Elle ne garde que votre cible, le nom de la touche et le geste, sur votre téléphone. L’édition lite n’a aucune autorisation Internet : Android ne la laisse pas ouvrir elle-même de connexions réseau.</p></li>
     </ul>
   </section>
 
@@ -358,7 +379,7 @@
       </ul></div>
       <div><h3>Ce qu’elle ne peut pas faire</h3><ul>
         <li>Envoyer quoi que ce soit : l’édition lite n’a aucune autorisation Internet ; l’édition complète ne s’en sert que pour parler à votre propre téléphone, une fois, pendant l’installation</li>
-        <li>Accéder à vos messages, vos notifications ou votre écran : elle n’a aucune autorisation pour cela</li>
+        <li>Accéder à vos messages, vos notifications ou votre écran : elle n’a aucune autorisation pour cela (elle lit en revanche le journal système, voir la FAQ)</li>
         <li>Afficher des pubs, vous pister ou vous demander un compte</li>
       </ul></div>
     </div>
@@ -396,7 +417,7 @@
         <p>Touchez <strong>Démarrer l’écoute</strong>. Android 13 et plus demande « Autoriser l’accès à tous les journaux de l’appareil ? » : choisissez <strong>Autoriser l’accès unique</strong>. Cet accès dure tant que l’écoute tourne, vous ne le revoyez donc qu’après un redémarrage (touchez la notification « SnapKey Mapper est arrêté »).</p>
       </li>
     </ol>
-    <p class="note"><strong>Conseil de sécurité.</strong> Une fois fini, désactivez le débogage sans fil dans les Options pour les développeurs. SnapKey Mapper n’en a pas besoin, et il supprime sa propre clé d’association juste après l’installation.</p>
+    <p class="note"><strong>Conseil de sécurité.</strong> Une fois fini, désactivez le débogage sans fil dans les Options pour les développeurs. SnapKey Mapper n’en a pas besoin, et il supprime sa propre clé d’association juste après l’installation. Retirez ensuite SnapKey Mapper de Débogage sans fil › Appareils associés. Ne faites la configuration que sur un réseau Wi-Fi de confiance.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
@@ -451,6 +472,10 @@
     <details><summary>Comment la désinstaller ?</summary><div><p>Comme n’importe quelle appli. L’autorisation part avec elle. Désactivez le débogage sans fil si vous l’avez laissé allumé.</p></div></details>
 
     <details><summary>Est-ce lié à OPPO ?</summary><div><p>Non. SnapKey Mapper est un projet open source indépendant, sans lien avec OPPO, OnePlus, Key Mapper, Anthropic ni aucune appli citée sur cette page. Ces noms servent seulement à décrire la compatibilité.</p></div></details>
+
+    <details><summary>Qu’est-ce que la bibliothèque de recettes ?</summary><div><p>Une liste de liens prêts à l’emploi, classés par appli : minuteurs, alarmes, appareil photo, appels, SMS, cartes, musique, discussions et plus encore. Ouvrez-la depuis l’appli, choisissez une recette, remplissez les champs, testez-la, puis utilisez-la pour la Snap Key. Chaque recette renvoie vers la page officielle qui la documente.</p></div></details>
+
+    <details><summary>Comment savoir si une recette marche sur mon téléphone ?</summary><div><p>Les recettes sont vérifiées sur un émulateur Android, pas sur tous les téléphones. Les applis Horloge, Appareil photo et Paramètres sont différentes sur ColorOS, et certaines applis demandent un compte. Le bouton de test de chaque recette vous le dit en un appui. Si l’une d’elles ne marche pas sur votre téléphone, signalez-le sur GitHub pour que nous puissions la corriger ou la retirer.</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">
