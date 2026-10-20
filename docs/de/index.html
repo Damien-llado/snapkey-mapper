@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OPPO Snap Key umbelegen: beliebige App öffnen, ohne Root</title>
+<meta name="description" content="Mit SnapKey Mapper öffnet die Snap Key des OPPO Find X9, X9 Pro und anderer ColorOS-Handys jede App oder jeden Link: kurz, doppelt oder lang drücken. Ohne Root.">
+<link rel="canonical" href="https://remapsnapkey.com/de/">
+<link rel="alternate" hreflang="en" href="https://remapsnapkey.com/">
+<link rel="alternate" hreflang="fr" href="https://remapsnapkey.com/fr/">
+<link rel="alternate" hreflang="es" href="https://remapsnapkey.com/es/">
+<link rel="alternate" hreflang="de" href="https://remapsnapkey.com/de/">
+<link rel="alternate" hreflang="nl" href="https://remapsnapkey.com/nl/">
+<link rel="alternate" hreflang="pt-BR" href="https://remapsnapkey.com/pt-br/">
+<link rel="alternate" hreflang="hi" href="https://remapsnapkey.com/hi/">
+<link rel="alternate" hreflang="zh-Hans" href="https://remapsnapkey.com/zh/">
+<link rel="alternate" hreflang="x-default" href="https://remapsnapkey.com/">
+<meta property="og:locale" content="de_DE">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0F0D" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SnapKey Mapper">
+<meta property="og:title" content="OPPO Snap Key umbelegen und jede beliebige App öffnen">
+<meta property="og:description" content="Kurz, doppelt oder lang auf die Snap Key drücken und die App oder den Link deiner Wahl öffnen. Find X9, X9 Pro, ColorOS 16. Ohne Root, Open Source.">
+<meta property="og:url" content="https://remapsnapkey.com/de/">
+<meta property="og:image" content="https://remapsnapkey.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SnapKey Mapper: Die Snap Key eines OPPO-Handys öffnet die App deiner Wahl">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Lässt die Snap Key von OPPO jede beliebige App oder jeden Link öffnen, ohne Root."}
+</script>
+</head>
+<body data-copy-label="Kopieren">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<!-- Pictogrammes, définis une fois et réutilisés partout -->
+<svg class="sprite" aria-hidden="true">
+  <defs>
+    <symbol id="b-maps" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z"/></symbol>
+    <symbol id="b-spotify" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></symbol>
+    <symbol id="b-strava" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></symbol>
+    <symbol id="b-gdocs" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M14.727 6.727H14V0H4.91c-.905 0-1.637.732-1.637 1.636v20.728c0 .904.732 1.636 1.636 1.636h14.182c.904 0 1.636-.732 1.636-1.636V6.727h-6zm-.545 10.455H7.09v-1.364h7.09v1.364zm2.727-3.273H7.091v-1.364h9.818v1.364zm0-3.273H7.091V9.273h9.818v1.363zM14.727 6h6l-6-6v6z"/></symbol>
+    <symbol id="b-ha" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M22.939 10.627 13.061.749a1.505 1.505 0 0 0-2.121 0l-9.879 9.878C.478 11.21 0 12.363 0 13.187v9c0 .826.675 1.5 1.5 1.5h9.227l-4.063-4.062a2.034 2.034 0 0 1-.664.113c-1.13 0-2.05-.92-2.05-2.05s.92-2.05 2.05-2.05 2.05.92 2.05 2.05c0 .233-.041.456-.113.665l3.163 3.163V9.928a2.05 2.05 0 0 1-1.15-1.84c0-1.13.92-2.05 2.05-2.05s2.05.92 2.05 2.05a2.05 2.05 0 0 1-1.15 1.84v8.127l3.146-3.146A2.051 2.051 0 0 1 18 12.239c1.13 0 2.05.92 2.05 2.05s-.92 2.05-2.05 2.05c-.25 0-.488-.047-.709-.13L12.9 20.602v3.088h9.6c.825 0 1.5-.675 1.5-1.5v-9c0-.825-.477-1.977-1.061-2.561z"/></symbol>
+    <symbol id="b-n8n" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></symbol>
+    <symbol id="b-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="b-notion" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></symbol>
+    <symbol id="b-claude" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></symbol>
+    <symbol id="b-gemini" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></symbol>
+    <symbol id="b-deezer" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M.693 10.024c.381 0 .693-1.256.693-2.807 0-1.55-.312-2.807-.693-2.807C.312 4.41 0 5.666 0 7.217s.312 2.808.693 2.808ZM21.038 1.56c-.364 0-.684.805-.91 2.096C19.765 1.446 19.184 0 18.526 0c-.78 0-1.464 2.036-1.784 5-.312-2.158-.788-3.536-1.325-3.536-.745 0-1.386 2.704-1.62 6.472-.442-1.932-1.083-3.145-1.793-3.145s-1.35 1.213-1.793 3.145c-.242-3.76-.874-6.463-1.628-6.463-.537 0-1.013 1.378-1.325 3.535C6.938 2.036 6.262 0 5.474 0c-.658 0-1.247 1.447-1.602 3.665-.217-1.291-.546-2.105-.91-2.105-.675 0-1.221 2.807-1.221 6.272 0 3.466.546 6.273 1.221 6.273.277 0 .537-.476.736-1.273.32 2.928.996 4.938 1.776 4.938.606 0 1.143-1.204 1.507-3.11.251 3.622.875 6.195 1.602 6.195.46 0 .875-1.023 1.187-2.677C10.142 21.6 11 24 12.004 24c1.005 0 1.863-2.4 2.235-5.822.312 1.654.727 2.677 1.186 2.677.728 0 1.352-2.573 1.603-6.195.364 1.906.9 3.11 1.507 3.11.78 0 1.455-2.01 1.775-4.938.208.797.46 1.273.737 1.273.675 0 1.22-2.807 1.22-6.273-.008-3.457-.553-6.272-1.23-6.272ZM23.307 10.024c.381 0 .693-1.256.693-2.807 0-1.55-.312-2.807-.693-2.807-.381 0-.693 1.256-.693 2.807s.312 2.808.693 2.808Z"/></symbol>
+    <symbol id="b-chatgpt" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M9.205 8.658v-2.26c0-.19.072-.333.238-.428l4.543-2.616c.619-.357 1.356-.523 2.117-.523 2.854 0 4.662 2.212 4.662 4.566 0 .167 0 .357-.024.547l-4.71-2.759a.797.797 0 00-.856 0l-5.97 3.473zm10.609 8.8V12.06c0-.333-.143-.57-.429-.737l-5.97-3.473 1.95-1.118a.433.433 0 01.476 0l4.543 2.617c1.309.76 2.189 2.378 2.189 3.948 0 1.808-1.07 3.473-2.76 4.163zM7.802 12.703l-1.95-1.142c-.167-.095-.239-.238-.239-.428V5.899c0-2.545 1.95-4.472 4.591-4.472 1 0 1.927.333 2.712.928L8.23 5.067c-.285.166-.428.404-.428.737v6.898zM12 15.128l-2.795-1.57v-3.33L12 8.658l2.795 1.57v3.33L12 15.128zm1.796 7.23c-1 0-1.927-.332-2.712-.927l4.686-2.712c.285-.166.428-.404.428-.737v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472zm-5.637-5.303l-4.544-2.617c-1.308-.761-2.188-2.378-2.188-3.948A4.482 4.482 0 014.21 6.327v5.423c0 .333.143.571.428.738l5.947 3.449-1.95 1.118a.432.432 0 01-.476 0zm-.262 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.57l4.686 2.71c.286.167.571.167.856 0l5.97-3.448v2.26c0 .19-.07.333-.237.428l-4.543 2.616c-.619.357-1.356.523-2.117.523zm5.899 2.83a5.947 5.947 0 005.827-4.756C22.287 18.339 24 15.84 24 13.296c0-1.665-.713-3.282-1.998-4.448.119-.5.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.947-.642 0-1.26.095-1.88.31A5.962 5.962 0 0010.205 0a5.947 5.947 0 00-5.827 4.757C1.713 5.447 0 7.945 0 10.49c0 1.666.713 3.283 1.998 4.448-.119.5-.19 1-.19 1.499 0 3.401 2.759 5.946 5.946 5.946.642 0 1.26-.095 1.88-.309a5.96 5.96 0 004.162 1.713z"/></symbol>
+    <symbol id="b-perplexity" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z"/></symbol>
+    <symbol id="b-waze" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M13.218 0C9.915 0 6.835 1.49 4.723 4.148c-1.515 1.913-2.31 4.272-2.31 6.706v1.739c0 .894-.62 1.738-1.862 1.813-.298.025-.547.224-.547.522-.05.82.82 2.31 2.012 3.502.82.844 1.788 1.515 2.832 2.036a3 3 0 0 0 2.955 3.528 2.966 2.966 0 0 0 2.931-2.385h2.509c.323 1.689 2.086 2.856 3.974 2.21 1.64-.546 2.36-2.409 1.763-3.924a12.84 12.84 0 0 0 1.838-1.465 10.73 10.73 0 0 0 3.18-7.65c0-2.882-1.118-5.589-3.155-7.625A10.899 10.899 0 0 0 13.218 0zm0 1.217c2.558 0 4.967.994 6.78 2.807a9.525 9.525 0 0 1 2.807 6.78A9.526 9.526 0 0 1 20 17.585a9.647 9.647 0 0 1-6.78 2.807h-2.46a3.008 3.008 0 0 0-2.93-2.41 3.03 3.03 0 0 0-2.534 1.367v.024a8.945 8.945 0 0 1-2.41-1.788c-.844-.844-1.316-1.614-1.515-2.11a2.858 2.858 0 0 0 1.441-.846 2.959 2.959 0 0 0 .795-2.036v-1.789c0-2.11.696-4.197 2.012-5.861 1.863-2.385 4.62-3.726 7.6-3.726zm-2.41 5.986a1.192 1.192 0 0 0-1.191 1.192 1.192 1.192 0 0 0 1.192 1.193A1.192 1.192 0 0 0 12 8.395a1.192 1.192 0 0 0-1.192-1.192zm7.204 0a1.192 1.192 0 0 0-1.192 1.192 1.192 1.192 0 0 0 1.192 1.193 1.192 1.192 0 0 0 1.192-1.193 1.192 1.192 0 0 0-1.192-1.192zm-7.377 4.769a.596.596 0 0 0-.546.845 4.813 4.813 0 0 0 4.346 2.757 4.77 4.77 0 0 0 4.347-2.757.596.596 0 0 0-.547-.845h-.025a.561.561 0 0 0-.521.348 3.59 3.59 0 0 1-3.254 2.061 3.591 3.591 0 0 1-3.254-2.061.64.64 0 0 0-.546-.348z"/></symbol>
+    <symbol id="b-komoot" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M9.8 14.829l2.2-3.43 2.2 3.43 5.962 5.962A11.946 11.946 0 0 1 12 24c-3.043 0-5.935-1.14-8.162-3.209zM0 12C0 5.385 5.385 0 12 0c6.62 0 12 5.385 12 12 0 2.663-.855 5.175-2.469 7.284l-6.018-6.018c.15-.412.226-.839.226-1.27A3.743 3.743 0 0 0 12 8.257a3.743 3.743 0 0 0-3.739 3.739c0 .431.075.858.226 1.27l-6.018 6.018A11.865 11.865 0 0 1 0 12Z"/></symbol>
+    <symbol id="b-telegram" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol>
+    <symbol id="b-signal" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M12 0q-.934 0-1.83.139l.17 1.111a11 11 0 0 1 3.32 0l.172-1.111A12 12 0 0 0 12 0M9.152.34A12 12 0 0 0 5.77 1.742l.584.961a10.8 10.8 0 0 1 3.066-1.27zm5.696 0-.268 1.094a10.8 10.8 0 0 1 3.066 1.27l.584-.962A12 12 0 0 0 14.848.34M12 2.25a9.75 9.75 0 0 0-8.539 14.459c.074.134.1.292.064.441l-1.013 4.338 4.338-1.013a.62.62 0 0 1 .441.064A9.7 9.7 0 0 0 12 21.75c5.385 0 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m-7.092.068a12 12 0 0 0-2.59 2.59l.909.664a11 11 0 0 1 2.345-2.345zm14.184 0-.664.909a11 11 0 0 1 2.345 2.345l.909-.664a12 12 0 0 0-2.59-2.59M1.742 5.77A12 12 0 0 0 .34 9.152l1.094.268a10.8 10.8 0 0 1 1.269-3.066zm20.516 0-.961.584a10.8 10.8 0 0 1 1.27 3.066l1.093-.268a12 12 0 0 0-1.402-3.383M.138 10.168A12 12 0 0 0 0 12q0 .934.139 1.83l1.111-.17A11 11 0 0 1 1.125 12q0-.848.125-1.66zm23.723.002-1.111.17q.125.812.125 1.66c0 .848-.042 1.12-.125 1.66l1.111.172a12.1 12.1 0 0 0 0-3.662M1.434 14.58l-1.094.268a12 12 0 0 0 .96 2.591l-.265 1.14 1.096.255.36-1.539-.188-.365a10.8 10.8 0 0 1-.87-2.35m21.133 0a10.8 10.8 0 0 1-1.27 3.067l.962.584a12 12 0 0 0 1.402-3.383zm-1.793 3.848a11 11 0 0 1-2.345 2.345l.664.909a12 12 0 0 0 2.59-2.59zm-19.959 1.1L.357 21.48a1.8 1.8 0 0 0 2.162 2.161l1.954-.455-.256-1.095-1.953.455a.675.675 0 0 1-.81-.81l.454-1.954zm16.832 1.769a10.8 10.8 0 0 1-3.066 1.27l.268 1.093a12 12 0 0 0 3.382-1.402zm-10.94.213-1.54.36.256 1.095 1.139-.266c.814.415 1.683.74 2.591.961l.268-1.094a10.8 10.8 0 0 1-2.35-.869zm3.634 1.24-.172 1.111a12.1 12.1 0 0 0 3.662 0l-.17-1.111q-.812.125-1.66.125a11 11 0 0 1-1.66-.125"/></symbol>
+    <symbol id="b-applemusic" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></symbol>
+    <symbol id="b-ytmusic" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm0 19.104c-3.924 0-7.104-3.18-7.104-7.104S8.076 4.896 12 4.896s7.104 3.18 7.104 7.104-3.18 7.104-7.104 7.104zm0-13.332c-3.432 0-6.228 2.796-6.228 6.228S8.568 18.228 12 18.228s6.228-2.796 6.228-6.228S15.432 5.772 12 5.772zM9.684 15.54V8.46L15.816 12l-6.132 3.54z"/></symbol>
+    <symbol id="g-term" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 10l3 2-3 2M12.5 15H17"/></symbol>
+    <symbol id="g-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h5a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h5"/></symbol>
+    <symbol id="g-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
+    <symbol id="g-run" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
+    <symbol id="g-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 2M5 4 3 6M19 4l2 2"/></symbol>
+    <symbol id="g-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol>
+    <symbol id="g-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"/></symbol>
+    <symbol id="g-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="g-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4.5-2 1.3a11 11 0 0 0 5.7 5.7l1.3-2 4.5 1.5v3a2 2 0 0 1-2 2A15.5 15.5 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="g-book" viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 2-2h12v15H7a2 2 0 0 0-2 2zM5 20a2 2 0 0 0 2 1h12v-3M9 7h6"/></symbol>
+    <symbol id="g-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM18.5 16l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+    <symbol id="g-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></symbol>
+    <symbol id="g-hook" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M11 8.3 7.2 14.8M13 8.3l3.8 6.5M8.5 17h7"/></symbol>
+    <symbol id="g-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="g-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="g-wifi" viewBox="0 0 24 24"><path d="M4.5 9.5a11 11 0 0 1 15 0M7.5 12.8a6.5 6.5 0 0 1 9 0M10.5 16a2 2 0 0 1 3 0M3 3l18 18"/></symbol>
+    <symbol id="g-gh" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.6.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></symbol>
+    <symbol id="g-down" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<!-- Fond : halos qui dérivent lentement, trame de points -->
+<div class="sky" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/de/">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="2.5" width="17" height="27" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><rect class="brand-key" x="3.5" y="8" width="3" height="7" rx="1.5"/></svg>
+      SnapKey Mapper
+    </a>
+    <nav class="nav-links" aria-label="Website">
+      <a href="#examples">Beispiele</a>
+      <a href="#setup">Einrichtung</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-end">
+      <details class="lang">
+        <summary aria-label="Sprache">DE</summary>
+        <ul><li><a href="/" hreflang="en" lang="en">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li></ul>
+      </details>
+      <a class="dl-pill" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>Download</a>
+      <a class="gh-pill" href="https://github.com/Damien-llado/snapkey-mapper" aria-label="SnapKey Mapper auf GitHub, Anzahl der Sterne">
+        <svg aria-hidden="true"><use href="#g-gh"/></svg><span class="star-n" data-stars>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="gridbg" aria-hidden="true"><i class="cell" style="--cx:-6;--cy:1;--c:#2FD39A;--d:0s"></i><i class="cell" style="--cx:5;--cy:2;--c:#5B8DEF;--d:1.2s"></i><i class="cell" style="--cx:-3;--cy:4;--c:#F08A3E;--d:2.4s"></i><i class="cell" style="--cx:7;--cy:5;--c:#8B6CF0;--d:3.1s"></i><i class="cell" style="--cx:-8;--cy:6;--c:#4CC9E0;--d:0.6s"></i><i class="cell" style="--cx:3;--cy:0;--c:#E2557A;--d:4.2s"></i><i class="cell" style="--cx:-5;--cy:9;--c:#2FD39A;--d:1.8s"></i><i class="cell" style="--cx:6;--cy:9;--c:#E3B23C;--d:3.6s"></i><i class="cell" style="--cx:-2;--cy:1;--c:#4CC9E0;--d:5s"></i><i class="cell" style="--cx:9;--cy:3;--c:#2FD39A;--d:2.8s"></i><i class="cell" style="--cx:-9;--cy:3;--c:#E2557A;--d:4.6s"></i><i class="cell" style="--cx:2;--cy:7;--c:#5B8DEF;--d:0.3s"></i></div>
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>Open Source · OPPO Find X9 Serie · Ohne Root</p>
+      <h1>OPPO Snap Key umbelegen und <em>jede beliebige App</em> öffnen</h1>
+      <p class="say">Taste drücken, schon bist du in <span class="rot" id="rot">Claude Code</span></p>
+      <p class="lead">SnapKey Mapper macht die Snap Key des Find X9 und Find X9 Pro zum Starter für die App oder den Link deiner Wahl. Kurz drücken, doppelt drücken oder lang drücken.</p>
+      <div class="ctas">
+        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
+          <svg aria-hidden="true"><use href="#g-down"/></svg>APK herunterladen
+        </a>
+        <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper">
+          <svg aria-hidden="true"><use href="#g-gh"/></svg>Stern auf GitHub
+          <span class="stars" aria-label="GitHub-Sterne">★ <span data-stars>0</span></span>
+        </a>
+      </div>
+      <p class="meta">Version 1.0 · Android 11+ · ca. 11 MB · MIT · getestet auf Find X9 Pro, ColorOS 16</p>
+    </div>
+
+    <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
+    <div class="stage" id="stage" aria-hidden="true">
+      <div class="floaters">
+        <span class="cap c1" style="--h:#D97757"><b></b><b></b><b></b><b></b><b><svg><use href="#b-claude"/></svg></b></span>
+        <span class="cap c2" style="--h:#FC4C02"><b></b><b></b><b></b><b></b><b><svg><use href="#b-strava"/></svg></b></span>
+        <span class="cap c3" style="--h:#4285F4"><b></b><b></b><b></b><b></b><b><svg><use href="#b-maps"/></svg></b></span>
+        <span class="cap c4" style="--h:#1ED760;--fg:#0B1A12"><b></b><b></b><b></b><b></b><b><svg><use href="#b-spotify"/></svg></b></span>
+        <span class="cap c5" style="--h:#8E75B2"><b></b><b></b><b></b><b></b><b><svg><use href="#b-gemini"/></svg></b></span>
+        <span class="cap c6" style="--h:#E3B23C"><b></b><b></b><b></b><b></b><b><svg><use href="#g-clock"/></svg></b></span>
+        <i class="ring r1"></i><i class="ring r2"></i>
+      </div>
+      <div class="phone">
+        <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i>
+        <i class="snapkey" id="snapkey"></i><i class="ping"></i>
+        <div class="face">
+          <div class="screen">
+            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="launch" id="launch" style="--h:#D97757">
+              <span class="launch-ico"><svg><use href="#b-claude"/></svg></span>
+              <strong id="launch-t">Claude Code</strong>
+              <small id="launch-s">claude.ai/code/…</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="stage-label">Snap Key <span>links oben an der Seite</span></p>
+    </div>
+  </section>
+
+  <section class="band" aria-label="Das Wichtigste">
+    <ul class="facts">
+      <li><svg aria-hidden="true"><use href="#g-shield"/></svg><span><strong>Ohne Root</strong> Bootloader bleibt gesperrt</span></li>
+      <li><svg aria-hidden="true"><use href="#g-wifi"/></svg><span><strong>Kein WLAN nötig</strong> Läuft auch mit mobilen Daten</span></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><span><strong>Keine Datensammlung</strong> Open Source, überprüfbar</span></li>
+      <li><svg aria-hidden="true"><use href="#g-gh"/></svg><span><strong>Open Source</strong> Rund 1000 Zeilen, MIT</span></li>
+    </ul>
+  </section>
+
+  <section id="examples" class="wide" aria-labelledby="ex-h">
+    <p class="kicker">Beispiele</p>
+    <h2 id="ex-h">Eine Taste. Alles, was sich per Link öffnen lässt.</h2>
+    <p class="sub">Wähl eine installierte App, füg einen Link ein oder schreib einen <code>intent:</code>-Link für alles, was Android kann. Ein paar Ideen:</p>
+
+    <ul class="bento" id="bento">
+      <li class="tile big dark">
+        <div class="tile-top"><span class="ico" style="--h:#D97757"><svg><use href="#b-claude"/></svg></span><span class="kind">Link</span></div>
+        <h3>Direkt in Claude Code</h3>
+        <p>Deine laufende Claude-Code-Sitzung, nur einen Tastendruck entfernt. Sprich mit deinem Agenten wie per Walkie-Talkie, auf der Straße, ohne WLAN.</p>
+        <div class="term" aria-hidden="true">
+          <span class="l l1"><b>›</b> prüf die Deploy-Logs</span>
+          <span class="l l2">Lese deploy.log…</span>
+          <span class="l l3">Fehlende Env-Variable ergänzt</span>
+          <span class="l l4">Neues Deployment…</span>
+          <span class="l l5">Build ok, die Seite ist live ✓</span>
+          <span class="l l6"><b>›</b> <i class="caret"></i></span>
+        </div>
+        <code data-copy="https://claude.ai/code/[SESSION]">https://claude.ai/code/<mark>[SESSION]</mark></code>
+      </li>
+
+      <li class="tile w2" style="--tint:var(--t-sky)">
+        <div class="tile-top"><span class="ico" style="--h:#4285F4"><svg><use href="#b-maps"/></svg></span><span class="kind">Link</span></div>
+        <h3>Navigieren, Hände voll</h3>
+        <div class="brands" aria-hidden="true"><span style="--h:#33CCFF;--fg:#0B1A12"><svg><use href="#b-waze"/></svg></span><span style="--h:#6AA127"><svg><use href="#b-komoot"/></svg></span></div>
+        <p>Google Maps mit Navigation zu einem gespeicherten Ort, mit dem Rad oder mit dem Auto.</p>
+        <svg class="viz-route " viewBox="0 0 320 120" role="img" aria-label="Eine Route von Punkt A zu Punkt B durch eine Stadt" preserveAspectRatio="xMidYMid meet">
+<clipPath id="mcm"><rect width="320" height="120" rx="14"/></clipPath>
+<g clip-path="url(#mcm)">
+<rect class="m-land" width="320" height="120"/><rect class="m-block" x="58" y="8" width="34" height="24" rx="3"/><rect class="m-block" x="100" y="12" width="36" height="20" rx="3"/><rect class="m-block" x="196" y="56" width="24" height="18" rx="3"/><rect class="m-block" x="236" y="6" width="30" height="18" rx="3"/>
+<path class="m-park" d="M78 70 C 90 62, 118 64, 128 74 C 136 86, 122 98, 100 98 C 84 98, 70 88, 78 70Z"/>
+<path class="m-water" d="M120 132 C 150 104, 196 104, 238 90 S 310 76, 335 60"/>
+<path class="m-road" d="M-10 82 C 30 78, 70 86, 110 80"/><path class="m-road" d="M200 125 C 206 100, 214 86, 236 80 C 262 74, 300 80, 335 74"/><path class="m-road" d="M60 125 C 66 108, 62 96, 74 84"/><path class="m-road" d="M214 -5 C 218 14, 224 30, 226 40"/><path class="m-road" d="M286 125 C 290 108, 300 92, 335 90"/>
+<path class="m-main-case" d="M-10 54 C 15 49, 30 46, 46 47 C 80 52, 120 58, 170 48 C 205 41, 240 33, 262 31 C 270 32, 278 32, 284 30 S 305 30, 335 36"/><path class="m-main" d="M-10 54 C 15 49, 30 46, 46 47 C 80 52, 120 58, 170 48 C 205 41, 240 33, 262 31 C 270 32, 278 32, 284 30 S 305 30, 335 36"/>
+<path class="m-art-case" d="M34 125 L36 108 C 38 90, 50 70, 46 47 C 44 30, 52 12, 50 -5"/><path class="m-art" d="M34 125 L36 108 C 38 90, 50 70, 46 47 C 44 30, 52 12, 50 -5"/>
+<path class="m-art-case" d="M150 -5 C 160 20, 168 34, 170 48 C 172 62, 176 80, 190 125"/><path class="m-art" d="M150 -5 C 160 20, 168 34, 170 48 C 172 62, 176 80, 190 125"/>
+<path class="m-art-case" d="M96 125 C 120 90, 150 66, 170 48 C 190 30, 225 8, 240 -5"/><path class="m-art" d="M96 125 C 120 90, 150 66, 170 48 C 190 30, 225 8, 240 -5"/>
+<circle class="m-round-case" cx="170" cy="48" r="7.5"/><circle class="m-round" cx="170" cy="48" r="5"/><circle class="m-park" cx="170" cy="48" r="2"/>
+<path class="m-route-case" pathLength="1" d="M36 108 C 38 90, 50 70, 46 47 C 80 52, 120 58, 170 48 C 205 41, 240 33, 262 31 C 270 32, 278 32, 284 30"/><path class="m-route" pathLength="1" d="M36 108 C 38 90, 50 70, 46 47 C 80 52, 120 58, 170 48 C 205 41, 240 33, 262 31 C 270 32, 278 32, 284 30"/>
+<circle class="m-a" cx="36" cy="108" r="5"/>
+<circle class="m-car" r="3.4" style="offset-path:path('M36 108 C 38 90, 50 70, 46 47 C 80 52, 120 58, 170 48 C 205 41, 240 33, 262 31 C 270 32, 278 32, 284 30')"/>
+<path class="m-pin" d="M284 30 C 278 22, 275 19, 275 14.5 a 9 9 0 1 1 18 0 C 293 19, 290 22, 284 30Z"/><circle class="m-pin-dot" cx="284" cy="14.5" r="3.2"/>
+</g></svg>
+        <code data-copy="google.navigation:q=[PLACE]&amp;mode=b">google.navigation:q=<mark>[PLACE]</mark>&amp;mode=b</code>
+      </li>
+
+      <li class="tile" style="--tint:var(--t-rose)">
+        <div class="tile-top"><span class="ico" style="--h:#1ED760;--fg:#0B1A12"><svg><use href="#b-spotify"/></svg></span><span class="kind">Link</span></div>
+        <h3>Deine Lauf-Playlist</h3>
+        <div class="brands" aria-hidden="true"><span style="--h:#A238FF"><svg><use href="#b-deezer"/></svg></span><span style="--h:#FA243C"><svg><use href="#b-applemusic"/></svg></span><span style="--h:#FF0000"><svg><use href="#b-ytmusic"/></svg></span></div>
+        <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <code data-copy="spotify:playlist:[ID]">spotify:playlist:<mark>[ID]</mark></code>
+      </li>
+
+      <li class="tile" style="--tint:var(--t-amber)">
+        <div class="tile-top"><span class="ico" style="--h:#FC4C02"><svg><use href="#b-strava"/></svg></span><span class="kind">App</span></div>
+        <h3>Strava, bereit zur Aufnahme</h3>
+        <div class="rec" aria-hidden="true"><i></i><span>Aufnahme</span></div>
+        <code>App: Strava</code>
+      </li>
+
+      <li class="tile" style="--tint:var(--t-slate)">
+        <div class="tile-top"><span class="ico" style="--h:#4285F4"><svg><use href="#b-gdocs"/></svg></span><span class="kind">Link</span></div>
+        <h3>Die Notizen von heute</h3>
+        <div class="lines" aria-hidden="true"><i></i><i></i><i></i></div>
+        <code data-copy="https://docs.google.com/document/d/[DOC_ID]">docs.google.com/document/d/<mark>[DOC_ID]</mark></code>
+      </li>
+
+      <li class="tile" style="--tint:var(--t-amber)">
+        <div class="tile-top"><span class="ico" style="--h:#E3B23C"><svg><use href="#g-clock"/></svg></span><span class="kind">Intent</span></div>
+        <h3>Ein 5-Minuten-Timer</h3>
+        <svg class="viz-clock" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="24"/><path class="hh" d="M30 30V18"/><path class="mh" d="M30 30h14"/></svg>
+        <code data-copy="intent:#Intent;action=android.intent.action.SET_TIMER;i.android.intent.extra.alarm.LENGTH=[SECONDS];B.android.intent.extra.alarm.SKIP_UI=true;end">intent:#Intent;…LENGTH=<mark>[SECONDS]</mark>;…</code>
+      </li>
+
+      <li class="tile w2" style="--tint:var(--t-mint)">
+        <div class="tile-top"><span class="ico" style="--h:#18BCF2"><svg><use href="#b-ha"/></svg></span><span class="kind">Link</span></div>
+        <h3>Das Garagen-Dashboard</h3>
+        <p>Home Assistant öffnet direkt die richtige Seite. Licht, Tor, Heizung.</p>
+        <div class="toggles" aria-hidden="true"><span><i class="sw"></i>Garagentor</span><span><i class="sw on"></i>Licht vorne</span></div>
+        <code data-copy="homeassistant://navigate/lovelace/[VIEW]">homeassistant://navigate/lovelace/<mark>[VIEW]</mark></code>
+      </li>
+
+      <li class="tile w2" style="--tint:var(--t-lilac)">
+        <div class="tile-top"><span class="ico" style="--h:#EA4B71"><svg><use href="#b-n8n"/></svg></span><span class="kind">Link</span></div>
+        <h3>Einen Workflow auslösen</h3>
+        <p>Öffne eine Webhook-URL, die GET akzeptiert (zum Beispiel n8n): einen Kaffee notieren, einen Timer starten, dein Team anpingen.</p>
+        <div class="flow" aria-hidden="true"><i></i><b></b><i></i><b></b><i></i></div>
+        <code data-copy="https://[HOST]/webhook/[PATH]">https://<mark>[HOST]</mark>/webhook/<mark>[PATH]</mark></code>
+      </li>
+
+      <li class="tile" style="--tint:var(--t-mint)">
+        <div class="tile-top"><span class="ico" style="--h:#25D366"><svg><use href="#b-wa"/></svg></span><span class="kind">Link</span></div>
+        <h3>Ein WhatsApp-Chat</h3>
+        <div class="brands" aria-hidden="true"><span style="--h:#26A5E4"><svg><use href="#b-telegram"/></svg></span><span style="--h:#3B45FD"><svg><use href="#b-signal"/></svg></span></div>
+        <div class="bubbles" aria-hidden="true"><i></i><i></i></div>
+        <code data-copy="https://wa.me/[NUMBER]">https://wa.me/<mark>[NUMBER]</mark></code>
+      </li>
+
+      <li class="tile txt" style="--tint:var(--t-sky)">
+        <div class="tile-top"><span class="ico" style="--h:#3E8EDE"><svg><use href="#g-phone"/></svg></span><span class="kind">Link</span></div>
+        <h3>Jemanden anrufen</h3>
+        <p>Die Telefon-App öffnet sich mit der fertigen Nummer.</p>
+        <code data-copy="tel:[NUMBER]">tel:<mark>[NUMBER]</mark></code>
+      </li>
+
+      <li class="tile txt" style="--tint:var(--t-slate)">
+        <div class="tile-top"><span class="ico" style="--h:#000000"><svg><use href="#b-notion"/></svg></span><span class="kind">Link</span></div>
+        <h3>Eine Notion-Seite</h3>
+        <p>Deine Inbox, dein Journal oder deine Einkaufsliste.</p>
+        <code data-copy="https://www.notion.so/[PAGE]">https://www.notion.so/<mark>[PAGE]</mark></code>
+      </li>
+
+      <li class="tile txt" style="--tint:var(--t-lilac)">
+        <div class="tile-top"><span class="ico" style="--h:#10A37F"><svg><use href="#b-chatgpt"/></svg></span><span class="kind">App</span></div>
+        <h3>Dein KI-Assistent</h3>
+        <div class="brands" aria-hidden="true"><span style="--h:#8E75B2"><svg><use href="#b-gemini"/></svg></span><span style="--h:#D97757"><svg><use href="#b-claude"/></svg></span><span style="--h:#1FB8CD;--fg:#0B1A12"><svg><use href="#b-perplexity"/></svg></span></div>
+        <p>ChatGPT, Gemini, Claude, Perplexity: welcher dir lieber ist als der von OPPO.</p>
+        <code>App: beliebig</code>
+      </li>
+
+      <li class="tile w2" style="--tint:var(--t-slate)">
+        <div class="tile-top"><span class="ico" style="--h:#0A8A63"><svg><use href="#g-grid"/></svg></span><span class="kind">App</span></div>
+        <h3>Oder jede installierte App</h3>
+        <p>Alternative Kamera-Apps, Passwortmanager, Sprachrekorder, Banking, Übersetzer. Wähl sie einfach aus der Liste in SnapKey Mapper.</p>
+        <div class="minigrid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="claude" class="wide" aria-labelledby="cc-h">
+    <div class="split">
+      <div class="split-copy">
+        <p class="kicker">Mit Claude Code</p>
+        <h2 id="cc-h">Was sich starten lässt, legt dir Claude Code auf die Taste</h2>
+        <p>Die meisten Apps lassen sich per Link öffnen, aber niemand kennt diese Links auswendig. Sag <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a>, was die Snap Key tun soll. Es findet den Deep Link, testet ihn per ADB auf deinem Handy und gibt dir die Zeile, die du in SnapKey Mapper einfügst.</p>
+        <ul class="ticks">
+          <li>Findet den richtigen Link für die App und den Bildschirm, den du willst</li>
+          <li>Testet ihn, bevor du die Einstellungen am Handy anfasst</li>
+          <li>Schreibt den Webhook oder die Verknüpfung dahinter, wenn es noch keinen Link gibt</li>
+          <li>Kann SnapKey Mapper sogar für dich installieren und die Berechtigung erteilen</li>
+        </ul>
+        <p class="plug-label">Füg das SnapKey-Mapper-Plugin zu Claude Code hinzu:</p>
+        <pre class="plug" data-copy=""><code>/plugin install snapkey-mapper --marketplace Damien-llado/snapkey-mapper</code></pre>
+        <p class="muted small">Der Anlass für das Ganze: Der Entwickler lässt Claude Code auf einem Heimserver laufen und spricht vom Handy aus über Remote Control damit. Die OPPO-Einstellungen konnten diese Unterhaltung nicht öffnen, Key Mapper nur bei eingeschaltetem WLAN. Also entstand diese App, und sie ist seit Oktober 2026 täglich im Einsatz.</p>
+      </div>
+      <div class="console" aria-label="Beispielunterhaltung mit Claude Code">
+        <div class="console-bar"><i></i><i></i><i></i><span>claude</span></div>
+        <div class="console-body">
+          <p class="you">Meine Snap Key soll die Radnavigation zur Kletterhalle starten.</p>
+          <p class="cl">Google Maps akzeptiert einen Navigationslink. Ich teste ihn auf deinem Handy:</p>
+          <pre data-copy=""><code>adb shell am start -a android.intent.action.VIEW \
+  -d "google.navigation:q=Climbing+Gym+Lyon&amp;mode=b"</code></pre>
+          <p class="cl">Navigation gestartet. Füg diesen Link in SnapKey Mapper ein:</p>
+          <p class="out"><code data-copy="google.navigation:q=Climbing+Gym+Lyon&amp;mode=b">google.navigation:q=Climbing+Gym+Lyon&amp;mode=b</code></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wide" aria-labelledby="how">
+    <p class="kicker">Unter der Haube</p>
+    <h2 id="how">So funktioniert es, ganz ehrlich</h2>
+    <p class="sub">Unter ColorOS 16 kann die Snap Key nur, was OPPO vorsieht: AI Mind Space, Kamera, Taschenlampe, Rekorder, Übersetzen, Screenshot, Tonmodus oder Nicht stören. Eine Option „App öffnen“ gibt es nicht, und Apps zur Tastenbelegung sehen die Taste nur, solange eine Debugging-Verbindung aktiv bleibt. SnapKey Mapper umgeht das, indem es mitliest, was ColorOS ohnehin protokolliert.</p>
+    <ul class="cards">
+      <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS protokolliert jeden Druck</h3><p>Im Systemprotokoll landet eine Zeile mit <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper liest das Protokoll, erkennt diese Zeile und öffnet deine App oder deinen Link.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>Ohne Root, ohne Bedienungshilfen</h3><p>Zum Lesen des Protokolls braucht es eine einzige Berechtigung, <code>READ_LOGS</code>, die du einmal mit einem einzigen Befehl erteilst. Sie bleibt auch nach einem Neustart erhalten.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Keine Datensammlung</h3><p>Kein Konto, kein Tracker, keine Werbung. Gespeichert werden nur dein Ziel, der Tastenname und die Geste, auf deinem Handy. Die Lite-Version hat gar keine Internetberechtigung, Android selbst verhindert also, dass sie irgendetwas sendet.</p></li>
+    </ul>
+  </section>
+
+  <section id="safety" class="narrow" aria-labelledby="safety-h">
+    <p class="kicker">Sicher installieren</p>
+    <h2 id="safety-h">Was Android dir anzeigt, und warum das in Ordnung ist</h2>
+    <p class="sub">SnapKey Mapper ist nicht bei Google Play, deshalb fügt Android ein paar Prüfungen hinzu. Das ist bei jeder App normal, die du von einer Website installierst. Der genaue Wortlaut hängt von deinem Handy ab.</p>
+    <ol class="checks">
+      <li><strong>Eine Warnung, dass die Datei schädlich sein könnte</strong>, in Chrome. Sie erscheint bei jeder APK aus dem Web. Bestätige den Download.</li>
+      <li><strong>„Unbekannte Apps installieren“</strong>. Android bittet dich, deinem Browser oder Dateimanager das Installieren von Apps zu erlauben. Erlaub es, installiere die App und schalte es danach wieder aus, wenn du willst.</li>
+      <li><strong>„Play Protect kennt diese App nicht“</strong>. Die App ist neu, deshalb bietet Google an, sie zu prüfen. Tipp auf <em>App scannen</em>: Das dauert ein paar Sekunden.</li>
+    </ol>
+    <div class="cando">
+      <div><h3>Was sie kann</h3><ul>
+        <li>Das Systemprotokoll lesen, erst nachdem du es mit einem Befehl erlaubt hast</li>
+        <li>Die App oder den Link öffnen, den du gewählt hast</li>
+        <li>Eine Benachrichtigung zeigen, solange sie auf die Taste wartet</li>
+      </ul></div>
+      <div><h3>Was sie nicht kann</h3><ul>
+        <li>Irgendetwas nach außen senden: Die Lite-Version hat keine Internetberechtigung, die Vollversion nutzt sie nur, um bei der Einrichtung einmal mit deinem eigenen Handy zu sprechen</li>
+        <li>Auf deine Nachrichten, Benachrichtigungen oder deinen Bildschirm zugreifen: Dafür hat sie keine Berechtigung</li>
+        <li>Werbung zeigen, dich tracken oder ein Konto verlangen</li>
+      </ul></div>
+    </div>
+    <p class="muted small">Lade sie nur aus den <a href="https://github.com/Damien-llado/snapkey-mapper/releases">GitHub-Releases</a> herunter. Du willst eine App, die das Netzwerk überhaupt nicht nutzen kann? Nimm die <strong>Lite-Version</strong> von derselben Seite (<code>snapkey-mapper-lite.apk</code>, ca. 300 KB, keine Internetberechtigung); die Log-Berechtigung erteilst du dann selbst, siehe Schritt 3. Jedes Release nennt die SHA-256-Prüfsumme der APK und den Fingerabdruck des Signaturzertifikats, so kannst du die Datei mit <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a> prüfen. Der gesamte Quellcode ist öffentlich.</p>
+  </section>
+
+  <section id="setup" class="narrow" aria-labelledby="setup-h">
+    <p class="kicker">Einrichtung</p>
+    <h2 id="setup-h">In 6 Schritten eingerichtet</h2>
+    <p class="sub">Etwa 10 Minuten, einmalig. WLAN brauchst du nur für Schritt 3.</p>
+    <ol class="steps">
+      <li>
+        <h3>Die OPPO-Aktion der Snap Key auf „Keine“ stellen</h3>
+        <p>Stell die Taste unter <em>Einstellungen › Snap Key</em> so ein, dass sie nichts tut, damit sie nicht mehr AI Mind Space oder die Taschenlampe auslöst. ColorOS protokolliert trotzdem jeden Druck, SnapKey Mapper funktioniert also weiter.</p>
+      </li>
+      <li>
+        <h3>APK installieren und eingeschränkte Einstellungen zulassen</h3>
+        <p>Lade die APK herunter und öffne sie. Android sperrt einige sensible Einstellungen für Apps, die nicht aus dem Play Store stammen: Geh zu <em>Einstellungen › Apps › SnapKey Mapper</em>, tipp auf <strong>⋮</strong> und dann auf <strong>Eingeschränkte Einstellungen zulassen</strong>.</p>
+      </li>
+      <li>
+        <h3>Die App erteilt sich die Log-Berechtigung selbst</h3>
+        <p>Öffne unter ColorOS zuerst <em>Einstellungen › Zusätzliche Einstellungen › Entwickleroptionen</em> und schalte <strong>„Disable system optimisation“</strong> ein (unter ColorOS 16 erscheint die Option eventuell nur, wenn das Handy auf Englisch eingestellt ist: Stell die Sprache kurz um, falls du sie nicht findest). Verbinde dich dann mit deinem WLAN und tipp in der App auf <strong>Log-Zugriff automatisch einrichten</strong>. Schalte in den Entwickleroptionen <strong>Debugging über WLAN</strong> ein, tipp auf <strong>Gerät über einen Kopplungscode koppeln</strong>, zieh die Benachrichtigung herunter und gib die 6 Ziffern ein. Sobald die Benachrichtigung meldet, dass alles eingerichtet ist, schalte Debugging über WLAN wieder aus.</p>
+        <details class="more"><summary>Mit einem Computer oder mit der Lite-Version</summary><p>Die Lite-Version hat keine Internetberechtigung und richtet sich nicht selbst ein: Führ diesen Befehl auf einem Computer aus oder direkt auf dem Handy mit <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (Expertenmodus, Aktion <em>Shell-Befehl</em>, ADB, dann <em>Testen</em>). Danach kannst du <em>„Disable system optimisation“</em> wieder ausschalten: Die Berechtigung bleibt.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
+      </li>
+      <li>
+        <h3>Einblenden über anderen Apps und Akku erlauben</h3>
+        <p>Tipp in SnapKey Mapper auf <strong>Über anderen Apps einblenden</strong> (damit kann Android deine App aus dem Hintergrund öffnen) und auf <strong>Akku: nicht einschränken</strong>. Stell unter ColorOS außerdem die Akkunutzung der App auf <em>Keine Einschränkungen</em> und fixiere SnapKey Mapper in den zuletzt verwendeten Apps.</p>
+      </li>
+      <li>
+        <h3>Festlegen, was die Snap Key öffnet</h3>
+        <p>Wähl eine installierte App oder füg einen Link ein (eine Webadresse, einen Deep Link oder einen <code>intent:</code>-Link). Wähl dann kurz drücken (am schnellsten), doppelt drücken (ein versehentlicher Druck in der Hosentasche öffnet nie etwas) oder lang drücken (eine halbe Sekunde) und tipp auf <em>Testen</em>, um zu prüfen, ob es sich öffnet.</p>
+      </li>
+      <li>
+        <h3>Erkennung starten</h3>
+        <p>Tipp auf <strong>Erkennung starten</strong>. Ab Android 13 fragt das System „Zugriff auf alle Geräteprotokolle erlauben?“: Wähl <strong>Einmaligen Zugriff erlauben</strong>. Dieser Zugriff gilt, solange die Erkennung läuft, du siehst die Frage also erst nach einem Neustart wieder (tipp dann auf die Benachrichtigung „SnapKey Mapper ist aus“).</p>
+      </li>
+    </ol>
+    <p class="note"><strong>Sicherheitstipp.</strong> Wenn du fertig bist, schalte Debugging über WLAN in den Entwickleroptionen aus. SnapKey Mapper braucht es nicht und löscht seinen eigenen Kopplungsschlüssel direkt nach der Einrichtung.</p>
+  </section>
+
+  <section class="narrow" aria-labelledby="compat">
+    <p class="kicker">Handys</p>
+    <h2 id="compat">Kompatibilität</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Handy</th><th>System</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>OPPO Find X9 Pro</td><td>ColorOS 16, Android 16</td><td><span class="st ok">Läuft, täglich im Einsatz</span></td></tr>
+          <tr><td>OPPO Find X9</td><td>ColorOS 16</td><td><span class="st">Gleiche Snap Key, noch nicht getestet</span></td></tr>
+          <tr><td>OPPO Find X9 Ultra, Find X9s, Find N6</td><td>ColorOS 16</td><td><span class="st">Mit Snap Key, noch nicht getestet</span></td></tr>
+          <tr><td>OnePlus-Handys mit Plus Key</td><td>OxygenOS</td><td><span class="st">Andere Taste, klappt eventuell per Log-Aufzeichnung</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted small">Auf einem anderen Handy ausprobiert? <a href="https://github.com/Damien-llado/snapkey-mapper/issues">Eröffne ein Issue</a> mit der Log-Zeile deiner Taste, dann kommt es hier dazu.</p>
+  </section>
+
+  <section id="faq" class="narrow faq" aria-labelledby="faq-h">
+    <p class="kicker">FAQ</p>
+    <h2 id="faq-h">Fragen</h2>
+
+    <details><summary>Kann die Snap Key beim Find X9 Pro jede beliebige App öffnen?</summary><div><p>Nicht allein mit den OPPO-Einstellungen: ColorOS bietet nur eine feste Liste von Aktionen. Mit SnapKey Mapper schon: jede installierte App oder jeden Link, per kurzem, doppeltem oder langem Druck.</p></div></details>
+
+    <details><summary>Brauche ich Root?</summary><div><p>Nein. Die App braucht eine einzige Berechtigung, <code>READ_LOGS</code>, die du unter Android per ADB-Befehl erteilen kannst, ohne Root und ohne den Bootloader zu entsperren.</p></div></details>
+
+    <details><summary>Brauche ich einen Computer?</summary><div><p>Nein. Die App richtet die Berechtigung einmalig selbst ein, über das Debugging über WLAN deines eigenen Handys. Ein Computer mit <code>adb</code> geht auch, und so wird die Lite-Version eingerichtet.</p></div></details>
+
+    <details><summary>Braucht sie dauerhaft WLAN?</summary><div><p>Nein. WLAN brauchst du nur einmal, für das Debugging über WLAN, mit dem die Berechtigung erteilt wird. SnapKey Mapper funktioniert danach auch mit mobilen Daten und ausgeschaltetem WLAN.</p></div></details>
+
+    <details><summary>Wozu braucht es „Disable system optimisation“?</summary><div><p>Ohne diese Option lehnt ColorOS den Befehl <code>pm grant</code> ab („Neither user 2000 nor current process has GRANT_RUNTIME_PERMISSIONS“). Schalte sie ein, erteile die Berechtigung und schalte sie danach wieder aus, wenn du willst.</p></div></details>
+
+    <details><summary>Ist das sicher? Was kann die App sehen?</summary><div><p>Mit <code>READ_LOGS</code> kann eine App das Systemprotokoll lesen, und das kann Details aus anderen Apps enthalten. Verlass dich also nicht auf unser Wort, prüf es nach. Die App sammelt nichts, hat keinen Tracker und kein Konto. Die Lite-Version hat keine Internetberechtigung: Android blockiert jede Netzwerknutzung, und das kannst du mit AppVerifier prüfen. Die Vollversion fordert sie nur an, um bei der Einrichtung mit deinem eigenen Handy zu sprechen; der gesamte Netzwerkcode steckt in einer kurzen Datei, und du kannst der App den Netzwerkzugriff danach sperren. Der Quellcode ist öffentlich, jedes Release nennt die SHA-256-Prüfsumme und den Signatur-Fingerabdruck, und du kannst die App selbst bauen. Siehe <a href="#safety">Sicher installieren</a>.</p></div></details>
+
+    <details><summary>Warum fragt Android erneut nach dem Log-Zugriff?</summary><div><p>Seit Android 13 braucht jede neue Sitzung zum Lesen des Protokolls deine Zustimmung, und zwar nur, solange die App im Vordergrund ist. SnapKey Mapper hält eine Sitzung offen, du musst also erst nach einem Neustart wieder antworten oder wenn das System die App beendet.</p></div></details>
+
+    <details><summary>Die Snap Key geht nach einem Neustart nicht mehr</summary><div><p>Tipp auf die Benachrichtigung „SnapKey Mapper ist aus“ und dann auf „Einmaligen Zugriff erlauben“. Prüf außerdem, dass die Akkunutzung auf „Keine Einschränkungen“ steht und die App in den zuletzt verwendeten Apps fixiert ist.</p></div></details>
+
+    <details><summary>Wie finde ich den Namen meiner Taste auf einem anderen Handy?</summary><div><p>Öffne SnapKey Mapper, tipp auf <em>Aufzeichnung starten</em>, drück deine Taste zwei- oder dreimal, stopp die Aufzeichnung und speichere sie. Such nach einer Zeile, die einmal pro Druck erscheint, mit einem Namen wie <code>KEYCODE_…</code>. Beim Find X9 Pro ist es <code>KEYCODE_ACTION_BUTTON_CLICK</code> (Scancode 735).</p></div></details>
+
+    <details><summary>Und der Quick Button auf der rechten Seite?</summary><div><p>Die Snap Key sitzt links oben an der Seite. Der Quick Button des Find X9 Pro am rechten Rand ist eine Kamerasteuerung und wurde mit SnapKey Mapper noch nicht getestet.</p></div></details>
+
+    <details><summary>Leert das den Akku?</summary><div><p>Die App wartet auf neue Log-Zeilen und tut dazwischen nichts. Im täglichen Einsatz auf dem Find X9 Pro ist kein Mehrverbrauch aufgefallen, das ist aber eine Beobachtung, keine Messung.</p></div></details>
+
+    <details><summary>Kann sie eine Unterhaltung in Claude Code, ChatGPT oder WhatsApp direkt öffnen?</summary><div><p>Ja, wenn die App einen Link zu dieser Unterhaltung akzeptiert. Füg den Link als Ziel ein: Android öffnet ihn in der passenden App, wenn sie das unterstützt, sonst im Browser.</p></div></details>
+
+    <details><summary>Wie finde ich den Link für eine App?</summary><div><p>Viele Apps dokumentieren ihre Links (Google Maps, Spotify, Home Assistant). Sonst frag Claude Code oder einen anderen Assistenten und teste den Link mit <code>adb shell am start -a android.intent.action.VIEW -d "&lt;link&gt;"</code> oder mit der Schaltfläche <em>Testen</em> in SnapKey Mapper.</p></div></details>
+
+    <details><summary>Kommt sie in den Google Play Store?</summary><div><p>Nein: Installiere die APK aus den GitHub-Releases. Google führt außerdem eine Entwicklerverifizierung für Apps ein, die nicht aus dem Play Store kommen (2026 in einigen Ländern, weltweit 2027); diese Seite erklärt jede Änderung für SnapKey Mapper.</p></div></details>
+
+    <details><summary>Wie deinstalliere ich sie?</summary><div><p>Wie jede andere App. Die Berechtigung verschwindet mit ihr. Schalte Debugging über WLAN aus, falls du es angelassen hast.</p></div></details>
+
+    <details><summary>Gehört das Projekt zu OPPO?</summary><div><p>Nein. SnapKey Mapper ist ein unabhängiges Open-Source-Projekt und nicht mit OPPO, OnePlus, Key Mapper, Anthropic oder einer anderen hier gezeigten App verbunden. Diese Namen beschreiben nur die Kompatibilität.</p></div></details>
+  </section>
+
+  <section id="stories" class="narrow" aria-labelledby="stories-h">
+    <p class="kicker">Du bist dran</p>
+    <h2 id="stories-h">Was hast du auf deine Snap Key gelegt?</h2>
+    <p class="sub">Teil dein Setup: Die besten kommen oben zu den Beispielen. Es öffnet sich ein vorausgefüllter Beitrag in den GitHub Discussions des Projekts, den du vor dem Absenden prüfen kannst.</p>
+    <form class="story" id="story">
+      <label for="s-what">Was öffnet deine Taste?</label>
+      <input id="s-what" name="what" required maxlength="120" placeholder="Startet einen 25-Minuten-Fokus-Timer">
+      <div class="story-row">
+        <div><label for="s-phone">Handy</label>
+          <select id="s-phone" name="phone"><option>Find X9 Pro</option><option>Find X9</option><option>Find X9 Ultra</option><option>Find X9s</option><option>Find N6</option><option>Anderes</option></select></div>
+        <div><label for="s-gesture">Geste</label>
+          <select id="s-gesture" name="gesture"><option>Doppelt drücken</option><option>Kurz drücken</option><option>Lang drücken</option></select></div>
+      </div>
+      <label for="s-link">Der Link oder die App <span class="opt">(optional, entferne private Tokens)</span></label>
+      <input id="s-link" name="link" maxlength="300" placeholder="intent:#Intent;action=android.intent.action.SET_TIMER;…">
+      <label for="s-why">Warum es dir hilft <span class="opt">(optional)</span></label>
+      <textarea id="s-why" name="why" rows="3" maxlength="600" placeholder="Ein Druck, wenn ich mich an den Schreibtisch setze, ohne Entsperren, ohne Suchen."></textarea>
+      <button class="btn primary" type="submit"><svg aria-hidden="true"><use href="#g-gh"/></svg>Auf GitHub teilen</button>
+      <p class="muted small">Du brauchst ein GitHub-Konto. <a href="https://github.com/Damien-llado/snapkey-mapper/discussions/categories/show-and-tell">Sieh dir an, was andere gemacht haben</a>.</p>
+    </form>
+  </section>
+
+  <section class="final" aria-labelledby="final">
+    <div class="final-card">
+      <span class="cap c7" style="--h:#2FD39A" aria-hidden="true"><b></b><b></b><b></b><b></b><b><svg><use href="#g-spark"/></svg></b></span>
+      <h2 id="final">Mach die Snap Key zu deiner Taste</h2>
+      <p>Kostenlos und Open Source.</p>
+      <div class="ctas">
+        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>APK herunterladen</a>
+        <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper"><svg aria-hidden="true"><use href="#g-gh"/></svg>Code ansehen <span class="stars">★ <span data-stars>0</span></span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>SnapKey Mapper ist freie Software unter der MIT-Lizenz. Unabhängiges Projekt, nicht mit OPPO verbunden.</p>
+  <ul>
+    <li><a href="https://github.com/Damien-llado/snapkey-mapper">Quellcode</a></li>
+    <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">Fehler melden</a></li>
+    <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">Alle Versionen</a></li>
+  </ul>
+  <ul aria-label="Sprachen"><li><a href="/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li></ul>
+</footer>
+
+<script>
+// Mesure d'audience Microsoft Clarity (clics, défilement, cartes de chaleur) : coupée si l'identifiant du projet est vide
+(function (id) {
+  if (!id) return;
+  (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+    t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, 'clarity', 'script', id);
+  // Événements utiles : téléchargement, GitHub, histoire partagée
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    if (a.href.indexOf('/releases') > -1) clarity('event', 'download');
+    else if (a.href.indexOf('github.com') > -1) clarity('event', 'github');
+  });
+  document.getElementById('story').addEventListener('submit', function () { clarity('event', 'story'); });
+})('z0nfap9rs6');
+
+// Étoiles et téléchargements GitHub en direct (affichés même à 0), en cache une heure pour rester sous la limite de l'API
+(function () {
+  var key = 'skm-counts', now = Date.now(), api = 'https://api.github.com/repos/Damien-llado/snapkey-mapper';
+  function show(c) {
+    document.querySelectorAll('[data-stars]').forEach(function (e) { e.textContent = c.stars; });
+    document.querySelectorAll('[data-downloads]').forEach(function (e) { e.textContent = c.downloads; });
+  }
+  try {
+    var c = JSON.parse(localStorage.getItem(key) || 'null');
+    if (c && now - c.t < 3600e3) return show(c);
+  } catch (e) {}
+  function get(u) { return fetch(u).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
+  Promise.all([get(api), get(api + '/releases?per_page=100')]).then(function (r) {
+    if (!r[0]) return;
+    var d = 0;
+    (r[1] || []).forEach(function (rel) { rel.assets.forEach(function (a) { d += a.download_count; }); });
+    var c = { stars: r[0].stargazers_count, downloads: d, t: now };
+    show(c);
+    try { localStorage.setItem(key, JSON.stringify(c)); } catch (e) {}
+  });
+})();
+
+// Histoires : ouvre une discussion GitHub préremplie, rien n'est envoyé par la page elle-même
+document.getElementById('story').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target.elements, what = f.what.value.trim();
+  var body = '**What the Snap Key opens:** ' + what + '\n**Phone:** ' + f.phone.value + '\n**Gesture:** ' + f.gesture.value +
+    (f.link.value.trim() ? '\n**Link or app:** `' + f.link.value.trim().replace(/`/g, '') + '`' : '') +
+    (f.why.value.trim() ? '\n\n' + f.why.value.trim() : '');
+  location.href = 'https://github.com/Damien-llado/snapkey-mapper/discussions/new?category=show-and-tell&title=' +
+    encodeURIComponent('My Snap Key: ' + what) + '&body=' + encodeURIComponent(body);
+});
+
+// Mobile : le bouton Download passe dans l'en-tête quand celui du héros sort de l'écran
+(function () {
+  var cta = document.querySelector('.hero .ctas'); if (!cta || !window.IntersectionObserver) return;
+  new IntersectionObserver(function (e) { document.body.classList.toggle('past-hero', !e[0].isIntersecting && e[0].boundingClientRect.top < 0); }).observe(cta);
+})();
+
+// Animations : appui sur la Snap Key, l'écran ouvre la cible suivante ; inclinaison au pointeur
+(function () {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var T = [
+    ['Claude Code', 'claude.ai/code/…', '#D97757', 'b-claude', 'Claude Code'],
+    ['your run playlist', 'spotify:playlist:…', '#1ED760', 'b-spotify', 'Run playlist'],
+    ['navigation home', 'google.navigation:q=…', '#4285F4', 'b-maps', 'Maps'],
+    ['Strava', 'App: Strava', '#FC4C02', 'b-strava', 'Strava'],
+    ["today's notes", 'docs.google.com/…', '#4285F4', 'b-gdocs', 'Notes'],
+    ['the garage dashboard', 'homeassistant://navigate/…', '#18BCF2', 'b-ha', 'Home Assistant'],
+    ['a WhatsApp chat', 'wa.me/…', '#25D366', 'b-wa', 'WhatsApp']
+  ];
+  var i = 0, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
+      launch = document.getElementById('launch'), use = launch.querySelector('use');
+  function cycle() {
+    if (document.hidden) return;
+    i = (i + 1) % T.length;
+    var t = T[i];
+    stage.classList.remove('pressed'); void stage.offsetWidth; stage.classList.add('pressed');
+    setTimeout(function () {
+      launch.style.setProperty('--h', t[2]);
+      use.setAttribute('href', '#' + t[3]);
+      document.getElementById('launch-t').textContent = t[4];
+      document.getElementById('launch-s').textContent = t[1];
+      launch.classList.remove('go'); void launch.offsetWidth; launch.classList.add('go');
+      rot.textContent = t[0];
+      rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
+    }, 260);
+  }
+  // La scène d'ouverture joue d'abord (icônes, appui, Claude Code), puis le cycle démarre
+  setTimeout(function () { setInterval(cycle, 2800); }, 1800);
+
+  if (!matchMedia('(pointer: fine)').matches) return;
+  var hero = document.querySelector('.hero'), raf = 0, mx = 0, my = 0;
+  hero.addEventListener('pointermove', function (e) {
+    var r = hero.getBoundingClientRect();
+    mx = (e.clientX - r.left) / r.width * 2 - 1; my = (e.clientY - r.top) / r.height * 2 - 1;
+    if (!raf) raf = requestAnimationFrame(function () { raf = 0; hero.style.setProperty('--mx', mx.toFixed(3)); hero.style.setProperty('--my', my.toFixed(3)); });
+  });
+  hero.addEventListener('pointerleave', function () { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
+
+  // Halo qui suit le pointeur sur les tuiles
+  document.getElementById('bento').addEventListener('pointermove', function (e) {
+    var t = e.target.closest('.tile'); if (!t) return;
+    var r = t.getBoundingClientRect();
+    t.style.setProperty('--x', (e.clientX - r.left) + 'px'); t.style.setProperty('--y', (e.clientY - r.top) + 'px');
+  });
+})();
+// Apparitions au défilement, façon Audit Greenwashing : léger glissement et fondu rapide, en cascade
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('main > section:not(.hero) > .kicker, main > section:not(.hero) > h2, main > section > .sub, .facts, .split-copy > *, .console, .narrow > p, .table-wrap, .faq details, .story, .checks > li, .cando > div, .final-card, .bento > li, .gestures > li, .cards > li, .steps > li, .note');
+  var steps = document.querySelector('.steps');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function (e) { e.classList.add('in'); });
+    steps.style.setProperty('--p', 1);
+    return;
+  }
+  els.forEach(function (e) { e.setAttribute('data-r', e.matches('.steps > li') ? 'side' : ''); });
+  var io = new IntersectionObserver(function (entries) {
+    var k = 0;
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      en.target.style.setProperty('--i', Math.min(k++, 6));
+      en.target.classList.add('in');
+      io.unobserve(en.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  els.forEach(function (e) { io.observe(e); });
+
+  // La frise des étapes se remplit à mesure qu'on descend
+  var raf = 0;
+  function fill() {
+    raf = 0;
+    var r = steps.getBoundingClientRect(), p = (innerHeight * 0.65 - r.top) / r.height;
+    steps.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(3));
+  }
+  addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(fill); }, { passive: true });
+  fill();
+})();
+document.querySelectorAll('[data-copy]').forEach(function (el) {
+  var box = document.createElement('div');
+  box.className = 'copybox';
+  el.parentNode.insertBefore(box, el);
+  box.appendChild(el);
+  var ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>';
+  var DONE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+  var b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'copy-ico';
+  b.setAttribute('aria-label', document.body.getAttribute('data-copy-label') || 'Copy');
+  b.innerHTML = ICON;
+  b.addEventListener('click', function () {
+    var text = el.getAttribute('data-copy') || el.textContent.trim();
+    function done() { b.innerHTML = DONE; b.classList.add('ok'); setTimeout(function () { b.innerHTML = ICON; b.classList.remove('ok'); }, 1500); }
+    try { navigator.clipboard.writeText(text).then(done); } catch (e) {}
+  });
+  box.appendChild(b);
+});
+</script>
+</body>
+</html>
