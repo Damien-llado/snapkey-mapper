@@ -270,7 +270,7 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 
 .viz-route { width: 100%; height: 80px; }
 .viz-route .park { fill: #3BB07A; opacity: .28; }
-.viz-route .st { fill: none; stroke: var(--muted); opacity: .32; stroke-width: 2.5; }
+.viz-route .road { fill: none; stroke: var(--muted); opacity: .32; stroke-width: 2.5; }
 .viz-route .rt { fill: none; stroke: #5B8DEF; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 4s ease-in-out infinite; }
 .viz-route .from { fill: #fff; stroke: #5B8DEF; stroke-width: 3; }
 .viz-route .to { fill: #E5484D; stroke: none; transform-box: fill-box; transform-origin: center; animation: pop 4s ease-in-out infinite; }
@@ -514,3 +514,7 @@ details.more[open] summary { margin-bottom: .2rem; }
 .copy:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 #setup .note { margin-top: 2.8rem; }
 @media (min-width: 900px) { #setup .note { margin-inline: 2.3rem; } }
+@media (max-width: 640px) {
+  /* in the compatibility table the pill is replaced by plain text that wraps */
+  td .st, td .st.ok { display: inline; padding: 0; border-radius: 0; background: none; font-size: .9rem; white-space: normal; }
+}

@@ -106,7 +106,7 @@ Then ask, for example: "make my Snap Key start a 25-minute focus timer". Without
 
 ## Security and privacy
 
-- **Nothing is collected.** No account, no analytics, no ads, no crash reporting in the app. It stores your target, the key name and the gesture, on the phone only. (The website uses Microsoft Clarity for anonymous visit statistics; the app has nothing like it.)
+- **Nothing is collected.** No account, no analytics, no ads, no crash reporting in the app. It stores your target, the key name and the gesture, on the phone only.
 - **Do not take my word for it, check:**
   - *Lite edition*: no INTERNET permission, so Android blocks all network use. Check with `aapt dump permissions snapkey-mapper-lite.apk` or with AppVerifier.
   - *Full edition*: INTERNET is declared for one reason, talking to the phone's own wireless debugging. In the code, the only network calls are in `SetupService.java` and the library; there is no URL, no host name and no other socket in the app. After the setup you can also block the network for the app in the ColorOS settings, or just use the lite edition.

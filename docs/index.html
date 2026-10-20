@@ -190,7 +190,7 @@
         <h3>Navigate, hands busy</h3>
         <div class="brands" aria-hidden="true"><span style="--h:#33CCFF;--fg:#0B1A12"><svg><use href="#b-waze"/></svg></span><span style="--h:#6AA127"><svg><use href="#b-komoot"/></svg></span></div>
         <p>Google Maps turn-by-turn to a saved place, by bike or by car.</p>
-        <svg class="viz-route" viewBox="0 0 300 80" aria-hidden="true"><rect class="park" x="74" y="44" width="42" height="18" rx="4"/><path class="st" d="M0 14H300M0 40H300M0 66H300M20 0V80M70 0V80M120 0V80M170 0V80M220 0V80M270 0V80M170 80L300 22"/><path class="rt" pathLength="1" d="M20 66V40H120V14H270"/><circle class="from" cx="20" cy="66" r="4"/><circle class="to" cx="270" cy="14" r="5.5"/></svg>
+        <svg class="viz-route" viewBox="0 0 300 80" aria-hidden="true"><rect class="park" x="74" y="44" width="42" height="18" rx="4"/><path class="road" d="M0 14H300M0 40H300M0 66H300M20 0V80M70 0V80M120 0V80M170 0V80M220 0V80M270 0V80M170 80L300 22"/><path class="rt" pathLength="1" d="M20 66V40H120V14H270"/><circle class="from" cx="20" cy="66" r="4"/><circle class="to" cx="270" cy="14" r="5.5"/></svg>
         <code>google.navigation:q=Central+Station&amp;mode=b</code>
       </li>
 
@@ -415,7 +415,7 @@
 
     <details><summary>Why is "Disable system optimisation" needed?</summary><div><p>Without it, ColorOS refuses the <code>pm grant</code> command ("Neither user 2000 nor current process has GRANT_RUNTIME_PERMISSIONS"). Turn it on, grant the permission, then turn it off again if you like.</p></div></details>
 
-    <details><summary>Is it safe? What can the app see?</summary><div><p><code>READ_LOGS</code> lets an app read the system log, which can contain details from other apps. So do not take our word for it, check. The app collects nothing and has no tracker or account. The lite edition has no internet permission: Android blocks all network use, and you can check that with AppVerifier. The full edition declares it only to talk to your own phone during setup; the only network code is in one short file, and you can block the network for the app afterwards. The source is public, each release lists the SHA-256 and the signing fingerprint, and you can build it yourself. See <a href="#safety">Safe to install</a>. (This website uses Microsoft Clarity for anonymous visit statistics; the app has nothing like it.)</p></div></details>
+    <details><summary>Is it safe? What can the app see?</summary><div><p><code>READ_LOGS</code> lets an app read the system log, which can contain details from other apps. So do not take our word for it, check. The app collects nothing and has no tracker or account. The lite edition has no internet permission: Android blocks all network use, and you can check that with AppVerifier. The full edition declares it only to talk to your own phone during setup; the only network code is in one short file, and you can block the network for the app afterwards. The source is public, each release lists the SHA-256 and the signing fingerprint, and you can build it yourself. See <a href="#safety">Safe to install</a>.</p></div></details>
 
     <details><summary>Why does Android ask for log access again?</summary><div><p>Since Android 13, every new log reading session needs your consent, and only while the app is on screen. SnapKey Mapper keeps one session open, so you only answer again after a reboot or if the system stops the app.</p></div></details>
 
