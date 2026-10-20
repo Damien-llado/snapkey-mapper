@@ -221,6 +221,7 @@
         <h3>A 5-minute timer</h3>
         <svg class="viz-clock" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="24"/><path class="hh" d="M30 30V18"/><path class="mh" d="M30 30h14"/></svg>
         <code>intent:#Intent;action=android.intent.action.SET_TIMER;…</code>
+        <p class="copyrow"><button type="button" class="copy" data-copy="intent:#Intent;action=android.intent.action.SET_TIMER;i.android.intent.extra.alarm.LENGTH=[SECONDS];B.android.intent.extra.alarm.SKIP_UI=true;end">Copy</button> <span>Replace <mark>[SECONDS]</mark> by the length (300 = 5 min)</span></p>
       </li>
 
       <li class="tile w2" style="--tint:var(--t-mint)">
@@ -617,6 +618,13 @@ document.getElementById('story').addEventListener('submit', function (e) {
   addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(fill); }, { passive: true });
   fill();
 })();
+document.querySelectorAll('button.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.textContent;
+    function done() { b.textContent = 'Copied'; setTimeout(function () { b.textContent = t; }, 1500); }
+    try { navigator.clipboard.writeText(b.dataset.copy).then(done); } catch (e) {}
+  });
+});
 </script>
 </body>
 </html>
