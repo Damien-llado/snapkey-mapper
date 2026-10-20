@@ -88,8 +88,6 @@
     <string name="recipe_fill_all">पहले हर फ़ील्ड भरें।</string>
     <string name="recipe_saved">आपके टारगेट के रूप में सेव हो गया।</string>
     <string name="recipe_missing">कुछ नहीं खुला। क्या ऐप इंस्टॉल है?</string>
-    <string name="recipe_verified">%1$s को Android एमुलेटर पर जाँचा गया।</string>
-    <string name="recipe_verified_partial">Android एमुलेटर (%1$s) पर यह लिंक सही ऐप तक पहुँचा, पर एमुलेटर इससे ज़्यादा नहीं दिखा सका। टेस्ट बटन से पक्का करें।</string>
     <string name="recipe_source">आधिकारिक दस्तावेज़</string>
     <string name="menu">मेन्यू</string>
     <string name="menu_help">मदद और वेबसाइट</string>
@@ -108,7 +106,6 @@
     <string name="app_search">कोई ऐप खोजें</string>
     <string name="target_link_enter">लिंक लिखें</string>
     <string name="target_none">अभी कुछ चुना नहीं गया</string>
-    <string name="recipe_untested">अभी टेस्ट नहीं हुआ: ऐप के आधिकारिक दस्तावेज़ से लिया गया है। टेस्ट बटन से जाँचें।</string>
     <string-array name="steps_log_auto">
         <item>फ़ोन को अपने Wi-Fi से जोड़ें।</item>
         <item>अगर Developer options छिपे हैं: सेटिंग › फ़ोन के बारे में › वर्शन, बिल्ड नंबर पर 7 बार टैप करें।</item>
@@ -142,4 +139,5 @@
         <item>नीचे की सूची में वह लाइन टैप करें जो हर दबाव पर लौटी: वही पैटर्न बन जाती है।</item>
         <item>होम पर लौटें, सुनना शुरू करें और जाँचने के लिए बटन दबाएँ।</item>
     </string-array>
+    <string name="recipe_help">आपके फ़ोन पर काम नहीं कर रहा? Claude Code से पूछें: SnapKey Mapper प्लगइन आपका फ़ोन देखकर ऐसा लिंक ढूँढता है जो काम करे।</string>
 </resources>

@@ -88,8 +88,6 @@
     <string name="recipe_fill_all">请先填写所有字段。</string>
     <string name="recipe_saved">已保存为你的目标。</string>
     <string name="recipe_missing">什么都没有打开。应用是否已安装？</string>
-    <string name="recipe_verified">已于 %1$s 在 Android 模拟器上验证。</string>
-    <string name="recipe_verified_partial">在 Android 模拟器上（%1$s），正确的应用收到了这个链接，但模拟器无法显示更多内容。请用测试按钮确认。</string>
     <string name="recipe_source">官方文档</string>
     <string name="menu">菜单</string>
     <string name="menu_help">帮助和网站</string>
@@ -108,7 +106,6 @@
     <string name="app_search">搜索应用</string>
     <string name="target_link_enter">输入链接</string>
     <string name="target_none">还没有选择</string>
-    <string name="recipe_untested">尚未测试：取自该应用的官方文档。请用测试按钮确认。</string>
     <string-array name="steps_log_auto">
         <item>让手机连上 Wi-Fi。</item>
         <item>如果开发者选项被隐藏：设置 › 关于手机 › 版本信息，连续点按版本号 7 次。</item>
@@ -142,4 +139,5 @@
         <item>在下方列表中，点每次按键都会出现的那一行：它将成为特征。</item>
         <item>回到主页，开始监听，再按一下按键进行验证。</item>
     </string-array>
+    <string name="recipe_help">在你的手机上不管用？问问 Claude Code：SnapKey Mapper 插件会检查你的手机，找到能用的链接。</string>
 </resources>

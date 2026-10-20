@@ -103,8 +103,11 @@ public class RecipeActivity extends Activity {
             source.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, android.net.Uri.parse(recipe.source))));
             Ui.add(top, source, 8);
         }
-        if (!recipe.tested.isEmpty()) Ui.add(top, Ui.body(this, getString(recipe.level.equals("dispatch") ? R.string.recipe_verified_partial : R.string.recipe_verified, recipe.tested)), recipe.note.isEmpty() ? 16 : 8);
-        else Ui.add(top, Ui.body(this, getString(R.string.recipe_untested)), recipe.note.isEmpty() ? 16 : 8);
+        // Not working on this phone: the Claude Code plugin looks at the phone and finds a link that works
+        TextView help = Ui.text(this, getString(R.string.recipe_help), 14, Ui.accent);
+        help.setPadding(0, Ui.dp(this, 8), 0, Ui.dp(this, 8));
+        help.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, android.net.Uri.parse(getString(R.string.help_url) + "#claude"))));
+        Ui.add(top, help, 8);
 
         ScrollView scroll = new ScrollView(this);
         scroll.addView(top);

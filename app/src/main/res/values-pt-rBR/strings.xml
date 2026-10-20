@@ -88,8 +88,6 @@
     <string name="recipe_fill_all">Preencha todos os campos primeiro.</string>
     <string name="recipe_saved">Salvo como seu destino.</string>
     <string name="recipe_missing">Nada abriu. O app está instalado?</string>
-    <string name="recipe_verified">Verificado em um emulador Android em %1$s.</string>
-    <string name="recipe_verified_partial">Em um emulador Android (%1$s), o app certo recebeu este link, mas o emulador não conseguiu mostrar mais que isso. Confirme com o botão de teste.</string>
     <string name="recipe_source">Documentação oficial</string>
     <string name="menu">Menu</string>
     <string name="menu_help">Ajuda e site</string>
@@ -108,7 +106,6 @@
     <string name="app_search">Pesquisar um app</string>
     <string name="target_link_enter">Digite um link</string>
     <string name="target_none">Nada escolhido ainda</string>
-    <string name="recipe_untested">Ainda não testado: tirado da documentação oficial do app. Confira com o botão de teste.</string>
     <string-array name="steps_log_auto">
         <item>Conecte o telefone ao seu Wi-Fi.</item>
         <item>Se as Opções do desenvolvedor estiverem ocultas: Configurações › Sobre o telefone › Versão, toque 7 vezes no número da versão.</item>
@@ -142,4 +139,5 @@
         <item>Na lista abaixo, toque na linha que voltou a cada aperto: ela vira o padrão.</item>
         <item>Volte à tela inicial, comece a escutar e aperte a tecla para conferir.</item>
     </string-array>
+    <string name="recipe_help">Não funciona no seu celular? Peça ao Claude Code: o plugin do SnapKey Mapper verifica o seu celular e encontra um link que funcione.</string>
 </resources>

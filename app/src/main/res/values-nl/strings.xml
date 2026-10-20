@@ -88,8 +88,6 @@
     <string name="recipe_fill_all">Vul eerst alle velden in.</string>
     <string name="recipe_saved">Opgeslagen als je doel.</string>
     <string name="recipe_missing">Er is niets geopend. Is de app geïnstalleerd?</string>
-    <string name="recipe_verified">Gecontroleerd op een Android-emulator op %1$s.</string>
-    <string name="recipe_verified_partial">Op een Android-emulator (%1$s) kreeg de juiste app deze link, maar de emulator kon niet meer laten zien. Controleer het met de testknop.</string>
     <string name="recipe_source">Officiële documentatie</string>
     <string name="menu">Menu</string>
     <string name="menu_help">Help en website</string>
@@ -108,7 +106,6 @@
     <string name="app_search">Zoek een app</string>
     <string name="target_link_enter">Typ een link</string>
     <string name="target_none">Nog niets gekozen</string>
-    <string name="recipe_untested">Nog niet getest: overgenomen uit de officiële documentatie van de app. Controleer het met de testknop.</string>
     <string-array name="steps_log_auto">
         <item>Verbind de telefoon met je wifi.</item>
         <item>Als Ontwikkelaarsopties verborgen zijn: Instellingen › Over de telefoon › Versie, tik 7 keer op het buildnummer.</item>
@@ -142,4 +139,5 @@
         <item>Tik in de lijst hieronder op de regel die bij elke druk terugkwam: die wordt het patroon.</item>
         <item>Ga terug naar het startscherm, begin met luisteren en druk ter controle op de toets.</item>
     </string-array>
+    <string name="recipe_help">Werkt het niet op je telefoon? Vraag het Claude Code: de SnapKey Mapper-plug-in bekijkt je telefoon en vindt een link die werkt.</string>
 </resources>

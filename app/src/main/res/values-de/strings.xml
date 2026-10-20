@@ -88,8 +88,6 @@
     <string name="recipe_fill_all">Füll zuerst alle Felder aus.</string>
     <string name="recipe_saved">Als dein Ziel gespeichert.</string>
     <string name="recipe_missing">Nichts geöffnet. Ist die App installiert?</string>
-    <string name="recipe_verified">Am %1$s auf einem Android-Emulator geprüft.</string>
-    <string name="recipe_verified_partial">Auf einem Android-Emulator (%1$s) hat die richtige App diesen Link empfangen, mehr konnte der Emulator nicht zeigen. Prüf es mit der Test-Schaltfläche.</string>
     <string name="recipe_source">Offizielle Dokumentation</string>
     <string name="menu">Menü</string>
     <string name="menu_help">Hilfe und Website</string>
@@ -108,7 +106,6 @@
     <string name="app_search">App suchen</string>
     <string name="target_link_enter">Link eingeben</string>
     <string name="target_none">Noch nichts ausgewählt</string>
-    <string name="recipe_untested">Noch nicht getestet: aus der offiziellen Dokumentation der App übernommen. Prüf es mit der Test-Schaltfläche.</string>
     <string-array name="steps_log_auto">
         <item>Verbinde das Telefon mit deinem WLAN.</item>
         <item>Falls die Entwickleroptionen versteckt sind: Einstellungen › Über das Telefon › Version, tipp 7-mal auf die Build-Nummer.</item>
@@ -142,4 +139,5 @@
         <item>Tipp in der Liste unten auf die Zeile, die bei jedem Druck wiederkam: Sie wird zum Muster.</item>
         <item>Geh zurück zum Start, starte das Mithören und drück zur Kontrolle die Taste.</item>
     </string-array>
+    <string name="recipe_help">Funktioniert es auf deinem Handy nicht? Frag Claude Code: Das SnapKey-Mapper-Plugin prüft dein Handy und findet einen Link, der funktioniert.</string>
 </resources>

@@ -88,8 +88,6 @@
     <string name="recipe_fill_all">Fill in every field first.</string>
     <string name="recipe_saved">Saved as your target.</string>
     <string name="recipe_missing">Nothing opened. Is the app installed?</string>
-    <string name="recipe_verified">Checked on an Android emulator on %1$s.</string>
-    <string name="recipe_verified_partial">On an Android emulator (%1$s) the right app received this link, but the emulator could not show more. Confirm it with the test button.</string>
     <string name="recipe_source">Official documentation</string>
     <string name="menu">Menu</string>
     <string name="menu_help">Help and website</string>
@@ -108,7 +106,6 @@
     <string name="app_search">Search an app</string>
     <string name="target_link_enter">Type a link</string>
     <string name="target_none">Nothing chosen yet</string>
-    <string name="recipe_untested">Not tested yet: taken from the app\'s official documentation. Check it with the test button.</string>
     <string-array name="steps_log_auto">
         <item>Connect the phone to your Wi-Fi.</item>
         <item>If Developer options are hidden: Settings › About device › Version, tap the build number 7 times.</item>
@@ -142,4 +139,5 @@
         <item>In the list below, tap the line that came back at each press: it becomes the pattern.</item>
         <item>Go back home, start listening and press the key to check.</item>
     </string-array>
+    <string name="recipe_help">Not working on your phone? Ask Claude Code: the SnapKey Mapper plugin looks at your phone and finds a link that works.</string>
 </resources>

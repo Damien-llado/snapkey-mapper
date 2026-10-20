@@ -88,8 +88,6 @@
     <string name="recipe_fill_all">Rellena primero todos los campos.</string>
     <string name="recipe_saved">Guardado como tu destino.</string>
     <string name="recipe_missing">No se ha abierto nada. ¿Está instalada la app?</string>
-    <string name="recipe_verified">Comprobado en un emulador de Android el %1$s.</string>
-    <string name="recipe_verified_partial">En un emulador de Android (%1$s), la app correcta recibió este enlace, pero el emulador no pudo mostrar más. Confírmalo con el botón de prueba.</string>
     <string name="recipe_source">Documentación oficial</string>
     <string name="menu">Menú</string>
     <string name="menu_help">Ayuda y sitio web</string>
@@ -108,7 +106,6 @@
     <string name="app_search">Buscar una app</string>
     <string name="target_link_enter">Escribe un enlace</string>
     <string name="target_none">Todavía no has elegido nada</string>
-    <string name="recipe_untested">Aún sin probar: sacado de la documentación oficial de la app. Compruébalo con el botón de prueba.</string>
     <string-array name="steps_log_auto">
         <item>Conecta el teléfono a tu Wi-Fi.</item>
         <item>Si las Opciones para desarrolladores están ocultas: Ajustes › Información del teléfono › Versión, toca 7 veces el número de compilación.</item>
@@ -142,4 +139,5 @@
         <item>En la lista de abajo, toca la línea que volvió a salir en cada pulsación: pasa a ser el patrón.</item>
         <item>Vuelve al inicio, empieza a escuchar y pulsa la tecla para comprobar.</item>
     </string-array>
+    <string name="recipe_help">¿No funciona en tu móvil? Pregunta a Claude Code: el plugin de SnapKey Mapper revisa tu teléfono y encuentra un enlace que funcione.</string>
 </resources>

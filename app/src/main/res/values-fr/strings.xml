@@ -88,8 +88,6 @@
     <string name="recipe_fill_all">Remplissez d\'abord tous les champs.</string>
     <string name="recipe_saved">Enregistré comme cible.</string>
     <string name="recipe_missing">Rien ne s\'est ouvert. L\'appli est-elle installée ?</string>
-    <string name="recipe_verified">Vérifié sur un émulateur Android le %1$s.</string>
-    <string name="recipe_verified_partial">Sur un émulateur Android (%1$s), la bonne appli a bien reçu ce lien, mais l\'émulateur n\'a pas pu en montrer plus. Confirmez avec le bouton de test.</string>
     <string name="recipe_source">Documentation officielle</string>
     <string name="menu">Menu</string>
     <string name="menu_help">Aide et site web</string>
@@ -108,7 +106,6 @@
     <string name="app_search">Chercher une appli</string>
     <string name="target_link_enter">Saisir un lien</string>
     <string name="target_none">Rien de choisi pour l\'instant</string>
-    <string name="recipe_untested">Pas encore testé : repris de la documentation officielle de l\'appli. Vérifiez avec le bouton de test.</string>
     <string-array name="steps_log_auto">
         <item>Connectez le téléphone à votre Wi-Fi.</item>
         <item>Si les Options pour les développeurs sont masquées : Paramètres › À propos du téléphone › Version, touchez 7 fois le numéro de build.</item>
@@ -142,4 +139,5 @@
         <item>Dans la liste ci-dessous, touchez la ligne qui est revenue à chaque appui : elle devient le motif.</item>
         <item>Revenez à l\'accueil, démarrez l\'écoute et appuyez sur la touche pour vérifier.</item>
     </string-array>
+    <string name="recipe_help">Ça ne marche pas sur votre téléphone ? Demandez à Claude Code : le plugin SnapKey Mapper regarde votre téléphone et trouve un lien qui fonctionne.</string>
 </resources>
