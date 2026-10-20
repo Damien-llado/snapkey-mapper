@@ -268,14 +268,35 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .caret { display: inline-block; width: .55em; height: 1em; vertical-align: -.15em; background: #3BD99A; animation: blink 1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 
-.viz-route { width: 100%; height: 80px; }
-.viz-route .park { fill: #3BB07A; opacity: .28; }
-.viz-route .road { fill: none; stroke: var(--muted); opacity: .32; stroke-width: 2.5; }
-.viz-route .rt { fill: none; stroke: #5B8DEF; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 4s ease-in-out infinite; }
-.viz-route .from { fill: #fff; stroke: #5B8DEF; stroke-width: 3; }
-.viz-route .to { fill: #E5484D; stroke: none; transform-box: fill-box; transform-origin: center; animation: pop 4s ease-in-out infinite; }
-@keyframes draw { 60%, 100% { stroke-dashoffset: 0; } }
-@keyframes pop { 0%, 55% { scale: 0; } 70% { scale: 1.4; } 80%, 100% { scale: 1; } }
+
+.viz-route { width: 100%; height: auto; display: block; }
+.viz-route .m-land { fill: #EDEFE9; } .viz-route .m-block { fill: #E3E6DF; }
+.viz-route .m-park { fill: #C9E6BE; } .viz-route .m-water { fill: none; stroke: #A5CFF5; stroke-width: 15; stroke-linecap: round; }
+.viz-route .m-road { fill: none; stroke: #fff; stroke-width: 3.2; }
+.viz-route .m-main-case { fill: none; stroke: #F0B84D; stroke-width: 9.5; } .viz-route .m-main { fill: none; stroke: #FDE7A6; stroke-width: 7; }
+.viz-route .m-art-case { fill: none; stroke: #D3D6D0; stroke-width: 7; } .viz-route .m-art { fill: none; stroke: #fff; stroke-width: 5; }
+.viz-route .m-round-case { fill: #D3D6D0; } .viz-route .m-round { fill: #fff; }
+.viz-route .m-route-case { fill: none; stroke: #fff; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 4.5s ease-in-out infinite; }
+.viz-route .m-route { fill: none; stroke: #4285F4; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 4.5s ease-in-out infinite; }
+.viz-route .m-a { fill: #fff; stroke: #4285F4; stroke-width: 3.4; }
+.viz-route .m-car { fill: #fff; stroke: #1A57C8; stroke-width: 2; offset-distance: 0%; animation: drive 4.5s ease-in-out infinite; }
+.viz-route .m-pin { fill: #EA4335; stroke: #fff; stroke-width: 1.2; transform-box: fill-box; transform-origin: 50% 100%; animation: pop 4.5s ease-in-out infinite; }
+.viz-route .m-pin-dot { fill: #fff; }
+.viz-route .m-land, .viz-route .m-block, .viz-route .m-park, .viz-route .m-round, .viz-route .m-round-case, .viz-route .m-pin-dot { stroke: none; }
+
+@media (prefers-color-scheme: dark) {
+  .viz-route .m-land { fill: #1B2430; } .viz-route .m-block { fill: #202B38; } .viz-route .m-park { fill: #1E3A32; }
+  .viz-route .m-water { stroke: #1A3350; } .viz-route .m-road { stroke: #2E3B4C; }
+  .viz-route .m-main-case { stroke: #4A3B1E; } .viz-route .m-main { stroke: #7A6330; }
+  .viz-route .m-art-case { stroke: #121A24; } .viz-route .m-art { stroke: #34455A; }
+  .viz-route .m-round-case { fill: #121A24; } .viz-route .m-round { fill: #34455A; }
+  .viz-route .m-route-case { stroke: #0C1218; } .viz-route .m-route { stroke: #6FA3FF; }
+  .viz-route .m-a { fill: #0C1218; stroke: #6FA3FF; } .viz-route .m-car { fill: #0C1218; stroke: #6FA3FF; }
+  .viz-route .m-pin { stroke: #0C1218; }
+}
+@keyframes draw { 62%, 100% { stroke-dashoffset: 0; } }
+@keyframes drive { 62%, 100% { offset-distance: 100%; } }
+@keyframes pop { 0%, 55% { scale: 0; } 72% { scale: 1.25; } 82%, 100% { scale: 1; } }
 
 .eq { display: flex; align-items: flex-end; gap: 5px; height: 46px; }
 .eq i { width: 8px; height: 100%; border-radius: 4px; background: #E2557A; transform-origin: bottom; animation: eq 1.1s ease-in-out infinite alternate; }
@@ -473,7 +494,8 @@ footer ul { list-style: none; padding: 0; margin: .8rem 0; display: flex; flex-w
   .steps > li::before { left: -2.55rem; width: 1.8rem; height: 1.8rem; font-size: .9rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .viz-route .rt { stroke-dashoffset: 0; }
+  .viz-route .m-route, .viz-route .m-route-case { stroke-dashoffset: 0; }
+  .viz-route .m-car { offset-distance: 100%; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js [data-r] { opacity: 1; translate: none; scale: none; }
 }
@@ -508,13 +530,26 @@ details.more[open] summary { margin-bottom: .2rem; }
 }
 .steps pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 
-.copyrow { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: .5rem 0 0; font-size: .85rem; color: var(--muted); }
-.copyrow mark { background: color-mix(in oklab, var(--accent) 22%, transparent); color: inherit; border-radius: 4px; padding: 0 .25em; }
-.copy { font: inherit; font-weight: 600; min-height: 36px; padding: 0 .9rem; border-radius: 10px; border: 1px solid var(--line, currentColor); background: var(--bg, #fff); color: var(--ink); cursor: pointer; }
-.copy:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+mark { background: color-mix(in oklab, var(--accent) 22%, transparent); color: inherit; border-radius: 4px; padding: 0 .2em; }
+.copybox { position: relative; min-width: 0; }
+.copybox > code, .copybox > pre { display: block; padding-right: 2.6rem; }
+.copybox > .out, .copybox > p { margin: 0; }
+.copy-ico { position: absolute; top: 4px; right: 4px; width: 32px; height: 32px; display: grid; place-items: center; border: 0; border-radius: 9px; background: transparent; color: var(--muted); cursor: pointer; }
+.copy-ico:hover { background: color-mix(in oklab, var(--ink) 9%, transparent); color: var(--ink); }
+.copy-ico:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+.copy-ico.ok { color: var(--accent); }
+.copy-ico svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.console .copy-ico { color: var(--term-dim); }
+.console .copy-ico:hover { color: var(--term-ink); background: rgb(255 255 255 / .1); }
+.tile > .copybox { margin-top: auto; align-self: flex-start; max-width: 100%; }
+.tile .copybox > code { margin: 0; font-size: .74rem; padding: .3em 2.4rem .3em .6em; background: color-mix(in oklab, var(--ink) 6%, transparent); border: 1px solid var(--line); border-radius: 8px; }
+.tile .copy-ico { top: 3px; width: 28px; height: 28px; right: 3px; }
+.console-body .out .copybox { display: inline-block; max-width: 100%; }
 #setup .note { margin-top: 2.8rem; }
 @media (min-width: 900px) { #setup .note { margin-inline: 2.3rem; } }
 @media (max-width: 640px) {
   /* in the compatibility table the pill is replaced by plain text that wraps */
   td .st, td .st.ok { display: inline; padding: 0; border-radius: 0; background: none; font-size: .9rem; white-space: normal; }
 }
+.console-body .out .copybox > code { display: block; padding-right: 2.6rem; }
+.console-body .copybox > pre { white-space: pre-wrap; overflow-wrap: anywhere; }
