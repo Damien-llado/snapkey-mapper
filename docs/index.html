@@ -490,7 +490,7 @@
 </footer>
 
 <script>
-// Mesure d'audience Microsoft Clarity (clics, défilement, cartes de chaleur) : coupée tant que l'identifiant du projet est vide
+// Mesure d'audience Microsoft Clarity (clics, défilement, cartes de chaleur) : coupée si l'identifiant du projet est vide
 (function (id) {
   if (!id) return;
   (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
@@ -502,7 +502,7 @@
     else if (a.href.indexOf('github.com') > -1) clarity('event', 'github');
   });
   document.getElementById('story').addEventListener('submit', function () { clarity('event', 'story'); });
-})('');
+})('z0nfap9rs6');
 
 // Étoiles et téléchargements GitHub en direct (affichés même à 0), en cache une heure pour rester sous la limite de l'API
 (function () {
