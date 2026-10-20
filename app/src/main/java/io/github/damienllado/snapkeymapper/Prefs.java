@@ -24,7 +24,8 @@ final class Prefs {
     static String link(Context c) { return p(c).getString("link", ""); }
     static String appPackage(Context c) { return p(c).getString("app_package", ""); }
     static void appPackage(Context c, String pkg) { p(c).edit().putString("app_package", pkg).apply(); }
-    static String pattern(Context c) { return p(c).getString("pattern", ""); }
+    /** The Find X9 / Find N6 Snap Key; other phones find theirs with the capture. */
+    static String pattern(Context c) { return p(c).getString("pattern", "KEYCODE_ACTION_BUTTON_CLICK"); }
     static boolean active(Context c) { return p(c).getBoolean("active", false); }
     static void active(Context c, boolean active) { p(c).edit().putBoolean("active", active).apply(); }
     /** "single", "double" or "long". */

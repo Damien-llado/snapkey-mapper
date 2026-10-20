@@ -25,7 +25,7 @@
     <application
         android:label="SnapKey Mapper"
         android:allowBackup="false"
-        android:icon="@android:drawable/ic_menu_send"
+        android:icon="@mipmap/ic_launcher"
         android:theme="@android:style/Theme.DeviceDefault.DayNight">
 
         <activity android:name=".MainActivity" android:exported="true">
