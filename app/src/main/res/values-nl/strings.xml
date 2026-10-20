@@ -139,5 +139,5 @@
         <item>Tik in de lijst hieronder op de regel die bij elke druk terugkwam: die wordt het patroon.</item>
         <item>Ga terug naar het startscherm, begin met luisteren en druk ter controle op de toets.</item>
     </string-array>
-    <string name="recipe_help">Werkt het niet op je telefoon? Vraag het Claude Code: de SnapKey Mapper-plug-in bekijkt je telefoon en vindt een link die werkt.</string>
+    <string name="recipe_help">Werkt het niet op je telefoon? Vraag het op een computer aan Claude Code met de SnapKey Mapper-plug-in: die vindt een link die werkt en test hem op je telefoon, verbonden via een USB-kabel of draadloze foutopsporing.</string>
 </resources>

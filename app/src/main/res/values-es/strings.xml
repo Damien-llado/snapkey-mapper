@@ -139,5 +139,5 @@
         <item>En la lista de abajo, toca la línea que volvió a salir en cada pulsación: pasa a ser el patrón.</item>
         <item>Vuelve al inicio, empieza a escuchar y pulsa la tecla para comprobar.</item>
     </string-array>
-    <string name="recipe_help">¿No funciona en tu móvil? Pregunta a Claude Code: el plugin de SnapKey Mapper revisa tu teléfono y encuentra un enlace que funcione.</string>
+    <string name="recipe_help">¿No funciona en tu móvil? En un ordenador, pregunta a Claude Code con el plugin de SnapKey Mapper: encuentra un enlace que funcione y lo prueba en tu móvil, conectado por cable USB o por depuración inalámbrica.</string>
 </resources>

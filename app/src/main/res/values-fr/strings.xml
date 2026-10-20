@@ -139,5 +139,5 @@
         <item>Dans la liste ci-dessous, touchez la ligne qui est revenue à chaque appui : elle devient le motif.</item>
         <item>Revenez à l\'accueil, démarrez l\'écoute et appuyez sur la touche pour vérifier.</item>
     </string-array>
-    <string name="recipe_help">Ça ne marche pas sur votre téléphone ? Demandez à Claude Code : le plugin SnapKey Mapper regarde votre téléphone et trouve un lien qui fonctionne.</string>
+    <string name="recipe_help">Ça ne marche pas sur votre téléphone ? Sur un ordinateur, demandez à Claude Code avec le plugin SnapKey Mapper : il trouve un lien qui marche et le teste sur votre téléphone, relié par câble USB ou par le débogage sans fil.</string>
 </resources>

@@ -139,5 +139,5 @@
         <item>Tipp in der Liste unten auf die Zeile, die bei jedem Druck wiederkam: Sie wird zum Muster.</item>
         <item>Geh zurück zum Start, starte das Mithören und drück zur Kontrolle die Taste.</item>
     </string-array>
-    <string name="recipe_help">Funktioniert es auf deinem Handy nicht? Frag Claude Code: Das SnapKey-Mapper-Plugin prüft dein Handy und findet einen Link, der funktioniert.</string>
+    <string name="recipe_help">Funktioniert es auf deinem Handy nicht? Frag am Computer Claude Code mit dem SnapKey-Mapper-Plugin: Es findet einen Link, der funktioniert, und testet ihn auf deinem Handy, verbunden per USB-Kabel oder Debugging über WLAN.</string>
 </resources>

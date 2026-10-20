@@ -139,5 +139,5 @@
         <item>在下方列表中，点每次按键都会出现的那一行：它将成为特征。</item>
         <item>回到主页，开始监听，再按一下按键进行验证。</item>
     </string-array>
-    <string name="recipe_help">在你的手机上不管用？问问 Claude Code：SnapKey Mapper 插件会检查你的手机，找到能用的链接。</string>
+    <string name="recipe_help">在你的手机上不管用？在电脑上用 SnapKey Mapper 插件问问 Claude Code：它会找到能用的链接，并在通过 USB 数据线或无线调试连接的手机上测试。</string>
 </resources>

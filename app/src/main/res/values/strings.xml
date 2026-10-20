@@ -139,5 +139,5 @@
         <item>In the list below, tap the line that came back at each press: it becomes the pattern.</item>
         <item>Go back home, start listening and press the key to check.</item>
     </string-array>
-    <string name="recipe_help">Not working on your phone? Ask Claude Code: the SnapKey Mapper plugin looks at your phone and finds a link that works.</string>
+    <string name="recipe_help">Not working on your phone? On a computer, ask Claude Code with the SnapKey Mapper plugin: it finds a link that works and tests it on your phone, connected with a USB cable or wireless debugging.</string>
 </resources>

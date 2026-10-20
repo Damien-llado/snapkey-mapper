@@ -113,6 +113,7 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .sub { text-align: center; color: var(--muted); max-width: 38rem; margin: 0 auto 2.4rem; font-size: 1.1rem; }
 .muted { color: var(--muted); }
 .small { font-size: .92rem; }
+.plug-note { color: var(--muted); font-size: .92rem; margin-top: .7rem; }
 
 /* Hero */
 .hero { position: relative; isolation: isolate; text-align: center; padding-top: clamp(2.5rem, 7vw, 5rem) !important; padding-bottom: 1rem !important; max-width: calc(var(--wide) + 2 * var(--gut)); margin-inline: auto; }
