@@ -164,4 +164,8 @@
     <string name="home_setup_title">设置 SnapKey Mapper</string>
     <string name="home_setup_text">只需几步，只做一次。应用会为你打开每个设置项并检查。</string>
     <string name="home_finder">按键没反应？换了手机：找到你的按键</string>
+    <string name="wiz_skip">已经完成，继续</string>
+    <string name="wiz_notif_title">开启通知</string>
+    <string name="wiz_notif_text">配对码需要在应用的通知中输入。请开启它的通知，然后返回这里。</string>
+    <string name="wiz_notif_btn">打开通知</string>
 </resources>

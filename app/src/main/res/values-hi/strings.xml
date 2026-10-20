@@ -164,4 +164,8 @@
     <string name="home_setup_title">SnapKey Mapper सेट करें</string>
     <string name="home_setup_text">कुछ चरण, सिर्फ़ एक बार। ऐप हर सेटिंग आपके लिए खोलता है और उसे जाँचता है।</string>
     <string name="home_finder">बटन कुछ नहीं करता? दूसरा फ़ोन: अपना बटन खोजें</string>
+    <string name="wiz_skip">यह हो चुका है, आगे बढ़ें</string>
+    <string name="wiz_notif_title">सूचनाएं चालू करें</string>
+    <string name="wiz_notif_text">पेयरिंग कोड ऐप की एक सूचना में लिखा जाता है। इसकी सूचनाएं चालू करें, फिर यहां लौटें।</string>
+    <string name="wiz_notif_btn">सूचनाएं खोलें</string>
 </resources>

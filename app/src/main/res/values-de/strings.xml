@@ -164,4 +164,8 @@
     <string name="home_setup_title">SnapKey Mapper einrichten</string>
     <string name="home_setup_text">Ein paar Schritte, einmalig. Die App öffnet jede Einstellung für dich und prüft sie.</string>
     <string name="home_finder">Die Taste tut nichts? Anderes Telefon: Taste finden</string>
+    <string name="wiz_skip">Schon erledigt, weiter</string>
+    <string name="wiz_notif_title">Benachrichtigungen einschalten</string>
+    <string name="wiz_notif_text">Der Kopplungscode wird in einer Benachrichtigung der App eingegeben. Schalte ihre Benachrichtigungen ein und komm dann hierher zurück.</string>
+    <string name="wiz_notif_btn">Benachrichtigungen öffnen</string>
 </resources>

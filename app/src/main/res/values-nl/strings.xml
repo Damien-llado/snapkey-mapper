@@ -164,4 +164,8 @@
     <string name="home_setup_title">SnapKey Mapper instellen</string>
     <string name="home_setup_text">Een paar stappen, eenmalig. De app opent elke instelling voor je en controleert hem.</string>
     <string name="home_finder">Doet de toets niets? Andere telefoon: zoek je toets</string>
+    <string name="wiz_skip">Al gedaan, doorgaan</string>
+    <string name="wiz_notif_title">Meldingen aanzetten</string>
+    <string name="wiz_notif_text">De koppelcode typ je in een melding van de app. Zet de meldingen aan en kom dan hier terug.</string>
+    <string name="wiz_notif_btn">Meldingen openen</string>
 </resources>

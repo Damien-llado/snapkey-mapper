@@ -30,7 +30,8 @@ public class SetupActivity extends Activity {
         return new boolean[]{
                 c.checkSelfPermission(Manifest.permission.READ_LOGS) == PackageManager.PERMISSION_GRANTED,
                 Settings.canDrawOverlays(c),
-                c.getSystemService(PowerManager.class).isIgnoringBatteryOptimizations(c.getPackageName()),
+                // ColorOS has its own battery manager and may keep saying "optimized": the user can say it is done
+                c.getSystemService(PowerManager.class).isIgnoringBatteryOptimizations(c.getPackageName()) || Prefs.skipped(c, "battery"),
                 Prefs.nativeKeyOff(c)};
     }
 
@@ -87,22 +88,21 @@ public class SetupActivity extends Activity {
                 card(R.string.perm_overlay, getString(R.string.wiz_overlay_text),
                         getString(R.string.setup_open_setting), () -> {
                             // the switch of this app itself; since Android 11 the public action only shows the list of all apps
-                            try {
-                                startActivity(new Intent("android.settings.MANAGE_APP_OVERLAY_PERMISSION", Uri.parse(pkg)));
-                            } catch (RuntimeException e) {
-                                startActivity(new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse(pkg)));
-                            }
+                            Ui.open(this, new Intent("android.settings.MANAGE_APP_OVERLAY_PERMISSION", Uri.parse(pkg)),
+                                    new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse(pkg)));
                         });
                 Ui.add(page, Ui.body(this, getString(R.string.wiz_restricted)), 16);
                 Ui.add(page, Ui.button(this, getString(R.string.perm_app_settings), false, v -> appInfo()), 8);
                 break;
             case 2:
                 card(R.string.perm_battery, getString(R.string.wiz_battery_text),
-                        getString(R.string.perm_allow), () -> startActivity(new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse(pkg))));
+                        getString(R.string.perm_allow), () -> Ui.open(this, new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse(pkg)),
+                                new Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS)));
+                skip("battery");
                 break;
             default:
                 card(R.string.setup_native_title, getString(R.string.wiz_native_text),
-                        getString(R.string.setup_open_phone_settings), () -> startActivity(new Intent(Settings.ACTION_SETTINGS)));
+                        getString(R.string.setup_open_phone_settings), () -> Ui.open(this));
                 CheckBox box = new CheckBox(this);
                 box.setText(getString(R.string.setup_native_done));
                 box.setTextColor(Ui.ink);
@@ -119,12 +119,20 @@ public class SetupActivity extends Activity {
             return;
         }
         String last = Prefs.setupResult(this);
-        if (!wifi()) {
+        if (!wifi() && !skipped("wifi")) {
             card(R.string.wiz_wifi_title, getString(R.string.wiz_wifi_text),
-                    getString(R.string.wiz_wifi_btn), () -> startActivity(new Intent(Settings.Panel.ACTION_WIFI)));
-        } else if (Settings.Global.getInt(getContentResolver(), Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 1) {
+                    getString(R.string.wiz_wifi_btn), () -> Ui.open(this, new Intent(Settings.Panel.ACTION_WIFI), new Intent(Settings.ACTION_WIFI_SETTINGS)));
+            skip("wifi");
+        } else if (!devOptions() && !skipped("dev")) {
             card(R.string.wiz_dev_title, getString(R.string.wiz_dev_text),
                     getString(R.string.wiz_dev_btn), () -> Ui.openSetting(this, Settings.ACTION_DEVICE_INFO_SETTINGS, "build_number"));
+            skip("dev");
+        } else if (!notifications() && !skipped("notif")) {
+            // the pairing code is typed in a notification: without notifications, nowhere to type it
+            card(R.string.wiz_notif_title, getString(R.string.wiz_notif_text), getString(R.string.wiz_notif_btn),
+                    () -> Ui.open(this, new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE, getPackageName()),
+                            new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()))));
+            skip("notif");
         } else if (last.equals(getString(R.string.setup_refused))) {
             // ColorOS refused the grant: one more switch, then pair again
             card(R.string.wiz_sysopt_title, getString(R.string.wiz_sysopt_text),
@@ -134,7 +142,10 @@ public class SetupActivity extends Activity {
                     });
         } else {
             card(R.string.wiz_pair_title, getString(R.string.wiz_pair_text),
-                    getString(R.string.perm_auto_btn), () -> AdbSetup.start(this));
+                    getString(R.string.perm_auto_btn), () -> {
+                        Prefs.setupResult(this, ""); // a new attempt: the previous message no longer applies
+                        AdbSetup.start(this);
+                    });
             if (!last.isEmpty() && !last.equals(getString(R.string.setup_done))) {
                 Ui.add(page, Ui.body(this, getString(R.string.wiz_last, last)), 14);
             }
@@ -147,6 +158,26 @@ public class SetupActivity extends Activity {
         Ui.add(page, box, 8);
     }
 
+    /** A check can be wrong on some phones (VPN, ROM that hides a setting): "Already done" moves on, and stays chosen. */
+    private boolean skipped(String check) { return Prefs.skipped(this, check); }
+
+    private void skip(String check) {
+        Ui.add(page, Ui.button(this, getString(R.string.wiz_skip), false, v -> { Prefs.skip(this, check); show(); }), 8);
+    }
+
+    /** Developer options on: the setting itself, or USB debugging on (only possible with them on). */
+    private boolean devOptions() {
+        return Settings.Global.getInt(getContentResolver(), Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) == 1
+                || Settings.Global.getInt(getContentResolver(), Settings.Global.ADB_ENABLED, 0) == 1;
+    }
+
+    /** Notifications of the app on, and the channel of the pairing code not blocked. */
+    private boolean notifications() {
+        android.app.NotificationManager nm = getSystemService(android.app.NotificationManager.class);
+        android.app.NotificationChannel ch = nm.getNotificationChannel("setup");
+        return nm.areNotificationsEnabled() && (ch == null || ch.getImportance() != android.app.NotificationManager.IMPORTANCE_NONE);
+    }
+
     /** Title, what to do, and the one button that opens the right screen. */
     private void card(int title, String text, String button, Runnable action) {
         Ui.add(page, Ui.title(this, getString(title)), 6);
@@ -154,10 +185,15 @@ public class SetupActivity extends Activity {
         if (button != null) Ui.add(page, Ui.button(this, button, true, v -> action.run()), 18);
     }
 
+    /** Any network of the phone on Wi-Fi: with a VPN on, the active network is the VPN, not the Wi-Fi. */
+    @SuppressWarnings("deprecation")
     private boolean wifi() {
         ConnectivityManager cm = getSystemService(ConnectivityManager.class);
-        NetworkCapabilities n = cm.getNetworkCapabilities(cm.getActiveNetwork());
-        return n != null && n.hasTransport(NetworkCapabilities.TRANSPORT_WIFI);
+        for (android.net.Network net : cm.getAllNetworks()) {
+            NetworkCapabilities n = cm.getNetworkCapabilities(net);
+            if (n != null && n.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) return true;
+        }
+        return false;
     }
 
     /** The command for a computer (lite edition, or when the automatic setup cannot be used). */
@@ -178,6 +214,6 @@ public class SetupActivity extends Activity {
     }
 
     private void appInfo() {
-        startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName())));
+        Ui.open(this, new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName())));
     }
 }

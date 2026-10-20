@@ -36,6 +36,10 @@ final class Prefs {
     static void nativeKeyOff(Context c, boolean off) { p(c).edit().putBoolean("native_off", off).apply(); }
 
     /** Outcome of the last automatic setup, shown on the setup screen. */
+    /** A setup check the user said is done although the phone says otherwise (kept: a wrong check must never block). */
+    static boolean skipped(Context c, String check) { return p(c).getBoolean("skip_" + check, false); }
+    static void skip(Context c, String check) { p(c).edit().putBoolean("skip_" + check, true).apply(); }
+
     static String setupResult(Context c) { return p(c).getString("setup_result", ""); }
     static void setupResult(Context c, String text) { p(c).edit().putString("setup_result", text).apply(); }
 

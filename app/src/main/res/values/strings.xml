@@ -164,4 +164,8 @@
     <string name="home_setup_title">Set up SnapKey Mapper</string>
     <string name="home_setup_text">A few steps, once. The app opens each setting for you and checks it.</string>
     <string name="home_finder">The key does nothing? Another phone: find your key</string>
+    <string name="wiz_skip">Already done, continue</string>
+    <string name="wiz_notif_title">Turn on notifications</string>
+    <string name="wiz_notif_text">The pairing code is typed in a notification of the app. Turn on its notifications, then come back here.</string>
+    <string name="wiz_notif_btn">Open notifications</string>
 </resources>

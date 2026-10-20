@@ -164,4 +164,8 @@
     <string name="home_setup_title">Configurer SnapKey Mapper</string>
     <string name="home_setup_text">Quelques étapes, une seule fois. L\'appli ouvre chaque réglage pour vous et le vérifie.</string>
     <string name="home_finder">La touche ne fait rien ? Autre téléphone : trouver votre touche</string>
+    <string name="wiz_skip">C\'est déjà fait, continuer</string>
+    <string name="wiz_notif_title">Activer les notifications</string>
+    <string name="wiz_notif_text">Le code d\'association se saisit dans une notification de l\'appli. Activez ses notifications, puis revenez ici.</string>
+    <string name="wiz_notif_btn">Ouvrir les notifications</string>
 </resources>

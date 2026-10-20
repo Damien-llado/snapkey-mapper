@@ -164,4 +164,8 @@
     <string name="home_setup_title">Configurar o SnapKey Mapper</string>
     <string name="home_setup_text">Alguns passos, uma única vez. O app abre cada configuração para você e a verifica.</string>
     <string name="home_finder">A tecla não faz nada? Outro telefone: encontre a sua tecla</string>
+    <string name="wiz_skip">Já está feito, continuar</string>
+    <string name="wiz_notif_title">Ativar as notificações</string>
+    <string name="wiz_notif_text">O código de pareamento é digitado em uma notificação do app. Ative as notificações e volte aqui.</string>
+    <string name="wiz_notif_btn">Abrir notificações</string>
 </resources>

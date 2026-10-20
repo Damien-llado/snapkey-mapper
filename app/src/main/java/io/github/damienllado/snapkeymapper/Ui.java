@@ -175,7 +175,23 @@ final class Ui {
             args.putString(":settings:fragment_args_key", highlight);
             i.putExtra(":settings:show_fragment_args", args);
         }
-        c.startActivity(i);
+        open(c, i);
+    }
+
+    /** Opens the first screen this phone has; the main Settings screen if none (some ROMs remove or rename screens). */
+    static void open(Context c, android.content.Intent... screens) {
+        for (android.content.Intent i : screens) {
+            try {
+                c.startActivity(i.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK));
+                return;
+            } catch (RuntimeException e) { // ActivityNotFoundException, SecurityException
+            }
+        }
+        try {
+            c.startActivity(new android.content.Intent(android.provider.Settings.ACTION_SETTINGS).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK));
+        } catch (RuntimeException e) {
+            android.widget.Toast.makeText(c, android.provider.Settings.ACTION_SETTINGS, android.widget.Toast.LENGTH_LONG).show();
+        }
     }
 
     /** Rounded tile with the logo of an app or of an Android function. */
