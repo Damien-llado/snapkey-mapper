@@ -128,7 +128,7 @@
           <span class="stars" aria-label="Estrelas no GitHub">★ <span data-stars>0</span></span>
         </a>
       </div>
-      <p class="meta">Versão 1.0.7 · Android 11+ · cerca de 12 MB · MIT · testado no Find X9 Pro, ColorOS 16</p>
+      <p class="meta">Versão 1.0.8 · Android 11+ · cerca de 12 MB · MIT · testado no Find X9 Pro, ColorOS 16</p>
     </div>
 
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
@@ -404,7 +404,7 @@
       </li>
       <li>
         <h3>Deixe o app conceder a si mesmo a permissão de log</h3>
-        <p>No ColorOS, primeiro abra <em>Configurações › Configurações adicionais › Opções do desenvolvedor</em> e ative <strong>"Disable system optimisation"</strong> (no ColorOS 16, essa opção pode aparecer só com o celular em inglês: mude o idioma por um minuto se não encontrar). Depois conecte-se ao seu Wi-Fi e toque em <strong>Configurar a leitura do log automaticamente</strong> no app. Nas Opções do desenvolvedor, ative a <strong>Depuração por Wi-Fi</strong>, toque em <strong>Parear o dispositivo com um código de pareamento</strong>, puxe a notificação para baixo e digite os 6 dígitos. Quando a notificação disser que está configurado, desative a Depuração por Wi-Fi.</p>
+        <p>No ColorOS, uma permissão fica bloqueada até que um ajuste oculto seja ativado, e esse ajuste só aparece com o celular em inglês. Primeiro mude o celular para English (<em>Configurações › Sistema e atualização › Idioma e região</em>), depois procure <strong>Disable system</strong> nas Configurações e ative <strong>Disable system optimisation</strong> (toque em <strong>Turn on anyway</strong>). Em seguida você pode voltar ao seu idioma. Conecte-se ao Wi-Fi e toque em <strong>Abrir a Depuração por Wi-Fi</strong> no app. Em <em>Configurações › Sistema e atualização › Opções de desenvolvedor</em>, toque na linha <strong>Depuração por Wi-Fi</strong> (o texto, não o interruptor), ative, toque em <strong>Parear o dispositivo com um código de pareamento</strong>, puxe a notificação para baixo, expanda-a, toque em <strong>Digitar código</strong> e digite os 6 dígitos. Quando a notificação disser que está configurado, desligue a depuração por Wi-Fi.</p>
         <details class="more"><summary>Com um computador, ou com a edição lite</summary><p>A edição lite não tem permissão de internet e não se configura sozinha: rode este comando em um computador, ou no próprio celular com o <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (modo Expert, ação <em>Shell command</em>, ADB, depois <em>Test</em>). Depois você pode desativar de novo o <em>"Disable system optimisation"</em>: a permissão continua.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
       </li>
       <li>
@@ -420,7 +420,7 @@
         <p>Assim que algo é escolhido, o SnapKey Mapper escuta, sem nada para iniciar. O Android 13 ou mais recente pergunta "Permitir acesso a todos os registros do dispositivo?": escolha <strong>Permitir acesso único</strong>. Esse acesso dura enquanto a escuta estiver ativa, então você só o vê de novo depois de reiniciar (toque na notificação "O SnapKey Mapper está desligado"). Agora você pode desligar a depuração por Wi-Fi.</p>
       </li>
     </ol>
-    <p class="note"><strong>Dica de segurança.</strong> Quando terminar, desative a depuração por Wi-Fi nas Opções do desenvolvedor. O SnapKey Mapper não precisa dela e apaga a própria chave de pareamento logo após a configuração. Depois remova o SnapKey Mapper de Depuração por Wi-Fi › Dispositivos pareados. Faça a configuração só em uma rede Wi-Fi em que você confie.</p>
+    <p class="note"><strong>Dica de segurança.</strong> Quando terminar, desative a depuração por Wi-Fi nas Opções de desenvolvedor. O SnapKey Mapper não precisa dela e apaga a própria chave de pareamento logo após a configuração. Depois remova o SnapKey Mapper de Depuração por Wi-Fi › Dispositivos pareados. Faça a configuração só em uma rede Wi-Fi em que você confie.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">

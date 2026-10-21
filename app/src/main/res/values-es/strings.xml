@@ -16,9 +16,9 @@
     <string name="perm_title">Permisos</string>
     <string name="perm_sub">Tres interruptores, una sola vez. La tecla no necesita nada más.</string>
     <string name="perm_auto_btn">Abrir Depuración inalámbrica</string>
-    <string name="perm_auto_help">Conéctate a tu Wi-Fi, toca el botón y, en Opciones para desarrolladores, activa Depuración inalámbrica, toca \"Vincular dispositivo con código de sincronización\" y escribe los 6 dígitos de la notificación. En ColorOS, activa antes \"Disable system optimisation\".</string>
+    <string name="perm_auto_help">Conéctate a tu Wi-Fi, toca el botón y, en Opciones de desarrollador, activa Depuración inalámbrica, toca \"Emparejar dispositivo con código de sincronización\" y escribe los 6 dígitos de la notificación. En ColorOS, activa antes \"Disable system optimisation\".</string>
     <string name="perm_log">Lectura del registro</string>
-    <string name="perm_overlay">Mostrar sobre otras apps</string>
+    <string name="perm_overlay">Mostrar sobre otras aplicaciones</string>
     <string name="perm_battery">Batería sin restricciones</string>
     <string name="perm_allow">Permitir</string>
     <string name="perm_granted">Concedido</string>
@@ -61,7 +61,7 @@
     <string name="diag_requested">Apertura solicitada</string>
     <string name="channel_listen">Escucha de la tecla lateral</string>
     <string name="setup_waiting_title">Configuración: esperando la pantalla de vinculación</string>
-    <string name="setup_waiting_text">En Opciones para desarrolladores, activa Depuración inalámbrica y toca \"Vincular dispositivo con código de sincronización\"</string>
+    <string name="setup_waiting_text">En Opciones de desarrollador, activa Depuración inalámbrica y toca \"Emparejar dispositivo con código de sincronización\"</string>
     <string name="setup_pairing">Vinculando…</string>
     <string name="setup_wait">Espera un momento</string>
     <string name="setup_code_title">Escribe aquí el código de vinculación</string>
@@ -74,7 +74,7 @@
     <string name="setup_code_label">Código de 6 dígitos</string>
     <string name="setup_done">La lectura del registro está configurada. Ya puedes desactivar la depuración inalámbrica.</string>
     <string name="err_invalid_intent">Enlace intent no válido</string>
-    <string name="setup_fail_pair">La vinculación ha fallado. Vuelve a tocar el botón de configuración de la app, luego \"Vincular dispositivo con código de sincronización\" y escribe el código nuevo. Si vuelve a fallar, desactiva y activa la depuración inalámbrica.</string>
+    <string name="setup_fail_pair">La vinculación ha fallado. Vuelve a tocar el botón de configuración de la app, luego \"Emparejar dispositivo con código de sincronización\" y escribe el código nuevo. Si vuelve a fallar, desactiva y activa la depuración inalámbrica.</string>
     <string name="lang_title">Idioma</string>
     <string name="library_open">Ver la biblioteca de atajos</string>
     <string name="library_title">Biblioteca de atajos</string>
@@ -109,15 +109,15 @@
     <string name="target_none">Todavía no has elegido nada</string>
     <string-array name="steps_log_auto">
         <item>Conecta el teléfono a tu Wi-Fi.</item>
-        <item>Si las Opciones para desarrolladores están ocultas: Ajustes › Información del teléfono › Versión, toca 7 veces el número de compilación.</item>
-        <item>En Opciones para desarrolladores, activa \"Disable system optimisation\" (ColorOS).</item>
+        <item>Si las Opciones de desarrollador están ocultas: Ajustes › Información del teléfono › Versión, toca 7 veces el número de compilación.</item>
+        <item>En Opciones de desarrollador, activa \"Disable system optimisation\" (ColorOS).</item>
         <item>Toca \"Configurar la lectura del registro automáticamente\" más abajo.</item>
-        <item>Activa Depuración inalámbrica y toca \"Vincular dispositivo con código de sincronización\".</item>
+        <item>Activa Depuración inalámbrica y toca \"Emparejar dispositivo con código de sincronización\".</item>
         <item>Baja las notificaciones y escribe los 6 dígitos en la notificación de SnapKey Mapper.</item>
     </string-array>
     <string-array name="steps_log_computer">
         <item>En un ordenador, instala las platform-tools de Android (adb).</item>
-        <item>En Opciones para desarrolladores, activa Depuración por USB y \"Disable system optimisation\" (ColorOS), y conecta el teléfono con un cable.</item>
+        <item>En Opciones de desarrollador, activa Depuración por USB y \"Disable system optimisation\" (ColorOS), y conecta el teléfono con un cable.</item>
         <item>Ejecuta el comando de abajo en el ordenador.</item>
     </string-array>
     <string-array name="steps_overlay">
@@ -145,18 +145,18 @@
     <string name="wiz_wifi_title">Conéctate al Wi-Fi</string>
     <string name="wiz_wifi_text">La app se concede a sí misma el permiso del registro mediante la depuración inalámbrica del teléfono, que solo funciona con Wi-Fi. Conecta el teléfono y vuelve aquí.</string>
     <string name="wiz_wifi_btn">Abrir Wi-Fi</string>
-    <string name="wiz_dev_title">Activa las Opciones para desarrolladores</string>
+    <string name="wiz_dev_title">Activa las Opciones de desarrollador</string>
     <string name="wiz_dev_text">Toca el botón y luego toca 7 veces el número de compilación (en ColorOS: Versión). Android dice que ya eres desarrollador. Vuelve aquí.</string>
     <string name="wiz_dev_btn">Abrir Información del teléfono</string>
     <string name="wiz_pair_title">Vincula la app con tu teléfono</string>
-    <string name="wiz_pair_text">1. Toca el botón: se abre la depuración inalámbrica (si se abre la lista de Opciones de desarrollador, toca el texto \"Depuración inalámbrica\", no el interruptor).\n2. Activa \"Usar depuración inalámbrica\" y permite tu red.\n3. Toca \"Vincular dispositivo con código de vinculación\".\n4. Aparece una notificación de SnapKey Mapper: toca su flecha para desplegarla, toca \"Introducir código\" y escribe los 6 dígitos. Eso es todo, la app hace el resto.</string>
+    <string name="wiz_pair_text">1. Toca el botón: se abre la depuración inalámbrica (si se abre la lista de Opciones de desarrollador, toca el texto \"Depuración inalámbrica\", no el interruptor).\n2. Actívala y permite tu red.\n3. Toca \"Emparejar dispositivo con código de sincronización\".\n4. Aparece una notificación de SnapKey Mapper: toca su flecha para desplegarla, toca \"Introducir código\" y escribe los 6 dígitos. Eso es todo, la app hace el resto.</string>
     <string name="wiz_sysopt_title">Primero un ajuste oculto de ColorOS</string>
     <string name="wiz_sysopt_text">ColorOS bloquea el permiso hasta activar un ajuste oculto, que solo aparece con el teléfono en inglés.\n1. Cambia el teléfono a English (Idioma y región).\n2. En Ajustes, busca \"Disable system\" y activa \"Disable system optimisation\" (Turn on anyway).\n3. Vuelve aquí. Después de la instalación puedes restaurar tu idioma.</string>
     <string name="wiz_sysopt_btn">Abrir Idioma y región</string>
     <string name="wiz_sysopt_btn2">Abrir Ajustes</string>
     <string name="wiz_sysopt_done">Hecho, continuar</string>
     <string name="wiz_last">Último intento: %1$s</string>
-    <string name="wiz_computer_text">La edición lite no tiene acceso a la red, así que el permiso se concede desde un ordenador, una sola vez: activa Depuración por USB en Opciones para desarrolladores, conecta el teléfono con un cable y ejecuta este comando.</string>
+    <string name="wiz_computer_text">La edición lite no tiene acceso a la red, así que el permiso se concede desde un ordenador, una sola vez: activa Depuración por USB en Opciones de desarrollador, conecta el teléfono con un cable y ejecuta este comando.</string>
     <string name="wiz_overlay_text">Permite que la tecla abra tu destino aunque la pantalla esté apagada u otra app esté delante. Toca el botón, luego SnapKey Mapper en la lista, y activa el interruptor.</string>
     <string name="wiz_restricted">¿Interruptor en gris o \"acceso denegado\"? Android lo bloquea en las apps instaladas fuera de Play Store: abre los ajustes de la app, toca ⋮ arriba a la derecha y luego \"Permitir ajustes restringidos\", y vuelve.</string>
     <string name="wiz_battery_text">Para que Android no detenga la app en segundo plano. Toca el botón y confirma. En ColorOS, bloquea también la app en las apps recientes.</string>

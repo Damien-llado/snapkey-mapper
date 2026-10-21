@@ -18,7 +18,7 @@
     <string name="perm_auto_btn">Ouvrir le débogage sans fil</string>
     <string name="perm_auto_help">Connectez-vous au Wi-Fi, touchez le bouton, puis dans les Options pour les développeurs activez le débogage sans fil, touchez « Associer l\'appareil avec un code d\'association » et saisissez les 6 chiffres dans la notification. Sur ColorOS, activez d\'abord « Disable system optimisation ».</string>
     <string name="perm_log">Lecture du journal</string>
-    <string name="perm_overlay">Affichage par-dessus les autres applis</string>
+    <string name="perm_overlay">Superposition sur d\'autres applis</string>
     <string name="perm_battery">Batterie sans restriction</string>
     <string name="perm_allow">Autoriser</string>
     <string name="perm_granted">Accordée</string>
@@ -149,7 +149,7 @@
     <string name="wiz_dev_text">Touchez le bouton, puis touchez 7 fois le numéro de build (sur ColorOS : Version). Android indique que vous êtes développeur. Revenez ici.</string>
     <string name="wiz_dev_btn">Ouvrir À propos du téléphone</string>
     <string name="wiz_pair_title">Associez l\'appli à votre téléphone</string>
-    <string name="wiz_pair_text">1. Touchez le bouton : le débogage sans fil s\'ouvre (si la liste des Options pour les développeurs s\'ouvre à la place, touchez le texte « Débogage sans fil », pas l\'interrupteur).\n2. Activez « Utiliser le débogage sans fil » et autorisez votre réseau.\n3. Touchez « Associer l\'appareil avec un code d\'association ».\n4. Une notification SnapKey Mapper s\'affiche : touchez sa flèche pour la déplier, touchez « Saisir le code » et tapez les 6 chiffres. C\'est tout, l\'appli fait le reste.</string>
+    <string name="wiz_pair_text">1. Touchez le bouton : le débogage sans fil s\'ouvre (si la liste des Options pour les développeurs s\'ouvre à la place, touchez le texte \"Débogage sans fil\", pas l\'interrupteur).\n2. Activez-le et autorisez votre réseau.\n3. Touchez \"Associer l\'appareil avec un code d\'association\".\n4. Une notification SnapKey Mapper s\'affiche : touchez sa flèche pour la déplier, touchez \"Saisir le code\" et tapez les 6 chiffres. C\'est tout, l\'appli fait le reste.</string>
     <string name="wiz_sysopt_title">D\'abord un réglage caché de ColorOS</string>
     <string name="wiz_sysopt_text">ColorOS bloque la permission tant qu\'un réglage caché n\'est pas activé, et il n\'apparaît que si le téléphone est en anglais.\n1. Passez le téléphone en English (Langue et région).\n2. Dans les Paramètres, cherchez « Disable system » et activez « Disable system optimisation » (Turn on anyway).\n3. Revenez ici. Après l\'installation, vous pourrez remettre le français.</string>
     <string name="wiz_sysopt_btn">Ouvrir Langue et région</string>

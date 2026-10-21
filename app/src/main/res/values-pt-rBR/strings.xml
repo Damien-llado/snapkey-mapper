@@ -16,7 +16,7 @@
     <string name="perm_title">Permissões</string>
     <string name="perm_sub">Três chaves, uma vez só. A tecla em si não precisa de mais nada.</string>
     <string name="perm_auto_btn">Abrir a Depuração por Wi-Fi</string>
-    <string name="perm_auto_help">Conecte-se ao seu Wi-Fi, toque no botão e, nas Opções do desenvolvedor, ative a Depuração por Wi-Fi, toque em \"Parear o dispositivo com um código de pareamento\" e digite os 6 dígitos na notificação. No ColorOS, ative antes \"Disable system optimisation\".</string>
+    <string name="perm_auto_help">Conecte-se ao seu Wi-Fi, toque no botão e, nas Opções de desenvolvedor, ative a Depuração por Wi-Fi, toque em \"Parear o dispositivo com um código de pareamento\" e digite os 6 dígitos na notificação. No ColorOS, ative antes \"Disable system optimisation\".</string>
     <string name="perm_log">Leitura do log</string>
     <string name="perm_overlay">Sobrepor a outros apps</string>
     <string name="perm_battery">Bateria sem restrições</string>
@@ -61,7 +61,7 @@
     <string name="diag_requested">Abertura solicitada</string>
     <string name="channel_listen">Escuta da tecla lateral</string>
     <string name="setup_waiting_title">Configuração: aguardando a tela de pareamento</string>
-    <string name="setup_waiting_text">Nas Opções do desenvolvedor, ative a Depuração por Wi-Fi e toque em \"Parear o dispositivo com um código de pareamento\"</string>
+    <string name="setup_waiting_text">Nas Opções de desenvolvedor, ative a Depuração por Wi-Fi e toque em \"Parear o dispositivo com um código de pareamento\"</string>
     <string name="setup_pairing">Pareando…</string>
     <string name="setup_wait">Aguarde</string>
     <string name="setup_code_title">Digite o código de pareamento aqui</string>
@@ -109,15 +109,15 @@
     <string name="target_none">Nada escolhido ainda</string>
     <string-array name="steps_log_auto">
         <item>Conecte o telefone ao seu Wi-Fi.</item>
-        <item>Se as Opções do desenvolvedor estiverem ocultas: Configurações › Sobre o telefone › Versão, toque 7 vezes no número da versão.</item>
-        <item>Nas Opções do desenvolvedor, ative \"Disable system optimisation\" (ColorOS).</item>
+        <item>Se as Opções de desenvolvedor estiverem ocultas: Configurações › Sobre o telefone › Versão, toque 7 vezes no número da versão.</item>
+        <item>Nas Opções de desenvolvedor, ative \"Disable system optimisation\" (ColorOS).</item>
         <item>Toque em \"Configurar a leitura do log automaticamente\" abaixo.</item>
         <item>Ative a Depuração por Wi-Fi e toque em \"Parear o dispositivo com um código de pareamento\".</item>
         <item>Puxe as notificações para baixo e digite os 6 dígitos na notificação do SnapKey Mapper.</item>
     </string-array>
     <string-array name="steps_log_computer">
         <item>No computador, instale as platform-tools do Android (adb).</item>
-        <item>Nas Opções do desenvolvedor, ative a Depuração USB e \"Disable system optimisation\" (ColorOS), e conecte o telefone com um cabo.</item>
+        <item>Nas Opções de desenvolvedor, ative a Depuração USB e \"Disable system optimisation\" (ColorOS), e conecte o telefone com um cabo.</item>
         <item>Execute o comando abaixo no computador.</item>
     </string-array>
     <string-array name="steps_overlay">
@@ -145,24 +145,24 @@
     <string name="wiz_wifi_title">Conecte-se ao Wi-Fi</string>
     <string name="wiz_wifi_text">O app concede a si mesmo a permissão do log pela depuração por Wi-Fi do telefone, que só funciona com Wi-Fi. Conecte o telefone e volte aqui.</string>
     <string name="wiz_wifi_btn">Abrir o Wi-Fi</string>
-    <string name="wiz_dev_title">Ative as Opções do desenvolvedor</string>
+    <string name="wiz_dev_title">Ative as Opções de desenvolvedor</string>
     <string name="wiz_dev_text">Toque no botão e depois toque 7 vezes no número da versão (no ColorOS: Versão). O Android avisa que você é um desenvolvedor. Volte aqui.</string>
     <string name="wiz_dev_btn">Abrir Sobre o telefone</string>
     <string name="wiz_pair_title">Pareie o app com o seu telefone</string>
-    <string name="wiz_pair_text">1. Toque no botão: a depuração sem fio abre (se abrir a lista de Opções do desenvolvedor, toque no texto \"Depuração sem fio\", não no interruptor).\n2. Ative \"Usar depuração sem fio\" e permita sua rede.\n3. Toque em \"Parear dispositivo com código de pareamento\".\n4. Uma notificação do SnapKey Mapper aparece: toque na seta para expandi-la, toque em \"Digitar código\" e digite os 6 dígitos. É só isso, o app faz o resto.</string>
+    <string name="wiz_pair_text">1. Toque no botão: a Depuração por Wi-Fi abre (se abrir a lista de Opções de desenvolvedor, toque no texto \"Depuração por Wi-Fi\", não no interruptor).\n2. Ative e permita sua rede.\n3. Toque em \"Parear o dispositivo com um código de pareamento\".\n4. Uma notificação do SnapKey Mapper aparece: toque na seta para expandi-la, toque em \"Digitar código\" e digite os 6 dígitos. É só isso, o app faz o resto.</string>
     <string name="wiz_sysopt_title">Primeiro um ajuste oculto do ColorOS</string>
     <string name="wiz_sysopt_text">O ColorOS bloqueia a permissão até um ajuste oculto ser ativado, e ele só aparece com o telefone em inglês.\n1. Mude o telefone para English (Idioma e região).\n2. Em Configurações, procure \"Disable system\" e ative \"Disable system optimisation\" (Turn on anyway).\n3. Volte aqui. Depois da instalação você pode restaurar seu idioma.</string>
     <string name="wiz_sysopt_btn">Abrir Idioma e região</string>
     <string name="wiz_sysopt_btn2">Abrir Configurações</string>
     <string name="wiz_sysopt_done">Feito, continuar</string>
     <string name="wiz_last">Última tentativa: %1$s</string>
-    <string name="wiz_computer_text">A edição lite não tem acesso à rede, então a permissão é dada a partir de um computador, uma única vez: ative a Depuração USB nas Opções do desenvolvedor, conecte o telefone com um cabo e execute este comando.</string>
+    <string name="wiz_computer_text">A edição lite não tem acesso à rede, então a permissão é dada a partir de um computador, uma única vez: ative a Depuração USB nas Opções de desenvolvedor, conecte o telefone com um cabo e execute este comando.</string>
     <string name="wiz_overlay_text">Permite que a tecla abra o seu destino mesmo com a tela desligada ou com outro app na frente. Toque no botão, depois em SnapKey Mapper na lista, e ative a chave.</string>
     <string name="wiz_restricted">Chave cinza ou \"acesso negado\"? O Android bloqueia isso em apps instalados fora da Play Store: abra as configurações do app, toque em ⋮ no canto superior direito, depois em \"Permitir configurações restritas\", e volte.</string>
     <string name="wiz_battery_text">Para o Android não encerrar o app em segundo plano. Toque no botão e confirme. No ColorOS, bloqueie também o app nos apps recentes.</string>
     <string name="wiz_native_text">Para o telefone não executar ao mesmo tempo a própria ação da Snap Key: nas configurações do telefone, pesquise \"Snap Key\" e defina como nenhuma ação.</string>
     <string name="wiz_done_title">Tudo pronto</string>
-    <string name="wiz_done_text">Tudo pronto. A tecla é monitorada automaticamente. Você pode desligar a depuração sem fio. Escolha o que a tecla abre.</string>
+    <string name="wiz_done_text">Tudo pronto. A tecla é monitorada automaticamente. Você pode desligar a Depuração por Wi-Fi. Escolha o que a tecla abre.</string>
     <string name="wiz_done_btn">Continuar</string>
     <string name="home_setup_title">Configurar o SnapKey Mapper</string>
     <string name="home_setup_text">Alguns passos, uma única vez. O app abre cada configuração para você e a verifica.</string>

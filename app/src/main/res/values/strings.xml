@@ -149,7 +149,7 @@
     <string name="wiz_dev_text">Tap the button, then tap the build number 7 times (on ColorOS: Version). Android says you are a developer. Come back here.</string>
     <string name="wiz_dev_btn">Open About phone</string>
     <string name="wiz_pair_title">Pair the app with your phone</string>
-    <string name="wiz_pair_text">1. Tap the button: Wireless debugging opens (if the Developer options list opens instead, tap the text \"Wireless debugging\", not the switch).\n2. Turn on \"Use wireless debugging\" and allow your network.\n3. Tap \"Pair device with pairing code\".\n4. A SnapKey Mapper notification drops down: tap its arrow to unfold it, tap \"Enter code\" and type the 6 digits. That is all, the app does the rest.</string>
+    <string name="wiz_pair_text">1. Tap the button: Wireless debugging opens (if the Developer options list opens instead, tap the text \"Wireless debugging\", not the switch).\n2. Turn it on and allow your network.\n3. Tap \"Pair device with pairing code\".\n4. A SnapKey Mapper notification drops down: tap its arrow to unfold it, tap \"Enter code\" and type the 6 digits. That is all, the app does the rest.</string>
     <string name="wiz_sysopt_title">One hidden ColorOS switch first</string>
     <string name="wiz_sysopt_text">ColorOS blocks the permission until a hidden switch is on, and it only shows when the phone is in English.\n1. Switch the phone to English (Language &amp; region).\n2. In Settings, search \"Disable system\" and turn on \"Disable system optimisation\" (Turn on anyway).\n3. Come back here. After the setup you can put your language back.</string>
     <string name="wiz_sysopt_btn">Open Language &amp; region</string>

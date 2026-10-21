@@ -16,7 +16,7 @@
     <string name="perm_title">Berechtigungen</string>
     <string name="perm_sub">Drei Schalter, einmalig. Die Taste selbst braucht sonst nichts.</string>
     <string name="perm_auto_btn">Debugging über WLAN öffnen</string>
-    <string name="perm_auto_help">Verbinde dich mit deinem WLAN, tipp auf die Schaltfläche, schalte dann in den Entwickleroptionen Debugging über WLAN ein, tipp auf „Gerät über einen Kopplungscode koppeln“ und gib die 6 Ziffern in der Benachrichtigung ein. Schalte unter ColorOS vorher „Disable system optimisation“ ein.</string>
+    <string name="perm_auto_help">Verbinde dich mit deinem WLAN, tipp auf die Schaltfläche, schalte dann in den Entwickler-Optionen Debugging über WLAN ein, tipp auf „Gerät über einen Kopplungscode koppeln“ und gib die 6 Ziffern in der Benachrichtigung ein. Schalte unter ColorOS vorher „Disable system optimisation“ ein.</string>
     <string name="perm_log">Log-Zugriff</string>
     <string name="perm_overlay">Über anderen Apps einblenden</string>
     <string name="perm_battery">Akku ohne Einschränkung</string>
@@ -61,7 +61,7 @@
     <string name="diag_requested">Start angefordert</string>
     <string name="channel_listen">Seitentasten-Erkennung</string>
     <string name="setup_waiting_title">Einrichtung: Warte auf den Kopplungsbildschirm</string>
-    <string name="setup_waiting_text">Schalte in den Entwickleroptionen Debugging über WLAN ein und tipp auf „Gerät über einen Kopplungscode koppeln“</string>
+    <string name="setup_waiting_text">Schalte in den Entwickler-Optionen Debugging über WLAN ein und tipp auf „Gerät über einen Kopplungscode koppeln“</string>
     <string name="setup_pairing">Kopplung läuft…</string>
     <string name="setup_wait">Bitte warten</string>
     <string name="setup_code_title">Gib hier den Kopplungscode ein</string>
@@ -109,20 +109,20 @@
     <string name="target_none">Noch nichts ausgewählt</string>
     <string-array name="steps_log_auto">
         <item>Verbinde das Telefon mit deinem WLAN.</item>
-        <item>Falls die Entwickleroptionen versteckt sind: Einstellungen › Über das Telefon › Version, tipp 7-mal auf die Build-Nummer.</item>
-        <item>Schalte in den Entwickleroptionen „Disable system optimisation“ ein (ColorOS).</item>
+        <item>Falls die Entwickler-Optionen versteckt sind: Einstellungen › Über das Telefon › Version, tipp 7-mal auf die Build-Nummer.</item>
+        <item>Schalte in den Entwickler-Optionen „Disable system optimisation“ ein (ColorOS).</item>
         <item>Tipp unten auf „Log-Zugriff automatisch einrichten“.</item>
         <item>Schalte Debugging über WLAN ein und tipp dann auf „Gerät über einen Kopplungscode koppeln“.</item>
         <item>Zieh die Benachrichtigungen herunter und gib die 6 Ziffern in der Benachrichtigung von SnapKey Mapper ein.</item>
     </string-array>
     <string-array name="steps_log_computer">
         <item>Installier auf einem Computer die Android-Platform-Tools (adb).</item>
-        <item>Schalte in den Entwickleroptionen USB-Debugging und „Disable system optimisation“ (ColorOS) ein und verbinde das Telefon per Kabel.</item>
+        <item>Schalte in den Entwickler-Optionen USB-Debugging und „Disable system optimisation“ (ColorOS) ein und verbinde das Telefon per Kabel.</item>
         <item>Führ den Befehl unten auf dem Computer aus.</item>
     </string-array>
     <string-array name="steps_overlay">
         <item>Tipp auf „Einstellung öffnen“ und schalte den Schalter ein.</item>
-        <item>Ist der Schalter grau oder verweigert Android den Zugriff: Tipp auf „App-Einstellungen öffnen“, dann oben rechts auf ⋮ › „Eingeschränkte Einstellungen zulassen“ und komm danach hierher zurück.</item>
+        <item>Ist der Schalter grau oder verweigert Android den Zugriff: Tipp auf „App-Einstellungen öffnen“, dann oben rechts auf ⋮ › „Eingeschränkte Berechtigungen erlauben“ und komm danach hierher zurück.</item>
     </string-array>
     <string-array name="steps_battery">
         <item>Tipp auf „Erlauben“ und bestätige.</item>
@@ -145,24 +145,24 @@
     <string name="wiz_wifi_title">Mit dem WLAN verbinden</string>
     <string name="wiz_wifi_text">Die App erteilt sich die Log-Berechtigung selbst über das Debugging über WLAN des Telefons, das nur im WLAN funktioniert. Verbinde das Telefon und komm dann hierher zurück.</string>
     <string name="wiz_wifi_btn">WLAN öffnen</string>
-    <string name="wiz_dev_title">Entwickleroptionen einschalten</string>
+    <string name="wiz_dev_title">Entwickler-Optionen einschalten</string>
     <string name="wiz_dev_text">Tipp auf die Schaltfläche und tipp dann 7-mal auf die Build-Nummer (unter ColorOS: Version). Android meldet, dass du jetzt Entwickler bist. Komm hierher zurück.</string>
     <string name="wiz_dev_btn">Über das Telefon öffnen</string>
     <string name="wiz_pair_title">App mit deinem Telefon koppeln</string>
-    <string name="wiz_pair_text">1. Tippe auf die Schaltfläche: Das WLAN-Debugging öffnet sich (öffnet sich stattdessen die Liste der Entwickleroptionen, tippe auf den Text \"WLAN-Debugging\", nicht auf den Schalter).\n2. Schalte \"WLAN-Debugging verwenden\" ein und erlaube dein Netzwerk.\n3. Tippe auf \"Gerät per Kopplungscode koppeln\".\n4. Eine Benachrichtigung von SnapKey Mapper erscheint: Tippe auf ihren Pfeil, um sie aufzuklappen, tippe auf \"Code eingeben\" und gib die 6 Ziffern ein. Mehr nicht, die App erledigt den Rest.</string>
+    <string name="wiz_pair_text">1. Tippe auf die Schaltfläche: Das Debugging über WLAN öffnet sich (öffnet sich stattdessen die Liste der Entwickler-Optionen, tippe auf den Text \"Debugging über WLAN\", nicht auf den Schalter).\n2. Schalte es ein und erlaube dein Netzwerk.\n3. Tippe auf \"Gerät über einen Kopplungscode koppeln\".\n4. Eine Benachrichtigung von SnapKey Mapper erscheint: Tippe auf ihren Pfeil, um sie aufzuklappen, tippe auf \"Code eingeben\" und gib die 6 Ziffern ein. Mehr nicht, die App erledigt den Rest.</string>
     <string name="wiz_sysopt_title">Zuerst eine versteckte ColorOS-Einstellung</string>
     <string name="wiz_sysopt_text">ColorOS blockiert die Berechtigung, bis eine versteckte Einstellung aktiv ist; sie erscheint nur, wenn das Telefon auf Englisch steht.\n1. Stelle das Telefon auf English (Sprache &amp; Region).\n2. Suche in den Einstellungen \"Disable system\" und aktiviere \"Disable system optimisation\" (Turn on anyway).\n3. Komm hierher zurück. Nach der Einrichtung kannst du deine Sprache zurückstellen.</string>
     <string name="wiz_sysopt_btn">Sprache &amp; Region öffnen</string>
     <string name="wiz_sysopt_btn2">Einstellungen öffnen</string>
     <string name="wiz_sysopt_done">Erledigt, weiter</string>
     <string name="wiz_last">Letzter Versuch: %1$s</string>
-    <string name="wiz_computer_text">Die Lite-Edition hat keinen Netzwerkzugriff, deshalb wird die Berechtigung einmalig von einem Computer aus erteilt: Schalte in den Entwickleroptionen USB-Debugging ein, verbinde das Telefon per Kabel und führ diesen Befehl aus.</string>
+    <string name="wiz_computer_text">Die Lite-Edition hat keinen Netzwerkzugriff, deshalb wird die Berechtigung einmalig von einem Computer aus erteilt: Schalte in den Entwickler-Optionen USB-Debugging ein, verbinde das Telefon per Kabel und führ diesen Befehl aus.</string>
     <string name="wiz_overlay_text">Damit die Taste dein Ziel auch bei ausgeschaltetem Bildschirm oder über einer anderen App öffnet. Tippe auf die Schaltfläche, dann in der Liste auf SnapKey Mapper, und schalte den Schalter ein.</string>
-    <string name="wiz_restricted">Schalter ausgegraut oder „Zugriff verweigert“? Android sperrt ihn bei Apps, die nicht aus dem Play Store stammen: Öffne die App-Einstellungen, tipp oben rechts auf ⋮, dann auf „Eingeschränkte Einstellungen zulassen“ und komm zurück.</string>
+    <string name="wiz_restricted">Schalter ausgegraut oder „Zugriff verweigert“? Android sperrt ihn bei Apps, die nicht aus dem Play Store stammen: Öffne die App-Einstellungen, tipp oben rechts auf ⋮, dann auf „Eingeschränkte Berechtigungen erlauben“ und komm zurück.</string>
     <string name="wiz_battery_text">Damit Android die App nicht im Hintergrund beendet. Tipp auf die Schaltfläche und bestätige. Fixiere die App unter ColorOS außerdem in den zuletzt verwendeten Apps.</string>
     <string name="wiz_native_text">Damit das Telefon nicht gleichzeitig seine eigene Snap-Key-Aktion ausführt: Such in den Telefoneinstellungen nach „Snap Key“ und stell sie auf keine Aktion.</string>
     <string name="wiz_done_title">Alles bereit</string>
-    <string name="wiz_done_text">Fertig. Die Taste wird automatisch überwacht. Du kannst das WLAN-Debugging ausschalten. Wähle, was die Taste öffnet.</string>
+    <string name="wiz_done_text">Fertig. Die Taste wird automatisch überwacht. Du kannst das Debugging über WLAN ausschalten. Wähle, was die Taste öffnet.</string>
     <string name="wiz_done_btn">Weiter</string>
     <string name="home_setup_title">SnapKey Mapper einrichten</string>
     <string name="home_setup_text">Ein paar Schritte, einmalig. Die App öffnet jede Einstellung für dich und prüft sie.</string>

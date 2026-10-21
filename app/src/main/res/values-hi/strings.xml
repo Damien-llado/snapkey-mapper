@@ -15,10 +15,10 @@
     <string name="btn_stop">सुनना बंद करें</string>
     <string name="perm_title">अनुमतियाँ</string>
     <string name="perm_sub">तीन स्विच, सिर्फ़ एक बार। बटन को और कुछ नहीं चाहिए।</string>
-    <string name="perm_auto_btn">वायरलेस डीबगिंग खोलें</string>
-    <string name="perm_auto_help">अपने Wi-Fi से जुड़ें, बटन पर टैप करें, फिर Developer options में वायरलेस डीबगिंग चालू करें, \"Pair device with pairing code\" पर टैप करें और नोटिफ़िकेशन में दिखे 6 अंक लिखें। ColorOS पर पहले \"Disable system optimisation\" चालू करें।</string>
+    <string name="perm_auto_btn">वॉयरलेस डीबगिंग खोलें</string>
+    <string name="perm_auto_help">अपने Wi-Fi से जुड़ें, बटन पर टैप करें, फिर विकासकर्ता विकल्प में वॉयरलेस डीबगिंग चालू करें, \"जोड़ने का कोड इस्तेमाल करके, डिवाइस जोड़ें\" पर टैप करें और नोटिफ़िकेशन में दिखे 6 अंक लिखें। ColorOS पर पहले \"Disable system optimisation\" चालू करें।</string>
     <string name="perm_log">लॉग पढ़ना</string>
-    <string name="perm_overlay">दूसरे ऐप के ऊपर दिखाएँ</string>
+    <string name="perm_overlay">दूसरे ऐप के ऊपर दिखाएं</string>
     <string name="perm_battery">बैटरी: कोई पाबंदी नहीं</string>
     <string name="perm_allow">अनुमति दें</string>
     <string name="perm_granted">मिल गई</string>
@@ -61,20 +61,20 @@
     <string name="diag_requested">लॉन्च का अनुरोध भेजा गया</string>
     <string name="channel_listen">साइड बटन लिसनर</string>
     <string name="setup_waiting_title">सेटअप: पेयरिंग स्क्रीन का इंतज़ार</string>
-    <string name="setup_waiting_text">Developer options में वायरलेस डीबगिंग चालू करें और \"Pair device with pairing code\" पर टैप करें</string>
+    <string name="setup_waiting_text">विकासकर्ता विकल्प में वॉयरलेस डीबगिंग चालू करें और \"जोड़ने का कोड इस्तेमाल करके, डिवाइस जोड़ें\" पर टैप करें</string>
     <string name="setup_pairing">पेयर हो रहा है…</string>
     <string name="setup_wait">कृपया इंतज़ार करें</string>
     <string name="setup_code_title">पेयरिंग कोड यहाँ लिखें</string>
     <string name="setup_code_text">नोटिफ़िकेशन नीचे खींचें और Android के दिखाए 6 अंक लिखें</string>
-    <string name="setup_fail_connect">वायरलेस डीबगिंग से कनेक्ट नहीं हो सका</string>
+    <string name="setup_fail_connect">वॉयरलेस डीबगिंग से कनेक्ट नहीं हो सका</string>
     <string name="setup_refused">ColorOS ने मना किया: फ़ोन को अंग्रेज़ी में करें, \"Disable system optimisation\" चालू करें (सेटिंग्स की खोज), फिर दोबारा कोशिश करें</string>
     <string name="setup_notif_title">SnapKey Mapper सेटअप</string>
     <string name="setup_channel">सेटअप</string>
     <string name="setup_enter_code">कोड डालें</string>
     <string name="setup_code_label">6 अंकों का कोड</string>
-    <string name="setup_done">लॉग पढ़ने की अनुमति सेट हो गई। अब आप वायरलेस डीबगिंग बंद कर सकते हैं।</string>
+    <string name="setup_done">लॉग पढ़ने की अनुमति सेट हो गई। अब आप वॉयरलेस डीबगिंग बंद कर सकते हैं।</string>
     <string name="err_invalid_intent">गलत intent लिंक</string>
-    <string name="setup_fail_pair">पेयरिंग विफल रही। ऐप का सेटअप बटन फिर से टैप करें, फिर “Pair device with pairing code” और नया कोड लिखें। फिर भी न हो, तो वायरलेस डीबगिंग बंद करके फिर चालू करें।</string>
+    <string name="setup_fail_pair">पेयरिंग विफल रही। ऐप का सेटअप बटन फिर से टैप करें, फिर “जोड़ने का कोड इस्तेमाल करके, डिवाइस जोड़ें” और नया कोड लिखें। फिर भी न हो, तो वॉयरलेस डीबगिंग बंद करके फिर चालू करें।</string>
     <string name="lang_title">भाषा</string>
     <string name="library_open">शॉर्टकट लाइब्रेरी देखें</string>
     <string name="library_title">शॉर्टकट लाइब्रेरी</string>
@@ -109,20 +109,20 @@
     <string name="target_none">अभी कुछ चुना नहीं गया</string>
     <string-array name="steps_log_auto">
         <item>फ़ोन को अपने Wi-Fi से जोड़ें।</item>
-        <item>अगर Developer options छिपे हैं: सेटिंग › फ़ोन के बारे में › वर्शन, बिल्ड नंबर पर 7 बार टैप करें।</item>
-        <item>Developer options में \"Disable system optimisation\" चालू करें (ColorOS)।</item>
+        <item>अगर विकासकर्ता विकल्प छिपे हैं: सेटिंग › फ़ोन के बारे में › वर्शन, बिल्ड नंबर पर 7 बार टैप करें।</item>
+        <item>विकासकर्ता विकल्प में \"Disable system optimisation\" चालू करें (ColorOS)।</item>
         <item>नीचे \"लॉग पढ़ने की अनुमति अपने आप सेट करें\" पर टैप करें।</item>
-        <item>वायरलेस डीबगिंग चालू करें, फिर \"Pair device with pairing code\" पर टैप करें।</item>
+        <item>वॉयरलेस डीबगिंग चालू करें, फिर \"जोड़ने का कोड इस्तेमाल करके, डिवाइस जोड़ें\" पर टैप करें।</item>
         <item>नोटिफ़िकेशन नीचे खींचें और SnapKey Mapper के नोटिफ़िकेशन में 6 अंक लिखें।</item>
     </string-array>
     <string-array name="steps_log_computer">
         <item>कंप्यूटर पर Android platform-tools (adb) इंस्टॉल करें।</item>
-        <item>Developer options में USB डीबगिंग और \"Disable system optimisation\" (ColorOS) चालू करें, फिर फ़ोन को केबल से जोड़ें।</item>
+        <item>विकासकर्ता विकल्प में USB डीबगिंग और \"Disable system optimisation\" (ColorOS) चालू करें, फिर फ़ोन को केबल से जोड़ें।</item>
         <item>कंप्यूटर पर नीचे दी गई कमांड चलाएँ।</item>
     </string-array>
     <string-array name="steps_overlay">
         <item>\"सेटिंग खोलें\" पर टैप करें और स्विच चालू करें।</item>
-        <item>अगर स्विच ग्रे है या Android कहे कि एक्सेस नहीं मिला: \"ऐप की सेटिंग खोलें\" पर टैप करें, फिर ऊपर दाईं ओर ⋮ › \"प्रतिबंधित सेटिंग की अनुमति दें\", फिर यहाँ लौट आएँ।</item>
+        <item>अगर स्विच ग्रे है या Android कहे कि एक्सेस नहीं मिला: \"ऐप की सेटिंग खोलें\" पर टैप करें, फिर ऊपर दाईं ओर ⋮ › \"पाबंदी वाली सेटिंग को अनुमति दें\", फिर यहाँ लौट आएँ।</item>
     </string-array>
     <string-array name="steps_battery">
         <item>\"अनुमति दें\" पर टैप करें और पुष्टि करें।</item>
@@ -140,29 +140,29 @@
         <item>नीचे की सूची में वह लाइन टैप करें जो हर दबाव पर लौटी: वही पैटर्न बन जाती है।</item>
         <item>होम पर लौटें, सुनना शुरू करें और जाँचने के लिए बटन दबाएँ।</item>
     </string-array>
-    <string name="recipe_help">आपके फ़ोन पर काम नहीं कर रहा? कंप्यूटर पर SnapKey Mapper प्लगइन के साथ Claude Code से पूछें: वह काम करने वाला लिंक ढूँढता है और उसे आपके फ़ोन पर टेस्ट करता है, जो USB केबल या वायरलेस डीबगिंग से जुड़ा हो।</string>
+    <string name="recipe_help">आपके फ़ोन पर काम नहीं कर रहा? कंप्यूटर पर SnapKey Mapper प्लगइन के साथ Claude Code से पूछें: वह काम करने वाला लिंक ढूँढता है और उसे आपके फ़ोन पर टेस्ट करता है, जो USB केबल या वॉयरलेस डीबगिंग से जुड़ा हो।</string>
     <string name="setup_progress">चरण %1$d / %2$d</string>
     <string name="wiz_wifi_title">Wi-Fi से जुड़ें</string>
-    <string name="wiz_wifi_text">ऐप फ़ोन की वायरलेस डीबगिंग से खुद को लॉग की अनुमति देता है, जो सिर्फ़ Wi-Fi पर चलती है। फ़ोन को जोड़ें, फिर यहाँ लौट आएँ।</string>
+    <string name="wiz_wifi_text">ऐप फ़ोन की वॉयरलेस डीबगिंग से खुद को लॉग की अनुमति देता है, जो सिर्फ़ Wi-Fi पर चलती है। फ़ोन को जोड़ें, फिर यहाँ लौट आएँ।</string>
     <string name="wiz_wifi_btn">Wi-Fi खोलें</string>
-    <string name="wiz_dev_title">Developer options चालू करें</string>
+    <string name="wiz_dev_title">विकासकर्ता विकल्प चालू करें</string>
     <string name="wiz_dev_text">बटन पर टैप करें, फिर बिल्ड नंबर पर 7 बार टैप करें (ColorOS पर: वर्शन)। Android बताएगा कि आप डेवलपर हैं। यहाँ लौट आएँ।</string>
     <string name="wiz_dev_btn">फ़ोन के बारे में खोलें</string>
     <string name="wiz_pair_title">ऐप को अपने फ़ोन से पेयर करें</string>
-    <string name="wiz_pair_text">1. बटन दबाएं: वायरलेस डीबगिंग खुलती है (अगर डेवलपर विकल्पों की सूची खुले, तो स्विच नहीं, \"वायरलेस डीबगिंग\" के टेक्स्ट को दबाएं)।\n2. \"वायरलेस डीबगिंग का उपयोग करें\" चालू करें और अपने नेटवर्क को अनुमति दें।\n3. \"पेयरिंग कोड से डिवाइस जोड़ें\" दबाएं।\n4. SnapKey Mapper की एक सूचना आएगी: उसका तीर दबाकर उसे खोलें, \"कोड डालें\" दबाएं और 6 अंक लिखें। बस इतना, बाकी ऐप करता है।</string>
+    <string name="wiz_pair_text">1. बटन दबाएं: वॉयरलेस डीबगिंग खुलती है (अगर विकासकर्ता विकल्प की सूची खुले, तो स्विच नहीं, \"वॉयरलेस डीबगिंग\" के टेक्स्ट को दबाएं)।\n2. इसे चालू करें और अपने नेटवर्क को अनुमति दें।\n3. \"जोड़ने का कोड इस्तेमाल करके, डिवाइस जोड़ें\" दबाएं।\n4. SnapKey Mapper की एक सूचना आएगी: उसका तीर दबाकर उसे खोलें, \"कोड डालें\" दबाएं और 6 अंक लिखें। बस इतना, बाकी ऐप करता है।</string>
     <string name="wiz_sysopt_title">पहले ColorOS की एक छिपी सेटिंग</string>
     <string name="wiz_sysopt_text">ColorOS अनुमति तब तक रोकता है जब तक एक छिपी सेटिंग चालू न हो; वह सिर्फ़ तब दिखती है जब फ़ोन अंग्रेज़ी में हो।\n1. फ़ोन को English में बदलें (भाषा और क्षेत्र)।\n2. सेटिंग्स में \"Disable system\" खोजें और \"Disable system optimisation\" चालू करें (Turn on anyway)।\n3. यहां लौटें। इंस्टॉल के बाद आप अपनी भाषा वापस रख सकते हैं।</string>
     <string name="wiz_sysopt_btn">भाषा और क्षेत्र खोलें</string>
     <string name="wiz_sysopt_btn2">सेटिंग्स खोलें</string>
     <string name="wiz_sysopt_done">हो गया, आगे बढ़ें</string>
     <string name="wiz_last">पिछली कोशिश: %1$s</string>
-    <string name="wiz_computer_text">लाइट संस्करण के पास नेटवर्क एक्सेस नहीं है, इसलिए अनुमति एक बार कंप्यूटर से दी जाती है: Developer options में USB डीबगिंग चालू करें, फ़ोन को केबल से जोड़ें और यह कमांड चलाएँ।</string>
+    <string name="wiz_computer_text">लाइट संस्करण के पास नेटवर्क एक्सेस नहीं है, इसलिए अनुमति एक बार कंप्यूटर से दी जाती है: विकासकर्ता विकल्प में USB डीबगिंग चालू करें, फ़ोन को केबल से जोड़ें और यह कमांड चलाएँ।</string>
     <string name="wiz_overlay_text">इससे बटन आपका टारगेट तब भी खोल पाता है जब स्क्रीन बंद हो या कोई दूसरा ऐप सामने हो। बटन दबाएँ, फिर सूची में SnapKey Mapper चुनें और स्विच चालू करें।</string>
-    <string name="wiz_restricted">स्विच ग्रे है, या \"access denied\" दिख रहा है? Android Play Store के बाहर से इंस्टॉल किए ऐप्स के लिए इसे रोकता है: ऐप की सेटिंग खोलें, ऊपर दाईं ओर ⋮ पर टैप करें, फिर \"प्रतिबंधित सेटिंग की अनुमति दें\", और लौट आएँ।</string>
+    <string name="wiz_restricted">स्विच ग्रे है, या \"access denied\" दिख रहा है? Android Play Store के बाहर से इंस्टॉल किए ऐप्स के लिए इसे रोकता है: ऐप की सेटिंग खोलें, ऊपर दाईं ओर ⋮ पर टैप करें, फिर \"पाबंदी वाली सेटिंग को अनुमति दें\", और लौट आएँ।</string>
     <string name="wiz_battery_text">ताकि Android ऐप को बैकग्राउंड में बंद न करे। बटन पर टैप करें और पुष्टि करें। ColorOS पर ऐप को हाल के ऐप्स में भी लॉक करें।</string>
     <string name="wiz_native_text">ताकि फ़ोन अपनी Snap Key कार्रवाई साथ-साथ न चलाए: फ़ोन की सेटिंग में \"Snap Key\" खोजें और उसे कोई कार्रवाई नहीं पर सेट करें।</string>
     <string name="wiz_done_title">सब तैयार है</string>
-    <string name="wiz_done_text">सब तैयार है। कुंजी अपने आप सुनी जाती है। आप वायरलेस डीबगिंग बंद कर सकते हैं। चुनें कि कुंजी क्या खोले।</string>
+    <string name="wiz_done_text">सब तैयार है। कुंजी अपने आप सुनी जाती है। आप वॉयरलेस डीबगिंग बंद कर सकते हैं। चुनें कि कुंजी क्या खोले।</string>
     <string name="wiz_done_btn">जारी रखें</string>
     <string name="home_setup_title">SnapKey Mapper सेट करें</string>
     <string name="home_setup_text">कुछ चरण, सिर्फ़ एक बार। ऐप हर सेटिंग आपके लिए खोलता है और उसे जाँचता है।</string>

@@ -128,7 +128,7 @@
           <span class="stars" aria-label="GitHub stars">★ <span data-stars>0</span></span>
         </a>
       </div>
-      <p class="meta">Version 1.0.7 · Android 11+ · about 12 MB · MIT · tested on Find X9 Pro, ColorOS 16</p>
+      <p class="meta">Version 1.0.8 · Android 11+ · about 12 MB · MIT · tested on Find X9 Pro, ColorOS 16</p>
     </div>
 
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
@@ -404,7 +404,7 @@
       </li>
       <li>
         <h3>Let the app grant itself the log permission</h3>
-        <p>On ColorOS, first open <em>Settings › Additional settings › Developer options</em> and turn on <strong>Disable system optimisation</strong> (on ColorOS 16 it may only show when the phone is in English: switch the language for a minute if you cannot find it). Then join your Wi-Fi and tap <strong>Set up log reading automatically</strong> in the app. In Developer options, turn on <strong>Wireless debugging</strong>, tap <strong>Pair device with pairing code</strong>, pull the notification down and type the 6 digits. When the notification says it is set up, turn Wireless debugging off.</p>
+        <p>On ColorOS, a permission stays blocked until a hidden switch is on, and that switch only shows when the phone is in English. First switch the phone to English (<em>Settings › System &amp; update › Language &amp; region</em>), then in Settings search <strong>Disable system</strong> and turn on <strong>Disable system optimisation</strong> (tap <strong>Turn on anyway</strong>). You can put your language back right after. Then join your Wi-Fi and tap <strong>Open Wireless debugging</strong> in the app. In <em>Settings › System &amp; update › Developer options</em>, tap the line <strong>Wireless debugging</strong> (the text, not the switch), turn it on, tap <strong>Pair device with pairing code</strong>, pull the notification down, unfold it, tap <strong>Enter code</strong> and type the 6 digits. When the notification says it is set up, turn Wireless debugging off.</p>
         <details class="more"><summary>With a computer, or the lite edition</summary><p>The lite edition has no internet permission and does not set itself up: run this from a computer, or from the phone with <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (Expert mode, <em>Shell command</em> action, ADB, then <em>Test</em>). You can turn <em>Disable system optimisation</em> back off afterwards: the permission stays.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
       </li>
       <li>

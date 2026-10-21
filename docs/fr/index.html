@@ -128,7 +128,7 @@
           <span class="stars" aria-label="Étoiles GitHub">★ <span data-stars>0</span></span>
         </a>
       </div>
-      <p class="meta">Version 1.0.7 · Android 11+ · environ 12 Mo · MIT · testé sur Find X9 Pro, ColorOS 16</p>
+      <p class="meta">Version 1.0.8 · Android 11+ · environ 12 Mo · MIT · testé sur Find X9 Pro, ColorOS 16</p>
     </div>
 
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
@@ -372,7 +372,7 @@
       <li><strong>« Installer des applis inconnues »</strong>. Android vous demande d’autoriser votre navigateur ou votre gestionnaire de fichiers à installer des applis. Autorisez, installez, puis désactivez de nouveau si vous voulez.</li>
       <li><strong>« Play Protect n’a jamais vu cette appli »</strong>. L’appli est nouvelle, Google propose donc de l’analyser. Touchez <em>Analyser l’appli</em> : cela prend quelques secondes.</li>
       <li><strong>« Appli dangereuse bloquée »</strong>. Google Play Protect peut afficher ce message et interrompre l’installation. C’est parce que l’appli vient de GitHub et non de Google Play, et qu’elle demande des autorisations sensibles (lire le journal système, s’afficher par-dessus les autres applis) à un développeur que Google n’a pas encore vérifié. Cela ne veut pas dire que l’appli est malveillante. Avant de continuer, vérifiez que le certificat de signature de l’APK a pour SHA-256 <code>a4a6d83d2298e8a88a6da748a3cc9ae9051e459a1d6e06b098a27d2b87f8f796</code> (avec AppVerifier, ou <code>apksigner verify --print-certs</code>). Si elle correspond, touchez <em>Installer quand même</em>.</li>
-      <li><strong>« Afficher par-dessus les autres applis » ne peut pas être activé</strong>. Android peut refuser cette autorisation tant que vous n’avez pas autorisé les paramètres restreints pour l’appli : <em>Infos sur l’appli › ⋮ › Autoriser les paramètres restreints</em>. Revenez ensuite l’accorder.</li>
+      <li><strong>« Superposition sur d’autres applis » ne peut pas être activé</strong>. Android peut refuser cette autorisation tant que vous n’avez pas autorisé les paramètres restreints pour l’appli : <em>Informations sur l’appli › ⋮ › Autoriser les paramètres restreints</em>. Revenez ensuite l’accorder.</li>
     </ol>
     <div class="cando">
       <div><h3>Ce qu’elle peut faire</h3><ul>
@@ -400,16 +400,16 @@
       </li>
       <li>
         <h3>Installez l’APK et autorisez les paramètres soumis à restriction</h3>
-        <p>Téléchargez l’APK et ouvrez-le. Android bloque certains réglages sensibles pour les applis installées hors du Play Store : allez dans <em>Paramètres › Applis › SnapKey Mapper</em>, touchez <strong>⋮</strong> puis <strong>Autoriser les paramètres soumis à restriction</strong>.</p>
+        <p>Téléchargez l’APK et ouvrez-le. Android bloque certains réglages sensibles pour les applis installées hors du Play Store : allez dans <em>Paramètres › Applis › SnapKey Mapper</em>, touchez <strong>⋮</strong> puis <strong>Autoriser les paramètres restreints</strong>.</p>
       </li>
       <li>
         <h3>Laissez l’appli s’accorder l’autorisation du journal</h3>
-        <p>Sur ColorOS, ouvrez d’abord <em>Paramètres › Paramètres supplémentaires › Options pour les développeurs</em> et activez <strong>« Disable system optimisation »</strong> (sur ColorOS 16, l’option n’apparaît parfois que si le téléphone est en anglais : changez la langue une minute si vous ne la trouvez pas). Connectez-vous ensuite au Wi-Fi et touchez <strong>Configurer la lecture du journal automatiquement</strong> dans l’appli. Dans les Options pour les développeurs, activez <strong>Débogage sans fil</strong>, touchez <strong>Associer l’appareil avec un code d’association</strong>, déroulez la notification et saisissez les 6 chiffres. Quand la notification indique que c’est configuré, désactivez le débogage sans fil.</p>
+        <p>Sur ColorOS, une permission reste bloquée tant qu’un réglage caché n’est pas activé, et ce réglage n’apparaît que si le téléphone est en anglais. Passez d’abord le téléphone en English (<em>Paramètres › Système et mise à jour › Langue et région</em>), puis cherchez <strong>Disable system</strong> dans les Paramètres et activez <strong>Disable system optimisation</strong> (touchez <strong>Turn on anyway</strong>). Vous pourrez remettre votre langue juste après. Connectez-vous ensuite au Wi-Fi et touchez <strong>Ouvrir le débogage sans fil</strong> dans l’appli. Dans <em>Paramètres › Système et mise à jour › Options pour les développeurs</em>, touchez la ligne <strong>Débogage sans fil</strong> (le texte, pas l’interrupteur), activez-le, touchez <strong>Associer l’appareil avec un code d’association</strong>, descendez la notification, dépliez-la, touchez <strong>Saisir le code</strong> et tapez les 6 chiffres. Quand la notification dit que c’est configuré, désactivez le débogage sans fil.</p>
         <details class="more"><summary>Avec un ordinateur, ou l’édition lite</summary><p>L’édition lite n’a aucune autorisation Internet et ne se configure pas seule : lancez cette commande depuis un ordinateur, ou depuis le téléphone avec <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (mode Expert, action <em>Shell command</em>, ADB, puis <em>Test</em>). Vous pouvez ensuite désactiver <em>« Disable system optimisation »</em> : l’autorisation reste.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
       </li>
       <li>
         <h3>Autorisez la superposition et la batterie</h3>
-        <p>Dans SnapKey Mapper, touchez <strong>Afficher par-dessus les autres applis</strong> (c’est ce qui permet à Android d’ouvrir votre appli en arrière-plan) et <strong>Batterie : sans restriction</strong>. Sur ColorOS, réglez aussi l’utilisation de la batterie de l’appli sur <em>Aucune restriction</em> et verrouillez SnapKey Mapper dans les applis récentes.</p>
+        <p>Dans SnapKey Mapper, touchez <strong>Superposition sur d’autres applis</strong> (c’est ce qui permet à Android d’ouvrir votre appli en arrière-plan) et <strong>Batterie : sans restriction</strong>. Sur ColorOS, réglez aussi l’utilisation de la batterie de l’appli sur <em>Aucune restriction</em> et verrouillez SnapKey Mapper dans les applis récentes.</p>
       </li>
       <li>
         <h3>Choisissez ce que la Snap Key ouvre</h3>
@@ -417,7 +417,7 @@
       </li>
       <li>
         <h3>Écoute automatique</h3>
-        <p>Dès que quelque chose est choisi, SnapKey Mapper écoute, sans rien à démarrer. Android 13 et plus demande « Autoriser l’accès à tous les journaux de l’appareil ? » : choisissez <strong>Autoriser l’accès unique</strong>. Cet accès dure tant que l’écoute tourne, vous ne le revoyez donc qu’après un redémarrage (touchez la notification « SnapKey Mapper est arrêté »). Vous pouvez maintenant désactiver le débogage sans fil.</p>
+        <p>Dès que quelque chose est choisi, SnapKey Mapper écoute, sans rien à démarrer. Android 13 et plus demande « Autoriser l’accès à tous les journaux de l’appareil ? » : choisissez <strong>Autoriser un accès ponctuel</strong>. Cet accès dure tant que l’écoute tourne, vous ne le revoyez donc qu’après un redémarrage (touchez la notification « SnapKey Mapper est arrêté »). Vous pouvez maintenant désactiver le débogage sans fil.</p>
       </li>
     </ol>
     <p class="note"><strong>Conseil de sécurité.</strong> Une fois fini, désactivez le débogage sans fil dans les Options pour les développeurs. SnapKey Mapper n’en a pas besoin, et il supprime sa propre clé d’association juste après l’installation. Retirez ensuite SnapKey Mapper de Débogage sans fil › Appareils associés. Ne faites la configuration que sur un réseau Wi-Fi de confiance.</p>
@@ -458,7 +458,7 @@
 
     <details><summary>Pourquoi Android redemande-t-il l’accès au journal ?</summary><div><p>Depuis Android 13, chaque nouvelle session de lecture du journal demande votre accord, et seulement quand l’appli est à l’écran. SnapKey Mapper garde une session ouverte : vous ne répondez de nouveau qu’après un redémarrage, ou si le système arrête l’appli.</p></div></details>
 
-    <details><summary>La Snap Key ne marche plus après un redémarrage</summary><div><p>Touchez la notification « SnapKey Mapper est arrêté », puis « Autoriser l’accès unique ». Vérifiez aussi que l’utilisation de la batterie est réglée sur Aucune restriction et que l’appli est verrouillée dans les applis récentes.</p></div></details>
+    <details><summary>La Snap Key ne marche plus après un redémarrage</summary><div><p>Touchez la notification « SnapKey Mapper est arrêté », puis « Autoriser un accès ponctuel ». Vérifiez aussi que l’utilisation de la batterie est réglée sur Aucune restriction et que l’appli est verrouillée dans les applis récentes.</p></div></details>
 
     <details><summary>Comment trouver le nom de ma touche sur un autre téléphone ?</summary><div><p>Ouvrez SnapKey Mapper, touchez <em>Lancer la capture</em>, appuyez deux ou trois fois sur votre touche, arrêtez, puis enregistrez la capture. Cherchez une ligne qui apparaît une fois par appui, avec un nom <code>KEYCODE_…</code>. Sur le Find X9 Pro, c’est <code>KEYCODE_ACTION_BUTTON_CLICK</code> (scan code 735).</p></div></details>
 

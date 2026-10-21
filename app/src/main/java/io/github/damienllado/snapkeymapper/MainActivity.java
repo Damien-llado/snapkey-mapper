@@ -232,8 +232,8 @@ public class MainActivity extends Activity {
         new AlertDialog.Builder(this).setTitle(R.string.target_link_enter).setMessage(R.string.target_link_help).setView(box)
                 .setPositiveButton(android.R.string.ok, (d, w) -> {
                     Prefs.save(this, field.getText().toString().trim(), Prefs.pattern(this));
-                    listenIfReady();
                     Prefs.targetType(this, "link");
+                    listenIfReady();
                     refresh();
                 }).setNegativeButton(android.R.string.cancel, null).show();
     }

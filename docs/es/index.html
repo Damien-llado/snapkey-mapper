@@ -128,7 +128,7 @@
           <span class="stars" aria-label="Estrellas en GitHub">★ <span data-stars>0</span></span>
         </a>
       </div>
-      <p class="meta">Versión 1.0.7 · Android 11+ · unos 12 MB · MIT · probado en Find X9 Pro, ColorOS 16</p>
+      <p class="meta">Versión 1.0.8 · Android 11+ · unos 12 MB · MIT · probado en Find X9 Pro, ColorOS 16</p>
     </div>
 
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
@@ -372,7 +372,7 @@
       <li><strong>«Instalar aplicaciones desconocidas»</strong>. Android te pide que permitas a tu navegador o a tu gestor de archivos instalar apps. Permítelo, instala y, si quieres, vuelve a desactivarlo.</li>
       <li><strong>«Play Protect no ha analizado esta aplicación antes»</strong>. La app es nueva, así que Google te ofrece analizarla. Toca <em>Analizar app</em>: tarda unos segundos.</li>
       <li><strong>«Aplicación peligrosa bloqueada»</strong>. Google Play Protect puede mostrar este mensaje y detener la instalación. Ocurre porque la app viene de GitHub y no de Google Play, y pide permisos sensibles (leer el registro del sistema, mostrarse sobre otras apps) a un desarrollador que Google aún no ha verificado. No significa que la app sea maliciosa. Antes de seguir, comprueba que el certificado de firma del APK tiene el SHA-256 <code>a4a6d83d2298e8a88a6da748a3cc9ae9051e459a1d6e06b098a27d2b87f8f796</code> (con AppVerifier, o <code>apksigner verify --print-certs</code>). Si coincide, toca <em>Instalar de todos modos</em>.</li>
-      <li><strong>«Mostrar sobre otras apps» no se puede activar</strong>. Android puede rechazar este permiso hasta que permitas los ajustes restringidos de la app: <em>Información de la app › ⋮ › Permitir ajustes restringidos</em>. Después vuelve y concédelo.</li>
+      <li><strong>«Mostrar sobre otras aplicaciones» no se puede activar</strong>. Android puede rechazar este permiso hasta que permitas los ajustes restringidos de la app: <em>Información de la app › ⋮ › Permitir ajustes restringidos</em>. Después vuelve y concédelo.</li>
     </ol>
     <div class="cando">
       <div><h3>Lo que puede hacer</h3><ul>
@@ -404,7 +404,7 @@
       </li>
       <li>
         <h3>Deja que la app se dé a sí misma el permiso del registro</h3>
-        <p>En ColorOS, abre primero <em>Ajustes › Ajustes adicionales › Opciones para desarrolladores</em> y activa <strong>«Disable system optimisation»</strong> (en ColorOS 16 puede que solo aparezca con el móvil en inglés: cambia el idioma un minuto si no lo encuentras). Después conéctate a tu Wi-Fi y toca <strong>Configurar la lectura del registro automáticamente</strong> en la app. En Opciones para desarrolladores, activa <strong>Depuración inalámbrica</strong>, toca <strong>Vincular dispositivo con código de sincronización</strong>, baja la notificación y escribe los 6 dígitos. Cuando la notificación diga que está configurado, desactiva la depuración inalámbrica.</p>
+        <p>En ColorOS, un permiso queda bloqueado hasta que se activa un ajuste oculto, y ese ajuste solo aparece con el teléfono en inglés. Primero pon el teléfono en English (<em>Ajustes › Sistema y actualización › Idioma y región</em>), luego busca <strong>Disable system</strong> en Ajustes y activa <strong>Disable system optimisation</strong> (toca <strong>Turn on anyway</strong>). Después puedes volver a tu idioma. Conéctate al Wi-Fi y toca <strong>Abrir Depuración inalámbrica</strong> en la app. En <em>Ajustes › Sistema y actualización › Opciones de desarrollador</em>, toca la línea <strong>Depuración inalámbrica</strong> (el texto, no el interruptor), actívala, toca <strong>Emparejar dispositivo con código de sincronización</strong>, baja la notificación, despliégala, toca <strong>Introducir código</strong> y escribe los 6 dígitos. Cuando la notificación diga que está configurado, desactiva la depuración inalámbrica.</p>
         <details class="more"><summary>Con un ordenador, o con la edición lite</summary><p>La edición lite no tiene permiso de internet y no se configura sola: ejecuta esto desde un ordenador, o desde el móvil con <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (modo Experto, acción <em>Shell command</em>, ADB y luego <em>Test</em>). Después puedes volver a desactivar <em>«Disable system optimisation»</em>: el permiso se mantiene.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
       </li>
       <li>
@@ -417,10 +417,10 @@
       </li>
       <li>
         <h3>Escucha automática</h3>
-        <p>En cuanto eliges algo, SnapKey Mapper escucha, sin nada que iniciar. Android 13 y posteriores preguntan «¿Permitir el acceso a todos los registros del dispositivo?»: elige <strong>Permitir acceso único</strong>. Ese acceso dura mientras la escucha esté activa, así que solo lo vuelves a ver tras un reinicio (toca la notificación «SnapKey Mapper está detenido»). Ya puedes desactivar la depuración inalámbrica.</p>
+        <p>En cuanto eliges algo, SnapKey Mapper escucha, sin nada que iniciar. Android 13 y posteriores preguntan «¿Permitir el acceso a todos los registros del dispositivo?»: elige <strong>Permitir el acceso una vez</strong>. Ese acceso dura mientras la escucha esté activa, así que solo lo vuelves a ver tras un reinicio (toca la notificación «SnapKey Mapper está detenido»). Ya puedes desactivar la depuración inalámbrica.</p>
       </li>
     </ol>
-    <p class="note"><strong>Consejo de seguridad.</strong> Cuando termines, desactiva la depuración inalámbrica en Opciones para desarrolladores. SnapKey Mapper no la necesita y borra su propia clave de vinculación justo después de la configuración. Después quita SnapKey Mapper de Depuración inalámbrica › Dispositivos vinculados. Haz la configuración solo en una red Wi-Fi de confianza.</p>
+    <p class="note"><strong>Consejo de seguridad.</strong> Cuando termines, desactiva la depuración inalámbrica en Opciones de desarrollador. SnapKey Mapper no la necesita y borra su propia clave de vinculación justo después de la configuración. Después quita SnapKey Mapper de Depuración inalámbrica › Dispositivos vinculados. Haz la configuración solo en una red Wi-Fi de confianza.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
@@ -458,7 +458,7 @@
 
     <details><summary>¿Por qué Android vuelve a pedir acceso al registro?</summary><div><p>Desde Android 13, cada nueva sesión de lectura del registro necesita tu consentimiento, y solo mientras la app está en pantalla. SnapKey Mapper mantiene una sesión abierta, así que solo vuelves a responder tras un reinicio o si el sistema detiene la app.</p></div></details>
 
-    <details><summary>La Snap Key dejó de funcionar tras un reinicio</summary><div><p>Toca la notificación «SnapKey Mapper está detenido» y luego «Permitir acceso único». Comprueba también que el uso de batería esté en Sin restricciones y que la app esté bloqueada en las apps recientes.</p></div></details>
+    <details><summary>La Snap Key dejó de funcionar tras un reinicio</summary><div><p>Toca la notificación «SnapKey Mapper está detenido» y luego «Permitir el acceso una vez». Comprueba también que el uso de batería esté en Sin restricciones y que la app esté bloqueada en las apps recientes.</p></div></details>
 
     <details><summary>¿Cómo encuentro el nombre de mi tecla en otro móvil?</summary><div><p>Abre SnapKey Mapper, toca <em>Iniciar captura</em>, pulsa tu tecla dos o tres veces, detén la captura y guárdala. Busca una línea que aparezca una vez por pulsación, con un nombre <code>KEYCODE_…</code>. En el Find X9 Pro es <code>KEYCODE_ACTION_BUTTON_CLICK</code> (scan code 735).</p></div></details>
 

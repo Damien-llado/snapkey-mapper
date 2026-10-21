@@ -128,7 +128,7 @@
           <span class="stars" aria-label="Sterren op GitHub">★ <span data-stars>0</span></span>
         </a>
       </div>
-      <p class="meta">Versie 1.0.7 · Android 11+ · ongeveer 12 MB · MIT · getest op Find X9 Pro, ColorOS 16</p>
+      <p class="meta">Versie 1.0.8 · Android 11+ · ongeveer 12 MB · MIT · getest op Find X9 Pro, ColorOS 16</p>
     </div>
 
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
@@ -372,7 +372,7 @@
       <li><strong>"Onbekende apps installeren"</strong>. Android vraagt of je browser of bestandsbeheerder apps mag installeren. Sta het toe, installeer, en zet het daarna weer uit als je wilt.</li>
       <li><strong>"Play Protect heeft deze app nog niet eerder gezien"</strong>. De app is nieuw, dus Google biedt aan hem te controleren. Tik op <em>App scannen</em>: dat duurt een paar seconden.</li>
       <li><strong>„Schadelijke app geblokkeerd”</strong>. Google Play Protect kan deze melding tonen en de installatie stoppen. Dat komt omdat de app van GitHub komt en niet uit Google Play, en gevoelige rechten vraagt (het systeemlogboek lezen, boven andere apps tonen) van een ontwikkelaar die Google nog niet heeft geverifieerd. Het betekent niet dat de app kwaadaardig is. Controleer voordat je doorgaat of het ondertekeningscertificaat van de APK de SHA-256 <code>a4a6d83d2298e8a88a6da748a3cc9ae9051e459a1d6e06b098a27d2b87f8f796</code> heeft (met AppVerifier, of <code>apksigner verify --print-certs</code>). Komt die overeen, tik dan op <em>Toch installeren</em>.</li>
-      <li><strong>„Boven andere apps weergeven” kan niet worden aangezet</strong>. Android kan dit recht weigeren zolang je de beperkte instellingen voor de app niet hebt toegestaan: <em>App-info › ⋮ › Beperkte instellingen toestaan</em>. Ga daarna terug en geef het recht.</li>
+      <li><strong>„Weergeven vóór andere apps” kan niet worden aangezet</strong>. Android kan dit recht weigeren zolang je de beperkte instellingen voor de app niet hebt toegestaan: <em>App-info › ⋮ › Beperkte instellingen toestaan</em>. Ga daarna terug en geef het recht.</li>
     </ol>
     <div class="cando">
       <div><h3>Wat het kan</h3><ul>
@@ -404,7 +404,7 @@
       </li>
       <li>
         <h3>Laat de app zichzelf de logtoestemming geven</h3>
-        <p>Open op ColorOS eerst <em>Instellingen › Aanvullende instellingen › Ontwikkelaarsopties</em> en zet <strong>"Disable system optimisation"</strong> aan (op ColorOS 16 verschijnt die optie soms alleen als de telefoon in het Engels staat: wissel even van taal als je hem niet vindt). Maak dan verbinding met je wifi en tik in de app op <strong>Logboek lezen automatisch instellen</strong>. Zet in Ontwikkelaarsopties <strong>Draadloze foutopsporing</strong> aan, tik op <strong>Apparaat koppelen met koppelingscode</strong>, trek de melding omlaag en typ de 6 cijfers. Zegt de melding dat het klaar is, zet Draadloze foutopsporing dan weer uit.</p>
+        <p>Op ColorOS blijft een machtiging geblokkeerd tot een verborgen instelling aanstaat, en die instelling verschijnt alleen als de telefoon op Engels staat. Zet de telefoon eerst op English (<em>Instellingen › Systeem en updates › Taal en regio</em>), zoek dan in Instellingen op <strong>Disable system</strong> en zet <strong>Disable system optimisation</strong> aan (tik op <strong>Turn on anyway</strong>). Daarna kun je je taal terugzetten. Maak verbinding met wifi en tik in de app op <strong>Draadloze foutopsporing openen</strong>. Tik in <em>Instellingen › Systeem en updates › Ontwikkelaaropties</em> op de regel <strong>Draadloze foutopsporing</strong> (de tekst, niet de schakelaar), zet hem aan, tik op <strong>Apparaat koppelen met koppelingscode</strong>, haal de melding omlaag, klap hem uit, tik op <strong>Code invoeren</strong> en typ de 6 cijfers. Zodra de melding zegt dat alles is ingesteld, zet je draadloze foutopsporing uit.</p>
         <details class="more"><summary>Met een computer, of de lite-editie</summary><p>De lite-editie heeft geen internettoestemming en stelt zichzelf niet in: voer dit uit vanaf een computer, of vanaf de telefoon met <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (Expert-modus, actie <em>Shell command</em>, ADB, dan <em>Test</em>). Je kunt <em>"Disable system optimisation"</em> daarna weer uitzetten: de toestemming blijft.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
       </li>
       <li>
@@ -420,7 +420,7 @@
         <p>Zodra je iets kiest, luistert SnapKey Mapper, zonder dat je iets hoeft te starten. Android 13 en nieuwer vraagt "Toegang geven tot alle apparaatlogboeken?": kies <strong>Eenmalige toegang toestaan</strong>. Die toegang geldt zolang het luisteren loopt, dus je ziet de vraag pas na een herstart terug (tik op de melding "SnapKey Mapper staat uit"). Je kunt Draadloos foutopsporen nu uitzetten.</p>
       </li>
     </ol>
-    <p class="note"><strong>Veiligheidstip.</strong> Zet als je klaar bent draadloze foutopsporing uit in Ontwikkelaarsopties. SnapKey Mapper heeft het niet nodig en wist zijn eigen koppelingssleutel direct na de installatie. Verwijder SnapKey Mapper daarna uit Draadloze foutopsporing › Gekoppelde apparaten. Doe de installatie alleen op een wifinetwerk dat je vertrouwt.</p>
+    <p class="note"><strong>Veiligheidstip.</strong> Zet als je klaar bent draadloze foutopsporing uit in Ontwikkelaaropties. SnapKey Mapper heeft het niet nodig en wist zijn eigen koppelingssleutel direct na de installatie. Verwijder SnapKey Mapper daarna uit Draadloze foutopsporing › Gekoppelde apparaten. Doe de installatie alleen op een wifinetwerk dat je vertrouwt.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">

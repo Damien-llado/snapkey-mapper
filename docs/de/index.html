@@ -128,7 +128,7 @@
           <span class="stars" aria-label="GitHub-Sterne">★ <span data-stars>0</span></span>
         </a>
       </div>
-      <p class="meta">Version 1.0.7 · Android 11+ · ca. 12 MB · MIT · getestet auf Find X9 Pro, ColorOS 16</p>
+      <p class="meta">Version 1.0.8 · Android 11+ · ca. 12 MB · MIT · getestet auf Find X9 Pro, ColorOS 16</p>
     </div>
 
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
@@ -372,7 +372,7 @@
       <li><strong>„Unbekannte Apps installieren“</strong>. Android bittet dich, deinem Browser oder Dateimanager das Installieren von Apps zu erlauben. Erlaub es, installiere die App und schalte es danach wieder aus, wenn du willst.</li>
       <li><strong>„Play Protect kennt diese App nicht“</strong>. Die App ist neu, deshalb bietet Google an, sie zu prüfen. Tipp auf <em>App scannen</em>: Das dauert ein paar Sekunden.</li>
       <li><strong>„Schädliche App blockiert“</strong>. Google Play Protect kann diese Meldung zeigen und die Installation stoppen. Das passiert, weil die App von GitHub kommt und nicht aus Google Play und sensible Berechtigungen anfordert (Systemprotokoll lesen, über anderen Apps anzeigen), und zwar von einem Entwickler, den Google noch nicht verifiziert hat. Es heißt nicht, dass die App schädlich ist. Prüfe vor dem Weitermachen, dass das Signaturzertifikat der APK den SHA-256 <code>a4a6d83d2298e8a88a6da748a3cc9ae9051e459a1d6e06b098a27d2b87f8f796</code> hat (mit AppVerifier oder <code>apksigner verify --print-certs</code>). Stimmt er überein, tippe auf <em>Trotzdem installieren</em>.</li>
-      <li><strong>„Über anderen Apps anzeigen“ lässt sich nicht einschalten</strong>. Android kann diese Berechtigung ablehnen, bis du die eingeschränkten Einstellungen für die App erlaubst: <em>App-Info › ⋮ › Eingeschränkte Einstellungen zulassen</em>. Geh danach zurück und erteile sie.</li>
+      <li><strong>„Über anderen Apps anzeigen“ lässt sich nicht einschalten</strong>. Android kann diese Berechtigung ablehnen, bis du die eingeschränkten Einstellungen für die App erlaubst: <em>App-Info › ⋮ › Eingeschränkte Berechtigungen erlauben</em>. Geh danach zurück und erteile sie.</li>
     </ol>
     <div class="cando">
       <div><h3>Was sie kann</h3><ul>
@@ -400,11 +400,11 @@
       </li>
       <li>
         <h3>APK installieren und eingeschränkte Einstellungen zulassen</h3>
-        <p>Lade die APK herunter und öffne sie. Android sperrt einige sensible Einstellungen für Apps, die nicht aus dem Play Store stammen: Geh zu <em>Einstellungen › Apps › SnapKey Mapper</em>, tipp auf <strong>⋮</strong> und dann auf <strong>Eingeschränkte Einstellungen zulassen</strong>.</p>
+        <p>Lade die APK herunter und öffne sie. Android sperrt einige sensible Einstellungen für Apps, die nicht aus dem Play Store stammen: Geh zu <em>Einstellungen › Apps › SnapKey Mapper</em>, tipp auf <strong>⋮</strong> und dann auf <strong>Eingeschränkte Berechtigungen erlauben</strong>.</p>
       </li>
       <li>
         <h3>Die App erteilt sich die Log-Berechtigung selbst</h3>
-        <p>Öffne unter ColorOS zuerst <em>Einstellungen › Zusätzliche Einstellungen › Entwickleroptionen</em> und schalte <strong>„Disable system optimisation“</strong> ein (unter ColorOS 16 erscheint die Option eventuell nur, wenn das Handy auf Englisch eingestellt ist: Stell die Sprache kurz um, falls du sie nicht findest). Verbinde dich dann mit deinem WLAN und tipp in der App auf <strong>Log-Zugriff automatisch einrichten</strong>. Schalte in den Entwickleroptionen <strong>Debugging über WLAN</strong> ein, tipp auf <strong>Gerät über einen Kopplungscode koppeln</strong>, zieh die Benachrichtigung herunter und gib die 6 Ziffern ein. Sobald die Benachrichtigung meldet, dass alles eingerichtet ist, schalte Debugging über WLAN wieder aus.</p>
+        <p>Unter ColorOS bleibt eine Berechtigung gesperrt, bis eine versteckte Einstellung aktiv ist, und diese Einstellung erscheint nur, wenn das Telefon auf Englisch steht. Stelle das Telefon zuerst auf English (<em>Einstellungen › System und Aktualisierung › Sprache und Region</em>), suche dann in den Einstellungen <strong>Disable system</strong> und schalte <strong>Disable system optimisation</strong> ein (tippe auf <strong>Turn on anyway</strong>). Danach kannst du deine Sprache zurückstellen. Verbinde dich dann mit dem WLAN und tippe in der App auf <strong>Debugging über WLAN öffnen</strong>. Tippe unter <em>Einstellungen › System und Aktualisierung › Entwickler-Optionen</em> auf die Zeile <strong>Debugging über WLAN</strong> (den Text, nicht den Schalter), schalte es ein, tippe auf <strong>Gerät über einen Kopplungscode koppeln</strong>, ziehe die Benachrichtigung herunter, klappe sie auf, tippe auf <strong>Code eingeben</strong> und gib die 6 Ziffern ein. Wenn die Benachrichtigung die Einrichtung bestätigt, schalte das WLAN-Debugging aus.</p>
         <details class="more"><summary>Mit einem Computer oder mit der Lite-Version</summary><p>Die Lite-Version hat keine Internetberechtigung und richtet sich nicht selbst ein: Führ diesen Befehl auf einem Computer aus oder direkt auf dem Handy mit <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (Expertenmodus, Aktion <em>Shell-Befehl</em>, ADB, dann <em>Testen</em>). Danach kannst du <em>„Disable system optimisation“</em> wieder ausschalten: Die Berechtigung bleibt.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
       </li>
       <li>
@@ -420,7 +420,7 @@
         <p>Sobald etwas ausgewählt ist, hört SnapKey Mapper zu, ohne dass du etwas starten musst. Ab Android 13 fragt das System „Zugriff auf alle Geräteprotokolle erlauben?“: Wähl <strong>Einmaligen Zugriff erlauben</strong>. Dieser Zugriff gilt, solange die Erkennung läuft, du siehst die Frage also erst nach einem Neustart wieder (tipp dann auf die Benachrichtigung „SnapKey Mapper ist aus“). Das WLAN-Debugging kannst du jetzt ausschalten.</p>
       </li>
     </ol>
-    <p class="note"><strong>Sicherheitstipp.</strong> Wenn du fertig bist, schalte Debugging über WLAN in den Entwickleroptionen aus. SnapKey Mapper braucht es nicht und löscht seinen eigenen Kopplungsschlüssel direkt nach der Einrichtung. Entferne SnapKey Mapper danach unter Debugging über WLAN › Gekoppelte Geräte. Richte es nur in einem WLAN ein, dem du vertraust.</p>
+    <p class="note"><strong>Sicherheitstipp.</strong> Wenn du fertig bist, schalte Debugging über WLAN in den Entwickler-Optionen aus. SnapKey Mapper braucht es nicht und löscht seinen eigenen Kopplungsschlüssel direkt nach der Einrichtung. Entferne SnapKey Mapper danach unter Debugging über WLAN › Gekoppelte Geräte. Richte es nur in einem WLAN ein, dem du vertraust.</p>
   </section>
 
   <section class="narrow" aria-labelledby="compat">
