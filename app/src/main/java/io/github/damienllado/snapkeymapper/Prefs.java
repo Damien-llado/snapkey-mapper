@@ -26,9 +26,10 @@ final class Prefs {
     static void appPackage(Context c, String pkg) { p(c).edit().putString("app_package", pkg).apply(); }
     /** The Find X9 / Find N6 Snap Key; other phones find theirs with the capture. */
     static String pattern(Context c) { return p(c).getString("pattern", "KEYCODE_ACTION_BUTTON_CLICK"); }
-    /** The user pressed "Stop": listening then no longer starts by itself when the app opens. */
-    static boolean stopped(Context c) { return p(c).getBoolean("stopped", false); }
-    static void stopped(Context c, boolean stopped) { p(c).edit().putBoolean("stopped", stopped).apply(); }
+    /** An app, a shortcut or a link is chosen: only then there is something to open. */
+    static boolean hasTarget(Context c) {
+        return targetType(c).equals("app") ? !appPackage(c).isEmpty() : !link(c).isEmpty();
+    }
     static boolean active(Context c) { return p(c).getBoolean("active", false); }
     static void active(Context c, boolean active) { p(c).edit().putBoolean("active", active).apply(); }
     /** "single", "double" or "long". */

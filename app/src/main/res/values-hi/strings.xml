@@ -10,6 +10,7 @@
     <string name="setup_not_granted">अनुमति नहीं मिली: %1$s</string>
     <string name="state_listening">सुन रहा है: बटन दबाएँ</string>
     <string name="state_ready">तैयार</string>
+    <string name="state_choose">चुनें कि कुंजी क्या खोले</string>
     <string name="btn_start">सुनना शुरू करें</string>
     <string name="btn_stop">सुनना बंद करें</string>
     <string name="perm_title">अनुमतियाँ</string>
@@ -37,7 +38,7 @@
     <string name="dlg_choose_app">ऐप चुनें</string>
     <string name="target_test">लॉन्च टेस्ट करें</string>
     <string name="gesture_title">जेस्चर</string>
-    <string name="gesture_help">बदलाव के बाद सुनना फिर से शुरू करें। एक बार दबाना सबसे तेज़ है; जेब में दबने से दो बार दबाना कभी नहीं चलता।</string>
+    <string name="gesture_help">एक बार दबाना सबसे तेज़ है; जेब में दबने से दो बार दबाना कभी नहीं चलता। बदलाव तुरंत लागू होता है।</string>
     <string name="gesture_single">एक बार दबाना</string>
     <string name="gesture_double">दो बार दबाना</string>
     <string name="gesture_long">देर तक दबाना</string>

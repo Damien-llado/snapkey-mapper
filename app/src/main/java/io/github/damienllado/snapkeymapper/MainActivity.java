@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
     private static final String[] GESTURES = {"single", "double", "long"};
     private static final int PICKED = 3;
 
-    private TextView heroState, listen, targetName;
+    private TextView heroState, targetName;
     private ImageView targetIcon;
     private View setupCard, heroCard, targetCard, gestureCard, finderLink;
     private PhoneView phone;
@@ -129,10 +129,6 @@ public class MainActivity extends Activity {
         heroState = Ui.text(this, "", 16, 0xFFF0FFF7);
         heroState.setTypeface(Ui.display);
         left.addView(heroState);
-        listen = Ui.button(this, "", true, v -> toggleListen());
-        listen.setTextColor(0xFF04130C);
-        Ui.ripple(listen, Ui.shape(this, 0xFF3BD99A, 16, 0));
-        Ui.add(left, listen, 16);
         card.addView(left, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
         phone = new PhoneView(this);
         card.addView(phone, new LinearLayout.LayoutParams(Ui.dp(this, 110), Ui.dp(this, 150)));
@@ -191,20 +187,18 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        // set up and not stopped by the user: listen right away (the grant of the permission restarts the app, which is not listening then)
         // the "Pairing..." notification of the setup service dies with the app when the permission is granted, and stays on screen
         if (checkSelfPermission(Manifest.permission.READ_LOGS) == PackageManager.PERMISSION_GRANTED) {
             getSystemService(android.app.NotificationManager.class).cancel(2);
         }
-        if (SetupActivity.done(this) == SetupActivity.TOTAL && !ListenService.running && !Prefs.stopped(this)) startListening();
+        listenIfReady();
         refresh();
     }
 
     private void refresh() {
         int done = SetupActivity.done(this), total = SetupActivity.TOTAL;
         boolean on = ListenService.running;
-        heroState.setText(on ? getString(R.string.state_listening) : done == total ? getString(R.string.state_ready) : getString(R.string.state_setup, done, total));
-        listen.setText(on ? getString(R.string.btn_stop) : getString(R.string.btn_start));
+        heroState.setText(on ? getString(R.string.state_listening) : done == total ? getString(R.string.state_choose) : getString(R.string.state_setup, done, total));
         phone.setListening(on);
         boolean ready = done == total;
         setupCard.setVisibility(ready ? View.GONE : View.VISIBLE);
@@ -236,6 +230,7 @@ public class MainActivity extends Activity {
         new AlertDialog.Builder(this).setTitle(R.string.target_link_enter).setMessage(R.string.target_link_help).setView(box)
                 .setPositiveButton(android.R.string.ok, (d, w) -> {
                     Prefs.save(this, field.getText().toString().trim(), Prefs.pattern(this));
+                    listenIfReady();
                     Prefs.targetType(this, "link");
                     refresh();
                 }).setNegativeButton(android.R.string.cancel, null).show();
@@ -256,25 +251,15 @@ public class MainActivity extends Activity {
         if (code == PICKED) refresh(); // a shortcut, an app or a link was chosen
     }
 
-    private void toggleListen() {
-        if (ListenService.running) {
-            stopService(new Intent(this, ListenService.class));
-            Prefs.active(this, false);
-            Prefs.stopped(this, true);
-            heroState.postDelayed(this::refresh, 300);
-        } else {
-            startListening();
-        }
+    /** Set up and something chosen to open: listen, with nothing to press (the grant of the permission closes the app, which is then not listening). */
+    private void listenIfReady() {
+        if (SetupActivity.done(this) == SetupActivity.TOTAL && Prefs.hasTarget(this) && !ListenService.running) startListening();
     }
 
     private void startListening() {
-        if (Prefs.pattern(this).isEmpty()) {
-            Toast.makeText(this, getString(R.string.toast_choose_pattern), Toast.LENGTH_LONG).show();
-            return;
-        }
+        if (Prefs.pattern(this).isEmpty()) return;
         startForegroundService(new Intent(this, ListenService.class));
         Prefs.active(this, true);
-        Prefs.stopped(this, false);
         heroState.postDelayed(this::refresh, 300);
     }
 }

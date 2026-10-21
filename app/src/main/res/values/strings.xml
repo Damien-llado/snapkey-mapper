@@ -10,6 +10,7 @@
     <string name="setup_not_granted">Not granted: %1$s</string>
     <string name="state_listening">Listening: press the key</string>
     <string name="state_ready">Ready</string>
+    <string name="state_choose">Choose what the key opens</string>
     <string name="btn_start">Start listening</string>
     <string name="btn_stop">Stop listening</string>
     <string name="perm_title">Permissions</string>
@@ -37,7 +38,7 @@
     <string name="dlg_choose_app">Choose an app</string>
     <string name="target_test">Test the launch</string>
     <string name="gesture_title">Gesture</string>
-    <string name="gesture_help">Restart listening after a change. Single press is the fastest; a double press never fires from a press in your pocket.</string>
+    <string name="gesture_help">Single press is the fastest; a double press never fires from a press in your pocket. A change applies at once.</string>
     <string name="gesture_single">One press</string>
     <string name="gesture_double">Two presses</string>
     <string name="gesture_long">Long press</string>

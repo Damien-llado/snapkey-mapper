@@ -10,6 +10,7 @@
     <string name="setup_not_granted">Nicht erteilt: %1$s</string>
     <string name="state_listening">Aktiv: Drück die Taste</string>
     <string name="state_ready">Bereit</string>
+    <string name="state_choose">Wähle, was die Taste öffnet</string>
     <string name="btn_start">Erkennung starten</string>
     <string name="btn_stop">Erkennung stoppen</string>
     <string name="perm_title">Berechtigungen</string>
@@ -37,7 +38,7 @@
     <string name="dlg_choose_app">App auswählen</string>
     <string name="target_test">Start testen</string>
     <string name="gesture_title">Geste</string>
-    <string name="gesture_help">Starte die Erkennung nach einer Änderung neu. Einmal drücken ist am schnellsten; zweimal drücken löst nie versehentlich in der Hosentasche aus.</string>
+    <string name="gesture_help">Einmal drücken ist am schnellsten; zweimal drücken löst nie versehentlich in der Hosentasche aus. Eine Änderung gilt sofort.</string>
     <string name="gesture_single">Einmal drücken</string>
     <string name="gesture_double">Zweimal drücken</string>
     <string name="gesture_long">Lang drücken</string>

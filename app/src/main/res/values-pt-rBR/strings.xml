@@ -10,6 +10,7 @@
     <string name="setup_not_granted">Não concedida: %1$s</string>
     <string name="state_listening">Escutando: pressione a tecla</string>
     <string name="state_ready">Pronto</string>
+    <string name="state_choose">Escolha o que a tecla abre</string>
     <string name="btn_start">Começar a escutar</string>
     <string name="btn_stop">Parar de escutar</string>
     <string name="perm_title">Permissões</string>
@@ -37,7 +38,7 @@
     <string name="dlg_choose_app">Escolha um app</string>
     <string name="target_test">Testar a abertura</string>
     <string name="gesture_title">Gesto</string>
-    <string name="gesture_help">Reinicie a escuta depois de uma mudança. A pressão simples é a mais rápida; a pressão dupla nunca dispara com uma pressão no bolso.</string>
+    <string name="gesture_help">A pressão simples é a mais rápida; a pressão dupla nunca dispara com uma pressão no bolso. Uma mudança vale na hora.</string>
     <string name="gesture_single">Uma pressão</string>
     <string name="gesture_double">Duas pressões</string>
     <string name="gesture_long">Pressão longa</string>

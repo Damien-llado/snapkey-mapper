@@ -10,6 +10,7 @@
     <string name="setup_not_granted">未授予：%1$s</string>
     <string name="state_listening">正在监听：请按按键</string>
     <string name="state_ready">就绪</string>
+    <string name="state_choose">选择按键要打开的内容</string>
     <string name="btn_start">开始监听</string>
     <string name="btn_stop">停止监听</string>
     <string name="perm_title">权限设置</string>
@@ -37,7 +38,7 @@
     <string name="dlg_choose_app">选择应用</string>
     <string name="target_test">测试启动</string>
     <string name="gesture_title">手势</string>
-    <string name="gesture_help">更改后请重新开始监听。单击最快；口袋里的误触永远不会触发双击。</string>
+    <string name="gesture_help">单击最快；口袋里的误触永远不会触发双击。更改会立即生效。</string>
     <string name="gesture_single">单击</string>
     <string name="gesture_double">双击</string>
     <string name="gesture_long">长按</string>

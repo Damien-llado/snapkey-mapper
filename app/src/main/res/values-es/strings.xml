@@ -10,6 +10,7 @@
     <string name="setup_not_granted">No concedido: %1$s</string>
     <string name="state_listening">Escuchando: pulsa la tecla</string>
     <string name="state_ready">Listo</string>
+    <string name="state_choose">Elige lo que abre la tecla</string>
     <string name="btn_start">Empezar a escuchar</string>
     <string name="btn_stop">Dejar de escuchar</string>
     <string name="perm_title">Permisos</string>
@@ -37,7 +38,7 @@
     <string name="dlg_choose_app">Elige una app</string>
     <string name="target_test">Probar la apertura</string>
     <string name="gesture_title">Gesto</string>
-    <string name="gesture_help">Reinicia la escucha tras un cambio. Una pulsación es lo más rápido; dos pulsaciones nunca se activan por un toque en el bolsillo.</string>
+    <string name="gesture_help">Una pulsación es lo más rápido; dos pulsaciones nunca se activan por un toque en el bolsillo. Un cambio se aplica al instante.</string>
     <string name="gesture_single">Una pulsación</string>
     <string name="gesture_double">Dos pulsaciones</string>
     <string name="gesture_long">Pulsación larga</string>

@@ -91,8 +91,8 @@ intent:#Intent;action=android.intent.action.SET_TIMER;i.android.intent.extra.ala
 intent:#Intent;action=android.intent.action.SET_ALARM;i.android.intent.extra.alarm.HOUR=6;i.android.intent.extra.alarm.MINUTES=30;end
 intent:#Intent;action=android.media.action.STILL_IMAGE_CAMERA;end
 ```
-- **Gesture**: one press, two quick presses (default), or long press (500 ms and more). Restart listening after changing it.
-- **Start listening**. A notification shows how many presses were seen and what happened at the last one, which makes problems easy to spot.
+- **Gesture**: one press, two quick presses (default), or long press (500 ms and more). A change applies at once.
+- **Listening starts by itself** as soon as the app is set up and something is chosen to open. A silent notification shows how many presses were seen and what happened at the last one, which makes problems easy to spot.
 
 ## Set it up with Claude Code
 

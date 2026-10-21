@@ -10,6 +10,7 @@
     <string name="setup_not_granted">Niet gegeven: %1$s</string>
     <string name="state_listening">Luistert: druk op de toets</string>
     <string name="state_ready">Klaar</string>
+    <string name="state_choose">Kies wat de toets opent</string>
     <string name="btn_start">Luisteren starten</string>
     <string name="btn_stop">Luisteren stoppen</string>
     <string name="perm_title">Toestemmingen</string>
@@ -37,7 +38,7 @@
     <string name="dlg_choose_app">Kies een app</string>
     <string name="target_test">Starten testen</string>
     <string name="gesture_title">Gebaar</string>
-    <string name="gesture_help">Start het luisteren opnieuw na een wijziging. Eén keer drukken is het snelst; twee keer drukken gaat nooit af door een druk in je broekzak.</string>
+    <string name="gesture_help">Eén keer drukken is het snelst; twee keer drukken gaat nooit af door een druk in je broekzak. Een wijziging werkt direct.</string>
     <string name="gesture_single">Eén keer</string>
     <string name="gesture_double">Twee keer</string>
     <string name="gesture_long">Lang drukken</string>

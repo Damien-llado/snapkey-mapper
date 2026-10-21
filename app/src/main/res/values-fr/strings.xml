@@ -10,6 +10,7 @@
     <string name="setup_not_granted">Non accordée : %1$s</string>
     <string name="state_listening">À l\'écoute : appuyez sur la touche</string>
     <string name="state_ready">Prêt</string>
+    <string name="state_choose">Choisissez ce que la touche ouvre</string>
     <string name="btn_start">Démarrer l\'écoute</string>
     <string name="btn_stop">Arrêter l\'écoute</string>
     <string name="perm_title">Autorisations</string>
@@ -37,7 +38,7 @@
     <string name="dlg_choose_app">Choisir une appli</string>
     <string name="target_test">Tester le lancement</string>
     <string name="gesture_title">Geste</string>
-    <string name="gesture_help">Relancez l\'écoute après un changement. L\'appui simple est le plus rapide ; un double appui ne se déclenche jamais par un appui dans la poche.</string>
+    <string name="gesture_help">L\'appui simple est le plus rapide ; un double appui ne se déclenche jamais par un appui dans la poche. Un changement s\'applique tout de suite.</string>
     <string name="gesture_single">Un appui</string>
     <string name="gesture_double">Deux appuis</string>
     <string name="gesture_long">Appui long</string>

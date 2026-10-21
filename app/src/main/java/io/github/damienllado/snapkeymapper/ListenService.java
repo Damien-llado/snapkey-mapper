@@ -40,8 +40,6 @@ public class ListenService extends Service {
         startForeground(1, notification(this, getString(R.string.notif_listening_title), getString(R.string.notif_listening_text), 0),
                 ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE);
         if (log == null) {
-            String pattern = Prefs.pattern(this);
-            String gesture = Prefs.gesture(this);
             try {
                 log = Prefs.readLog(l -> {
                     // Diagnostic: Android logs the launches it blocks
@@ -50,6 +48,7 @@ public class ListenService extends Service {
                         return;
                     }
                     // Only the release line is read: it carries press and release times (in nanoseconds)
+                    String pattern = Prefs.pattern(this); // read at each line: a change applies at once, no restart
                     if (pattern.isEmpty() || !l.contains(pattern) || !l.contains("ACTION_UP")) return;
                     // Any app can write to the log: only lines written by Android itself (uid 1000, "system") count,
                     // so an app cannot fire the target by writing a fake key line
@@ -62,7 +61,7 @@ public class ListenService extends Service {
                     long previous = lastRelease;
                     lastRelease = release;
                     boolean isLong = release - press >= 500;
-                    switch (gesture) {
+                    switch (Prefs.gesture(this)) {
                         case "long": if (!isLong) return; break;
                         case "double":
                             if (isLong || press - previous > 600) return; // first press: wait for the second
@@ -117,9 +116,11 @@ public class ListenService extends Service {
 
     static Notification notification(Context c, String title, String text, int flags) {
         NotificationManager nm = c.getSystemService(NotificationManager.class);
-        nm.createNotificationChannel(new NotificationChannel("listen", c.getString(R.string.channel_listen), NotificationManager.IMPORTANCE_LOW));
+        // the ongoing notification Android requires is silent and without status bar icon; the "stopped" one stays visible
+        nm.createNotificationChannel(new NotificationChannel(flags == 0 ? "listen_quiet" : "listen", c.getString(R.string.channel_listen),
+                flags == 0 ? NotificationManager.IMPORTANCE_MIN : NotificationManager.IMPORTANCE_LOW));
         Intent open = new Intent(c, MainActivity.class).putExtra("restart", flags != 0);
-        Notification n = new Notification.Builder(c, "listen")
+        Notification n = new Notification.Builder(c, flags == 0 ? "listen_quiet" : "listen")
                 .setSmallIcon(android.R.drawable.ic_menu_send)
                 .setContentTitle(title)
                 .setContentText(text)
