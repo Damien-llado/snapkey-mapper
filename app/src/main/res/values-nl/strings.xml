@@ -66,7 +66,7 @@
     <string name="setup_code_title">Typ hier de koppelingscode</string>
     <string name="setup_code_text">Trek de melding omlaag en typ de 6 cijfers die Android toont</string>
     <string name="setup_fail_connect">Kan geen verbinding maken met draadloze foutopsporing</string>
-    <string name="setup_refused">Geweigerd door ColorOS: zet \"Disable system optimisation\" aan in Ontwikkelaarsopties en probeer opnieuw</string>
+    <string name="setup_refused">Geweigerd door ColorOS: zet de telefoon op Engels, zet \"Disable system optimisation\" aan (zoeken in Instellingen) en probeer opnieuw</string>
     <string name="setup_notif_title">SnapKey Mapper instellen</string>
     <string name="setup_channel">Instellen</string>
     <string name="setup_enter_code">Code invoeren</string>
@@ -148,10 +148,12 @@
     <string name="wiz_dev_text">Tik op de knop en tik daarna 7 keer op het buildnummer (op ColorOS: Versie). Android meldt dat je ontwikkelaar bent. Kom hier terug.</string>
     <string name="wiz_dev_btn">Over de telefoon openen</string>
     <string name="wiz_pair_title">Koppel de app aan je telefoon</string>
-    <string name="wiz_pair_text">1. Tik op de knop: Draadloze foutopsporing gaat open.\n2. Zet \"Draadloze foutopsporing gebruiken\" aan en sta je netwerk toe.\n3. Tik op \"Apparaat koppelen met koppelingscode\".\n4. Er verschijnt een melding van SnapKey Mapper: typ daarin de 6 cijfers. Dat is alles, de app doet de rest.</string>
-    <string name="wiz_sysopt_title">Nog een schakelaar op ColorOS</string>
-    <string name="wiz_sysopt_text">ColorOS heeft de toestemming geweigerd. Zet in Ontwikkelaarsopties \"Disable system optimisation\" aan (onderaan), kom hier terug en koppel opnieuw.</string>
-    <string name="wiz_sysopt_btn">Ontwikkelaarsopties openen</string>
+    <string name="wiz_pair_text">1. Tik op de knop: Draadloos foutopsporen opent (opent de lijst met Ontwikkelaarsopties, tik dan op de tekst \"Draadloos foutopsporen\", niet op de schakelaar).\n2. Zet \"Draadloos foutopsporen gebruiken\" aan en sta je netwerk toe.\n3. Tik op \"Apparaat koppelen met koppelcode\".\n4. Er verschijnt een melding van SnapKey Mapper: tik op het pijltje om hem uit te klappen, tik op \"Code invoeren\" en typ de 6 cijfers. Dat is alles, de app doet de rest.</string>
+    <string name="wiz_sysopt_title">Eerst een verborgen ColorOS-instelling</string>
+    <string name="wiz_sysopt_text">ColorOS blokkeert de machtiging tot een verborgen instelling aanstaat; die verschijnt alleen als de telefoon op Engels staat.\n1. Zet de telefoon op English (Taal en regio).\n2. Zoek in Instellingen op \"Disable system\" en zet \"Disable system optimisation\" aan (Turn on anyway).\n3. Kom hier terug. Na de installatie kun je je taal terugzetten.</string>
+    <string name="wiz_sysopt_btn">Taal en regio openen</string>
+    <string name="wiz_sysopt_btn2">Instellingen openen</string>
+    <string name="wiz_sysopt_done">Klaar, doorgaan</string>
     <string name="wiz_last">Laatste poging: %1$s</string>
     <string name="wiz_computer_text">De lite-versie heeft geen netwerktoegang, dus de toestemming wordt eenmalig vanaf een computer gegeven: zet USB-foutopsporing aan in Ontwikkelaarsopties, verbind de telefoon met een kabel en voer deze opdracht uit.</string>
     <string name="wiz_overlay_text">Zo opent de toets je doel ook met het scherm uit of als een andere app voorop staat. Tik op de knop, dan op SnapKey Mapper in de lijst, en zet de schakelaar aan.</string>

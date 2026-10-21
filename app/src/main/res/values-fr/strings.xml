@@ -66,7 +66,7 @@
     <string name="setup_code_title">Saisissez le code d\'association ici</string>
     <string name="setup_code_text">Déroulez la notification et saisissez les 6 chiffres affichés par Android</string>
     <string name="setup_fail_connect">Connexion au débogage sans fil impossible</string>
-    <string name="setup_refused">Refusé par ColorOS : activez « Disable system optimisation » dans les Options pour les développeurs, puis réessayez</string>
+    <string name="setup_refused">Refusé par ColorOS : passez le téléphone en anglais, activez « Disable system optimisation » (recherche des Paramètres), puis réessayez</string>
     <string name="setup_notif_title">Configuration de SnapKey Mapper</string>
     <string name="setup_channel">Configuration</string>
     <string name="setup_enter_code">Saisir le code</string>
@@ -148,10 +148,12 @@
     <string name="wiz_dev_text">Touchez le bouton, puis touchez 7 fois le numéro de build (sur ColorOS : Version). Android indique que vous êtes développeur. Revenez ici.</string>
     <string name="wiz_dev_btn">Ouvrir À propos du téléphone</string>
     <string name="wiz_pair_title">Associez l\'appli à votre téléphone</string>
-    <string name="wiz_pair_text">1. Touchez le bouton : le débogage sans fil s\'ouvre.\n2. Activez « Utiliser le débogage sans fil » et autorisez votre réseau.\n3. Touchez « Associer l\'appareil avec un code d\'association ».\n4. Une notification SnapKey Mapper s\'affiche : saisissez-y les 6 chiffres. C\'est tout, l\'appli fait le reste.</string>
-    <string name="wiz_sysopt_title">Un réglage de plus sur ColorOS</string>
-    <string name="wiz_sysopt_text">ColorOS a refusé l\'autorisation. Dans les Options pour les développeurs, activez « Disable system optimisation » (près du bas), revenez ici et associez de nouveau.</string>
-    <string name="wiz_sysopt_btn">Ouvrir les Options pour les développeurs</string>
+    <string name="wiz_pair_text">1. Touchez le bouton : le débogage sans fil s\'ouvre (si la liste des Options pour les développeurs s\'ouvre à la place, touchez le texte « Débogage sans fil », pas l\'interrupteur).\n2. Activez « Utiliser le débogage sans fil » et autorisez votre réseau.\n3. Touchez « Associer l\'appareil avec un code d\'association ».\n4. Une notification SnapKey Mapper s\'affiche : touchez sa flèche pour la déplier, touchez « Saisir le code » et tapez les 6 chiffres. C\'est tout, l\'appli fait le reste.</string>
+    <string name="wiz_sysopt_title">D\'abord un réglage caché de ColorOS</string>
+    <string name="wiz_sysopt_text">ColorOS bloque la permission tant qu\'un réglage caché n\'est pas activé, et il n\'apparaît que si le téléphone est en anglais.\n1. Passez le téléphone en English (Langue et région).\n2. Dans les Paramètres, cherchez « Disable system » et activez « Disable system optimisation » (Turn on anyway).\n3. Revenez ici. Après l\'installation, vous pourrez remettre le français.</string>
+    <string name="wiz_sysopt_btn">Ouvrir Langue et région</string>
+    <string name="wiz_sysopt_btn2">Ouvrir les Paramètres</string>
+    <string name="wiz_sysopt_done">C\'est fait, continuer</string>
     <string name="wiz_last">Dernière tentative : %1$s</string>
     <string name="wiz_computer_text">L\'édition lite n\'a pas accès au réseau : l\'autorisation se donne donc depuis un ordinateur, une seule fois. Activez le débogage USB dans les Options pour les développeurs, branchez le téléphone avec un câble et lancez cette commande.</string>
     <string name="wiz_overlay_text">Permet à la touche d\'ouvrir votre cible même écran éteint ou quand une autre appli est au premier plan. Touchez le bouton, puis SnapKey Mapper dans la liste, et activez l\'interrupteur.</string>

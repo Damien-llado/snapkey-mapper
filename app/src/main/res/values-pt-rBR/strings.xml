@@ -66,7 +66,7 @@
     <string name="setup_code_title">Digite o código de pareamento aqui</string>
     <string name="setup_code_text">Puxe a notificação para baixo e digite os 6 dígitos mostrados pelo Android</string>
     <string name="setup_fail_connect">Não foi possível conectar à depuração por Wi-Fi</string>
-    <string name="setup_refused">Recusado pelo ColorOS: ative \"Disable system optimisation\" nas Opções do desenvolvedor e tente de novo</string>
+    <string name="setup_refused">Recusado pelo ColorOS: mude o telefone para inglês, ative \"Disable system optimisation\" (busca das Configurações) e tente de novo</string>
     <string name="setup_notif_title">Configuração do SnapKey Mapper</string>
     <string name="setup_channel">Configuração</string>
     <string name="setup_enter_code">Digitar código</string>
@@ -148,10 +148,12 @@
     <string name="wiz_dev_text">Toque no botão e depois toque 7 vezes no número da versão (no ColorOS: Versão). O Android avisa que você é um desenvolvedor. Volte aqui.</string>
     <string name="wiz_dev_btn">Abrir Sobre o telefone</string>
     <string name="wiz_pair_title">Pareie o app com o seu telefone</string>
-    <string name="wiz_pair_text">1. Toque no botão: a Depuração por Wi-Fi abre.\n2. Ative \"Usar a depuração por Wi-Fi\" e permita a sua rede.\n3. Toque em \"Parear o dispositivo com um código de pareamento\".\n4. Uma notificação do SnapKey Mapper aparece: digite nela os 6 dígitos. Só isso, o app faz o resto.</string>
-    <string name="wiz_sysopt_title">Mais uma chave no ColorOS</string>
-    <string name="wiz_sysopt_text">O ColorOS recusou a permissão. Nas Opções do desenvolvedor, ative \"Disable system optimisation\" (perto do fim), volte aqui e pareie de novo.</string>
-    <string name="wiz_sysopt_btn">Abrir as Opções do desenvolvedor</string>
+    <string name="wiz_pair_text">1. Toque no botão: a depuração sem fio abre (se abrir a lista de Opções do desenvolvedor, toque no texto \"Depuração sem fio\", não no interruptor).\n2. Ative \"Usar depuração sem fio\" e permita sua rede.\n3. Toque em \"Parear dispositivo com código de pareamento\".\n4. Uma notificação do SnapKey Mapper aparece: toque na seta para expandi-la, toque em \"Digitar código\" e digite os 6 dígitos. É só isso, o app faz o resto.</string>
+    <string name="wiz_sysopt_title">Primeiro um ajuste oculto do ColorOS</string>
+    <string name="wiz_sysopt_text">O ColorOS bloqueia a permissão até um ajuste oculto ser ativado, e ele só aparece com o telefone em inglês.\n1. Mude o telefone para English (Idioma e região).\n2. Em Configurações, procure \"Disable system\" e ative \"Disable system optimisation\" (Turn on anyway).\n3. Volte aqui. Depois da instalação você pode restaurar seu idioma.</string>
+    <string name="wiz_sysopt_btn">Abrir Idioma e região</string>
+    <string name="wiz_sysopt_btn2">Abrir Configurações</string>
+    <string name="wiz_sysopt_done">Feito, continuar</string>
     <string name="wiz_last">Última tentativa: %1$s</string>
     <string name="wiz_computer_text">A edição lite não tem acesso à rede, então a permissão é dada a partir de um computador, uma única vez: ative a Depuração USB nas Opções do desenvolvedor, conecte o telefone com um cabo e execute este comando.</string>
     <string name="wiz_overlay_text">Permite que a tecla abra o seu destino mesmo com a tela desligada ou com outro app na frente. Toque no botão, depois em SnapKey Mapper na lista, e ative a chave.</string>

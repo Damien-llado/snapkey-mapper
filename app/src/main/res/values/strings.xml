@@ -66,7 +66,7 @@
     <string name="setup_code_title">Type the pairing code here</string>
     <string name="setup_code_text">Pull the notification down and write the 6 digits shown by Android</string>
     <string name="setup_fail_connect">Could not connect to wireless debugging</string>
-    <string name="setup_refused">Refused by ColorOS: turn on \"Disable system optimisation\" in Developer options and retry</string>
+    <string name="setup_refused">Refused by ColorOS: switch the phone to English, turn on \"Disable system optimisation\" (Settings search), then retry</string>
     <string name="setup_notif_title">SnapKey Mapper setup</string>
     <string name="setup_channel">Setup</string>
     <string name="setup_enter_code">Enter code</string>
@@ -148,10 +148,12 @@
     <string name="wiz_dev_text">Tap the button, then tap the build number 7 times (on ColorOS: Version). Android says you are a developer. Come back here.</string>
     <string name="wiz_dev_btn">Open About phone</string>
     <string name="wiz_pair_title">Pair the app with your phone</string>
-    <string name="wiz_pair_text">1. Tap the button: Wireless debugging opens.\n2. Turn on \"Use wireless debugging\" and allow your network.\n3. Tap \"Pair device with pairing code\".\n4. A SnapKey Mapper notification drops down: type the 6 digits in it. That is all, the app does the rest.</string>
-    <string name="wiz_sysopt_title">One more switch on ColorOS</string>
-    <string name="wiz_sysopt_text">ColorOS refused the permission. In Developer options, turn on \"Disable system optimisation\" (near the bottom), come back here and pair again.</string>
-    <string name="wiz_sysopt_btn">Open Developer options</string>
+    <string name="wiz_pair_text">1. Tap the button: Wireless debugging opens (if the Developer options list opens instead, tap the text \"Wireless debugging\", not the switch).\n2. Turn on \"Use wireless debugging\" and allow your network.\n3. Tap \"Pair device with pairing code\".\n4. A SnapKey Mapper notification drops down: tap its arrow to unfold it, tap \"Enter code\" and type the 6 digits. That is all, the app does the rest.</string>
+    <string name="wiz_sysopt_title">One hidden ColorOS switch first</string>
+    <string name="wiz_sysopt_text">ColorOS blocks the permission until a hidden switch is on, and it only shows when the phone is in English.\n1. Switch the phone to English (Language &amp; region).\n2. In Settings, search \"Disable system\" and turn on \"Disable system optimisation\" (Turn on anyway).\n3. Come back here. After the setup you can put your language back.</string>
+    <string name="wiz_sysopt_btn">Open Language &amp; region</string>
+    <string name="wiz_sysopt_btn2">Open Settings</string>
+    <string name="wiz_sysopt_done">Done, continue</string>
     <string name="wiz_last">Last attempt: %1$s</string>
     <string name="wiz_computer_text">The lite edition has no network access, so the permission is given from a computer, once: turn on USB debugging in Developer options, connect the phone with a cable and run this command.</string>
     <string name="wiz_overlay_text">Lets the key open your target even when the screen is off or another app is in front. Tap the button, then SnapKey Mapper in the list, and turn the switch on.</string>

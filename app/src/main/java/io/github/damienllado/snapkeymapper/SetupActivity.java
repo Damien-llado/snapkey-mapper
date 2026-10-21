@@ -133,13 +133,17 @@ public class SetupActivity extends Activity {
                     () -> Ui.open(this, new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE, getPackageName()),
                             new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()))));
             skip("notif");
-        } else if (last.equals(getString(R.string.setup_refused))) {
-            // ColorOS refused the grant: one more switch, then pair again
+        } else if (Prefs.refused(this) || (oplus() && !skipped("sysopt"))) {
+            // ColorOS refuses the grant until a hidden switch (only shown in English) is on
             card(R.string.wiz_sysopt_title, getString(R.string.wiz_sysopt_text),
-                    getString(R.string.wiz_sysopt_btn), () -> {
-                        Prefs.setupResult(this, "");
-                        Ui.openSetting(this, Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS, null);
-                    });
+                    getString(R.string.wiz_sysopt_btn), () -> Ui.open(this, new Intent(Settings.ACTION_LOCALE_SETTINGS)));
+            Ui.add(page, Ui.button(this, getString(R.string.wiz_sysopt_btn2), false, v -> Ui.open(this)), 8);
+            Ui.add(page, Ui.button(this, getString(R.string.wiz_sysopt_done), false, v -> {
+                Prefs.skip(this, "sysopt");
+                Prefs.refused(this, false);
+                Prefs.setupResult(this, "");
+                show();
+            }), 8);
         } else {
             card(R.string.wiz_pair_title, getString(R.string.wiz_pair_text),
                     getString(R.string.perm_auto_btn), () -> {
@@ -163,6 +167,12 @@ public class SetupActivity extends Activity {
 
     private void skip(String check) {
         Ui.add(page, Ui.button(this, getString(R.string.wiz_skip), false, v -> { Prefs.skip(this, check); show(); }), 8);
+    }
+
+    /** OPPO, OnePlus and realme phones run ColorOS. */
+    private static boolean oplus() {
+        String m = android.os.Build.MANUFACTURER.toLowerCase(java.util.Locale.ROOT);
+        return m.contains("oppo") || m.contains("oneplus") || m.contains("realme");
     }
 
     /** Developer options on: the setting itself, or USB debugging on (only possible with them on). */

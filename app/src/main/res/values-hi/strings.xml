@@ -66,7 +66,7 @@
     <string name="setup_code_title">पेयरिंग कोड यहाँ लिखें</string>
     <string name="setup_code_text">नोटिफ़िकेशन नीचे खींचें और Android के दिखाए 6 अंक लिखें</string>
     <string name="setup_fail_connect">वायरलेस डीबगिंग से कनेक्ट नहीं हो सका</string>
-    <string name="setup_refused">ColorOS ने मना कर दिया: Developer options में \"Disable system optimisation\" चालू करें और फिर कोशिश करें</string>
+    <string name="setup_refused">ColorOS ने मना किया: फ़ोन को अंग्रेज़ी में करें, \"Disable system optimisation\" चालू करें (सेटिंग्स की खोज), फिर दोबारा कोशिश करें</string>
     <string name="setup_notif_title">SnapKey Mapper सेटअप</string>
     <string name="setup_channel">सेटअप</string>
     <string name="setup_enter_code">कोड डालें</string>
@@ -148,10 +148,12 @@
     <string name="wiz_dev_text">बटन पर टैप करें, फिर बिल्ड नंबर पर 7 बार टैप करें (ColorOS पर: वर्शन)। Android बताएगा कि आप डेवलपर हैं। यहाँ लौट आएँ।</string>
     <string name="wiz_dev_btn">फ़ोन के बारे में खोलें</string>
     <string name="wiz_pair_title">ऐप को अपने फ़ोन से पेयर करें</string>
-    <string name="wiz_pair_text">1. बटन पर टैप करें: वायरलेस डीबगिंग खुलेगी।\n2. \"Use wireless debugging\" चालू करें और अपने नेटवर्क को अनुमति दें।\n3. \"Pair device with pairing code\" पर टैप करें।\n4. SnapKey Mapper का एक नोटिफ़िकेशन नीचे आएगा: उसमें 6 अंक लिखें। बस इतना ही, बाकी ऐप कर लेता है।</string>
-    <string name="wiz_sysopt_title">ColorOS पर एक और स्विच</string>
-    <string name="wiz_sysopt_text">ColorOS ने अनुमति देने से मना कर दिया। Developer options में \"Disable system optimisation\" चालू करें (नीचे की ओर), यहाँ लौटें और फिर से पेयर करें।</string>
-    <string name="wiz_sysopt_btn">Developer options खोलें</string>
+    <string name="wiz_pair_text">1. बटन दबाएं: वायरलेस डीबगिंग खुलती है (अगर डेवलपर विकल्पों की सूची खुले, तो स्विच नहीं, \"वायरलेस डीबगिंग\" के टेक्स्ट को दबाएं)।\n2. \"वायरलेस डीबगिंग का उपयोग करें\" चालू करें और अपने नेटवर्क को अनुमति दें।\n3. \"पेयरिंग कोड से डिवाइस जोड़ें\" दबाएं।\n4. SnapKey Mapper की एक सूचना आएगी: उसका तीर दबाकर उसे खोलें, \"कोड डालें\" दबाएं और 6 अंक लिखें। बस इतना, बाकी ऐप करता है।</string>
+    <string name="wiz_sysopt_title">पहले ColorOS की एक छिपी सेटिंग</string>
+    <string name="wiz_sysopt_text">ColorOS अनुमति तब तक रोकता है जब तक एक छिपी सेटिंग चालू न हो; वह सिर्फ़ तब दिखती है जब फ़ोन अंग्रेज़ी में हो।\n1. फ़ोन को English में बदलें (भाषा और क्षेत्र)।\n2. सेटिंग्स में \"Disable system\" खोजें और \"Disable system optimisation\" चालू करें (Turn on anyway)।\n3. यहां लौटें। इंस्टॉल के बाद आप अपनी भाषा वापस रख सकते हैं।</string>
+    <string name="wiz_sysopt_btn">भाषा और क्षेत्र खोलें</string>
+    <string name="wiz_sysopt_btn2">सेटिंग्स खोलें</string>
+    <string name="wiz_sysopt_done">हो गया, आगे बढ़ें</string>
     <string name="wiz_last">पिछली कोशिश: %1$s</string>
     <string name="wiz_computer_text">लाइट संस्करण के पास नेटवर्क एक्सेस नहीं है, इसलिए अनुमति एक बार कंप्यूटर से दी जाती है: Developer options में USB डीबगिंग चालू करें, फ़ोन को केबल से जोड़ें और यह कमांड चलाएँ।</string>
     <string name="wiz_overlay_text">इससे बटन आपका टारगेट तब भी खोल पाता है जब स्क्रीन बंद हो या कोई दूसरा ऐप सामने हो। बटन दबाएँ, फिर सूची में SnapKey Mapper चुनें और स्विच चालू करें।</string>

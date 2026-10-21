@@ -118,17 +118,24 @@ public class SetupService extends Service {
             try (BufferedReader r = new BufferedReader(new InputStreamReader(adb.openStream(
                     "shell:{ setsid sh -c '" + waitAndPost + "' >/dev/null 2>&1 & }; pm grant " + pkg + " android.permission.READ_LOGS").openInputStream()))) {
                 for (String l; (l = r.readLine()) != null; ) out.append(l).append('\n');
+            } catch (java.io.IOException closed) { // adbd closes the shell without a word when ColorOS refuses (or the grant kills this app)
+                android.util.Log.w("SnapKeySetup", "shell closed", closed);
+                Thread.sleep(3000);
             }
             if (checkSelfPermission(Manifest.permission.READ_LOGS) != PackageManager.PERMISSION_GRANTED) {
-                throw new IllegalStateException(out.toString().contains("GRANT_RUNTIME_PERMISSIONS")
-                        ? getString(R.string.setup_refused)
-                        : getString(R.string.setup_not_granted, out.toString().trim()));
+                boolean colorOs = android.os.Build.MANUFACTURER.matches("(?i).*(oppo|oneplus|realme).*");
+                // ColorOS says so, or closes the shell without a word; on other phones the output is the real reason
+                boolean refused = colorOs && (out.toString().contains("GRANT_RUNTIME_PERMISSIONS") || out.length() == 0);
+                Prefs.refused(this, refused);
+                throw new IllegalStateException(refused ? getString(R.string.setup_refused) : getString(R.string.setup_not_granted, out.toString().trim()));
             }
+            Prefs.refused(this, false);
             result = getString(R.string.setup_done);
         } catch (Exception e) {
             android.util.Log.w("SnapKeySetup", "setup failed", e);
             result = e.getMessage() != null ? e.getMessage() : e.toString(); // never show a bare "null"
             Adb.forget(this);
+            Prefs.clearSkips(this);
         }
         Prefs.setupResult(this, result); // shown by the setup screen too
         say(getString(R.string.setup_notif_title), result, false);

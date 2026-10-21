@@ -40,6 +40,15 @@ final class Prefs {
     static boolean skipped(Context c, String check) { return p(c).getBoolean("skip_" + check, false); }
     static void skip(Context c, String check) { p(c).edit().putBoolean("skip_" + check, true).apply(); }
 
+    /** ColorOS refused the permission: the wizard asks for its hidden switch (a flag, not the translated message). */
+    static boolean refused(Context c) { return p(c).getBoolean("setup_refused", false); }
+    static void refused(Context c, boolean refused) { p(c).edit().putBoolean("setup_refused", refused).apply(); }
+
+    /** After a failed setup, the automatic checks are asked again: an "Already done" tapped by mistake must not hide a real step. */
+    static void clearSkips(Context c) {
+        p(c).edit().remove("skip_wifi").remove("skip_dev").remove("skip_notif").apply();
+    }
+
     static String setupResult(Context c) { return p(c).getString("setup_result", ""); }
     static void setupResult(Context c, String text) { p(c).edit().putString("setup_result", text).apply(); }
 

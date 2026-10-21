@@ -66,7 +66,7 @@
     <string name="setup_code_title">Escribe aquí el código de vinculación</string>
     <string name="setup_code_text">Baja la notificación y escribe los 6 dígitos que muestra Android</string>
     <string name="setup_fail_connect">No se pudo conectar a la depuración inalámbrica</string>
-    <string name="setup_refused">Rechazado por ColorOS: activa \"Disable system optimisation\" en Opciones para desarrolladores y vuelve a intentarlo</string>
+    <string name="setup_refused">Rechazado por ColorOS: cambia el teléfono a inglés, activa \"Disable system optimisation\" (búsqueda de Ajustes) y reinténtalo</string>
     <string name="setup_notif_title">Configuración de SnapKey Mapper</string>
     <string name="setup_channel">Configuración</string>
     <string name="setup_enter_code">Introducir código</string>
@@ -148,10 +148,12 @@
     <string name="wiz_dev_text">Toca el botón y luego toca 7 veces el número de compilación (en ColorOS: Versión). Android dice que ya eres desarrollador. Vuelve aquí.</string>
     <string name="wiz_dev_btn">Abrir Información del teléfono</string>
     <string name="wiz_pair_title">Vincula la app con tu teléfono</string>
-    <string name="wiz_pair_text">1. Toca el botón: se abre Depuración inalámbrica.\n2. Activa \"Usar depuración inalámbrica\" y permite tu red.\n3. Toca \"Vincular dispositivo con código de sincronización\".\n4. Aparece una notificación de SnapKey Mapper: escribe en ella los 6 dígitos. Eso es todo, la app hace el resto.</string>
-    <string name="wiz_sysopt_title">Un ajuste más en ColorOS</string>
-    <string name="wiz_sysopt_text">ColorOS ha rechazado el permiso. En Opciones para desarrolladores, activa \"Disable system optimisation\" (cerca del final), vuelve aquí y vincula de nuevo.</string>
-    <string name="wiz_sysopt_btn">Abrir Opciones para desarrolladores</string>
+    <string name="wiz_pair_text">1. Toca el botón: se abre la depuración inalámbrica (si se abre la lista de Opciones de desarrollador, toca el texto \"Depuración inalámbrica\", no el interruptor).\n2. Activa \"Usar depuración inalámbrica\" y permite tu red.\n3. Toca \"Vincular dispositivo con código de vinculación\".\n4. Aparece una notificación de SnapKey Mapper: toca su flecha para desplegarla, toca \"Introducir código\" y escribe los 6 dígitos. Eso es todo, la app hace el resto.</string>
+    <string name="wiz_sysopt_title">Primero un ajuste oculto de ColorOS</string>
+    <string name="wiz_sysopt_text">ColorOS bloquea el permiso hasta activar un ajuste oculto, que solo aparece con el teléfono en inglés.\n1. Cambia el teléfono a English (Idioma y región).\n2. En Ajustes, busca \"Disable system\" y activa \"Disable system optimisation\" (Turn on anyway).\n3. Vuelve aquí. Después de la instalación puedes restaurar tu idioma.</string>
+    <string name="wiz_sysopt_btn">Abrir Idioma y región</string>
+    <string name="wiz_sysopt_btn2">Abrir Ajustes</string>
+    <string name="wiz_sysopt_done">Hecho, continuar</string>
     <string name="wiz_last">Último intento: %1$s</string>
     <string name="wiz_computer_text">La edición lite no tiene acceso a la red, así que el permiso se concede desde un ordenador, una sola vez: activa Depuración por USB en Opciones para desarrolladores, conecta el teléfono con un cable y ejecuta este comando.</string>
     <string name="wiz_overlay_text">Permite que la tecla abra tu destino aunque la pantalla esté apagada u otra app esté delante. Toca el botón, luego SnapKey Mapper en la lista, y activa el interruptor.</string>
