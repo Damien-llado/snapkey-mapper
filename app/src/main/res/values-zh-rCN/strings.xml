@@ -161,7 +161,7 @@
     <string name="wiz_battery_text">避免 Android 在后台停止应用。点按钮并确认。在 ColorOS 上，还要在最近任务中锁定本应用。</string>
     <string name="wiz_native_text">避免手机同时执行自己的 Snap Key 操作：在手机设置中搜索“Snap Key”，设为无操作。</string>
     <string name="wiz_done_title">全部就绪</string>
-    <string name="wiz_done_text">现在选择按键要打开什么，然后开始监听。</string>
+    <string name="wiz_done_text">一切就绪。按键会自动开始监听。你可以关闭无线调试。选择按键要打开的内容。</string>
     <string name="wiz_done_btn">继续</string>
     <string name="home_setup_title">设置 SnapKey Mapper</string>
     <string name="home_setup_text">只需几步，只做一次。应用会为你打开每个设置项并检查。</string>

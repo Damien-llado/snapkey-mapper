@@ -10,8 +10,8 @@ android {
         applicationId = "io.github.damienllado.snapkeymapper"
         minSdk = 30
         targetSdk = 35
-        versionCode = 6
-        versionName = "1.0.5"
+        versionCode = 7
+        versionName = "1.0.6"
     }
 
     // "full" sets the log permission up by itself (wireless debugging on this phone, needs the internet permission

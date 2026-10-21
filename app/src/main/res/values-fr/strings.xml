@@ -161,7 +161,7 @@
     <string name="wiz_battery_text">Pour qu\'Android n\'arrête pas l\'appli en arrière-plan. Touchez le bouton et confirmez. Sur ColorOS, verrouillez aussi l\'appli dans les applis récentes.</string>
     <string name="wiz_native_text">Pour que le téléphone ne lance pas sa propre action Snap Key en même temps : dans les paramètres du téléphone, cherchez « Snap Key » et réglez-la sur aucune action.</string>
     <string name="wiz_done_title">Tout est prêt</string>
-    <string name="wiz_done_text">Choisissez maintenant ce que la touche ouvre, puis lancez l\'écoute.</string>
+    <string name="wiz_done_text">C\'est prêt. La touche est écoutée automatiquement. Vous pouvez désactiver le débogage sans fil. Choisissez ce que la touche ouvre.</string>
     <string name="wiz_done_btn">Continuer</string>
     <string name="home_setup_title">Configurer SnapKey Mapper</string>
     <string name="home_setup_text">Quelques étapes, une seule fois. L\'appli ouvre chaque réglage pour vous et le vérifie.</string>

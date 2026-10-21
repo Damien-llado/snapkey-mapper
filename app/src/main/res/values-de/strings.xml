@@ -161,7 +161,7 @@
     <string name="wiz_battery_text">Damit Android die App nicht im Hintergrund beendet. Tipp auf die Schaltfläche und bestätige. Fixiere die App unter ColorOS außerdem in den zuletzt verwendeten Apps.</string>
     <string name="wiz_native_text">Damit das Telefon nicht gleichzeitig seine eigene Snap-Key-Aktion ausführt: Such in den Telefoneinstellungen nach „Snap Key“ und stell sie auf keine Aktion.</string>
     <string name="wiz_done_title">Alles bereit</string>
-    <string name="wiz_done_text">Wähle jetzt, was die Taste öffnet, und starte das Zuhören.</string>
+    <string name="wiz_done_text">Fertig. Die Taste wird automatisch überwacht. Du kannst das WLAN-Debugging ausschalten. Wähle, was die Taste öffnet.</string>
     <string name="wiz_done_btn">Weiter</string>
     <string name="home_setup_title">SnapKey Mapper einrichten</string>
     <string name="home_setup_text">Ein paar Schritte, einmalig. Die App öffnet jede Einstellung für dich und prüft sie.</string>

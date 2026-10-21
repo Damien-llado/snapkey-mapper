@@ -161,7 +161,7 @@
     <string name="wiz_battery_text">ताकि Android ऐप को बैकग्राउंड में बंद न करे। बटन पर टैप करें और पुष्टि करें। ColorOS पर ऐप को हाल के ऐप्स में भी लॉक करें।</string>
     <string name="wiz_native_text">ताकि फ़ोन अपनी Snap Key कार्रवाई साथ-साथ न चलाए: फ़ोन की सेटिंग में \"Snap Key\" खोजें और उसे कोई कार्रवाई नहीं पर सेट करें।</string>
     <string name="wiz_done_title">सब तैयार है</string>
-    <string name="wiz_done_text">अब चुनें कि बटन क्या खोले, और सुनना शुरू करें।</string>
+    <string name="wiz_done_text">सब तैयार है। कुंजी अपने आप सुनी जाती है। आप वायरलेस डीबगिंग बंद कर सकते हैं। चुनें कि कुंजी क्या खोले।</string>
     <string name="wiz_done_btn">जारी रखें</string>
     <string name="home_setup_title">SnapKey Mapper सेट करें</string>
     <string name="home_setup_text">कुछ चरण, सिर्फ़ एक बार। ऐप हर सेटिंग आपके लिए खोलता है और उसे जाँचता है।</string>

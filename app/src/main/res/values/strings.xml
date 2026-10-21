@@ -161,7 +161,7 @@
     <string name="wiz_battery_text">So that Android does not stop the app in the background. Tap the button and confirm. On ColorOS, also lock the app in the recent apps.</string>
     <string name="wiz_native_text">So that the phone does not run its own Snap Key action at the same time: in the phone settings, search for \"Snap Key\" and set it to no action.</string>
     <string name="wiz_done_title">All set</string>
-    <string name="wiz_done_text">Now choose what the key opens, and start listening.</string>
+    <string name="wiz_done_text">All set. The key now listens by itself. You can turn Wireless debugging off. Choose what the key opens.</string>
     <string name="wiz_done_btn">Continue</string>
     <string name="home_setup_title">Set up SnapKey Mapper</string>
     <string name="home_setup_text">A few steps, once. The app opens each setting for you and checks it.</string>

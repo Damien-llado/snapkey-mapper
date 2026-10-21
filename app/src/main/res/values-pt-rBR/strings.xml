@@ -161,7 +161,7 @@
     <string name="wiz_battery_text">Para o Android não encerrar o app em segundo plano. Toque no botão e confirme. No ColorOS, bloqueie também o app nos apps recentes.</string>
     <string name="wiz_native_text">Para o telefone não executar ao mesmo tempo a própria ação da Snap Key: nas configurações do telefone, pesquise \"Snap Key\" e defina como nenhuma ação.</string>
     <string name="wiz_done_title">Tudo pronto</string>
-    <string name="wiz_done_text">Agora escolha o que a tecla abre e comece a escutar.</string>
+    <string name="wiz_done_text">Tudo pronto. A tecla é monitorada automaticamente. Você pode desligar a depuração sem fio. Escolha o que a tecla abre.</string>
     <string name="wiz_done_btn">Continuar</string>
     <string name="home_setup_title">Configurar o SnapKey Mapper</string>
     <string name="home_setup_text">Alguns passos, uma única vez. O app abre cada configuração para você e a verifica.</string>

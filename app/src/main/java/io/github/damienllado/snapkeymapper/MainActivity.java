@@ -191,6 +191,12 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        // set up and not stopped by the user: listen right away (the grant of the permission restarts the app, which is not listening then)
+        // the "Pairing..." notification of the setup service dies with the app when the permission is granted, and stays on screen
+        if (checkSelfPermission(Manifest.permission.READ_LOGS) == PackageManager.PERMISSION_GRANTED) {
+            getSystemService(android.app.NotificationManager.class).cancel(2);
+        }
+        if (SetupActivity.done(this) == SetupActivity.TOTAL && !ListenService.running && !Prefs.stopped(this)) startListening();
         refresh();
     }
 
@@ -254,6 +260,7 @@ public class MainActivity extends Activity {
         if (ListenService.running) {
             stopService(new Intent(this, ListenService.class));
             Prefs.active(this, false);
+            Prefs.stopped(this, true);
             heroState.postDelayed(this::refresh, 300);
         } else {
             startListening();
@@ -267,6 +274,7 @@ public class MainActivity extends Activity {
         }
         startForegroundService(new Intent(this, ListenService.class));
         Prefs.active(this, true);
+        Prefs.stopped(this, false);
         heroState.postDelayed(this::refresh, 300);
     }
 }

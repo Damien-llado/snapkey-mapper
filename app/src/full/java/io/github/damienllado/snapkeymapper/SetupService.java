@@ -98,8 +98,10 @@ public class SetupService extends Service {
                 try {
                     connected = adb.autoConnect(this, 10000);
                     if (!connected) throw new IllegalStateException(getString(R.string.setup_fail_connect));
-                } catch (java.io.IOException e) { // right after pairing, adbd can still be changing its port (connection refused): ask again
-                    if (tries >= 3) throw e;
+                } catch (java.io.IOException | io.github.muntashirakon.adb.AdbPairingRequiredException e) {
+                    // right after pairing, adbd can still be changing its port (connection refused) or not know the new key yet
+                    // (certificate unknown, reported as "pairing required"): ask again
+                    if (tries >= 5) throw e;
                     Thread.sleep(2000);
                 }
             }

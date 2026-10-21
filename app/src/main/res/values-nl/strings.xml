@@ -161,7 +161,7 @@
     <string name="wiz_battery_text">Zodat Android de app niet op de achtergrond stopt. Tik op de knop en bevestig. Vergrendel de app op ColorOS ook in de recente apps.</string>
     <string name="wiz_native_text">Zodat de telefoon niet tegelijk zijn eigen Snap Key-actie uitvoert: zoek in de telefooninstellingen naar \"Snap Key\" en zet hem op geen actie.</string>
     <string name="wiz_done_title">Alles klaar</string>
-    <string name="wiz_done_text">Kies nu wat de toets opent en begin met luisteren.</string>
+    <string name="wiz_done_text">Klaar. De toets wordt vanzelf beluisterd. Je kunt Draadloos foutopsporen uitzetten. Kies wat de toets opent.</string>
     <string name="wiz_done_btn">Doorgaan</string>
     <string name="home_setup_title">SnapKey Mapper instellen</string>
     <string name="home_setup_text">Een paar stappen, eenmalig. De app opent elke instelling voor je en controleert hem.</string>
