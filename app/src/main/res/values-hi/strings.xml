@@ -171,4 +171,7 @@
     <string name="wiz_notif_title">सूचनाएं चालू करें</string>
     <string name="wiz_notif_text">पेयरिंग कोड ऐप की एक सूचना में लिखा जाता है। इसकी सूचनाएं चालू करें, फिर यहां लौटें।</string>
     <string name="wiz_notif_btn">सूचनाएं खोलें</string>
+    <string name="menu_diag">डायग्नोस्टिक कॉपी करें</string>
+    <string name="diag_copied">डायग्नोस्टिक कॉपी हो गया: इसे GitHub issue में चिपकाएं</string>
+    <string name="diag_stuck">अटक गए? GitHub issue के लिए डायग्नोस्टिक कॉपी करें</string>
 </resources>

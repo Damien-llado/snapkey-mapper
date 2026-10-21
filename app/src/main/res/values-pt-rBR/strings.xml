@@ -171,4 +171,7 @@
     <string name="wiz_notif_title">Ativar as notificações</string>
     <string name="wiz_notif_text">O código de pareamento é digitado em uma notificação do app. Ative as notificações e volte aqui.</string>
     <string name="wiz_notif_btn">Abrir notificações</string>
+    <string name="menu_diag">Copiar o diagnóstico</string>
+    <string name="diag_copied">Diagnóstico copiado: cole numa issue do GitHub</string>
+    <string name="diag_stuck">Travou? Copie o diagnóstico para uma issue do GitHub</string>
 </resources>

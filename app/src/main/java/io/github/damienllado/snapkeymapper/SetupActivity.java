@@ -109,6 +109,9 @@ public class SetupActivity extends Activity {
                 box.setOnCheckedChangeListener((c, checked) -> { Prefs.nativeKeyOff(this, checked); show(); });
                 Ui.add(page, box, 14);
         }
+        TextView diag = Ui.text(this, getString(R.string.diag_stuck), 14, Ui.accent);
+        diag.setOnClickListener(v -> Diagnostic.copy(this));
+        Ui.add(page, diag, 28);
     }
 
     /** Step 1, in small parts: Wi-Fi, Developer options, then pairing (full edition); a command for a computer (lite). */

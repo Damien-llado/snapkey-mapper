@@ -171,4 +171,7 @@
     <string name="wiz_notif_title">Benachrichtigungen einschalten</string>
     <string name="wiz_notif_text">Der Kopplungscode wird in einer Benachrichtigung der App eingegeben. Schalte ihre Benachrichtigungen ein und komm dann hierher zurück.</string>
     <string name="wiz_notif_btn">Benachrichtigungen öffnen</string>
+    <string name="menu_diag">Diagnose kopieren</string>
+    <string name="diag_copied">Diagnose kopiert: füge sie in ein GitHub-Issue ein</string>
+    <string name="diag_stuck">Hängst du fest? Kopiere die Diagnose für ein GitHub-Issue</string>
 </resources>

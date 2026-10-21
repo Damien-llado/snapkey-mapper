@@ -102,11 +102,13 @@ public class MainActivity extends Activity {
         items.add(0, 2, 1, R.string.library_title);
         items.add(0, 3, 2, R.string.finder_title);
         items.add(0, 4, 3, R.string.menu_help);
+        items.add(0, 5, 4, R.string.menu_diag);
         m.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
                 case 1: startActivity(new Intent(this, SetupActivity.class)); break;
                 case 2: startActivityForResult(new Intent(this, LibraryActivity.class), PICKED); break;
                 case 3: startActivity(new Intent(this, FinderActivity.class)); break;
+                case 5: Diagnostic.copy(this); break;
                 default: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.help_url))));
             }
             return true;

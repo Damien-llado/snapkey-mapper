@@ -171,4 +171,7 @@
     <string name="wiz_notif_title">Activer les notifications</string>
     <string name="wiz_notif_text">Le code d\'association se saisit dans une notification de l\'appli. Activez ses notifications, puis revenez ici.</string>
     <string name="wiz_notif_btn">Ouvrir les notifications</string>
+    <string name="menu_diag">Copier le diagnostic</string>
+    <string name="diag_copied">Diagnostic copié : collez-le dans une issue GitHub</string>
+    <string name="diag_stuck">Bloqué ? Copiez le diagnostic pour une issue GitHub</string>
 </resources>

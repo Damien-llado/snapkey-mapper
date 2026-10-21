@@ -171,4 +171,7 @@
     <string name="wiz_notif_title">Meldingen aanzetten</string>
     <string name="wiz_notif_text">De koppelcode typ je in een melding van de app. Zet de meldingen aan en kom dan hier terug.</string>
     <string name="wiz_notif_btn">Meldingen openen</string>
+    <string name="menu_diag">Diagnose kopiëren</string>
+    <string name="diag_copied">Diagnose gekopieerd: plak hem in een GitHub-issue</string>
+    <string name="diag_stuck">Vast? Kopieer de diagnose voor een GitHub-issue</string>
 </resources>

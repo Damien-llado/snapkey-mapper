@@ -1,0 +1,22 @@
+name: Something does not work
+description: The setup is stuck, or the key does not open your target
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: In the app, open the menu (☰) and tap **Copy the diagnostic**, or tap **Stuck? Copy the diagnostic** at the bottom of any setup step. It contains your phone model, system version and the state of each step, never the app or link you chose.
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Diagnostic
+      description: Paste it here.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The screen you are on, what you tapped, the message you see. A screenshot helps.
+    validations:
+      required: true

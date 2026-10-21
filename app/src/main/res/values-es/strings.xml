@@ -171,4 +171,7 @@
     <string name="wiz_notif_title">Activar las notificaciones</string>
     <string name="wiz_notif_text">El código de vinculación se escribe en una notificación de la app. Activa sus notificaciones y vuelve aquí.</string>
     <string name="wiz_notif_btn">Abrir notificaciones</string>
+    <string name="menu_diag">Copiar el diagnóstico</string>
+    <string name="diag_copied">Diagnóstico copiado: pégalo en una issue de GitHub</string>
+    <string name="diag_stuck">¿Atascado? Copia el diagnóstico para una issue de GitHub</string>
 </resources>

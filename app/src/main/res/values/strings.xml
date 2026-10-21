@@ -171,4 +171,8 @@
     <string name="wiz_notif_title">Turn on notifications</string>
     <string name="wiz_notif_text">The pairing code is typed in a notification of the app. Turn on its notifications, then come back here.</string>
     <string name="wiz_notif_btn">Open notifications</string>
+    <string name="menu_diag">Copy the diagnostic</string>
+    <string name="diag_copied">Diagnostic copied: paste it in a GitHub issue</string>
+    <string name="diag_stuck">Stuck? Copy the diagnostic for a GitHub issue</string>
+    <string name="tile_label" translatable="false">SnapKey</string>
 </resources>
