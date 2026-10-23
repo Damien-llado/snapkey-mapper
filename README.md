@@ -164,6 +164,10 @@ The full edition downloads its three libraries from Maven Central, Google and Ji
 
 To sign the release, set `SNAPKEY_KEYSTORE` (path) and `SNAPKEY_KEY_PASSWORD`; the key alias is `snapkey`. Without them you get an unsigned APK.
 
+## Support the project
+
+SnapKey Mapper is free and will stay free. If it saves you time, you can [sponsor it on GitHub](https://github.com/sponsors/Damien-llado). A star or a bug report helps too.
+
 ## License
 
 MIT, see [LICENSE](LICENSE).
