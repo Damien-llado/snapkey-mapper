@@ -32,7 +32,13 @@ public class ListenService extends Service {
     private volatile int presses;
     private volatile boolean stopRequested;
     private final Handler handler = new Handler(Looper.getMainLooper());
-    private final Runnable pendingSingle = () -> fire("single");
+    private static final String[] SERIES = {"", "single", "double", "triple"};
+    private volatile int count; // short presses in the current series
+    private final Runnable pending = () -> {
+        int n = count;
+        count = 0;
+        if (n > 0) fire(SERIES[n]);
+    };
 
     /** Opens the target of this gesture, if it has one, and says so in the notification. */
     private void fire(String gesture) {
@@ -77,22 +83,20 @@ public class ListenService extends Service {
                     long previous = lastRelease;
                     lastRelease = release;
                     boolean isLong = release - press >= 500;
+                    handler.removeCallbacks(pending);
                     if (isLong) {
-                        handler.removeCallbacks(pendingSingle);
+                        count = 0; // a long press ends a series of short presses
                         fire("long");
-                    } else if (handler.hasCallbacks(pendingSingle) && press - previous <= 600) {
-                        handler.removeCallbacks(pendingSingle); // second press in time: a double press
-                        lastRelease = 0; // a third press starts over
-                        fire("double");
-                    } else {
-                        if (handler.hasCallbacks(pendingSingle)) { // the press before was too far from this one: it was a single press
-                            handler.removeCallbacks(pendingSingle);
-                            fire("single");
-                        }
-                        // a single press waits to see whether a second one follows (a bit more than 600 ms: the log comes late)
-                        if (Prefs.hasTarget(this, "double")) handler.postDelayed(pendingSingle, 700);
-                        else fire("single");
+                        return;
                     }
+                    // a short press within 600 ms of the one before adds to the series; otherwise the series before was complete
+                    if (count > 0 && press - previous > 600) fire(SERIES[Math.min(count, 3)]);
+                    count = count > 0 && press - previous <= 600 ? Math.min(count + 1, 3) : 1;
+                    // wait (a bit more than 600 ms: the log comes late) only if a longer series opens something
+                    boolean longer = false;
+                    for (int n = count + 1; n <= 3; n++) longer |= Prefs.hasTarget(this, SERIES[n]);
+                    if (longer) handler.postDelayed(pending, 700);
+                    else pending.run();
                 }, () -> {
                     if (stopRequested) return;
                     warnStopped(this);
@@ -117,7 +121,7 @@ public class ListenService extends Service {
     public void onDestroy() {
         running = false;
         stopRequested = true;
-        handler.removeCallbacks(pendingSingle);
+        handler.removeCallbacks(pending);
         if (log != null) log.destroy();
         super.onDestroy();
     }

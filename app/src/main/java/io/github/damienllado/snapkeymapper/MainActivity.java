@@ -189,7 +189,7 @@ public class MainActivity extends Activity {
         card.addView(Ui.title(this, getString(R.string.gesture_title)));
         Ui.add(card, Ui.body(this, getString(R.string.gesture_help)), 4);
         int current = java.util.Arrays.asList(GESTURES).indexOf(Prefs.gesture(this));
-        Ui.add(card, new Ui.Segmented(this, new String[]{getString(R.string.gesture_single), getString(R.string.gesture_double), getString(R.string.gesture_long)}, Math.max(current, 0),
+        Ui.add(card, new Ui.Segmented(this, new String[]{getString(R.string.gesture_single), getString(R.string.gesture_double), getString(R.string.gesture_triple), getString(R.string.gesture_long)}, Math.max(current, 0),
                 i -> { Prefs.gesture(this, GESTURES[i]); refresh(); }), 12); // each press has its own target, shown below
         gestureCard = Ui.add(top, card, 14);
     }

@@ -40,9 +40,10 @@
     <string name="target_clear">Remove</string>
     <string name="native_long_used">ColorOS already uses the long press of the Snap Key for its own action. If you choose something here, both will run: set the key\'s action to None in the phone settings first.</string>
     <string name="gesture_title">Gesture</string>
-    <string name="gesture_help">Each press can open something different: pick one, then choose below what it opens. When two presses open something, a single press waits a split second to tell them apart.</string>
+    <string name="gesture_help">Each press can open something different: pick one, then choose below what it opens. When two or three presses open something, a shorter series waits a split second to tell them apart.</string>
     <string name="gesture_single">One press</string>
     <string name="gesture_double">Two presses</string>
+    <string name="gesture_triple">Three presses</string>
     <string name="gesture_long">Long press</string>
     <string name="finder_title">Another phone? Find your key</string>
     <string name="finder_help">The Find X9 key is already known. On another phone: start the capture, press the side key 2 or 3 times, stop, then tap the line that comes back at every press. The capture can contain personal information from other apps: check it before sharing it.</string>

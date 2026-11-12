@@ -40,9 +40,10 @@
     <string name="target_clear">移除</string>
     <string name="native_long_used">ColorOS 已将 Snap 键的长按用于自身功能。如果在这里选择内容，两者都会执行：请先在手机设置中将按键功能设为无。</string>
     <string name="gesture_title">手势</string>
-    <string name="gesture_help">每种按法都可以打开不同的内容：先选一种，再在下方选择它打开什么。如果双击设置了内容，单击会稍等片刻以区分两者。</string>
+    <string name="gesture_help">每种按法都可以打开不同的内容：先选一种，再在下方选择它打开什么。如果双击或三击设置了内容，较少的按法会稍等片刻以区分它们。</string>
     <string name="gesture_single">单击</string>
     <string name="gesture_double">双击</string>
+    <string name="gesture_triple">三击</string>
     <string name="gesture_long">长按</string>
     <string name="finder_title">其他手机？找到你的按键</string>
     <string name="finder_help">Find X9 的按键已经识别。在其他手机上：开始捕获，按侧键 2 到 3 次，停止，然后点每次按键都会出现的那一行。捕获内容可能包含其他应用的个人信息，分享前请先检查。</string>

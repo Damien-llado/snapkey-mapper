@@ -40,9 +40,10 @@
     <string name="target_clear">Retirer</string>
     <string name="native_long_used">ColorOS utilise déjà l\'appui long de la Snap Key pour sa propre action. Si vous choisissez quelque chose ici, les deux se lanceront : mettez d\'abord l\'action de la touche sur Aucune dans les paramètres du téléphone.</string>
     <string name="gesture_title">Geste</string>
-    <string name="gesture_help">Chaque appui peut ouvrir autre chose : choisissez-en un, puis ce qu\'il ouvre ci-dessous. Quand le double appui ouvre quelque chose, l\'appui simple attend une fraction de seconde pour les distinguer.</string>
+    <string name="gesture_help">Chaque appui peut ouvrir autre chose : choisissez-en un, puis ce qu\'il ouvre ci-dessous. Quand deux ou trois appuis ouvrent quelque chose, une série plus courte attend une fraction de seconde pour les distinguer.</string>
     <string name="gesture_single">Un appui</string>
     <string name="gesture_double">Deux appuis</string>
+    <string name="gesture_triple">Trois appuis</string>
     <string name="gesture_long">Appui long</string>
     <string name="finder_title">Un autre téléphone ? Trouvez votre touche</string>
     <string name="finder_help">La touche du Find X9 est déjà connue. Sur un autre téléphone : lancez la capture, appuyez 2 ou 3 fois sur la touche latérale, arrêtez, puis touchez la ligne qui revient à chaque appui. La capture peut contenir des informations personnelles venant d\'autres applis : vérifiez-la avant de la partager.</string>

@@ -40,9 +40,10 @@
     <string name="target_clear">Remover</string>
     <string name="native_long_used">O ColorOS já usa a pressão longa da Tecla Snap para a própria ação. Se você escolher algo aqui, as duas vão rodar: primeiro coloque a ação da tecla em Nenhuma nas configurações do telefone.</string>
     <string name="gesture_title">Gesto</string>
-    <string name="gesture_help">Cada pressão pode abrir algo diferente: escolha uma e, abaixo, o que ela abre. Se a pressão dupla abre algo, a pressão simples espera uma fração de segundo para diferenciá-las.</string>
+    <string name="gesture_help">Cada pressão pode abrir algo diferente: escolha uma e, abaixo, o que ela abre. Se duas ou três pressões abrem algo, uma série mais curta espera uma fração de segundo para diferenciá-las.</string>
     <string name="gesture_single">Uma pressão</string>
     <string name="gesture_double">Duas pressões</string>
+    <string name="gesture_triple">Três pressões</string>
     <string name="gesture_long">Pressão longa</string>
     <string name="finder_title">Outro celular? Encontre sua tecla</string>
     <string name="finder_help">A tecla do Find X9 já é conhecida. Em outro celular: inicie a captura, pressione a tecla lateral 2 ou 3 vezes, pare e toque na linha que volta a cada pressão. A captura pode conter informações pessoais de outros apps: confira antes de compartilhar.</string>

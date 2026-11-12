@@ -34,7 +34,7 @@ final class Diagnostic {
                 + "\nLog permission: " + s[0] + ", overlay: " + s[1] + ", battery: " + s[2] + ", native key off: " + s[3]
                 + "\nSkipped checks: " + skipped(c)
                 + "\nLast setup message: " + scrub(Prefs.setupResult(c)) + (Prefs.refused(c) ? " (refused by ColorOS)" : "")
-                + "\nListening: " + ListenService.running + ", targets: single " + Prefs.hasTarget(c, "single") + ", double " + Prefs.hasTarget(c, "double") + ", long " + Prefs.hasTarget(c, "long")
+                + "\nListening: " + ListenService.running + ", targets: single " + Prefs.hasTarget(c, "single") + ", double " + Prefs.hasTarget(c, "double") + ", triple " + Prefs.hasTarget(c, "triple") + ", long " + Prefs.hasTarget(c, "long")
                 + "\nKey line: " + Prefs.pattern(c) + ", gesture shown: " + Prefs.gesture(c);
     }
 

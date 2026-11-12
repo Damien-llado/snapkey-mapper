@@ -18,7 +18,7 @@ final class Prefs {
         return c.getSharedPreferences("settings", Context.MODE_PRIVATE);
     }
 
-    static final String[] GESTURES = {"single", "double", "long"};
+    static final String[] GESTURES = {"single", "double", "triple", "long"};
 
     /** Each gesture has its own target, kept under "<gesture>.<name>"; the app, recipe and link screens set the gesture shown on the home screen. */
     private static String k(Context c, String gesture, String name) {
@@ -62,7 +62,7 @@ final class Prefs {
     }
     static boolean active(Context c) { return p(c).getBoolean("active", false); }
     static void active(Context c, boolean active) { p(c).edit().putBoolean("active", active).apply(); }
-    /** The gesture shown on the home screen: "single", "double" or "long". */
+    /** The gesture shown on the home screen: "single", "double", "triple" or "long". */
     static String gesture(Context c) { return p(c).getString("gesture", "double"); }
     static void gesture(Context c, String gesture) { p(c).edit().putString("gesture", gesture).apply(); }
     /** The long press of the Snap Key runs a ColorOS action (ring mode, flashlight...): read in the phone settings, false if unreadable. */
