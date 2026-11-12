@@ -118,10 +118,11 @@
       <p class="eyebrow"><span class="dot"></span>Open source · OPPO Find X9-serie · Zonder root</p>
       <h1>Pas de Snap Key van je OPPO aan en open <em>elke app</em></h1>
       <p class="say">Druk op de toets en je zit in <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper maakt van de Snap Key van de Find X9 en Find X9 Pro een snelkoppeling naar de app of link die jij kiest. Eén keer drukken, twee keer drukken of lang drukken.</p>
+      <p class="lead">SnapKey Mapper maakt van de Snap Key van de Find X9 en Find X9 Pro een snelkoppeling naar de apps of links die jij kiest. Eén keer drukken, twee keer drukken of lang drukken: elk gebaar kan iets anders openen.</p>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
           <svg aria-hidden="true"><use href="#g-down"/></svg>Download de APK
+          <span class="stars" hidden><span data-downloads>0</span> downloads</span>
         </a>
         <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper">
           <svg aria-hidden="true"><use href="#g-gh"/></svg>Ster op GitHub
@@ -359,7 +360,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS logt elke druk</h3><p>Het systeemlogboek krijgt een regel met <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper leest het logboek, ziet die regel en opent je app of link.</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>Geen root, geen toegankelijkheid</h3><p>Voor het lezen van het logboek is één toestemming nodig, <code>READ_LOGS</code>, eenmalig gegeven met één commando. Die blijft na een herstart.</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Niets verzameld</h3><p>In de app: geen account, geen tracker, geen advertenties. Het bewaart alleen je doel, de naam van de toets en het gebaar, op je telefoon. De lite-editie heeft helemaal geen internettoestemming, dus Android laat ze zelf geen netwerkverbindingen openen.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Niets verzameld</h3><p>In de app: geen account, geen tracker, geen advertenties. Het bewaart alleen je doelen, de naam van de toets en de gebaren, op je telefoon. De lite-editie heeft helemaal geen internettoestemming, dus Android laat ze zelf geen netwerkverbindingen openen.</p></li>
     </ul>
   </section>
 
@@ -413,7 +414,7 @@
       </li>
       <li>
         <h3>Kies wat de Snap Key opent</h3>
-        <p>Kies een geïnstalleerde app of plak een link (een webadres, een deeplink of een <code>intent:</code>-link). Kies daarna één keer drukken (het snelst), twee keer drukken (een druk in je broekzak opent nooit iets) of lang drukken (een halve seconde), en tik op <em>Testen</em> om te zien of het opent.</p>
+        <p>Kies een geïnstalleerde app of plak een link (een webadres, een deeplink of een <code>intent:</code>-link). Stel daarna voor elk gewenst gebaar een doel in: één keer drukken (het snelst), twee keer drukken (een druk in je broekzak opent nooit iets) of lang drukken (een halve seconde), en tik op <em>Testen</em> om te zien of het opent. Elk gebaar kan iets anders openen. Is twee keer drukken ingesteld, dan wacht één keer drukken een fractie van een seconde om ze te onderscheiden; anders gaat het meteen af.</p>
       </li>
       <li>
         <h3>Automatisch luisteren</h3>
@@ -444,7 +445,7 @@
     <p class="kicker">FAQ</p>
     <h2 id="faq-h">Vragen</h2>
 
-    <details><summary>Kan de Snap Key elke app openen op de Find X9 Pro?</summary><div><p>Niet met alleen de instellingen van OPPO: ColorOS biedt een vaste lijst acties. Met SnapKey Mapper wel: elke geïnstalleerde app of elke link, met één keer, twee keer of lang drukken.</p></div></details>
+    <details><summary>Kan de Snap Key elke app openen op de Find X9 Pro?</summary><div><p>Niet met alleen de instellingen van OPPO: ColorOS biedt een vaste lijst acties. Met SnapKey Mapper wel: elke geïnstalleerde app of elke link, en bij één keer, twee keer en lang drukken telkens een andere.</p></div></details>
 
     <details><summary>Heb ik root nodig?</summary><div><p>Nee. De app heeft één toestemming nodig, <code>READ_LOGS</code>, die je in Android met een ADB-commando kunt geven, zonder root en zonder de bootloader te ontgrendelen.</p></div></details>
 
@@ -511,8 +512,9 @@
       <h2 id="final">Maak de Snap Key van jou</h2>
       <p>Gratis en open source.</p>
       <div class="ctas">
-        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>Download de APK</a>
+        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>Download de APK <span class="stars" hidden><span data-downloads>0</span> downloads</span></a>
         <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper"><svg aria-hidden="true"><use href="#g-gh"/></svg>Lees de code <span class="stars">★ <span data-stars>0</span></span></a>
+        <a class="btn ghost" href="https://github.com/sponsors/Damien-llado">♥ Sponsor</a>
       </div>
     </div>
   </section>

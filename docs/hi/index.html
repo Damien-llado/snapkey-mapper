@@ -118,10 +118,11 @@
       <p class="eyebrow"><span class="dot"></span>ओपन सोर्स · OPPO Find X9 सीरीज़ · बिना root</p>
       <h1>OPPO Snap Key बदलें: बटन से <em>कोई भी ऐप</em> खोलें</h1>
       <p class="say">बटन दबाएँ और खुल जाए <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper, Find X9 और Find X9 Pro के Snap Key को आपके चुने हुए ऐप या लिंक का लॉन्चर बना देता है। एक बार, दो बार या देर तक दबाएँ।</p>
+      <p class="lead">SnapKey Mapper, Find X9 और Find X9 Pro के Snap Key को आपके चुने हुए ऐप या लिंक का लॉन्चर बना देता है। एक बार, दो बार या देर तक दबाएँ: हर जेस्चर कुछ अलग खोल सकता है।</p>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
           <svg aria-hidden="true"><use href="#g-down"/></svg>APK डाउनलोड करें
+          <span class="stars" hidden><span data-downloads>0</span> डाउनलोड</span>
         </a>
         <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper">
           <svg aria-hidden="true"><use href="#g-gh"/></svg>GitHub पर स्टार दें
@@ -359,7 +360,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS हर दबाव लॉग करता है</h3><p>सिस्टम लॉग में <code>KEYCODE_ACTION_BUTTON_CLICK</code> वाली एक लाइन आती है। SnapKey Mapper लॉग पढ़ता है, वह लाइन पहचानता है और आपका ऐप या लिंक खोल देता है।</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>बिना root, बिना Accessibility</h3><p>लॉग पढ़ने के लिए एक ही अनुमति चाहिए, <code>READ_LOGS</code>, जो एक कमांड से एक बार दी जाती है। रीबूट के बाद भी बनी रहती है।</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>कोई डेटा इकट्ठा नहीं</h3><p>ऐप में: न अकाउंट, न ट्रैकर, न विज्ञापन। यह सिर्फ़ आपका टारगेट, बटन का नाम और जेस्चर रखता है, वह भी आपके फ़ोन पर। lite एडिशन में इंटरनेट की अनुमति है ही नहीं, इसलिए Android उसे खुद नेटवर्क कनेक्शन खोलने नहीं देता।</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>कोई डेटा इकट्ठा नहीं</h3><p>ऐप में: न अकाउंट, न ट्रैकर, न विज्ञापन। यह सिर्फ़ आपके टारगेट, बटन का नाम और जेस्चर रखता है, वह भी आपके फ़ोन पर। lite एडिशन में इंटरनेट की अनुमति है ही नहीं, इसलिए Android उसे खुद नेटवर्क कनेक्शन खोलने नहीं देता।</p></li>
     </ul>
   </section>
 
@@ -413,7 +414,7 @@
       </li>
       <li>
         <h3>चुनें कि Snap Key क्या खोले</h3>
-        <p>कोई इंस्टॉल किया हुआ ऐप चुनें, या लिंक पेस्ट करें (वेब पता, deep link या <code>intent:</code> लिंक)। फिर चुनें: एक बार दबाना (सबसे तेज़), दो बार दबाना (जेब में दबने से कभी कुछ नहीं खुलता) या देर तक दबाना (आधा सेकंड), और खुलता है या नहीं, यह जाँचने के लिए <em>टेस्ट</em> पर टैप करें।</p>
+        <p>कोई इंस्टॉल किया हुआ ऐप चुनें, या लिंक पेस्ट करें (वेब पता, deep link या <code>intent:</code> लिंक)। फिर जितने जेस्चर चाहें, हर एक के लिए टारगेट तय करें: एक बार दबाना (सबसे तेज़), दो बार दबाना (जेब में दबने से कभी कुछ नहीं खुलता) या देर तक दबाना (आधा सेकंड), और खुलता है या नहीं, यह जाँचने के लिए <em>टेस्ट</em> पर टैप करें। हर जेस्चर कुछ अलग खोल सकता है। दो बार दबाना सेट हो, तो एक बार दबाना दोनों में फ़र्क करने के लिए सेकंड के एक अंश तक रुकता है; वरना वह तुरंत चल पड़ता है।</p>
       </li>
       <li>
         <h3>अपने आप सुनना</h3>
@@ -444,7 +445,7 @@
     <p class="kicker">FAQ</p>
     <h2 id="faq-h">सवाल-जवाब</h2>
 
-    <details><summary>क्या Find X9 Pro पर Snap Key कोई भी ऐप खोल सकता है?</summary><div><p>सिर्फ़ OPPO की सेटिंग से नहीं: ColorOS ऐक्शन की एक तय लिस्ट देता है। SnapKey Mapper के साथ हाँ: कोई भी इंस्टॉल किया ऐप या कोई भी लिंक, एक बार, दो बार या देर तक दबाने पर।</p></div></details>
+    <details><summary>क्या Find X9 Pro पर Snap Key कोई भी ऐप खोल सकता है?</summary><div><p>सिर्फ़ OPPO की सेटिंग से नहीं: ColorOS ऐक्शन की एक तय लिस्ट देता है। SnapKey Mapper के साथ हाँ: कोई भी इंस्टॉल किया ऐप या कोई भी लिंक, और एक बार, दो बार व देर तक दबाने पर हर बार अलग।</p></div></details>
 
     <details><summary>क्या root चाहिए?</summary><div><p>नहीं। ऐप को एक अनुमति चाहिए, <code>READ_LOGS</code>, जिसे Android एक ADB कमांड से देने देता है, बिना root और बिना बूटलोडर अनलॉक किए।</p></div></details>
 
@@ -511,8 +512,9 @@
       <h2 id="final">Snap Key को अपना बनाएँ</h2>
       <p>मुफ़्त और ओपन सोर्स।</p>
       <div class="ctas">
-        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>APK डाउनलोड करें</a>
+        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>APK डाउनलोड करें <span class="stars" hidden><span data-downloads>0</span> डाउनलोड</span></a>
         <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper"><svg aria-hidden="true"><use href="#g-gh"/></svg>कोड पढ़ें <span class="stars">★ <span data-stars>0</span></span></a>
+        <a class="btn ghost" href="https://github.com/sponsors/Damien-llado">♥ Sponsor</a>
       </div>
     </div>
   </section>

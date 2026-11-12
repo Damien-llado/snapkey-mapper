@@ -118,17 +118,18 @@
       <p class="eyebrow"><span class="dot"></span>Open source · OPPO Find X9 · Sans root</p>
       <h1>Reconfigurez la touche Snap Key d’OPPO pour ouvrir <em>n’importe quelle appli</em></h1>
       <p class="say">Un appui, et vous voilà dans <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper transforme la touche Snap Key des Find X9 et Find X9 Pro en raccourci vers l’appli ou le lien de votre choix. Appui simple, double appui ou appui long.</p>
+      <p class="lead">SnapKey Mapper transforme la touche Snap Key des Find X9 et Find X9 Pro en raccourci vers les applis ou les liens de votre choix. Appui simple, double appui ou appui long : chaque geste peut ouvrir quelque chose de différent.</p>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
           <svg aria-hidden="true"><use href="#g-down"/></svg>Télécharger l’APK
+          <span class="stars" hidden><span data-downloads>0</span> téléchargements</span>
         </a>
         <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper">
           <svg aria-hidden="true"><use href="#g-gh"/></svg>Une étoile sur GitHub
           <span class="stars" aria-label="Étoiles GitHub">★ <span data-stars>0</span></span>
         </a>
       </div>
-      <p class="meta">Version 1.0.8 · Android 11+ · environ 12 Mo · MIT · testé sur Find X9 Pro, ColorOS 16</p>
+      <p class="meta">Version 1.0.9 · Android 11+ · environ 12 Mo · MIT · testé sur Find X9 Pro, ColorOS 16</p>
     </div>
 
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
@@ -359,7 +360,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS note chaque appui</h3><p>Le journal système reçoit une ligne avec <code>KEYCODE_ACTION_BUTTON_CLICK</code>. SnapKey Mapper lit le journal, repère cette ligne et ouvre votre appli ou votre lien.</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>Sans root, sans accessibilité</h3><p>Lire le journal demande une seule autorisation, <code>READ_LOGS</code>, accordée une fois par une seule commande. Elle reste après un redémarrage.</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Aucune collecte</h3><p>Dans l’appli : pas de compte, pas de traceur, pas de pub. Elle ne garde que votre cible, le nom de la touche et le geste, sur votre téléphone. L’édition lite n’a aucune autorisation Internet : Android ne la laisse pas ouvrir elle-même de connexions réseau.</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>Aucune collecte</h3><p>Dans l’appli : pas de compte, pas de traceur, pas de pub. Elle ne garde que vos cibles, le nom de la touche et les gestes, sur votre téléphone. L’édition lite n’a aucune autorisation Internet : Android ne la laisse pas ouvrir elle-même de connexions réseau.</p></li>
     </ul>
   </section>
 
@@ -413,7 +414,7 @@
       </li>
       <li>
         <h3>Choisissez ce que la Snap Key ouvre</h3>
-        <p>Choisissez une appli installée, ou collez un lien (une adresse web, un lien profond ou un lien <code>intent:</code>). Choisissez ensuite l’appui simple (le plus rapide), le double appui (un appui dans la poche n’ouvre jamais rien) ou l’appui long (une demi-seconde), puis touchez <em>Tester</em> pour vérifier que ça s’ouvre.</p>
+        <p>Choisissez une appli installée, ou collez un lien (une adresse web, un lien profond ou un lien <code>intent:</code>). Réglez ensuite une cible pour chaque geste voulu : l’appui simple (le plus rapide), le double appui (un appui dans la poche n’ouvre jamais rien) ou l’appui long (une demi-seconde), puis touchez <em>Tester</em> pour vérifier que ça s’ouvre. Chaque geste peut ouvrir autre chose. Quand le double appui est réglé, l’appui simple attend une fraction de seconde pour les distinguer ; sinon il part tout de suite.</p>
       </li>
       <li>
         <h3>Écoute automatique</h3>
@@ -444,7 +445,7 @@
     <p class="kicker">FAQ</p>
     <h2 id="faq-h">Questions</h2>
 
-    <details><summary>La Snap Key peut-elle ouvrir n’importe quelle appli sur le Find X9 Pro ?</summary><div><p>Pas avec les seuls réglages d’OPPO : ColorOS propose une liste d’actions fixe. Avec SnapKey Mapper, oui : n’importe quelle appli installée ou n’importe quel lien, en appui simple, double ou long.</p></div></details>
+    <details><summary>La Snap Key peut-elle ouvrir n’importe quelle appli sur le Find X9 Pro ?</summary><div><p>Pas avec les seuls réglages d’OPPO : ColorOS propose une liste d’actions fixe. Avec SnapKey Mapper, oui : n’importe quelle appli installée ou n’importe quel lien, et une différente en appui simple, en double appui et en appui long.</p></div></details>
 
     <details><summary>Faut-il rooter le téléphone ?</summary><div><p>Non. L’appli a besoin d’une seule autorisation, <code>READ_LOGS</code>, qu’Android permet d’accorder par une commande ADB, sans root et sans déverrouiller le bootloader.</p></div></details>
 
@@ -511,8 +512,9 @@
       <h2 id="final">Faites de la Snap Key votre touche</h2>
       <p>Gratuit et open source.</p>
       <div class="ctas">
-        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>Télécharger l’APK</a>
+        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>Télécharger l’APK <span class="stars" hidden><span data-downloads>0</span> téléchargements</span></a>
         <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper"><svg aria-hidden="true"><use href="#g-gh"/></svg>Lire le code <span class="stars">★ <span data-stars>0</span></span></a>
+        <a class="btn ghost" href="https://github.com/sponsors/Damien-llado">♥ Sponsor</a>
       </div>
     </div>
   </section>

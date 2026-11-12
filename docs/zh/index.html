@@ -118,10 +118,11 @@
       <p class="eyebrow"><span class="dot"></span>开源 · OPPO Find X9 系列 · 无需 root</p>
       <h1>OPPO Snap Key 自定义改键，一键打开<em>任意应用</em></h1>
       <p class="say">按一下，直达 <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper 把 Find X9 和 Find X9 Pro 的 Snap Key 侧键变成快捷启动键，打开你选的应用或链接。单击、双击、长按都行。</p>
+      <p class="lead">SnapKey Mapper 把 Find X9 和 Find X9 Pro 的 Snap Key 侧键变成快捷启动键，打开你选的应用或链接。单击、双击、长按都行，每种手势还能打开不同的东西。</p>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
           <svg aria-hidden="true"><use href="#g-down"/></svg>下载 APK
+          <span class="stars" hidden><span data-downloads>0</span> 次下载</span>
         </a>
         <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper">
           <svg aria-hidden="true"><use href="#g-gh"/></svg>在 GitHub 点星
@@ -359,7 +360,7 @@
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS 会记录每一次按键</h3><p>系统日志里会出现一行 <code>KEYCODE_ACTION_BUTTON_CLICK</code>。SnapKey Mapper 读取日志，发现这一行，就打开你的应用或链接。</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>无需 root，不用无障碍</h3><p>读取日志只需要一个权限 <code>READ_LOGS</code>，用一条命令授予一次即可，重启后依然有效。</p></li>
-      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>不收集任何数据</h3><p>在应用里：没有账号，没有追踪，没有广告。它只在你手机上保存目标、按键名称和手势。精简版完全没有联网权限，Android 本身不允许它自行建立网络连接。</p></li>
+      <li><svg aria-hidden="true"><use href="#g-eye"/></svg><h3>不收集任何数据</h3><p>在应用里：没有账号，没有追踪，没有广告。它只在你手机上保存各个目标、按键名称和各种手势。精简版完全没有联网权限，Android 本身不允许它自行建立网络连接。</p></li>
     </ul>
   </section>
 
@@ -413,7 +414,7 @@
       </li>
       <li>
         <h3>选择 Snap Key 打开什么</h3>
-        <p>选一个已安装的应用，或粘贴一个链接（网址、深层链接或 <code>intent:</code> 链接）。然后选择单击（最快）、双击（放在口袋里误触永远不会打开任何东西）或长按（半秒），再点 <em>测试</em> 确认能打开。</p>
+        <p>选一个已安装的应用，或粘贴一个链接（网址、深层链接或 <code>intent:</code> 链接）。然后给想用的每种手势分别设置目标：单击（最快）、双击（放在口袋里误触永远不会打开任何东西）或长按（半秒），再点 <em>测试</em> 确认能打开。每种手势可以打开不同的东西。设置了双击后，单击会等一小会儿（不到一秒）来区分两者；否则单击立即触发。</p>
       </li>
       <li>
         <h3>自动监听</h3>
@@ -444,7 +445,7 @@
     <p class="kicker">常见问题</p>
     <h2 id="faq-h">问题</h2>
 
-    <details><summary>Find X9 Pro 的 Snap Key 能打开任意应用吗？</summary><div><p>只靠 OPPO 的设置不行：ColorOS 只提供固定的几个功能。用 SnapKey Mapper 就可以：任意已安装的应用或任意链接，单击、双击或长按都行。</p></div></details>
+    <details><summary>Find X9 Pro 的 Snap Key 能打开任意应用吗？</summary><div><p>只靠 OPPO 的设置不行：ColorOS 只提供固定的几个功能。用 SnapKey Mapper 就可以：任意已安装的应用或任意链接，而且单击、双击、长按可以各开不同的。</p></div></details>
 
     <details><summary>需要 root 吗？</summary><div><p>不需要。应用只需要一个权限 <code>READ_LOGS</code>，Android 允许你用一条 ADB 命令授予，无需 root，也无需解锁 Bootloader。</p></div></details>
 
@@ -511,8 +512,9 @@
       <h2 id="final">让 Snap Key 听你的</h2>
       <p>免费开源。</p>
       <div class="ctas">
-        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>下载 APK</a>
+        <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>下载 APK <span class="stars" hidden><span data-downloads>0</span> 次下载</span></a>
         <a class="btn ghost" href="https://github.com/Damien-llado/snapkey-mapper"><svg aria-hidden="true"><use href="#g-gh"/></svg>查看源代码 <span class="stars">★ <span data-stars>0</span></span></a>
+        <a class="btn ghost" href="https://github.com/sponsors/Damien-llado">♥ Sponsor</a>
       </div>
     </div>
   </section>

@@ -585,3 +585,11 @@ html:not(.js) .cc-reopen { display: none; }
 .nf h1 { font-family: var(--display); font-size: clamp(3rem, 12vw, 6rem); margin: 0; letter-spacing: -.03em; color: var(--accent); }
 .nf p { margin: 0; color: var(--muted); }
 .checks code { overflow-wrap: anywhere; }
+
+/* Narrow phones: the download buttons keep the count on the same line */
+@media (max-width: 480px) {
+  .btn { white-space: nowrap; padding-inline: 1rem; gap: .45rem; }
+  .btn .stars { font-size: .85rem; padding-left: .5rem; }
+}
+
+.stars[hidden] { display: none; }

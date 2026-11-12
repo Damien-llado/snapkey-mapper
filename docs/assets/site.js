@@ -14,7 +14,8 @@
   var key = 'skm-counts', now = Date.now(), api = 'https://api.github.com/repos/Damien-llado/snapkey-mapper';
   function show(c) {
     document.querySelectorAll('[data-stars]').forEach(function (e) { e.textContent = c.stars; });
-    document.querySelectorAll('[data-downloads]').forEach(function (e) { e.textContent = c.downloads; });
+    // le nombre de téléchargements n'apparaît sur le bouton que s'il a été lu (pas de « 0 » quand GitHub ne répond pas)
+    document.querySelectorAll('[data-downloads]').forEach(function (e) { e.textContent = c.downloads; if (c.downloads > 0) e.parentNode.hidden = false; });
   }
   try {
     var c = JSON.parse(localStorage.getItem(key) || 'null');
