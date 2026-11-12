@@ -548,8 +548,17 @@ footer ul { list-style: none; padding: 0; margin: .8rem 0; display: flex; flex-w
 details.more { margin: 1rem 0 0; }
 details.more summary { cursor: pointer; font-weight: 650; color: var(--accent); min-height: 44px; display: flex; align-items: center; }
 details.more[open] summary { margin-bottom: .2rem; }
-.dl-pill { display: none; align-items: center; gap: .4rem; min-height: 40px; padding: 0 .9rem; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 650; font-size: .92rem; text-decoration: none; }
+.dl-pill { display: inline-flex; white-space: nowrap; align-items: center; gap: .4rem; min-height: 40px; padding: 0 .9rem; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 650; font-size: .92rem; text-decoration: none; }
 .dl-pill svg { width: 16px; height: 16px; }
+.dl-pill .stars { border-color: color-mix(in oklab, var(--accent-ink) 30%, transparent); padding-left: .5rem; font-size: .85rem; }
+.dl-short, .dl-apk { display: none; }
+.brand { white-space: nowrap; }
+/* Bouton « Télécharger l'APK » du menu avec le nombre de téléchargements : libellé court et nombre seul quand la place manque */
+@media (max-width: 1099px) { .dl-long, .dl-word { display: none; } .dl-short { display: inline; } }
+/* Jusqu'à 900 px, les liens d'ancre laissent la place au bouton de téléchargement ; Sponsor passe dans le menu des langues */
+@media (max-width: 900px) { .nav-links { display: none; } .nav-end { margin-left: auto; } .lang .lang-sponsor { display: block; } }
+@media (max-width: 640px) { .dl-pill { display: none; } }
+@media (max-width: 420px) { .dl-short { display: none; } .dl-apk { display: inline; } }
 @media (max-width: 640px) {
   .past-hero .dl-pill { display: inline-flex; }
   .past-hero .gh-pill, .past-hero .lang { display: none; }
