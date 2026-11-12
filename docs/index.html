@@ -67,6 +67,7 @@
     <symbol id="g-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
     <symbol id="g-run" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
     <symbol id="g-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 2M5 4 3 6M19 4l2 2"/></symbol>
+    <symbol id="g-cam" viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h3l1.5-2.5h6L16.5 7h3A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.5"/></symbol>
     <symbol id="g-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol>
     <symbol id="g-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"/></symbol>
     <symbol id="g-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
@@ -96,11 +97,12 @@
       <a href="#examples">Examples</a>
       <a href="#setup">Setup</a>
       <a href="#faq">FAQ</a>
+      <a href="https://github.com/sponsors/Damien-llado">♥ Sponsor</a>
     </nav>
     <div class="nav-end">
       <details class="lang">
         <summary aria-label="Language">EN</summary>
-        <ul><li><a href="/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li></ul>
+        <ul><li><a href="/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li><li class="lang-sponsor"><a href="https://github.com/sponsors/Damien-llado">♥ Sponsor</a></li></ul>
       </details>
       <a class="dl-pill" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk"><svg aria-hidden="true"><use href="#g-down"/></svg>Download</a>
       <a class="gh-pill" href="https://github.com/Damien-llado/snapkey-mapper" aria-label="SnapKey Mapper on GitHub, star count">
@@ -301,6 +303,56 @@
     </ul>
   </section>
 
+  <section id="gestures" class="wide" aria-labelledby="ge-h">
+    <p class="kicker">Gestures</p>
+    <h2 id="ge-h">One key, three shortcuts</h2>
+    <p class="sub">Since version 1.0.9, single, double and long press each open their own target. Set one, two or all three.</p>
+    <ul class="gestures trio">
+      <li class="single" style="--h:#5B8DEF">
+        <div class="stage" aria-hidden="true"><div class="phone">
+          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
+          <div class="face"><div class="screen">
+            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="launch"><span class="launch-ico"><svg><use href="#g-cam"/></svg></span></div>
+          </div></div>
+        </div></div>
+        <div class="g"><i></i></div>
+        <h3>Single press</h3>
+        <p>The camera, in one press. When a double press is set, the single press waits a fraction of a second to tell them apart; otherwise it fires at once.</p>
+        <code>App: Camera</code>
+      </li>
+      <li class="double" style="--h:#D97757">
+        <div class="stage" aria-hidden="true"><div class="phone">
+          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
+          <div class="face"><div class="screen">
+            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="launch"><span class="launch-ico"><svg><use href="#b-claude"/></svg></span></div>
+          </div></div>
+        </div></div>
+        <div class="g g-double"><i></i><i></i></div>
+        <h3>Double press</h3>
+        <p>Your AI assistant, here Claude. A press in your pocket never opens it.</p>
+        <code>App: Claude</code>
+      </li>
+      <li class="long" style="--h:#E3B23C">
+        <div class="stage" aria-hidden="true"><div class="phone">
+          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
+          <div class="face"><div class="screen">
+            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="launch"><span class="launch-ico"><svg><use href="#g-clock"/></svg></span><strong>25:00</strong></div>
+          </div></div>
+        </div></div>
+        <div class="g g-long"><i></i></div>
+        <h3>Long press</h3>
+        <p>Hold half a second and a 25-minute timer starts.</p>
+        <code data-copy="intent:#Intent;action=android.intent.action.SET_TIMER;i.android.intent.extra.alarm.LENGTH=1500;B.android.intent.extra.alarm.SKIP_UI=true;end">intent:#Intent;…LENGTH=1500;…</code>
+      </li>
+    </ul>
+  </section>
+
   <section id="claude" class="wide" aria-labelledby="cc-h">
     <div class="split">
       <div class="split-copy">
@@ -446,6 +498,8 @@
     <h2 id="faq-h">Questions</h2>
 
     <details><summary>Can the Snap Key open any app on the Find X9 Pro?</summary><div><p>Not with OPPO's settings alone: ColorOS offers a fixed list of actions. With SnapKey Mapper, yes: any installed app or any link, and a different one on each of single, double and long press.</p></div></details>
+
+    <details><summary>Can I set different actions for single, double and long press?</summary><div><p>Yes, since version 1.0.9: each gesture has its own target, an app or a link. When a double press is set, the single press waits a fraction of a second to tell them apart; otherwise it fires at once. To clear a gesture, pick it in the app and tap <em>Remove</em>.</p></div></details>
 
     <details><summary>Do I need root?</summary><div><p>No. The app needs one permission, <code>READ_LOGS</code>, which Android lets you grant with an ADB command, without root and without unlocking the bootloader.</p></div></details>
 

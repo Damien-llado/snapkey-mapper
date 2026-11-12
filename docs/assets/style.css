@@ -99,6 +99,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .lang ul { position: absolute; right: 0; top: 2.3rem; margin: 0; padding: .4rem 0; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; min-width: 10rem; box-shadow: var(--shadow); }
 .lang li a { display: block; padding: .35rem .9rem; text-decoration: none; color: var(--ink); }
 .lang li a[aria-current] { font-weight: 700; color: var(--accent); }
+.lang .lang-sponsor { display: none; margin-top: .3rem; padding-top: .3rem; border-top: 1px solid var(--line); }
 .gh-pill { display: inline-flex; align-items: center; gap: .4rem; padding: .3rem .7rem; border-radius: 999px; background: var(--ink); color: var(--bg); text-decoration: none; font-size: .9rem; font-weight: 600; font-variant-numeric: tabular-nums; }
 .gh-pill svg { width: 17px; height: 17px; }
 .gh-pill .star-n::before { content: "★ "; }
@@ -245,7 +246,7 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .tile:hover::after { opacity: 1; }
 .tile h3 { margin: .2rem 0 0; font-size: 1.12rem; }
 .tile p { margin: 0; color: var(--muted); font-size: .93rem; line-height: 1.5; }
-.tile > code { margin-top: auto; align-self: flex-start; max-width: 100%; font-size: .74rem; padding: .3em .6em; background: color-mix(in oklab, var(--ink) 6%, transparent); border: 1px solid var(--line); border-radius: 8px; }
+.tile > code, .trio li > code { margin-top: auto; align-self: flex-start; max-width: 100%; font-size: .74rem; padding: .3em .6em; background: color-mix(in oklab, var(--ink) 6%, transparent); border: 1px solid var(--line); border-radius: 8px; }
 .tile-top { display: flex; align-items: center; justify-content: space-between; }
 .ico { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; color: var(--fg, #fff); background: var(--h);
   box-shadow: inset 0 1px 0 rgb(255 255 255 / .3), 0 6px 14px -6px var(--h); }
@@ -398,6 +399,29 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 @keyframes hold { 0%, 10% { background-position: 100% 0; } 60%, 100% { background-position: 0 0; } }
 .cards svg { width: 30px; height: 30px; color: var(--accent); margin-bottom: .7rem; }
 
+/* Trois gestes : dans chaque carte, le téléphone du héros réduit par scale ; la touche s'allume une fois, deux fois ou longtemps, puis l'écran s'ouvre.
+   Boucle de 4 s. Sans animation (mouvement réduit), l'état final reste : touche allumée, écran ouvert. */
+.trio li { display: flex; flex-direction: column; gap: .55rem; }
+.trio .g { margin: 0; height: 24px; }
+.trio .stage { height: 220px; margin: 0 0 .3rem; animation: none; background: radial-gradient(closest-side, color-mix(in oklab, var(--h) 22%, transparent), transparent); }
+.trio .phone { position: absolute; left: calc(50% - 90px); top: calc(50% - 190px); width: 180px; scale: .55; }
+.trio .snapkey { left: -10px; width: 14px; box-shadow: 0 0 28px 4px #2FD39A; }
+.trio .snapkey, .trio .g i { animation: k1 4s ease-in-out infinite; }
+.trio .double .snapkey { animation-name: k2; }
+.trio .double .g i:nth-child(2) { animation-delay: .38s; }
+.trio .long .snapkey { animation-name: k3; }
+.trio .long .g i { animation: fill 4s ease-in-out infinite; background-position: 0 0; }
+.trio .launch { animation: scr 4s cubic-bezier(.2, .9, .25, 1) var(--o, .7s) infinite both; }
+.trio .double .launch { --o: 1.05s; } .trio .long .launch { --o: .95s; }
+.trio .launch-ico { width: 80px; height: 80px; border-radius: 24px; }
+.trio .launch-ico svg { width: 42px; height: 42px; }
+.trio .launch strong { font-size: 30px; }
+@keyframes k1 { 0%, 7%, 16.5%, 100% { opacity: .3; } 9%, 14.5% { opacity: 1; } }
+@keyframes k2 { 0%, 7%, 16.5%, 26.5%, 100% { opacity: .3; } 9%, 14.5%, 18.5%, 24.5% { opacity: 1; } }
+@keyframes k3 { 0%, 7%, 36%, 100% { opacity: .3; } 9%, 34% { opacity: 1; } }
+@keyframes fill { 0%, 9% { background-position: 100% 0; } 34%, 82% { background-position: 0 0; } 92%, 100% { background-position: 100% 0; } }
+@keyframes scr { 0% { opacity: 0; scale: .12; border-radius: 40px; } 10%, 68% { opacity: 1; scale: 1; border-radius: 0; } 76%, 100% { opacity: 0; } }
+
 /* Pourquoi */
 .narrow > p { margin: 0 0 1rem; }
 
@@ -484,6 +508,11 @@ footer ul { list-style: none; padding: 0; margin: .8rem 0; display: flex; flex-w
   .big { grid-row: auto; }
   .stage-label { display: none; }
 }
+/* Sous 760 px, le lien Sponsor ferait passer la nav sur deux lignes (pt-br jusqu'à 711 px) : il va dans le menu des langues */
+@media (max-width: 760px) {
+  .nav-links a:last-child { display: none; }
+  .lang .lang-sponsor { display: block; }
+}
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .nav-end { margin-left: auto; }
@@ -546,9 +575,9 @@ mark { background: color-mix(in oklab, var(--accent) 22%, transparent); color: i
 .copy-ico svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .console .copy-ico { color: var(--term-dim); }
 .console .copy-ico:hover { color: var(--term-ink); background: rgb(255 255 255 / .1); }
-.tile > .copybox { margin-top: auto; align-self: flex-start; max-width: 100%; }
-.tile .copybox > code { margin: 0; font-size: .74rem; padding: .3em 2.4rem .3em .6em; background: color-mix(in oklab, var(--ink) 6%, transparent); border: 1px solid var(--line); border-radius: 8px; }
-.tile .copy-ico { top: 3px; width: 28px; height: 28px; right: 3px; }
+.tile > .copybox, .trio .copybox { margin-top: auto; align-self: flex-start; max-width: 100%; }
+.tile .copybox > code, .trio .copybox > code { margin: 0; font-size: .74rem; padding: .3em 2.4rem .3em .6em; background: color-mix(in oklab, var(--ink) 6%, transparent); border: 1px solid var(--line); border-radius: 8px; }
+.tile .copy-ico, .trio .copy-ico { top: 3px; width: 28px; height: 28px; right: 3px; }
 .console-body .out .copybox { display: inline-block; max-width: 100%; }
 #setup .note { margin-top: 2.8rem; }
 @media (min-width: 900px) { #setup .note { margin-inline: 2.3rem; } }
