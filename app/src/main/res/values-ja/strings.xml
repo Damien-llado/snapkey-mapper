@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SnapKey Mapper</string>
+    <string name="state_setup">セットアップ：%2$d ステップ中 %1$d ステップ完了</string>
+    <string name="toast_cannot_open">開けません：%1$s</string>
+    <string name="toast_cannot_read">ログを読み取れません：%1$s</string>
+    <string name="toast_failed">失敗しました：%1$s</string>
+    <string name="notif_count">SnapKey Mapper が待機中：%1$d 回の押下を検出</string>
+    <string name="diag_error">エラー：%1$s</string>
+    <string name="setup_not_granted">未許可：%1$s</string>
+    <string name="state_listening">待機中：キーを押してください</string>
+    <string name="state_ready">準備完了</string>
+    <string name="state_choose">キーで開くものを選んでください</string>
+    <string name="btn_start">待機を開始</string>
+    <string name="btn_stop">待機を停止</string>
+    <string name="perm_title">権限</string>
+    <string name="perm_sub">スイッチは 3 つ、設定は一度だけです。キー自体にはほかに何も必要ありません。</string>
+    <string name="perm_auto_btn">ワイヤレス デバッグを開く</string>
+    <string name="perm_auto_help">Wi-Fi に接続してボタンをタップし、開発者オプションでワイヤレス デバッグをオンにします。「ペア設定コードによるデバイスのペア設定」をタップし、通知に 6 桁の数字を入力します。ColorOS では、先に「Disable system optimisation」をオンにしてください。</string>
+    <string name="perm_log">ログの読み取り</string>
+    <string name="perm_overlay">他のアプリの上に重ねて表示</string>
+    <string name="perm_battery">バッテリー制限なし</string>
+    <string name="perm_allow">許可</string>
+    <string name="perm_granted">許可済み</string>
+    <string name="perm_needed">必要</string>
+    <string name="perm_coloros">ColorOS では、アプリの設定でバッテリー使用量も「制限なし」にし、最近のアプリでこのアプリをロックしてください。</string>
+    <string name="perm_app_settings">アプリの設定を開く</string>
+    <string name="perm_by_hand">パソコンから adb で：</string>
+    <string name="perm_copy">コマンドをコピー</string>
+    <string name="toast_copied">コマンドをコピーしました</string>
+    <string name="perm_by_hand_or">または手動で：</string>
+    <string name="target_title">この押し方で開くもの</string>
+    <string name="target_link">リンク</string>
+    <string name="target_app">アプリ</string>
+    <string name="target_link_help">ウェブアドレス、ディープリンク、または intent: リンク</string>
+    <string name="app_choose">アプリを選択</string>
+    <string name="app_none">アプリが選択されていません</string>
+    <string name="dlg_choose_app">アプリを選択</string>
+    <string name="target_test">起動をテスト</string>
+    <string name="target_clear">削除</string>
+    <string name="listen_restart_help">以前は使えていたショートカットが動かなくなりましたか？このボタンをタップしてください。</string>
+    <string name="listen_restart">待機を再開</string>
+    <string name="native_long_used">ColorOS は Snap Key の長押しを独自の操作にすでに使っています。ここで何かを選ぶと両方が動作するため、先にスマートフォンの設定でキーの操作を「なし」にしてください。</string>
+    <string name="gesture_title">操作</string>
+    <string name="gesture_help">押し方ごとに別のものを開けます。押し方を選んでから、下で開くものを選んでください。2 回押しや 3 回押しに何かを割り当てると、それより短い押し方は区別のためにほんの一瞬待ちます。</string>
+    <string name="gesture_single">1 回</string>
+    <string name="gesture_double">2 回</string>
+    <string name="gesture_triple">3 回</string>
+    <string name="gesture_long">長押し</string>
+    <string name="finder_title">別のスマートフォン？キーを見つける</string>
+    <string name="finder_help">Find X9 のキーは登録済みです。別のスマートフォンでは、キャプチャを開始してサイドキーを 2〜3 回押し、停止してから、押すたびに出てくる行をタップします。キャプチャにはほかのアプリの個人情報が含まれることがあるため、共有する前に確認してください。</string>
+    <string name="capture_start">キャプチャを開始</string>
+    <string name="capture_stop">キャプチャを停止</string>
+    <string name="finder_all">すべての行を表示</string>
+    <string name="finder_save">キャプチャをファイルに保存</string>
+    <string name="finder_pattern">認識するパターン（行の一部。変化する数字は除く）</string>
+    <string name="toast_pattern_saved">パターンを保存しました。待機を開始できます</string>
+    <string name="toast_no_lines">行がありません。「すべての行を表示」にチェックを入れるか、権限を確認してください</string>
+    <string name="toast_saved">キャプチャを保存しました</string>
+    <string name="toast_choose_pattern">先にパターンを選んでください（メニュー › 別のスマートフォン）</string>
+    <string name="notif_listening_title">SnapKey Mapper が待機中</string>
+    <string name="notif_listening_text">サイドキーを押すと、設定したものが開きます</string>
+    <string name="notif_stopped_title">SnapKey Mapper は停止中</string>
+    <string name="notif_stopped_text">ここをタップすると待機を再開します</string>
+    <string name="diag_blocked">Android により起動がブロックされました</string>
+    <string name="diag_requested">起動を要求しました</string>
+    <string name="channel_listen">サイドキーの待機</string>
+    <string name="setup_waiting_title">セットアップ：ペア設定画面を待っています</string>
+    <string name="setup_waiting_text">開発者オプションでワイヤレス デバッグをオンにし、「ペア設定コードによるデバイスのペア設定」をタップしてください</string>
+    <string name="setup_pairing">ペア設定中…</string>
+    <string name="setup_wait">お待ちください</string>
+    <string name="setup_code_title">ここにペア設定コードを入力</string>
+    <string name="setup_code_text">通知を下に引き出し、Android に表示された 6 桁の数字を入力してください</string>
+    <string name="setup_fail_connect">ワイヤレス デバッグに接続できませんでした</string>
+    <string name="setup_refused">ColorOS に拒否されました。スマートフォンを英語に切り替え、「Disable system optimisation」をオンにして（設定で検索）、もう一度お試しください</string>
+    <string name="setup_notif_title">SnapKey Mapper のセットアップ</string>
+    <string name="setup_channel">セットアップ</string>
+    <string name="setup_enter_code">コードを入力</string>
+    <string name="setup_code_label">6 桁のコード</string>
+    <string name="setup_done">ログの読み取りを設定しました。ワイヤレス デバッグはオフにしてかまいません。</string>
+    <string name="err_invalid_intent">無効な intent リンク</string>
+    <string name="setup_fail_pair">ペア設定に失敗しました。アプリのセットアップ ボタンをもう一度タップし、「ペア設定コードによるデバイスのペア設定」をタップして新しいコードを入力してください。それでも失敗する場合は、ワイヤレス デバッグをオフにしてからオンにしてください。</string>
+    <string name="lang_title">言語</string>
+    <string name="library_open">ショートカット ライブラリを見る</string>
+    <string name="library_title">ショートカット ライブラリ</string>
+    <string name="library_intro">すぐに使えるショートカットをアプリ別にまとめています。1 つ選んで値を入力し、テストしてから Snap Key に設定してください。</string>
+    <string name="library_search">アプリや操作を検索</string>
+    <string name="library_count">ショートカット：%1$d 件</string>
+    <string name="library_not_installed">未インストール</string>
+    <string name="library_empty">検索に一致するものがありません。</string>
+    <string name="recipe_fields">入力する値</string>
+    <string name="recipe_link">最終的なリンク</string>
+    <string name="recipe_use">このショートカットを使う</string>
+    <string name="recipe_fill_all">先にすべての項目を入力してください。</string>
+    <string name="recipe_saved">開く対象として保存しました。</string>
+    <string name="recipe_missing">何も開きませんでした。アプリはインストールされていますか？</string>
+    <string name="recipe_source">公式ドキュメント</string>
+    <string name="menu">メニュー</string>
+    <string name="menu_help">ヘルプとウェブサイト</string>
+    <string name="help_url">https://remapsnapkey.com/ja/</string>
+    <string name="setup_title">セットアップ</string>
+    <string name="setup_intro">4 つのステップを一度だけ行います。完了したステップには自動でチェックが付きます。</string>
+    <string name="setup_continue">セットアップを続ける</string>
+    <string name="setup_other_way">別の方法：パソコンから</string>
+    <string name="setup_open_setting">設定を開く</string>
+    <string name="setup_native_title">スマートフォン本来の Snap Key 操作をオフ</string>
+    <string name="setup_open_phone_settings">スマートフォンの設定を開く</string>
+    <string name="setup_native_done">完了：Snap Key 単体では何も動作しません</string>
+    <string name="finder_intro">Find X9 のキーは登録済みなので、ここでは何もする必要はありません。別のスマートフォンでは、キーを押したときに Android がログに書き込む行をアプリが覚える必要があります。</string>
+    <string name="finder_privacy">キャプチャにはほかのアプリの個人情報が含まれることがあります。共有する前にファイルを確認してください。</string>
+    <string name="finder_need_log">先にログの読み取りが必要です。セットアップのステップ 1 を完了してください。</string>
+    <string name="app_search">アプリを検索</string>
+    <string name="target_link_enter">リンクを入力</string>
+    <string name="target_none">まだ何も選択されていません</string>
+    <string-array name="steps_log_auto">
+        <item>スマートフォンを Wi-Fi に接続します。</item>
+        <item>開発者オプションが表示されていない場合：設定 › デバイスについて › バージョン で、ビルド番号を 7 回タップします。</item>
+        <item>開発者オプションで「Disable system optimisation」（ColorOS）をオンにします。</item>
+        <item>下の「ログ読み取りを自動で設定」をタップします。</item>
+        <item>ワイヤレス デバッグをオンにし、「ペア設定コードによるデバイスのペア設定」をタップします。</item>
+        <item>通知を下に引き出し、SnapKey Mapper の通知に 6 桁の数字を入力します。</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>パソコンに Android platform-tools（adb）をインストールします。</item>
+        <item>開発者オプションで USB デバッグと「Disable system optimisation」（ColorOS）をオンにし、スマートフォンをケーブルで接続します。</item>
+        <item>パソコンで下のコマンドを実行します。</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>「設定を開く」をタップし、スイッチをオンにします。</item>
+        <item>スイッチがグレーになっている、またはアクセスが拒否されると表示される場合：「アプリの設定を開く」をタップし、右上の ⋮ › 「制限付き設定を許可」をタップしてから、ここに戻ります。</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>「許可」をタップして確定します。</item>
+        <item>ColorOS では、アプリの設定 › バッテリー使用量 › 「制限なし」も開き、最近のアプリでこのアプリをロックします。</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>スマートフォンの設定を開き、「Snap Key」を検索します。</item>
+        <item>スマートフォン本来の操作が同時に動かないように、操作なしに設定します。</item>
+        <item>下のチェックボックスにチェックを入れます。</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>「キャプチャを開始」をタップします。</item>
+        <item>数秒おきにキーを 3 回押します。</item>
+        <item>「キャプチャを停止」をタップします。</item>
+        <item>下のリストで、押すたびに出てきた行をタップします。その行がパターンになります。</item>
+        <item>ホームに戻って待機を開始し、キーを押して確認します。</item>
+    </string-array>
+    <string name="recipe_help">お使いのスマートフォンで動きませんか？パソコンで SnapKey Mapper プラグインを入れた Claude Code に頼んでください。USB ケーブルかワイヤレス デバッグで接続したスマートフォンで、動くリンクを見つけてテストします。</string>
+    <string name="setup_progress">ステップ %1$d / %2$d</string>
+    <string name="wiz_wifi_title">Wi-Fi に接続</string>
+    <string name="wiz_wifi_text">アプリはスマートフォンのワイヤレス デバッグを使ってログの権限を自分で取得します。これは Wi-Fi でしか動作しません。スマートフォンを接続してから、ここに戻ってください。</string>
+    <string name="wiz_wifi_btn">Wi-Fi を開く</string>
+    <string name="wiz_dev_title">開発者オプションをオンにする</string>
+    <string name="wiz_dev_text">ボタンをタップし、ビルド番号を 7 回タップします（ColorOS では バージョン）。開発者になったと Android に表示されたら、ここに戻ってください。</string>
+    <string name="wiz_dev_btn">デバイス情報を開く</string>
+    <string name="wiz_pair_title">アプリとスマートフォンをペア設定</string>
+    <string name="wiz_pair_text">1. ボタンをタップすると、ワイヤレス デバッグが開きます（開発者オプションの一覧が開いた場合は、スイッチではなく「ワイヤレス デバッグ」の文字をタップします）。\n2. オンにして、お使いのネットワークを許可します。\n3. 「ペア設定コードによるデバイスのペア設定」をタップします。\n4. SnapKey Mapper の通知が表示されます。矢印をタップして通知を展開し、「コードを入力」をタップして 6 桁の数字を入力します。これで完了です。あとはアプリが行います。</string>
+    <string name="wiz_sysopt_title">まず ColorOS の隠しスイッチを 1 つ</string>
+    <string name="wiz_sysopt_text">ColorOS では、隠しスイッチがオンになるまで権限がブロックされます。このスイッチはスマートフォンが英語のときにしか表示されません。\n1. スマートフォンを English に切り替えます（言語と地域）。\n2. 設定で「Disable system」を検索し、「Disable system optimisation」をオンにします（Turn on anyway）。\n3. ここに戻ります。セットアップ後は言語を元に戻してかまいません。</string>
+    <string name="wiz_sysopt_btn">言語と地域を開く</string>
+    <string name="wiz_sysopt_btn2">設定を開く</string>
+    <string name="wiz_sysopt_done">完了、続ける</string>
+    <string name="wiz_last">前回の試行：%1$s</string>
+    <string name="wiz_computer_text">lite 版はネットワークにアクセスできないため、権限はパソコンから一度だけ付与します。開発者オプションで USB デバッグをオンにし、スマートフォンをケーブルで接続して、このコマンドを実行してください。</string>
+    <string name="wiz_overlay_text">画面がオフのときや別のアプリを使っているときでも、キーで設定したものを開けるようにします。ボタンをタップし、一覧で SnapKey Mapper を選んで、スイッチをオンにしてください。</string>
+    <string name="wiz_restricted">スイッチがグレーになっている、または「アクセスが拒否されました」と表示されますか？Play ストア以外からインストールしたアプリでは、Android がこの設定をブロックします。アプリの設定を開き、右上の ⋮ をタップしてから「制限付き設定を許可」をタップし、戻ってきてください。</string>
+    <string name="wiz_battery_text">Android がバックグラウンドでアプリを停止しないようにします。ボタンをタップして確定してください。ColorOS では、最近のアプリでこのアプリをロックしてください。</string>
+    <string name="wiz_native_text">スマートフォン本来の Snap Key 操作が同時に動かないようにします。スマートフォンの設定で「Snap Key」を検索し、操作なしに設定してください。</string>
+    <string name="wiz_done_title">準備完了</string>
+    <string name="wiz_done_text">準備ができました。キーは自動で待機します。ワイヤレス デバッグはオフにしてかまいません。キーで開くものを選んでください。</string>
+    <string name="wiz_done_btn">続ける</string>
+    <string name="home_setup_title">SnapKey Mapper をセットアップ</string>
+    <string name="home_setup_text">数ステップを一度だけ行います。アプリが各設定を開いて確認します。</string>
+    <string name="home_finder">キーを押しても何も起きない？別のスマートフォン：キーを見つける</string>
+    <string name="wiz_skip">設定済み、続ける</string>
+    <string name="wiz_notif_title">通知をオンにする</string>
+    <string name="wiz_notif_text">ペア設定コードはアプリの通知に入力します。アプリの通知をオンにしてから、ここに戻ってください。</string>
+    <string name="wiz_notif_btn">通知を開く</string>
+    <string name="menu_diag">診断情報をコピー</string>
+    <string name="diag_copied">診断情報をコピーしました。GitHub の issue に貼り付けてください</string>
+    <string name="diag_stuck">うまくいきませんか？GitHub の issue 用に診断情報をコピー</string>
+</resources>

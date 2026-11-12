@@ -1,0 +1,1035 @@
+{
+ "apps": {
+  "clock": {
+   "name": "Đồng hồ"
+  },
+  "camera": {
+   "name": "Máy ảnh"
+  },
+  "phone": {
+   "name": "Điện thoại"
+  },
+  "messages": {
+   "name": "Tin nhắn"
+  },
+  "email": {
+   "name": "Email"
+  },
+  "web": {
+   "name": "Trang web"
+  },
+  "calendar": {
+   "name": "Lịch"
+  },
+  "contacts": {
+   "name": "Danh bạ"
+  },
+  "settings": {
+   "name": "Cài đặt"
+  },
+  "assistant": {
+   "name": "Trợ lý"
+  }
+ },
+ "recipes": {
+  "clock-timer": {
+   "title": "Bắt đầu hẹn giờ",
+   "desc": "Bắt đầu đếm ngược ngay, không cần mở ứng dụng Đồng hồ.",
+   "vars": {
+    "SECONDS": {
+     "label": "Thời lượng (giây)",
+     "where": "Nhân số phút với 60: 5 phút là 300, 1 giờ là 3600."
+    }
+   }
+  },
+  "clock-timer-label": {
+   "title": "Bắt đầu hẹn giờ có tên",
+   "desc": "Bắt đầu đếm ngược có đặt tên, ví dụ \"Luộc mì\".",
+   "vars": {
+    "SECONDS": {
+     "label": "Thời lượng (giây)",
+     "where": "Nhân số phút với 60: 10 phút là 600."
+    },
+    "LABEL": {
+     "label": "Tên bộ hẹn giờ",
+     "where": "Một đoạn chữ ngắn tùy ý."
+    }
+   }
+  },
+  "clock-alarm": {
+   "title": "Đặt báo thức",
+   "desc": "Tạo báo thức vào giờ bạn chọn, không cần mở ứng dụng Đồng hồ.",
+   "vars": {
+    "HOUR": {
+     "label": "Giờ (0 đến 23)",
+     "where": "Định dạng 24 giờ: 7 là 7 giờ sáng, 19 là 7 giờ tối."
+    },
+    "MINUTES": {
+     "label": "Phút (0 đến 59)",
+     "where": "Chỉ phần phút của giờ bạn muốn."
+    }
+   }
+  },
+  "clock-alarm-label": {
+   "title": "Đặt báo thức có tên",
+   "desc": "Tạo báo thức có đặt tên, ví dụ \"Tập thể dục\".",
+   "vars": {
+    "HOUR": {
+     "label": "Giờ (0 đến 23)",
+     "where": "Định dạng 24 giờ: 7 là 7 giờ sáng, 19 là 7 giờ tối."
+    },
+    "MINUTES": {
+     "label": "Phút (0 đến 59)",
+     "where": "Chỉ phần phút của giờ bạn muốn."
+    },
+    "LABEL": {
+     "label": "Tên báo thức",
+     "where": "Một đoạn chữ ngắn tùy ý."
+    }
+   }
+  },
+  "clock-show-alarms": {
+   "title": "Xem báo thức",
+   "desc": "Mở danh sách báo thức của bạn."
+  },
+  "clock-show-timers": {
+   "title": "Xem bộ hẹn giờ",
+   "desc": "Mở danh sách bộ hẹn giờ của bạn."
+  },
+  "camera-photo": {
+   "title": "Mở máy ảnh ở chế độ chụp ảnh",
+   "desc": "Mở ứng dụng máy ảnh mặc định, sẵn sàng chụp ảnh."
+  },
+  "camera-video": {
+   "title": "Mở máy ảnh ở chế độ quay video",
+   "desc": "Mở ứng dụng máy ảnh mặc định, sẵn sàng quay video."
+  },
+  "phone-dial": {
+   "title": "Quay số",
+   "desc": "Mở bàn phím quay số với số đã được nhập sẵn. Bạn tự nhấn nút gọi.",
+   "vars": {
+    "NUMBER": {
+     "label": "Số điện thoại",
+     "where": "Kèm mã quốc gia, ví dụ +33123456789."
+    }
+   }
+  },
+  "phone-open-dialer": {
+   "title": "Mở bàn phím quay số",
+   "desc": "Mở bàn phím của ứng dụng Điện thoại."
+  },
+  "messages-compose": {
+   "title": "Soạn SMS",
+   "desc": "Mở ứng dụng tin nhắn với người nhận và nội dung đã điền sẵn. Bạn tự nhấn Gửi.",
+   "vars": {
+    "NUMBER": {
+     "label": "Số điện thoại",
+     "where": "Kèm mã quốc gia, ví dụ +33123456789."
+    },
+    "MESSAGE": {
+     "label": "Tin nhắn",
+     "where": "Nội dung cần gửi."
+    }
+   }
+  },
+  "email-compose": {
+   "title": "Soạn email",
+   "desc": "Mở ứng dụng email với địa chỉ, tiêu đề và nội dung đã điền sẵn. Bạn tự nhấn Gửi.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Địa chỉ email",
+     "where": "Người bạn muốn gửi thư."
+    },
+    "SUBJECT": {
+     "label": "Tiêu đề",
+     "where": "Một đoạn chữ ngắn tùy ý."
+    },
+    "BODY": {
+     "label": "Nội dung",
+     "where": "Nội dung email."
+    }
+   }
+  },
+  "web-open": {
+   "title": "Mở trang web",
+   "desc": "Mở bất kỳ địa chỉ web nào trong trình duyệt (hoặc trong ứng dụng hỗ trợ địa chỉ đó).",
+   "vars": {
+    "URL": {
+     "label": "Địa chỉ web",
+     "where": "Sao chép từ trình duyệt, địa chỉ bắt đầu bằng https://."
+    }
+   }
+  },
+  "web-search": {
+   "title": "Tìm kiếm trên web",
+   "desc": "Tìm kiếm trên web với một nội dung cố định.",
+   "vars": {
+    "QUERY": {
+     "label": "Nội dung cần tìm",
+     "where": "Điều bạn muốn tìm."
+    }
+   }
+  },
+  "calendar-new-event": {
+   "title": "Tạo sự kiện",
+   "desc": "Mở lịch ở một sự kiện mới, tiêu đề đã được điền sẵn.",
+   "vars": {
+    "TITLE": {
+     "label": "Tiêu đề sự kiện",
+     "where": "Một đoạn chữ ngắn tùy ý."
+    }
+   }
+  },
+  "calendar-open": {
+   "title": "Mở lịch",
+   "desc": "Mở lịch ở ngày hôm nay."
+  },
+  "contacts-new": {
+   "title": "Tạo liên hệ",
+   "desc": "Mở một liên hệ mới với tên và số điện thoại đã điền sẵn.",
+   "vars": {
+    "NAME": {
+     "label": "Tên",
+     "where": "Tên tùy ý."
+    },
+    "NUMBER": {
+     "label": "Số điện thoại",
+     "where": "Kèm mã quốc gia, ví dụ +33123456789."
+    }
+   }
+  },
+  "settings-wifi": {
+   "title": "Cài đặt Wi-Fi",
+   "desc": "Mở danh sách mạng Wi-Fi."
+  },
+  "settings-bluetooth": {
+   "title": "Cài đặt Bluetooth",
+   "desc": "Mở cài đặt Bluetooth."
+  },
+  "settings-airplane": {
+   "title": "Cài đặt Chế độ máy bay",
+   "desc": "Mở cài đặt Chế độ máy bay."
+  },
+  "settings-display": {
+   "title": "Cài đặt màn hình",
+   "desc": "Mở độ sáng, chế độ tối và thời gian tắt màn hình."
+  },
+  "settings-sound": {
+   "title": "Cài đặt âm thanh",
+   "desc": "Mở cài đặt âm lượng và nhạc chuông."
+  },
+  "settings-battery-saver": {
+   "title": "Cài đặt tiết kiệm pin",
+   "desc": "Mở cài đặt tiết kiệm pin."
+  },
+  "settings-location": {
+   "title": "Cài đặt vị trí",
+   "desc": "Mở cài đặt vị trí."
+  },
+  "settings-nfc": {
+   "title": "Cài đặt NFC",
+   "desc": "Mở cài đặt NFC."
+  },
+  "settings-data-usage": {
+   "title": "Mức sử dụng dữ liệu",
+   "desc": "Mở màn hình mức sử dụng dữ liệu di động."
+  },
+  "settings-accessibility": {
+   "title": "Cài đặt hỗ trợ tiếp cận",
+   "desc": "Mở cài đặt hỗ trợ tiếp cận."
+  },
+  "settings-language": {
+   "title": "Cài đặt ngôn ngữ",
+   "desc": "Mở cài đặt ngôn ngữ."
+  },
+  "settings-date": {
+   "title": "Cài đặt ngày và giờ",
+   "desc": "Mở cài đặt ngày và giờ."
+  },
+  "settings-apps": {
+   "title": "Tất cả ứng dụng",
+   "desc": "Mở danh sách ứng dụng đã cài."
+  },
+  "settings-developer": {
+   "title": "Tùy chọn nhà phát triển",
+   "desc": "Mở Tùy chọn nhà phát triển (nếu đã bật)."
+  },
+  "google-maps-navigate-to-address": {
+   "title": "Lái xe đến một địa chỉ",
+   "desc": "Bắt đầu dẫn đường lái xe trong Google Maps, từ vị trí hiện tại đến một địa chỉ hoặc địa điểm.",
+   "note": "Dẫn đường bắt đầu từ vị trí hiện tại của bạn. Lần đầu, Google Maps sẽ xin quyền truy cập vị trí.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Địa chỉ hoặc tên điểm đến",
+     "where": "Nhập địa chỉ đầy đủ hoặc tên một địa điểm nổi tiếng, đúng như khi bạn tìm trong Google Maps."
+    }
+   }
+  },
+  "google-maps-navigate-walking": {
+   "title": "Đi bộ đến một địa chỉ",
+   "desc": "Bắt đầu dẫn đường đi bộ trong Google Maps, từ vị trí hiện tại đến một địa chỉ hoặc địa điểm.",
+   "note": "Dẫn đường đi bộ bắt đầu từ vị trí hiện tại của bạn.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Địa chỉ hoặc tên điểm đến",
+     "where": "Nhập địa chỉ đầy đủ hoặc tên một địa điểm nổi tiếng, đúng như khi bạn tìm trong Google Maps."
+    }
+   }
+  },
+  "google-maps-navigate-cycling": {
+   "title": "Đạp xe đến một địa chỉ",
+   "desc": "Bắt đầu dẫn đường đạp xe trong Google Maps, từ vị trí hiện tại đến một địa chỉ hoặc địa điểm.",
+   "note": "Chỉ đường cho xe đạp không có ở mọi quốc gia.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Địa chỉ hoặc tên điểm đến",
+     "where": "Nhập địa chỉ đầy đủ hoặc tên một địa điểm nổi tiếng, đúng như khi bạn tìm trong Google Maps."
+    }
+   }
+  },
+  "google-maps-search-nearby": {
+   "title": "Tìm địa điểm gần đây",
+   "desc": "Mở Google Maps với kết quả tìm kiếm, ví dụ nhà hàng hoặc hiệu thuốc quanh bạn.",
+   "note": "Mở Google Maps với kết quả tìm kiếm.",
+   "vars": {
+    "SEARCH": {
+     "label": "Điều bạn đang tìm",
+     "where": "Nhập loại địa điểm hoặc tên, bằng những từ bạn sẽ gõ vào thanh tìm kiếm của Google Maps."
+    }
+   }
+  },
+  "google-maps-transit-directions": {
+   "title": "Đến một nơi bằng phương tiện công cộng",
+   "desc": "Hiện đường đi bằng phương tiện công cộng đến một điểm đến trong Google Maps, từ vị trí hiện tại của bạn.",
+   "note": "Mở chỉ đường trong Google Maps, hoặc trong trình duyệt nếu ứng dụng không nhận liên kết.",
+   "vars": {
+    "DESTINATION": {
+     "label": "Địa chỉ hoặc tên điểm đến",
+     "where": "Nhập địa chỉ hoặc tên địa điểm, như khi bạn tìm trong Google Maps."
+    }
+   }
+  },
+  "google-maps-street-view": {
+   "title": "Mở Street View tại một tọa độ",
+   "desc": "Mở trong Google Maps hình ảnh Street View gần nhất với một vĩ độ và kinh độ.",
+   "note": "Nếu không có hình ảnh Street View nào gần điểm đó, Google Maps sẽ báo cho bạn.",
+   "vars": {
+    "LATITUDE": {
+     "label": "Vĩ độ",
+     "where": "Trong Google Maps, nhấn giữ một điểm trên bản đồ: vĩ độ là số đầu tiên hiện trong thanh tìm kiếm."
+    },
+    "LONGITUDE": {
+     "label": "Kinh độ",
+     "where": "Trong Google Maps, nhấn giữ một điểm trên bản đồ: kinh độ là số thứ hai hiện trong thanh tìm kiếm."
+    }
+   }
+  },
+  "assistant-open": {
+   "title": "Mở trợ lý giọng nói",
+   "desc": "Mở trợ lý mặc định của điện thoại, giống như cử chỉ của hệ thống."
+  },
+  "youtube-open-channel": {
+   "title": "Mở một kênh",
+   "desc": "Mở trang của một kênh YouTube từ tên định danh của kênh.",
+   "note": "Mở trang kênh trong ứng dụng YouTube.",
+   "vars": {
+    "HANDLE": {
+     "label": "Tên định danh của kênh (không có @)",
+     "where": "Mở kênh trong YouTube: tên định danh bắt đầu bằng @, nằm dưới tên kênh. Nhập vào đây nhưng bỏ dấu @."
+    }
+   }
+  },
+  "youtube-open-playlist": {
+   "title": "Mở một danh sách phát",
+   "desc": "Mở một danh sách phát YouTube cụ thể.",
+   "note": "Mở trang danh sách phát. Video không tự phát.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID danh sách phát",
+     "where": "Mở trang danh sách phát rồi nhấn Chia sẻ > Sao chép đường liên kết (hoặc xem địa chỉ trong trình duyệt): ID là phần sau list= trong liên kết."
+    }
+   }
+  },
+  "youtube-open-video": {
+   "title": "Mở một video",
+   "desc": "Mở một video cụ thể, ví dụ một buổi phát trực tiếp hoặc một video hướng dẫn bạn thích.",
+   "note": "Mở video trong ứng dụng YouTube.",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "ID video",
+     "where": "Mở video, nhấn Chia sẻ > Sao chép đường liên kết: ID là phần sau v= (hoặc sau youtu.be/ trong liên kết rút gọn)."
+    }
+   }
+  },
+  "youtube-search": {
+   "title": "Tìm kiếm trên YouTube",
+   "desc": "Mở kết quả tìm kiếm YouTube cho một nội dung cố định.",
+   "note": "Mở kết quả tìm kiếm.",
+   "vars": {
+    "QUERY": {
+     "label": "Nội dung cần tìm",
+     "where": "Những từ bạn muốn tìm."
+    }
+   }
+  },
+  "ytmusic-open-library": {
+   "title": "Mở thư viện của bạn",
+   "desc": "Mở thẻ Thư viện của YouTube Music.",
+   "note": "Bạn cần đăng nhập trong ứng dụng YouTube Music."
+  },
+  "ytmusic-search": {
+   "title": "Tìm kiếm trên YouTube Music",
+   "desc": "Mở kết quả tìm kiếm YouTube Music cho một nội dung cố định.",
+   "note": "Mở kết quả tìm kiếm trong YouTube Music.",
+   "vars": {
+    "QUERY": {
+     "label": "Nội dung cần tìm",
+     "where": "Những từ bạn muốn tìm."
+    }
+   }
+  },
+  "ytmusic-open-playlist": {
+   "title": "Mở một danh sách phát",
+   "desc": "Mở một danh sách phát hoặc album cụ thể trong YouTube Music.",
+   "note": "Mở danh sách phát hoặc album trong YouTube Music.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID danh sách phát",
+     "where": "Mở danh sách phát trong YouTube Music, nhấn menu > Chia sẻ > Sao chép đường liên kết: ID là phần sau list= trong liên kết."
+    }
+   }
+  },
+  "ytmusic-open-song": {
+   "title": "Mở một bài hát",
+   "desc": "Mở một bài hát cụ thể trong trình phát YouTube Music.",
+   "note": "Mở bài hát trong YouTube Music.",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "ID bài hát",
+     "where": "Mở bài hát, nhấn menu > Chia sẻ > Sao chép đường liên kết: ID là phần sau v= trong liên kết."
+    }
+   }
+  },
+  "gmail-compose": {
+   "title": "Soạn email mới",
+   "desc": "Mở màn hình soạn thư của Gmail với một thư trống.",
+   "note": "Không có gì được gửi cho đến khi bạn nhấn Gửi."
+  },
+  "gmail-compose-to-person": {
+   "title": "Gửi email cho một người",
+   "desc": "Mở màn hình soạn thư của Gmail với người nhận đã điền sẵn.",
+   "note": "Không có gì được gửi cho đến khi bạn nhấn Gửi.",
+   "vars": {
+    "EMAIL_ADDRESS": {
+     "label": "Địa chỉ email người nhận",
+     "where": "Nhập địa chỉ của người bạn hay gửi thư nhất."
+    }
+   }
+  },
+  "gmail-compose-with-subject": {
+   "title": "Soạn email có sẵn tiêu đề và nội dung",
+   "desc": "Mở màn hình soạn thư của Gmail với tiêu đề và nội dung đã điền sẵn.",
+   "note": "Không có gì được gửi cho đến khi bạn nhấn Gửi.",
+   "vars": {
+    "SUBJECT": {
+     "label": "Tiêu đề",
+     "where": "Nhập tiêu đề thư."
+    },
+    "BODY": {
+     "label": "Nội dung thư",
+     "where": "Nhập phần nội dung email."
+    }
+   }
+  },
+  "telegram-open-chat": {
+   "title": "Mở cuộc trò chuyện theo tên người dùng",
+   "desc": "Mở cuộc trò chuyện với một người dùng, nhóm, kênh hoặc bot Telegram công khai.",
+   "note": "Dùng được với người, nhóm, kênh và bot có tên người dùng công khai.",
+   "vars": {
+    "USERNAME": {
+     "label": "Tên người dùng Telegram",
+     "where": "Tên công khai không có @, hiện trên hồ sơ ở mục Tên người dùng."
+    }
+   }
+  },
+  "telegram-open-chat-with-draft": {
+   "title": "Mở cuộc trò chuyện với tin nhắn soạn sẵn",
+   "desc": "Mở một cuộc trò chuyện công khai và điền sẵn ô tin nhắn (không có gì được gửi cho đến khi bạn nhấn Gửi).",
+   "note": "Nội dung được điền vào ô tin nhắn; không có gì được gửi cho đến khi bạn nhấn Gửi.",
+   "vars": {
+    "USERNAME": {
+     "label": "Tên người dùng Telegram",
+     "where": "Tên công khai không có @, hiện trên hồ sơ ở mục Tên người dùng."
+    },
+    "MESSAGE": {
+     "label": "Tin nhắn",
+     "where": "Nội dung của bạn, đúng như bạn sẽ viết."
+    }
+   }
+  },
+  "telegram-open-chat-by-phone": {
+   "title": "Mở cuộc trò chuyện theo số điện thoại",
+   "desc": "Mở cuộc trò chuyện Telegram với một người, từ số điện thoại của họ.",
+   "note": "Chỉ dùng được nếu người đó có Telegram và cho phép tìm họ qua số điện thoại.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Số điện thoại",
+     "where": "Mã quốc gia trước, chỉ gồm chữ số, ví dụ 33123456789. Dấu cách và dấu + sẽ bị bỏ qua."
+    }
+   }
+  },
+  "telegram-join-invite": {
+   "title": "Tham gia nhóm riêng tư bằng liên kết mời",
+   "desc": "Mở lời mời tham gia một nhóm hoặc kênh Telegram riêng tư, từ mã mời.",
+   "note": "Mở lời mời vào một nhóm hoặc kênh riêng tư.",
+   "vars": {
+    "INVITE_HASH": {
+     "label": "Mã mời",
+     "where": "Trong một liên kết mời như https://t.me/+AbCdEf123, sao chép phần sau dấu + (liên kết cũ: t.me/joinchat/HASH)."
+    }
+   }
+  },
+  "telegram-story-composer": {
+   "title": "Tạo tin",
+   "desc": "Mở máy ảnh tin của Telegram để đăng một tin mới.",
+   "note": "Mở màn hình tạo tin."
+  },
+  "telegram-global-search": {
+   "title": "Mở tìm kiếm toàn cục",
+   "desc": "Mở màn hình tìm kiếm của Telegram, trong mọi cuộc trò chuyện và nội dung công khai.",
+   "note": "Mở màn hình tìm kiếm."
+  },
+  "whatsapp-open-chat": {
+   "title": "Mở cuộc trò chuyện",
+   "desc": "Mở cuộc trò chuyện WhatsApp với một số điện thoại cụ thể.",
+   "note": "Mở cuộc trò chuyện với số này.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Số điện thoại",
+     "where": "Mã quốc gia trước, chỉ gồm chữ số, ví dụ 33123456789. Dấu cách và dấu + sẽ bị bỏ qua."
+    }
+   }
+  },
+  "whatsapp-open-chat-with-message": {
+   "title": "Mở cuộc trò chuyện với tin nhắn soạn sẵn",
+   "desc": "Mở cuộc trò chuyện WhatsApp với một số điện thoại và điền sẵn ô tin nhắn (không có gì được gửi cho đến khi bạn nhấn Gửi).",
+   "note": "Nội dung được điền vào ô tin nhắn; không có gì được gửi cho đến khi bạn nhấn Gửi.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Số điện thoại",
+     "where": "Mã quốc gia trước, chỉ gồm chữ số, ví dụ 33123456789. Dấu cách và dấu + sẽ bị bỏ qua."
+    },
+    "MESSAGE": {
+     "label": "Tin nhắn",
+     "where": "Nội dung của bạn, đúng như bạn sẽ viết."
+    }
+   }
+  },
+  "whatsapp-share-text": {
+   "title": "Gửi tin nhắn cho người tôi chọn",
+   "desc": "Mở danh sách liên hệ WhatsApp với tin nhắn đã soạn sẵn: bạn chọn người nhận.",
+   "note": "WhatsApp sẽ hỏi bạn chọn người nhận tin nhắn.",
+   "vars": {
+    "MESSAGE": {
+     "label": "Tin nhắn",
+     "where": "Nội dung của bạn, đúng như bạn sẽ viết."
+    }
+   }
+  },
+  "whatsapp-join-group": {
+   "title": "Tham gia hoặc mở nhóm bằng liên kết mời",
+   "desc": "Mở một nhóm WhatsApp từ mã mời của nhóm (lời mời tham gia, hoặc chính nhóm nếu bạn đã là thành viên).",
+   "note": "Mở lời mời vào một nhóm.",
+   "vars": {
+    "INVITE_CODE": {
+     "label": "Mã mời của nhóm",
+     "where": "Phần sau chat.whatsapp.com/ trong liên kết mời của nhóm (trong nhóm: Thông tin nhóm > Mời qua liên kết > Sao chép liên kết)."
+    }
+   }
+  },
+  "signal-open-chat-by-phone": {
+   "title": "Mở cuộc trò chuyện theo số điện thoại",
+   "desc": "Mở cuộc trò chuyện Signal với một người, từ số điện thoại của họ.",
+   "note": "Mở cuộc trò chuyện với số này nếu người đó dùng Signal.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Số điện thoại",
+     "where": "Mã quốc gia trước, chỉ gồm chữ số, ví dụ 33123456789. Dấu cách và dấu + sẽ bị bỏ qua."
+    }
+   }
+  },
+  "signal-open-group-link": {
+   "title": "Tham gia hoặc mở nhóm bằng liên kết nhóm",
+   "desc": "Mở lời mời tham gia một nhóm Signal, từ liên kết nhóm.",
+   "note": "Mở lời mời vào một nhóm Signal.",
+   "vars": {
+    "GROUP_LINK_CODE": {
+     "label": "Mã liên kết nhóm",
+     "where": "Trong Signal, mở nhóm, nhấn vào tên nhóm, rồi liên kết nhóm, và chia sẻ hoặc sao chép. Chỉ giữ đoạn chữ dài sau dấu # trong https://signal.group/#..."
+    }
+   }
+  },
+  "obsidian-open-vault": {
+   "title": "Mở kho của tôi",
+   "desc": "Mở kho Obsidian đã chọn (hoặc hiện kho nếu đang mở).",
+   "note": "Mở kho ở màn hình gần nhất.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Tên kho",
+     "where": "Trong Obsidian, mở bộ chọn kho (biểu tượng kho, ở cuối bảng bên hoặc trong danh sách kho) và sao chép tên hiển thị của kho. Đó cũng là tên thư mục của kho."
+    }
+   }
+  },
+  "obsidian-open-note": {
+   "title": "Mở một ghi chú cụ thể",
+   "desc": "Mở một ghi chú cụ thể trong kho.",
+   "note": "Mở ghi chú này trong kho.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Tên kho",
+     "where": "Trong Obsidian, mở bộ chọn kho (biểu tượng kho, ở cuối bảng bên hoặc trong danh sách kho) và sao chép tên hiển thị của kho. Đó cũng là tên thư mục của kho."
+    },
+    "NOTE_PATH": {
+     "label": "Tên hoặc đường dẫn ghi chú",
+     "where": "Tên tệp của ghi chú, hoặc đường dẫn tính từ thư mục gốc của kho; phần đuôi .md không bắt buộc."
+    }
+   }
+  },
+  "obsidian-daily-note": {
+   "title": "Mở ghi chú hằng ngày",
+   "desc": "Tạo hoặc mở ghi chú hằng ngày của hôm nay.",
+   "note": "Mở ghi chú của hôm nay, hoặc tạo mới.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Tên kho",
+     "where": "Trong Obsidian, mở bộ chọn kho (biểu tượng kho, ở cuối bảng bên hoặc trong danh sách kho) và sao chép tên hiển thị của kho. Đó cũng là tên thư mục của kho."
+    }
+   }
+  },
+  "obsidian-new-note": {
+   "title": "Tạo ghi chú",
+   "desc": "Tạo ghi chú với tên đã nhập (ở vị trí mặc định cho ghi chú mới của kho) và mở ghi chú đó.",
+   "note": "Tạo ghi chú nếu chưa có. Obsidian cần truy cập được kho.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Tên kho",
+     "where": "Trong Obsidian, mở bộ chọn kho (biểu tượng kho, ở cuối bảng bên hoặc trong danh sách kho) và sao chép tên hiển thị của kho. Đó cũng là tên thư mục của kho."
+    },
+    "NOTE_NAME": {
+     "label": "Tên ghi chú mới",
+     "where": "Nhập tiêu đề bạn muốn; tệp được tạo với tên <tiêu đề>.md."
+    }
+   }
+  },
+  "obsidian-quick-capture-daily": {
+   "title": "Thêm một dòng vào ghi chú hằng ngày",
+   "desc": "Thêm nội dung đã nhập vào cuối ghi chú của hôm nay.",
+   "note": "Thêm nội dung vào cuối ghi chú của hôm nay.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Tên kho",
+     "where": "Trong Obsidian, mở bộ chọn kho (biểu tượng kho, ở cuối bảng bên hoặc trong danh sách kho) và sao chép tên hiển thị của kho. Đó cũng là tên thư mục của kho."
+    },
+    "TEXT_TO_ADD": {
+     "label": "Nội dung cần thêm",
+     "where": "Nội dung cần thêm, đúng như bạn sẽ viết."
+    }
+   }
+  },
+  "obsidian-search": {
+   "title": "Tìm kiếm trong kho của tôi",
+   "desc": "Mở tìm kiếm của Obsidian trong kho và chạy truy vấn.",
+   "note": "Mở tìm kiếm với nội dung này.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Tên kho",
+     "where": "Trong Obsidian, mở bộ chọn kho (biểu tượng kho, ở cuối bảng bên hoặc trong danh sách kho) và sao chép tên hiển thị của kho. Đó cũng là tên thư mục của kho."
+    },
+    "SEARCH_TEXT": {
+     "label": "Nội dung cần tìm",
+     "where": "Nhập từ hoặc cụm từ cần tìm."
+    }
+   }
+  },
+  "homeassistant-open-dashboard": {
+   "title": "Mở một trang bảng điều khiển",
+   "desc": "Mở chế độ xem bảng điều khiển Home Assistant bạn chọn trong ứng dụng di động.",
+   "note": "Mở một bảng điều khiển hoặc chế độ xem của Home Assistant.",
+   "vars": {
+    "DASHBOARD_PATH": {
+     "label": "Đường dẫn bảng điều khiển",
+     "where": "Mở trang trong giao diện web của Home Assistant và sao chép đường dẫn sau địa chỉ và cổng, bỏ dấu gạch chéo đầu tiên."
+    }
+   }
+  },
+  "spotify-open-playlist": {
+   "title": "Mở một danh sách phát",
+   "desc": "Mở một danh sách phát Spotify.",
+   "note": "Mở danh sách phát. Nhạc không tự phát.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID danh sách phát",
+     "where": "Trong Spotify, nhấn ba dấu chấm, rồi Chia sẻ, rồi Sao chép liên kết. ID là phần sau /playlist/ và trước ?si= (nếu có)."
+    }
+   }
+  },
+  "spotify-open-artist": {
+   "title": "Mở trang nghệ sĩ",
+   "desc": "Mở trang của một nghệ sĩ trên Spotify.",
+   "note": "Mở trang nghệ sĩ.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID nghệ sĩ",
+     "where": "Trong Spotify, nhấn ba dấu chấm, rồi Chia sẻ, rồi Sao chép liên kết. ID là phần sau /artist/ và trước ?si= (nếu có)."
+    }
+   }
+  },
+  "spotify-open-album": {
+   "title": "Mở một album",
+   "desc": "Mở một album Spotify.",
+   "note": "Mở album.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID album",
+     "where": "Trong Spotify, nhấn ba dấu chấm, rồi Chia sẻ, rồi Sao chép liên kết. ID là phần sau /album/ và trước ?si= (nếu có)."
+    }
+   }
+  },
+  "spotify-open-track": {
+   "title": "Mở một bài hát",
+   "desc": "Mở một bài hát Spotify.",
+   "note": "Mở bài hát.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID bài hát",
+     "where": "Trong Spotify, nhấn ba dấu chấm, rồi Chia sẻ, rồi Sao chép liên kết. ID là phần sau /track/ và trước ?si= (nếu có)."
+    }
+   }
+  },
+  "spotify-search": {
+   "title": "Tìm kiếm trên Spotify",
+   "desc": "Mở kết quả của một tìm kiếm Spotify cố định.",
+   "note": "Mở kết quả tìm kiếm.",
+   "vars": {
+    "QUERY": {
+     "label": "Nội dung tìm kiếm",
+     "where": "Những từ cần tìm, ví dụ tên một nghệ sĩ."
+    }
+   }
+  },
+  "deezer-open-playlist": {
+   "title": "Mở một danh sách phát",
+   "desc": "Mở một danh sách phát Deezer.",
+   "note": "Mở danh sách phát.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID danh sách phát",
+     "where": "Mở danh sách phát trên deezer.com bằng trình duyệt. ID là con số ở cuối địa chỉ."
+    }
+   }
+  },
+  "deezer-open-artist": {
+   "title": "Mở trang nghệ sĩ",
+   "desc": "Mở trang của một nghệ sĩ trên Deezer.",
+   "note": "Mở trang nghệ sĩ.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID nghệ sĩ",
+     "where": "Mở trang nghệ sĩ trên deezer.com bằng trình duyệt. ID là con số ở cuối địa chỉ."
+    }
+   }
+  },
+  "deezer-open-album": {
+   "title": "Mở một album",
+   "desc": "Mở một album Deezer.",
+   "note": "Mở album.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID album",
+     "where": "Mở album trên deezer.com bằng trình duyệt. ID là con số ở cuối địa chỉ."
+    }
+   }
+  },
+  "deezer-open-track": {
+   "title": "Mở một bài hát",
+   "desc": "Mở một bài hát Deezer.",
+   "note": "Mở bài hát.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID bài hát",
+     "where": "Mở bài hát trên deezer.com bằng trình duyệt. ID là con số ở cuối địa chỉ."
+    }
+   }
+  },
+  "deezer-search": {
+   "title": "Tìm kiếm trên Deezer",
+   "desc": "Mở kết quả của một tìm kiếm Deezer cố định.",
+   "note": "Mở kết quả tìm kiếm.",
+   "vars": {
+    "QUERY": {
+     "label": "Nội dung tìm kiếm",
+     "where": "Những từ cần tìm, ví dụ tên một nghệ sĩ."
+    }
+   }
+  },
+  "apple-music-open-link": {
+   "title": "Mở một trang Apple Music",
+   "desc": "Mở một album, danh sách phát hoặc nghệ sĩ từ liên kết Apple Music.",
+   "note": "Mở trong ứng dụng Apple Music nếu điện thoại cho phép ứng dụng xử lý liên kết, nếu không thì mở trong trình duyệt.",
+   "vars": {
+    "LINK": {
+     "label": "Liên kết Apple Music",
+     "where": "Mở trang trên music.apple.com, bấm Thêm, rồi Sao chép liên kết, và dán toàn bộ địa chỉ."
+    }
+   }
+  },
+  "waze-navigate-home": {
+   "title": "Về nhà",
+   "desc": "Bắt đầu dẫn đường đến địa chỉ Nhà đã lưu trong Waze.",
+   "note": "Cần có địa chỉ Nhà đã lưu trong Waze."
+  },
+  "waze-navigate-work": {
+   "title": "Đến nơi làm việc",
+   "desc": "Bắt đầu dẫn đường đến địa chỉ Cơ quan đã lưu trong Waze.",
+   "note": "Cần có địa chỉ Cơ quan đã lưu trong Waze."
+  },
+  "waze-navigate-to-address": {
+   "title": "Đến một địa chỉ",
+   "desc": "Bắt đầu dẫn đường đến một địa chỉ hoặc địa điểm cố định.",
+   "note": "Thêm tên thành phố để tránh nhầm lẫn.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Địa chỉ hoặc địa điểm",
+     "where": "Địa chỉ hoặc tên địa điểm kèm thành phố, như khi bạn nhập vào Waze."
+    }
+   }
+  },
+  "waze-navigate-to-coordinates": {
+   "title": "Đến một tọa độ",
+   "desc": "Bắt đầu dẫn đường đến một điểm theo vĩ độ và kinh độ.",
+   "vars": {
+    "LATITUDE": {
+     "label": "Vĩ độ",
+     "where": "Trong Google Maps, nhấn giữ vào vị trí: đó là số đầu tiên trong thanh tìm kiếm."
+    },
+    "LONGITUDE": {
+     "label": "Kinh độ",
+     "where": "Trong Google Maps, nhấn giữ vào vị trí: đó là số thứ hai trong thanh tìm kiếm."
+    }
+   }
+  },
+  "waze-search-place": {
+   "title": "Tìm địa điểm trong Waze",
+   "desc": "Hiện một địa điểm hoặc địa chỉ trong Waze mà không bắt đầu dẫn đường.",
+   "vars": {
+    "SEARCH": {
+     "label": "Địa điểm hoặc địa chỉ",
+     "where": "Những từ bạn sẽ gõ vào thanh tìm kiếm của Waze."
+    }
+   }
+  },
+  "netflix-open-title": {
+   "title": "Mở một phim lẻ hoặc phim bộ",
+   "desc": "Mở trang Netflix của một phim lẻ hoặc phim bộ.",
+   "note": "Mở trang của phim. Phim không tự phát.",
+   "vars": {
+    "TITLE_ID": {
+     "label": "ID phim",
+     "where": "Trên netflix.com, mở phim. ID là con số sau /title/ trong địa chỉ."
+    }
+   }
+  },
+  "netflix-open-my-list": {
+   "title": "Mở Danh sách của tôi",
+   "desc": "Mở danh sách Netflix của bạn."
+  },
+  "notion-open-page": {
+   "title": "Mở một trang",
+   "desc": "Mở một trang cụ thể trong Notion.",
+   "note": "Mở trang trong ứng dụng Notion.",
+   "vars": {
+    "PAGE_ADDRESS": {
+     "label": "Địa chỉ trang",
+     "where": "Trong Notion, mở trang, nhấn ba dấu chấm, rồi Sao chép liên kết. Chỉ giữ phần sau https://www.notion.so/."
+    }
+   }
+  },
+  "claude-code-new-session": {
+   "title": "Phiên Claude Code mới",
+   "desc": "Bắt đầu một phiên Claude Code với yêu cầu của bạn đã nhập sẵn.",
+   "note": "Không có gì được gửi cho đến khi bạn gửi.",
+   "vars": {
+    "PROMPT": {
+     "label": "Yêu cầu",
+     "where": "Yêu cầu cần điền sẵn. Nội dung chỉ được nhập vào: bạn tự gửi."
+    }
+   }
+  },
+  "claude-code-sessions": {
+   "title": "Mở các phiên Claude Code",
+   "desc": "Mở danh sách các phiên Claude Code của bạn."
+  },
+  "claude-new-chat": {
+   "title": "Cuộc trò chuyện mới",
+   "desc": "Mở Claude ở một cuộc trò chuyện mới."
+  },
+  "docs-new-document": {
+   "title": "Tài liệu mới",
+   "desc": "Tạo một tài liệu Google Docs trống.",
+   "note": "Mở trong trình duyệt hoặc trong ứng dụng Docs, tùy điện thoại của bạn."
+  },
+  "n8n-trigger-webhook": {
+   "title": "Chạy một workflow (webhook)",
+   "desc": "Gọi webhook của một workflow n8n.",
+   "note": "Workflow phải đang hoạt động và chấp nhận GET. Liên kết mở trong trình duyệt.",
+   "vars": {
+    "N8N_HOST": {
+     "label": "Địa chỉ máy chủ n8n",
+     "where": "Địa chỉ máy chủ n8n của bạn, phần trước /webhook/ trong URL production."
+    },
+    "WEBHOOK_PATH": {
+     "label": "Đường dẫn webhook",
+     "where": "Trong workflow, mở nút Webhook và sao chép trường Path."
+    }
+   }
+  },
+  "todoist-add-task": {
+   "title": "Thêm công việc",
+   "desc": "Mở một công việc Todoist mới với nội dung của bạn đã nhập sẵn.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Nội dung công việc",
+     "where": "Nhập công việc như trong Todoist."
+    }
+   }
+  },
+  "todoist-add-task-today": {
+   "title": "Thêm công việc cho hôm nay",
+   "desc": "Giống như trên, với hạn là hôm nay.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Nội dung công việc",
+     "where": "Nhập công việc như trong Todoist."
+    }
+   }
+  },
+  "todoist-open-today": {
+   "title": "Mở Hôm nay",
+   "desc": "Mở mục Hôm nay."
+  },
+  "todoist-open-inbox": {
+   "title": "Mở Hộp thư đến",
+   "desc": "Mở Hộp thư đến."
+  },
+  "todoist-open-upcoming": {
+   "title": "Mở Sắp tới",
+   "desc": "Mở mục Sắp tới."
+  },
+  "todoist-search": {
+   "title": "Tìm công việc",
+   "desc": "Tìm một từ cụ thể trong các công việc của bạn.",
+   "vars": {
+    "SEARCH_TEXT": {
+     "label": "Nội dung tìm kiếm",
+     "where": "Từ cần tìm trong các công việc của bạn."
+    }
+   }
+  },
+  "twitch-open-channel": {
+   "title": "Mở một kênh phát trực tiếp",
+   "desc": "Mở buổi phát trực tiếp của một kênh.",
+   "note": "Hiện trang kênh nếu streamer không đang phát trực tiếp.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Tên kênh",
+     "where": "Phần cuối của địa chỉ kênh, twitch.tv/tên-kênh."
+    }
+   }
+  },
+  "twitch-open-channel-videos": {
+   "title": "Mở video của một kênh",
+   "desc": "Mở hoạt động và video của một kênh.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Tên kênh",
+     "where": "Phần cuối của địa chỉ kênh, twitch.tv/tên-kênh."
+    }
+   }
+  },
+  "twitch-open-following": {
+   "title": "Mở Đang theo dõi",
+   "desc": "Mở thẻ Đang theo dõi."
+  },
+  "twitch-open-game": {
+   "title": "Mở một danh mục trò chơi",
+   "desc": "Mở trang của một trò chơi hoặc danh mục.",
+   "vars": {
+    "GAME_NAME": {
+     "label": "Tên trò chơi",
+     "where": "Tên danh mục như hiện trong thẻ Duyệt."
+    }
+   }
+  },
+  "twitch-open-app": {
+   "title": "Mở Twitch",
+   "desc": "Mở ứng dụng Twitch."
+  },
+  "twitch-search": {
+   "title": "Tìm kiếm trên Twitch",
+   "desc": "Mở kết quả của một tìm kiếm Twitch cố định.",
+   "vars": {
+    "QUERY": {
+     "label": "Nội dung tìm kiếm",
+     "where": "Một kênh, trò chơi hoặc chủ đề."
+    }
+   }
+  },
+  "instagram-send-dm": {
+   "title": "Nhắn tin cho một tài khoản",
+   "desc": "Mở cuộc trò chuyện riêng với một tài khoản Instagram.",
+   "note": "Mở cuộc trò chuyện. Không có gì được gửi.",
+   "vars": {
+    "USERNAME": {
+     "label": "Tên người dùng Instagram",
+     "where": "Tên người dùng dưới ảnh đại diện, không có @."
+    }
+   }
+  },
+  "x-compose-post": {
+   "title": "Viết bài đăng",
+   "desc": "Mở X với bài đăng của bạn đã nhập sẵn, sẵn sàng đăng.",
+   "note": "Không có gì được đăng cho đến khi bạn nhấn Đăng.",
+   "vars": {
+    "TEXT": {
+     "label": "Nội dung bài đăng",
+     "where": "Nội dung của bạn, đúng như bạn sẽ gõ."
+    }
+   }
+  },
+  "x-share-link": {
+   "title": "Đăng một liên kết",
+   "desc": "Mở X với một liên kết và nội dung đã nhập sẵn.",
+   "note": "Không có gì được đăng cho đến khi bạn nhấn Đăng.",
+   "vars": {
+    "URL": {
+     "label": "Địa chỉ web",
+     "where": "Địa chỉ đầy đủ cần chia sẻ, bắt đầu bằng https://."
+    },
+    "TEXT": {
+     "label": "Nội dung bài đăng",
+     "where": "Nội dung của bạn, đúng như bạn sẽ gõ."
+    }
+   }
+  },
+  "x-open-profile": {
+   "title": "Mở một hồ sơ",
+   "desc": "Mở một tài khoản X.",
+   "vars": {
+    "USERNAME": {
+     "label": "Tên người dùng X",
+     "where": "Tên @ của tài khoản, không có @."
+    }
+   }
+  }
+ }
+}

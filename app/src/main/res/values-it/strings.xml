@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SnapKey Mapper</string>
+    <string name="state_setup">Configurazione: %1$d di %2$d passaggi completati</string>
+    <string name="toast_cannot_open">Impossibile aprirlo: %1$s</string>
+    <string name="toast_cannot_read">Impossibile leggere il log: %1$s</string>
+    <string name="toast_failed">Non riuscito: %1$s</string>
+    <string name="notif_count">SnapKey Mapper è in ascolto: %1$d pressione/i rilevata/e</string>
+    <string name="diag_error">Errore: %1$s</string>
+    <string name="setup_not_granted">Non concessa: %1$s</string>
+    <string name="state_listening">In ascolto: premi il tasto</string>
+    <string name="state_ready">Pronto</string>
+    <string name="state_choose">Scegli cosa apre il tasto</string>
+    <string name="btn_start">Avvia l\'ascolto</string>
+    <string name="btn_stop">Interrompi l\'ascolto</string>
+    <string name="perm_title">Autorizzazioni</string>
+    <string name="perm_sub">Tre interruttori, una volta sola. Il tasto non ha bisogno d\'altro.</string>
+    <string name="perm_auto_btn">Apri Debug wireless</string>
+    <string name="perm_auto_help">Connettiti al Wi-Fi, tocca il pulsante, poi in Opzioni sviluppatore attiva Debug wireless, tocca \"Accoppia dispositivo con codice di accoppiamento\" e inserisci le 6 cifre nella notifica. Su ColorOS, attiva prima \"Disable system optimisation\".</string>
+    <string name="perm_log">Lettura del log</string>
+    <string name="perm_overlay">Mostra sopra altre app</string>
+    <string name="perm_battery">Batteria senza limitazioni</string>
+    <string name="perm_allow">Consenti</string>
+    <string name="perm_granted">Concessa</string>
+    <string name="perm_needed">Necessaria</string>
+    <string name="perm_coloros">Su ColorOS, imposta anche Utilizzo della batteria su \"Senza limitazioni\" nelle impostazioni dell\'app e blocca l\'app tra le app recenti.</string>
+    <string name="perm_app_settings">Apri le impostazioni dell\'app</string>
+    <string name="perm_by_hand">Da un computer, con adb:</string>
+    <string name="perm_copy">Copia il comando</string>
+    <string name="toast_copied">Comando copiato</string>
+    <string name="perm_by_hand_or">Oppure a mano:</string>
+    <string name="target_title">Cosa apre questa pressione</string>
+    <string name="target_link">Un link</string>
+    <string name="target_app">Un\'app</string>
+    <string name="target_link_help">Un indirizzo web, un deep link o un link intent:</string>
+    <string name="app_choose">Scegli un\'app</string>
+    <string name="app_none">Nessuna app scelta</string>
+    <string name="dlg_choose_app">Scegli un\'app</string>
+    <string name="target_test">Prova l\'apertura</string>
+    <string name="target_clear">Rimuovi</string>
+    <string name="listen_restart_help">Le scorciatoie funzionavano ma ora non più? Tocca questo pulsante.</string>
+    <string name="listen_restart">Riavvia l\'ascolto</string>
+    <string name="native_long_used">ColorOS usa già la pressione prolungata della Snap Key per una sua azione. Se scegli qualcosa qui, partiranno entrambe: prima imposta l\'azione del tasto su Nessuno nelle impostazioni del telefono.</string>
+    <string name="gesture_title">Gesto</string>
+    <string name="gesture_help">Ogni pressione può aprire qualcosa di diverso: scegline una, poi scegli qui sotto cosa apre. Quando due o tre pressioni aprono qualcosa, una serie più breve aspetta un istante per distinguerle.</string>
+    <string name="gesture_single">Singola</string>
+    <string name="gesture_double">Doppia</string>
+    <string name="gesture_triple">Tripla</string>
+    <string name="gesture_long">Prolungata</string>
+    <string name="finder_title">Un altro telefono? Trova il tuo tasto</string>
+    <string name="finder_help">Il tasto del Find X9 è già conosciuto. Su un altro telefono: avvia la cattura, premi il tasto laterale 2 o 3 volte, interrompi, poi tocca la riga che ricompare a ogni pressione. La cattura può contenere informazioni personali di altre app: controllala prima di condividerla.</string>
+    <string name="capture_start">Avvia la cattura</string>
+    <string name="capture_stop">Interrompi la cattura</string>
+    <string name="finder_all">Mostra tutte le righe</string>
+    <string name="finder_save">Salva la cattura in un file</string>
+    <string name="finder_pattern">Schema da riconoscere (una parte della riga, senza i numeri che cambiano)</string>
+    <string name="toast_pattern_saved">Schema salvato, puoi avviare l\'ascolto</string>
+    <string name="toast_no_lines">Nessuna riga: spunta \"Mostra tutte le righe\" o controlla l\'autorizzazione</string>
+    <string name="toast_saved">Cattura salvata</string>
+    <string name="toast_choose_pattern">Prima scegli lo schema (menu › Un altro telefono)</string>
+    <string name="notif_listening_title">SnapKey Mapper è in ascolto</string>
+    <string name="notif_listening_text">Premi il tasto laterale per aprire la tua destinazione</string>
+    <string name="notif_stopped_title">SnapKey Mapper è fermo</string>
+    <string name="notif_stopped_text">Tocca qui per riavviare l\'ascolto</string>
+    <string name="diag_blocked">Apertura bloccata da Android</string>
+    <string name="diag_requested">Apertura richiesta</string>
+    <string name="channel_listen">Ascolto del tasto laterale</string>
+    <string name="setup_waiting_title">Configurazione: in attesa della schermata di accoppiamento</string>
+    <string name="setup_waiting_text">In Opzioni sviluppatore, attiva Debug wireless e tocca \"Accoppia dispositivo con codice di accoppiamento\"</string>
+    <string name="setup_pairing">Accoppiamento…</string>
+    <string name="setup_wait">Attendi</string>
+    <string name="setup_code_title">Inserisci qui il codice di accoppiamento</string>
+    <string name="setup_code_text">Abbassa la notifica e scrivi le 6 cifre mostrate da Android</string>
+    <string name="setup_fail_connect">Impossibile connettersi al debug wireless</string>
+    <string name="setup_refused">Rifiutato da ColorOS: passa il telefono all\'inglese, attiva \"Disable system optimisation\" (ricerca nelle Impostazioni), poi riprova</string>
+    <string name="setup_notif_title">Configurazione di SnapKey Mapper</string>
+    <string name="setup_channel">Configurazione</string>
+    <string name="setup_enter_code">Inserisci il codice</string>
+    <string name="setup_code_label">Codice a 6 cifre</string>
+    <string name="setup_done">La lettura del log è configurata. Puoi disattivare Debug wireless.</string>
+    <string name="err_invalid_intent">Link intent non valido</string>
+    <string name="setup_fail_pair">Accoppiamento non riuscito. Tocca di nuovo il pulsante di configurazione dell\'app, poi \"Accoppia dispositivo con codice di accoppiamento\" e inserisci il nuovo codice. Se non funziona ancora, disattiva e riattiva Debug wireless.</string>
+    <string name="lang_title">Lingua</string>
+    <string name="library_open">Sfoglia la raccolta di scorciatoie</string>
+    <string name="library_title">Raccolta di scorciatoie</string>
+    <string name="library_intro">Scorciatoie pronte, raggruppate per app. Scegline una, inserisci i tuoi valori, provala, poi usala per la Snap Key.</string>
+    <string name="library_search">Cerca un\'app o un\'azione</string>
+    <string name="library_count">Scorciatoie: %1$d</string>
+    <string name="library_not_installed">Non installata</string>
+    <string name="library_empty">Nessun risultato per la tua ricerca.</string>
+    <string name="recipe_fields">I tuoi valori</string>
+    <string name="recipe_link">Link finale</string>
+    <string name="recipe_use">Usa questa scorciatoia</string>
+    <string name="recipe_fill_all">Prima compila tutti i campi.</string>
+    <string name="recipe_saved">Salvata come destinazione.</string>
+    <string name="recipe_missing">Non si è aperto nulla. L\'app è installata?</string>
+    <string name="recipe_source">Documentazione ufficiale</string>
+    <string name="menu">Menu</string>
+    <string name="menu_help">Aiuto e sito web</string>
+    <string name="help_url">https://remapsnapkey.com/it/</string>
+    <string name="setup_title">Configurazione</string>
+    <string name="setup_intro">Quattro passaggi, una volta sola. Ognuno si spunta da solo quando è completato.</string>
+    <string name="setup_continue">Continua la configurazione</string>
+    <string name="setup_other_way">Altro metodo: da un computer</string>
+    <string name="setup_open_setting">Apri l\'impostazione</string>
+    <string name="setup_native_title">Azione della Snap Key del telefono disattivata</string>
+    <string name="setup_open_phone_settings">Apri le impostazioni del telefono</string>
+    <string name="setup_native_done">Fatto: la Snap Key non fa nulla da sola</string>
+    <string name="finder_intro">Il tasto del Find X9 è già conosciuto: qui non c\'è niente da fare. Su un altro telefono, l\'app deve imparare quale riga Android scrive nel suo log quando premi il tasto.</string>
+    <string name="finder_privacy">La cattura può contenere informazioni personali di altre app: controlla il file prima di condividerlo.</string>
+    <string name="finder_need_log">Prima serve la lettura del log: completa il passaggio 1 della configurazione.</string>
+    <string name="app_search">Cerca un\'app</string>
+    <string name="target_link_enter">Scrivi un link</string>
+    <string name="target_none">Ancora niente di scelto</string>
+    <string-array name="steps_log_auto">
+        <item>Connetti il telefono al tuo Wi-Fi.</item>
+        <item>Se Opzioni sviluppatore è nascosto: Impostazioni › Informazioni sul dispositivo › Versione, tocca 7 volte Numero build.</item>
+        <item>In Opzioni sviluppatore, attiva \"Disable system optimisation\" (ColorOS).</item>
+        <item>Tocca \"Configura automaticamente la lettura del log\" qui sotto.</item>
+        <item>Attiva Debug wireless, poi tocca \"Accoppia dispositivo con codice di accoppiamento\".</item>
+        <item>Abbassa le notifiche e inserisci le 6 cifre nella notifica di SnapKey Mapper.</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>Su un computer, installa gli Android platform-tools (adb).</item>
+        <item>In Opzioni sviluppatore, attiva Debug USB e \"Disable system optimisation\" (ColorOS), poi collega il telefono con un cavo.</item>
+        <item>Esegui sul computer il comando qui sotto.</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>Tocca \"Apri l\'impostazione\" e attiva l\'interruttore.</item>
+        <item>Se l\'interruttore è grigio o Android dice che l\'accesso è negato: tocca \"Apri le impostazioni dell\'app\", poi ⋮ in alto a destra › \"Consenti impostazioni con limitazioni\", poi torna qui.</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>Tocca \"Consenti\" e conferma.</item>
+        <item>Su ColorOS, apri anche le impostazioni dell\'app › Utilizzo della batteria › \"Senza limitazioni\" e blocca l\'app tra le app recenti.</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>Apri le impostazioni del telefono e cerca \"Snap Key\".</item>
+        <item>Impostala su nessuna azione, così il telefono non esegue la sua azione nello stesso momento.</item>
+        <item>Spunta la casella qui sotto.</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>Tocca \"Avvia la cattura\".</item>
+        <item>Premi il tasto 3 volte, a qualche secondo di distanza.</item>
+        <item>Tocca \"Interrompi la cattura\".</item>
+        <item>Nell\'elenco qui sotto, tocca la riga che è ricomparsa a ogni pressione: diventa lo schema.</item>
+        <item>Torna alla schermata principale, avvia l\'ascolto e premi il tasto per verificare.</item>
+    </string-array>
+    <string name="recipe_help">Non funziona sul tuo telefono? Su un computer, chiedi a Claude Code con il plugin SnapKey Mapper: trova un link che funziona e lo prova sul telefono, collegato con un cavo USB o con il debug wireless.</string>
+    <string name="setup_progress">Passaggio %1$d di %2$d</string>
+    <string name="wiz_wifi_title">Connettiti al Wi-Fi</string>
+    <string name="wiz_wifi_text">L\'app si concede da sola l\'autorizzazione al log tramite il debug wireless del telefono, che funziona solo con il Wi-Fi. Connetti il telefono, poi torna qui.</string>
+    <string name="wiz_wifi_btn">Apri Wi-Fi</string>
+    <string name="wiz_dev_title">Attiva Opzioni sviluppatore</string>
+    <string name="wiz_dev_text">Tocca il pulsante, poi tocca 7 volte Numero build (su ColorOS: Versione). Android ti dice che sei uno sviluppatore. Torna qui.</string>
+    <string name="wiz_dev_btn">Apri Informazioni sullo smartphone</string>
+    <string name="wiz_pair_title">Accoppia l\'app con il telefono</string>
+    <string name="wiz_pair_text">1. Tocca il pulsante: si apre Debug wireless (se invece si apre l\'elenco di Opzioni sviluppatore, tocca il testo \"Debug wireless\", non l\'interruttore).\n2. Attivalo e consenti la tua rete.\n3. Tocca \"Accoppia dispositivo con codice di accoppiamento\".\n4. Compare una notifica di SnapKey Mapper: tocca la sua freccia per espanderla, tocca \"Inserisci il codice\" e scrivi le 6 cifre. Tutto qui, al resto pensa l\'app.</string>
+    <string name="wiz_sysopt_title">Prima un interruttore nascosto di ColorOS</string>
+    <string name="wiz_sysopt_text">ColorOS blocca l\'autorizzazione finché un interruttore nascosto non è attivo, e compare solo se il telefono è in inglese.\n1. Passa il telefono a English (Lingua e regione).\n2. In Impostazioni, cerca \"Disable system\" e attiva \"Disable system optimisation\" (Turn on anyway).\n3. Torna qui. Dopo la configurazione puoi rimettere l\'italiano.</string>
+    <string name="wiz_sysopt_btn">Apri Lingua e regione</string>
+    <string name="wiz_sysopt_btn2">Apri Impostazioni</string>
+    <string name="wiz_sysopt_done">Fatto, continua</string>
+    <string name="wiz_last">Ultimo tentativo: %1$s</string>
+    <string name="wiz_computer_text">L\'edizione lite non ha accesso alla rete, quindi l\'autorizzazione si dà da un computer, una volta sola: attiva Debug USB in Opzioni sviluppatore, collega il telefono con un cavo ed esegui questo comando.</string>
+    <string name="wiz_overlay_text">Permette al tasto di aprire la tua destinazione anche a schermo spento o quando un\'altra app è in primo piano. Tocca il pulsante, poi SnapKey Mapper nell\'elenco, e attiva l\'interruttore.</string>
+    <string name="wiz_restricted">Interruttore grigio, o \"accesso negato\"? Android lo blocca per le app installate fuori dal Play Store: apri le impostazioni dell\'app, tocca ⋮ in alto a destra, poi \"Consenti impostazioni con limitazioni\", e torna qui.</string>
+    <string name="wiz_battery_text">Così Android non chiude l\'app in background. Tocca il pulsante e conferma. Su ColorOS, blocca anche l\'app tra le app recenti.</string>
+    <string name="wiz_native_text">Così il telefono non esegue la sua azione della Snap Key nello stesso momento: nelle impostazioni del telefono, cerca \"Snap Key\" e impostala su nessuna azione.</string>
+    <string name="wiz_done_title">Tutto pronto</string>
+    <string name="wiz_done_text">Tutto pronto. Ora il tasto è in ascolto da solo. Puoi disattivare Debug wireless. Scegli cosa apre il tasto.</string>
+    <string name="wiz_done_btn">Continua</string>
+    <string name="home_setup_title">Configura SnapKey Mapper</string>
+    <string name="home_setup_text">Pochi passaggi, una volta sola. L\'app apre ogni impostazione per te e la controlla.</string>
+    <string name="home_finder">Il tasto non fa nulla? Un altro telefono: trova il tuo tasto</string>
+    <string name="wiz_skip">Già fatto, continua</string>
+    <string name="wiz_notif_title">Attiva le notifiche</string>
+    <string name="wiz_notif_text">Il codice di accoppiamento si inserisce in una notifica dell\'app. Attiva le sue notifiche, poi torna qui.</string>
+    <string name="wiz_notif_btn">Apri le notifiche</string>
+    <string name="menu_diag">Copia la diagnostica</string>
+    <string name="diag_copied">Diagnostica copiata: incollala in una issue su GitHub</string>
+    <string name="diag_stuck">Bloccato? Copia la diagnostica per una issue su GitHub</string>
+</resources>

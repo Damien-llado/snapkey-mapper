@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SnapKey Mapper</string>
+    <string name="state_setup">Thiết lập: đã xong %1$d/%2$d bước</string>
+    <string name="toast_cannot_open">Không mở được: %1$s</string>
+    <string name="toast_cannot_read">Không đọc được nhật ký: %1$s</string>
+    <string name="toast_failed">Thất bại: %1$s</string>
+    <string name="notif_count">SnapKey Mapper đang lắng nghe: đã phát hiện %1$d lần nhấn</string>
+    <string name="diag_error">Lỗi: %1$s</string>
+    <string name="setup_not_granted">Chưa được cấp: %1$s</string>
+    <string name="state_listening">Đang lắng nghe: hãy nhấn phím</string>
+    <string name="state_ready">Sẵn sàng</string>
+    <string name="state_choose">Chọn thứ phím sẽ mở</string>
+    <string name="btn_start">Bắt đầu lắng nghe</string>
+    <string name="btn_stop">Dừng lắng nghe</string>
+    <string name="perm_title">Quyền</string>
+    <string name="perm_sub">Ba công tắc, chỉ một lần. Phím không cần gì thêm.</string>
+    <string name="perm_auto_btn">Mở Gỡ lỗi qua Wi-Fi</string>
+    <string name="perm_auto_help">Kết nối Wi-Fi, nhấn nút, rồi trong Tùy chọn nhà phát triển, bật Gỡ lỗi qua Wi-Fi, nhấn \"Ghép nối thiết bị bằng mã ghép nối\" và nhập 6 chữ số vào thông báo. Trên ColorOS, hãy bật \"Disable system optimisation\" trước.</string>
+    <string name="perm_log">Đọc nhật ký</string>
+    <string name="perm_overlay">Hiển thị trên các ứng dụng khác</string>
+    <string name="perm_battery">Pin không hạn chế</string>
+    <string name="perm_allow">Cho phép</string>
+    <string name="perm_granted">Đã cấp</string>
+    <string name="perm_needed">Cần cấp</string>
+    <string name="perm_coloros">Trên ColorOS, hãy đặt thêm Mức sử dụng pin thành \"Không hạn chế\" trong cài đặt ứng dụng và khóa ứng dụng trong danh sách ứng dụng gần đây.</string>
+    <string name="perm_app_settings">Mở cài đặt ứng dụng</string>
+    <string name="perm_by_hand">Từ máy tính, bằng adb:</string>
+    <string name="perm_copy">Sao chép lệnh</string>
+    <string name="toast_copied">Đã sao chép lệnh</string>
+    <string name="perm_by_hand_or">Hoặc làm thủ công:</string>
+    <string name="target_title">Lần nhấn này sẽ mở</string>
+    <string name="target_link">Một liên kết</string>
+    <string name="target_app">Một ứng dụng</string>
+    <string name="target_link_help">Địa chỉ web, liên kết sâu (deep link) hoặc liên kết intent:</string>
+    <string name="app_choose">Chọn ứng dụng</string>
+    <string name="app_none">Chưa chọn ứng dụng</string>
+    <string name="dlg_choose_app">Chọn ứng dụng</string>
+    <string name="target_test">Thử mở</string>
+    <string name="target_clear">Gỡ bỏ</string>
+    <string name="listen_restart_help">Phím tắt trước đây hoạt động nhưng giờ không còn nữa? Hãy nhấn nút này.</string>
+    <string name="listen_restart">Bật lại lắng nghe</string>
+    <string name="native_long_used">ColorOS đã dùng thao tác nhấn giữ Snap Key cho chức năng riêng của nó. Nếu bạn chọn gì đó ở đây, cả hai sẽ cùng chạy: hãy đặt chức năng của phím thành Không có trong cài đặt điện thoại trước.</string>
+    <string name="gesture_title">Thao tác</string>
+    <string name="gesture_help">Mỗi kiểu nhấn có thể mở một thứ khác nhau: chọn một kiểu, rồi chọn bên dưới thứ nó sẽ mở. Khi kiểu nhấn hai hoặc ba lần có gán chức năng, chuỗi nhấn ngắn hơn sẽ chờ một chút để phân biệt.</string>
+    <string name="gesture_single">Nhấn một lần</string>
+    <string name="gesture_double">Nhấn hai lần</string>
+    <string name="gesture_triple">Nhấn ba lần</string>
+    <string name="gesture_long">Nhấn giữ</string>
+    <string name="finder_title">Điện thoại khác? Tìm phím của bạn</string>
+    <string name="finder_help">Phím của Find X9 đã được nhận diện sẵn. Trên điện thoại khác: bắt đầu ghi, nhấn phím bên 2 hoặc 3 lần, dừng lại, rồi nhấn vào dòng xuất hiện lại ở mỗi lần nhấn. Bản ghi có thể chứa thông tin cá nhân từ các ứng dụng khác: hãy kiểm tra trước khi chia sẻ.</string>
+    <string name="capture_start">Bắt đầu ghi</string>
+    <string name="capture_stop">Dừng ghi</string>
+    <string name="finder_all">Hiện tất cả các dòng</string>
+    <string name="finder_save">Lưu bản ghi vào tệp</string>
+    <string name="finder_pattern">Mẫu cần nhận diện (một phần của dòng, bỏ các con số thay đổi)</string>
+    <string name="toast_pattern_saved">Đã lưu mẫu, bạn có thể bắt đầu lắng nghe</string>
+    <string name="toast_no_lines">Không có dòng nào: đánh dấu \"Hiện tất cả các dòng\" hoặc kiểm tra quyền</string>
+    <string name="toast_saved">Đã lưu bản ghi</string>
+    <string name="toast_choose_pattern">Hãy chọn mẫu trước (menu › Điện thoại khác)</string>
+    <string name="notif_listening_title">SnapKey Mapper đang lắng nghe</string>
+    <string name="notif_listening_text">Nhấn phím bên để mở mục tiêu của bạn</string>
+    <string name="notif_stopped_title">SnapKey Mapper đã dừng</string>
+    <string name="notif_stopped_text">Nhấn vào đây để bật lại lắng nghe</string>
+    <string name="diag_blocked">Android đã chặn việc mở</string>
+    <string name="diag_requested">Đã yêu cầu mở</string>
+    <string name="channel_listen">Lắng nghe phím bên</string>
+    <string name="setup_waiting_title">Thiết lập: đang chờ màn hình ghép nối</string>
+    <string name="setup_waiting_text">Trong Tùy chọn nhà phát triển, bật Gỡ lỗi qua Wi-Fi và nhấn \"Ghép nối thiết bị bằng mã ghép nối\"</string>
+    <string name="setup_pairing">Đang ghép nối…</string>
+    <string name="setup_wait">Vui lòng chờ</string>
+    <string name="setup_code_title">Nhập mã ghép nối tại đây</string>
+    <string name="setup_code_text">Kéo thông báo xuống và nhập 6 chữ số Android hiển thị</string>
+    <string name="setup_fail_connect">Không kết nối được với Gỡ lỗi qua Wi-Fi</string>
+    <string name="setup_refused">ColorOS từ chối: chuyển điện thoại sang tiếng Anh, bật \"Disable system optimisation\" (tìm trong Cài đặt), rồi thử lại</string>
+    <string name="setup_notif_title">Thiết lập SnapKey Mapper</string>
+    <string name="setup_channel">Thiết lập</string>
+    <string name="setup_enter_code">Nhập mã</string>
+    <string name="setup_code_label">Mã 6 chữ số</string>
+    <string name="setup_done">Đã thiết lập xong quyền đọc nhật ký. Bạn có thể tắt Gỡ lỗi qua Wi-Fi.</string>
+    <string name="err_invalid_intent">Liên kết intent không hợp lệ</string>
+    <string name="setup_fail_pair">Ghép nối thất bại. Nhấn lại nút thiết lập của ứng dụng, rồi \"Ghép nối thiết bị bằng mã ghép nối\" và nhập mã mới. Nếu vẫn không được, hãy tắt rồi bật lại Gỡ lỗi qua Wi-Fi.</string>
+    <string name="lang_title">Ngôn ngữ</string>
+    <string name="library_open">Xem thư viện lối tắt</string>
+    <string name="library_title">Thư viện lối tắt</string>
+    <string name="library_intro">Các lối tắt có sẵn, xếp theo ứng dụng. Chọn một lối tắt, điền giá trị của bạn, thử nó, rồi dùng cho Snap Key.</string>
+    <string name="library_search">Tìm ứng dụng hoặc thao tác</string>
+    <string name="library_count">Lối tắt: %1$d</string>
+    <string name="library_not_installed">Chưa cài đặt</string>
+    <string name="library_empty">Không có kết quả phù hợp.</string>
+    <string name="recipe_fields">Giá trị của bạn</string>
+    <string name="recipe_link">Liên kết hoàn chỉnh</string>
+    <string name="recipe_use">Dùng lối tắt này</string>
+    <string name="recipe_fill_all">Hãy điền tất cả các ô trước.</string>
+    <string name="recipe_saved">Đã lưu làm mục tiêu.</string>
+    <string name="recipe_missing">Không có gì được mở. Ứng dụng đã được cài chưa?</string>
+    <string name="recipe_source">Tài liệu chính thức</string>
+    <string name="menu">Menu</string>
+    <string name="menu_help">Trợ giúp và trang web</string>
+    <string name="help_url">https://remapsnapkey.com/vi/</string>
+    <string name="setup_title">Thiết lập</string>
+    <string name="setup_intro">Bốn bước, chỉ một lần. Mỗi bước tự đánh dấu khi hoàn tất.</string>
+    <string name="setup_continue">Tiếp tục thiết lập</string>
+    <string name="setup_other_way">Cách khác: từ máy tính</string>
+    <string name="setup_open_setting">Mở cài đặt</string>
+    <string name="setup_native_title">Tắt chức năng gốc của Snap Key</string>
+    <string name="setup_open_phone_settings">Mở cài đặt điện thoại</string>
+    <string name="setup_native_done">Xong: Snap Key không tự làm gì nữa</string>
+    <string name="finder_intro">Phím của Find X9 đã được nhận diện sẵn: không cần làm gì ở đây. Trên điện thoại khác, ứng dụng cần biết dòng nào Android ghi vào nhật ký khi bạn nhấn phím.</string>
+    <string name="finder_privacy">Bản ghi có thể chứa thông tin cá nhân từ các ứng dụng khác: hãy kiểm tra tệp trước khi chia sẻ.</string>
+    <string name="finder_need_log">Cần có quyền đọc nhật ký trước: hãy hoàn tất bước 1 của phần thiết lập.</string>
+    <string name="app_search">Tìm ứng dụng</string>
+    <string name="target_link_enter">Nhập liên kết</string>
+    <string name="target_none">Chưa chọn gì</string>
+    <string-array name="steps_log_auto">
+        <item>Kết nối điện thoại với Wi-Fi của bạn.</item>
+        <item>Nếu Tùy chọn nhà phát triển bị ẩn: Cài đặt › Giới thiệu về thiết bị › Phiên bản, nhấn 7 lần vào Số bản dựng.</item>
+        <item>Trong Tùy chọn nhà phát triển, bật \"Disable system optimisation\" (ColorOS).</item>
+        <item>Nhấn \"Tự động thiết lập quyền đọc nhật ký\" bên dưới.</item>
+        <item>Bật Gỡ lỗi qua Wi-Fi, rồi nhấn \"Ghép nối thiết bị bằng mã ghép nối\".</item>
+        <item>Kéo thông báo xuống và nhập 6 chữ số vào thông báo của SnapKey Mapper.</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>Trên máy tính, cài Android platform-tools (adb).</item>
+        <item>Trong Tùy chọn nhà phát triển, bật Gỡ lỗi qua USB và \"Disable system optimisation\" (ColorOS), rồi cắm cáp nối điện thoại với máy tính.</item>
+        <item>Chạy lệnh bên dưới trên máy tính.</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>Nhấn \"Mở cài đặt\" và bật công tắc.</item>
+        <item>Nếu công tắc bị mờ hoặc Android báo bị từ chối truy cập: nhấn \"Mở cài đặt ứng dụng\", rồi ⋮ ở góc trên bên phải › \"Cho phép các chế độ cài đặt bị hạn chế\", rồi quay lại đây.</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>Nhấn \"Cho phép\" và xác nhận.</item>
+        <item>Trên ColorOS, mở thêm cài đặt ứng dụng › Mức sử dụng pin › \"Không hạn chế\", và khóa ứng dụng trong danh sách ứng dụng gần đây.</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>Mở cài đặt điện thoại và tìm \"Snap Key\".</item>
+        <item>Đặt thành không có chức năng, để điện thoại không chạy chức năng riêng cùng lúc.</item>
+        <item>Đánh dấu ô bên dưới.</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>Nhấn \"Bắt đầu ghi\".</item>
+        <item>Nhấn phím của bạn 3 lần, mỗi lần cách nhau vài giây.</item>
+        <item>Nhấn \"Dừng ghi\".</item>
+        <item>Trong danh sách bên dưới, nhấn vào dòng xuất hiện lại ở mỗi lần nhấn: dòng đó sẽ trở thành mẫu.</item>
+        <item>Quay về màn hình chính, bắt đầu lắng nghe và nhấn phím để kiểm tra.</item>
+    </string-array>
+    <string name="recipe_help">Không chạy trên điện thoại của bạn? Trên máy tính, hãy hỏi Claude Code có plugin SnapKey Mapper: nó sẽ tìm một liên kết chạy được và thử trên điện thoại của bạn, kết nối bằng cáp USB hoặc Gỡ lỗi qua Wi-Fi.</string>
+    <string name="setup_progress">Bước %1$d/%2$d</string>
+    <string name="wiz_wifi_title">Kết nối Wi-Fi</string>
+    <string name="wiz_wifi_text">Ứng dụng tự cấp quyền đọc nhật ký thông qua Gỡ lỗi qua Wi-Fi của điện thoại, tính năng này chỉ hoạt động khi có Wi-Fi. Hãy kết nối điện thoại, rồi quay lại đây.</string>
+    <string name="wiz_wifi_btn">Mở Wi-Fi</string>
+    <string name="wiz_dev_title">Bật Tùy chọn nhà phát triển</string>
+    <string name="wiz_dev_text">Nhấn nút, rồi nhấn 7 lần vào Số bản dựng (trên ColorOS: Phiên bản). Android sẽ báo bạn đã là nhà phát triển. Quay lại đây.</string>
+    <string name="wiz_dev_btn">Mở Giới thiệu về điện thoại</string>
+    <string name="wiz_pair_title">Ghép nối ứng dụng với điện thoại</string>
+    <string name="wiz_pair_text">1. Nhấn nút: Gỡ lỗi qua Wi-Fi sẽ mở ra (nếu danh sách Tùy chọn nhà phát triển mở ra, hãy nhấn vào dòng chữ \"Gỡ lỗi qua Wi-Fi\", không phải công tắc).\n2. Bật tính năng và cho phép mạng của bạn.\n3. Nhấn \"Ghép nối thiết bị bằng mã ghép nối\".\n4. Một thông báo SnapKey Mapper hiện xuống: nhấn mũi tên để mở rộng, nhấn \"Nhập mã\" và nhập 6 chữ số. Vậy là xong, ứng dụng sẽ lo phần còn lại.</string>
+    <string name="wiz_sysopt_title">Trước tiên, một công tắc ẩn của ColorOS</string>
+    <string name="wiz_sysopt_text">ColorOS chặn quyền này cho đến khi một công tắc ẩn được bật, và công tắc đó chỉ hiện khi điện thoại dùng tiếng Anh.\n1. Chuyển điện thoại sang English (Ngôn ngữ và khu vực).\n2. Trong Cài đặt, tìm \"Disable system\" và bật \"Disable system optimisation\" (Turn on anyway).\n3. Quay lại đây. Sau khi thiết lập xong, bạn có thể chuyển lại tiếng Việt.</string>
+    <string name="wiz_sysopt_btn">Mở Ngôn ngữ và khu vực</string>
+    <string name="wiz_sysopt_btn2">Mở Cài đặt</string>
+    <string name="wiz_sysopt_done">Xong, tiếp tục</string>
+    <string name="wiz_last">Lần thử gần nhất: %1$s</string>
+    <string name="wiz_computer_text">Bản lite không có quyền truy cập mạng, nên quyền này được cấp từ máy tính, chỉ một lần: bật Gỡ lỗi qua USB trong Tùy chọn nhà phát triển, cắm cáp nối điện thoại và chạy lệnh này.</string>
+    <string name="wiz_overlay_text">Cho phép phím mở mục tiêu của bạn ngay cả khi màn hình tắt hoặc đang mở ứng dụng khác. Nhấn nút, rồi chọn SnapKey Mapper trong danh sách và bật công tắc.</string>
+    <string name="wiz_restricted">Công tắc bị mờ, hoặc báo \"bị từ chối truy cập\"? Android chặn quyền này với các ứng dụng cài ngoài Play Store: mở cài đặt ứng dụng, nhấn ⋮ ở góc trên bên phải, rồi \"Cho phép các chế độ cài đặt bị hạn chế\", và quay lại.</string>
+    <string name="wiz_battery_text">Để Android không dừng ứng dụng khi chạy nền. Nhấn nút và xác nhận. Trên ColorOS, hãy khóa thêm ứng dụng trong danh sách ứng dụng gần đây.</string>
+    <string name="wiz_native_text">Để điện thoại không chạy chức năng Snap Key riêng cùng lúc: trong cài đặt điện thoại, tìm \"Snap Key\" và đặt thành không có chức năng.</string>
+    <string name="wiz_done_title">Đã xong</string>
+    <string name="wiz_done_text">Đã xong. Phím giờ tự được lắng nghe. Bạn có thể tắt Gỡ lỗi qua Wi-Fi. Hãy chọn thứ phím sẽ mở.</string>
+    <string name="wiz_done_btn">Tiếp tục</string>
+    <string name="home_setup_title">Thiết lập SnapKey Mapper</string>
+    <string name="home_setup_text">Vài bước, chỉ một lần. Ứng dụng mở từng mục cài đặt giúp bạn và tự kiểm tra.</string>
+    <string name="home_finder">Phím không phản hồi? Điện thoại khác: tìm phím của bạn</string>
+    <string name="wiz_skip">Đã làm rồi, tiếp tục</string>
+    <string name="wiz_notif_title">Bật thông báo</string>
+    <string name="wiz_notif_text">Mã ghép nối được nhập trong một thông báo của ứng dụng. Hãy bật thông báo của ứng dụng, rồi quay lại đây.</string>
+    <string name="wiz_notif_btn">Mở thông báo</string>
+    <string name="menu_diag">Sao chép thông tin chẩn đoán</string>
+    <string name="diag_copied">Đã sao chép chẩn đoán: dán vào một issue trên GitHub</string>
+    <string name="diag_stuck">Gặp khó? Sao chép chẩn đoán để gửi issue trên GitHub</string>
+</resources>

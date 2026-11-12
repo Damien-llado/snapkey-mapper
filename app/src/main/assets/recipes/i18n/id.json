@@ -1,0 +1,1035 @@
+{
+ "apps": {
+  "clock": {
+   "name": "Jam"
+  },
+  "camera": {
+   "name": "Kamera"
+  },
+  "phone": {
+   "name": "Telepon"
+  },
+  "messages": {
+   "name": "Pesan"
+  },
+  "email": {
+   "name": "Email"
+  },
+  "web": {
+   "name": "Web"
+  },
+  "calendar": {
+   "name": "Kalender"
+  },
+  "contacts": {
+   "name": "Kontak"
+  },
+  "settings": {
+   "name": "Pengaturan"
+  },
+  "assistant": {
+   "name": "Asisten"
+  }
+ },
+ "recipes": {
+  "clock-timer": {
+   "title": "Mulai timer",
+   "desc": "Langsung memulai hitung mundur, tanpa membuka aplikasi Jam.",
+   "vars": {
+    "SECONDS": {
+     "label": "Durasi dalam detik",
+     "where": "Kalikan menit dengan 60: 5 menit menjadi 300, 1 jam menjadi 3600."
+    }
+   }
+  },
+  "clock-timer-label": {
+   "title": "Mulai timer dengan nama",
+   "desc": "Memulai hitung mundur dengan nama, misalnya \"Pasta\".",
+   "vars": {
+    "SECONDS": {
+     "label": "Durasi dalam detik",
+     "where": "Kalikan menit dengan 60: 10 menit menjadi 600."
+    },
+    "LABEL": {
+     "label": "Nama timer",
+     "where": "Teks pendek apa saja."
+    }
+   }
+  },
+  "clock-alarm": {
+   "title": "Pasang alarm",
+   "desc": "Membuat alarm pada jam pilihan Anda, tanpa membuka aplikasi Jam.",
+   "vars": {
+    "HOUR": {
+     "label": "Jam (0 sampai 23)",
+     "where": "Format 24 jam: 7 untuk pukul 7 pagi, 19 untuk pukul 7 malam."
+    },
+    "MINUTES": {
+     "label": "Menit (0 sampai 59)",
+     "where": "Hanya menit dari waktu yang Anda inginkan."
+    }
+   }
+  },
+  "clock-alarm-label": {
+   "title": "Pasang alarm dengan nama",
+   "desc": "Membuat alarm dengan nama, misalnya \"Olahraga\".",
+   "vars": {
+    "HOUR": {
+     "label": "Jam (0 sampai 23)",
+     "where": "Format 24 jam: 7 untuk pukul 7 pagi, 19 untuk pukul 7 malam."
+    },
+    "MINUTES": {
+     "label": "Menit (0 sampai 59)",
+     "where": "Hanya menit dari waktu yang Anda inginkan."
+    },
+    "LABEL": {
+     "label": "Nama alarm",
+     "where": "Teks pendek apa saja."
+    }
+   }
+  },
+  "clock-show-alarms": {
+   "title": "Tampilkan alarm",
+   "desc": "Membuka daftar alarm Anda."
+  },
+  "clock-show-timers": {
+   "title": "Tampilkan timer",
+   "desc": "Membuka daftar timer Anda."
+  },
+  "camera-photo": {
+   "title": "Buka kamera dalam mode foto",
+   "desc": "Membuka aplikasi kamera default, siap mengambil foto."
+  },
+  "camera-video": {
+   "title": "Buka kamera dalam mode video",
+   "desc": "Membuka aplikasi kamera default, siap merekam video."
+  },
+  "phone-dial": {
+   "title": "Hubungi nomor",
+   "desc": "Membuka papan tombol dengan nomor yang sudah terisi. Anda sendiri yang menekan tombol panggil.",
+   "vars": {
+    "NUMBER": {
+     "label": "Nomor telepon",
+     "where": "Dengan kode negara, misalnya +33123456789."
+    }
+   }
+  },
+  "phone-open-dialer": {
+   "title": "Buka papan tombol",
+   "desc": "Membuka papan tombol aplikasi Telepon."
+  },
+  "messages-compose": {
+   "title": "Tulis SMS",
+   "desc": "Membuka aplikasi pesan Anda dengan penerima dan teks yang sudah terisi. Anda sendiri yang menekan Kirim.",
+   "vars": {
+    "NUMBER": {
+     "label": "Nomor telepon",
+     "where": "Dengan kode negara, misalnya +33123456789."
+    },
+    "MESSAGE": {
+     "label": "Pesan",
+     "where": "Teks yang akan dikirim."
+    }
+   }
+  },
+  "email-compose": {
+   "title": "Tulis email",
+   "desc": "Membuka aplikasi email Anda dengan alamat, subjek, dan teks yang sudah terisi. Anda sendiri yang menekan Kirim.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Alamat email",
+     "where": "Orang yang ingin Anda kirimi email."
+    },
+    "SUBJECT": {
+     "label": "Subjek",
+     "where": "Teks pendek apa saja."
+    },
+    "BODY": {
+     "label": "Pesan",
+     "where": "Isi email."
+    }
+   }
+  },
+  "web-open": {
+   "title": "Buka situs web",
+   "desc": "Membuka alamat web apa pun di browser Anda (atau di aplikasi yang mendukungnya).",
+   "vars": {
+    "URL": {
+     "label": "Alamat web",
+     "where": "Salin dari browser Anda, alamatnya diawali dengan https://."
+    }
+   }
+  },
+  "web-search": {
+   "title": "Cari di web",
+   "desc": "Menjalankan pencarian web untuk teks yang tetap.",
+   "vars": {
+    "QUERY": {
+     "label": "Teks yang dicari",
+     "where": "Apa yang ingin Anda cari."
+    }
+   }
+  },
+  "calendar-new-event": {
+   "title": "Buat acara",
+   "desc": "Membuka kalender Anda di acara baru, dengan judul yang sudah terisi.",
+   "vars": {
+    "TITLE": {
+     "label": "Judul acara",
+     "where": "Teks pendek apa saja."
+    }
+   }
+  },
+  "calendar-open": {
+   "title": "Buka kalender",
+   "desc": "Membuka kalender Anda di hari ini."
+  },
+  "contacts-new": {
+   "title": "Buat kontak",
+   "desc": "Membuka kontak baru dengan nama dan nomor yang sudah terisi.",
+   "vars": {
+    "NAME": {
+     "label": "Nama",
+     "where": "Nama apa saja yang Anda inginkan."
+    },
+    "NUMBER": {
+     "label": "Nomor telepon",
+     "where": "Dengan kode negara, misalnya +33123456789."
+    }
+   }
+  },
+  "settings-wifi": {
+   "title": "Pengaturan Wi-Fi",
+   "desc": "Membuka daftar jaringan Wi-Fi."
+  },
+  "settings-bluetooth": {
+   "title": "Pengaturan Bluetooth",
+   "desc": "Membuka pengaturan Bluetooth."
+  },
+  "settings-airplane": {
+   "title": "Pengaturan mode Pesawat",
+   "desc": "Membuka pengaturan mode Pesawat."
+  },
+  "settings-display": {
+   "title": "Pengaturan layar",
+   "desc": "Membuka kecerahan, mode gelap, dan waktu tunggu layar."
+  },
+  "settings-sound": {
+   "title": "Pengaturan suara",
+   "desc": "Membuka pengaturan volume dan nada dering."
+  },
+  "settings-battery-saver": {
+   "title": "Pengaturan penghemat baterai",
+   "desc": "Membuka pengaturan penghemat baterai."
+  },
+  "settings-location": {
+   "title": "Pengaturan lokasi",
+   "desc": "Membuka pengaturan lokasi."
+  },
+  "settings-nfc": {
+   "title": "Pengaturan NFC",
+   "desc": "Membuka pengaturan NFC."
+  },
+  "settings-data-usage": {
+   "title": "Penggunaan data",
+   "desc": "Membuka layar penggunaan data seluler."
+  },
+  "settings-accessibility": {
+   "title": "Pengaturan aksesibilitas",
+   "desc": "Membuka pengaturan aksesibilitas."
+  },
+  "settings-language": {
+   "title": "Pengaturan bahasa",
+   "desc": "Membuka pengaturan bahasa."
+  },
+  "settings-date": {
+   "title": "Pengaturan tanggal dan waktu",
+   "desc": "Membuka pengaturan tanggal dan waktu."
+  },
+  "settings-apps": {
+   "title": "Semua aplikasi",
+   "desc": "Membuka daftar aplikasi yang terpasang."
+  },
+  "settings-developer": {
+   "title": "Opsi Pengembang",
+   "desc": "Membuka Opsi Pengembang (jika sudah diaktifkan)."
+  },
+  "google-maps-navigate-to-address": {
+   "title": "Ke alamat dengan mobil",
+   "desc": "Memulai navigasi mengemudi di Google Maps, dari lokasi Anda saat ini ke sebuah alamat atau tempat.",
+   "note": "Navigasi dimulai dari lokasi Anda saat ini. Google Maps meminta akses lokasi saat pertama kali.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Alamat atau nama tempat tujuan",
+     "where": "Ketik alamat lengkap atau nama tempat yang terkenal, persis seperti yang akan Anda cari di Google Maps."
+    }
+   }
+  },
+  "google-maps-navigate-walking": {
+   "title": "Ke alamat dengan berjalan kaki",
+   "desc": "Memulai navigasi jalan kaki di Google Maps, dari lokasi Anda saat ini ke sebuah alamat atau tempat.",
+   "note": "Navigasi jalan kaki dimulai dari lokasi Anda saat ini.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Alamat atau nama tempat tujuan",
+     "where": "Ketik alamat lengkap atau nama tempat yang terkenal, persis seperti yang akan Anda cari di Google Maps."
+    }
+   }
+  },
+  "google-maps-navigate-cycling": {
+   "title": "Ke alamat dengan sepeda",
+   "desc": "Memulai navigasi bersepeda di Google Maps, dari lokasi Anda saat ini ke sebuah alamat atau tempat.",
+   "note": "Rute sepeda tidak tersedia di semua negara.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Alamat atau nama tempat tujuan",
+     "where": "Ketik alamat lengkap atau nama tempat yang terkenal, persis seperti yang akan Anda cari di Google Maps."
+    }
+   }
+  },
+  "google-maps-search-nearby": {
+   "title": "Cari tempat di sekitar",
+   "desc": "Membuka Google Maps di hasil pencarian, misalnya restoran atau apotek di sekitar Anda.",
+   "note": "Membuka Google Maps di hasil pencarian.",
+   "vars": {
+    "SEARCH": {
+     "label": "Yang Anda cari",
+     "where": "Ketik jenis tempat atau nama, dengan kata-kata yang akan Anda ketik di kolom pencarian Google Maps."
+    }
+   }
+  },
+  "google-maps-transit-directions": {
+   "title": "Ke suatu tempat dengan transportasi umum",
+   "desc": "Menampilkan rute transportasi umum ke tujuan di Google Maps, dari lokasi Anda saat ini.",
+   "note": "Membuka rute di Google Maps, atau di browser jika aplikasinya tidak menanganinya.",
+   "vars": {
+    "DESTINATION": {
+     "label": "Alamat atau nama tempat tujuan",
+     "where": "Ketik alamat atau nama tempat, seperti yang akan Anda cari di Google Maps."
+    }
+   }
+  },
+  "google-maps-street-view": {
+   "title": "Buka Street View di koordinat",
+   "desc": "Membuka di Google Maps tampilan Street View yang paling dekat dengan suatu lintang dan bujur.",
+   "note": "Jika tidak ada Street View di dekat titik ini, Google Maps akan memberi tahu Anda.",
+   "vars": {
+    "LATITUDE": {
+     "label": "Lintang",
+     "where": "Di Google Maps, tekan lama sebuah titik di peta: lintang adalah angka pertama yang muncul di kolom pencarian."
+    },
+    "LONGITUDE": {
+     "label": "Bujur",
+     "where": "Di Google Maps, tekan lama sebuah titik di peta: bujur adalah angka kedua yang muncul di kolom pencarian."
+    }
+   }
+  },
+  "assistant-open": {
+   "title": "Buka asisten suara",
+   "desc": "Membuka asisten default ponsel, seperti yang dilakukan gerakan sistem."
+  },
+  "youtube-open-channel": {
+   "title": "Buka channel",
+   "desc": "Membuka halaman channel YouTube dari nama penggunanya.",
+   "note": "Membuka halaman channel di aplikasi YouTube.",
+   "vars": {
+    "HANDLE": {
+     "label": "Nama pengguna channel (tanpa @)",
+     "where": "Buka channel di YouTube: nama penggunanya diawali @, di bawah nama channel. Ketik di sini tanpa @."
+    }
+   }
+  },
+  "youtube-open-playlist": {
+   "title": "Buka playlist",
+   "desc": "Membuka playlist YouTube tertentu.",
+   "note": "Membuka halaman playlist. Pemutaran tidak dimulai sendiri.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID playlist",
+     "where": "Buka halaman playlist lalu ketuk Bagikan > Salin link (atau lihat alamatnya di browser): ID adalah bagian setelah list= di tautan."
+    }
+   }
+  },
+  "youtube-open-video": {
+   "title": "Buka video",
+   "desc": "Membuka video tertentu, misalnya siaran langsung atau tutorial favorit Anda.",
+   "note": "Membuka video di aplikasi YouTube.",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "ID video",
+     "where": "Buka video, ketuk Bagikan > Salin link: ID adalah bagian setelah v= (atau setelah youtu.be/ di tautan pendek)."
+    }
+   }
+  },
+  "youtube-search": {
+   "title": "Cari di YouTube",
+   "desc": "Membuka hasil pencarian YouTube untuk kata kunci yang tetap.",
+   "note": "Membuka hasil pencarian.",
+   "vars": {
+    "QUERY": {
+     "label": "Teks yang dicari",
+     "where": "Kata-kata yang ingin Anda cari."
+    }
+   }
+  },
+  "ytmusic-open-library": {
+   "title": "Buka koleksi Anda",
+   "desc": "Membuka tab Koleksi di YouTube Music.",
+   "note": "Anda harus masuk ke aplikasi YouTube Music."
+  },
+  "ytmusic-search": {
+   "title": "Cari di YouTube Music",
+   "desc": "Membuka hasil pencarian YouTube Music untuk kata kunci yang tetap.",
+   "note": "Membuka hasil pencarian di YouTube Music.",
+   "vars": {
+    "QUERY": {
+     "label": "Teks yang dicari",
+     "where": "Kata-kata yang ingin Anda cari."
+    }
+   }
+  },
+  "ytmusic-open-playlist": {
+   "title": "Buka playlist",
+   "desc": "Membuka playlist atau album tertentu di YouTube Music.",
+   "note": "Membuka playlist atau album di YouTube Music.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID playlist",
+     "where": "Buka playlist di YouTube Music, ketuk menu > Bagikan > Salin link: ID adalah bagian setelah list= di tautan."
+    }
+   }
+  },
+  "ytmusic-open-song": {
+   "title": "Buka lagu",
+   "desc": "Membuka lagu tertentu di pemutar YouTube Music.",
+   "note": "Membuka lagu di YouTube Music.",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "ID lagu",
+     "where": "Buka lagu, ketuk menu > Bagikan > Salin link: ID adalah bagian setelah v= di tautan."
+    }
+   }
+  },
+  "gmail-compose": {
+   "title": "Tulis email baru",
+   "desc": "Membuka layar tulis Gmail dengan pesan kosong.",
+   "note": "Tidak ada yang terkirim sampai Anda mengetuk Kirim."
+  },
+  "gmail-compose-to-person": {
+   "title": "Tulis email ke seseorang",
+   "desc": "Membuka layar tulis Gmail dengan penerima yang sudah terisi.",
+   "note": "Tidak ada yang terkirim sampai Anda mengetuk Kirim.",
+   "vars": {
+    "EMAIL_ADDRESS": {
+     "label": "Alamat email penerima",
+     "where": "Ketik alamat orang yang paling sering Anda kirimi email."
+    }
+   }
+  },
+  "gmail-compose-with-subject": {
+   "title": "Tulis email dengan subjek dan teks",
+   "desc": "Membuka layar tulis Gmail dengan subjek dan teks yang sudah terisi.",
+   "note": "Tidak ada yang terkirim sampai Anda mengetuk Kirim.",
+   "vars": {
+    "SUBJECT": {
+     "label": "Subjek",
+     "where": "Ketik subjek pesan."
+    },
+    "BODY": {
+     "label": "Isi pesan",
+     "where": "Ketik isi email."
+    }
+   }
+  },
+  "telegram-open-chat": {
+   "title": "Buka chat dengan nama pengguna",
+   "desc": "Membuka chat dengan pengguna, grup, channel, atau bot Telegram publik.",
+   "note": "Berfungsi untuk orang, grup, channel, dan bot yang punya nama pengguna publik.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nama pengguna Telegram",
+     "where": "Nama publik tanpa @, yang tampil di profil di bawah Nama pengguna."
+    }
+   }
+  },
+  "telegram-open-chat-with-draft": {
+   "title": "Buka chat dengan pesan yang sudah ditulis",
+   "desc": "Membuka chat publik dan mengisi kolom pesan (tidak ada yang terkirim sampai Anda menekan Kirim).",
+   "note": "Teks ditulis di kolom pesan; tidak ada yang terkirim sampai Anda menekan Kirim.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nama pengguna Telegram",
+     "where": "Nama publik tanpa @, yang tampil di profil di bawah Nama pengguna."
+    },
+    "MESSAGE": {
+     "label": "Pesan",
+     "where": "Teks Anda, seperti yang akan Anda tulis."
+    }
+   }
+  },
+  "telegram-open-chat-by-phone": {
+   "title": "Buka chat dengan nomor telepon",
+   "desc": "Membuka chat Telegram dengan seseorang, dari nomor teleponnya.",
+   "note": "Hanya berfungsi jika orang itu memakai Telegram dan mengizinkan dirinya ditemukan lewat nomornya.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Nomor telepon",
+     "where": "Kode negara di depan, hanya angka, misalnya 33123456789. Spasi dan + diabaikan."
+    }
+   }
+  },
+  "telegram-join-invite": {
+   "title": "Gabung ke grup privat lewat tautan undangan",
+   "desc": "Membuka undangan untuk bergabung ke grup atau channel Telegram privat, dari kode undangannya.",
+   "note": "Membuka undangan ke grup atau channel privat.",
+   "vars": {
+    "INVITE_HASH": {
+     "label": "Kode undangan",
+     "where": "Dari tautan undangan seperti https://t.me/+AbCdEf123, salin bagian setelah + (tautan lama: t.me/joinchat/HASH)."
+    }
+   }
+  },
+  "telegram-story-composer": {
+   "title": "Buat story",
+   "desc": "Membuka kamera story Telegram untuk memposting story baru.",
+   "note": "Membuka layar pembuatan story."
+  },
+  "telegram-global-search": {
+   "title": "Buka pencarian global",
+   "desc": "Membuka layar pencarian Telegram, di semua chat dan konten publik.",
+   "note": "Membuka layar pencarian."
+  },
+  "whatsapp-open-chat": {
+   "title": "Buka chat",
+   "desc": "Membuka chat WhatsApp dengan nomor telepon tertentu.",
+   "note": "Membuka chat dengan nomor ini.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Nomor telepon",
+     "where": "Kode negara di depan, hanya angka, misalnya 33123456789. Spasi dan + diabaikan."
+    }
+   }
+  },
+  "whatsapp-open-chat-with-message": {
+   "title": "Buka chat dengan pesan siap kirim",
+   "desc": "Membuka chat WhatsApp dengan nomor telepon dan mengisi kolom pesan (tidak ada yang terkirim sampai Anda menekan Kirim).",
+   "note": "Teks ditulis di kolom pesan; tidak ada yang terkirim sampai Anda menekan Kirim.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Nomor telepon",
+     "where": "Kode negara di depan, hanya angka, misalnya 33123456789. Spasi dan + diabaikan."
+    },
+    "MESSAGE": {
+     "label": "Pesan",
+     "where": "Teks Anda, seperti yang akan Anda tulis."
+    }
+   }
+  },
+  "whatsapp-share-text": {
+   "title": "Kirim teks ke kontak pilihan saya",
+   "desc": "Membuka daftar kontak WhatsApp dengan pesan yang sudah ditulis: Anda memilih siapa yang menerimanya.",
+   "note": "WhatsApp meminta Anda memilih siapa yang menerima teksnya.",
+   "vars": {
+    "MESSAGE": {
+     "label": "Pesan",
+     "where": "Teks Anda, seperti yang akan Anda tulis."
+    }
+   }
+  },
+  "whatsapp-join-group": {
+   "title": "Gabung atau buka grup lewat tautan undangan",
+   "desc": "Membuka grup WhatsApp dari kode undangannya (undangan untuk bergabung, atau grupnya jika Anda sudah menjadi anggota).",
+   "note": "Membuka undangan ke grup.",
+   "vars": {
+    "INVITE_CODE": {
+     "label": "Kode undangan grup",
+     "where": "Bagian setelah chat.whatsapp.com/ di tautan undangan grup (di grup: Info grup > Undang lewat tautan > Salin tautan)."
+    }
+   }
+  },
+  "signal-open-chat-by-phone": {
+   "title": "Buka chat dengan nomor telepon",
+   "desc": "Membuka chat Signal dengan seseorang, dari nomor teleponnya.",
+   "note": "Membuka chat dengan nomor ini jika orang itu memakai Signal.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Nomor telepon",
+     "where": "Kode negara di depan, hanya angka, misalnya 33123456789. Spasi dan + diabaikan."
+    }
+   }
+  },
+  "signal-open-group-link": {
+   "title": "Gabung atau buka grup lewat tautan grup",
+   "desc": "Membuka undangan untuk bergabung ke grup Signal, dari tautan grupnya.",
+   "note": "Membuka undangan ke grup Signal.",
+   "vars": {
+    "GROUP_LINK_CODE": {
+     "label": "Kode tautan grup",
+     "where": "Di Signal, buka grup, ketuk namanya, lalu tautan grup, kemudian bagikan atau salin. Ambil hanya teks panjang setelah # di https://signal.group/#..."
+    }
+   }
+  },
+  "obsidian-open-vault": {
+   "title": "Buka vault saya",
+   "desc": "Membuka vault Obsidian yang dipilih (atau menampilkannya jika sudah terbuka).",
+   "note": "Membuka vault di layar terakhirnya.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nama vault",
+     "where": "Di Obsidian, buka pemilih vault (ikon vault, di bawah panel samping atau di daftar vault) dan salin nama yang tampil untuk vault Anda. Itu juga nama foldernya."
+    }
+   }
+  },
+  "obsidian-open-note": {
+   "title": "Buka catatan tertentu",
+   "desc": "Membuka catatan tertentu di vault.",
+   "note": "Membuka catatan ini di vault.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nama vault",
+     "where": "Di Obsidian, buka pemilih vault (ikon vault, di bawah panel samping atau di daftar vault) dan salin nama yang tampil untuk vault Anda. Itu juga nama foldernya."
+    },
+    "NOTE_PATH": {
+     "label": "Nama atau jalur catatan",
+     "where": "Nama file catatan, atau jalurnya dari akar vault; ekstensi .md boleh tidak ditulis."
+    }
+   }
+  },
+  "obsidian-daily-note": {
+   "title": "Buka catatan hari ini",
+   "desc": "Membuat atau membuka catatan harian untuk hari ini.",
+   "note": "Membuka catatan hari ini, atau membuatnya.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nama vault",
+     "where": "Di Obsidian, buka pemilih vault (ikon vault, di bawah panel samping atau di daftar vault) dan salin nama yang tampil untuk vault Anda. Itu juga nama foldernya."
+    }
+   }
+  },
+  "obsidian-new-note": {
+   "title": "Buat catatan",
+   "desc": "Membuat catatan dengan nama yang diberikan (di lokasi default catatan baru di vault) lalu membukanya.",
+   "note": "Membuat catatan jika belum ada. Obsidian harus bisa mengakses vault.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nama vault",
+     "where": "Di Obsidian, buka pemilih vault (ikon vault, di bawah panel samping atau di daftar vault) dan salin nama yang tampil untuk vault Anda. Itu juga nama foldernya."
+    },
+    "NOTE_NAME": {
+     "label": "Nama catatan baru",
+     "where": "Ketik judul yang diinginkan; file dibuat dengan nama <judul>.md."
+    }
+   }
+  },
+  "obsidian-quick-capture-daily": {
+   "title": "Tambahkan baris ke catatan hari ini",
+   "desc": "Menambahkan teks yang diberikan di akhir catatan hari ini.",
+   "note": "Menambahkan teks di akhir catatan hari ini.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nama vault",
+     "where": "Di Obsidian, buka pemilih vault (ikon vault, di bawah panel samping atau di daftar vault) dan salin nama yang tampil untuk vault Anda. Itu juga nama foldernya."
+    },
+    "TEXT_TO_ADD": {
+     "label": "Teks yang ditambahkan",
+     "where": "Teks yang akan ditambahkan, seperti yang akan Anda tulis."
+    }
+   }
+  },
+  "obsidian-search": {
+   "title": "Cari di vault saya",
+   "desc": "Membuka pencarian Obsidian di vault dan menjalankan kata kunci.",
+   "note": "Membuka pencarian dengan teks ini.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nama vault",
+     "where": "Di Obsidian, buka pemilih vault (ikon vault, di bawah panel samping atau di daftar vault) dan salin nama yang tampil untuk vault Anda. Itu juga nama foldernya."
+    },
+    "SEARCH_TEXT": {
+     "label": "Teks yang dicari",
+     "where": "Ketik kata atau frasa yang ingin dicari."
+    }
+   }
+  },
+  "homeassistant-open-dashboard": {
+   "title": "Buka halaman dasbor",
+   "desc": "Membuka tampilan dasbor Home Assistant pilihan Anda di aplikasi seluler.",
+   "note": "Membuka dasbor atau tampilan Home Assistant.",
+   "vars": {
+    "DASHBOARD_PATH": {
+     "label": "Jalur dasbor",
+     "where": "Buka halamannya di antarmuka web Home Assistant dan salin jalur setelah alamat dan port, tanpa garis miring pertama."
+    }
+   }
+  },
+  "spotify-open-playlist": {
+   "title": "Buka playlist",
+   "desc": "Membuka playlist Spotify.",
+   "note": "Membuka playlist. Pemutaran tidak dimulai sendiri.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID playlist",
+     "where": "Di Spotify, ketuk tiga titik, lalu Bagikan, lalu Salin link. ID adalah bagian setelah /playlist/ dan sebelum ?si= jika ada."
+    }
+   }
+  },
+  "spotify-open-artist": {
+   "title": "Buka halaman artis",
+   "desc": "Membuka halaman artis Spotify.",
+   "note": "Membuka halaman artis.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID artis",
+     "where": "Di Spotify, ketuk tiga titik, lalu Bagikan, lalu Salin link. ID adalah bagian setelah /artist/ dan sebelum ?si= jika ada."
+    }
+   }
+  },
+  "spotify-open-album": {
+   "title": "Buka album",
+   "desc": "Membuka album Spotify.",
+   "note": "Membuka album.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID album",
+     "where": "Di Spotify, ketuk tiga titik, lalu Bagikan, lalu Salin link. ID adalah bagian setelah /album/ dan sebelum ?si= jika ada."
+    }
+   }
+  },
+  "spotify-open-track": {
+   "title": "Buka lagu",
+   "desc": "Membuka lagu Spotify.",
+   "note": "Membuka lagu.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID lagu",
+     "where": "Di Spotify, ketuk tiga titik, lalu Bagikan, lalu Salin link. ID adalah bagian setelah /track/ dan sebelum ?si= jika ada."
+    }
+   }
+  },
+  "spotify-search": {
+   "title": "Cari di Spotify",
+   "desc": "Membuka hasil pencarian Spotify yang selalu sama.",
+   "note": "Membuka hasil pencarian.",
+   "vars": {
+    "QUERY": {
+     "label": "Teks yang dicari",
+     "where": "Kata-kata yang dicari, misalnya nama artis."
+    }
+   }
+  },
+  "deezer-open-playlist": {
+   "title": "Buka playlist",
+   "desc": "Membuka playlist Deezer.",
+   "note": "Membuka playlist.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID playlist",
+     "where": "Buka playlist di deezer.com dengan browser. ID adalah angka di akhir alamat."
+    }
+   }
+  },
+  "deezer-open-artist": {
+   "title": "Buka halaman artis",
+   "desc": "Membuka halaman artis Deezer.",
+   "note": "Membuka halaman artis.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID artis",
+     "where": "Buka artis di deezer.com dengan browser. ID adalah angka di akhir alamat."
+    }
+   }
+  },
+  "deezer-open-album": {
+   "title": "Buka album",
+   "desc": "Membuka album Deezer.",
+   "note": "Membuka album.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID album",
+     "where": "Buka album di deezer.com dengan browser. ID adalah angka di akhir alamat."
+    }
+   }
+  },
+  "deezer-open-track": {
+   "title": "Buka lagu",
+   "desc": "Membuka lagu Deezer.",
+   "note": "Membuka lagu.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID lagu",
+     "where": "Buka lagu di deezer.com dengan browser. ID adalah angka di akhir alamat."
+    }
+   }
+  },
+  "deezer-search": {
+   "title": "Cari di Deezer",
+   "desc": "Membuka hasil pencarian Deezer yang selalu sama.",
+   "note": "Membuka hasil pencarian.",
+   "vars": {
+    "QUERY": {
+     "label": "Teks yang dicari",
+     "where": "Kata-kata yang dicari, misalnya nama artis."
+    }
+   }
+  },
+  "apple-music-open-link": {
+   "title": "Buka halaman Apple Music",
+   "desc": "Membuka album, playlist, atau artis dari tautan Apple Music-nya.",
+   "note": "Terbuka di aplikasi Apple Music jika ponsel Anda mengizinkannya menangani tautan, jika tidak di browser.",
+   "vars": {
+    "LINK": {
+     "label": "Tautan Apple Music",
+     "where": "Buka halamannya di music.apple.com, klik Lainnya, lalu Salin Tautan, dan tempel alamat lengkapnya."
+    }
+   }
+  },
+  "waze-navigate-home": {
+   "title": "Pulang ke rumah",
+   "desc": "Memulai navigasi ke alamat Rumah yang tersimpan di Waze.",
+   "note": "Memerlukan alamat Rumah yang tersimpan di Waze."
+  },
+  "waze-navigate-work": {
+   "title": "Pergi ke kantor",
+   "desc": "Memulai navigasi ke alamat Kantor yang tersimpan di Waze.",
+   "note": "Memerlukan alamat Kantor yang tersimpan di Waze."
+  },
+  "waze-navigate-to-address": {
+   "title": "Ke sebuah alamat",
+   "desc": "Memulai navigasi ke alamat atau tempat yang tetap.",
+   "note": "Tambahkan kota agar tidak tertukar.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Alamat atau tempat",
+     "where": "Alamat atau nama tempat beserta kotanya, seperti yang akan Anda ketik di Waze."
+    }
+   }
+  },
+  "waze-navigate-to-coordinates": {
+   "title": "Ke koordinat",
+   "desc": "Memulai navigasi ke titik yang ditentukan dengan lintang dan bujurnya.",
+   "vars": {
+    "LATITUDE": {
+     "label": "Lintang",
+     "where": "Di Google Maps, tekan lama tempatnya: lintang adalah angka pertama di kolom pencarian."
+    },
+    "LONGITUDE": {
+     "label": "Bujur",
+     "where": "Di Google Maps, tekan lama tempatnya: bujur adalah angka kedua di kolom pencarian."
+    }
+   }
+  },
+  "waze-search-place": {
+   "title": "Cari tempat di Waze",
+   "desc": "Menampilkan tempat atau alamat di Waze tanpa memulai navigasi.",
+   "vars": {
+    "SEARCH": {
+     "label": "Tempat atau alamat",
+     "where": "Kata-kata yang akan Anda ketik di kolom pencarian Waze."
+    }
+   }
+  },
+  "netflix-open-title": {
+   "title": "Buka film atau serial",
+   "desc": "Membuka halaman Netflix sebuah film atau serial.",
+   "note": "Membuka halaman judul. Pemutaran tidak dimulai sendiri.",
+   "vars": {
+    "TITLE_ID": {
+     "label": "ID judul",
+     "where": "Di netflix.com, buka judulnya. ID adalah angka setelah /title/ di alamat."
+    }
+   }
+  },
+  "netflix-open-my-list": {
+   "title": "Buka Daftar Saya",
+   "desc": "Membuka daftar Netflix Anda."
+  },
+  "notion-open-page": {
+   "title": "Buka halaman",
+   "desc": "Membuka halaman Notion tertentu.",
+   "note": "Membuka halaman di aplikasi Notion.",
+   "vars": {
+    "PAGE_ADDRESS": {
+     "label": "Alamat halaman",
+     "where": "Di Notion, buka halamannya, ketuk tiga titik, lalu Salin link. Ambil hanya bagian setelah https://www.notion.so/."
+    }
+   }
+  },
+  "claude-code-new-session": {
+   "title": "Sesi Claude Code baru",
+   "desc": "Memulai sesi Claude Code dengan prompt Anda yang sudah terisi.",
+   "note": "Tidak ada yang terkirim sampai Anda mengirimnya.",
+   "vars": {
+    "PROMPT": {
+     "label": "Prompt",
+     "where": "Prompt yang akan diisikan. Hanya diketik: Anda sendiri yang mengirimnya."
+    }
+   }
+  },
+  "claude-code-sessions": {
+   "title": "Buka sesi Claude Code",
+   "desc": "Membuka daftar sesi Claude Code Anda."
+  },
+  "claude-new-chat": {
+   "title": "Percakapan baru",
+   "desc": "Membuka Claude di percakapan baru."
+  },
+  "docs-new-document": {
+   "title": "Dokumen baru",
+   "desc": "Membuat dokumen Google Docs kosong.",
+   "note": "Terbuka di browser atau di aplikasi Docs, tergantung ponsel Anda."
+  },
+  "n8n-trigger-webhook": {
+   "title": "Jalankan workflow (webhook)",
+   "desc": "Memanggil webhook dari workflow n8n.",
+   "note": "Workflow harus aktif dan menerima GET. Tautan terbuka di browser.",
+   "vars": {
+    "N8N_HOST": {
+     "label": "Alamat server n8n",
+     "where": "Alamat server n8n Anda, sebelum /webhook/ di URL produksi."
+    },
+    "WEBHOOK_PATH": {
+     "label": "Jalur webhook",
+     "where": "Di workflow, buka node Webhook dan salin kolom Path-nya."
+    }
+   }
+  },
+  "todoist-add-task": {
+   "title": "Tambah tugas",
+   "desc": "Membuka tugas Todoist baru dengan teks Anda yang sudah terisi.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Teks tugas",
+     "where": "Ketik tugasnya seperti di Todoist."
+    }
+   }
+  },
+  "todoist-add-task-today": {
+   "title": "Tambah tugas untuk hari ini",
+   "desc": "Sama seperti di atas, dengan tenggat hari ini.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Teks tugas",
+     "where": "Ketik tugasnya seperti di Todoist."
+    }
+   }
+  },
+  "todoist-open-today": {
+   "title": "Buka Hari Ini",
+   "desc": "Membuka tampilan Hari Ini."
+  },
+  "todoist-open-inbox": {
+   "title": "Buka Kotak Masuk",
+   "desc": "Membuka Kotak Masuk."
+  },
+  "todoist-open-upcoming": {
+   "title": "Buka Mendatang",
+   "desc": "Membuka tampilan Mendatang."
+  },
+  "todoist-search": {
+   "title": "Cari tugas",
+   "desc": "Mencari kata tertentu di tugas-tugas Anda.",
+   "vars": {
+    "SEARCH_TEXT": {
+     "label": "Teks yang dicari",
+     "where": "Kata yang dicari di tugas-tugas Anda."
+    }
+   }
+  },
+  "twitch-open-channel": {
+   "title": "Buka siaran langsung channel",
+   "desc": "Membuka siaran langsung sebuah channel.",
+   "note": "Menampilkan halaman channel jika streamer sedang tidak live.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Nama channel",
+     "where": "Bagian terakhir alamat channel, twitch.tv/nama."
+    }
+   }
+  },
+  "twitch-open-channel-videos": {
+   "title": "Buka video channel",
+   "desc": "Membuka aktivitas dan video sebuah channel.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Nama channel",
+     "where": "Bagian terakhir alamat channel, twitch.tv/nama."
+    }
+   }
+  },
+  "twitch-open-following": {
+   "title": "Buka Mengikuti",
+   "desc": "Membuka tab Mengikuti."
+  },
+  "twitch-open-game": {
+   "title": "Buka kategori game",
+   "desc": "Membuka halaman game atau kategori.",
+   "vars": {
+    "GAME_NAME": {
+     "label": "Nama game",
+     "where": "Nama kategori seperti yang tampil di tab Jelajahi."
+    }
+   }
+  },
+  "twitch-open-app": {
+   "title": "Buka Twitch",
+   "desc": "Membuka aplikasi Twitch."
+  },
+  "twitch-search": {
+   "title": "Cari di Twitch",
+   "desc": "Membuka hasil pencarian Twitch yang selalu sama.",
+   "vars": {
+    "QUERY": {
+     "label": "Teks yang dicari",
+     "where": "Channel, game, atau topik."
+    }
+   }
+  },
+  "instagram-send-dm": {
+   "title": "Kirim pesan ke akun",
+   "desc": "Membuka percakapan pribadi dengan akun Instagram.",
+   "note": "Membuka percakapan. Tidak ada yang terkirim.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nama pengguna Instagram",
+     "where": "Nama pengguna di bawah foto profil, tanpa @."
+    }
+   }
+  },
+  "x-compose-post": {
+   "title": "Tulis postingan",
+   "desc": "Membuka X dengan postingan Anda yang sudah terisi, siap diposting.",
+   "note": "Tidak ada yang diposting sampai Anda menekan Posting.",
+   "vars": {
+    "TEXT": {
+     "label": "Teks postingan",
+     "where": "Teks Anda, seperti yang akan Anda ketik."
+    }
+   }
+  },
+  "x-share-link": {
+   "title": "Posting tautan",
+   "desc": "Membuka X dengan tautan dan teks yang sudah terisi.",
+   "note": "Tidak ada yang diposting sampai Anda menekan Posting.",
+   "vars": {
+    "URL": {
+     "label": "Alamat web",
+     "where": "Alamat lengkap yang akan dibagikan, diawali dengan https://."
+    },
+    "TEXT": {
+     "label": "Teks postingan",
+     "where": "Teks Anda, seperti yang akan Anda ketik."
+    }
+   }
+  },
+  "x-open-profile": {
+   "title": "Buka profil",
+   "desc": "Membuka akun X.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nama pengguna X",
+     "where": "@nama akun, tanpa @."
+    }
+   }
+  }
+ }
+}
