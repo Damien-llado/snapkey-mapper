@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Remap the OPPO Snap Key to open any app, no root | SnapKey Mapper</title>
-<meta name="description" content="SnapKey Mapper makes the Snap Key of the OPPO Find X9, X9 Pro and other ColorOS phones open any app or link, with a single, double or long press. Free, open source, no root.">
+<meta name="description" content="SnapKey Mapper makes the Snap Key of the OPPO Find X9, X9 Pro and other ColorOS phones open any app or link, with a single, double, triple or long press. Free, open source, no root.">
 <link rel="canonical" href="https://remapsnapkey.com/">
 <link rel="alternate" hreflang="en" href="https://remapsnapkey.com/">
 <link rel="alternate" hreflang="fr" href="https://remapsnapkey.com/fr/">
@@ -22,7 +22,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SnapKey Mapper">
 <meta property="og:title" content="Remap the OPPO Snap Key to open any app">
-<meta property="og:description" content="Single, double or long press on the Snap Key opens the app or link you choose. Find X9, X9 Pro, ColorOS 16. No root, open source.">
+<meta property="og:description" content="Single, double, triple or long press on the Snap Key opens the app or link you choose. Find X9, X9 Pro, ColorOS 16. No root, open source.">
 <meta property="og:url" content="https://remapsnapkey.com/">
 <meta property="og:image" content="https://remapsnapkey.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -31,7 +31,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=2">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Makes the OPPO Snap Key open any app or link, without root."}
@@ -67,6 +67,7 @@
     <symbol id="g-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
     <symbol id="g-run" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
     <symbol id="g-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 2M5 4 3 6M19 4l2 2"/></symbol>
+    <symbol id="g-pen" viewBox="0 0 24 24"><path d="M4 20l1-4.5L16.5 4a2.1 2.1 0 0 1 3 3L8 18.5zM14 6.5l3.5 3.5"/></symbol>
     <symbol id="g-cam" viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h3l1.5-2.5h6L16.5 7h3A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.5"/></symbol>
     <symbol id="g-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol>
     <symbol id="g-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"/></symbol>
@@ -120,7 +121,7 @@
       <p class="eyebrow"><span class="dot"></span>Open source · OPPO Find X9 series · No root</p>
       <h1>Remap the OPPO Snap Key to open <em>any app</em></h1>
       <p class="say">Press the key, land in <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper turns the Snap Key of the Find X9 and Find X9 Pro into a launcher for the apps or links you choose. Single press, double press or long press: each gesture can open something different.</p>
+      <p class="lead">SnapKey Mapper turns the Snap Key of the Find X9 and Find X9 Pro into a launcher for the apps or links you choose. Single press, double press, triple press or long press: each gesture can open something different.</p>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
           <svg aria-hidden="true"><use href="#g-down"/></svg>Download the APK
@@ -305,8 +306,8 @@
 
   <section id="gestures" class="wide" aria-labelledby="ge-h">
     <p class="kicker">Gestures</p>
-    <h2 id="ge-h">One key, three shortcuts</h2>
-    <p class="sub">Since version 1.0.9, single, double and long press each open their own target. Set one, two or all three.</p>
+    <h2 id="ge-h">One key, four shortcuts</h2>
+    <p class="sub">Since version 1.0.9, single, double, triple and long press each open their own target. Set one, two, three or all four.</p>
     <ul class="gestures trio">
       <li class="single" style="--h:#5B8DEF">
         <div class="stage" aria-hidden="true"><div class="phone">
@@ -319,7 +320,7 @@
         </div></div>
         <div class="g"><i></i></div>
         <h3>Single press</h3>
-        <p>The camera, in one press. When a double press is set, the single press waits a fraction of a second to tell them apart; otherwise it fires at once.</p>
+        <p>The camera, in one press. It waits a fraction of a second only when a double or triple press is set, to tell them apart; otherwise it fires at once.</p>
         <code>App: Camera</code>
       </li>
       <li class="double" style="--h:#D97757">
@@ -335,6 +336,20 @@
         <h3>Double press</h3>
         <p>Your AI assistant, here Claude. A press in your pocket never opens it.</p>
         <code>App: Claude</code>
+      </li>
+      <li class="triple" style="--h:#8B6CF0">
+        <div class="stage" aria-hidden="true"><div class="phone">
+          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
+          <div class="face"><div class="screen">
+            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="launch"><span class="launch-ico"><svg><use href="#g-pen"/></svg></span></div>
+          </div></div>
+        </div></div>
+        <div class="g g-triple"><i></i><i></i><i></i></div>
+        <h3>Triple press</h3>
+        <p>Three quick presses open today's note in Obsidian, ready to write.</p>
+        <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
       <li class="long" style="--h:#E3B23C">
         <div class="stage" aria-hidden="true"><div class="phone">
@@ -466,7 +481,7 @@
       </li>
       <li>
         <h3>Choose what the Snap Key opens</h3>
-        <p>Pick an installed app, or paste a link (a web address, a deep link or an <code>intent:</code> link). Then set a target for each gesture you want: single press (the fastest), double press (a press in your pocket never opens anything) or long press (half a second), and tap <em>Test</em> to check it opens. Each gesture can open something different. When a double press is set, the single press waits a fraction of a second to tell them apart; otherwise it fires at once.</p>
+        <p>Pick an installed app, or paste a link (a web address, a deep link or an <code>intent:</code> link). Then set a target for each gesture you want: single press (the fastest), double press (a press in your pocket never opens anything), triple press or long press (half a second), and tap <em>Test</em> to check it opens. Each gesture can open something different. A series of presses waits a fraction of a second only when a longer series is set, to tell them apart; otherwise it fires at once.</p>
       </li>
       <li>
         <h3>It listens by itself</h3>
@@ -497,9 +512,9 @@
     <p class="kicker">FAQ</p>
     <h2 id="faq-h">Questions</h2>
 
-    <details><summary>Can the Snap Key open any app on the Find X9 Pro?</summary><div><p>Not with OPPO's settings alone: ColorOS offers a fixed list of actions. With SnapKey Mapper, yes: any installed app or any link, and a different one on each of single, double and long press.</p></div></details>
+    <details><summary>Can the Snap Key open any app on the Find X9 Pro?</summary><div><p>Not with OPPO's settings alone: ColorOS offers a fixed list of actions. With SnapKey Mapper, yes: any installed app or any link, and a different one on each of single, double, triple and long press.</p></div></details>
 
-    <details><summary>Can I set different actions for single, double and long press?</summary><div><p>Yes, since version 1.0.9: each gesture has its own target, an app or a link. When a double press is set, the single press waits a fraction of a second to tell them apart; otherwise it fires at once. To clear a gesture, pick it in the app and tap <em>Remove</em>.</p></div></details>
+    <details><summary>Can I set different actions for single, double, triple and long press?</summary><div><p>Yes, since version 1.0.9: each gesture, the triple press included, has its own target, an app or a link. A series of presses waits a fraction of a second only when a longer series is set, to tell them apart; otherwise it fires at once. To clear a gesture, pick it in the app and tap <em>Remove</em>.</p></div></details>
 
     <details><summary>Do I need root?</summary><div><p>No. The app needs one permission, <code>READ_LOGS</code>, which Android lets you grant with an ADB command, without root and without unlocking the bootloader.</p></div></details>
 
@@ -549,7 +564,7 @@
         <div><label for="s-phone">Phone</label>
           <select id="s-phone" name="phone"><option>Find X9 Pro</option><option>Find X9</option><option>Find X9 Ultra</option><option>Find X9s</option><option>Find N6</option><option>Other</option></select></div>
         <div><label for="s-gesture">Gesture</label>
-          <select id="s-gesture" name="gesture"><option>Double press</option><option>Single press</option><option>Long press</option></select></div>
+          <select id="s-gesture" name="gesture"><option>Double press</option><option>Single press</option><option>Triple press</option><option>Long press</option></select></div>
       </div>
       <label for="s-link">The link or app <span class="opt">(optional, remove any private token)</span></label>
       <input id="s-link" name="link" maxlength="300" placeholder="intent:#Intent;action=android.intent.action.SET_TIMER;…">
@@ -587,6 +602,6 @@
   <ul aria-label="Languages"><li><a href="/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li></ul>
 </footer>
 
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=2"></script>
 </body>
 </html>

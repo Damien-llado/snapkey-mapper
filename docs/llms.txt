@@ -1,6 +1,6 @@
 # SnapKey Mapper
 
-> Free, open source Android app (MIT) that makes the Snap Key, the side key of OPPO Find X9, X9 Pro and other ColorOS phones, open any app, link or Android intent with a single, double or long press, each gesture able to open something different. No root. It reads the key press from the system log, so it works without Wi-Fi.
+> Free, open source Android app (MIT) that makes the Snap Key, the side key of OPPO Find X9, X9 Pro and other ColorOS phones, open any app, link or Android intent with a single, double, triple or long press, each gesture able to open something different. No root. It reads the key press from the system log, so it works without Wi-Fi.
 
 - [Home page and setup guide](https://remapsnapkey.com/): what it does, how to install it in a few steps, compatibility, FAQ.
 - [Source code and downloads](https://github.com/Damien-llado/snapkey-mapper): README, releases with SHA-256, issues.

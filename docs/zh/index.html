@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OPPO Snap Key 自定义改键：一键打开任意应用，无需 root</title>
-<meta name="description" content="SnapKey Mapper 让 OPPO Find X9、X9 Pro 等 ColorOS 手机的 Snap Key 侧键单击、双击或长按，就能打开任意应用或链接。免费开源，无需 root。">
+<meta name="description" content="SnapKey Mapper 让 OPPO Find X9、X9 Pro 等 ColorOS 手机的 Snap Key 侧键单击、双击、三击或长按，就能打开任意应用或链接。免费开源，无需 root。">
 <link rel="canonical" href="https://remapsnapkey.com/zh/">
 <link rel="alternate" hreflang="en" href="https://remapsnapkey.com/">
 <link rel="alternate" hreflang="fr" href="https://remapsnapkey.com/fr/">
@@ -22,7 +22,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SnapKey Mapper">
 <meta property="og:title" content="OPPO Snap Key 自定义改键，一键打开任意应用">
-<meta property="og:description" content="单击、双击或长按 Snap Key，打开你选的应用或链接。支持 Find X9、X9 Pro、ColorOS 16。无需 root，开源免费。">
+<meta property="og:description" content="单击、双击、三击或长按 Snap Key，打开你选的应用或链接。支持 Find X9、X9 Pro、ColorOS 16。无需 root，开源免费。">
 <meta property="og:url" content="https://remapsnapkey.com/zh/">
 <meta property="og:image" content="https://remapsnapkey.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -31,7 +31,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=2">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"让 OPPO Snap Key 按键打开任意应用或链接，无需 root。"}
@@ -67,6 +67,7 @@
     <symbol id="g-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
     <symbol id="g-run" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
     <symbol id="g-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 2M5 4 3 6M19 4l2 2"/></symbol>
+    <symbol id="g-pen" viewBox="0 0 24 24"><path d="M4 20l1-4.5L16.5 4a2.1 2.1 0 0 1 3 3L8 18.5zM14 6.5l3.5 3.5"/></symbol>
     <symbol id="g-cam" viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h3l1.5-2.5h6L16.5 7h3A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.5"/></symbol>
     <symbol id="g-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol>
     <symbol id="g-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"/></symbol>
@@ -120,7 +121,7 @@
       <p class="eyebrow"><span class="dot"></span>开源 · OPPO Find X9 系列 · 无需 root</p>
       <h1>OPPO Snap Key 自定义改键，一键打开<em>任意应用</em></h1>
       <p class="say">按一下，直达 <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper 把 Find X9 和 Find X9 Pro 的 Snap Key 侧键变成快捷启动键，打开你选的应用或链接。单击、双击、长按都行，每种手势还能打开不同的东西。</p>
+      <p class="lead">SnapKey Mapper 把 Find X9 和 Find X9 Pro 的 Snap Key 侧键变成快捷启动键，打开你选的应用或链接。单击、双击、三击、长按都行，每种手势还能打开不同的东西。</p>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
           <svg aria-hidden="true"><use href="#g-down"/></svg>下载 APK
@@ -131,7 +132,7 @@
           <span class="stars" aria-label="GitHub 星标">★ <span data-stars>0</span></span>
         </a>
       </div>
-      <p class="meta">版本 1.0.8 · Android 11+ · 约 12 MB · MIT · 已在 Find X9 Pro、ColorOS 16 上测试</p>
+      <p class="meta">版本 1.0.9 · Android 11+ · 约 12 MB · MIT · 已在 Find X9 Pro、ColorOS 16 上测试</p>
     </div>
 
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
@@ -305,8 +306,8 @@
 
   <section id="gestures" class="wide" aria-labelledby="ge-h">
     <p class="kicker">手势</p>
-    <h2 id="ge-h">一个按键，三个快捷方式</h2>
-    <p class="sub">从 1.0.9 版起，单击、双击和长按可以各自打开不同的目标。设一个、两个或三个都行。</p>
+    <h2 id="ge-h">一个按键，四个快捷方式</h2>
+    <p class="sub">从 1.0.9 版起，单击、双击、三击和长按可以各自打开不同的目标。设一个、两个、三个或四个都行。</p>
     <ul class="gestures trio">
       <li class="single" style="--h:#5B8DEF">
         <div class="stage" aria-hidden="true"><div class="phone">
@@ -319,7 +320,7 @@
         </div></div>
         <div class="g"><i></i></div>
         <h3>单击</h3>
-        <p>按一下就打开相机。设置了双击后，单击会等一小会儿（不到一秒）来区分两者；否则单击立即触发。</p>
+        <p>按一下就打开相机。只有设置了双击或三击，单击才会等一小会儿（不到一秒）来区分它们；否则单击立即触发。</p>
         <code>应用：相机</code>
       </li>
       <li class="double" style="--h:#D97757">
@@ -335,6 +336,20 @@
         <h3>双击</h3>
         <p>你的 AI 助手，这里是 Claude。放在口袋里误触永远不会打开它。</p>
         <code>应用：Claude</code>
+      </li>
+      <li class="triple" style="--h:#8B6CF0">
+        <div class="stage" aria-hidden="true"><div class="phone">
+          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
+          <div class="face"><div class="screen">
+            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="launch"><span class="launch-ico"><svg><use href="#g-pen"/></svg></span></div>
+          </div></div>
+        </div></div>
+        <div class="g g-triple"><i></i><i></i><i></i></div>
+        <h3>三击</h3>
+        <p>快速按三下，就在 Obsidian 里打开今天的笔记，随时可以写。</p>
+        <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
       <li class="long" style="--h:#E3B23C">
         <div class="stage" aria-hidden="true"><div class="phone">
@@ -466,7 +481,7 @@
       </li>
       <li>
         <h3>选择 Snap Key 打开什么</h3>
-        <p>选一个已安装的应用，或粘贴一个链接（网址、深层链接或 <code>intent:</code> 链接）。然后给想用的每种手势分别设置目标：单击（最快）、双击（放在口袋里误触永远不会打开任何东西）或长按（半秒），再点 <em>测试</em> 确认能打开。每种手势可以打开不同的东西。设置了双击后，单击会等一小会儿（不到一秒）来区分两者；否则单击立即触发。</p>
+        <p>选一个已安装的应用，或粘贴一个链接（网址、深层链接或 <code>intent:</code> 链接）。然后给想用的每种手势分别设置目标：单击（最快）、双击（放在口袋里误触永远不会打开任何东西）、三击或长按（半秒），再点 <em>测试</em> 确认能打开。每种手势可以打开不同的东西。只有设置了更长的连按，较短的连按才会等一小会儿（不到一秒）来区分它们；否则立即触发。</p>
       </li>
       <li>
         <h3>自动监听</h3>
@@ -497,9 +512,9 @@
     <p class="kicker">常见问题</p>
     <h2 id="faq-h">问题</h2>
 
-    <details><summary>Find X9 Pro 的 Snap Key 能打开任意应用吗？</summary><div><p>只靠 OPPO 的设置不行：ColorOS 只提供固定的几个功能。用 SnapKey Mapper 就可以：任意已安装的应用或任意链接，而且单击、双击、长按可以各开不同的。</p></div></details>
+    <details><summary>Find X9 Pro 的 Snap Key 能打开任意应用吗？</summary><div><p>只靠 OPPO 的设置不行：ColorOS 只提供固定的几个功能。用 SnapKey Mapper 就可以：任意已安装的应用或任意链接，而且单击、双击、三击、长按可以各开不同的。</p></div></details>
 
-    <details><summary>单击、双击和长按可以设置不同的操作吗？</summary><div><p>可以，从 1.0.9 版起：每种手势都有自己的目标，一个应用或一个链接。设置了双击后，单击会等一小会儿（不到一秒）来区分两者；否则单击立即触发。要清空某个手势，在应用里选中它，再点<em>移除</em>。</p></div></details>
+    <details><summary>单击、双击、三击和长按可以设置不同的操作吗？</summary><div><p>可以，从 1.0.9 版起：每种手势（包括三击）都有自己的目标，一个应用或一个链接。只有设置了更长的连按，较短的连按才会等一小会儿（不到一秒）来区分它们；否则立即触发。要清空某个手势，在应用里选中它，再点<em>移除</em>。</p></div></details>
 
     <details><summary>需要 root 吗？</summary><div><p>不需要。应用只需要一个权限 <code>READ_LOGS</code>，Android 允许你用一条 ADB 命令授予，无需 root，也无需解锁 Bootloader。</p></div></details>
 
@@ -549,7 +564,7 @@
         <div><label for="s-phone">手机</label>
           <select id="s-phone" name="phone"><option>Find X9 Pro</option><option>Find X9</option><option>Find X9 Ultra</option><option>Find X9s</option><option>Find N6</option><option>其他</option></select></div>
         <div><label for="s-gesture">手势</label>
-          <select id="s-gesture" name="gesture"><option>双击</option><option>单击</option><option>长按</option></select></div>
+          <select id="s-gesture" name="gesture"><option>双击</option><option>单击</option><option>三击</option><option>长按</option></select></div>
       </div>
       <label for="s-link">链接或应用 <span class="opt">（可选，请删除任何私密令牌）</span></label>
       <input id="s-link" name="link" maxlength="300" placeholder="intent:#Intent;action=android.intent.action.SET_TIMER;…">
@@ -587,6 +602,6 @@
   <ul aria-label="语言"><li><a href="/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li></ul>
 </footer>
 
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=2"></script>
 </body>
 </html>

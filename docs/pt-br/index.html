@@ -22,7 +22,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SnapKey Mapper">
 <meta property="og:title" content="Personalize a Snap Key da OPPO para abrir qualquer app">
-<meta property="og:description" content="Pressão simples, dupla ou longa na Snap Key abre o app ou link que você escolher. Find X9, X9 Pro, ColorOS 16. Sem root, open source.">
+<meta property="og:description" content="Pressão simples, dupla, tripla ou longa na Snap Key abre o app ou link que você escolher. Find X9, X9 Pro, ColorOS 16. Sem root, open source.">
 <meta property="og:url" content="https://remapsnapkey.com/pt-br/">
 <meta property="og:image" content="https://remapsnapkey.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -31,7 +31,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=2">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Faz a Snap Key da OPPO abrir qualquer app ou link, sem root."}
@@ -67,6 +67,7 @@
     <symbol id="g-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
     <symbol id="g-run" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
     <symbol id="g-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 2M5 4 3 6M19 4l2 2"/></symbol>
+    <symbol id="g-pen" viewBox="0 0 24 24"><path d="M4 20l1-4.5L16.5 4a2.1 2.1 0 0 1 3 3L8 18.5zM14 6.5l3.5 3.5"/></symbol>
     <symbol id="g-cam" viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h3l1.5-2.5h6L16.5 7h3A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.5"/></symbol>
     <symbol id="g-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol>
     <symbol id="g-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"/></symbol>
@@ -120,7 +121,7 @@
       <p class="eyebrow"><span class="dot"></span>Open source · Linha OPPO Find X9 · Sem root</p>
       <h1>Mude a função da tecla Snap Key da OPPO e abra <em>qualquer app</em></h1>
       <p class="say">Aperte a tecla e caia direto no <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">O SnapKey Mapper transforma a Snap Key do Find X9 e do Find X9 Pro em um atalho para os apps ou links que você escolher. Pressão simples, dupla ou longa: cada gesto pode abrir algo diferente.</p>
+      <p class="lead">O SnapKey Mapper transforma a Snap Key do Find X9 e do Find X9 Pro em um atalho para os apps ou links que você escolher. Pressão simples, dupla, tripla ou longa: cada gesto pode abrir algo diferente.</p>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
           <svg aria-hidden="true"><use href="#g-down"/></svg>Baixar o APK
@@ -131,7 +132,7 @@
           <span class="stars" aria-label="Estrelas no GitHub">★ <span data-stars>0</span></span>
         </a>
       </div>
-      <p class="meta">Versão 1.0.8 · Android 11+ · cerca de 12 MB · MIT · testado no Find X9 Pro, ColorOS 16</p>
+      <p class="meta">Versão 1.0.9 · Android 11+ · cerca de 12 MB · MIT · testado no Find X9 Pro, ColorOS 16</p>
     </div>
 
     <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
@@ -305,8 +306,8 @@
 
   <section id="gestures" class="wide" aria-labelledby="ge-h">
     <p class="kicker">Gestos</p>
-    <h2 id="ge-h">Uma tecla, três atalhos</h2>
-    <p class="sub">Desde a versão 1.0.9, a pressão simples, a dupla e a longa abrem cada uma o seu próprio destino. Defina uma, duas ou as três.</p>
+    <h2 id="ge-h">Uma tecla, quatro atalhos</h2>
+    <p class="sub">Desde a versão 1.0.9, a pressão simples, a dupla, a tripla e a longa abrem cada uma o seu próprio destino. Defina uma, duas, três ou as quatro.</p>
     <ul class="gestures trio">
       <li class="single" style="--h:#5B8DEF">
         <div class="stage" aria-hidden="true"><div class="phone">
@@ -319,7 +320,7 @@
         </div></div>
         <div class="g"><i></i></div>
         <h3>Pressão simples</h3>
-        <p>A câmera, com uma pressão só. Quando a pressão dupla está definida, a pressão simples espera uma fração de segundo para distingui-las; sem ela, dispara na hora.</p>
+        <p>A câmera, com uma pressão só. Ela só espera uma fração de segundo quando a pressão dupla ou a tripla está definida, para distingui-las; sem isso, dispara na hora.</p>
         <code>App: Câmera</code>
       </li>
       <li class="double" style="--h:#D97757">
@@ -335,6 +336,20 @@
         <h3>Pressão dupla</h3>
         <p>Seu assistente de IA, aqui o Claude. Uma pressão no bolso nunca o abre.</p>
         <code>App: Claude</code>
+      </li>
+      <li class="triple" style="--h:#8B6CF0">
+        <div class="stage" aria-hidden="true"><div class="phone">
+          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
+          <div class="face"><div class="screen">
+            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="launch"><span class="launch-ico"><svg><use href="#g-pen"/></svg></span></div>
+          </div></div>
+        </div></div>
+        <div class="g g-triple"><i></i><i></i><i></i></div>
+        <h3>Pressão tripla</h3>
+        <p>Três pressões rápidas abrem a nota de hoje no Obsidian, pronta para escrever.</p>
+        <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
       <li class="long" style="--h:#E3B23C">
         <div class="stage" aria-hidden="true"><div class="phone">
@@ -466,7 +481,7 @@
       </li>
       <li>
         <h3>Escolha o que a Snap Key abre</h3>
-        <p>Escolha um app instalado ou cole um link (um endereço web, um deep link ou um link <code>intent:</code>). Depois defina um destino para cada gesto que quiser: pressão simples (a mais rápida), pressão dupla (uma pressão no bolso nunca abre nada) ou pressão longa (meio segundo), e toque em <em>Testar</em> para conferir se abre. Cada gesto pode abrir algo diferente. Quando a pressão dupla está definida, a pressão simples espera uma fração de segundo para distingui-las; sem ela, dispara na hora.</p>
+        <p>Escolha um app instalado ou cole um link (um endereço web, um deep link ou um link <code>intent:</code>). Depois defina um destino para cada gesto que quiser: pressão simples (a mais rápida), pressão dupla (uma pressão no bolso nunca abre nada), pressão tripla ou pressão longa (meio segundo), e toque em <em>Testar</em> para conferir se abre. Cada gesto pode abrir algo diferente. Uma série de pressões só espera uma fração de segundo quando uma série mais longa está definida, para distingui-las; sem isso, dispara na hora.</p>
       </li>
       <li>
         <h3>Escuta automática</h3>
@@ -497,9 +512,9 @@
     <p class="kicker">Dúvidas</p>
     <h2 id="faq-h">Perguntas</h2>
 
-    <details><summary>A Snap Key pode abrir qualquer app no Find X9 Pro?</summary><div><p>Só com as configurações da OPPO, não: o ColorOS oferece uma lista fixa de ações. Com o SnapKey Mapper, sim: qualquer app instalado ou qualquer link, e um diferente em cada pressão: simples, dupla ou longa.</p></div></details>
+    <details><summary>A Snap Key pode abrir qualquer app no Find X9 Pro?</summary><div><p>Só com as configurações da OPPO, não: o ColorOS oferece uma lista fixa de ações. Com o SnapKey Mapper, sim: qualquer app instalado ou qualquer link, e um diferente em cada pressão: simples, dupla, tripla ou longa.</p></div></details>
 
-    <details><summary>Posso definir ações diferentes para a pressão simples, dupla e longa?</summary><div><p>Sim, desde a versão 1.0.9: cada gesto tem o seu próprio destino, um app ou um link. Quando a pressão dupla está definida, a pressão simples espera uma fração de segundo para distingui-las; sem ela, dispara na hora. Para esvaziar um gesto, escolha-o no app e toque em <em>Remover</em>.</p></div></details>
+    <details><summary>Posso definir ações diferentes para a pressão simples, dupla, tripla e longa?</summary><div><p>Sim, desde a versão 1.0.9: cada gesto, inclusive a pressão tripla, tem o seu próprio destino, um app ou um link. Uma série de pressões só espera uma fração de segundo quando uma série mais longa está definida, para distingui-las; sem isso, dispara na hora. Para esvaziar um gesto, escolha-o no app e toque em <em>Remover</em>.</p></div></details>
 
     <details><summary>Preciso de root?</summary><div><p>Não. O app precisa de uma única permissão, <code>READ_LOGS</code>, que o Android deixa você conceder com um comando ADB, sem root e sem desbloquear o bootloader.</p></div></details>
 
@@ -549,7 +564,7 @@
         <div><label for="s-phone">Celular</label>
           <select id="s-phone" name="phone"><option>Find X9 Pro</option><option>Find X9</option><option>Find X9 Ultra</option><option>Find X9s</option><option>Find N6</option><option>Outro</option></select></div>
         <div><label for="s-gesture">Gesto</label>
-          <select id="s-gesture" name="gesture"><option>Pressão dupla</option><option>Pressão simples</option><option>Pressão longa</option></select></div>
+          <select id="s-gesture" name="gesture"><option>Pressão dupla</option><option>Pressão simples</option><option>Pressão tripla</option><option>Pressão longa</option></select></div>
       </div>
       <label for="s-link">O link ou o app <span class="opt">(opcional, remova qualquer token privado)</span></label>
       <input id="s-link" name="link" maxlength="300" placeholder="intent:#Intent;action=android.intent.action.SET_TIMER;…">
@@ -587,6 +602,6 @@
   <ul aria-label="Idiomas"><li><a href="/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li></ul>
 </footer>
 
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=2"></script>
 </body>
 </html>

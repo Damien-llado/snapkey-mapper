@@ -399,8 +399,11 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 @keyframes hold { 0%, 10% { background-position: 100% 0; } 60%, 100% { background-position: 0 0; } }
 .cards svg { width: 30px; height: 30px; color: var(--accent); margin-bottom: .7rem; }
 
-/* Trois gestes : dans chaque carte, le téléphone du héros réduit par scale ; la touche s'allume une fois, deux fois ou longtemps, puis l'écran s'ouvre.
+/* Quatre gestes : dans chaque carte, le téléphone du héros réduit par scale ; la touche s'allume une, deux ou trois fois, ou longtemps, puis l'écran s'ouvre.
    Boucle de 4 s. Sans animation (mouvement réduit), l'état final reste : touche allumée, écran ouvert. */
+.trio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 1100px) { .trio { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .trio { grid-template-columns: minmax(0, 1fr); } }
 .trio li { display: flex; flex-direction: column; gap: .55rem; }
 .trio .g { margin: 0; height: 24px; }
 .trio .stage { height: 220px; margin: 0 0 .3rem; animation: none; background: radial-gradient(closest-side, color-mix(in oklab, var(--h) 22%, transparent), transparent); }
@@ -409,15 +412,18 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .trio .snapkey, .trio .g i { animation: k1 4s ease-in-out infinite; }
 .trio .double .snapkey { animation-name: k2; }
 .trio .double .g i:nth-child(2) { animation-delay: .38s; }
+.trio .triple .snapkey { animation-name: k4; }
+.trio .triple .g i:nth-child(1) { animation-delay: -.04s; } .trio .triple .g i:nth-child(2) { animation-delay: .3s; } .trio .triple .g i:nth-child(3) { animation-delay: .64s; }
 .trio .long .snapkey { animation-name: k3; }
 .trio .long .g i { animation: fill 4s ease-in-out infinite; background-position: 0 0; }
 .trio .launch { animation: scr 4s cubic-bezier(.2, .9, .25, 1) var(--o, .7s) infinite both; }
-.trio .double .launch { --o: 1.05s; } .trio .long .launch { --o: .95s; }
+.trio .double .launch { --o: 1.05s; } .trio .triple .launch { --o: 1.25s; } .trio .long .launch { --o: .95s; }
 .trio .launch-ico { width: 80px; height: 80px; border-radius: 24px; }
 .trio .launch-ico svg { width: 42px; height: 42px; }
 .trio .launch strong { font-size: 30px; }
 @keyframes k1 { 0%, 7%, 16.5%, 100% { opacity: .3; } 9%, 14.5% { opacity: 1; } }
 @keyframes k2 { 0%, 7%, 16.5%, 26.5%, 100% { opacity: .3; } 9%, 14.5%, 18.5%, 24.5% { opacity: 1; } }
+@keyframes k4 { 0%, 6%, 14.5%, 23%, 31.5%, 100% { opacity: .3; } 8%, 12.5%, 16.5%, 21%, 25%, 29.5% { opacity: 1; } }
 @keyframes k3 { 0%, 7%, 36%, 100% { opacity: .3; } 9%, 34% { opacity: 1; } }
 @keyframes fill { 0%, 9% { background-position: 100% 0; } 34%, 82% { background-position: 0 0; } 92%, 100% { background-position: 100% 0; } }
 @keyframes scr { 0% { opacity: 0; scale: .12; border-radius: 40px; } 10%, 68% { opacity: 1; scale: 1; border-radius: 0; } 76%, 100% { opacity: 0; } }

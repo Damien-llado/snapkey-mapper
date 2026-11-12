@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reconfigurer la touche Snap Key OPPO : ouvrir une appli sans root</title>
-<meta name="description" content="La touche Snap Key des OPPO Find X9 et X9 Pro ouvre l’appli ou le lien de votre choix : appui simple, double ou long. Gratuit, open source, sans root.">
+<meta name="description" content="La touche Snap Key des OPPO Find X9 et X9 Pro ouvre l’appli ou le lien de votre choix : appui simple, double, triple ou long. Gratuit, open source, sans root.">
 <link rel="canonical" href="https://remapsnapkey.com/fr/">
 <link rel="alternate" hreflang="en" href="https://remapsnapkey.com/">
 <link rel="alternate" hreflang="fr" href="https://remapsnapkey.com/fr/">
@@ -22,7 +22,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SnapKey Mapper">
 <meta property="og:title" content="Reconfigurer la touche Snap Key OPPO pour ouvrir n’importe quelle appli">
-<meta property="og:description" content="Un appui simple, double ou long sur la Snap Key ouvre l’appli ou le lien de votre choix. Find X9, X9 Pro, ColorOS 16. Sans root, open source.">
+<meta property="og:description" content="Un appui simple, double, triple ou long sur la Snap Key ouvre l’appli ou le lien de votre choix. Find X9, X9 Pro, ColorOS 16. Sans root, open source.">
 <meta property="og:url" content="https://remapsnapkey.com/fr/">
 <meta property="og:image" content="https://remapsnapkey.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -31,7 +31,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=2">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Fait ouvrir n’importe quelle appli ou lien à la touche Snap Key d’OPPO, sans root."}
@@ -67,6 +67,7 @@
     <symbol id="g-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
     <symbol id="g-run" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
     <symbol id="g-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 2M5 4 3 6M19 4l2 2"/></symbol>
+    <symbol id="g-pen" viewBox="0 0 24 24"><path d="M4 20l1-4.5L16.5 4a2.1 2.1 0 0 1 3 3L8 18.5zM14 6.5l3.5 3.5"/></symbol>
     <symbol id="g-cam" viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h3l1.5-2.5h6L16.5 7h3A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.5"/></symbol>
     <symbol id="g-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol>
     <symbol id="g-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"/></symbol>
@@ -120,7 +121,7 @@
       <p class="eyebrow"><span class="dot"></span>Open source · OPPO Find X9 · Sans root</p>
       <h1>Reconfigurez la touche Snap Key d’OPPO pour ouvrir <em>n’importe quelle appli</em></h1>
       <p class="say">Un appui, et vous voilà dans <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper transforme la touche Snap Key des Find X9 et Find X9 Pro en raccourci vers les applis ou les liens de votre choix. Appui simple, double appui ou appui long : chaque geste peut ouvrir quelque chose de différent.</p>
+      <p class="lead">SnapKey Mapper transforme la touche Snap Key des Find X9 et Find X9 Pro en raccourci vers les applis ou les liens de votre choix. Appui simple, double appui, triple appui ou appui long : chaque geste peut ouvrir quelque chose de différent.</p>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
           <svg aria-hidden="true"><use href="#g-down"/></svg>Télécharger l’APK
@@ -305,8 +306,8 @@
 
   <section id="gestures" class="wide" aria-labelledby="ge-h">
     <p class="kicker">Gestes</p>
-    <h2 id="ge-h">Une touche, trois raccourcis</h2>
-    <p class="sub">Depuis la version 1.0.9, l’appui simple, le double appui et l’appui long ouvrent chacun leur propre cible. Réglez-en un, deux ou les trois.</p>
+    <h2 id="ge-h">Une touche, quatre raccourcis</h2>
+    <p class="sub">Depuis la version 1.0.9, l’appui simple, le double appui, le triple appui et l’appui long ouvrent chacun leur propre cible. Réglez-en un, deux, trois ou les quatre.</p>
     <ul class="gestures trio">
       <li class="single" style="--h:#5B8DEF">
         <div class="stage" aria-hidden="true"><div class="phone">
@@ -319,7 +320,7 @@
         </div></div>
         <div class="g"><i></i></div>
         <h3>Appui simple</h3>
-        <p>L’appareil photo, d’un seul appui. Quand le double appui est réglé, l’appui simple attend une fraction de seconde pour les distinguer ; sinon il part tout de suite.</p>
+        <p>L’appareil photo, d’un seul appui. Il n’attend une fraction de seconde que si un double ou un triple appui est réglé, pour les distinguer ; sinon il part tout de suite.</p>
         <code>Appli : Appareil photo</code>
       </li>
       <li class="double" style="--h:#D97757">
@@ -335,6 +336,20 @@
         <h3>Double appui</h3>
         <p>Votre assistant IA, ici Claude. Un appui dans la poche ne l’ouvre jamais.</p>
         <code>Appli : Claude</code>
+      </li>
+      <li class="triple" style="--h:#8B6CF0">
+        <div class="stage" aria-hidden="true"><div class="phone">
+          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
+          <div class="face"><div class="screen">
+            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="apps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="launch"><span class="launch-ico"><svg><use href="#g-pen"/></svg></span></div>
+          </div></div>
+        </div></div>
+        <div class="g g-triple"><i></i><i></i><i></i></div>
+        <h3>Triple appui</h3>
+        <p>Trois appuis rapides ouvrent la note du jour dans Obsidian, prête à écrire.</p>
+        <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
       <li class="long" style="--h:#E3B23C">
         <div class="stage" aria-hidden="true"><div class="phone">
@@ -466,7 +481,7 @@
       </li>
       <li>
         <h3>Choisissez ce que la Snap Key ouvre</h3>
-        <p>Choisissez une appli installée, ou collez un lien (une adresse web, un lien profond ou un lien <code>intent:</code>). Réglez ensuite une cible pour chaque geste voulu : l’appui simple (le plus rapide), le double appui (un appui dans la poche n’ouvre jamais rien) ou l’appui long (une demi-seconde), puis touchez <em>Tester</em> pour vérifier que ça s’ouvre. Chaque geste peut ouvrir autre chose. Quand le double appui est réglé, l’appui simple attend une fraction de seconde pour les distinguer ; sinon il part tout de suite.</p>
+        <p>Choisissez une appli installée, ou collez un lien (une adresse web, un lien profond ou un lien <code>intent:</code>). Réglez ensuite une cible pour chaque geste voulu : l’appui simple (le plus rapide), le double appui (un appui dans la poche n’ouvre jamais rien), le triple appui ou l’appui long (une demi-seconde), puis touchez <em>Tester</em> pour vérifier que ça s’ouvre. Chaque geste peut ouvrir autre chose. Une série d’appuis n’attend une fraction de seconde que si une série plus longue est réglée, pour les distinguer ; sinon elle part tout de suite.</p>
       </li>
       <li>
         <h3>Écoute automatique</h3>
@@ -497,9 +512,9 @@
     <p class="kicker">FAQ</p>
     <h2 id="faq-h">Questions</h2>
 
-    <details><summary>La Snap Key peut-elle ouvrir n’importe quelle appli sur le Find X9 Pro ?</summary><div><p>Pas avec les seuls réglages d’OPPO : ColorOS propose une liste d’actions fixe. Avec SnapKey Mapper, oui : n’importe quelle appli installée ou n’importe quel lien, et une différente en appui simple, en double appui et en appui long.</p></div></details>
+    <details><summary>La Snap Key peut-elle ouvrir n’importe quelle appli sur le Find X9 Pro ?</summary><div><p>Pas avec les seuls réglages d’OPPO : ColorOS propose une liste d’actions fixe. Avec SnapKey Mapper, oui : n’importe quelle appli installée ou n’importe quel lien, et une différente en appui simple, en double appui, en triple appui et en appui long.</p></div></details>
 
-    <details><summary>Puis-je régler une action différente pour l’appui simple, le double appui et l’appui long ?</summary><div><p>Oui, depuis la version 1.0.9 : chaque geste a sa propre cible, une appli ou un lien. Quand le double appui est réglé, l’appui simple attend une fraction de seconde pour les distinguer ; sinon il part tout de suite. Pour vider un geste, choisissez-le dans l’appli et touchez <em>Retirer</em>.</p></div></details>
+    <details><summary>Puis-je régler une action différente pour l’appui simple, le double appui, le triple appui et l’appui long ?</summary><div><p>Oui, depuis la version 1.0.9 : chaque geste, triple appui compris, a sa propre cible, une appli ou un lien. Une série d’appuis n’attend une fraction de seconde que si une série plus longue est réglée, pour les distinguer ; sinon elle part tout de suite. Pour vider un geste, choisissez-le dans l’appli et touchez <em>Retirer</em>.</p></div></details>
 
     <details><summary>Faut-il rooter le téléphone ?</summary><div><p>Non. L’appli a besoin d’une seule autorisation, <code>READ_LOGS</code>, qu’Android permet d’accorder par une commande ADB, sans root et sans déverrouiller le bootloader.</p></div></details>
 
@@ -549,7 +564,7 @@
         <div><label for="s-phone">Téléphone</label>
           <select id="s-phone" name="phone"><option>Find X9 Pro</option><option>Find X9</option><option>Find X9 Ultra</option><option>Find X9s</option><option>Find N6</option><option>Autre</option></select></div>
         <div><label for="s-gesture">Geste</label>
-          <select id="s-gesture" name="gesture"><option>Double appui</option><option>Appui simple</option><option>Appui long</option></select></div>
+          <select id="s-gesture" name="gesture"><option>Double appui</option><option>Appui simple</option><option>Triple appui</option><option>Appui long</option></select></div>
       </div>
       <label for="s-link">Le lien ou l’appli <span class="opt">(facultatif, retirez tout jeton privé)</span></label>
       <input id="s-link" name="link" maxlength="300" placeholder="intent:#Intent;action=android.intent.action.SET_TIMER;…">
@@ -587,6 +602,6 @@
   <ul aria-label="Languages"><li><a href="/" hreflang="en" lang="en">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr" aria-current="page">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li></ul>
 </footer>
 
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=2"></script>
 </body>
 </html>
