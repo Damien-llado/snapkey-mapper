@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SnapKey Mapper</string>
+    <string name="state_setup">การตั้งค่า: เสร็จแล้ว %1$d จาก %2$d ขั้นตอน</string>
+    <string name="toast_cannot_open">เปิดไม่ได้: %1$s</string>
+    <string name="toast_cannot_read">อ่านบันทึกไม่ได้: %1$s</string>
+    <string name="toast_failed">ไม่สำเร็จ: %1$s</string>
+    <string name="notif_count">SnapKey Mapper กำลังรอฟัง: ตรวจพบการกด %1$d ครั้ง</string>
+    <string name="diag_error">ข้อผิดพลาด: %1$s</string>
+    <string name="setup_not_granted">ยังไม่ได้รับอนุญาต: %1$s</string>
+    <string name="state_listening">กำลังรอฟัง: กดปุ่มได้เลย</string>
+    <string name="state_ready">พร้อมแล้ว</string>
+    <string name="state_choose">เลือกสิ่งที่ปุ่มจะเปิด</string>
+    <string name="btn_start">เริ่มรอฟัง</string>
+    <string name="btn_stop">หยุดรอฟัง</string>
+    <string name="perm_title">สิทธิ์</string>
+    <string name="perm_sub">เปิดสวิตช์สามตัว ครั้งเดียวพอ ตัวปุ่มเองไม่ต้องใช้อะไรเพิ่ม</string>
+    <string name="perm_auto_btn">เปิดการแก้ไขข้อบกพร่องผ่าน Wi-Fi</string>
+    <string name="perm_auto_help">เชื่อมต่อ Wi-Fi แตะปุ่ม จากนั้นใน ตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์ ให้เปิด การแก้ไขข้อบกพร่องผ่าน Wi-Fi แตะ \"จับคู่อุปกรณ์ด้วยรหัสการจับคู่\" แล้วพิมพ์ตัวเลข 6 หลักในการแจ้งเตือน บน ColorOS ให้เปิด \"Disable system optimisation\" ก่อน</string>
+    <string name="perm_log">การอ่านบันทึก</string>
+    <string name="perm_overlay">แสดงทับแอปอื่นๆ</string>
+    <string name="perm_battery">แบตเตอรี่แบบไม่จำกัด</string>
+    <string name="perm_allow">อนุญาต</string>
+    <string name="perm_granted">ได้รับอนุญาตแล้ว</string>
+    <string name="perm_needed">จำเป็น</string>
+    <string name="perm_coloros">บน ColorOS ให้ตั้ง การใช้งานแบตเตอรี่ เป็น \"ไม่จำกัด\" ในการตั้งค่าแอปด้วย และล็อกแอปไว้ในแอปล่าสุด</string>
+    <string name="perm_app_settings">เปิดการตั้งค่าแอป</string>
+    <string name="perm_by_hand">จากคอมพิวเตอร์ ด้วย adb:</string>
+    <string name="perm_copy">คัดลอกคำสั่ง</string>
+    <string name="toast_copied">คัดลอกคำสั่งแล้ว</string>
+    <string name="perm_by_hand_or">หรือทำเอง:</string>
+    <string name="target_title">สิ่งที่การกดนี้จะเปิด</string>
+    <string name="target_link">ลิงก์</string>
+    <string name="target_app">แอป</string>
+    <string name="target_link_help">ที่อยู่เว็บ, Deep Link หรือลิงก์ intent:</string>
+    <string name="app_choose">เลือกแอป</string>
+    <string name="app_none">ยังไม่ได้เลือกแอป</string>
+    <string name="dlg_choose_app">เลือกแอป</string>
+    <string name="target_test">ทดสอบการเปิด</string>
+    <string name="target_clear">ลบออก</string>
+    <string name="listen_restart_help">ทางลัดเคยใช้ได้แต่ตอนนี้ใช้ไม่ได้แล้วใช่ไหม แตะปุ่มนี้</string>
+    <string name="listen_restart">เริ่มรอฟังใหม่</string>
+    <string name="native_long_used">ColorOS ใช้การกดค้างที่ Snap Key สำหรับการทำงานของตัวเองอยู่แล้ว ถ้าคุณเลือกอะไรตรงนี้ ทั้งสองอย่างจะทำงานพร้อมกัน ให้ตั้งการทำงานของปุ่มเป็น ไม่มี ในการตั้งค่าโทรศัพท์ก่อน</string>
+    <string name="gesture_title">ท่าทาง</string>
+    <string name="gesture_help">การกดแต่ละแบบเปิดสิ่งต่างกันได้ เลือกหนึ่งแบบ แล้วเลือกด้านล่างว่าจะให้เปิดอะไร เมื่อการกดสองหรือสามครั้งเปิดบางอย่างไว้ การกดที่สั้นกว่าจะรอเสี้ยววินาทีเพื่อแยกให้ออก</string>
+    <string name="gesture_single">กดครั้งเดียว</string>
+    <string name="gesture_double">กดสองครั้ง</string>
+    <string name="gesture_triple">กดสามครั้ง</string>
+    <string name="gesture_long">กดค้าง</string>
+    <string name="finder_title">ใช้โทรศัพท์รุ่นอื่น? ค้นหาปุ่มของคุณ</string>
+    <string name="finder_help">แอปรู้จักปุ่มของ Find X9 อยู่แล้ว บนโทรศัพท์รุ่นอื่น: เริ่มเก็บข้อมูล กดปุ่มด้านข้าง 2 หรือ 3 ครั้ง หยุด แล้วแตะบรรทัดที่ขึ้นมาทุกครั้งที่กด ข้อมูลที่เก็บอาจมีข้อมูลส่วนตัวจากแอปอื่น ตรวจดูก่อนแชร์</string>
+    <string name="capture_start">เริ่มเก็บข้อมูล</string>
+    <string name="capture_stop">หยุดเก็บข้อมูล</string>
+    <string name="finder_all">แสดงทุกบรรทัด</string>
+    <string name="finder_save">บันทึกข้อมูลที่เก็บลงในไฟล์</string>
+    <string name="finder_pattern">รูปแบบที่ต้องจดจำ (ส่วนหนึ่งของบรรทัด ไม่รวมตัวเลขที่เปลี่ยนไป)</string>
+    <string name="toast_pattern_saved">บันทึกรูปแบบแล้ว เริ่มรอฟังได้เลย</string>
+    <string name="toast_no_lines">ไม่มีบรรทัด: เลือก \"แสดงทุกบรรทัด\" หรือตรวจสอบสิทธิ์</string>
+    <string name="toast_saved">บันทึกข้อมูลที่เก็บแล้ว</string>
+    <string name="toast_choose_pattern">เลือกรูปแบบก่อน (เมนู › ใช้โทรศัพท์รุ่นอื่น)</string>
+    <string name="notif_listening_title">SnapKey Mapper กำลังรอฟัง</string>
+    <string name="notif_listening_text">กดปุ่มด้านข้างเพื่อเปิดเป้าหมายของคุณ</string>
+    <string name="notif_stopped_title">SnapKey Mapper หยุดทำงานอยู่</string>
+    <string name="notif_stopped_text">แตะที่นี่เพื่อเริ่มรอฟังใหม่</string>
+    <string name="diag_blocked">Android บล็อกการเปิด</string>
+    <string name="diag_requested">ส่งคำขอเปิดแล้ว</string>
+    <string name="channel_listen">การรอฟังปุ่มด้านข้าง</string>
+    <string name="setup_waiting_title">การตั้งค่า: กำลังรอหน้าจอจับคู่</string>
+    <string name="setup_waiting_text">ใน ตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์ ให้เปิด การแก้ไขข้อบกพร่องผ่าน Wi-Fi แล้วแตะ \"จับคู่อุปกรณ์ด้วยรหัสการจับคู่\"</string>
+    <string name="setup_pairing">กำลังจับคู่…</string>
+    <string name="setup_wait">โปรดรอสักครู่</string>
+    <string name="setup_code_title">พิมพ์รหัสการจับคู่ที่นี่</string>
+    <string name="setup_code_text">ดึงการแจ้งเตือนลงมา แล้วพิมพ์ตัวเลข 6 หลักที่ Android แสดง</string>
+    <string name="setup_fail_connect">เชื่อมต่อการแก้ไขข้อบกพร่องผ่าน Wi-Fi ไม่ได้</string>
+    <string name="setup_refused">ColorOS ปฏิเสธ: เปลี่ยนภาษาโทรศัพท์เป็นภาษาอังกฤษ เปิด \"Disable system optimisation\" (ค้นหาในการตั้งค่า) แล้วลองอีกครั้ง</string>
+    <string name="setup_notif_title">การตั้งค่า SnapKey Mapper</string>
+    <string name="setup_channel">การตั้งค่า</string>
+    <string name="setup_enter_code">ป้อนรหัส</string>
+    <string name="setup_code_label">รหัส 6 หลัก</string>
+    <string name="setup_done">ตั้งค่าการอ่านบันทึกเรียบร้อยแล้ว ปิด การแก้ไขข้อบกพร่องผ่าน Wi-Fi ได้เลย</string>
+    <string name="err_invalid_intent">ลิงก์ intent ไม่ถูกต้อง</string>
+    <string name="setup_fail_pair">จับคู่ไม่สำเร็จ แตะปุ่มตั้งค่าของแอปอีกครั้ง แล้วแตะ \"จับคู่อุปกรณ์ด้วยรหัสการจับคู่\" และพิมพ์รหัสใหม่ ถ้ายังไม่สำเร็จ ให้ปิดแล้วเปิด การแก้ไขข้อบกพร่องผ่าน Wi-Fi ใหม่</string>
+    <string name="lang_title">ภาษา</string>
+    <string name="library_open">ดูคลังทางลัด</string>
+    <string name="library_title">คลังทางลัด</string>
+    <string name="library_intro">ทางลัดสำเร็จรูป จัดกลุ่มตามแอป เลือกหนึ่งรายการ กรอกค่าของคุณ ทดสอบ แล้วใช้กับ Snap Key</string>
+    <string name="library_search">ค้นหาแอปหรือการทำงาน</string>
+    <string name="library_count">ทางลัด: %1$d</string>
+    <string name="library_not_installed">ไม่ได้ติดตั้ง</string>
+    <string name="library_empty">ไม่พบรายการที่ตรงกับการค้นหา</string>
+    <string name="recipe_fields">ค่าของคุณ</string>
+    <string name="recipe_link">ลิงก์สุดท้าย</string>
+    <string name="recipe_use">ใช้ทางลัดนี้</string>
+    <string name="recipe_fill_all">กรอกทุกช่องก่อน</string>
+    <string name="recipe_saved">บันทึกเป็นเป้าหมายแล้ว</string>
+    <string name="recipe_missing">ไม่มีอะไรเปิดขึ้น ติดตั้งแอปไว้หรือยัง?</string>
+    <string name="recipe_source">เอกสารอย่างเป็นทางการ</string>
+    <string name="menu">เมนู</string>
+    <string name="menu_help">ความช่วยเหลือและเว็บไซต์</string>
+    <string name="help_url">https://remapsnapkey.com/th/</string>
+    <string name="setup_title">การตั้งค่า</string>
+    <string name="setup_intro">สี่ขั้นตอน ทำครั้งเดียว แต่ละขั้นจะติ๊กถูกเองเมื่อเสร็จ</string>
+    <string name="setup_continue">ตั้งค่าต่อ</string>
+    <string name="setup_other_way">อีกวิธี: จากคอมพิวเตอร์</string>
+    <string name="setup_open_setting">เปิดการตั้งค่านี้</string>
+    <string name="setup_native_title">ปิดการทำงานเดิมของ Snap Key ในโทรศัพท์</string>
+    <string name="setup_open_phone_settings">เปิดการตั้งค่าโทรศัพท์</string>
+    <string name="setup_native_done">เสร็จแล้ว: Snap Key ไม่ทำอะไรเอง</string>
+    <string name="finder_intro">แอปรู้จักปุ่มของ Find X9 อยู่แล้ว ไม่ต้องทำอะไรตรงนี้ บนโทรศัพท์รุ่นอื่น แอปต้องเรียนรู้ว่า Android เขียนบรรทัดใดลงในบันทึกเมื่อคุณกดปุ่ม</string>
+    <string name="finder_privacy">ข้อมูลที่เก็บอาจมีข้อมูลส่วนตัวจากแอปอื่น ตรวจดูไฟล์ก่อนแชร์</string>
+    <string name="finder_need_log">ต้องตั้งค่าการอ่านบันทึกก่อน: ทำขั้นตอนที่ 1 ของการตั้งค่าให้เสร็จ</string>
+    <string name="app_search">ค้นหาแอป</string>
+    <string name="target_link_enter">พิมพ์ลิงก์</string>
+    <string name="target_none">ยังไม่ได้เลือกอะไร</string>
+    <string-array name="steps_log_auto">
+        <item>เชื่อมต่อโทรศัพท์กับ Wi-Fi ของคุณ</item>
+        <item>ถ้าไม่เห็น ตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์: การตั้งค่า › เกี่ยวกับอุปกรณ์ › เวอร์ชัน แล้วแตะ หมายเลขบิลด์ 7 ครั้ง</item>
+        <item>ใน ตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์ ให้เปิด \"Disable system optimisation\" (ColorOS)</item>
+        <item>แตะ \"ตั้งค่าการอ่านบันทึกอัตโนมัติ\" ด้านล่าง</item>
+        <item>เปิด การแก้ไขข้อบกพร่องผ่าน Wi-Fi แล้วแตะ \"จับคู่อุปกรณ์ด้วยรหัสการจับคู่\"</item>
+        <item>ดึงการแจ้งเตือนลงมา แล้วพิมพ์ตัวเลข 6 หลักในการแจ้งเตือนของ SnapKey Mapper</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>ติดตั้ง Android platform-tools (adb) บนคอมพิวเตอร์</item>
+        <item>ใน ตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์ ให้เปิด การแก้ไขข้อบกพร่อง USB และ \"Disable system optimisation\" (ColorOS) แล้วต่อโทรศัพท์ด้วยสาย</item>
+        <item>เรียกใช้คำสั่งด้านล่างบนคอมพิวเตอร์</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>แตะ \"เปิดการตั้งค่านี้\" แล้วเปิดสวิตช์</item>
+        <item>ถ้าสวิตช์เป็นสีเทา หรือ Android แจ้งว่าไม่อนุญาตให้เข้าถึง: แตะ \"เปิดการตั้งค่าแอป\" แล้วแตะ ⋮ ที่มุมขวาบน › \"อนุญาตให้เข้าถึงสิทธิ์ที่จำกัด\" แล้วกลับมาที่นี่</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>แตะ \"อนุญาต\" แล้วยืนยัน</item>
+        <item>บน ColorOS ให้เปิดการตั้งค่าแอป › การใช้งานแบตเตอรี่ › \"ไม่จำกัด\" ด้วย และล็อกแอปไว้ในแอปล่าสุด</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>เปิดการตั้งค่าโทรศัพท์แล้วค้นหา \"Snap Key\"</item>
+        <item>ตั้งให้ไม่มีการทำงาน เพื่อไม่ให้โทรศัพท์ทำงานของตัวเองไปพร้อมกัน</item>
+        <item>ติ๊กช่องด้านล่าง</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>แตะ \"เริ่มเก็บข้อมูล\"</item>
+        <item>กดปุ่มของคุณ 3 ครั้ง เว้นห่างกันสองสามวินาที</item>
+        <item>แตะ \"หยุดเก็บข้อมูล\"</item>
+        <item>ในรายการด้านล่าง แตะบรรทัดที่ขึ้นมาทุกครั้งที่กด บรรทัดนั้นจะกลายเป็นรูปแบบ</item>
+        <item>กลับไปหน้าหลัก เริ่มรอฟัง แล้วกดปุ่มเพื่อตรวจสอบ</item>
+    </string-array>
+    <string name="recipe_help">ใช้กับโทรศัพท์ของคุณไม่ได้? บนคอมพิวเตอร์ ให้ถาม Claude Code ที่มีปลั๊กอิน SnapKey Mapper แล้วมันจะหาลิงก์ที่ใช้ได้และทดสอบบนโทรศัพท์ของคุณ ซึ่งต่อด้วยสาย USB หรือการแก้ไขข้อบกพร่องผ่าน Wi-Fi</string>
+    <string name="setup_progress">ขั้นตอนที่ %1$d จาก %2$d</string>
+    <string name="wiz_wifi_title">เชื่อมต่อ Wi-Fi</string>
+    <string name="wiz_wifi_text">แอปให้สิทธิ์อ่านบันทึกแก่ตัวเองผ่านการแก้ไขข้อบกพร่องผ่าน Wi-Fi ของโทรศัพท์ ซึ่งใช้ได้เฉพาะบน Wi-Fi เชื่อมต่อโทรศัพท์ แล้วกลับมาที่นี่</string>
+    <string name="wiz_wifi_btn">เปิด Wi-Fi</string>
+    <string name="wiz_dev_title">เปิด ตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์</string>
+    <string name="wiz_dev_text">แตะปุ่ม แล้วแตะ หมายเลขบิลด์ 7 ครั้ง (บน ColorOS: เวอร์ชัน) Android จะแจ้งว่าคุณเป็นนักพัฒนาแล้ว จากนั้นกลับมาที่นี่</string>
+    <string name="wiz_dev_btn">เปิด เกี่ยวกับโทรศัพท์</string>
+    <string name="wiz_pair_title">จับคู่แอปกับโทรศัพท์ของคุณ</string>
+    <string name="wiz_pair_text">1. แตะปุ่ม: การแก้ไขข้อบกพร่องผ่าน Wi-Fi จะเปิดขึ้น (ถ้ารายการ ตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์ เปิดขึ้นมาแทน ให้แตะข้อความ \"การแก้ไขข้อบกพร่องผ่าน Wi-Fi\" ไม่ใช่สวิตช์)\n2. เปิดใช้งานและอนุญาตเครือข่ายของคุณ\n3. แตะ \"จับคู่อุปกรณ์ด้วยรหัสการจับคู่\"\n4. การแจ้งเตือนของ SnapKey Mapper จะเลื่อนลงมา: แตะลูกศรเพื่อขยาย แตะ \"ป้อนรหัส\" แล้วพิมพ์ตัวเลข 6 หลัก แค่นั้น แอปจะทำส่วนที่เหลือเอง</string>
+    <string name="wiz_sysopt_title">สวิตช์ที่ซ่อนอยู่ของ ColorOS ก่อน</string>
+    <string name="wiz_sysopt_text">ColorOS บล็อกสิทธิ์นี้จนกว่าจะเปิดสวิตช์ที่ซ่อนอยู่ และสวิตช์นี้จะแสดงเฉพาะเมื่อโทรศัพท์ใช้ภาษาอังกฤษ\n1. เปลี่ยนภาษาโทรศัพท์เป็น English (ภาษาและภูมิภาค)\n2. ใน การตั้งค่า ค้นหา \"Disable system\" แล้วเปิด \"Disable system optimisation\" (Turn on anyway)\n3. กลับมาที่นี่ เมื่อตั้งค่าเสร็จแล้ว เปลี่ยนกลับเป็นภาษาของคุณได้</string>
+    <string name="wiz_sysopt_btn">เปิด ภาษาและภูมิภาค</string>
+    <string name="wiz_sysopt_btn2">เปิด การตั้งค่า</string>
+    <string name="wiz_sysopt_done">เสร็จแล้ว ไปต่อ</string>
+    <string name="wiz_last">ครั้งล่าสุดที่ลอง: %1$s</string>
+    <string name="wiz_computer_text">รุ่น lite ไม่มีสิทธิ์เข้าถึงเครือข่าย จึงต้องให้สิทธิ์จากคอมพิวเตอร์ครั้งเดียว: เปิด การแก้ไขข้อบกพร่อง USB ใน ตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์ ต่อโทรศัพท์ด้วยสาย แล้วเรียกใช้คำสั่งนี้</string>
+    <string name="wiz_overlay_text">ให้ปุ่มเปิดเป้าหมายของคุณได้แม้หน้าจอปิดอยู่หรือมีแอปอื่นอยู่ด้านหน้า แตะปุ่ม แล้วแตะ SnapKey Mapper ในรายการ และเปิดสวิตช์</string>
+    <string name="wiz_restricted">สวิตช์เป็นสีเทา หรือขึ้นว่า \"ไม่อนุญาตให้เข้าถึง\"? Android บล็อกสิทธิ์นี้สำหรับแอปที่ไม่ได้ติดตั้งจาก Play Store: เปิดการตั้งค่าแอป แตะ ⋮ ที่มุมขวาบน แล้วแตะ \"อนุญาตให้เข้าถึงสิทธิ์ที่จำกัด\" แล้วกลับมา</string>
+    <string name="wiz_battery_text">เพื่อไม่ให้ Android หยุดแอปขณะทำงานเบื้องหลัง แตะปุ่มแล้วยืนยัน บน ColorOS ให้ล็อกแอปไว้ในแอปล่าสุดด้วย</string>
+    <string name="wiz_native_text">เพื่อไม่ให้โทรศัพท์ทำงาน Snap Key ของตัวเองไปพร้อมกัน: ในการตั้งค่าโทรศัพท์ ค้นหา \"Snap Key\" แล้วตั้งให้ไม่มีการทำงาน</string>
+    <string name="wiz_done_title">เรียบร้อย</string>
+    <string name="wiz_done_text">เรียบร้อยแล้ว ตอนนี้ปุ่มจะรอฟังเอง ปิด การแก้ไขข้อบกพร่องผ่าน Wi-Fi ได้เลย เลือกสิ่งที่ปุ่มจะเปิด</string>
+    <string name="wiz_done_btn">ไปต่อ</string>
+    <string name="home_setup_title">ตั้งค่า SnapKey Mapper</string>
+    <string name="home_setup_text">ไม่กี่ขั้นตอน ทำครั้งเดียว แอปจะเปิดแต่ละการตั้งค่าให้และตรวจสอบให้</string>
+    <string name="home_finder">ปุ่มไม่ทำงาน? ใช้โทรศัพท์รุ่นอื่น: ค้นหาปุ่มของคุณ</string>
+    <string name="wiz_skip">ทำแล้ว ไปต่อ</string>
+    <string name="wiz_notif_title">เปิดการแจ้งเตือน</string>
+    <string name="wiz_notif_text">รหัสการจับคู่ต้องพิมพ์ในการแจ้งเตือนของแอป เปิดการแจ้งเตือนของแอป แล้วกลับมาที่นี่</string>
+    <string name="wiz_notif_btn">เปิดการแจ้งเตือน</string>
+    <string name="menu_diag">คัดลอกข้อมูลวินิจฉัย</string>
+    <string name="diag_copied">คัดลอกข้อมูลวินิจฉัยแล้ว: วางลงใน issue บน GitHub</string>
+    <string name="diag_stuck">ติดขัด? คัดลอกข้อมูลวินิจฉัยเพื่อเปิด issue บน GitHub</string>
+</resources>

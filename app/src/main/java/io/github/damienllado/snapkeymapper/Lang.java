@@ -10,12 +10,15 @@ final class Lang {
     /** code, short label shown on the button, name in its own language */
     static final String[][] ALL = {
             {"en", "EN", "English"}, {"fr", "FR", "Français"}, {"es", "ES", "Español"}, {"de", "DE", "Deutsch"},
-            {"nl", "NL", "Nederlands"}, {"pt", "PT", "Português (Brasil)"}, {"hi", "HI", "हिन्दी"}, {"zh", "ZH", "中文"}};
+            {"it", "IT", "Italiano"}, {"nl", "NL", "Nederlands"}, {"pt", "PT", "Português (Brasil)"},
+            {"id", "ID", "Bahasa Indonesia"}, {"vi", "VI", "Tiếng Việt"}, {"hi", "HI", "हिन्दी"}, {"th", "TH", "ไทย"},
+            {"ja", "JA", "日本語"}, {"zh", "ZH", "中文"}};
 
     static String current(Context c) {
         String saved = c.getSharedPreferences("settings", Context.MODE_PRIVATE).getString("lang", "");
         if (!saved.isEmpty()) return saved;
         String system = Locale.getDefault().getLanguage();
+        if (system.equals("in")) system = "id"; // Android names Indonesian "in" (old ISO code); its resources are in values-in
         for (String[] l : ALL) if (l[0].equals(system)) return system;
         return "en";
     }

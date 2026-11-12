@@ -1,0 +1,1035 @@
+{
+ "apps": {
+  "clock": {
+   "name": "Orologio"
+  },
+  "camera": {
+   "name": "Fotocamera"
+  },
+  "phone": {
+   "name": "Telefono"
+  },
+  "messages": {
+   "name": "Messaggi"
+  },
+  "email": {
+   "name": "Email"
+  },
+  "web": {
+   "name": "Web"
+  },
+  "calendar": {
+   "name": "Calendario"
+  },
+  "contacts": {
+   "name": "Contatti"
+  },
+  "settings": {
+   "name": "Impostazioni"
+  },
+  "assistant": {
+   "name": "Assistente"
+  }
+ },
+ "recipes": {
+  "clock-timer": {
+   "title": "Avvia un timer",
+   "desc": "Avvia subito un conto alla rovescia, senza aprire l'app Orologio.",
+   "vars": {
+    "SECONDS": {
+     "label": "Durata in secondi",
+     "where": "Moltiplica i minuti per 60: 5 minuti sono 300, 1 ora è 3600."
+    }
+   }
+  },
+  "clock-timer-label": {
+   "title": "Avvia un timer con un nome",
+   "desc": "Avvia un conto alla rovescia con un nome, per esempio \"Pasta\".",
+   "vars": {
+    "SECONDS": {
+     "label": "Durata in secondi",
+     "where": "Moltiplica i minuti per 60: 10 minuti sono 600."
+    },
+    "LABEL": {
+     "label": "Nome del timer",
+     "where": "Un breve testo a tua scelta."
+    }
+   }
+  },
+  "clock-alarm": {
+   "title": "Imposta una sveglia",
+   "desc": "Crea una sveglia all'ora che vuoi, senza aprire l'app Orologio.",
+   "vars": {
+    "HOUR": {
+     "label": "Ora (da 0 a 23)",
+     "where": "Formato 24 ore: 7 per le 7 del mattino, 19 per le 7 di sera."
+    },
+    "MINUTES": {
+     "label": "Minuti (da 0 a 59)",
+     "where": "Solo i minuti dell'orario che vuoi."
+    }
+   }
+  },
+  "clock-alarm-label": {
+   "title": "Imposta una sveglia con un nome",
+   "desc": "Crea una sveglia con un nome, per esempio \"Palestra\".",
+   "vars": {
+    "HOUR": {
+     "label": "Ora (da 0 a 23)",
+     "where": "Formato 24 ore: 7 per le 7 del mattino, 19 per le 7 di sera."
+    },
+    "MINUTES": {
+     "label": "Minuti (da 0 a 59)",
+     "where": "Solo i minuti dell'orario che vuoi."
+    },
+    "LABEL": {
+     "label": "Nome della sveglia",
+     "where": "Un breve testo a tua scelta."
+    }
+   }
+  },
+  "clock-show-alarms": {
+   "title": "Mostra le sveglie",
+   "desc": "Apre l'elenco delle tue sveglie."
+  },
+  "clock-show-timers": {
+   "title": "Mostra i timer",
+   "desc": "Apre l'elenco dei tuoi timer."
+  },
+  "camera-photo": {
+   "title": "Apri la fotocamera in modalità foto",
+   "desc": "Apre l'app fotocamera predefinita, pronta a scattare una foto."
+  },
+  "camera-video": {
+   "title": "Apri la fotocamera in modalità video",
+   "desc": "Apre l'app fotocamera predefinita, pronta a registrare."
+  },
+  "phone-dial": {
+   "title": "Componi un numero",
+   "desc": "Apre il tastierino con il numero già inserito. Sei tu a toccare il pulsante di chiamata.",
+   "vars": {
+    "NUMBER": {
+     "label": "Numero di telefono",
+     "where": "Con il prefisso internazionale, per esempio +33123456789."
+    }
+   }
+  },
+  "phone-open-dialer": {
+   "title": "Apri il tastierino",
+   "desc": "Apre il tastierino dell'app Telefono."
+  },
+  "messages-compose": {
+   "title": "Scrivi un SMS",
+   "desc": "Apre la tua app di messaggi con destinatario e testo già compilati. Sei tu a toccare Invia.",
+   "vars": {
+    "NUMBER": {
+     "label": "Numero di telefono",
+     "where": "Con il prefisso internazionale, per esempio +33123456789."
+    },
+    "MESSAGE": {
+     "label": "Messaggio",
+     "where": "Il testo da inviare."
+    }
+   }
+  },
+  "email-compose": {
+   "title": "Scrivi un'email",
+   "desc": "Apre la tua app di posta con indirizzo, oggetto e testo già compilati. Sei tu a toccare Invia.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Indirizzo email",
+     "where": "La persona a cui scrivi."
+    },
+    "SUBJECT": {
+     "label": "Oggetto",
+     "where": "Un breve testo a tua scelta."
+    },
+    "BODY": {
+     "label": "Messaggio",
+     "where": "Il testo dell'email."
+    }
+   }
+  },
+  "web-open": {
+   "title": "Apri un sito web",
+   "desc": "Apre qualsiasi indirizzo web nel browser (o nell'app che lo gestisce).",
+   "vars": {
+    "URL": {
+     "label": "Indirizzo web",
+     "where": "Copialo dal browser, inizia con https://."
+    }
+   }
+  },
+  "web-search": {
+   "title": "Cerca sul web",
+   "desc": "Avvia una ricerca web su un testo fisso.",
+   "vars": {
+    "QUERY": {
+     "label": "Testo da cercare",
+     "where": "Quello che vuoi cercare."
+    }
+   }
+  },
+  "calendar-new-event": {
+   "title": "Crea un evento",
+   "desc": "Apre il calendario su un nuovo evento, con il titolo già compilato.",
+   "vars": {
+    "TITLE": {
+     "label": "Titolo dell'evento",
+     "where": "Un breve testo a tua scelta."
+    }
+   }
+  },
+  "calendar-open": {
+   "title": "Apri il calendario",
+   "desc": "Apre il calendario su oggi."
+  },
+  "contacts-new": {
+   "title": "Crea un contatto",
+   "desc": "Apre un nuovo contatto con nome e numero già compilati.",
+   "vars": {
+    "NAME": {
+     "label": "Nome",
+     "where": "Il nome che preferisci."
+    },
+    "NUMBER": {
+     "label": "Numero di telefono",
+     "where": "Con il prefisso internazionale, per esempio +33123456789."
+    }
+   }
+  },
+  "settings-wifi": {
+   "title": "Impostazioni Wi-Fi",
+   "desc": "Apre l'elenco delle reti Wi-Fi."
+  },
+  "settings-bluetooth": {
+   "title": "Impostazioni Bluetooth",
+   "desc": "Apre le impostazioni Bluetooth."
+  },
+  "settings-airplane": {
+   "title": "Impostazioni della modalità Aereo",
+   "desc": "Apre le impostazioni della modalità Aereo."
+  },
+  "settings-display": {
+   "title": "Impostazioni dello schermo",
+   "desc": "Apre luminosità, modalità scura e spegnimento dello schermo."
+  },
+  "settings-sound": {
+   "title": "Impostazioni audio",
+   "desc": "Apre le impostazioni di volume e suoneria."
+  },
+  "settings-battery-saver": {
+   "title": "Impostazioni del risparmio energetico",
+   "desc": "Apre le impostazioni del risparmio energetico."
+  },
+  "settings-location": {
+   "title": "Impostazioni di localizzazione",
+   "desc": "Apre le impostazioni di localizzazione."
+  },
+  "settings-nfc": {
+   "title": "Impostazioni NFC",
+   "desc": "Apre le impostazioni NFC."
+  },
+  "settings-data-usage": {
+   "title": "Utilizzo dati",
+   "desc": "Apre la schermata dell'utilizzo dei dati mobili."
+  },
+  "settings-accessibility": {
+   "title": "Impostazioni di accessibilità",
+   "desc": "Apre le impostazioni di accessibilità."
+  },
+  "settings-language": {
+   "title": "Impostazioni della lingua",
+   "desc": "Apre le impostazioni della lingua."
+  },
+  "settings-date": {
+   "title": "Impostazioni di data e ora",
+   "desc": "Apre le impostazioni di data e ora."
+  },
+  "settings-apps": {
+   "title": "Tutte le app",
+   "desc": "Apre l'elenco delle app installate."
+  },
+  "settings-developer": {
+   "title": "Opzioni sviluppatore",
+   "desc": "Apre Opzioni sviluppatore (se sono attive)."
+  },
+  "google-maps-navigate-to-address": {
+   "title": "Vai a un indirizzo in auto",
+   "desc": "Avvia la navigazione in auto in Google Maps, dalla tua posizione attuale a un indirizzo o un luogo.",
+   "note": "La navigazione parte dalla tua posizione attuale. La prima volta Google Maps chiede l'accesso alla posizione.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Indirizzo o nome del luogo di arrivo",
+     "where": "Scrivi l'indirizzo completo o il nome di un luogo conosciuto, esattamente come lo cercheresti in Google Maps."
+    }
+   }
+  },
+  "google-maps-navigate-walking": {
+   "title": "Vai a un indirizzo a piedi",
+   "desc": "Avvia la navigazione a piedi in Google Maps, dalla tua posizione attuale a un indirizzo o un luogo.",
+   "note": "La navigazione a piedi parte dalla tua posizione attuale.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Indirizzo o nome del luogo di arrivo",
+     "where": "Scrivi l'indirizzo completo o il nome di un luogo conosciuto, esattamente come lo cercheresti in Google Maps."
+    }
+   }
+  },
+  "google-maps-navigate-cycling": {
+   "title": "Vai a un indirizzo in bici",
+   "desc": "Avvia la navigazione in bici in Google Maps, dalla tua posizione attuale a un indirizzo o un luogo.",
+   "note": "I percorsi in bici non sono disponibili in tutti i paesi.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Indirizzo o nome del luogo di arrivo",
+     "where": "Scrivi l'indirizzo completo o il nome di un luogo conosciuto, esattamente come lo cercheresti in Google Maps."
+    }
+   }
+  },
+  "google-maps-search-nearby": {
+   "title": "Cerca luoghi nelle vicinanze",
+   "desc": "Apre Google Maps sui risultati di una ricerca, per esempio i ristoranti o le farmacie intorno a te.",
+   "note": "Apre Google Maps sui risultati della ricerca.",
+   "vars": {
+    "SEARCH": {
+     "label": "Cosa cerchi",
+     "where": "Scrivi un tipo di luogo o un nome, con le parole che useresti nella barra di ricerca di Google Maps."
+    }
+   }
+  },
+  "google-maps-transit-directions": {
+   "title": "Vai a un luogo con i mezzi pubblici",
+   "desc": "Mostra in Google Maps il percorso con i mezzi pubblici verso una destinazione, dalla tua posizione attuale.",
+   "note": "Apre il percorso in Google Maps, o nel browser se l'app non lo gestisce.",
+   "vars": {
+    "DESTINATION": {
+     "label": "Indirizzo o nome del luogo di arrivo",
+     "where": "Scrivi un indirizzo o il nome di un luogo, come lo cercheresti in Google Maps."
+    }
+   }
+  },
+  "google-maps-street-view": {
+   "title": "Apri Street View a delle coordinate",
+   "desc": "Apre in Google Maps la vista Street View più vicina a una latitudine e una longitudine.",
+   "note": "Se vicino a quel punto non c'è nessuna vista Street View, Google Maps te lo segnala.",
+   "vars": {
+    "LATITUDE": {
+     "label": "Latitudine",
+     "where": "In Google Maps, tieni premuto un punto della mappa: la latitudine è il primo numero mostrato nella barra di ricerca."
+    },
+    "LONGITUDE": {
+     "label": "Longitudine",
+     "where": "In Google Maps, tieni premuto un punto della mappa: la longitudine è il secondo numero mostrato nella barra di ricerca."
+    }
+   }
+  },
+  "assistant-open": {
+   "title": "Apri l'assistente vocale",
+   "desc": "Avvia l'assistente predefinito del telefono, come fa il gesto di sistema."
+  },
+  "youtube-open-channel": {
+   "title": "Apri un canale",
+   "desc": "Apre la pagina di un canale YouTube a partire dal suo handle.",
+   "note": "Apre la pagina del canale nell'app YouTube.",
+   "vars": {
+    "HANDLE": {
+     "label": "Handle del canale (senza la @)",
+     "where": "Apri il canale in YouTube: l'handle inizia con @ e si trova sotto il nome del canale. Scrivilo qui senza la @."
+    }
+   }
+  },
+  "youtube-open-playlist": {
+   "title": "Apri una playlist",
+   "desc": "Apre una playlist YouTube precisa.",
+   "note": "Apre la pagina della playlist. La riproduzione non parte da sola.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID della playlist",
+     "where": "Apri la pagina della playlist e tocca Condividi > Copia link (o leggi l'indirizzo in un browser): l'ID è la parte dopo list= nel link."
+    }
+   }
+  },
+  "youtube-open-video": {
+   "title": "Apri un video",
+   "desc": "Apre un video preciso, per esempio una diretta o un tutorial che ti piace.",
+   "note": "Apre il video nell'app YouTube.",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "ID del video",
+     "where": "Apri il video, tocca Condividi > Copia link: l'ID è la parte dopo v= (o dopo youtu.be/ in un link breve)."
+    }
+   }
+  },
+  "youtube-search": {
+   "title": "Cerca su YouTube",
+   "desc": "Apre i risultati di ricerca di YouTube per una ricerca fissa.",
+   "note": "Apre i risultati della ricerca.",
+   "vars": {
+    "QUERY": {
+     "label": "Testo da cercare",
+     "where": "Le parole che vuoi cercare."
+    }
+   }
+  },
+  "ytmusic-open-library": {
+   "title": "Apri la tua raccolta",
+   "desc": "Apre la scheda Raccolta di YouTube Music.",
+   "note": "Devi aver effettuato l'accesso nell'app YouTube Music."
+  },
+  "ytmusic-search": {
+   "title": "Cerca su YouTube Music",
+   "desc": "Apre i risultati di ricerca di YouTube Music per una ricerca fissa.",
+   "note": "Apre i risultati della ricerca in YouTube Music.",
+   "vars": {
+    "QUERY": {
+     "label": "Testo da cercare",
+     "where": "Le parole che vuoi cercare."
+    }
+   }
+  },
+  "ytmusic-open-playlist": {
+   "title": "Apri una playlist",
+   "desc": "Apre una playlist o un album preciso in YouTube Music.",
+   "note": "Apre la playlist o l'album in YouTube Music.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID della playlist",
+     "where": "Apri la playlist in YouTube Music, tocca il menu > Condividi > Copia link: l'ID è la parte dopo list= nel link."
+    }
+   }
+  },
+  "ytmusic-open-song": {
+   "title": "Apri un brano",
+   "desc": "Apre un brano preciso nel lettore di YouTube Music.",
+   "note": "Apre il brano in YouTube Music.",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "ID del brano",
+     "where": "Apri il brano, tocca il menu > Condividi > Copia link: l'ID è la parte dopo v= nel link."
+    }
+   }
+  },
+  "gmail-compose": {
+   "title": "Scrivi una nuova email",
+   "desc": "Apre la schermata di scrittura di Gmail con un messaggio vuoto.",
+   "note": "Non viene inviato nulla finché non tocchi Invia."
+  },
+  "gmail-compose-to-person": {
+   "title": "Scrivi un'email a qualcuno",
+   "desc": "Apre la schermata di scrittura di Gmail con il destinatario già compilato.",
+   "note": "Non viene inviato nulla finché non tocchi Invia.",
+   "vars": {
+    "EMAIL_ADDRESS": {
+     "label": "Indirizzo email del destinatario",
+     "where": "Scrivi l'indirizzo della persona a cui scrivi più spesso."
+    }
+   }
+  },
+  "gmail-compose-with-subject": {
+   "title": "Scrivi un'email con oggetto e testo",
+   "desc": "Apre la schermata di scrittura di Gmail con oggetto e testo già compilati.",
+   "note": "Non viene inviato nulla finché non tocchi Invia.",
+   "vars": {
+    "SUBJECT": {
+     "label": "Oggetto",
+     "where": "Scrivi l'oggetto del messaggio."
+    },
+    "BODY": {
+     "label": "Testo del messaggio",
+     "where": "Scrivi il corpo dell'email."
+    }
+   }
+  },
+  "telegram-open-chat": {
+   "title": "Apri una chat tramite nome utente",
+   "desc": "Apre la chat con un utente, un gruppo, un canale o un bot Telegram pubblico.",
+   "note": "Funziona con persone, gruppi, canali e bot che hanno un nome utente pubblico.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nome utente Telegram",
+     "where": "Il nome pubblico senza la @, mostrato nel profilo sotto Nome utente."
+    }
+   }
+  },
+  "telegram-open-chat-with-draft": {
+   "title": "Apri una chat con un messaggio già scritto",
+   "desc": "Apre una chat pubblica e compila il campo del messaggio (non viene inviato nulla finché non tocchi Invia).",
+   "note": "Il testo viene scritto nel campo del messaggio; non viene inviato nulla finché non tocchi Invia.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nome utente Telegram",
+     "where": "Il nome pubblico senza la @, mostrato nel profilo sotto Nome utente."
+    },
+    "MESSAGE": {
+     "label": "Messaggio",
+     "where": "Il tuo testo, così come lo scriveresti."
+    }
+   }
+  },
+  "telegram-open-chat-by-phone": {
+   "title": "Apri una chat tramite numero di telefono",
+   "desc": "Apre la chat Telegram con una persona, a partire dal suo numero di telefono.",
+   "note": "Funziona solo se la persona ha Telegram e permette di essere trovata tramite il suo numero.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Numero di telefono",
+     "where": "Prima il prefisso internazionale, solo cifre, per esempio 33123456789. Spazi e + vengono ignorati."
+    }
+   }
+  },
+  "telegram-join-invite": {
+   "title": "Entra in un gruppo privato tramite link di invito",
+   "desc": "Apre l'invito a entrare in un gruppo o in un canale Telegram privato, a partire dal codice di invito.",
+   "note": "Apre l'invito a un gruppo o a un canale privato.",
+   "vars": {
+    "INVITE_HASH": {
+     "label": "Codice di invito",
+     "where": "In un link di invito come https://t.me/+AbCdEf123, copia la parte dopo il + (link vecchi: t.me/joinchat/HASH)."
+    }
+   }
+  },
+  "telegram-story-composer": {
+   "title": "Crea una storia",
+   "desc": "Apre la fotocamera delle storie di Telegram per pubblicare una nuova storia.",
+   "note": "Apre la schermata di creazione di una storia."
+  },
+  "telegram-global-search": {
+   "title": "Apri la ricerca globale",
+   "desc": "Apre la schermata di ricerca di Telegram, in tutte le chat e nei contenuti pubblici.",
+   "note": "Apre la schermata di ricerca."
+  },
+  "whatsapp-open-chat": {
+   "title": "Apri una chat",
+   "desc": "Apre una chat WhatsApp con un numero di telefono preciso.",
+   "note": "Apre la chat con questo numero.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Numero di telefono",
+     "where": "Prima il prefisso internazionale, solo cifre, per esempio 33123456789. Spazi e + vengono ignorati."
+    }
+   }
+  },
+  "whatsapp-open-chat-with-message": {
+   "title": "Apri una chat con un messaggio pronto",
+   "desc": "Apre una chat WhatsApp con un numero di telefono e compila il campo del messaggio (non viene inviato nulla finché non tocchi Invia).",
+   "note": "Il testo viene scritto nel campo del messaggio; non viene inviato nulla finché non tocchi Invia.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Numero di telefono",
+     "where": "Prima il prefisso internazionale, solo cifre, per esempio 33123456789. Spazi e + vengono ignorati."
+    },
+    "MESSAGE": {
+     "label": "Messaggio",
+     "where": "Il tuo testo, così come lo scriveresti."
+    }
+   }
+  },
+  "whatsapp-share-text": {
+   "title": "Invia un testo al contatto che scelgo",
+   "desc": "Apre l'elenco dei contatti di WhatsApp con il messaggio già scritto: scegli tu chi lo riceve.",
+   "note": "WhatsApp ti chiede di scegliere chi riceve il testo.",
+   "vars": {
+    "MESSAGE": {
+     "label": "Messaggio",
+     "where": "Il tuo testo, così come lo scriveresti."
+    }
+   }
+  },
+  "whatsapp-join-group": {
+   "title": "Entra in un gruppo o aprilo tramite link di invito",
+   "desc": "Apre un gruppo WhatsApp a partire dal suo codice di invito (invito a entrare, o il gruppo se ne fai già parte).",
+   "note": "Apre l'invito a un gruppo.",
+   "vars": {
+    "INVITE_CODE": {
+     "label": "Codice di invito del gruppo",
+     "where": "La parte dopo chat.whatsapp.com/ nel link di invito del gruppo (nel gruppo: Info gruppo > Invita tramite link > Copia link)."
+    }
+   }
+  },
+  "signal-open-chat-by-phone": {
+   "title": "Apri una chat tramite numero di telefono",
+   "desc": "Apre una chat Signal con una persona, a partire dal suo numero di telefono.",
+   "note": "Apre la chat con questo numero se la persona usa Signal.",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "Numero di telefono",
+     "where": "Prima il prefisso internazionale, solo cifre, per esempio 33123456789. Spazi e + vengono ignorati."
+    }
+   }
+  },
+  "signal-open-group-link": {
+   "title": "Entra in un gruppo o aprilo tramite link del gruppo",
+   "desc": "Apre l'invito a entrare in un gruppo Signal, a partire dal suo link del gruppo.",
+   "note": "Apre l'invito a un gruppo Signal.",
+   "vars": {
+    "GROUP_LINK_CODE": {
+     "label": "Codice del link del gruppo",
+     "where": "In Signal, apri il gruppo, tocca il suo nome, poi il link del gruppo, e condividilo o copialo. Tieni solo il testo lungo dopo il # in https://signal.group/#..."
+    }
+   }
+  },
+  "obsidian-open-vault": {
+   "title": "Apri il mio vault",
+   "desc": "Apre il vault Obsidian scelto (o lo mostra se è già aperto).",
+   "note": "Apre il vault sull'ultima schermata.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nome del vault",
+     "where": "In Obsidian, apri il selettore dei vault (icona del vault, in fondo al pannello laterale o nell'elenco dei vault) e copia il nome mostrato per il tuo vault. È anche il nome della sua cartella."
+    }
+   }
+  },
+  "obsidian-open-note": {
+   "title": "Apri una nota precisa",
+   "desc": "Apre una nota precisa del vault.",
+   "note": "Apre questa nota del vault.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nome del vault",
+     "where": "In Obsidian, apri il selettore dei vault (icona del vault, in fondo al pannello laterale o nell'elenco dei vault) e copia il nome mostrato per il tuo vault. È anche il nome della sua cartella."
+    },
+    "NOTE_PATH": {
+     "label": "Nome o percorso della nota",
+     "where": "Il nome del file della nota, o il suo percorso dalla radice del vault; l'estensione .md è facoltativa."
+    }
+   }
+  },
+  "obsidian-daily-note": {
+   "title": "Apri la nota del giorno",
+   "desc": "Crea o apre la nota giornaliera di oggi.",
+   "note": "Apre la nota del giorno, o la crea.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nome del vault",
+     "where": "In Obsidian, apri il selettore dei vault (icona del vault, in fondo al pannello laterale o nell'elenco dei vault) e copia il nome mostrato per il tuo vault. È anche il nome della sua cartella."
+    }
+   }
+  },
+  "obsidian-new-note": {
+   "title": "Crea una nota",
+   "desc": "Crea una nota con il nome indicato (nella posizione predefinita delle nuove note del vault) e la apre.",
+   "note": "Crea la nota se non esiste. Obsidian deve poter accedere al vault.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nome del vault",
+     "where": "In Obsidian, apri il selettore dei vault (icona del vault, in fondo al pannello laterale o nell'elenco dei vault) e copia il nome mostrato per il tuo vault. È anche il nome della sua cartella."
+    },
+    "NOTE_NAME": {
+     "label": "Nome della nuova nota",
+     "where": "Scrivi il titolo che vuoi; il file viene creato con il nome <titolo>.md."
+    }
+   }
+  },
+  "obsidian-quick-capture-daily": {
+   "title": "Aggiungi una riga alla nota del giorno",
+   "desc": "Aggiunge il testo indicato alla fine della nota del giorno.",
+   "note": "Aggiunge il testo alla fine della nota del giorno.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nome del vault",
+     "where": "In Obsidian, apri il selettore dei vault (icona del vault, in fondo al pannello laterale o nell'elenco dei vault) e copia il nome mostrato per il tuo vault. È anche il nome della sua cartella."
+    },
+    "TEXT_TO_ADD": {
+     "label": "Testo da aggiungere",
+     "where": "Il testo da aggiungere, così come lo scriveresti."
+    }
+   }
+  },
+  "obsidian-search": {
+   "title": "Cerca nel mio vault",
+   "desc": "Apre la ricerca di Obsidian nel vault e avvia la ricerca.",
+   "note": "Apre la ricerca con questo testo.",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "Nome del vault",
+     "where": "In Obsidian, apri il selettore dei vault (icona del vault, in fondo al pannello laterale o nell'elenco dei vault) e copia il nome mostrato per il tuo vault. È anche il nome della sua cartella."
+    },
+    "SEARCH_TEXT": {
+     "label": "Testo da cercare",
+     "where": "Scrivi la parola o la frase da cercare."
+    }
+   }
+  },
+  "homeassistant-open-dashboard": {
+   "title": "Apri una pagina della dashboard",
+   "desc": "Apre nell'app mobile la vista della dashboard Home Assistant che preferisci.",
+   "note": "Apre una dashboard o una vista di Home Assistant.",
+   "vars": {
+    "DASHBOARD_PATH": {
+     "label": "Percorso della dashboard",
+     "where": "Apri la pagina nell'interfaccia web di Home Assistant e copia il percorso che segue l'indirizzo e la porta, senza la prima barra."
+    }
+   }
+  },
+  "spotify-open-playlist": {
+   "title": "Apri una playlist",
+   "desc": "Apre una playlist Spotify.",
+   "note": "Apre la playlist. Non parte da sola.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID della playlist",
+     "where": "In Spotify, tocca i tre puntini, poi Condividi, poi Copia link. L'ID è la parte dopo /playlist/ e prima di un eventuale ?si=."
+    }
+   }
+  },
+  "spotify-open-artist": {
+   "title": "Apri la pagina di un artista",
+   "desc": "Apre la pagina di un artista Spotify.",
+   "note": "Apre la pagina dell'artista.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID dell'artista",
+     "where": "In Spotify, tocca i tre puntini, poi Condividi, poi Copia link. L'ID è la parte dopo /artist/ e prima di un eventuale ?si=."
+    }
+   }
+  },
+  "spotify-open-album": {
+   "title": "Apri un album",
+   "desc": "Apre un album Spotify.",
+   "note": "Apre l'album.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID dell'album",
+     "where": "In Spotify, tocca i tre puntini, poi Condividi, poi Copia link. L'ID è la parte dopo /album/ e prima di un eventuale ?si=."
+    }
+   }
+  },
+  "spotify-open-track": {
+   "title": "Apri un brano",
+   "desc": "Apre un brano Spotify.",
+   "note": "Apre il brano.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID del brano",
+     "where": "In Spotify, tocca i tre puntini, poi Condividi, poi Copia link. L'ID è la parte dopo /track/ e prima di un eventuale ?si=."
+    }
+   }
+  },
+  "spotify-search": {
+   "title": "Cerca su Spotify",
+   "desc": "Apre i risultati di una ricerca Spotify sempre uguale.",
+   "note": "Apre i risultati della ricerca.",
+   "vars": {
+    "QUERY": {
+     "label": "Testo cercato",
+     "where": "Le parole da cercare, per esempio il nome di un artista."
+    }
+   }
+  },
+  "deezer-open-playlist": {
+   "title": "Apri una playlist",
+   "desc": "Apre una playlist Deezer.",
+   "note": "Apre la playlist.",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "ID della playlist",
+     "where": "Apri la playlist su deezer.com in un browser. L'ID è il numero alla fine dell'indirizzo."
+    }
+   }
+  },
+  "deezer-open-artist": {
+   "title": "Apri la pagina di un artista",
+   "desc": "Apre la pagina di un artista Deezer.",
+   "note": "Apre la pagina dell'artista.",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "ID dell'artista",
+     "where": "Apri l'artista su deezer.com in un browser. L'ID è il numero alla fine dell'indirizzo."
+    }
+   }
+  },
+  "deezer-open-album": {
+   "title": "Apri un album",
+   "desc": "Apre un album Deezer.",
+   "note": "Apre l'album.",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "ID dell'album",
+     "where": "Apri l'album su deezer.com in un browser. L'ID è il numero alla fine dell'indirizzo."
+    }
+   }
+  },
+  "deezer-open-track": {
+   "title": "Apri un brano",
+   "desc": "Apre un brano Deezer.",
+   "note": "Apre il brano.",
+   "vars": {
+    "TRACK_ID": {
+     "label": "ID del brano",
+     "where": "Apri il brano su deezer.com in un browser. L'ID è il numero alla fine dell'indirizzo."
+    }
+   }
+  },
+  "deezer-search": {
+   "title": "Cerca su Deezer",
+   "desc": "Apre i risultati di una ricerca Deezer sempre uguale.",
+   "note": "Apre i risultati della ricerca.",
+   "vars": {
+    "QUERY": {
+     "label": "Testo cercato",
+     "where": "Le parole da cercare, per esempio il nome di un artista."
+    }
+   }
+  },
+  "apple-music-open-link": {
+   "title": "Apri una pagina di Apple Music",
+   "desc": "Apre un album, una playlist o un artista a partire dal suo link Apple Music.",
+   "note": "Si apre nell'app Apple Music se il telefono le lascia gestire il link, altrimenti nel browser.",
+   "vars": {
+    "LINK": {
+     "label": "Link Apple Music",
+     "where": "Apri la pagina su music.apple.com, clicca su Altro, poi Copia link, e incolla l'indirizzo completo."
+    }
+   }
+  },
+  "waze-navigate-home": {
+   "title": "Vai a casa",
+   "desc": "Avvia la navigazione verso l'indirizzo Casa salvato in Waze.",
+   "note": "Serve un indirizzo Casa salvato in Waze."
+  },
+  "waze-navigate-work": {
+   "title": "Vai al lavoro",
+   "desc": "Avvia la navigazione verso l'indirizzo Lavoro salvato in Waze.",
+   "note": "Serve un indirizzo Lavoro salvato in Waze."
+  },
+  "waze-navigate-to-address": {
+   "title": "Vai a un indirizzo",
+   "desc": "Avvia la navigazione verso un indirizzo o un luogo fisso.",
+   "note": "Aggiungi la città per evitare confusioni.",
+   "vars": {
+    "ADDRESS": {
+     "label": "Indirizzo o luogo",
+     "where": "Indirizzo o nome del luogo con la città, come lo scriveresti in Waze."
+    }
+   }
+  },
+  "waze-navigate-to-coordinates": {
+   "title": "Vai a delle coordinate",
+   "desc": "Avvia la navigazione verso un punto indicato dalla sua latitudine e longitudine.",
+   "vars": {
+    "LATITUDE": {
+     "label": "Latitudine",
+     "where": "In Google Maps, tieni premuto il punto: è il primo numero nella barra di ricerca."
+    },
+    "LONGITUDE": {
+     "label": "Longitudine",
+     "where": "In Google Maps, tieni premuto il punto: è il secondo numero nella barra di ricerca."
+    }
+   }
+  },
+  "waze-search-place": {
+   "title": "Cerca un luogo in Waze",
+   "desc": "Mostra un luogo o un indirizzo in Waze senza avviare la navigazione.",
+   "vars": {
+    "SEARCH": {
+     "label": "Luogo o indirizzo",
+     "where": "Le parole che scriveresti nella barra di ricerca di Waze."
+    }
+   }
+  },
+  "netflix-open-title": {
+   "title": "Apri un film o una serie",
+   "desc": "Apre la pagina Netflix di un film o di una serie.",
+   "note": "Apre la pagina del titolo. La riproduzione non parte da sola.",
+   "vars": {
+    "TITLE_ID": {
+     "label": "ID del titolo",
+     "where": "Su netflix.com, apri il titolo. L'ID è il numero dopo /title/ nell'indirizzo."
+    }
+   }
+  },
+  "netflix-open-my-list": {
+   "title": "Apri La mia lista",
+   "desc": "Apre la tua lista Netflix."
+  },
+  "notion-open-page": {
+   "title": "Apri una pagina",
+   "desc": "Apre una pagina precisa di Notion.",
+   "note": "Apre la pagina nell'app Notion.",
+   "vars": {
+    "PAGE_ADDRESS": {
+     "label": "Indirizzo della pagina",
+     "where": "In Notion, apri la pagina, tocca i tre puntini, poi Copia link. Tieni solo la parte dopo https://www.notion.so/."
+    }
+   }
+  },
+  "claude-code-new-session": {
+   "title": "Nuova sessione Claude Code",
+   "desc": "Avvia una sessione Claude Code con il tuo prompt già scritto.",
+   "note": "Non viene inviato nulla finché non lo invii tu.",
+   "vars": {
+    "PROMPT": {
+     "label": "Prompt",
+     "where": "Il prompt da precompilare. Viene solo scritto: sei tu a inviarlo."
+    }
+   }
+  },
+  "claude-code-sessions": {
+   "title": "Apri le sessioni Claude Code",
+   "desc": "Apre l'elenco delle tue sessioni Claude Code."
+  },
+  "claude-new-chat": {
+   "title": "Nuova conversazione",
+   "desc": "Apre Claude su una nuova conversazione."
+  },
+  "docs-new-document": {
+   "title": "Nuovo documento",
+   "desc": "Crea un documento Google Docs vuoto.",
+   "note": "Si apre nel browser o nell'app Documenti, a seconda del telefono."
+  },
+  "n8n-trigger-webhook": {
+   "title": "Avvia un workflow (webhook)",
+   "desc": "Chiama il webhook di un workflow n8n.",
+   "note": "Il workflow deve essere attivo e accettare GET. Il link si apre nel browser.",
+   "vars": {
+    "N8N_HOST": {
+     "label": "Indirizzo del server n8n",
+     "where": "L'indirizzo del tuo server n8n, prima di /webhook/ nell'URL di produzione."
+    },
+    "WEBHOOK_PATH": {
+     "label": "Percorso del webhook",
+     "where": "Nel workflow, apri il nodo Webhook e copia il suo campo Path."
+    }
+   }
+  },
+  "todoist-add-task": {
+   "title": "Aggiungi un'attività",
+   "desc": "Apre una nuova attività Todoist con il tuo testo già scritto.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Testo dell'attività",
+     "where": "Scrivi l'attività come in Todoist."
+    }
+   }
+  },
+  "todoist-add-task-today": {
+   "title": "Aggiungi un'attività per oggi",
+   "desc": "Come sopra, con scadenza oggi.",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "Testo dell'attività",
+     "where": "Scrivi l'attività come in Todoist."
+    }
+   }
+  },
+  "todoist-open-today": {
+   "title": "Apri Oggi",
+   "desc": "Apre la vista Oggi."
+  },
+  "todoist-open-inbox": {
+   "title": "Apri la Posta in arrivo",
+   "desc": "Apre la Posta in arrivo."
+  },
+  "todoist-open-upcoming": {
+   "title": "Apri In programma",
+   "desc": "Apre la vista In programma."
+  },
+  "todoist-search": {
+   "title": "Cerca attività",
+   "desc": "Cerca una parola precisa nelle tue attività.",
+   "vars": {
+    "SEARCH_TEXT": {
+     "label": "Testo cercato",
+     "where": "La parola da cercare nelle tue attività."
+    }
+   }
+  },
+  "twitch-open-channel": {
+   "title": "Apri un canale in diretta",
+   "desc": "Apre la diretta di un canale.",
+   "note": "Mostra la pagina del canale se lo streamer non è in diretta.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Nome del canale",
+     "where": "L'ultima parte dell'indirizzo del canale, twitch.tv/nome."
+    }
+   }
+  },
+  "twitch-open-channel-videos": {
+   "title": "Apri i video di un canale",
+   "desc": "Apre l'attività e i video di un canale.",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "Nome del canale",
+     "where": "L'ultima parte dell'indirizzo del canale, twitch.tv/nome."
+    }
+   }
+  },
+  "twitch-open-following": {
+   "title": "Apri Seguiti",
+   "desc": "Apre la scheda Seguiti."
+  },
+  "twitch-open-game": {
+   "title": "Apri una categoria di gioco",
+   "desc": "Apre la pagina di un gioco o di una categoria.",
+   "vars": {
+    "GAME_NAME": {
+     "label": "Nome del gioco",
+     "where": "Il nome della categoria come appare nella scheda Sfoglia."
+    }
+   }
+  },
+  "twitch-open-app": {
+   "title": "Apri Twitch",
+   "desc": "Apre l'app Twitch."
+  },
+  "twitch-search": {
+   "title": "Cerca su Twitch",
+   "desc": "Apre i risultati di una ricerca Twitch sempre uguale.",
+   "vars": {
+    "QUERY": {
+     "label": "Testo cercato",
+     "where": "Un canale, un gioco o un argomento."
+    }
+   }
+  },
+  "instagram-send-dm": {
+   "title": "Scrivi a un account",
+   "desc": "Apre una conversazione privata con un account Instagram.",
+   "note": "Apre la conversazione. Non viene inviato nulla.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nome utente Instagram",
+     "where": "Il nome utente sotto la foto profilo, senza la @."
+    }
+   }
+  },
+  "x-compose-post": {
+   "title": "Scrivi un post",
+   "desc": "Apre X con il tuo post già scritto, pronto da pubblicare.",
+   "note": "Non viene pubblicato nulla finché non tocchi Posta.",
+   "vars": {
+    "TEXT": {
+     "label": "Testo del post",
+     "where": "Il tuo testo, così come lo scriveresti."
+    }
+   }
+  },
+  "x-share-link": {
+   "title": "Pubblica un link",
+   "desc": "Apre X con un link e un testo già scritti.",
+   "note": "Non viene pubblicato nulla finché non tocchi Posta.",
+   "vars": {
+    "URL": {
+     "label": "Indirizzo web",
+     "where": "L'indirizzo completo da condividere, che inizia con https://."
+    },
+    "TEXT": {
+     "label": "Testo del post",
+     "where": "Il tuo testo, così come lo scriveresti."
+    }
+   }
+  },
+  "x-open-profile": {
+   "title": "Apri un profilo",
+   "desc": "Apre un account X.",
+   "vars": {
+    "USERNAME": {
+     "label": "Nome utente X",
+     "where": "Il @nome dell'account, senza la @."
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SnapKey Mapper</string>
+    <string name="state_setup">Penyiapan: %1$d dari %2$d langkah selesai</string>
+    <string name="toast_cannot_open">Tidak dapat dibuka: %1$s</string>
+    <string name="toast_cannot_read">Tidak dapat membaca log: %1$s</string>
+    <string name="toast_failed">Gagal: %1$s</string>
+    <string name="notif_count">SnapKey Mapper sedang mendengarkan: %1$d tekanan terdeteksi</string>
+    <string name="diag_error">Kesalahan: %1$s</string>
+    <string name="setup_not_granted">Belum diberikan: %1$s</string>
+    <string name="state_listening">Mendengarkan: tekan tombolnya</string>
+    <string name="state_ready">Siap</string>
+    <string name="state_choose">Pilih apa yang dibuka tombol ini</string>
+    <string name="btn_start">Mulai mendengarkan</string>
+    <string name="btn_stop">Berhenti mendengarkan</string>
+    <string name="perm_title">Izin</string>
+    <string name="perm_sub">Tiga sakelar, cukup sekali. Tombolnya sendiri tidak memerlukan apa pun lagi.</string>
+    <string name="perm_auto_btn">Buka Proses debug nirkabel</string>
+    <string name="perm_auto_help">Sambungkan ke Wi-Fi, ketuk tombolnya, lalu di Opsi Pengembang aktifkan Proses debug nirkabel, ketuk \"Sambungkan perangkat dengan kode penyambungan\" dan ketik 6 angka di notifikasi. Di ColorOS, aktifkan dulu \"Disable system optimisation\".</string>
+    <string name="perm_log">Membaca log</string>
+    <string name="perm_overlay">Tampilkan di atas apl lain</string>
+    <string name="perm_battery">Baterai tanpa batasan</string>
+    <string name="perm_allow">Izinkan</string>
+    <string name="perm_granted">Diberikan</string>
+    <string name="perm_needed">Diperlukan</string>
+    <string name="perm_coloros">Di ColorOS, atur juga Penggunaan baterai ke \"Tidak dibatasi\" di pengaturan aplikasi, dan kunci aplikasi di daftar aplikasi terbaru.</string>
+    <string name="perm_app_settings">Buka pengaturan aplikasi</string>
+    <string name="perm_by_hand">Dari komputer, dengan adb:</string>
+    <string name="perm_copy">Salin perintah</string>
+    <string name="toast_copied">Perintah disalin</string>
+    <string name="perm_by_hand_or">Atau secara manual:</string>
+    <string name="target_title">Yang dibuka oleh tekanan ini</string>
+    <string name="target_link">Tautan</string>
+    <string name="target_app">Aplikasi</string>
+    <string name="target_link_help">Alamat web, deep link, atau tautan intent:</string>
+    <string name="app_choose">Pilih aplikasi</string>
+    <string name="app_none">Belum ada aplikasi yang dipilih</string>
+    <string name="dlg_choose_app">Pilih aplikasi</string>
+    <string name="target_test">Uji peluncuran</string>
+    <string name="target_clear">Hapus</string>
+    <string name="listen_restart_help">Pintasan tadinya berfungsi tetapi sekarang tidak lagi? Ketuk tombol ini.</string>
+    <string name="listen_restart">Mulai ulang mendengarkan</string>
+    <string name="native_long_used">ColorOS sudah memakai tekan lama Snap Key untuk tindakannya sendiri. Jika Anda memilih sesuatu di sini, keduanya akan berjalan: atur dulu tindakan tombol ke Tidak ada di pengaturan ponsel.</string>
+    <string name="gesture_title">Gerakan</string>
+    <string name="gesture_help">Setiap jenis tekanan bisa membuka hal yang berbeda: pilih salah satu, lalu pilih di bawah apa yang dibukanya. Jika dua atau tiga tekanan membuka sesuatu, rangkaian yang lebih pendek menunggu sesaat untuk membedakannya.</string>
+    <string name="gesture_single">Sekali</string>
+    <string name="gesture_double">Dua kali</string>
+    <string name="gesture_triple">Tiga kali</string>
+    <string name="gesture_long">Lama</string>
+    <string name="finder_title">Ponsel lain? Temukan tombol Anda</string>
+    <string name="finder_help">Tombol Find X9 sudah dikenali. Di ponsel lain: mulai perekaman, tekan tombol samping 2 atau 3 kali, hentikan, lalu ketuk baris yang muncul setiap kali tombol ditekan. Rekaman bisa berisi informasi pribadi dari aplikasi lain: periksa sebelum membagikannya.</string>
+    <string name="capture_start">Mulai perekaman</string>
+    <string name="capture_stop">Hentikan perekaman</string>
+    <string name="finder_all">Tampilkan semua baris</string>
+    <string name="finder_save">Simpan rekaman ke file</string>
+    <string name="finder_pattern">Pola yang dikenali (bagian dari baris, tanpa angka yang berubah-ubah)</string>
+    <string name="toast_pattern_saved">Pola disimpan, Anda bisa mulai mendengarkan</string>
+    <string name="toast_no_lines">Tidak ada baris: centang \"Tampilkan semua baris\" atau periksa izinnya</string>
+    <string name="toast_saved">Rekaman disimpan</string>
+    <string name="toast_choose_pattern">Pilih polanya dulu (menu › Ponsel lain)</string>
+    <string name="notif_listening_title">SnapKey Mapper sedang mendengarkan</string>
+    <string name="notif_listening_text">Tekan tombol samping untuk membuka target Anda</string>
+    <string name="notif_stopped_title">SnapKey Mapper berhenti</string>
+    <string name="notif_stopped_text">Ketuk di sini untuk mulai mendengarkan lagi</string>
+    <string name="diag_blocked">Peluncuran diblokir oleh Android</string>
+    <string name="diag_requested">Peluncuran diminta</string>
+    <string name="channel_listen">Pendengar tombol samping</string>
+    <string name="setup_waiting_title">Penyiapan: menunggu layar penyambungan</string>
+    <string name="setup_waiting_text">Di Opsi Pengembang, aktifkan Proses debug nirkabel lalu ketuk \"Sambungkan perangkat dengan kode penyambungan\"</string>
+    <string name="setup_pairing">Menyambungkan…</string>
+    <string name="setup_wait">Harap tunggu</string>
+    <string name="setup_code_title">Ketik kode penyambungan di sini</string>
+    <string name="setup_code_text">Tarik notifikasi ke bawah dan tulis 6 angka yang ditampilkan Android</string>
+    <string name="setup_fail_connect">Tidak dapat terhubung ke Proses debug nirkabel</string>
+    <string name="setup_refused">Ditolak oleh ColorOS: ubah bahasa ponsel ke English, aktifkan \"Disable system optimisation\" (cari di Pengaturan), lalu coba lagi</string>
+    <string name="setup_notif_title">Penyiapan SnapKey Mapper</string>
+    <string name="setup_channel">Penyiapan</string>
+    <string name="setup_enter_code">Masukkan kode</string>
+    <string name="setup_code_label">Kode 6 angka</string>
+    <string name="setup_done">Pembacaan log sudah disiapkan. Anda bisa menonaktifkan Proses debug nirkabel.</string>
+    <string name="err_invalid_intent">Tautan intent tidak valid</string>
+    <string name="setup_fail_pair">Penyambungan gagal. Ketuk lagi tombol penyiapan di aplikasi, lalu \"Sambungkan perangkat dengan kode penyambungan\", dan ketik kode yang baru. Jika masih gagal, nonaktifkan lalu aktifkan lagi Proses debug nirkabel.</string>
+    <string name="lang_title">Bahasa</string>
+    <string name="library_open">Jelajahi pustaka pintasan</string>
+    <string name="library_title">Pustaka pintasan</string>
+    <string name="library_intro">Pintasan siap pakai, dikelompokkan per aplikasi. Pilih satu, isi nilai Anda, uji, lalu gunakan untuk Snap Key.</string>
+    <string name="library_search">Cari aplikasi atau tindakan</string>
+    <string name="library_count">Pintasan: %1$d</string>
+    <string name="library_not_installed">Tidak terpasang</string>
+    <string name="library_empty">Tidak ada yang cocok dengan pencarian Anda.</string>
+    <string name="recipe_fields">Nilai Anda</string>
+    <string name="recipe_link">Tautan akhir</string>
+    <string name="recipe_use">Gunakan pintasan ini</string>
+    <string name="recipe_fill_all">Isi semua kolom terlebih dahulu.</string>
+    <string name="recipe_saved">Disimpan sebagai target Anda.</string>
+    <string name="recipe_missing">Tidak ada yang terbuka. Apakah aplikasinya terpasang?</string>
+    <string name="recipe_source">Dokumentasi resmi</string>
+    <string name="menu">Menu</string>
+    <string name="menu_help">Bantuan dan situs web</string>
+    <string name="help_url">https://remapsnapkey.com/id/</string>
+    <string name="setup_title">Penyiapan</string>
+    <string name="setup_intro">Empat langkah, cukup sekali. Setiap langkah tercentang sendiri setelah selesai.</string>
+    <string name="setup_continue">Lanjutkan penyiapan</string>
+    <string name="setup_other_way">Cara lain: dari komputer</string>
+    <string name="setup_open_setting">Buka pengaturannya</string>
+    <string name="setup_native_title">Tindakan bawaan Snap Key dimatikan</string>
+    <string name="setup_open_phone_settings">Buka pengaturan ponsel</string>
+    <string name="setup_native_done">Selesai: Snap Key tidak melakukan apa pun sendiri</string>
+    <string name="finder_intro">Tombol Find X9 sudah dikenali: tidak ada yang perlu dilakukan di sini. Di ponsel lain, aplikasi perlu mempelajari baris mana yang ditulis Android di log-nya saat Anda menekan tombol.</string>
+    <string name="finder_privacy">Rekaman bisa berisi informasi pribadi dari aplikasi lain: periksa file-nya sebelum membagikannya.</string>
+    <string name="finder_need_log">Pembacaan log diperlukan terlebih dahulu: selesaikan langkah 1 penyiapan.</string>
+    <string name="app_search">Cari aplikasi</string>
+    <string name="target_link_enter">Ketik tautan</string>
+    <string name="target_none">Belum ada yang dipilih</string>
+    <string-array name="steps_log_auto">
+        <item>Sambungkan ponsel ke Wi-Fi Anda.</item>
+        <item>Jika Opsi Pengembang tersembunyi: Pengaturan › Tentang perangkat › Versi, ketuk Nomor build 7 kali.</item>
+        <item>Di Opsi Pengembang, aktifkan \"Disable system optimisation\" (ColorOS).</item>
+        <item>Ketuk \"Siapkan pembacaan log secara otomatis\" di bawah.</item>
+        <item>Aktifkan Proses debug nirkabel, lalu ketuk \"Sambungkan perangkat dengan kode penyambungan\".</item>
+        <item>Tarik notifikasi ke bawah dan ketik 6 angka di notifikasi SnapKey Mapper.</item>
+    </string-array>
+    <string-array name="steps_log_computer">
+        <item>Di komputer, pasang Android platform-tools (adb).</item>
+        <item>Di Opsi Pengembang, aktifkan Proses debug USB dan \"Disable system optimisation\" (ColorOS), lalu sambungkan ponsel dengan kabel.</item>
+        <item>Jalankan perintah di bawah ini di komputer.</item>
+    </string-array>
+    <string-array name="steps_overlay">
+        <item>Ketuk \"Buka pengaturannya\" dan aktifkan sakelarnya.</item>
+        <item>Jika sakelar berwarna abu-abu atau Android menolak akses: ketuk \"Buka pengaturan aplikasi\", lalu ⋮ di kanan atas › \"Izinkan setelan terbatas\", lalu kembali ke sini.</item>
+    </string-array>
+    <string-array name="steps_battery">
+        <item>Ketuk \"Izinkan\" dan konfirmasi.</item>
+        <item>Di ColorOS, buka juga pengaturan aplikasi › Penggunaan baterai › \"Tidak dibatasi\", dan kunci aplikasi di daftar aplikasi terbaru.</item>
+    </string-array>
+    <string-array name="steps_native">
+        <item>Buka pengaturan ponsel dan cari \"Snap Key\".</item>
+        <item>Atur ke tanpa tindakan, agar ponsel tidak menjalankan tindakannya sendiri pada saat yang sama.</item>
+        <item>Centang kotak di bawah.</item>
+    </string-array>
+    <string-array name="steps_finder">
+        <item>Ketuk \"Mulai perekaman\".</item>
+        <item>Tekan tombol Anda 3 kali, dengan jeda beberapa detik.</item>
+        <item>Ketuk \"Hentikan perekaman\".</item>
+        <item>Di daftar di bawah, ketuk baris yang muncul setiap kali tombol ditekan: baris itu menjadi polanya.</item>
+        <item>Kembali ke layar utama, mulai mendengarkan, dan tekan tombol untuk memeriksa.</item>
+    </string-array>
+    <string name="recipe_help">Tidak berfungsi di ponsel Anda? Di komputer, tanyakan ke Claude Code dengan plugin SnapKey Mapper: ia mencari tautan yang berfungsi dan mengujinya di ponsel Anda, yang tersambung lewat kabel USB atau Proses debug nirkabel.</string>
+    <string name="setup_progress">Langkah %1$d dari %2$d</string>
+    <string name="wiz_wifi_title">Sambungkan ke Wi-Fi</string>
+    <string name="wiz_wifi_text">Aplikasi memberi dirinya sendiri izin membaca log melalui Proses debug nirkabel di ponsel, yang hanya berfungsi lewat Wi-Fi. Sambungkan ponsel, lalu kembali ke sini.</string>
+    <string name="wiz_wifi_btn">Buka Wi-Fi</string>
+    <string name="wiz_dev_title">Aktifkan Opsi Pengembang</string>
+    <string name="wiz_dev_text">Ketuk tombolnya, lalu ketuk Nomor build 7 kali (di ColorOS: Versi). Android akan memberi tahu bahwa Anda kini developer. Kembali ke sini.</string>
+    <string name="wiz_dev_btn">Buka Tentang ponsel</string>
+    <string name="wiz_pair_title">Sambungkan aplikasi dengan ponsel Anda</string>
+    <string name="wiz_pair_text">1. Ketuk tombolnya: Proses debug nirkabel terbuka (jika yang terbuka malah daftar Opsi Pengembang, ketuk teks \"Proses debug nirkabel\", bukan sakelarnya).\n2. Aktifkan dan izinkan jaringan Anda.\n3. Ketuk \"Sambungkan perangkat dengan kode penyambungan\".\n4. Notifikasi SnapKey Mapper akan muncul: ketuk panahnya untuk membukanya, ketuk \"Masukkan kode\" dan ketik 6 angka. Itu saja, aplikasi mengurus sisanya.</string>
+    <string name="wiz_sysopt_title">Satu sakelar ColorOS tersembunyi dulu</string>
+    <string name="wiz_sysopt_text">ColorOS memblokir izin ini sampai sebuah sakelar tersembunyi diaktifkan, dan sakelar itu hanya muncul saat bahasa ponsel English.\n1. Ubah bahasa ponsel ke English (Bahasa &amp; wilayah).\n2. Di Pengaturan, cari \"Disable system\" lalu aktifkan \"Disable system optimisation\" (Turn on anyway).\n3. Kembali ke sini. Setelah penyiapan, Anda bisa mengembalikan bahasa Anda.</string>
+    <string name="wiz_sysopt_btn">Buka Bahasa &amp; wilayah</string>
+    <string name="wiz_sysopt_btn2">Buka Pengaturan</string>
+    <string name="wiz_sysopt_done">Sudah, lanjutkan</string>
+    <string name="wiz_last">Percobaan terakhir: %1$s</string>
+    <string name="wiz_computer_text">Edisi lite tidak punya akses jaringan, jadi izin diberikan dari komputer, cukup sekali: aktifkan Proses debug USB di Opsi Pengembang, sambungkan ponsel dengan kabel, lalu jalankan perintah ini.</string>
+    <string name="wiz_overlay_text">Agar tombol bisa membuka target Anda bahkan saat layar mati atau ada aplikasi lain di depan. Ketuk tombolnya, lalu SnapKey Mapper di daftar, dan aktifkan sakelarnya.</string>
+    <string name="wiz_restricted">Sakelar berwarna abu-abu, atau muncul \"akses ditolak\"? Android memblokirnya untuk aplikasi yang dipasang dari luar Play Store: buka pengaturan aplikasi, ketuk ⋮ di kanan atas, lalu \"Izinkan setelan terbatas\", dan kembali ke sini.</string>
+    <string name="wiz_battery_text">Agar Android tidak menghentikan aplikasi di latar belakang. Ketuk tombolnya dan konfirmasi. Di ColorOS, kunci juga aplikasi di daftar aplikasi terbaru.</string>
+    <string name="wiz_native_text">Agar ponsel tidak menjalankan tindakan Snap Key-nya sendiri pada saat yang sama: di pengaturan ponsel, cari \"Snap Key\" dan atur ke tanpa tindakan.</string>
+    <string name="wiz_done_title">Semua siap</string>
+    <string name="wiz_done_text">Semua siap. Tombol kini didengarkan secara otomatis. Anda bisa menonaktifkan Proses debug nirkabel. Pilih apa yang dibuka tombol ini.</string>
+    <string name="wiz_done_btn">Lanjutkan</string>
+    <string name="home_setup_title">Siapkan SnapKey Mapper</string>
+    <string name="home_setup_text">Beberapa langkah, cukup sekali. Aplikasi membuka setiap pengaturan untuk Anda dan memeriksanya.</string>
+    <string name="home_finder">Tombol tidak berfungsi? Ponsel lain: temukan tombol Anda</string>
+    <string name="wiz_skip">Sudah dilakukan, lanjutkan</string>
+    <string name="wiz_notif_title">Aktifkan notifikasi</string>
+    <string name="wiz_notif_text">Kode penyambungan diketik di notifikasi aplikasi. Aktifkan notifikasinya, lalu kembali ke sini.</string>
+    <string name="wiz_notif_btn">Buka notifikasi</string>
+    <string name="menu_diag">Salin diagnostik</string>
+    <string name="diag_copied">Diagnostik disalin: tempelkan di issue GitHub</string>
+    <string name="diag_stuck">Macet? Salin diagnostik untuk issue GitHub</string>
+</resources>

@@ -1,0 +1,1035 @@
+{
+ "apps": {
+  "clock": {
+   "name": "時計"
+  },
+  "camera": {
+   "name": "カメラ"
+  },
+  "phone": {
+   "name": "電話"
+  },
+  "messages": {
+   "name": "メッセージ"
+  },
+  "email": {
+   "name": "メール"
+  },
+  "web": {
+   "name": "ウェブ"
+  },
+  "calendar": {
+   "name": "カレンダー"
+  },
+  "contacts": {
+   "name": "連絡先"
+  },
+  "settings": {
+   "name": "設定"
+  },
+  "assistant": {
+   "name": "アシスタント"
+  }
+ },
+ "recipes": {
+  "clock-timer": {
+   "title": "タイマーを開始",
+   "desc": "時計アプリを開かずに、すぐにカウントダウンを始めます。",
+   "vars": {
+    "SECONDS": {
+     "label": "時間（秒）",
+     "where": "分に 60 を掛けます。5 分なら 300、1 時間なら 3600 です。"
+    }
+   }
+  },
+  "clock-timer-label": {
+   "title": "名前付きのタイマーを開始",
+   "desc": "「パスタ」のような名前を付けてカウントダウンを始めます。",
+   "vars": {
+    "SECONDS": {
+     "label": "時間（秒）",
+     "where": "分に 60 を掛けます。10 分なら 600 です。"
+    },
+    "LABEL": {
+     "label": "タイマーの名前",
+     "where": "自由に決めた短い文字列。"
+    }
+   }
+  },
+  "clock-alarm": {
+   "title": "アラームを設定",
+   "desc": "時計アプリを開かずに、好きな時刻のアラームを作成します。",
+   "vars": {
+    "HOUR": {
+     "label": "時（0〜23）",
+     "where": "24 時間制です。午前 7 時なら 7、午後 7 時なら 19。"
+    },
+    "MINUTES": {
+     "label": "分（0〜59）",
+     "where": "設定したい時刻の分の部分だけを入力します。"
+    }
+   }
+  },
+  "clock-alarm-label": {
+   "title": "名前付きのアラームを設定",
+   "desc": "「運動」のような名前を付けてアラームを作成します。",
+   "vars": {
+    "HOUR": {
+     "label": "時（0〜23）",
+     "where": "24 時間制です。午前 7 時なら 7、午後 7 時なら 19。"
+    },
+    "MINUTES": {
+     "label": "分（0〜59）",
+     "where": "設定したい時刻の分の部分だけを入力します。"
+    },
+    "LABEL": {
+     "label": "アラームの名前",
+     "where": "自由に決めた短い文字列。"
+    }
+   }
+  },
+  "clock-show-alarms": {
+   "title": "アラームを表示",
+   "desc": "アラームの一覧を開きます。"
+  },
+  "clock-show-timers": {
+   "title": "タイマーを表示",
+   "desc": "タイマーの一覧を開きます。"
+  },
+  "camera-photo": {
+   "title": "カメラを写真モードで開く",
+   "desc": "標準のカメラアプリを、すぐに写真を撮れる状態で開きます。"
+  },
+  "camera-video": {
+   "title": "カメラを動画モードで開く",
+   "desc": "標準のカメラアプリを、すぐに撮影できる状態で開きます。"
+  },
+  "phone-dial": {
+   "title": "電話番号を入力",
+   "desc": "番号を入力した状態でダイヤル画面を開きます。発信ボタンはご自身で押します。",
+   "vars": {
+    "NUMBER": {
+     "label": "電話番号",
+     "where": "国番号を付けて入力します。例：+33123456789"
+    }
+   }
+  },
+  "phone-open-dialer": {
+   "title": "ダイヤル画面を開く",
+   "desc": "電話アプリのダイヤル画面を開きます。"
+  },
+  "messages-compose": {
+   "title": "SMS を作成",
+   "desc": "宛先と本文を入力した状態でメッセージアプリを開きます。送信はご自身で行います。",
+   "vars": {
+    "NUMBER": {
+     "label": "電話番号",
+     "where": "国番号を付けて入力します。例：+33123456789"
+    },
+    "MESSAGE": {
+     "label": "メッセージ",
+     "where": "送信する本文。"
+    }
+   }
+  },
+  "email-compose": {
+   "title": "メールを作成",
+   "desc": "宛先、件名、本文を入力した状態でメールアプリを開きます。送信はご自身で行います。",
+   "vars": {
+    "ADDRESS": {
+     "label": "メールアドレス",
+     "where": "メールを送る相手。"
+    },
+    "SUBJECT": {
+     "label": "件名",
+     "where": "自由に決めた短い文字列。"
+    },
+    "BODY": {
+     "label": "本文",
+     "where": "メールの本文。"
+    }
+   }
+  },
+  "web-open": {
+   "title": "ウェブサイトを開く",
+   "desc": "任意のウェブアドレスをブラウザ（またはそのアドレスに対応するアプリ）で開きます。",
+   "vars": {
+    "URL": {
+     "label": "ウェブアドレス",
+     "where": "ブラウザからコピーします。https:// で始まります。"
+    }
+   }
+  },
+  "web-search": {
+   "title": "ウェブを検索",
+   "desc": "決まった語句でウェブ検索を行います。",
+   "vars": {
+    "QUERY": {
+     "label": "検索する語句",
+     "where": "検索したい内容。"
+    }
+   }
+  },
+  "calendar-new-event": {
+   "title": "予定を作成",
+   "desc": "タイトルを入力した状態で、カレンダーの新しい予定を開きます。",
+   "vars": {
+    "TITLE": {
+     "label": "予定のタイトル",
+     "where": "自由に決めた短い文字列。"
+    }
+   }
+  },
+  "calendar-open": {
+   "title": "カレンダーを開く",
+   "desc": "カレンダーを今日の日付で開きます。"
+  },
+  "contacts-new": {
+   "title": "連絡先を作成",
+   "desc": "名前と電話番号を入力した状態で、新しい連絡先を開きます。",
+   "vars": {
+    "NAME": {
+     "label": "名前",
+     "where": "好きな名前。"
+    },
+    "NUMBER": {
+     "label": "電話番号",
+     "where": "国番号を付けて入力します。例：+33123456789"
+    }
+   }
+  },
+  "settings-wifi": {
+   "title": "Wi-Fi の設定",
+   "desc": "Wi-Fi ネットワークの一覧を開きます。"
+  },
+  "settings-bluetooth": {
+   "title": "Bluetooth の設定",
+   "desc": "Bluetooth の設定を開きます。"
+  },
+  "settings-airplane": {
+   "title": "機内モードの設定",
+   "desc": "機内モードの設定を開きます。"
+  },
+  "settings-display": {
+   "title": "ディスプレイの設定",
+   "desc": "明るさ、ダークモード、画面消灯の設定を開きます。"
+  },
+  "settings-sound": {
+   "title": "サウンドの設定",
+   "desc": "音量と着信音の設定を開きます。"
+  },
+  "settings-battery-saver": {
+   "title": "バッテリーセーバーの設定",
+   "desc": "バッテリーセーバーの設定を開きます。"
+  },
+  "settings-location": {
+   "title": "位置情報の設定",
+   "desc": "位置情報の設定を開きます。"
+  },
+  "settings-nfc": {
+   "title": "NFC の設定",
+   "desc": "NFC の設定を開きます。"
+  },
+  "settings-data-usage": {
+   "title": "データ使用量",
+   "desc": "モバイルデータ使用量の画面を開きます。"
+  },
+  "settings-accessibility": {
+   "title": "ユーザー補助の設定",
+   "desc": "ユーザー補助の設定を開きます。"
+  },
+  "settings-language": {
+   "title": "言語の設定",
+   "desc": "言語の設定を開きます。"
+  },
+  "settings-date": {
+   "title": "日付と時刻の設定",
+   "desc": "日付と時刻の設定を開きます。"
+  },
+  "settings-apps": {
+   "title": "すべてのアプリ",
+   "desc": "インストール済みのアプリの一覧を開きます。"
+  },
+  "settings-developer": {
+   "title": "開発者オプション",
+   "desc": "開発者オプションを開きます（オンにしている場合）。"
+  },
+  "google-maps-navigate-to-address": {
+   "title": "車で住所へ向かう",
+   "desc": "Google Maps で、現在地から住所や場所までの車のナビを開始します。",
+   "note": "ナビは現在地から始まります。初回は Google Maps が位置情報へのアクセスを求めます。",
+   "vars": {
+    "ADDRESS": {
+     "label": "目的地の住所または場所の名前",
+     "where": "完全な住所か有名な場所の名前を、Google Maps で検索するときと同じように入力します。"
+    }
+   }
+  },
+  "google-maps-navigate-walking": {
+   "title": "徒歩で住所へ向かう",
+   "desc": "Google Maps で、現在地から住所や場所までの徒歩ナビを開始します。",
+   "note": "徒歩ナビは現在地から始まります。",
+   "vars": {
+    "ADDRESS": {
+     "label": "目的地の住所または場所の名前",
+     "where": "完全な住所か有名な場所の名前を、Google Maps で検索するときと同じように入力します。"
+    }
+   }
+  },
+  "google-maps-navigate-cycling": {
+   "title": "自転車で住所へ向かう",
+   "desc": "Google Maps で、現在地から住所や場所までの自転車ナビを開始します。",
+   "note": "自転車のルートは国によっては利用できません。",
+   "vars": {
+    "ADDRESS": {
+     "label": "目的地の住所または場所の名前",
+     "where": "完全な住所か有名な場所の名前を、Google Maps で検索するときと同じように入力します。"
+    }
+   }
+  },
+  "google-maps-search-nearby": {
+   "title": "近くの場所を探す",
+   "desc": "周辺のレストランや薬局など、検索結果を表示した状態で Google Maps を開きます。",
+   "note": "Google Maps で検索結果を開きます。",
+   "vars": {
+    "SEARCH": {
+     "label": "探しているもの",
+     "where": "場所の種類や名前を、Google Maps の検索バーに入力するときと同じ言葉で入力します。"
+    }
+   }
+  },
+  "google-maps-transit-directions": {
+   "title": "公共交通機関で場所へ向かう",
+   "desc": "Google Maps で、現在地から目的地までの公共交通機関のルートを表示します。",
+   "note": "Google Maps でルートを開きます。アプリが対応しない場合はブラウザで開きます。",
+   "vars": {
+    "DESTINATION": {
+     "label": "目的地の住所または場所の名前",
+     "where": "住所か場所の名前を、Google Maps で検索するときと同じように入力します。"
+    }
+   }
+  },
+  "google-maps-street-view": {
+   "title": "座標でストリートビューを開く",
+   "desc": "緯度と経度に最も近いストリートビューを Google Maps で開きます。",
+   "note": "その地点の近くにストリートビューがない場合は、Google Maps がお知らせします。",
+   "vars": {
+    "LATITUDE": {
+     "label": "緯度",
+     "where": "Google Maps で地図上の地点を長押しします。検索バーに表示される最初の数値が緯度です。"
+    },
+    "LONGITUDE": {
+     "label": "経度",
+     "where": "Google Maps で地図上の地点を長押しします。検索バーに表示される 2 番目の数値が経度です。"
+    }
+   }
+  },
+  "assistant-open": {
+   "title": "音声アシスタントを開く",
+   "desc": "システムのジェスチャーと同じように、スマートフォンの標準アシスタントを起動します。"
+  },
+  "youtube-open-channel": {
+   "title": "チャンネルを開く",
+   "desc": "ハンドルを使って YouTube チャンネルのページを開きます。",
+   "note": "YouTube アプリでチャンネルのページを開きます。",
+   "vars": {
+    "HANDLE": {
+     "label": "チャンネルのハンドル（@ なし）",
+     "where": "YouTube でチャンネルを開きます。ハンドルはチャンネル名の下にある @ で始まる文字列です。@ を付けずに入力してください。"
+    }
+   }
+  },
+  "youtube-open-playlist": {
+   "title": "再生リストを開く",
+   "desc": "特定の YouTube 再生リストを開きます。",
+   "note": "再生リストのページを開きます。再生は自動では始まりません。",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "再生リストの ID",
+     "where": "再生リストのページを開き、共有 > リンクをコピー をタップします（またはブラウザでアドレスを確認します）。ID はリンクの list= の後ろの部分です。"
+    }
+   }
+  },
+  "youtube-open-video": {
+   "title": "動画を開く",
+   "desc": "お気に入りのライブ配信やチュートリアルなど、特定の動画を開きます。",
+   "note": "YouTube アプリで動画を開きます。",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "動画の ID",
+     "where": "動画を開き、共有 > リンクをコピー をタップします。ID は v= の後ろ（短縮リンクでは youtu.be/ の後ろ）の部分です。"
+    }
+   }
+  },
+  "youtube-search": {
+   "title": "YouTube で検索",
+   "desc": "決まった語句で YouTube の検索結果を開きます。",
+   "note": "検索結果を開きます。",
+   "vars": {
+    "QUERY": {
+     "label": "検索する語句",
+     "where": "検索したい言葉。"
+    }
+   }
+  },
+  "ytmusic-open-library": {
+   "title": "ライブラリを開く",
+   "desc": "YouTube Music のライブラリ タブを開きます。",
+   "note": "YouTube Music アプリにログインしている必要があります。"
+  },
+  "ytmusic-search": {
+   "title": "YouTube Music で検索",
+   "desc": "決まった語句で YouTube Music の検索結果を開きます。",
+   "note": "YouTube Music で検索結果を開きます。",
+   "vars": {
+    "QUERY": {
+     "label": "検索する語句",
+     "where": "検索したい言葉。"
+    }
+   }
+  },
+  "ytmusic-open-playlist": {
+   "title": "再生リストを開く",
+   "desc": "YouTube Music で特定の再生リストやアルバムを開きます。",
+   "note": "YouTube Music で再生リストまたはアルバムを開きます。",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "再生リストの ID",
+     "where": "YouTube Music で再生リストを開き、メニュー > 共有 > リンクをコピー をタップします。ID はリンクの list= の後ろの部分です。"
+    }
+   }
+  },
+  "ytmusic-open-song": {
+   "title": "曲を開く",
+   "desc": "YouTube Music のプレーヤーで特定の曲を開きます。",
+   "note": "YouTube Music で曲を開きます。",
+   "vars": {
+    "VIDEO_ID": {
+     "label": "曲の ID",
+     "where": "曲を開き、メニュー > 共有 > リンクをコピー をタップします。ID はリンクの v= の後ろの部分です。"
+    }
+   }
+  },
+  "gmail-compose": {
+   "title": "新しいメールを作成",
+   "desc": "Gmail の作成画面を空のメッセージで開きます。",
+   "note": "送信をタップするまで何も送信されません。"
+  },
+  "gmail-compose-to-person": {
+   "title": "特定の相手にメールを作成",
+   "desc": "宛先を入力した状態で Gmail の作成画面を開きます。",
+   "note": "送信をタップするまで何も送信されません。",
+   "vars": {
+    "EMAIL_ADDRESS": {
+     "label": "宛先のメールアドレス",
+     "where": "いちばんよくメールを送る相手のアドレスを入力します。"
+    }
+   }
+  },
+  "gmail-compose-with-subject": {
+   "title": "件名と本文付きのメールを作成",
+   "desc": "件名と本文を入力した状態で Gmail の作成画面を開きます。",
+   "note": "送信をタップするまで何も送信されません。",
+   "vars": {
+    "SUBJECT": {
+     "label": "件名",
+     "where": "メッセージの件名を入力します。"
+    },
+    "BODY": {
+     "label": "本文",
+     "where": "メールの本文を入力します。"
+    }
+   }
+  },
+  "telegram-open-chat": {
+   "title": "ユーザー名でチャットを開く",
+   "desc": "公開されている Telegram のユーザー、グループ、チャンネル、ボットとのチャットを開きます。",
+   "note": "公開ユーザー名を持つ人、グループ、チャンネル、ボットで使えます。",
+   "vars": {
+    "USERNAME": {
+     "label": "Telegram のユーザー名",
+     "where": "プロフィールのユーザー名に表示される公開名（@ なし）。"
+    }
+   }
+  },
+  "telegram-open-chat-with-draft": {
+   "title": "メッセージを入力した状態でチャットを開く",
+   "desc": "公開チャットを開き、入力欄にメッセージを入れます（送信を押すまで何も送信されません）。",
+   "note": "文字は入力欄に入るだけです。送信を押すまで何も送信されません。",
+   "vars": {
+    "USERNAME": {
+     "label": "Telegram のユーザー名",
+     "where": "プロフィールのユーザー名に表示される公開名（@ なし）。"
+    },
+    "MESSAGE": {
+     "label": "メッセージ",
+     "where": "送りたい文章を、そのまま入力します。"
+    }
+   }
+  },
+  "telegram-open-chat-by-phone": {
+   "title": "電話番号でチャットを開く",
+   "desc": "電話番号を使って、相手との Telegram チャットを開きます。",
+   "note": "相手が Telegram を使っていて、電話番号での検索を許可している場合にのみ使えます。",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "電話番号",
+     "where": "国番号から始めて数字だけを入力します。例：33123456789（スペースと + は無視されます）。"
+    }
+   }
+  },
+  "telegram-join-invite": {
+   "title": "招待リンクで非公開グループに参加",
+   "desc": "招待コードを使って、非公開の Telegram グループやチャンネルへの招待を開きます。",
+   "note": "非公開のグループまたはチャンネルへの招待を開きます。",
+   "vars": {
+    "INVITE_HASH": {
+     "label": "招待コード",
+     "where": "https://t.me/+AbCdEf123 のような招待リンクで、+ の後ろをコピーします（古いリンクでは t.me/joinchat/HASH）。"
+    }
+   }
+  },
+  "telegram-story-composer": {
+   "title": "ストーリーを作成",
+   "desc": "新しいストーリーを投稿するため、Telegram のストーリー用カメラを開きます。",
+   "note": "ストーリーの作成画面を開きます。"
+  },
+  "telegram-global-search": {
+   "title": "全体検索を開く",
+   "desc": "すべてのチャットと公開コンテンツを対象にした Telegram の検索画面を開きます。",
+   "note": "検索画面を開きます。"
+  },
+  "whatsapp-open-chat": {
+   "title": "チャットを開く",
+   "desc": "指定した電話番号との WhatsApp チャットを開きます。",
+   "note": "この番号とのチャットを開きます。",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "電話番号",
+     "where": "国番号から始めて数字だけを入力します。例：33123456789（スペースと + は無視されます）。"
+    }
+   }
+  },
+  "whatsapp-open-chat-with-message": {
+   "title": "メッセージを用意してチャットを開く",
+   "desc": "電話番号との WhatsApp チャットを開き、入力欄にメッセージを入れます（送信を押すまで何も送信されません）。",
+   "note": "文字は入力欄に入るだけです。送信を押すまで何も送信されません。",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "電話番号",
+     "where": "国番号から始めて数字だけを入力します。例：33123456789（スペースと + は無視されます）。"
+    },
+    "MESSAGE": {
+     "label": "メッセージ",
+     "where": "送りたい文章を、そのまま入力します。"
+    }
+   }
+  },
+  "whatsapp-share-text": {
+   "title": "選んだ連絡先にテキストを送る",
+   "desc": "メッセージを入力した状態で WhatsApp の連絡先一覧を開きます。送る相手はご自身で選びます。",
+   "note": "テキストを受け取る相手を WhatsApp で選びます。",
+   "vars": {
+    "MESSAGE": {
+     "label": "メッセージ",
+     "where": "送りたい文章を、そのまま入力します。"
+    }
+   }
+  },
+  "whatsapp-join-group": {
+   "title": "招待リンクでグループに参加または開く",
+   "desc": "招待コードを使って WhatsApp グループを開きます（参加の招待、またはすでにメンバーならそのグループ）。",
+   "note": "グループへの招待を開きます。",
+   "vars": {
+    "INVITE_CODE": {
+     "label": "グループの招待コード",
+     "where": "グループの招待リンクで chat.whatsapp.com/ の後ろの部分です（グループで グループ情報 > リンクで招待 > リンクをコピー）。"
+    }
+   }
+  },
+  "signal-open-chat-by-phone": {
+   "title": "電話番号でチャットを開く",
+   "desc": "電話番号を使って、相手との Signal チャットを開きます。",
+   "note": "相手が Signal を使っていれば、この番号とのチャットを開きます。",
+   "vars": {
+    "PHONE_NUMBER": {
+     "label": "電話番号",
+     "where": "国番号から始めて数字だけを入力します。例：33123456789（スペースと + は無視されます）。"
+    }
+   }
+  },
+  "signal-open-group-link": {
+   "title": "グループリンクでグループに参加または開く",
+   "desc": "グループリンクを使って、Signal グループへの招待を開きます。",
+   "note": "Signal グループへの招待を開きます。",
+   "vars": {
+    "GROUP_LINK_CODE": {
+     "label": "グループリンクのコード",
+     "where": "Signal でグループを開き、グループ名、グループリンクの順にタップして、共有またはコピーします。https://signal.group/#... の # の後ろの長い文字列だけを残します。"
+    }
+   }
+  },
+  "obsidian-open-vault": {
+   "title": "保管庫を開く",
+   "desc": "選んだ Obsidian の保管庫を開きます（すでに開いている場合は表示します）。",
+   "note": "保管庫を最後の画面で開きます。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "保管庫の名前",
+     "where": "Obsidian で保管庫の切り替え画面（サイドパネル下部の保管庫アイコン、または保管庫の一覧）を開き、表示されている保管庫の名前をコピーします。これはフォルダ名でもあります。"
+    }
+   }
+  },
+  "obsidian-open-note": {
+   "title": "特定のノートを開く",
+   "desc": "保管庫の特定のノートを開きます。",
+   "note": "保管庫のこのノートを開きます。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "保管庫の名前",
+     "where": "Obsidian で保管庫の切り替え画面（サイドパネル下部の保管庫アイコン、または保管庫の一覧）を開き、表示されている保管庫の名前をコピーします。これはフォルダ名でもあります。"
+    },
+    "NOTE_PATH": {
+     "label": "ノートの名前またはパス",
+     "where": "ノートのファイル名、または保管庫のルートからのパス。拡張子 .md は省略できます。"
+    }
+   }
+  },
+  "obsidian-daily-note": {
+   "title": "今日のノートを開く",
+   "desc": "今日のデイリーノートを作成するか開きます。",
+   "note": "今日のノートを開くか、作成します。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "保管庫の名前",
+     "where": "Obsidian で保管庫の切り替え画面（サイドパネル下部の保管庫アイコン、または保管庫の一覧）を開き、表示されている保管庫の名前をコピーします。これはフォルダ名でもあります。"
+    }
+   }
+  },
+  "obsidian-new-note": {
+   "title": "ノートを作成",
+   "desc": "指定した名前のノートを（保管庫の新規ノートの既定の場所に）作成して開きます。",
+   "note": "ノートがなければ作成します。Obsidian が保管庫にアクセスできる必要があります。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "保管庫の名前",
+     "where": "Obsidian で保管庫の切り替え画面（サイドパネル下部の保管庫アイコン、または保管庫の一覧）を開き、表示されている保管庫の名前をコピーします。これはフォルダ名でもあります。"
+    },
+    "NOTE_NAME": {
+     "label": "新しいノートの名前",
+     "where": "付けたいタイトルを入力します。ファイルは <タイトル>.md という名前で作成されます。"
+    }
+   }
+  },
+  "obsidian-quick-capture-daily": {
+   "title": "今日のノートに 1 行追加",
+   "desc": "指定したテキストを今日のノートの末尾に追加します。",
+   "note": "テキストを今日のノートの末尾に追加します。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "保管庫の名前",
+     "where": "Obsidian で保管庫の切り替え画面（サイドパネル下部の保管庫アイコン、または保管庫の一覧）を開き、表示されている保管庫の名前をコピーします。これはフォルダ名でもあります。"
+    },
+    "TEXT_TO_ADD": {
+     "label": "追加するテキスト",
+     "where": "追加したい文章を、そのまま入力します。"
+    }
+   }
+  },
+  "obsidian-search": {
+   "title": "保管庫を検索",
+   "desc": "保管庫で Obsidian の検索を開き、検索を実行します。",
+   "note": "このテキストで検索を開きます。",
+   "vars": {
+    "VAULT_NAME": {
+     "label": "保管庫の名前",
+     "where": "Obsidian で保管庫の切り替え画面（サイドパネル下部の保管庫アイコン、または保管庫の一覧）を開き、表示されている保管庫の名前をコピーします。これはフォルダ名でもあります。"
+    },
+    "SEARCH_TEXT": {
+     "label": "検索する語句",
+     "where": "検索したい単語やフレーズを入力します。"
+    }
+   }
+  },
+  "homeassistant-open-dashboard": {
+   "title": "ダッシュボードのページを開く",
+   "desc": "選んだ Home Assistant のダッシュボード ビューをモバイルアプリで開きます。",
+   "note": "Home Assistant のダッシュボードまたはビューを開きます。",
+   "vars": {
+    "DASHBOARD_PATH": {
+     "label": "ダッシュボードのパス",
+     "where": "Home Assistant のウェブ画面でそのページを開き、アドレスとポートの後ろにあるパスを、最初のスラッシュを除いてコピーします。"
+    }
+   }
+  },
+  "spotify-open-playlist": {
+   "title": "プレイリストを開く",
+   "desc": "Spotify のプレイリストを開きます。",
+   "note": "プレイリストを開きます。再生は自動では始まりません。",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "プレイリストの ID",
+     "where": "Spotify で 3 つの点、共有、リンクをコピー の順にタップします。ID は /playlist/ の後ろで、?si= があればその前までの部分です。"
+    }
+   }
+  },
+  "spotify-open-artist": {
+   "title": "アーティストのページを開く",
+   "desc": "Spotify のアーティストのページを開きます。",
+   "note": "アーティストのページを開きます。",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "アーティストの ID",
+     "where": "Spotify で 3 つの点、共有、リンクをコピー の順にタップします。ID は /artist/ の後ろで、?si= があればその前までの部分です。"
+    }
+   }
+  },
+  "spotify-open-album": {
+   "title": "アルバムを開く",
+   "desc": "Spotify のアルバムを開きます。",
+   "note": "アルバムを開きます。",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "アルバムの ID",
+     "where": "Spotify で 3 つの点、共有、リンクをコピー の順にタップします。ID は /album/ の後ろで、?si= があればその前までの部分です。"
+    }
+   }
+  },
+  "spotify-open-track": {
+   "title": "曲を開く",
+   "desc": "Spotify の曲を開きます。",
+   "note": "曲を開きます。",
+   "vars": {
+    "TRACK_ID": {
+     "label": "曲の ID",
+     "where": "Spotify で 3 つの点、共有、リンクをコピー の順にタップします。ID は /track/ の後ろで、?si= があればその前までの部分です。"
+    }
+   }
+  },
+  "spotify-search": {
+   "title": "Spotify で検索",
+   "desc": "いつも同じ語句で Spotify の検索結果を開きます。",
+   "note": "検索結果を開きます。",
+   "vars": {
+    "QUERY": {
+     "label": "検索する語句",
+     "where": "検索したい言葉。例：アーティスト名。"
+    }
+   }
+  },
+  "deezer-open-playlist": {
+   "title": "プレイリストを開く",
+   "desc": "Deezer のプレイリストを開きます。",
+   "note": "プレイリストを開きます。",
+   "vars": {
+    "PLAYLIST_ID": {
+     "label": "プレイリストの ID",
+     "where": "ブラウザで deezer.com のプレイリストを開きます。ID はアドレスの最後にある数字です。"
+    }
+   }
+  },
+  "deezer-open-artist": {
+   "title": "アーティストのページを開く",
+   "desc": "Deezer のアーティストのページを開きます。",
+   "note": "アーティストのページを開きます。",
+   "vars": {
+    "ARTIST_ID": {
+     "label": "アーティストの ID",
+     "where": "ブラウザで deezer.com のアーティストを開きます。ID はアドレスの最後にある数字です。"
+    }
+   }
+  },
+  "deezer-open-album": {
+   "title": "アルバムを開く",
+   "desc": "Deezer のアルバムを開きます。",
+   "note": "アルバムを開きます。",
+   "vars": {
+    "ALBUM_ID": {
+     "label": "アルバムの ID",
+     "where": "ブラウザで deezer.com のアルバムを開きます。ID はアドレスの最後にある数字です。"
+    }
+   }
+  },
+  "deezer-open-track": {
+   "title": "曲を開く",
+   "desc": "Deezer の曲を開きます。",
+   "note": "曲を開きます。",
+   "vars": {
+    "TRACK_ID": {
+     "label": "曲の ID",
+     "where": "ブラウザで deezer.com の曲を開きます。ID はアドレスの最後にある数字です。"
+    }
+   }
+  },
+  "deezer-search": {
+   "title": "Deezer で検索",
+   "desc": "いつも同じ語句で Deezer の検索結果を開きます。",
+   "note": "検索結果を開きます。",
+   "vars": {
+    "QUERY": {
+     "label": "検索する語句",
+     "where": "検索したい言葉。例：アーティスト名。"
+    }
+   }
+  },
+  "apple-music-open-link": {
+   "title": "Apple Music のページを開く",
+   "desc": "Apple Music のリンクを使って、アルバム、プレイリスト、アーティストを開きます。",
+   "note": "スマートフォンが Apple Music アプリにリンクを任せる場合はアプリで、そうでなければブラウザで開きます。",
+   "vars": {
+    "LINK": {
+     "label": "Apple Music のリンク",
+     "where": "music.apple.com でページを開き、その他、リンクをコピー の順にクリックして、アドレス全体を貼り付けます。"
+    }
+   }
+  },
+  "waze-navigate-home": {
+   "title": "自宅へ向かう",
+   "desc": "Waze に登録した自宅の住所へのナビを開始します。",
+   "note": "Waze に自宅の住所が登録されている必要があります。"
+  },
+  "waze-navigate-work": {
+   "title": "職場へ向かう",
+   "desc": "Waze に登録した職場の住所へのナビを開始します。",
+   "note": "Waze に職場の住所が登録されている必要があります。"
+  },
+  "waze-navigate-to-address": {
+   "title": "住所へ向かう",
+   "desc": "決まった住所や場所へのナビを開始します。",
+   "note": "間違いを防ぐため、市区町村名も入れてください。",
+   "vars": {
+    "ADDRESS": {
+     "label": "住所または場所",
+     "where": "住所、または市区町村名付きの場所の名前を、Waze に入力するときと同じように入力します。"
+    }
+   }
+  },
+  "waze-navigate-to-coordinates": {
+   "title": "座標へ向かう",
+   "desc": "緯度と経度で指定した地点へのナビを開始します。",
+   "vars": {
+    "LATITUDE": {
+     "label": "緯度",
+     "where": "Google Maps でその場所を長押しします。検索バーの最初の数値です。"
+    },
+    "LONGITUDE": {
+     "label": "経度",
+     "where": "Google Maps でその場所を長押しします。検索バーの 2 番目の数値です。"
+    }
+   }
+  },
+  "waze-search-place": {
+   "title": "Waze で場所を探す",
+   "desc": "ナビを開始せずに、Waze で場所や住所を表示します。",
+   "vars": {
+    "SEARCH": {
+     "label": "場所または住所",
+     "where": "Waze の検索バーに入力するときと同じ言葉。"
+    }
+   }
+  },
+  "netflix-open-title": {
+   "title": "映画やシリーズを開く",
+   "desc": "映画やシリーズの Netflix ページを開きます。",
+   "note": "作品のページを開きます。再生は自動では始まりません。",
+   "vars": {
+    "TITLE_ID": {
+     "label": "作品の ID",
+     "where": "netflix.com で作品を開きます。ID はアドレスの /title/ の後ろにある数字です。"
+    }
+   }
+  },
+  "netflix-open-my-list": {
+   "title": "マイリストを開く",
+   "desc": "Netflix のマイリストを開きます。"
+  },
+  "notion-open-page": {
+   "title": "ページを開く",
+   "desc": "Notion の特定のページを開きます。",
+   "note": "Notion アプリでページを開きます。",
+   "vars": {
+    "PAGE_ADDRESS": {
+     "label": "ページのアドレス",
+     "where": "Notion でページを開き、3 つの点、リンクをコピー の順にタップします。https://www.notion.so/ の後ろの部分だけを残します。"
+    }
+   }
+  },
+  "claude-code-new-session": {
+   "title": "新しい Claude Code セッション",
+   "desc": "指示を入力した状態で Claude Code のセッションを開始します。",
+   "note": "ご自身で送信するまで何も送信されません。",
+   "vars": {
+    "PROMPT": {
+     "label": "指示",
+     "where": "あらかじめ入力しておく指示です。入力されるだけで、送信はご自身で行います。"
+    }
+   }
+  },
+  "claude-code-sessions": {
+   "title": "Claude Code のセッションを開く",
+   "desc": "Claude Code のセッション一覧を開きます。"
+  },
+  "claude-new-chat": {
+   "title": "新しいチャット",
+   "desc": "Claude を新しいチャットで開きます。"
+  },
+  "docs-new-document": {
+   "title": "新しいドキュメント",
+   "desc": "空の Google ドキュメントを作成します。",
+   "note": "スマートフォンによって、ブラウザまたはドキュメント アプリで開きます。"
+  },
+  "n8n-trigger-webhook": {
+   "title": "ワークフローを実行（webhook）",
+   "desc": "n8n ワークフローの webhook を呼び出します。",
+   "note": "ワークフローが有効で、GET を受け付ける必要があります。リンクはブラウザで開きます。",
+   "vars": {
+    "N8N_HOST": {
+     "label": "n8n サーバーのアドレス",
+     "where": "本番用 URL で /webhook/ の前にある、n8n サーバーのアドレス。"
+    },
+    "WEBHOOK_PATH": {
+     "label": "webhook のパス",
+     "where": "ワークフローで Webhook ノードを開き、Path 欄をコピーします。"
+    }
+   }
+  },
+  "todoist-add-task": {
+   "title": "タスクを追加",
+   "desc": "テキストを入力した状態で Todoist の新しいタスクを開きます。",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "タスクのテキスト",
+     "where": "Todoist で入力するときと同じようにタスクを入力します。"
+    }
+   }
+  },
+  "todoist-add-task-today": {
+   "title": "今日のタスクを追加",
+   "desc": "上と同じで、期限を今日にします。",
+   "vars": {
+    "TASK_TEXT": {
+     "label": "タスクのテキスト",
+     "where": "Todoist で入力するときと同じようにタスクを入力します。"
+    }
+   }
+  },
+  "todoist-open-today": {
+   "title": "「今日」を開く",
+   "desc": "「今日」ビューを開きます。"
+  },
+  "todoist-open-inbox": {
+   "title": "インボックスを開く",
+   "desc": "インボックスを開きます。"
+  },
+  "todoist-open-upcoming": {
+   "title": "「近日予定」を開く",
+   "desc": "「近日予定」ビューを開きます。"
+  },
+  "todoist-search": {
+   "title": "タスクを検索",
+   "desc": "タスクの中から特定の言葉を探します。",
+   "vars": {
+    "SEARCH_TEXT": {
+     "label": "検索する語句",
+     "where": "タスクの中で探したい言葉。"
+    }
+   }
+  },
+  "twitch-open-channel": {
+   "title": "ライブ配信中のチャンネルを開く",
+   "desc": "チャンネルのライブ配信を開きます。",
+   "note": "配信者が配信していない場合は、チャンネルのページを表示します。",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "チャンネル名",
+     "where": "チャンネルのアドレス twitch.tv/名前 の最後の部分です。"
+    }
+   }
+  },
+  "twitch-open-channel-videos": {
+   "title": "チャンネルの動画を開く",
+   "desc": "チャンネルのアクティビティと動画を開きます。",
+   "vars": {
+    "CHANNEL_NAME": {
+     "label": "チャンネル名",
+     "where": "チャンネルのアドレス twitch.tv/名前 の最後の部分です。"
+    }
+   }
+  },
+  "twitch-open-following": {
+   "title": "フォロー中を開く",
+   "desc": "フォロー中タブを開きます。"
+  },
+  "twitch-open-game": {
+   "title": "ゲームのカテゴリを開く",
+   "desc": "ゲームまたはカテゴリのページを開きます。",
+   "vars": {
+    "GAME_NAME": {
+     "label": "ゲーム名",
+     "where": "閲覧タブに表示されているとおりのカテゴリ名。"
+    }
+   }
+  },
+  "twitch-open-app": {
+   "title": "Twitch を開く",
+   "desc": "Twitch アプリを開きます。"
+  },
+  "twitch-search": {
+   "title": "Twitch で検索",
+   "desc": "いつも同じ語句で Twitch の検索結果を開きます。",
+   "vars": {
+    "QUERY": {
+     "label": "検索する語句",
+     "where": "チャンネル、ゲーム、話題など。"
+    }
+   }
+  },
+  "instagram-send-dm": {
+   "title": "アカウントにメッセージを送る",
+   "desc": "Instagram アカウントとの DM を開きます。",
+   "note": "会話を開きます。何も送信されません。",
+   "vars": {
+    "USERNAME": {
+     "label": "Instagram のユーザーネーム",
+     "where": "プロフィール写真の下にある ID（@ なし）。"
+    }
+   }
+  },
+  "x-compose-post": {
+   "title": "ポストを作成",
+   "desc": "ポストを入力した状態で X を開きます。すぐに投稿できます。",
+   "note": "ポストするをタップするまで何も投稿されません。",
+   "vars": {
+    "TEXT": {
+     "label": "ポストのテキスト",
+     "where": "投稿したい文章を、そのまま入力します。"
+    }
+   }
+  },
+  "x-share-link": {
+   "title": "リンクを投稿",
+   "desc": "リンクとテキストを入力した状態で X を開きます。",
+   "note": "ポストするをタップするまで何も投稿されません。",
+   "vars": {
+    "URL": {
+     "label": "ウェブアドレス",
+     "where": "共有するアドレス全体。https:// で始まります。"
+    },
+    "TEXT": {
+     "label": "ポストのテキスト",
+     "where": "投稿したい文章を、そのまま入力します。"
+    }
+   }
+  },
+  "x-open-profile": {
+   "title": "プロフィールを開く",
+   "desc": "X のアカウントを開きます。",
+   "vars": {
+    "USERNAME": {
+     "label": "X のユーザー名",
+     "where": "アカウントの @名前 の、@ を除いた部分。"
+    }
+   }
+  }
+ }
+}
