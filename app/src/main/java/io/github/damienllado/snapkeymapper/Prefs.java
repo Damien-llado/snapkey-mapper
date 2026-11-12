@@ -65,6 +65,15 @@ final class Prefs {
     /** The gesture shown on the home screen: "single", "double" or "long". */
     static String gesture(Context c) { return p(c).getString("gesture", "double"); }
     static void gesture(Context c, String gesture) { p(c).edit().putString("gesture", gesture).apply(); }
+    /** The long press of the Snap Key runs a ColorOS action (ring mode, flashlight...): read in the phone settings, false if unreadable. */
+    static boolean nativeLongPress(Context c) {
+        try {
+            String v = android.provider.Settings.System.getString(c.getContentResolver(), "oplus_action_button_switch_state");
+            return v != null && !v.isEmpty() && !v.equals("nothing");
+        } catch (RuntimeException e) {
+            return false;
+        }
+    }
     /** The user confirmed that the native Snap Key action is set to nothing (cannot be checked from an app). */
     static boolean nativeKeyOff(Context c) { return p(c).getBoolean("native_off", false); }
     static void nativeKeyOff(Context c, boolean off) { p(c).edit().putBoolean("native_off", off).apply(); }

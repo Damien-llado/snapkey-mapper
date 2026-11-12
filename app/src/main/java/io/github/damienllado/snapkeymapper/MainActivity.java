@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
     private TextView heroState, targetName;
     private ImageView targetIcon;
     private View setupCard, heroCard, targetCard, gestureCard, finderLink;
+    private TextView nativeWarning;
     private PhoneView phone;
 
     @Override
@@ -161,6 +162,9 @@ public class MainActivity extends Activity {
         tp.leftMargin = Ui.dp(this, 12);
         row.addView(targetName, tp);
         Ui.add(card, row, 12);
+        nativeWarning = Ui.body(this, getString(R.string.native_long_used));
+        nativeWarning.setTextColor(0xFFB45309);
+        Ui.add(card, nativeWarning, 8);
         Ui.add(card, Ui.button(this, getString(R.string.library_open), true,
                 v -> startActivityForResult(new Intent(this, LibraryActivity.class), PICKED)), 14);
         Ui.add(card, Ui.button(this, getString(R.string.app_choose), false,
@@ -209,6 +213,7 @@ public class MainActivity extends Activity {
         boolean ready = done == total;
         setupCard.setVisibility(ready ? View.GONE : View.VISIBLE);
         for (View v : new View[]{heroCard, targetCard, gestureCard, finderLink}) v.setVisibility(ready ? View.VISIBLE : View.GONE);
+        nativeWarning.setVisibility(Prefs.gesture(this).equals("long") && Prefs.nativeLongPress(this) ? View.VISIBLE : View.GONE);
         if (Prefs.targetType(this).equals("app") && !Prefs.appPackage(this).isEmpty()) {
             String pkg = Prefs.appPackage(this);
             try {

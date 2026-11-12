@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">Elige una app</string>
     <string name="target_test">Probar la apertura</string>
     <string name="target_clear">Quitar</string>
+    <string name="native_long_used">ColorOS ya usa la pulsación larga de la tecla Snap para su propia acción. Si eliges algo aquí, se ejecutarán las dos: primero pon la acción de la tecla en Ninguna en los ajustes del teléfono.</string>
     <string name="gesture_title">Gesto</string>
     <string name="gesture_help">Cada pulsación puede abrir algo distinto: elige una y, debajo, lo que abre. Si dos pulsaciones abren algo, una pulsación espera una fracción de segundo para distinguirlas.</string>
     <string name="gesture_single">Una pulsación</string>

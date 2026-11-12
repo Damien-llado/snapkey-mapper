@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">App auswählen</string>
     <string name="target_test">Start testen</string>
     <string name="target_clear">Entfernen</string>
+    <string name="native_long_used">ColorOS nutzt das lange Drücken der Snap-Taste bereits für eine eigene Aktion. Wenn du hier etwas wählst, laufen beide: stelle die Aktion der Taste zuerst in den Telefoneinstellungen auf Keine.</string>
     <string name="gesture_title">Geste</string>
     <string name="gesture_help">Jeder Druck kann etwas anderes öffnen: einen wählen, dann unten festlegen, was er öffnet. Wenn zweimal drücken etwas öffnet, wartet einmal drücken einen Sekundenbruchteil, um beides zu unterscheiden.</string>
     <string name="gesture_single">Einmal drücken</string>

@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">Escolha um app</string>
     <string name="target_test">Testar a abertura</string>
     <string name="target_clear">Remover</string>
+    <string name="native_long_used">O ColorOS já usa a pressão longa da Tecla Snap para a própria ação. Se você escolher algo aqui, as duas vão rodar: primeiro coloque a ação da tecla em Nenhuma nas configurações do telefone.</string>
     <string name="gesture_title">Gesto</string>
     <string name="gesture_help">Cada pressão pode abrir algo diferente: escolha uma e, abaixo, o que ela abre. Se a pressão dupla abre algo, a pressão simples espera uma fração de segundo para diferenciá-las.</string>
     <string name="gesture_single">Uma pressão</string>

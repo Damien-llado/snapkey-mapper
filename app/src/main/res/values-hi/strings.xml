@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">ऐप चुनें</string>
     <string name="target_test">लॉन्च टेस्ट करें</string>
     <string name="target_clear">हटाएँ</string>
+    <string name="native_long_used">ColorOS पहले से Snap Key को लंबा दबाने पर अपना काम करता है। अगर आप यहाँ कुछ चुनते हैं, तो दोनों चलेंगे: पहले फ़ोन की सेटिंग में बटन की कार्रवाई को कोई नहीं पर सेट करें।</string>
     <string name="gesture_title">जेस्चर</string>
     <string name="gesture_help">हर तरह का दबाना कुछ अलग खोल सकता है: एक चुनें, फिर नीचे चुनें कि वह क्या खोलता है। अगर दो बार दबाना कुछ खोलता है, तो एक बार दबाना दोनों को अलग पहचानने के लिए पल भर रुकता है।</string>
     <string name="gesture_single">एक बार दबाना</string>
