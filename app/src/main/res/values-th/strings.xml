@@ -43,9 +43,9 @@
     <string name="native_long_used">ColorOS ใช้การกดค้างที่ Snap Key สำหรับการทำงานของตัวเองอยู่แล้ว ถ้าคุณเลือกอะไรตรงนี้ ทั้งสองอย่างจะทำงานพร้อมกัน ให้ตั้งการทำงานของปุ่มเป็น ไม่มี ในการตั้งค่าโทรศัพท์ก่อน</string>
     <string name="gesture_title">ท่าทาง</string>
     <string name="gesture_help">การกดแต่ละแบบเปิดสิ่งต่างกันได้ เลือกหนึ่งแบบ แล้วเลือกด้านล่างว่าจะให้เปิดอะไร เมื่อการกดสองหรือสามครั้งเปิดบางอย่างไว้ การกดที่สั้นกว่าจะรอเสี้ยววินาทีเพื่อแยกให้ออก</string>
-    <string name="gesture_single">กดครั้งเดียว</string>
-    <string name="gesture_double">กดสองครั้ง</string>
-    <string name="gesture_triple">กดสามครั้ง</string>
+    <string name="gesture_single">1 ครั้ง</string>
+    <string name="gesture_double">2 ครั้ง</string>
+    <string name="gesture_triple">3 ครั้ง</string>
     <string name="gesture_long">กดค้าง</string>
     <string name="finder_title">ใช้โทรศัพท์รุ่นอื่น? ค้นหาปุ่มของคุณ</string>
     <string name="finder_help">แอปรู้จักปุ่มของ Find X9 อยู่แล้ว บนโทรศัพท์รุ่นอื่น: เริ่มเก็บข้อมูล กดปุ่มด้านข้าง 2 หรือ 3 ครั้ง หยุด แล้วแตะบรรทัดที่ขึ้นมาทุกครั้งที่กด ข้อมูลที่เก็บอาจมีข้อมูลส่วนตัวจากแอปอื่น ตรวจดูก่อนแชร์</string>

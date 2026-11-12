@@ -43,9 +43,9 @@
     <string name="native_long_used">ColorOS đã dùng thao tác nhấn giữ Snap Key cho chức năng riêng của nó. Nếu bạn chọn gì đó ở đây, cả hai sẽ cùng chạy: hãy đặt chức năng của phím thành Không có trong cài đặt điện thoại trước.</string>
     <string name="gesture_title">Thao tác</string>
     <string name="gesture_help">Mỗi kiểu nhấn có thể mở một thứ khác nhau: chọn một kiểu, rồi chọn bên dưới thứ nó sẽ mở. Khi kiểu nhấn hai hoặc ba lần có gán chức năng, chuỗi nhấn ngắn hơn sẽ chờ một chút để phân biệt.</string>
-    <string name="gesture_single">Nhấn một lần</string>
-    <string name="gesture_double">Nhấn hai lần</string>
-    <string name="gesture_triple">Nhấn ba lần</string>
+    <string name="gesture_single">1 lần</string>
+    <string name="gesture_double">2 lần</string>
+    <string name="gesture_triple">3 lần</string>
     <string name="gesture_long">Nhấn giữ</string>
     <string name="finder_title">Điện thoại khác? Tìm phím của bạn</string>
     <string name="finder_help">Phím của Find X9 đã được nhận diện sẵn. Trên điện thoại khác: bắt đầu ghi, nhấn phím bên 2 hoặc 3 lần, dừng lại, rồi nhấn vào dòng xuất hiện lại ở mỗi lần nhấn. Bản ghi có thể chứa thông tin cá nhân từ các ứng dụng khác: hãy kiểm tra trước khi chia sẻ.</string>

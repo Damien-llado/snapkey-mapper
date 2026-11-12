@@ -46,7 +46,7 @@
     <string name="gesture_single">Singola</string>
     <string name="gesture_double">Doppia</string>
     <string name="gesture_triple">Tripla</string>
-    <string name="gesture_long">Prolungata</string>
+    <string name="gesture_long">Lunga</string>
     <string name="finder_title">Un altro telefono? Trova il tuo tasto</string>
     <string name="finder_help">Il tasto del Find X9 è già conosciuto. Su un altro telefono: avvia la cattura, premi il tasto laterale 2 o 3 volte, interrompi, poi tocca la riga che ricompare a ogni pressione. La cattura può contenere informazioni personali di altre app: controllala prima di condividerla.</string>
     <string name="capture_start">Avvia la cattura</string>
