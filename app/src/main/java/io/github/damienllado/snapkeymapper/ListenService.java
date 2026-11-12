@@ -8,7 +8,9 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ServiceInfo;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -29,6 +31,20 @@ public class ListenService extends Service {
     private volatile long lastRelease, alreadySeen;
     private volatile int presses;
     private volatile boolean stopRequested;
+    private final Handler handler = new Handler(Looper.getMainLooper());
+    private final Runnable pendingSingle = () -> fire("single");
+
+    /** Opens the target of this gesture, if it has one, and says so in the notification. */
+    private void fire(String gesture) {
+        if (!Prefs.hasTarget(this, gesture)) return;
+        presses++;
+        try {
+            Prefs.openTarget(this, gesture);
+            diagnostic(getString(R.string.diag_requested));
+        } catch (RuntimeException e) {
+            diagnostic(getString(R.string.diag_error, e.getClass().getSimpleName()));
+        }
+    }
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -61,20 +77,21 @@ public class ListenService extends Service {
                     long previous = lastRelease;
                     lastRelease = release;
                     boolean isLong = release - press >= 500;
-                    switch (Prefs.gesture(this)) {
-                        case "long": if (!isLong) return; break;
-                        case "double":
-                            if (isLong || press - previous > 600) return; // first press: wait for the second
-                            lastRelease = 0; // a third press starts over
-                            break;
-                        default: if (isLong) return;
-                    }
-                    presses++;
-                    try {
-                        Prefs.openTarget(this);
-                        diagnostic(getString(R.string.diag_requested));
-                    } catch (RuntimeException e) {
-                        diagnostic(getString(R.string.diag_error, e.getClass().getSimpleName()));
+                    if (isLong) {
+                        handler.removeCallbacks(pendingSingle);
+                        fire("long");
+                    } else if (handler.hasCallbacks(pendingSingle) && press - previous <= 600) {
+                        handler.removeCallbacks(pendingSingle); // second press in time: a double press
+                        lastRelease = 0; // a third press starts over
+                        fire("double");
+                    } else {
+                        if (handler.hasCallbacks(pendingSingle)) { // the press before was too far from this one: it was a single press
+                            handler.removeCallbacks(pendingSingle);
+                            fire("single");
+                        }
+                        // a single press waits to see whether a second one follows (a bit more than 600 ms: the log comes late)
+                        if (Prefs.hasTarget(this, "double")) handler.postDelayed(pendingSingle, 700);
+                        else fire("single");
                     }
                 }, () -> {
                     if (stopRequested) return;
@@ -100,6 +117,7 @@ public class ListenService extends Service {
     public void onDestroy() {
         running = false;
         stopRequested = true;
+        handler.removeCallbacks(pendingSingle);
         if (log != null) log.destroy();
         super.onDestroy();
     }

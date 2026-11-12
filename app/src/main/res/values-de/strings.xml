@@ -29,7 +29,7 @@
     <string name="perm_copy">Befehl kopieren</string>
     <string name="toast_copied">Befehl kopiert</string>
     <string name="perm_by_hand_or">Oder von Hand:</string>
-    <string name="target_title">Was die Taste öffnet</string>
+    <string name="target_title">Was dieser Druck öffnet</string>
     <string name="target_link">Ein Link</string>
     <string name="target_app">Eine App</string>
     <string name="target_link_help">Eine Webadresse, ein Deep Link oder ein intent:-Link</string>
@@ -37,8 +37,9 @@
     <string name="app_none">Keine App ausgewählt</string>
     <string name="dlg_choose_app">App auswählen</string>
     <string name="target_test">Start testen</string>
+    <string name="target_clear">Entfernen</string>
     <string name="gesture_title">Geste</string>
-    <string name="gesture_help">Einmal drücken ist am schnellsten; zweimal drücken löst nie versehentlich in der Hosentasche aus. Eine Änderung gilt sofort.</string>
+    <string name="gesture_help">Jeder Druck kann etwas anderes öffnen: einen wählen, dann unten festlegen, was er öffnet. Wenn zweimal drücken etwas öffnet, wartet einmal drücken einen Sekundenbruchteil, um beides zu unterscheiden.</string>
     <string name="gesture_single">Einmal drücken</string>
     <string name="gesture_double">Zweimal drücken</string>
     <string name="gesture_long">Lang drücken</string>

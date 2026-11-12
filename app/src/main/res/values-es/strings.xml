@@ -29,7 +29,7 @@
     <string name="perm_copy">Copiar el comando</string>
     <string name="toast_copied">Comando copiado</string>
     <string name="perm_by_hand_or">O a mano:</string>
-    <string name="target_title">Qué abre la tecla</string>
+    <string name="target_title">Qué abre esta pulsación</string>
     <string name="target_link">Un enlace</string>
     <string name="target_app">Una app</string>
     <string name="target_link_help">Una dirección web, un deep link o un enlace intent:</string>
@@ -37,8 +37,9 @@
     <string name="app_none">Ninguna app elegida</string>
     <string name="dlg_choose_app">Elige una app</string>
     <string name="target_test">Probar la apertura</string>
+    <string name="target_clear">Quitar</string>
     <string name="gesture_title">Gesto</string>
-    <string name="gesture_help">Una pulsación es lo más rápido; dos pulsaciones nunca se activan por un toque en el bolsillo. Un cambio se aplica al instante.</string>
+    <string name="gesture_help">Cada pulsación puede abrir algo distinto: elige una y, debajo, lo que abre. Si dos pulsaciones abren algo, una pulsación espera una fracción de segundo para distinguirlas.</string>
     <string name="gesture_single">Una pulsación</string>
     <string name="gesture_double">Dos pulsaciones</string>
     <string name="gesture_long">Pulsación larga</string>

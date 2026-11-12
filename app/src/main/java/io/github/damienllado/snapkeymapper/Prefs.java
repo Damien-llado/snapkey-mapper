@@ -18,21 +18,51 @@ final class Prefs {
         return c.getSharedPreferences("settings", Context.MODE_PRIVATE);
     }
 
+    static final String[] GESTURES = {"single", "double", "long"};
+
+    /** Each gesture has its own target, kept under "<gesture>.<name>"; the app, recipe and link screens set the gesture shown on the home screen. */
+    private static String k(Context c, String gesture, String name) {
+        migrate(c);
+        return gesture + "." + name;
+    }
+
+    /** Up to 1.0.8 there was one target for one gesture: it becomes the target of that gesture. */
+    private static void migrate(Context c) {
+        SharedPreferences s = p(c);
+        if (!s.contains("target_type") && !s.contains("link") && !s.contains("app_package")) return;
+        String g = gesture(c);
+        s.edit().putString(g + ".target_type", s.getString("target_type", "link")).putString(g + ".link", s.getString("link", ""))
+                .putString(g + ".app_package", s.getString("app_package", "")).remove("target_type").remove("link").remove("app_package").apply();
+    }
+
     /** "link" or "app". */
-    static String targetType(Context c) { return p(c).getString("target_type", "link"); }
-    static void targetType(Context c, String type) { p(c).edit().putString("target_type", type).apply(); }
-    static String link(Context c) { return p(c).getString("link", ""); }
-    static String appPackage(Context c) { return p(c).getString("app_package", ""); }
-    static void appPackage(Context c, String pkg) { p(c).edit().putString("app_package", pkg).apply(); }
+    static String targetType(Context c) { return targetTypeOf(c, gesture(c)); }
+    static String targetTypeOf(Context c, String g) { return p(c).getString(k(c, g, "target_type"), "link"); }
+    static void targetType(Context c, String type) { p(c).edit().putString(k(c, gesture(c), "target_type"), type).apply(); }
+    static String link(Context c) { return link(c, gesture(c)); }
+    static String link(Context c, String g) { return p(c).getString(k(c, g, "link"), ""); }
+    static String appPackage(Context c) { return appPackageOf(c, gesture(c)); }
+    static String appPackageOf(Context c, String g) { return p(c).getString(k(c, g, "app_package"), ""); }
+    static void appPackage(Context c, String pkg) { p(c).edit().putString(k(c, gesture(c), "app_package"), pkg).apply(); }
+    /** Nothing opens on this gesture any more. */
+    static void clearTarget(Context c) {
+        String g = gesture(c);
+        p(c).edit().remove(k(c, g, "target_type")).remove(k(c, g, "link")).remove(k(c, g, "app_package")).apply();
+    }
     /** The Find X9 / Find N6 Snap Key; other phones find theirs with the capture. */
     static String pattern(Context c) { return p(c).getString("pattern", "KEYCODE_ACTION_BUTTON_CLICK"); }
     /** An app, a shortcut or a link is chosen: only then there is something to open. */
-    static boolean hasTarget(Context c) {
-        return targetType(c).equals("app") ? !appPackage(c).isEmpty() : !link(c).isEmpty();
+    static boolean hasTarget(Context c, String g) {
+        return targetTypeOf(c, g).equals("app") ? !appPackageOf(c, g).isEmpty() : !link(c, g).isEmpty();
+    }
+    static boolean hasTarget(Context c) { return hasTarget(c, gesture(c)); }
+    static boolean hasAnyTarget(Context c) {
+        for (String g : GESTURES) if (hasTarget(c, g)) return true;
+        return false;
     }
     static boolean active(Context c) { return p(c).getBoolean("active", false); }
     static void active(Context c, boolean active) { p(c).edit().putBoolean("active", active).apply(); }
-    /** "single", "double" or "long". */
+    /** The gesture shown on the home screen: "single", "double" or "long". */
     static String gesture(Context c) { return p(c).getString("gesture", "double"); }
     static void gesture(Context c, String gesture) { p(c).edit().putString("gesture", gesture).apply(); }
     /** The user confirmed that the native Snap Key action is set to nothing (cannot be checked from an app). */
@@ -57,16 +87,17 @@ final class Prefs {
     static void setupResult(Context c, String text) { p(c).edit().putString("setup_result", text).apply(); }
 
     static void save(Context c, String link, String pattern) {
-        p(c).edit().putString("link", link.trim()).putString("pattern", pattern.trim()).apply();
+        p(c).edit().putString(k(c, gesture(c), "link"), link.trim()).putString("pattern", pattern.trim()).apply();
     }
 
     /** Opens the chosen link (any app that handles it, or an intent: link) or launches the chosen app. */
-    static void openTarget(Context c) {
-        if (targetType(c).equals("app")) {
-            Intent i = c.getPackageManager().getLaunchIntentForPackage(appPackage(c));
+    static void openTarget(Context c) { openTarget(c, gesture(c)); }
+    static void openTarget(Context c, String g) {
+        if (targetTypeOf(c, g).equals("app")) {
+            Intent i = c.getPackageManager().getLaunchIntentForPackage(appPackageOf(c, g));
             if (i != null) c.startActivity(i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-        } else if (!link(c).isEmpty()) {
-            open(c, link(c));
+        } else if (!link(c, g).isEmpty()) {
+            open(c, link(c, g));
         }
     }
 

@@ -25,7 +25,7 @@ import android.widget.Toast;
 
 /** Home: start and stop, what the key opens, the gesture. Setup, library and key finder have their own screens (menu). */
 public class MainActivity extends Activity {
-    private static final String[] GESTURES = {"single", "double", "long"};
+    private static final String[] GESTURES = Prefs.GESTURES;
     private static final int PICKED = 3;
 
     private TextView heroState, targetName;
@@ -53,8 +53,8 @@ public class MainActivity extends Activity {
         content.setPadding(side, Ui.dp(this, 4), side, Ui.dp(this, 32));
         hero(content);
         setup(content);
-        target(content);
         gesture(content);
+        target(content);
         TextView finder = Ui.text(this, getString(R.string.home_finder), 14, Ui.accent);
         finder.setPadding(Ui.dp(this, 4), Ui.dp(this, 12), Ui.dp(this, 4), Ui.dp(this, 12));
         finder.setOnClickListener(v -> startActivity(new Intent(this, FinderActivity.class)));
@@ -173,6 +173,10 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, getString(R.string.toast_cannot_open, e.getMessage()), Toast.LENGTH_LONG).show();
             }
         }), 8);
+        Ui.add(card, Ui.button(this, getString(R.string.target_clear), false, v -> {
+            Prefs.clearTarget(this);
+            refresh();
+        }), 8);
         targetCard = Ui.add(top, card, 14);
     }
 
@@ -182,7 +186,7 @@ public class MainActivity extends Activity {
         Ui.add(card, Ui.body(this, getString(R.string.gesture_help)), 4);
         int current = java.util.Arrays.asList(GESTURES).indexOf(Prefs.gesture(this));
         Ui.add(card, new Ui.Segmented(this, new String[]{getString(R.string.gesture_single), getString(R.string.gesture_double), getString(R.string.gesture_long)}, Math.max(current, 0),
-                i -> Prefs.gesture(this, GESTURES[i])), 12);
+                i -> { Prefs.gesture(this, GESTURES[i]); refresh(); }), 12); // each press has its own target, shown below
         gestureCard = Ui.add(top, card, 14);
     }
 
@@ -255,7 +259,7 @@ public class MainActivity extends Activity {
 
     /** Set up and something chosen to open: listen, with nothing to press (the grant of the permission closes the app, which is then not listening). */
     private void listenIfReady() {
-        if (SetupActivity.done(this) == SetupActivity.TOTAL && Prefs.hasTarget(this) && !ListenService.running) startListening();
+        if (SetupActivity.done(this) == SetupActivity.TOTAL && Prefs.hasAnyTarget(this) && !ListenService.running) startListening();
     }
 
     private void startListening() {

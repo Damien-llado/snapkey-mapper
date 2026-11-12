@@ -29,7 +29,7 @@
     <string name="perm_copy">Copiar o comando</string>
     <string name="toast_copied">Comando copiado</string>
     <string name="perm_by_hand_or">Ou manualmente:</string>
-    <string name="target_title">O que a tecla abre</string>
+    <string name="target_title">O que esta pressão abre</string>
     <string name="target_link">Um link</string>
     <string name="target_app">Um app</string>
     <string name="target_link_help">Um endereço web, um deep link ou um link intent:</string>
@@ -37,8 +37,9 @@
     <string name="app_none">Nenhum app escolhido</string>
     <string name="dlg_choose_app">Escolha um app</string>
     <string name="target_test">Testar a abertura</string>
+    <string name="target_clear">Remover</string>
     <string name="gesture_title">Gesto</string>
-    <string name="gesture_help">A pressão simples é a mais rápida; a pressão dupla nunca dispara com uma pressão no bolso. Uma mudança vale na hora.</string>
+    <string name="gesture_help">Cada pressão pode abrir algo diferente: escolha uma e, abaixo, o que ela abre. Se a pressão dupla abre algo, a pressão simples espera uma fração de segundo para diferenciá-las.</string>
     <string name="gesture_single">Uma pressão</string>
     <string name="gesture_double">Duas pressões</string>
     <string name="gesture_long">Pressão longa</string>

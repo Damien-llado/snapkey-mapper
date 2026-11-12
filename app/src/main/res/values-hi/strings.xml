@@ -29,7 +29,7 @@
     <string name="perm_copy">कमांड कॉपी करें</string>
     <string name="toast_copied">कमांड कॉपी हो गई</string>
     <string name="perm_by_hand_or">या हाथ से:</string>
-    <string name="target_title">बटन क्या खोलता है</string>
+    <string name="target_title">यह दबाना क्या खोलता है</string>
     <string name="target_link">एक लिंक</string>
     <string name="target_app">एक ऐप</string>
     <string name="target_link_help">वेब पता, deep link या intent: लिंक</string>
@@ -37,8 +37,9 @@
     <string name="app_none">कोई ऐप नहीं चुना</string>
     <string name="dlg_choose_app">ऐप चुनें</string>
     <string name="target_test">लॉन्च टेस्ट करें</string>
+    <string name="target_clear">हटाएँ</string>
     <string name="gesture_title">जेस्चर</string>
-    <string name="gesture_help">एक बार दबाना सबसे तेज़ है; जेब में दबने से दो बार दबाना कभी नहीं चलता। बदलाव तुरंत लागू होता है।</string>
+    <string name="gesture_help">हर तरह का दबाना कुछ अलग खोल सकता है: एक चुनें, फिर नीचे चुनें कि वह क्या खोलता है। अगर दो बार दबाना कुछ खोलता है, तो एक बार दबाना दोनों को अलग पहचानने के लिए पल भर रुकता है।</string>
     <string name="gesture_single">एक बार दबाना</string>
     <string name="gesture_double">दो बार दबाना</string>
     <string name="gesture_long">देर तक दबाना</string>

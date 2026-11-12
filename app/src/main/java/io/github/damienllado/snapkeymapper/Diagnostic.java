@@ -34,8 +34,8 @@ final class Diagnostic {
                 + "\nLog permission: " + s[0] + ", overlay: " + s[1] + ", battery: " + s[2] + ", native key off: " + s[3]
                 + "\nSkipped checks: " + skipped(c)
                 + "\nLast setup message: " + scrub(Prefs.setupResult(c)) + (Prefs.refused(c) ? " (refused by ColorOS)" : "")
-                + "\nListening: " + ListenService.running + ", target chosen: " + Prefs.hasTarget(c) + " (" + Prefs.targetType(c) + ")"
-                + "\nKey line: " + Prefs.pattern(c) + ", gesture: " + Prefs.gesture(c);
+                + "\nListening: " + ListenService.running + ", targets: single " + Prefs.hasTarget(c, "single") + ", double " + Prefs.hasTarget(c, "double") + ", long " + Prefs.hasTarget(c, "long")
+                + "\nKey line: " + Prefs.pattern(c) + ", gesture shown: " + Prefs.gesture(c);
     }
 
     /** The setup message can quote a socket error: no address, no port, no long hexadecimal string in a public issue. */

@@ -29,7 +29,7 @@
     <string name="perm_copy">复制命令</string>
     <string name="toast_copied">命令已复制</string>
     <string name="perm_by_hand_or">或手动设置：</string>
-    <string name="target_title">按键打开什么</string>
+    <string name="target_title">这种按法打开什么</string>
     <string name="target_link">链接</string>
     <string name="target_app">应用</string>
     <string name="target_link_help">网址、深层链接或 intent: 链接</string>
@@ -37,8 +37,9 @@
     <string name="app_none">未选择应用</string>
     <string name="dlg_choose_app">选择应用</string>
     <string name="target_test">测试启动</string>
+    <string name="target_clear">移除</string>
     <string name="gesture_title">手势</string>
-    <string name="gesture_help">单击最快；口袋里的误触永远不会触发双击。更改会立即生效。</string>
+    <string name="gesture_help">每种按法都可以打开不同的内容：先选一种，再在下方选择它打开什么。如果双击设置了内容，单击会稍等片刻以区分两者。</string>
     <string name="gesture_single">单击</string>
     <string name="gesture_double">双击</string>
     <string name="gesture_long">长按</string>

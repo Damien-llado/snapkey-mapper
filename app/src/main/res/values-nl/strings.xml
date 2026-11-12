@@ -29,7 +29,7 @@
     <string name="perm_copy">Commando kopiëren</string>
     <string name="toast_copied">Commando gekopieerd</string>
     <string name="perm_by_hand_or">Of met de hand:</string>
-    <string name="target_title">Wat de toets opent</string>
+    <string name="target_title">Wat deze druk opent</string>
     <string name="target_link">Een link</string>
     <string name="target_app">Een app</string>
     <string name="target_link_help">Een webadres, een deeplink of een intent:-link</string>
@@ -37,8 +37,9 @@
     <string name="app_none">Geen app gekozen</string>
     <string name="dlg_choose_app">Kies een app</string>
     <string name="target_test">Starten testen</string>
+    <string name="target_clear">Verwijderen</string>
     <string name="gesture_title">Gebaar</string>
-    <string name="gesture_help">Eén keer drukken is het snelst; twee keer drukken gaat nooit af door een druk in je broekzak. Een wijziging werkt direct.</string>
+    <string name="gesture_help">Elke druk kan iets anders openen: kies er een en kies hieronder wat die opent. Als twee keer drukken iets opent, wacht één keer drukken een fractie van een seconde om ze te onderscheiden.</string>
     <string name="gesture_single">Eén keer</string>
     <string name="gesture_double">Twee keer</string>
     <string name="gesture_long">Lang drukken</string>
