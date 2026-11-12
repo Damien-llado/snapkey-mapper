@@ -151,7 +151,7 @@ document.querySelectorAll('[data-copy]').forEach(function (el) {
 
 // Bandeau de consentement : librairie vanilla-cookieconsent hébergée ici, puis notre configuration
 (function () {
-  ['/assets/vendor/cookieconsent.umd.js', '/assets/consent.js'].forEach(function (src) {
+  ['/assets/vendor/cookieconsent.umd.js', '/assets/consent.js?v=2'].forEach(function (src) {
     var s = document.createElement('script'); s.src = src; s.async = false; document.body.appendChild(s);
   });
 })();

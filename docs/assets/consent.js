@@ -73,6 +73,46 @@
       "acceptAllBtn": "接受",
       "acceptNecessaryBtn": "拒绝"
     }
+  },
+  "id": {
+    "consentModal": {
+      "title": "Pengukuran pengunjung",
+      "description": "Situs ini mengukur pengunjungnya dengan Microsoft Clarity (klik, gulir, rekaman kunjungan). Clarity hanya dimuat dan hanya memasang cookie jika Anda menyetujui. Aplikasinya sendiri tidak mengumpulkan apa pun.",
+      "acceptAllBtn": "Terima",
+      "acceptNecessaryBtn": "Tolak"
+    }
+  },
+  "it": {
+    "consentModal": {
+      "title": "Misurazione del pubblico",
+      "description": "Questo sito misura il proprio pubblico con Microsoft Clarity (clic, scorrimento, registrazioni delle visite). Clarity si carica e usa i cookie solo se accetti. L'app in sé non raccoglie nulla.",
+      "acceptAllBtn": "Accetta",
+      "acceptNecessaryBtn": "Rifiuta"
+    }
+  },
+  "ja": {
+    "consentModal": {
+      "title": "アクセス解析",
+      "description": "このサイトは Microsoft Clarity でアクセスを計測しています（クリック、スクロール、訪問の記録）。Clarity は同意した場合にのみ読み込まれ、Cookie を設定します。アプリ自体は何も収集しません。",
+      "acceptAllBtn": "同意する",
+      "acceptNecessaryBtn": "拒否する"
+    }
+  },
+  "vi": {
+    "consentModal": {
+      "title": "Đo lường lượt truy cập",
+      "description": "Trang này đo lượt truy cập bằng Microsoft Clarity (lượt nhấp, cuộn trang, bản ghi lượt truy cập). Clarity chỉ được tải và chỉ đặt cookie khi bạn đồng ý. Bản thân ứng dụng không thu thập gì.",
+      "acceptAllBtn": "Đồng ý",
+      "acceptNecessaryBtn": "Từ chối"
+    }
+  },
+  "th": {
+    "consentModal": {
+      "title": "การวัดผู้เข้าชม",
+      "description": "เว็บไซต์นี้วัดผู้เข้าชมด้วย Microsoft Clarity (การคลิก การเลื่อน การบันทึกการเข้าชม) Clarity จะโหลดและตั้งคุกกี้ก็ต่อเมื่อคุณยอมรับเท่านั้น ตัวแอปเองไม่เก็บข้อมูลใดๆ",
+      "acceptAllBtn": "ยอมรับ",
+      "acceptNecessaryBtn": "ปฏิเสธ"
+    }
   }
 };
 
