@@ -131,6 +131,7 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .rot.go { animation: swap .55s cubic-bezier(.2, .8, .2, 1); }
 @keyframes swap { from { opacity: 0; translate: 0 .45em; filter: blur(6px); } }
 .lead { font-size: 1.15rem; color: var(--muted); margin: 0 auto 2rem; max-width: 36rem; }
+.lead strong { font-weight: 700; color: var(--ink); }
 .ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
 .btn { display: inline-flex; align-items: center; gap: .55rem; min-height: 50px; padding: .75rem 1.35rem; border-radius: 14px; font-weight: 650; text-decoration: none; color: var(--ink);
   transition: transform .25s cubic-bezier(.2, .8, .2, 1), box-shadow .25s; }
@@ -365,7 +366,7 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .console-bar { display: flex; align-items: center; gap: 7px; padding: .7rem 1rem; border-bottom: 1px solid #1F3A2F; font: .8rem var(--mono); color: var(--term-dim); }
 .console-bar i { width: 11px; height: 11px; border-radius: 50%; background: #2A4438; }
 .console-bar span { margin-left: .5rem; }
-.console-body { padding: 1.1rem; font: .9rem/1.55 var(--mono); display: grid; gap: .75rem; }
+.console-body { padding: 1.1rem; font: .9rem/1.55 var(--mono); display: grid; grid-template-columns: minmax(0, 1fr); gap: .75rem; overflow-wrap: anywhere; }
 .console-body p { margin: 0; }
 .console-body .you { justify-self: end; max-width: 85%; padding: .6rem .85rem; border-radius: 14px 14px 4px 14px; background: #1C3329; font-family: var(--sans); }
 .console-body .cl { color: var(--term-dim); }
@@ -570,6 +571,8 @@ details.more[open] summary { margin-bottom: .2rem; }
 @media (min-width: 900px) {
   .steps { margin-left: -1.5rem; margin-right: 1.5rem; }
 }
+/* Les anneaux 3D de la scène dépassent du héros quand celui-ci occupe toute la fenêtre */
+@media (max-width: 1192px) { .hero { overflow-x: clip; } }
 @media (min-width: 1000px) {
   .hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); align-items: center; gap: 2rem; text-align: left; padding-top: 3rem !important; }
   .hero-copy { max-width: none; margin: 0; }
