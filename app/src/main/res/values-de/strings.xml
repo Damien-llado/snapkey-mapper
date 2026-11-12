@@ -41,10 +41,10 @@
     <string name="native_long_used">ColorOS nutzt das lange Drücken der Snap-Taste bereits für eine eigene Aktion. Wenn du hier etwas wählst, laufen beide: stelle die Aktion der Taste zuerst in den Telefoneinstellungen auf Keine.</string>
     <string name="gesture_title">Geste</string>
     <string name="gesture_help">Jeder Druck kann etwas anderes öffnen: einen wählen, dann unten festlegen, was er öffnet. Wenn zwei- oder dreimal drücken etwas öffnet, wartet eine kürzere Folge einen Sekundenbruchteil, um sie zu unterscheiden.</string>
-    <string name="gesture_single">Einmal drücken</string>
-    <string name="gesture_double">Zweimal drücken</string>
-    <string name="gesture_triple">Dreimal drücken</string>
-    <string name="gesture_long">Lang drücken</string>
+    <string name="gesture_single">Einfach</string>
+    <string name="gesture_double">Doppelt</string>
+    <string name="gesture_triple">Dreifach</string>
+    <string name="gesture_long">Lang</string>
     <string name="finder_title">Anderes Handy? Finde deine Taste</string>
     <string name="finder_help">Die Taste des Find X9 ist schon bekannt. Auf einem anderen Handy: Starte die Aufzeichnung, drück die Seitentaste 2- oder 3-mal, stopp und tipp dann auf die Zeile, die bei jedem Druck wiederkommt. Die Aufzeichnung kann persönliche Informationen anderer Apps enthalten: Prüfe sie, bevor du sie teilst.</string>
     <string name="capture_start">Aufzeichnung starten</string>

@@ -41,10 +41,10 @@
     <string name="native_long_used">ColorOS पहले से Snap Key को लंबा दबाने पर अपना काम करता है। अगर आप यहाँ कुछ चुनते हैं, तो दोनों चलेंगे: पहले फ़ोन की सेटिंग में बटन की कार्रवाई को कोई नहीं पर सेट करें।</string>
     <string name="gesture_title">जेस्चर</string>
     <string name="gesture_help">हर तरह का दबाना कुछ अलग खोल सकता है: एक चुनें, फिर नीचे चुनें कि वह क्या खोलता है। अगर दो या तीन बार दबाना कुछ खोलता है, तो कम बार दबाना उन्हें अलग पहचानने के लिए पल भर रुकता है।</string>
-    <string name="gesture_single">एक बार दबाना</string>
-    <string name="gesture_double">दो बार दबाना</string>
-    <string name="gesture_triple">तीन बार दबाना</string>
-    <string name="gesture_long">देर तक दबाना</string>
+    <string name="gesture_single">एक बार</string>
+    <string name="gesture_double">दो बार</string>
+    <string name="gesture_triple">तीन बार</string>
+    <string name="gesture_long">लंबा</string>
     <string name="finder_title">दूसरा फ़ोन? अपना बटन ढूँढें</string>
     <string name="finder_help">Find X9 का बटन पहले से पता है। दूसरे फ़ोन पर: कैप्चर शुरू करें, साइड बटन 2 या 3 बार दबाएँ, रोकें, फिर वह लाइन टैप करें जो हर बार दबाने पर आती है। कैप्चर में दूसरे ऐप्स की निजी जानकारी हो सकती है: साझा करने से पहले उसे जाँच लें।</string>
     <string name="capture_start">कैप्चर शुरू करें</string>

@@ -41,10 +41,10 @@
     <string name="native_long_used">ColorOS ya usa la pulsación larga de la tecla Snap para su propia acción. Si eliges algo aquí, se ejecutarán las dos: primero pon la acción de la tecla en Ninguna en los ajustes del teléfono.</string>
     <string name="gesture_title">Gesto</string>
     <string name="gesture_help">Cada pulsación puede abrir algo distinto: elige una y, debajo, lo que abre. Si dos o tres pulsaciones abren algo, una serie más corta espera una fracción de segundo para distinguirlas.</string>
-    <string name="gesture_single">Una pulsación</string>
-    <string name="gesture_double">Dos pulsaciones</string>
-    <string name="gesture_triple">Tres pulsaciones</string>
-    <string name="gesture_long">Pulsación larga</string>
+    <string name="gesture_single">Simple</string>
+    <string name="gesture_double">Doble</string>
+    <string name="gesture_triple">Triple</string>
+    <string name="gesture_long">Larga</string>
     <string name="finder_title">¿Otro móvil? Encuentra tu tecla</string>
     <string name="finder_help">La tecla del Find X9 ya es conocida. En otro móvil: inicia la captura, pulsa la tecla lateral 2 o 3 veces, detén la captura y toca la línea que se repite en cada pulsación. La captura puede contener información personal de otras apps: revísala antes de compartirla.</string>
     <string name="capture_start">Iniciar captura</string>
