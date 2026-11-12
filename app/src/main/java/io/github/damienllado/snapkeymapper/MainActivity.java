@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
     private ImageView targetIcon;
     private View setupCard, heroCard, targetCard, gestureCard, finderLink;
     private TextView nativeWarning;
-    private View restartButton;
+    private View restartHelp, restartButton;
     private PhoneView phone;
 
     @Override
@@ -62,6 +62,9 @@ public class MainActivity extends Activity {
         finder.setOnClickListener(v -> startActivity(new Intent(this, FinderActivity.class)));
         finderLink = Ui.add(content, finder, 10);
         // the listener sees the key only if it started while the app was on screen (Android 13+): restart it from here
+        TextView help = Ui.body(this, getString(R.string.listen_restart_help));
+        help.setPadding(Ui.dp(this, 4), 0, Ui.dp(this, 4), 0);
+        restartHelp = Ui.add(content, help, 10);
         restartButton = Ui.add(content, Ui.button(this, getString(R.string.listen_restart), false, v -> {
             stopService(new Intent(this, ListenService.class));
             heroState.postDelayed(this::startListening, 500);
@@ -218,7 +221,7 @@ public class MainActivity extends Activity {
         phone.setListening(on);
         boolean ready = done == total;
         setupCard.setVisibility(ready ? View.GONE : View.VISIBLE);
-        for (View v : new View[]{heroCard, targetCard, gestureCard, finderLink, restartButton}) v.setVisibility(ready ? View.VISIBLE : View.GONE);
+        for (View v : new View[]{heroCard, targetCard, gestureCard, finderLink, restartHelp, restartButton}) v.setVisibility(ready ? View.VISIBLE : View.GONE);
         nativeWarning.setVisibility(Prefs.gesture(this).equals("long") && Prefs.nativeLongPress(this) ? View.VISIBLE : View.GONE);
         if (Prefs.targetType(this).equals("app") && !Prefs.appPackage(this).isEmpty()) {
             String pkg = Prefs.appPackage(this);

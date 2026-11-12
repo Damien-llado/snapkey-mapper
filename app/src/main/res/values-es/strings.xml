@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">Elige una app</string>
     <string name="target_test">Probar la apertura</string>
     <string name="target_clear">Quitar</string>
+    <string name="listen_restart_help">¿Los atajos funcionaban antes y ya no? Toca este botón.</string>
     <string name="listen_restart">Reiniciar la escucha</string>
     <string name="native_long_used">ColorOS ya usa la pulsación larga de la tecla Snap para su propia acción. Si eliges algo aquí, se ejecutarán las dos: primero pon la acción de la tecla en Ninguna en los ajustes del teléfono.</string>
     <string name="gesture_title">Gesto</string>

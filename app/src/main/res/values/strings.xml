@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">Choose an app</string>
     <string name="target_test">Test the launch</string>
     <string name="target_clear">Remove</string>
+    <string name="listen_restart_help">Shortcuts worked before but stopped working? Tap this button.</string>
     <string name="listen_restart">Restart listening</string>
     <string name="native_long_used">ColorOS already uses the long press of the Snap Key for its own action. If you choose something here, both will run: set the key\'s action to None in the phone settings first.</string>
     <string name="gesture_title">Gesture</string>

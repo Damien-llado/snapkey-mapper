@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">App auswählen</string>
     <string name="target_test">Start testen</string>
     <string name="target_clear">Entfernen</string>
+    <string name="listen_restart_help">Die Kurzbefehle gingen vorher, jetzt nicht mehr? Tippe auf diese Schaltfläche.</string>
     <string name="listen_restart">Zuhören neu starten</string>
     <string name="native_long_used">ColorOS nutzt das lange Drücken der Snap-Taste bereits für eine eigene Aktion. Wenn du hier etwas wählst, laufen beide: stelle die Aktion der Taste zuerst in den Telefoneinstellungen auf Keine.</string>
     <string name="gesture_title">Geste</string>

@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">Choisir une appli</string>
     <string name="target_test">Tester le lancement</string>
     <string name="target_clear">Retirer</string>
+    <string name="listen_restart_help">Les raccourcis marchaient avant mais ne marchent plus ? Appuyez sur ce bouton.</string>
     <string name="listen_restart">Relancer l\'écoute</string>
     <string name="native_long_used">ColorOS utilise déjà l\'appui long de la Snap Key pour sa propre action. Si vous choisissez quelque chose ici, les deux se lanceront : mettez d\'abord l\'action de la touche sur Aucune dans les paramètres du téléphone.</string>
     <string name="gesture_title">Geste</string>

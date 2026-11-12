@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">Kies een app</string>
     <string name="target_test">Starten testen</string>
     <string name="target_clear">Verwijderen</string>
+    <string name="listen_restart_help">Werkten de snelkoppelingen eerst wel en nu niet meer? Tik op deze knop.</string>
     <string name="listen_restart">Luisteren opnieuw starten</string>
     <string name="native_long_used">ColorOS gebruikt lang drukken op de Snap-toets al voor een eigen actie. Als je hier iets kiest, gebeuren ze allebei: zet de actie van de toets eerst op Geen in de telefooninstellingen.</string>
     <string name="gesture_title">Gebaar</string>

@@ -38,6 +38,7 @@
     <string name="dlg_choose_app">选择应用</string>
     <string name="target_test">测试启动</string>
     <string name="target_clear">移除</string>
+    <string name="listen_restart_help">快捷方式以前可用，现在不起作用了？请点按此按钮。</string>
     <string name="listen_restart">重新开始监听</string>
     <string name="native_long_used">ColorOS 已将 Snap 键的长按用于自身功能。如果在这里选择内容，两者都会执行：请先在手机设置中将按键功能设为无。</string>
     <string name="gesture_title">手势</string>
