@@ -5,6 +5,29 @@
 - [Home page and setup guide](https://remapsnapkey.com/): what it does, how to install it in a few steps, compatibility, FAQ.
 - [Source code and downloads](https://github.com/Damien-llado/snapkey-mapper): README, releases with SHA-256, issues.
 
+The home page in 13 languages, with the same content:
+
+- [English](https://remapsnapkey.com/)
+- [French, Français](https://remapsnapkey.com/fr/)
+- [Spanish, Español](https://remapsnapkey.com/es/)
+- [German, Deutsch](https://remapsnapkey.com/de/)
+- [Dutch, Nederlands](https://remapsnapkey.com/nl/)
+- [Portuguese (Brazil), Português (Brasil)](https://remapsnapkey.com/pt-br/)
+- [Hindi, हिन्दी](https://remapsnapkey.com/hi/)
+- [Chinese (Simplified), 中文](https://remapsnapkey.com/zh/)
+- [Indonesian, Bahasa Indonesia](https://remapsnapkey.com/id/)
+- [Italian, Italiano](https://remapsnapkey.com/it/)
+- [Japanese, 日本語](https://remapsnapkey.com/ja/)
+- [Vietnamese, Tiếng Việt](https://remapsnapkey.com/vi/)
+- [Thai, ไทย](https://remapsnapkey.com/th/)
+
+Compatibility:
+
+- OPPO Find X9 Pro (ColorOS 16, Android 16): works, daily use.
+- OPPO Find X9 (ColorOS 16): same Snap Key, not tested yet.
+- OPPO Find X9 Ultra, Find X9s, Find N6 (ColorOS 16): have a Snap Key, not tested yet.
+- OnePlus phones with a Plus Key (OxygenOS): different key, may work through the log capture.
+
 The app comes with a library of ready-made shortcuts (timer, alarm, camera, maps, music, chats and more), each checked on an emulator.
 
 Privacy: the app collects nothing. The website measures its audience with Microsoft Clarity only if the visitor accepts the consent banner, and asks api.github.com for the star count.
