@@ -6,7 +6,8 @@
     if (a.href.indexOf('/releases') > -1) track('download');
     else if (a.href.indexOf('github.com') > -1) track('github');
   });
-  document.getElementById('story').addEventListener('submit', function () { track('story'); });
+  var story = document.getElementById('story');
+  if (story) story.addEventListener('submit', function () { track('story'); });
 })();
 
 // Étoiles et téléchargements GitHub en direct (affichés même à 0), en cache une heure pour rester sous la limite de l'API
@@ -33,7 +34,8 @@
 })();
 
 // Histoires : ouvre une discussion GitHub préremplie, rien n'est envoyé par la page elle-même
-document.getElementById('story').addEventListener('submit', function (e) {
+var storyForm = document.getElementById('story');
+if (storyForm) storyForm.addEventListener('submit', function (e) {
   e.preventDefault();
   var f = e.target.elements, what = f.what.value.trim();
   var body = '**What the Snap Key opens:** ' + what + '\n**Phone:** ' + f.phone.value + '\n**Gesture:** ' + f.gesture.value +
@@ -51,7 +53,7 @@ document.getElementById('story').addEventListener('submit', function (e) {
 
 // Animations : appui sur la Snap Key, l'écran ouvre la cible suivante ; inclinaison au pointeur
 (function () {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !document.getElementById('stage')) return;
   var T = [
     ['Claude Code', 'claude.ai/code/…', '#D97757', 'b-claude', 'Claude Code'],
     ['your run playlist', 'spotify:playlist:…', '#1ED760', 'b-spotify', 'Run playlist'],
@@ -102,6 +104,7 @@ document.getElementById('story').addEventListener('submit', function (e) {
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('main > section:not(.hero) > .kicker, main > section:not(.hero) > h2, main > section > .sub, .facts, .split-copy > *, .console, .narrow > p, .table-wrap, .faq details, .story, .checks > li, .cando > div, .final-card, .bento > li, .gestures > li, .cards > li, .steps > li, .note');
   var steps = document.querySelector('.steps');
+  if (!steps) return; // pages sans frise (changelog)
   if (reduce || !('IntersectionObserver' in window)) {
     els.forEach(function (e) { e.classList.add('in'); });
     steps.style.setProperty('--p', 1);

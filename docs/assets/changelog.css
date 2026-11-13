@@ -1,0 +1,36 @@
+/* Page /changelog/ : colonne des versions collante à gauche, liste à droite ; sur téléphone, un select collant */
+.cl-head { max-width: var(--wide); margin: 0 auto; padding: 2.5rem var(--gut) .5rem; }
+.cl-head, .cl-ver h2 { text-align: left; }
+.cl-head h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 .5rem; }
+.cl-head p { margin: 0; color: var(--muted); max-width: 40rem; }
+.cl-wrap { max-width: var(--wide); margin: 0 auto; padding: 1.5rem var(--gut) 3rem; display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+.cl-side { position: sticky; top: calc(var(--navh, 3.7rem) + 1.25rem); max-height: calc(100dvh - var(--navh, 3.7rem) - 2.5rem); overflow-y: auto; }
+.cl-side ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .15rem; border-left: 2px solid var(--line); }
+.cl-side a { display: block; padding: .3rem .9rem; margin-left: -2px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; font-variant-numeric: tabular-nums; }
+.cl-side a:hover { color: var(--ink); }
+.cl-side a[aria-current="true"] { color: var(--ink); font-weight: 600; border-left-color: var(--accent); background: var(--t-mint); border-radius: 0 8px 8px 0; }
+.cl-pick { display: none; }
+.cl-pick select { width: 100%; font: inherit; font-size: 1rem; padding: .6rem .8rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line-2); border-radius: 12px; }
+.cl-list { display: flex; flex-direction: column; gap: 1.5rem; min-width: 0; }
+.cl-ver { scroll-margin-top: calc(var(--navh, 3.7rem) + 1.25rem); padding: 1.4rem 1.5rem; background: var(--glass); border: 1px solid var(--line); border-radius: 18px; }
+.cl-ver h2 { margin: 0; font-size: 1.6rem; line-height: 1.2; }
+.cl-tag { display: inline-block; vertical-align: .25em; margin-left: .4rem; padding: .1rem .6rem; font: 600 .75rem var(--sans); color: var(--accent-ink); background: var(--accent); border-radius: 999px; }
+.cl-meta { display: flex; flex-wrap: wrap; gap: .2rem 1rem; margin: .3rem 0 1rem; color: var(--muted); font-size: .92rem; }
+.cl-sec { margin-top: 1rem; }
+.cl-sec h3 { display: inline-block; margin: 0 0 .4rem; padding: .1rem .7rem; font-size: .85rem; line-height: 1.6; background: var(--t-mint); border-radius: 999px; }
+.cl-changed h3 { background: var(--t-sky); }
+.cl-fixed h3 { background: var(--t-amber); }
+.cl-sec ul { margin: 0; padding-left: 1.2rem; }
+.cl-sec li { margin: .3rem 0; overflow-wrap: anywhere; }
+.cl-shot { margin: 1rem 0 0; }
+.cl-shot img { border: 1px solid var(--line); border-radius: 14px; }
+@media (max-width: 800px) {
+  .cl-wrap { display: block; padding-top: 0; }
+  .cl-side { position: static; max-height: none; margin-bottom: 1rem; }
+  .cl-side ul { flex-direction: row; flex-wrap: wrap; border-left: 0; gap: .3rem .8rem; }
+  .cl-side a { margin: 0; padding: .1rem 0; border: 0; }
+  .js .cl-side { display: none; }
+  .js .cl-pick { display: block; position: sticky; top: var(--navh, 3.7rem); z-index: 10; padding: .6rem 0; margin-bottom: .6rem; background: color-mix(in oklab, var(--bg) 88%, transparent); }
+  .cl-ver { scroll-margin-top: calc(var(--navh, 3.7rem) + 4rem); padding: 1.1rem 1.1rem; }
+  .cl-head { padding-top: 1.5rem; }
+}

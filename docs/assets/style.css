@@ -648,3 +648,6 @@ html:not(.js) .cc-reopen { display: none; }
 }
 
 .stars[hidden] { display: none; }
+
+/* Lien Changelog de la nav : seulement à partir de 1000 px, plus étroit il ferait passer la nav sur deux lignes (th) ; le pied de page le porte toujours */
+@media (max-width: 999px) { .nav-links a[href$="/changelog/"] { display: none; } }
