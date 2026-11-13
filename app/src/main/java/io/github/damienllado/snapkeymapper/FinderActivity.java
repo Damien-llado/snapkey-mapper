@@ -87,11 +87,17 @@ public class FinderActivity extends Activity {
         };
         list.setAdapter(adapter);
         list.setOnItemClickListener((p, v, pos, id) -> {
-            pattern.setText(suggestion(adapter.getItem(pos - list.getHeaderViewsCount())));
-            save();
-            // said in the bar rather than by a toast, which covered the bar's text
-            shareSaved.setText(getString(R.string.toast_pattern_saved));
-            share.setVisibility(View.VISIBLE);
+            String picked = suggestion(adapter.getItem(pos - list.getHeaderViewsCount()));
+            String current = pattern.getText().toString().trim();
+            if (current.isEmpty() || current.equals(picked)) {
+                pick(picked);
+                return;
+            }
+            // a tap must not silently replace a pattern that works (the OPPO and OnePlus one is set from the start)
+            new android.app.AlertDialog.Builder(this).setTitle(R.string.finder_replace_title)
+                    .setMessage(getString(R.string.finder_replace_text, current, picked))
+                    .setPositiveButton(R.string.finder_replace, (d, w) -> pick(picked))
+                    .setNegativeButton(android.R.string.cancel, null).show();
         });
         root.addView(list, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
         // a line was picked: offer to send it (that line only) so the next release knows this phone
@@ -127,6 +133,14 @@ public class FinderActivity extends Activity {
 
     private void save() {
         Prefs.save(this, Prefs.link(this), pattern.getText().toString().trim());
+    }
+
+    private void pick(String picked) {
+        pattern.setText(picked);
+        save();
+        // said in the bar rather than by a toast, which covered the bar's text
+        shareSaved.setText(getString(R.string.toast_pattern_saved));
+        share.setVisibility(View.VISIBLE);
     }
 
     private void toggleCapture() {
@@ -186,8 +200,12 @@ public class FinderActivity extends Activity {
         }
     }
 
-    /** Message of the line (after "): "), cut before the first number that may change between presses. */
+    private static final Pattern KEYCODE = Pattern.compile("KEYCODE_[A-Z0-9_]+");
+
+    /** The key code when the line names one (KEYCODE_UNKNOWN says nothing), else the message (after "): ") cut before the first number that may change between presses. */
     static String suggestion(String line) {
+        java.util.regex.Matcher code = KEYCODE.matcher(line);
+        if (code.find() && !code.group().equals("KEYCODE_UNKNOWN")) return code.group();
         int i = line.indexOf("): ");
         String m = i >= 0 ? line.substring(i + 3) : line;
         for (int k = 6; k < m.length(); k++) {

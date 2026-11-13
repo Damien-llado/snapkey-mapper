@@ -107,7 +107,7 @@
     <string name="setup_native_title">ปิดการทำงานเดิมของ Snap Key ในโทรศัพท์</string>
     <string name="setup_open_phone_settings">เปิดการตั้งค่าโทรศัพท์</string>
     <string name="setup_native_done">เสร็จแล้ว: Snap Key ไม่ทำอะไรเอง</string>
-    <string name="finder_intro">แอปรู้จักปุ่มของ Find X9 อยู่แล้ว ไม่ต้องทำอะไรตรงนี้ บนโทรศัพท์รุ่นอื่น แอปต้องเรียนรู้ว่า Android เขียนบรรทัดใดลงในบันทึกเมื่อคุณกดปุ่ม</string>
+    <string name="finder_intro">แอปรู้จักปุ่มของ OPPO (Snap Key) และ OnePlus (Plus Key) อยู่แล้ว ไม่ต้องทำอะไรตรงนี้ บนโทรศัพท์รุ่นอื่น แอปต้องเรียนรู้ว่า Android เขียนบรรทัดใดลงในบันทึกเมื่อคุณกดปุ่ม</string>
     <string name="finder_privacy">ข้อมูลที่เก็บอาจมีข้อมูลส่วนตัวจากแอปอื่น ตรวจดูไฟล์ก่อนแชร์</string>
     <string name="finder_need_log">ต้องตั้งค่าการอ่านบันทึกก่อน: ทำขั้นตอนที่ 1 ของการตั้งค่าให้เสร็จ</string>
     <string name="app_search">ค้นหาแอป</string>
@@ -186,4 +186,12 @@
     <string name="report_share">แชร์ปุ่มของคุณเพื่อให้ใช้ได้กับทุกคน</string>
     <string name="report_share_text">เปิด issue บน GitHub ที่มีเพียงรุ่นโทรศัพท์และรูปแบบนี้ ไม่มีส่วนอื่นของการบันทึกเด็ดขาด</string>
     <string name="report_copied">ไม่พบเบราว์เซอร์: คัดลอกข้อความแล้ว วางลงใน issue บน GitHub</string>
+    <string name="report_quick_text">เคยใช้งานได้มาก่อนใช่ไหม เริ่มรอฟังใหม่ก่อน แตะครั้งเดียวก็แก้ได้เกือบทุกกรณี ไม่ต้องแจ้งปัญหา</string>
+    <string name="report_reset_text">รูปแบบของปุ่มถูกเปลี่ยนแล้ว (%1$s) บน OPPO และ OnePlus รูปแบบเดิมคือรูปแบบที่ถูกต้อง</string>
+    <string name="report_reset">คืนค่ารูปแบบเดิม</string>
+    <string name="report_restarted">เริ่มรอฟังใหม่แล้ว ลองกดปุ่มดู</string>
+    <string name="report_fix_first">ยังใช้ไม่ได้หลังจากเริ่มรอฟังใหม่ใช่ไหม</string>
+    <string name="finder_replace_title">แทนที่รูปแบบไหม</string>
+    <string name="finder_replace_text">รูปแบบปัจจุบัน: %1$s\nใหม่: %2$s\n\nถ้าปุ่มเคยใช้งานได้ ให้เก็บรูปแบบปัจจุบันไว้</string>
+    <string name="finder_replace">แทนที่</string>
 </resources>

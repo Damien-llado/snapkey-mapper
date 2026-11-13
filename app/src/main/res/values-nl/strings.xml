@@ -107,7 +107,7 @@
     <string name="setup_native_title">Eigen Snap Key-actie van de telefoon uit</string>
     <string name="setup_open_phone_settings">Telefooninstellingen openen</string>
     <string name="setup_native_done">Klaar: de Snap Key doet zelf niets</string>
-    <string name="finder_intro">De toets van de Find X9 is al bekend: hier hoef je niets te doen. Bij een andere telefoon moet de app leren welke regel Android in het logboek schrijft als je op je toets drukt.</string>
+    <string name="finder_intro">Op OPPO (Snap Key) en OnePlus (Plus Key) is de toets al bekend: hier hoef je niets te doen. Bij een andere telefoon moet de app leren welke regel Android in het logboek schrijft als je op je toets drukt.</string>
     <string name="finder_privacy">De capture kan persoonlijke gegevens uit andere apps bevatten: controleer het bestand voordat je het deelt.</string>
     <string name="finder_need_log">Eerst is logboek lezen nodig: rond stap 1 van het instellen af.</string>
     <string name="app_search">Zoek een app</string>
@@ -186,4 +186,12 @@
     <string name="report_share">Deel je toets zodat hij voor iedereen werkt</string>
     <string name="report_share_text">Opent een GitHub-issue met alleen het model van je telefoon en dit patroon, nooit de rest van de opname.</string>
     <string name="report_copied">Geen browser gevonden: tekst gekopieerd, plak hem in een GitHub-issue</string>
+    <string name="report_quick_text">Werkte het eerder wel? Start eerst het luisteren opnieuw: één tik lost de meeste gevallen op, je hoeft niets te melden.</string>
+    <string name="report_reset_text">Het toetspatroon is gewijzigd (%1$s). Op OPPO en OnePlus is het oorspronkelijke patroon het juiste.</string>
+    <string name="report_reset">Oorspronkelijk patroon terugzetten</string>
+    <string name="report_restarted">Luisteren opnieuw gestart: probeer de toets.</string>
+    <string name="report_fix_first">Werkt het nog steeds niet nadat je het luisteren opnieuw hebt gestart?</string>
+    <string name="finder_replace_title">Patroon vervangen?</string>
+    <string name="finder_replace_text">Huidig patroon: %1$s\nNieuw: %2$s\n\nAls de toets eerder werkte, houd dan het huidige.</string>
+    <string name="finder_replace">Vervangen</string>
 </resources>

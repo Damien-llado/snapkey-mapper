@@ -49,8 +49,9 @@ final class Prefs {
         String g = gesture(c);
         p(c).edit().remove(k(c, g, "target_type")).remove(k(c, g, "link")).remove(k(c, g, "app_package")).apply();
     }
-    /** The Find X9 / Find N6 Snap Key; other phones find theirs with the capture. */
-    static String pattern(Context c) { return p(c).getString("pattern", "KEYCODE_ACTION_BUTTON_CLICK"); }
+    /** The OPPO Snap Key and the OnePlus Plus Key; other phones find theirs with the capture. */
+    static final String DEFAULT_PATTERN = "KEYCODE_ACTION_BUTTON_CLICK";
+    static String pattern(Context c) { return p(c).getString("pattern", DEFAULT_PATTERN); }
     /** An app, a shortcut or a link is chosen: only then there is something to open. */
     static boolean hasTarget(Context c, String g) {
         return targetTypeOf(c, g).equals("app") ? !appPackageOf(c, g).isEmpty() : !link(c, g).isEmpty();

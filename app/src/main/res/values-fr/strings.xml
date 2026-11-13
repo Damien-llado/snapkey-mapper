@@ -107,7 +107,7 @@
     <string name="setup_native_title">Couper l\'action d\'origine de la Snap Key</string>
     <string name="setup_open_phone_settings">Ouvrir les paramètres du téléphone</string>
     <string name="setup_native_done">Fait : la Snap Key ne fait rien d\'elle-même</string>
-    <string name="finder_intro">La touche du Find X9 est déjà connue : rien à faire ici. Sur un autre téléphone, l\'appli doit apprendre quelle ligne Android écrit dans son journal quand vous appuyez sur votre touche.</string>
+    <string name="finder_intro">Sur OPPO (Snap Key) et OnePlus (Plus Key), la touche est déjà connue : rien à faire ici. Sur un autre téléphone, l\'appli doit apprendre quelle ligne Android écrit dans son journal quand vous appuyez sur votre touche.</string>
     <string name="finder_privacy">La capture peut contenir des informations personnelles venant d\'autres applis : vérifiez le fichier avant de le partager.</string>
     <string name="finder_need_log">La lecture du journal est nécessaire d\'abord : terminez l\'étape 1 de la configuration.</string>
     <string name="app_search">Chercher une appli</string>
@@ -186,4 +186,12 @@
     <string name="report_share">Partagez votre touche pour qu\'elle marche chez tout le monde</string>
     <string name="report_share_text">Ouvre une issue GitHub avec le modèle du téléphone et ce motif seulement, jamais le reste de la capture.</string>
     <string name="report_copied">Aucun navigateur trouvé : texte copié, collez-le dans une issue GitHub</string>
+    <string name="report_quick_text">Ça marchait avant ? Relancez d\'abord l\'écoute : un appui règle la plupart des pannes, inutile de signaler quoi que ce soit.</string>
+    <string name="report_reset_text">Le motif à reconnaître a été changé (%1$s). Sur OPPO et OnePlus, le motif d\'origine est le bon.</string>
+    <string name="report_reset">Remettre le motif d\'origine</string>
+    <string name="report_restarted">Écoute relancée : essayez la touche.</string>
+    <string name="report_fix_first">Toujours en panne après avoir relancé l\'écoute ?</string>
+    <string name="finder_replace_title">Remplacer le motif ?</string>
+    <string name="finder_replace_text">Motif actuel : %1$s\nNouveau : %2$s\n\nSi la touche marchait avant, gardez l\'actuel.</string>
+    <string name="finder_replace">Remplacer</string>
 </resources>

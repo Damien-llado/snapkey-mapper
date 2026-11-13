@@ -107,7 +107,7 @@
     <string name="setup_native_title">Azione della Snap Key del telefono disattivata</string>
     <string name="setup_open_phone_settings">Apri le impostazioni del telefono</string>
     <string name="setup_native_done">Fatto: la Snap Key non fa nulla da sola</string>
-    <string name="finder_intro">Il tasto del Find X9 è già conosciuto: qui non c\'è niente da fare. Su un altro telefono, l\'app deve imparare quale riga Android scrive nel suo log quando premi il tasto.</string>
+    <string name="finder_intro">Su OPPO (Snap Key) e OnePlus (Plus Key) il tasto è già conosciuto: qui non c\'è niente da fare. Su un altro telefono, l\'app deve imparare quale riga Android scrive nel suo log quando premi il tasto.</string>
     <string name="finder_privacy">La cattura può contenere informazioni personali di altre app: controlla il file prima di condividerlo.</string>
     <string name="finder_need_log">Prima serve la lettura del log: completa il passaggio 1 della configurazione.</string>
     <string name="app_search">Cerca un\'app</string>
@@ -186,4 +186,12 @@
     <string name="report_share">Condividi il tuo tasto, così funziona per tutti</string>
     <string name="report_share_text">Apre una issue su GitHub con il modello del telefono e solo questo schema, mai il resto della registrazione.</string>
     <string name="report_copied">Nessun browser trovato: testo copiato, incollalo in una issue su GitHub</string>
+    <string name="report_quick_text">Prima funzionava? Riavvia prima l\'ascolto: un tocco risolve la maggior parte dei casi, non serve segnalare nulla.</string>
+    <string name="report_reset_text">Lo schema del tasto è stato cambiato (%1$s). Su OPPO e OnePlus, lo schema originale è quello giusto.</string>
+    <string name="report_reset">Ripristina lo schema originale</string>
+    <string name="report_restarted">Ascolto riavviato: prova il tasto.</string>
+    <string name="report_fix_first">Ancora non funziona dopo aver riavviato l\'ascolto?</string>
+    <string name="finder_replace_title">Sostituire lo schema?</string>
+    <string name="finder_replace_text">Schema attuale: %1$s\nNuovo: %2$s\n\nSe prima il tasto funzionava, tieni quello attuale.</string>
+    <string name="finder_replace">Sostituisci</string>
 </resources>

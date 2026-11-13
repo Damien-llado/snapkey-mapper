@@ -107,7 +107,7 @@
     <string name="setup_native_title">Eigene Snap-Key-Aktion des Telefons aus</string>
     <string name="setup_open_phone_settings">Telefoneinstellungen öffnen</string>
     <string name="setup_native_done">Erledigt: Die Snap Key macht von sich aus nichts</string>
-    <string name="finder_intro">Die Taste des Find X9 ist bereits bekannt: Hier ist nichts zu tun. Bei einem anderen Telefon muss die App lernen, welche Zeile Android in sein Log schreibt, wenn du deine Taste drückst.</string>
+    <string name="finder_intro">Auf OPPO (Snap Key) und OnePlus (Plus Key) ist die Taste bereits bekannt: Hier ist nichts zu tun. Bei einem anderen Telefon muss die App lernen, welche Zeile Android in sein Log schreibt, wenn du deine Taste drückst.</string>
     <string name="finder_privacy">Die Aufzeichnung kann persönliche Informationen aus anderen Apps enthalten: Prüf die Datei, bevor du sie weitergibst.</string>
     <string name="finder_need_log">Zuerst wird der Log-Zugriff gebraucht: Schließ Schritt 1 der Einrichtung ab.</string>
     <string name="app_search">App suchen</string>
@@ -186,4 +186,12 @@
     <string name="report_share">Teile deine Taste, damit sie bei allen funktioniert</string>
     <string name="report_share_text">Öffnet ein GitHub-Issue nur mit dem Handymodell und diesem Muster, nie mit dem Rest der Aufzeichnung.</string>
     <string name="report_copied">Kein Browser gefunden: Text kopiert, füge ihn in ein GitHub-Issue ein</string>
+    <string name="report_quick_text">Hat es vorher funktioniert? Starte zuerst das Zuhören neu: Ein Tippen behebt die meisten Fälle, du musst nichts melden.</string>
+    <string name="report_reset_text">Das Tastenmuster wurde geändert (%1$s). Auf OPPO und OnePlus ist das ursprüngliche Muster das richtige.</string>
+    <string name="report_reset">Ursprüngliches Muster wiederherstellen</string>
+    <string name="report_restarted">Zuhören neu gestartet: Probiere die Taste aus.</string>
+    <string name="report_fix_first">Geht es nach dem Neustart des Zuhörens immer noch nicht?</string>
+    <string name="finder_replace_title">Muster ersetzen?</string>
+    <string name="finder_replace_text">Aktuelles Muster: %1$s\nNeu: %2$s\n\nWenn die Taste vorher funktioniert hat, behalte das aktuelle.</string>
+    <string name="finder_replace">Ersetzen</string>
 </resources>

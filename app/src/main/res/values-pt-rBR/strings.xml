@@ -107,7 +107,7 @@
     <string name="setup_native_title">Ação própria da Snap Key do telefone desativada</string>
     <string name="setup_open_phone_settings">Abrir as configurações do telefone</string>
     <string name="setup_native_done">Pronto: a Snap Key não faz nada por conta própria</string>
-    <string name="finder_intro">A tecla do Find X9 já é conhecida: nada a fazer aqui. Em outro telefone, o app precisa aprender qual linha o Android escreve no log quando você aperta a tecla.</string>
+    <string name="finder_intro">No OPPO (Snap Key) e no OnePlus (Plus Key), a tecla já é conhecida: nada a fazer aqui. Em outro telefone, o app precisa aprender qual linha o Android escreve no log quando você aperta a tecla.</string>
     <string name="finder_privacy">A captura pode conter informações pessoais de outros apps: confira o arquivo antes de compartilhar.</string>
     <string name="finder_need_log">Antes é preciso ler o log: conclua o passo 1 da configuração.</string>
     <string name="app_search">Pesquisar um app</string>
@@ -186,4 +186,12 @@
     <string name="report_share">Compartilhe sua tecla para funcionar para todo mundo</string>
     <string name="report_share_text">Abre uma issue no GitHub só com o modelo do celular e este padrão, nunca o resto da captura.</string>
     <string name="report_copied">Nenhum navegador encontrado: texto copiado, cole numa issue do GitHub</string>
+    <string name="report_quick_text">Funcionava antes? Primeiro reinicie a escuta: um toque resolve a maioria dos casos, não precisa relatar nada.</string>
+    <string name="report_reset_text">O padrão da tecla foi alterado (%1$s). No OPPO e no OnePlus, o padrão original é o certo.</string>
+    <string name="report_reset">Restaurar o padrão original</string>
+    <string name="report_restarted">Escuta reiniciada: teste a tecla.</string>
+    <string name="report_fix_first">Ainda não funciona depois de reiniciar a escuta?</string>
+    <string name="finder_replace_title">Substituir o padrão?</string>
+    <string name="finder_replace_text">Padrão atual: %1$s\nNovo: %2$s\n\nSe a tecla funcionava antes, mantenha o atual.</string>
+    <string name="finder_replace">Substituir</string>
 </resources>

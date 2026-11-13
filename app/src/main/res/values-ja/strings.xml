@@ -107,7 +107,7 @@
     <string name="setup_native_title">スマートフォン本来の Snap Key 操作をオフ</string>
     <string name="setup_open_phone_settings">スマートフォンの設定を開く</string>
     <string name="setup_native_done">完了：Snap Key 単体では何も動作しません</string>
-    <string name="finder_intro">Find X9 のキーは登録済みなので、ここでは何もする必要はありません。別のスマートフォンでは、キーを押したときに Android がログに書き込む行をアプリが覚える必要があります。</string>
+    <string name="finder_intro">OPPO（Snap Key）と OnePlus（Plus Key）のキーは登録済みなので、ここでは何もする必要はありません。別のスマートフォンでは、キーを押したときに Android がログに書き込む行をアプリが覚える必要があります。</string>
     <string name="finder_privacy">キャプチャにはほかのアプリの個人情報が含まれることがあります。共有する前にファイルを確認してください。</string>
     <string name="finder_need_log">先にログの読み取りが必要です。セットアップのステップ 1 を完了してください。</string>
     <string name="app_search">アプリを検索</string>
@@ -186,4 +186,12 @@
     <string name="report_share">キーを共有して、みんなが使えるようにする</string>
     <string name="report_share_text">スマートフォンの機種とこのパターンだけを入れた GitHub の issue を開きます。記録のほかの部分は含みません。</string>
     <string name="report_copied">ブラウザが見つかりません。テキストをコピーしました。GitHub の issue に貼り付けてください</string>
+    <string name="report_quick_text">以前は動いていましたか？まず待機を再開してください。ほとんどの場合これで直り、報告は不要です。</string>
+    <string name="report_reset_text">キーのパターンが変更されています（%1$s）。OPPO と OnePlus では元のパターンが正しいものです。</string>
+    <string name="report_reset">元のパターンに戻す</string>
+    <string name="report_restarted">待機を再開しました。キーを試してください。</string>
+    <string name="report_fix_first">待機を再開しても動きませんか？</string>
+    <string name="finder_replace_title">パターンを置き換えますか？</string>
+    <string name="finder_replace_text">現在のパターン: %1$s\n新しいパターン: %2$s\n\n以前キーが動いていたなら、現在のパターンのままにしてください。</string>
+    <string name="finder_replace">置き換える</string>
 </resources>

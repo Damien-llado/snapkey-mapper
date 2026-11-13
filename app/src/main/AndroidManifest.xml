@@ -62,7 +62,8 @@
         <activity android:name=".LibraryActivity" android:exported="false" />
         <activity android:name=".RecipeActivity" android:exported="false" />
         <activity android:name=".SetupActivity" android:exported="false" />
-        <activity android:name=".FinderActivity" android:exported="false" />
+        <!-- edge to edge (SDK 35) no longer resizes the window for the keyboard: pan it so the pattern field stays in view -->
+        <activity android:name=".FinderActivity" android:exported="false" android:windowSoftInputMode="adjustPan" />
         <activity android:name=".ReportActivity" android:exported="false" />
         <activity android:name=".AppPickerActivity" android:exported="false" />
 

@@ -65,10 +65,8 @@ public class MainActivity extends Activity {
         TextView help = Ui.body(this, getString(R.string.listen_restart_help));
         help.setPadding(Ui.dp(this, 4), 0, Ui.dp(this, 4), 0);
         restartHelp = Ui.add(content, help, 10);
-        restartButton = Ui.add(content, Ui.button(this, getString(R.string.listen_restart), false, v -> {
-            stopService(new Intent(this, ListenService.class));
-            heroState.postDelayed(this::startListening, 500);
-        }), 4);
+        restartButton = Ui.add(content, Ui.button(this, getString(R.string.listen_restart), false,
+                v -> ListenService.restart(this, () -> heroState.postDelayed(this::refresh, 300))), 4);
         ScrollView scroll = new ScrollView(this);
         scroll.addView(content);
         root.addView(scroll, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));

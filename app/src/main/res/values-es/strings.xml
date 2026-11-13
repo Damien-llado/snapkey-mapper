@@ -107,7 +107,7 @@
     <string name="setup_native_title">Acción propia de la Snap Key del teléfono desactivada</string>
     <string name="setup_open_phone_settings">Abrir los ajustes del teléfono</string>
     <string name="setup_native_done">Hecho: la Snap Key no hace nada por sí sola</string>
-    <string name="finder_intro">La tecla del Find X9 ya se conoce: aquí no hay nada que hacer. En otro teléfono, la app tiene que aprender qué línea escribe Android en su registro cuando pulsas tu tecla.</string>
+    <string name="finder_intro">En OPPO (Snap Key) y OnePlus (Plus Key), la tecla ya se conoce: aquí no hay nada que hacer. En otro teléfono, la app tiene que aprender qué línea escribe Android en su registro cuando pulsas tu tecla.</string>
     <string name="finder_privacy">La captura puede contener información personal de otras apps: revisa el archivo antes de compartirlo.</string>
     <string name="finder_need_log">Primero hace falta la lectura del registro: termina el paso 1 de la configuración.</string>
     <string name="app_search">Buscar una app</string>
@@ -186,4 +186,12 @@
     <string name="report_share">Comparte tu tecla para que funcione para todos</string>
     <string name="report_share_text">Abre una issue de GitHub con el modelo del móvil y solo este patrón, nunca el resto de la captura.</string>
     <string name="report_copied">No hay ningún navegador: texto copiado, pégalo en una issue de GitHub</string>
+    <string name="report_quick_text">¿Funcionaba antes? Primero reinicia la escucha: un toque lo arregla en la mayoría de los casos, no hace falta reportar nada.</string>
+    <string name="report_reset_text">El patrón de la tecla se cambió (%1$s). En OPPO y OnePlus, el patrón original es el correcto.</string>
+    <string name="report_reset">Restaurar el patrón original</string>
+    <string name="report_restarted">Escucha reiniciada: prueba la tecla.</string>
+    <string name="report_fix_first">¿Sigue sin funcionar después de reiniciar la escucha?</string>
+    <string name="finder_replace_title">¿Reemplazar el patrón?</string>
+    <string name="finder_replace_text">Patrón actual: %1$s\nNuevo: %2$s\n\nSi la tecla funcionaba antes, conserva el actual.</string>
+    <string name="finder_replace">Reemplazar</string>
 </resources>

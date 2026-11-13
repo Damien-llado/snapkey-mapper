@@ -129,6 +129,17 @@ public class ListenService extends Service {
     @Override
     public IBinder onBind(Intent intent) { return null; }
 
+    /** Stops and starts the listener from a screen on display: Android 13+ then grants again the log access a stale listener lost. */
+    static void restart(android.app.Activity a, Runnable after) {
+        a.stopService(new Intent(a, ListenService.class));
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            if (Prefs.pattern(a).isEmpty()) return;
+            a.startForegroundService(new Intent(a, ListenService.class));
+            Prefs.active(a, true);
+            after.run();
+        }, 500);
+    }
+
     /** "Tap to restart" notification: after a reboot or if the system stopped the listener. */
     static void warnStopped(Context base) {
         Context c = Lang.wrap(base);

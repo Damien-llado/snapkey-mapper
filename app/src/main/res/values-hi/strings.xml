@@ -107,7 +107,7 @@
     <string name="setup_native_title">फ़ोन की अपनी Snap Key कार्रवाई बंद</string>
     <string name="setup_open_phone_settings">फ़ोन की सेटिंग खोलें</string>
     <string name="setup_native_done">हो गया: Snap Key अपने आप कुछ नहीं करती</string>
-    <string name="finder_intro">Find X9 का बटन पहले से पता है: यहाँ कुछ करने की ज़रूरत नहीं। दूसरे फ़ोन पर ऐप को सीखना होगा कि आपका बटन दबाने पर Android अपने लॉग में कौन-सी लाइन लिखता है।</string>
+    <string name="finder_intro">OPPO (Snap Key) और OnePlus (Plus Key) पर बटन पहले से पता है: यहाँ कुछ करने की ज़रूरत नहीं। दूसरे फ़ोन पर ऐप को सीखना होगा कि आपका बटन दबाने पर Android अपने लॉग में कौन-सी लाइन लिखता है।</string>
     <string name="finder_privacy">कैप्चर में दूसरे ऐप की निजी जानकारी हो सकती है: शेयर करने से पहले फ़ाइल जाँच लें।</string>
     <string name="finder_need_log">पहले लॉग पढ़ने की अनुमति चाहिए: सेटअप का स्टेप 1 पूरा करें।</string>
     <string name="app_search">कोई ऐप खोजें</string>
@@ -186,4 +186,12 @@
     <string name="report_share">अपना बटन शेयर करें ताकि यह सबके लिए काम करे</string>
     <string name="report_share_text">GitHub issue खोलता है जिसमें सिर्फ़ फ़ोन का मॉडल और यह पैटर्न होता है, कैप्चर का बाकी हिस्सा कभी नहीं।</string>
     <string name="report_copied">कोई ब्राउज़र नहीं मिला: टेक्स्ट कॉपी हो गया, इसे GitHub issue में चिपकाएं</string>
+    <string name="report_quick_text">पहले काम करता था? पहले सुनना फिर से शुरू करें: ज़्यादातर मामलों में एक टैप काफ़ी है, कुछ रिपोर्ट करने की ज़रूरत नहीं।</string>
+    <string name="report_reset_text">बटन का पैटर्न बदल दिया गया है (%1$s)। OPPO और OnePlus पर मूल पैटर्न ही सही है।</string>
+    <string name="report_reset">मूल पैटर्न वापस लाएँ</string>
+    <string name="report_restarted">सुनना फिर से शुरू हो गया: बटन दबाकर देखें।</string>
+    <string name="report_fix_first">सुनना फिर से शुरू करने के बाद भी काम नहीं कर रहा?</string>
+    <string name="finder_replace_title">पैटर्न बदलें?</string>
+    <string name="finder_replace_text">मौजूदा पैटर्न: %1$s\nनया: %2$s\n\nअगर बटन पहले काम करता था, तो मौजूदा पैटर्न रखें।</string>
+    <string name="finder_replace">बदलें</string>
 </resources>

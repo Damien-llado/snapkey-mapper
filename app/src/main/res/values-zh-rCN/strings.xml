@@ -107,7 +107,7 @@
     <string name="setup_native_title">关闭手机自带的 Snap Key 操作</string>
     <string name="setup_open_phone_settings">打开手机设置</string>
     <string name="setup_native_done">完成：Snap Key 自己不会执行任何操作</string>
-    <string name="finder_intro">Find X9 的按键已经内置：这里无需操作。换成其他手机时，应用需要学会你按键时 Android 在日志里写下的是哪一行。</string>
+    <string name="finder_intro">OPPO（Snap Key）和 OnePlus（Plus Key）的按键已经内置：这里无需操作。换成其他手机时，应用需要学会你按键时 Android 在日志里写下的是哪一行。</string>
     <string name="finder_privacy">捕获内容可能包含其他应用的个人信息：分享前请先检查文件。</string>
     <string name="finder_need_log">需要先有日志读取权限：请先完成设置的第 1 步。</string>
     <string name="app_search">搜索应用</string>
@@ -186,4 +186,12 @@
     <string name="report_share">分享你的按键，让所有人都能用</string>
     <string name="report_share_text">打开一个 GitHub issue，只包含手机型号和这个特征，绝不包含录制的其余部分。</string>
     <string name="report_copied">未找到浏览器：文本已复制，请粘贴到 GitHub issue 中</string>
+    <string name="report_quick_text">之前能用吗？先重新开始监听：点一下就能解决大多数情况，无需报告。</string>
+    <string name="report_reset_text">按键特征已被修改（%1$s）。在 OPPO 和 OnePlus 上，原始特征才是正确的。</string>
+    <string name="report_reset">恢复原始特征</string>
+    <string name="report_restarted">已重新开始监听：试试按键吧。</string>
+    <string name="report_fix_first">重新开始监听后还是不行？</string>
+    <string name="finder_replace_title">替换特征？</string>
+    <string name="finder_replace_text">当前特征：%1$s\n新特征：%2$s\n\n如果按键之前能用，请保留当前特征。</string>
+    <string name="finder_replace">替换</string>
 </resources>

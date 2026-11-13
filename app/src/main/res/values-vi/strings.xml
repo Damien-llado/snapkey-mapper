@@ -107,7 +107,7 @@
     <string name="setup_native_title">Tắt chức năng gốc của Snap Key</string>
     <string name="setup_open_phone_settings">Mở cài đặt điện thoại</string>
     <string name="setup_native_done">Xong: Snap Key không tự làm gì nữa</string>
-    <string name="finder_intro">Phím của Find X9 đã được nhận diện sẵn: không cần làm gì ở đây. Trên điện thoại khác, ứng dụng cần biết dòng nào Android ghi vào nhật ký khi bạn nhấn phím.</string>
+    <string name="finder_intro">Trên OPPO (Snap Key) và OnePlus (Plus Key), phím đã được nhận diện sẵn: không cần làm gì ở đây. Trên điện thoại khác, ứng dụng cần biết dòng nào Android ghi vào nhật ký khi bạn nhấn phím.</string>
     <string name="finder_privacy">Bản ghi có thể chứa thông tin cá nhân từ các ứng dụng khác: hãy kiểm tra tệp trước khi chia sẻ.</string>
     <string name="finder_need_log">Cần có quyền đọc nhật ký trước: hãy hoàn tất bước 1 của phần thiết lập.</string>
     <string name="app_search">Tìm ứng dụng</string>
@@ -186,4 +186,12 @@
     <string name="report_share">Chia sẻ phím của bạn để mọi người đều dùng được</string>
     <string name="report_share_text">Mở một issue trên GitHub chỉ gồm mẫu điện thoại và mẫu nhận diện này, không bao giờ có phần còn lại của bản ghi.</string>
     <string name="report_copied">Không tìm thấy trình duyệt: đã sao chép văn bản, dán vào một issue trên GitHub</string>
+    <string name="report_quick_text">Trước đây vẫn chạy? Hãy bật lại lắng nghe trước: một lần chạm sửa được hầu hết các trường hợp, không cần báo lỗi.</string>
+    <string name="report_reset_text">Mẫu phím đã bị thay đổi (%1$s). Trên OPPO và OnePlus, mẫu gốc mới là mẫu đúng.</string>
+    <string name="report_reset">Khôi phục mẫu gốc</string>
+    <string name="report_restarted">Đã bật lại lắng nghe: hãy thử phím.</string>
+    <string name="report_fix_first">Vẫn không chạy sau khi bật lại lắng nghe?</string>
+    <string name="finder_replace_title">Thay mẫu?</string>
+    <string name="finder_replace_text">Mẫu hiện tại: %1$s\nMới: %2$s\n\nNếu trước đây phím vẫn chạy, hãy giữ mẫu hiện tại.</string>
+    <string name="finder_replace">Thay</string>
 </resources>

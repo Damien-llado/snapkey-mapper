@@ -107,7 +107,7 @@
     <string name="setup_native_title">Tindakan bawaan Snap Key dimatikan</string>
     <string name="setup_open_phone_settings">Buka pengaturan ponsel</string>
     <string name="setup_native_done">Selesai: Snap Key tidak melakukan apa pun sendiri</string>
-    <string name="finder_intro">Tombol Find X9 sudah dikenali: tidak ada yang perlu dilakukan di sini. Di ponsel lain, aplikasi perlu mempelajari baris mana yang ditulis Android di log-nya saat Anda menekan tombol.</string>
+    <string name="finder_intro">Di OPPO (Snap Key) dan OnePlus (Plus Key), tombol sudah dikenali: tidak ada yang perlu dilakukan di sini. Di ponsel lain, aplikasi perlu mempelajari baris mana yang ditulis Android di log-nya saat Anda menekan tombol.</string>
     <string name="finder_privacy">Rekaman bisa berisi informasi pribadi dari aplikasi lain: periksa file-nya sebelum membagikannya.</string>
     <string name="finder_need_log">Pembacaan log diperlukan terlebih dahulu: selesaikan langkah 1 penyiapan.</string>
     <string name="app_search">Cari aplikasi</string>
@@ -186,4 +186,12 @@
     <string name="report_share">Bagikan tombol Anda agar berfungsi untuk semua orang</string>
     <string name="report_share_text">Membuka issue GitHub hanya berisi model ponsel dan pola ini, tidak pernah sisa rekaman.</string>
     <string name="report_copied">Browser tidak ditemukan: teks disalin, tempelkan di issue GitHub</string>
+    <string name="report_quick_text">Sebelumnya berfungsi? Mulai ulang mendengarkan dulu: satu ketukan memperbaiki sebagian besar kasus, tidak perlu melapor.</string>
+    <string name="report_reset_text">Pola tombol telah diubah (%1$s). Di OPPO dan OnePlus, pola aslinya yang benar.</string>
+    <string name="report_reset">Kembalikan pola asli</string>
+    <string name="report_restarted">Mendengarkan dimulai ulang: coba tombolnya.</string>
+    <string name="report_fix_first">Masih tidak berfungsi setelah mendengarkan dimulai ulang?</string>
+    <string name="finder_replace_title">Ganti pola?</string>
+    <string name="finder_replace_text">Pola saat ini: %1$s\nBaru: %2$s\n\nJika tombol sebelumnya berfungsi, pertahankan pola saat ini.</string>
+    <string name="finder_replace">Ganti</string>
 </resources>
