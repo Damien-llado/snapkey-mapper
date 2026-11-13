@@ -55,16 +55,17 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
 (function () {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches || !document.getElementById('stage')) return;
   var T = [
-    ['Claude Code', 'claude.ai/code/…', '#D97757', 'b-claude', 'Claude Code'],
-    ['your run playlist', 'spotify:playlist:…', '#1ED760', 'b-spotify', 'Run playlist'],
-    ['navigation home', 'google.navigation:q=…', '#4285F4', 'b-maps', 'Maps'],
-    ['Strava', 'App: Strava', '#FC4C02', 'b-strava', 'Strava'],
-    ["today's notes", 'docs.google.com/…', '#4285F4', 'b-gdocs', 'Notes'],
-    ['the garage dashboard', 'homeassistant://navigate/…', '#18BCF2', 'b-ha', 'Home Assistant'],
-    ['a WhatsApp chat', 'wa.me/…', '#25D366', 'b-wa', 'WhatsApp']
+    ['Claude Code', 'claude.ai/code/…', '#D97757', 'claude', 'Claude Code'],
+    ['your run playlist', 'spotify:playlist:…', '#1ED760', 'spotify', 'Run playlist'],
+    ['navigation home', 'google.navigation:q=…', '#4285F4', 'maps', 'Maps'],
+    ['Strava', 'App: Strava', '#FC4C02', 'strava', 'Strava'],
+    ["today's notes", 'docs.google.com/…', '#4285F4', 'gdocs', 'Notes'],
+    ['the garage dashboard', 'homeassistant://navigate/…', '#18BCF2', 'homeassistant', 'Home Assistant'],
+    ['a WhatsApp chat', 'wa.me/…', '#25D366', 'whatsapp', 'WhatsApp']
   ];
   var i = 0, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
-      launch = document.getElementById('launch'), use = launch.querySelector('use');
+      launch = document.getElementById('launch'), ico = document.getElementById('launch-i');
+  T.forEach(function (t) { new Image().src = '/img/apps/' + t[3] + '.webp'; });
   function cycle() {
     if (document.hidden) return;
     i = (i + 1) % T.length;
@@ -72,7 +73,7 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
     stage.classList.remove('pressed'); void stage.offsetWidth; stage.classList.add('pressed');
     setTimeout(function () {
       launch.style.setProperty('--h', t[2]);
-      use.setAttribute('href', '#' + t[3]);
+      ico.src = '/img/apps/' + t[3] + '.webp';
       document.getElementById('launch-t').textContent = t[4];
       document.getElementById('launch-s').textContent = t[1];
       launch.classList.remove('go'); void launch.offsetWidth; launch.classList.add('go');
