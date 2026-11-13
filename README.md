@@ -10,13 +10,19 @@ My own use: one press opens a Claude Code Remote Control session, so I can pick 
 
 Website with a longer FAQ: https://remapsnapkey.com/
 
-## Tested and probable devices
+## Compatible devices
 
-| Device | Status |
+SnapKey Mapper works with the Snap Key of OPPO phones and the Plus Key of OnePlus phones.
+
+| Device | Key |
 |---|---|
-| OPPO Find X9 Pro, ColorOS 16 (Android 16) | Tested, works |
-| OnePlus 15 and other phones with a "Plus Key" or "Action button" built on the same base | Not tested, probably works if the key shows up in the log |
-| Any other Android 11+ phone with a hardware key that writes to the log | Not tested |
+| OPPO Find X9 Pro, ColorOS 16 (Android 16): in daily use on this phone | Snap Key |
+| OPPO Find X9, Find X9 Ultra, Find X9s, Find N6 | Snap Key |
+| OPPO Find X10, Find X10 Pro Max | Snap Key |
+| OPPO Reno 16, Reno 16 Pro, Reno 16 F | AI Snap Key |
+| OnePlus 15, 15R, 13s, 13T, Nord 5 | Plus Key |
+
+Not working on yours? [Tell us on GitHub](https://github.com/Damien-llado/snapkey-mapper/issues/new).
 
 The app only needs two things: Android 11 or later, and a key press that appears in the system log. Step 3 below tells you how to check that on your phone.
 
@@ -126,7 +132,7 @@ Then ask, for example: "make my Snap Key start a 25-minute focus timer". Without
 ## Limits
 
 - Since Android 13, reading the log asks for a one-time access each time listening starts, and the app must be in the foreground at that moment. So after a reboot, tap the notification (or open the app) and start listening again. This is an Android rule, not something the app can skip.
-- Not tested outside OPPO phones. Whether the key reaches the log depends on the manufacturer.
+- On phones from other makers, whether the key reaches the log depends on the manufacturer.
 - The key keeps appearing in the log even if the Snap Key action is disabled in the OPPO settings, so there is nothing to undo there.
 - Some skins kill background services aggressively: follow the battery steps above.
 

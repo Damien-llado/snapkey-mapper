@@ -24,9 +24,12 @@ The home page in 13 languages, with the same content:
 Compatibility:
 
 - OPPO Find X9 Pro (ColorOS 16, Android 16): works, daily use.
-- OPPO Find X9 (ColorOS 16): same Snap Key, not tested yet.
-- OPPO Find X9 Ultra, Find X9s, Find N6 (ColorOS 16): have a Snap Key, not tested yet.
-- OnePlus phones with a Plus Key (OxygenOS): different key, may work through the log capture.
+- OPPO Find X9, Find X9 Ultra, Find X9s, Find N6 (ColorOS 16): works with the Snap Key.
+- OPPO Find X10, Find X10 Pro Max (ColorOS): works with the Snap Key.
+- OPPO Reno 16, Reno 16 Pro, Reno 16 F (ColorOS): works with the AI Snap Key.
+- OnePlus 15, 15R, 13s, 13T, Nord 5 (OxygenOS): works with the Plus Key.
+
+Not working on yours? Tell us on GitHub: https://github.com/Damien-llado/snapkey-mapper/issues/new
 
 The app comes with a library of ready-made shortcuts (timer, alarm, camera, maps, music, chats and more), each checked on an emulator.
 

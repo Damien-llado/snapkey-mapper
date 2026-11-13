@@ -1,2 +1,5 @@
 # Links copied without their "?" (/&ved=...) go to the home page
 /&ved=* / 301
+
+# /about does not exist: send it to the home page
+/about / 301
