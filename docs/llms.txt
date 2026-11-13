@@ -4,6 +4,9 @@
 
 - [Home page and setup guide](https://remapsnapkey.com/): what it does, how to install it in a few steps, compatibility, FAQ.
 - [OnePlus Plus Key guide](https://remapsnapkey.com/oneplus-plus-key/): what the OnePlus Plus Key can do, what the app adds, short setup and FAQ (English only).
+- [What is the Snap Key](https://remapsnapkey.com/what-is-snap-key/): the side key of OPPO phones, what ColorOS lets it do, which phones have it (English only).
+- [Shortcut ideas](https://remapsnapkey.com/shortcuts/): what to put on the key (flashlight, ring mode, voice notes, AI assistants, music, notes, smart home, camera, timers) and how to set each one up (English only).
+- [Setup guide with video](https://remapsnapkey.com/setup/): a one-minute video and the 6 setup steps (English only).
 - [Source code and downloads](https://github.com/Damien-llado/snapkey-mapper): README, releases with SHA-256, issues.
 
 The home page in 13 languages, with the same content:

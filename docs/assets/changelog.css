@@ -34,3 +34,10 @@
   .cl-ver { scroll-margin-top: calc(var(--navh, 3.7rem) + 4rem); padding: 1.1rem 1.1rem; }
   .cl-head { padding-top: 1.5rem; }
 }
+/* Fil d'Ariane (même règle que oneplus.css : la page changelog ne charge pas ce fichier) */
+.crumbs { max-width: calc(var(--wide) + 2 * var(--gut)); margin: 0 auto; padding: 1rem var(--gut) 0; font-size: .92rem; }
+.crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem .5rem; color: var(--muted); }
+.crumbs li + li::before { content: "›"; margin-right: .5rem; color: var(--line-2); }
+.crumbs a { color: var(--muted); }
+.crumbs a:hover { color: var(--ink); }
+.crumbs [aria-current] { color: var(--ink); }

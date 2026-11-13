@@ -3,3 +3,6 @@
 
 # /about does not exist: send it to the home page
 /about / 301
+
+# Download button of the full APK: counted by Cloudflare per path and browser, then sent to the latest release
+/download https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk 302

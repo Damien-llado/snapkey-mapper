@@ -3,7 +3,7 @@
   function track(n) { if (window.clarity) window.clarity('event', n); }
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a'); if (!a) return;
-    if (a.href.indexOf('/releases') > -1) track('download');
+    if (a.href.indexOf('/releases') > -1 || a.pathname === '/download') track('download');
     else if (a.href.indexOf('github.com') > -1) track('github');
   });
   var story = document.getElementById('story');
