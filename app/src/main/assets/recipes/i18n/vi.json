@@ -29,6 +29,12 @@
   },
   "assistant": {
    "name": "Trợ lý"
+  },
+  "actions": {
+   "name": "Thao tác điện thoại"
+  },
+  "recorder": {
+   "name": "Ghi âm"
   }
  },
  "recipes": {
@@ -1030,6 +1036,34 @@
      "where": "Tên @ của tài khoản, không có @."
     }
    }
+  },
+  "actions-torch": {
+   "title": "Bật hoặc tắt đèn pin",
+   "desc": "Bật đèn pin, hoặc tắt nếu đang bật. Không mở gì cả."
+  },
+  "actions-ringer": {
+   "title": "Đổ chuông, rung, im lặng",
+   "desc": "Mỗi lần nhấn chuyển sang chế độ tiếp theo: đổ chuông, rung, rồi im lặng. Im lặng cần quyền truy cập cấp bằng lối tắt tiếp theo; nếu không có, rung sẽ quay về đổ chuông."
+  },
+  "actions-silent-access": {
+   "title": "Cho phép chế độ im lặng",
+   "desc": "Mở danh sách quyền truy cập \"Không làm phiền\": bật SnapKey Mapper để \"Đổ chuông, rung, im lặng\" cũng chuyển được sang im lặng. Một lần là đủ."
+  },
+  "actions-play-pause": {
+   "title": "Phát hoặc tạm dừng",
+   "desc": "Phát hoặc tạm dừng nội dung đang phát: Spotify, YouTube Music, podcast."
+  },
+  "actions-next": {
+   "title": "Bài tiếp theo",
+   "desc": "Chuyển sang bài tiếp theo của nội dung đang phát."
+  },
+  "actions-previous": {
+   "title": "Bài trước",
+   "desc": "Quay lại bài trước của nội dung đang phát."
+  },
+  "recorder-open": {
+   "title": "Mở ghi âm",
+   "desc": "Mở ứng dụng ghi âm của điện thoại, sẵn sàng cho ghi chú giọng nói."
   }
  }
 }

@@ -29,6 +29,12 @@
   },
   "assistant": {
    "name": "Assistent"
+  },
+  "actions": {
+   "name": "Telefonaktionen"
+  },
+  "recorder": {
+   "name": "Sprachrekorder"
   }
  },
  "recipes": {
@@ -1030,6 +1036,34 @@
      "where": "Der @Name des Kontos, ohne das @."
     }
    }
+  },
+  "actions-torch": {
+   "title": "Taschenlampe an oder aus",
+   "desc": "Schaltet die Taschenlampe ein oder aus, wenn sie an ist. Es öffnet sich nichts."
+  },
+  "actions-ringer": {
+   "title": "Klingeln, Vibrieren, Lautlos",
+   "desc": "Jeder Druck wechselt zum nächsten Modus: Klingeln, Vibrieren, dann Lautlos. Lautlos braucht den Zugriff aus der nächsten Verknüpfung; ohne ihn geht Vibrieren zurück zu Klingeln."
+  },
+  "actions-silent-access": {
+   "title": "Lautlos-Modus erlauben",
+   "desc": "Öffnet die Liste „Bitte nicht stören“-Zugriff: Aktiviere SnapKey Mapper, damit „Klingeln, Vibrieren, Lautlos“ auch auf Lautlos schalten kann. Einmal reicht."
+  },
+  "actions-play-pause": {
+   "title": "Wiedergabe oder Pause",
+   "desc": "Startet oder pausiert, was gerade läuft: Spotify, YouTube Music, ein Podcast."
+  },
+  "actions-next": {
+   "title": "Nächster Titel",
+   "desc": "Springt zum nächsten Titel dessen, was gerade läuft."
+  },
+  "actions-previous": {
+   "title": "Vorheriger Titel",
+   "desc": "Springt zum vorherigen Titel dessen, was gerade läuft."
+  },
+  "recorder-open": {
+   "title": "Sprachrekorder öffnen",
+   "desc": "Öffnet den Sprachrekorder des Telefons, bereit für eine Sprachnotiz."
   }
  }
 }

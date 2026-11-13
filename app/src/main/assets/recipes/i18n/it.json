@@ -29,6 +29,12 @@
   },
   "assistant": {
    "name": "Assistente"
+  },
+  "actions": {
+   "name": "Azioni del telefono"
+  },
+  "recorder": {
+   "name": "Registratore vocale"
   }
  },
  "recipes": {
@@ -1030,6 +1036,34 @@
      "where": "Il @nome dell'account, senza la @."
     }
    }
+  },
+  "actions-torch": {
+   "title": "Torcia accesa o spenta",
+   "desc": "Accende la torcia, o la spegne se è accesa. Non si apre nulla."
+  },
+  "actions-ringer": {
+   "title": "Suoneria, vibrazione, silenzioso",
+   "desc": "Ogni pressione passa alla modalità successiva: suoneria, vibrazione, poi silenzioso. Il silenzioso richiede l'accesso dato con la scorciatoia successiva; senza, la vibrazione torna alla suoneria."
+  },
+  "actions-silent-access": {
+   "title": "Consenti la modalità silenziosa",
+   "desc": "Apre l'elenco degli accessi «Non disturbare»: attiva SnapKey Mapper perché «Suoneria, vibrazione, silenzioso» possa passare anche al silenzioso. Basta una volta."
+  },
+  "actions-play-pause": {
+   "title": "Riproduci o metti in pausa",
+   "desc": "Avvia o mette in pausa ciò che sta suonando: Spotify, YouTube Music, un podcast."
+  },
+  "actions-next": {
+   "title": "Brano successivo",
+   "desc": "Passa al brano successivo di ciò che sta suonando."
+  },
+  "actions-previous": {
+   "title": "Brano precedente",
+   "desc": "Torna al brano precedente di ciò che sta suonando."
+  },
+  "recorder-open": {
+   "title": "Apri il registratore vocale",
+   "desc": "Apre il registratore vocale del telefono, pronto per una nota vocale."
   }
  }
 }

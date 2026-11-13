@@ -29,6 +29,12 @@
   },
   "assistant": {
    "name": "Assistent"
+  },
+  "actions": {
+   "name": "Telefoonacties"
+  },
+  "recorder": {
+   "name": "Spraakrecorder"
   }
  },
  "recipes": {
@@ -1030,6 +1036,34 @@
      "where": "De @naam van het account, zonder @."
     }
    }
+  },
+  "actions-torch": {
+   "title": "Zaklamp aan of uit",
+   "desc": "Zet de zaklamp aan, of uit als hij aan staat. Er opent niets."
+  },
+  "actions-ringer": {
+   "title": "Bellen, trillen, stil",
+   "desc": "Elke druk gaat naar de volgende modus: bellen, trillen, dan stil. Stil heeft de toegang nodig die je met de volgende snelkoppeling geeft; zonder die toegang gaat trillen terug naar bellen."
+  },
+  "actions-silent-access": {
+   "title": "Stille modus toestaan",
+   "desc": "Opent de lijst met toegang tot Niet storen: zet SnapKey Mapper aan zodat \"Bellen, trillen, stil\" ook naar stil kan. Eén keer is genoeg."
+  },
+  "actions-play-pause": {
+   "title": "Afspelen of pauzeren",
+   "desc": "Speelt af of pauzeert wat er speelt: Spotify, YouTube Music, een podcast."
+  },
+  "actions-next": {
+   "title": "Volgend nummer",
+   "desc": "Gaat naar het volgende nummer van wat er speelt."
+  },
+  "actions-previous": {
+   "title": "Vorig nummer",
+   "desc": "Gaat terug naar het vorige nummer van wat er speelt."
+  },
+  "recorder-open": {
+   "title": "Spraakrecorder openen",
+   "desc": "Opent de spraakrecorder van de telefoon, klaar voor een spraakmemo."
   }
  }
 }

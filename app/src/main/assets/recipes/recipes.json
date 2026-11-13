@@ -2,6 +2,99 @@
   "version": 1,
   "apps": [
     {
+      "id": "actions",
+      "name": "Phone actions",
+      "kind": "system",
+      "logo": "lucide:zap",
+      "recipes": [
+        {
+          "id": "actions-torch",
+          "title": "Flashlight on or off",
+          "desc": "Turns the flashlight on, or off if it is on. Nothing opens.",
+          "link": "snapkey:torch",
+          "vars": [],
+          "tested": "",
+          "level": "untested",
+          "source": "https://developer.android.com/reference/android/hardware/camera2/CameraManager#setTorchMode(java.lang.String,%20boolean)",
+          "confidence": "documented"
+        },
+        {
+          "id": "actions-ringer",
+          "title": "Ring, vibrate, silent",
+          "desc": "Each press moves to the next mode: ring, vibrate, then silent. Silent needs the access given with the next shortcut; without it, vibrate goes back to ring.",
+          "link": "snapkey:ringer",
+          "vars": [],
+          "tested": "",
+          "level": "untested",
+          "source": "https://developer.android.com/reference/android/media/AudioManager#setRingerMode(int)",
+          "confidence": "documented"
+        },
+        {
+          "id": "actions-silent-access",
+          "title": "Allow silent mode",
+          "desc": "Opens the Do Not Disturb access list: turn on SnapKey Mapper so that \"Ring, vibrate, silent\" can also switch to silent. Once is enough.",
+          "link": "intent:#Intent;action=android.settings.NOTIFICATION_POLICY_ACCESS_SETTINGS;end",
+          "vars": [],
+          "tested": "",
+          "level": "untested",
+          "source": "https://developer.android.com/reference/android/provider/Settings#ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS",
+          "confidence": "documented"
+        },
+        {
+          "id": "actions-play-pause",
+          "title": "Play or pause",
+          "desc": "Plays or pauses what is playing: Spotify, YouTube Music, a podcast.",
+          "link": "snapkey:play-pause",
+          "vars": [],
+          "tested": "",
+          "level": "untested",
+          "source": "https://developer.android.com/reference/android/media/AudioManager#dispatchMediaKeyEvent(android.view.KeyEvent)",
+          "confidence": "documented"
+        },
+        {
+          "id": "actions-next",
+          "title": "Next track",
+          "desc": "Skips to the next track of what is playing.",
+          "link": "snapkey:next",
+          "vars": [],
+          "tested": "",
+          "level": "untested",
+          "source": "https://developer.android.com/reference/android/media/AudioManager#dispatchMediaKeyEvent(android.view.KeyEvent)",
+          "confidence": "documented"
+        },
+        {
+          "id": "actions-previous",
+          "title": "Previous track",
+          "desc": "Goes back to the previous track of what is playing.",
+          "link": "snapkey:previous",
+          "vars": [],
+          "tested": "",
+          "level": "untested",
+          "source": "https://developer.android.com/reference/android/media/AudioManager#dispatchMediaKeyEvent(android.view.KeyEvent)",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "id": "recorder",
+      "name": "Voice recorder",
+      "kind": "system",
+      "logo": "lucide:mic",
+      "recipes": [
+        {
+          "id": "recorder-open",
+          "title": "Open the voice recorder",
+          "desc": "Opens the phone's voice recorder, ready for a voice note.",
+          "link": "intent:#Intent;action=android.provider.MediaStore.RECORD_SOUND;end",
+          "vars": [],
+          "tested": "",
+          "level": "untested",
+          "source": "https://developer.android.com/reference/android/provider/MediaStore.Audio.Media#RECORD_SOUND_ACTION",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
       "id": "clock",
       "name": "Clock",
       "kind": "system",

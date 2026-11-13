@@ -29,6 +29,12 @@
   },
   "assistant": {
    "name": "Assistente"
+  },
+  "actions": {
+   "name": "Ações do celular"
+  },
+  "recorder": {
+   "name": "Gravador de voz"
   }
  },
  "recipes": {
@@ -1030,6 +1036,34 @@
      "where": "O @nome da conta, sem o @."
     }
    }
+  },
+  "actions-torch": {
+   "title": "Lanterna ligada ou desligada",
+   "desc": "Liga a lanterna, ou desliga se estiver ligada. Nada abre."
+  },
+  "actions-ringer": {
+   "title": "Toque, vibrar, silencioso",
+   "desc": "Cada toque passa ao modo seguinte: toque, vibrar e depois silencioso. O silencioso precisa do acesso dado com o próximo atalho; sem ele, o vibrar volta ao toque."
+  },
+  "actions-silent-access": {
+   "title": "Permitir o modo silencioso",
+   "desc": "Abre a lista de acesso ao \"Não perturbe\": ative o SnapKey Mapper para que \"Toque, vibrar, silencioso\" também possa passar ao silencioso. Uma vez basta."
+  },
+  "actions-play-pause": {
+   "title": "Tocar ou pausar",
+   "desc": "Toca ou pausa o que está tocando: Spotify, YouTube Music, um podcast."
+  },
+  "actions-next": {
+   "title": "Próxima faixa",
+   "desc": "Pula para a próxima faixa do que está tocando."
+  },
+  "actions-previous": {
+   "title": "Faixa anterior",
+   "desc": "Volta para a faixa anterior do que está tocando."
+  },
+  "recorder-open": {
+   "title": "Abrir o gravador de voz",
+   "desc": "Abre o gravador de voz do celular, pronto para uma nota de voz."
   }
  }
 }

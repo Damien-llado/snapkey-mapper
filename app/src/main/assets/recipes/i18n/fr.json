@@ -29,6 +29,12 @@
   },
   "assistant": {
    "name": "Assistant"
+  },
+  "actions": {
+   "name": "Actions du téléphone"
+  },
+  "recorder": {
+   "name": "Dictaphone"
   }
  },
  "recipes": {
@@ -1030,6 +1036,34 @@
      "where": "Le @nom du compte, sans le @."
     }
    }
+  },
+  "actions-torch": {
+   "title": "Allumer ou éteindre la torche",
+   "desc": "Allume la torche, ou l'éteint si elle est allumée. Rien ne s'ouvre."
+  },
+  "actions-ringer": {
+   "title": "Sonnerie, vibreur, silence",
+   "desc": "Chaque appui passe au mode suivant : sonnerie, vibreur, puis silence. Le silence demande l'accès donné avec le raccourci suivant ; sans lui, le vibreur repasse en sonnerie."
+  },
+  "actions-silent-access": {
+   "title": "Autoriser le mode silence",
+   "desc": "Ouvre la liste des accès « Ne pas déranger » : activez SnapKey Mapper pour que « Sonnerie, vibreur, silence » puisse aussi passer en silence. Une fois suffit."
+  },
+  "actions-play-pause": {
+   "title": "Lecture ou pause",
+   "desc": "Lance ou met en pause ce qui joue : Spotify, YouTube Music, un podcast."
+  },
+  "actions-next": {
+   "title": "Piste suivante",
+   "desc": "Passe à la piste suivante de ce qui joue."
+  },
+  "actions-previous": {
+   "title": "Piste précédente",
+   "desc": "Revient à la piste précédente de ce qui joue."
+  },
+  "recorder-open": {
+   "title": "Ouvrir le dictaphone",
+   "desc": "Ouvre le dictaphone du téléphone, prêt pour une note vocale."
   }
  }
 }

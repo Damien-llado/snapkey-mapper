@@ -29,6 +29,12 @@
   },
   "assistant": {
    "name": "Asistente"
+  },
+  "actions": {
+   "name": "Acciones del teléfono"
+  },
+  "recorder": {
+   "name": "Grabadora de voz"
   }
  },
  "recipes": {
@@ -1030,6 +1036,34 @@
      "where": "El @nombre de la cuenta, sin la @."
     }
    }
+  },
+  "actions-torch": {
+   "title": "Encender o apagar la linterna",
+   "desc": "Enciende la linterna, o la apaga si está encendida. No se abre nada."
+  },
+  "actions-ringer": {
+   "title": "Sonido, vibración, silencio",
+   "desc": "Cada pulsación pasa al modo siguiente: sonido, vibración y luego silencio. El silencio necesita el acceso que da el siguiente atajo; sin él, la vibración vuelve a sonido."
+  },
+  "actions-silent-access": {
+   "title": "Permitir el modo silencio",
+   "desc": "Abre la lista de acceso a «No molestar»: activa SnapKey Mapper para que «Sonido, vibración, silencio» también pueda pasar a silencio. Basta con una vez."
+  },
+  "actions-play-pause": {
+   "title": "Reproducir o pausar",
+   "desc": "Reproduce o pausa lo que está sonando: Spotify, YouTube Music, un pódcast."
+  },
+  "actions-next": {
+   "title": "Pista siguiente",
+   "desc": "Pasa a la pista siguiente de lo que está sonando."
+  },
+  "actions-previous": {
+   "title": "Pista anterior",
+   "desc": "Vuelve a la pista anterior de lo que está sonando."
+  },
+  "recorder-open": {
+   "title": "Abrir la grabadora de voz",
+   "desc": "Abre la grabadora de voz del teléfono, lista para una nota de voz."
   }
  }
 }

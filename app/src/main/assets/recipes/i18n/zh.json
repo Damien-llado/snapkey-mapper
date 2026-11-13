@@ -29,6 +29,12 @@
   },
   "assistant": {
    "name": "语音助手"
+  },
+  "actions": {
+   "name": "手机操作"
+  },
+  "recorder": {
+   "name": "录音机"
   }
  },
  "recipes": {
@@ -1030,6 +1036,34 @@
      "where": "账号的 @名称，不带 @。"
     }
    }
+  },
+  "actions-torch": {
+   "title": "打开或关闭手电筒",
+   "desc": "打开手电筒，已打开时则关闭。不会打开任何应用。"
+  },
+  "actions-ringer": {
+   "title": "响铃、振动、静音",
+   "desc": "每按一次切换到下一个模式：响铃、振动，然后静音。静音需要用下一个快捷方式授予的权限；没有权限时，振动之后回到响铃。"
+  },
+  "actions-silent-access": {
+   "title": "允许静音模式",
+   "desc": "打开“勿扰”权限列表：开启 SnapKey Mapper，让“响铃、振动、静音”也能切换到静音。只需一次。"
+  },
+  "actions-play-pause": {
+   "title": "播放或暂停",
+   "desc": "播放或暂停正在播放的内容：Spotify、YouTube Music、播客。"
+  },
+  "actions-next": {
+   "title": "下一首",
+   "desc": "跳到正在播放内容的下一首。"
+  },
+  "actions-previous": {
+   "title": "上一首",
+   "desc": "回到正在播放内容的上一首。"
+  },
+  "recorder-open": {
+   "title": "打开录音机",
+   "desc": "打开手机的录音机，随时录下语音备忘。"
   }
  }
 }

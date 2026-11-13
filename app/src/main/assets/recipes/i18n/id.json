@@ -29,6 +29,12 @@
   },
   "assistant": {
    "name": "Asisten"
+  },
+  "actions": {
+   "name": "Aksi ponsel"
+  },
+  "recorder": {
+   "name": "Perekam suara"
   }
  },
  "recipes": {
@@ -1030,6 +1036,34 @@
      "where": "@nama akun, tanpa @."
     }
    }
+  },
+  "actions-torch": {
+   "title": "Senter nyala atau mati",
+   "desc": "Menyalakan senter, atau mematikannya jika menyala. Tidak ada yang terbuka."
+  },
+  "actions-ringer": {
+   "title": "Dering, getar, senyap",
+   "desc": "Setiap tekanan pindah ke mode berikutnya: dering, getar, lalu senyap. Senyap memerlukan akses yang diberikan lewat pintasan berikutnya; tanpa itu, getar kembali ke dering."
+  },
+  "actions-silent-access": {
+   "title": "Izinkan mode senyap",
+   "desc": "Membuka daftar akses \"Jangan Ganggu\": aktifkan SnapKey Mapper agar \"Dering, getar, senyap\" juga bisa beralih ke senyap. Cukup sekali."
+  },
+  "actions-play-pause": {
+   "title": "Putar atau jeda",
+   "desc": "Memutar atau menjeda yang sedang diputar: Spotify, YouTube Music, podcast."
+  },
+  "actions-next": {
+   "title": "Lagu berikutnya",
+   "desc": "Lompat ke lagu berikutnya dari yang sedang diputar."
+  },
+  "actions-previous": {
+   "title": "Lagu sebelumnya",
+   "desc": "Kembali ke lagu sebelumnya dari yang sedang diputar."
+  },
+  "recorder-open": {
+   "title": "Buka perekam suara",
+   "desc": "Membuka perekam suara ponsel, siap untuk catatan suara."
   }
  }
 }

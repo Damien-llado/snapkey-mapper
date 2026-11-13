@@ -111,8 +111,12 @@ final class Prefs {
         }
     }
 
-    /** Opens a link: "intent:" links describe a full Android intent (set a timer, open the camera...); anything else is opened as a link. */
+    /** Opens a link: "intent:" links describe a full Android intent (set a timer, open the camera...), "snapkey:" links are built-in actions; anything else is opened as a link. */
     static void open(Context c, String link) {
+        if (link.startsWith(Actions.SCHEME)) {
+            Actions.run(c, link); // flashlight, ring mode, music: nothing to open
+            return;
+        }
         Intent i;
         try {
             i = link.startsWith("intent:") ? Intent.parseUri(link, Intent.URI_INTENT_SCHEME) : new Intent(Intent.ACTION_VIEW, Uri.parse(link));
