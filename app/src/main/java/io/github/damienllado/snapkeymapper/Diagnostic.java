@@ -56,22 +56,22 @@ final class Diagnostic {
 
     /** The key pattern the user found, for a new phone: only that line, never the capture (it holds other apps' logs). */
     static void shareKey(Context c, String pattern) {
-        issue(c, "New key: " + model(), device(c) + "\n\nKey pattern:\n```\n" + pattern + "\n```", "new-key");
+        issue(c, "New key: " + model(), device(c) + "\n\nKey pattern:\n```\n" + pattern + "\n```");
     }
 
     static void askFix(Context c) {
-        issue(c, "Doesn't work on " + model(), "What happens:\n\n\nDiagnostic:\n```\n" + text(c) + "\n```", "device-support");
+        issue(c, "Doesn't work on " + model(), "What happens:\n\n\nDiagnostic:\n```\n" + text(c) + "\n```");
     }
 
     /** Opens a filled-in GitHub issue in the browser, which sends it (the lite edition has no INTERNET permission). No browser: copies the text. */
-    private static void issue(Context c, String title, String body, String label) {
+    private static void issue(Context c, String title, String body) {
         if (Uri.encode(body).length() > MAX_BODY) {
             String cut = "\n\n(Cut: too long for a link.)";
             while (Uri.encode(body + cut).length() > MAX_BODY) body = body.substring(0, body.length() - 100);
             body += cut;
         }
         Uri url = Uri.parse(NEW_ISSUE).buildUpon().appendQueryParameter("title", title)
-                .appendQueryParameter("body", body).appendQueryParameter("labels", label).build();
+                .appendQueryParameter("body", body).build();
         try {
             c.startActivity(new Intent(Intent.ACTION_VIEW, url));
         } catch (ActivityNotFoundException e) {
