@@ -55,6 +55,7 @@
     <string name="finder_save">Salva la cattura in un file</string>
     <string name="finder_pattern">Schema da riconoscere (una parte della riga, senza i numeri che cambiano)</string>
     <string name="toast_pattern_saved">Schema salvato, puoi avviare l\'ascolto</string>
+    <string name="finder_tap_hint">👆 Tocca la riga che ricompare a ogni pressione</string>
     <string name="toast_no_lines">Nessuna riga: spunta \"Mostra tutte le righe\" o controlla l\'autorizzazione</string>
     <string name="toast_saved">Cattura salvata</string>
     <string name="toast_choose_pattern">Prima scegli lo schema (menu › Un altro telefono)</string>

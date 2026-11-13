@@ -55,6 +55,7 @@
     <string name="finder_save">将捕获结果保存到文件</string>
     <string name="finder_pattern">要识别的特征（该行的一部分，不含会变化的数字）</string>
     <string name="toast_pattern_saved">特征已保存，可以开始监听了</string>
+    <string name="finder_tap_hint">👆 点按每次按键时都会出现的那一行</string>
     <string name="toast_no_lines">没有日志行：勾选“显示所有行”或检查权限</string>
     <string name="toast_saved">捕获结果已保存</string>
     <string name="toast_choose_pattern">请先选择特征（菜单 › 其他手机）</string>

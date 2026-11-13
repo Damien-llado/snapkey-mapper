@@ -55,6 +55,7 @@
     <string name="finder_save">Capture opslaan in een bestand</string>
     <string name="finder_pattern">Patroon om te herkennen (deel van de regel, zonder getallen die veranderen)</string>
     <string name="toast_pattern_saved">Patroon opgeslagen, je kunt beginnen met luisteren</string>
+    <string name="finder_tap_hint">👆 Tik op de regel die bij elke druk terugkomt</string>
     <string name="toast_no_lines">Geen regel: vink \"Alle regels tonen\" aan of controleer de toestemming</string>
     <string name="toast_saved">Capture opgeslagen</string>
     <string name="toast_choose_pattern">Kies eerst het patroon (menu › Andere telefoon)</string>

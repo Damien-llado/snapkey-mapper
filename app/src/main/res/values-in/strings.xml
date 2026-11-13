@@ -55,6 +55,7 @@
     <string name="finder_save">Simpan rekaman ke file</string>
     <string name="finder_pattern">Pola yang dikenali (bagian dari baris, tanpa angka yang berubah-ubah)</string>
     <string name="toast_pattern_saved">Pola disimpan, Anda bisa mulai mendengarkan</string>
+    <string name="finder_tap_hint">👆 Ketuk baris yang muncul setiap kali tombol ditekan</string>
     <string name="toast_no_lines">Tidak ada baris: centang \"Tampilkan semua baris\" atau periksa izinnya</string>
     <string name="toast_saved">Rekaman disimpan</string>
     <string name="toast_choose_pattern">Pilih polanya dulu (menu › Ponsel lain)</string>

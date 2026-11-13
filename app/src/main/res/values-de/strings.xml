@@ -55,6 +55,7 @@
     <string name="finder_save">Aufzeichnung als Datei speichern</string>
     <string name="finder_pattern">Zu erkennendes Muster (Teil der Zeile, ohne wechselnde Zahlen)</string>
     <string name="toast_pattern_saved">Muster gespeichert, du kannst die Erkennung starten</string>
+    <string name="finder_tap_hint">👆 Tippe auf die Zeile, die bei jedem Druck wiederkommt</string>
     <string name="toast_no_lines">Keine Zeile: Aktiviere „Alle Zeilen anzeigen“ oder prüf die Berechtigung</string>
     <string name="toast_saved">Aufzeichnung gespeichert</string>
     <string name="toast_choose_pattern">Wähl zuerst das Muster (Menü › Anderes Telefon)</string>

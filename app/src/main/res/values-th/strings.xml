@@ -55,6 +55,7 @@
     <string name="finder_save">บันทึกข้อมูลที่เก็บลงในไฟล์</string>
     <string name="finder_pattern">รูปแบบที่ต้องจดจำ (ส่วนหนึ่งของบรรทัด ไม่รวมตัวเลขที่เปลี่ยนไป)</string>
     <string name="toast_pattern_saved">บันทึกรูปแบบแล้ว เริ่มรอฟังได้เลย</string>
+    <string name="finder_tap_hint">👆 แตะบรรทัดที่ปรากฏทุกครั้งที่กด</string>
     <string name="toast_no_lines">ไม่มีบรรทัด: เลือก \"แสดงทุกบรรทัด\" หรือตรวจสอบสิทธิ์</string>
     <string name="toast_saved">บันทึกข้อมูลที่เก็บแล้ว</string>
     <string name="toast_choose_pattern">เลือกรูปแบบก่อน (เมนู › ใช้โทรศัพท์รุ่นอื่น)</string>

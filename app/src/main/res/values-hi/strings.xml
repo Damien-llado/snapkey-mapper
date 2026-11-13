@@ -55,6 +55,7 @@
     <string name="finder_save">कैप्चर फ़ाइल में सेव करें</string>
     <string name="finder_pattern">पहचानने का पैटर्न (लाइन का हिस्सा, बदलने वाले नंबरों के बिना)</string>
     <string name="toast_pattern_saved">पैटर्न सेव हो गया, अब आप सुनना शुरू कर सकते हैं</string>
+    <string name="finder_tap_hint">👆 वह लाइन टैप करें जो हर बार दबाने पर आती है</string>
     <string name="toast_no_lines">कोई लाइन नहीं: \"सभी लाइनें दिखाएँ\" पर टिक करें या अनुमति जाँचें</string>
     <string name="toast_saved">कैप्चर सेव हो गया</string>
     <string name="toast_choose_pattern">पहले पैटर्न चुनें (मेन्यू › दूसरा फ़ोन)</string>

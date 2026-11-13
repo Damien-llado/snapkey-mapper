@@ -55,6 +55,7 @@
     <string name="finder_save">Save the capture to a file</string>
     <string name="finder_pattern">Pattern to recognise (part of the line, without numbers that change)</string>
     <string name="toast_pattern_saved">Pattern saved, you can start listening</string>
+    <string name="finder_tap_hint">👆 Tap the line that comes back at each press</string>
     <string name="toast_no_lines">No line: tick \"Show all lines\" or check the permission</string>
     <string name="toast_saved">Capture saved</string>
     <string name="toast_choose_pattern">Choose the pattern first (menu › Another phone)</string>

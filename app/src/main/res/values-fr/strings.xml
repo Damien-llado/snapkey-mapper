@@ -55,6 +55,7 @@
     <string name="finder_save">Enregistrer la capture dans un fichier</string>
     <string name="finder_pattern">Motif à reconnaître (une partie de la ligne, sans les nombres qui changent)</string>
     <string name="toast_pattern_saved">Motif enregistré, vous pouvez démarrer l\'écoute</string>
+    <string name="finder_tap_hint">👆 Touchez la ligne qui revient à chaque appui</string>
     <string name="toast_no_lines">Aucune ligne : cochez « Afficher toutes les lignes » ou vérifiez l\'autorisation</string>
     <string name="toast_saved">Capture enregistrée</string>
     <string name="toast_choose_pattern">Choisissez d\'abord le motif (menu › Un autre téléphone)</string>

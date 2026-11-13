@@ -31,6 +31,7 @@ public class FinderActivity extends Activity {
     private EditText pattern;
     private ArrayAdapter<String> adapter;
     private View share;
+    private TextView tapHint, shareSaved;
     private final List<String> captured = new ArrayList<>();
     private Process log;
 
@@ -63,6 +64,11 @@ public class FinderActivity extends Activity {
         pattern = Ui.add(top, Ui.field(this, Prefs.pattern(this), "KEYCODE_…"), 6);
         Ui.add(top, Ui.button(this, getString(R.string.finder_save), false, v -> saveCapture()), 10);
         Ui.add(top, Ui.body(this, getString(R.string.finder_privacy)), 6);
+        // the captured lines below are buttons: say so, they look like plain text
+        tapHint = Ui.add(top, Ui.body(this, getString(R.string.finder_tap_hint)), 14);
+        tapHint.setTextColor(Ui.accent);
+        tapHint.setTypeface(tapHint.getTypeface(), android.graphics.Typeface.BOLD);
+        tapHint.setVisibility(View.GONE);
 
         ListView list = new ListView(this);
         list.setDivider(null);
@@ -74,7 +80,8 @@ public class FinderActivity extends Activity {
                 t.setTextColor(Ui.ink);
                 t.setTypeface(Ui.mono);
                 t.setTextSize(11);
-                t.setPadding(side, Ui.dp(FinderActivity.this, 6), side, Ui.dp(FinderActivity.this, 6));
+                t.setPadding(side, Ui.dp(FinderActivity.this, 10), side, Ui.dp(FinderActivity.this, 10));
+                t.setBackgroundColor(position % 2 == 0 ? Ui.card : Ui.bg);
                 return t;
             }
         };
@@ -82,7 +89,8 @@ public class FinderActivity extends Activity {
         list.setOnItemClickListener((p, v, pos, id) -> {
             pattern.setText(suggestion(adapter.getItem(pos - list.getHeaderViewsCount())));
             save();
-            Toast.makeText(this, getString(R.string.toast_pattern_saved), Toast.LENGTH_LONG).show();
+            // said in the bar rather than by a toast, which covered the bar's text
+            shareSaved.setText(getString(R.string.toast_pattern_saved));
             share.setVisibility(View.VISIBLE);
         });
         root.addView(list, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
@@ -91,7 +99,11 @@ public class FinderActivity extends Activity {
         bar.setOrientation(LinearLayout.VERTICAL);
         bar.setPadding(side, Ui.dp(this, 10), side, Ui.dp(this, 12));
         bar.setBackgroundColor(Ui.card);
-        bar.addView(Ui.body(this, getString(R.string.report_share_text)));
+        shareSaved = Ui.body(this, "");
+        shareSaved.setTextColor(Ui.accent);
+        shareSaved.setTypeface(shareSaved.getTypeface(), android.graphics.Typeface.BOLD);
+        bar.addView(shareSaved);
+        Ui.add(bar, Ui.body(this, getString(R.string.report_share_text)), 4);
         Ui.add(bar, Ui.button(this, getString(R.string.report_share), true,
                 v -> Diagnostic.shareKey(this, pattern.getText().toString().trim())), 8);
         bar.setVisibility(View.GONE);
@@ -151,6 +163,7 @@ public class FinderActivity extends Activity {
         }
         adapter.clear();
         adapter.addAll(lines);
+        tapHint.setVisibility(lines.isEmpty() ? View.GONE : View.VISIBLE);
         if (lines.isEmpty()) Toast.makeText(this, getString(R.string.toast_no_lines), Toast.LENGTH_LONG).show();
     }
 
