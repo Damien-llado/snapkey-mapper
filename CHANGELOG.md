@@ -2,6 +2,17 @@
 
 All notable changes to SnapKey Mapper are listed here, newest first. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/).
 
+## [1.0.13] - 2026-11-13
+
+### Added
+
+- **Phone actions** in the shortcut library: flashlight on or off, ring / vibrate / silent, play or pause, next and previous track. They run without opening anything. Silent needs Do Not Disturb access once (a shortcut opens the right screen).
+- **Voice recorder** shortcut: opens the phone's voice recorder.
+
+### Changed
+
+- Shortcut library: each app shows the real icon of your phone (the installed app, or for timers, camera, calls and other Android functions, the app that handles them on your phone). The built-in logo is shown only when the app is not installed.
+
 ## [1.0.12] - 2026-11-13
 
 ### Changed
@@ -131,6 +142,7 @@ All notable changes to SnapKey Mapper are listed here, newest first. The format 
 
 - First public release.
 
+[1.0.13]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.13
 [1.0.12]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.12
 [1.0.11]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.11
 [1.0.10]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.10
