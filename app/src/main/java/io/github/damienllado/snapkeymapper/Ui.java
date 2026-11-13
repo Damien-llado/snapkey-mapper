@@ -197,13 +197,19 @@ final class Ui {
     /** Rounded tile with the logo of an app or of an Android function. */
     static ImageView logo(Context c, Recipes.App app, int sizeDp) {
         ImageView v = new ImageView(c);
+        v.setContentDescription(app.name);
+        // the real icon of this phone first; the bundled logo only when the app is not installed
+        android.graphics.drawable.Drawable real = app.icon(c);
+        if (real != null) {
+            v.setImageDrawable(real);
+            return v;
+        }
         int id = c.getResources().getIdentifier(app.logo, "drawable", c.getPackageName());
         if (id != 0) v.setImageResource(id);
         int pad = dp(c, sizeDp * 0.22f);
         v.setPadding(pad, pad, pad, pad);
         // system functions sit on a green tint, brand logos on a light tile so dark logos stay readable at night
         v.setBackground(shape(c, app.system ? (night ? 0x2A3BD99A : 0x1A0A8A63) : (night ? 0xFFF0F4F1 : 0xFFFFFFFF), sizeDp * 0.3f, app.system ? 0 : line));
-        v.setContentDescription(app.name);
         return v;
     }
 

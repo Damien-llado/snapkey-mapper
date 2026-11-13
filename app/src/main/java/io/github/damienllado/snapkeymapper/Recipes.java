@@ -1,7 +1,10 @@
 package io.github.damienllado.snapkeymapper;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 
 import org.json.JSONArray;
@@ -45,6 +48,36 @@ final class Recipes {
                 }
             }
             return false;
+        }
+
+        /** The icon the phone shows: the installed app, or for an Android function the app that handles it here
+         *  (this phone's clock, camera, dialer). Null when there is none: the bundled logo is shown instead. */
+        Drawable icon(Context c) {
+            PackageManager pm = c.getPackageManager();
+            if (!system) {
+                List<String> all = new ArrayList<>(also);
+                all.add(0, pkg);
+                for (String p : all) {
+                    try {
+                        if (!p.isEmpty()) return pm.getApplicationIcon(p);
+                    } catch (PackageManager.NameNotFoundException e) {
+                        // try the next build
+                    }
+                }
+                return null;
+            }
+            for (Recipe r : recipes) {
+                try {
+                    // placeholders such as [SECONDS] would make an integer extra unreadable
+                    Intent i = Intent.parseUri(r.link.replaceAll("\\[[A-Z_]+]", "0"), Intent.URI_INTENT_SCHEME);
+                    ResolveInfo ri = pm.resolveActivity(i, PackageManager.MATCH_DEFAULT_ONLY);
+                    // "android" is the chooser: no default app for this function
+                    if (ri != null && !ri.activityInfo.packageName.equals("android")) return ri.activityInfo.applicationInfo.loadIcon(pm);
+                } catch (Exception e) {
+                    // next recipe
+                }
+            }
+            return null;
         }
     }
 
