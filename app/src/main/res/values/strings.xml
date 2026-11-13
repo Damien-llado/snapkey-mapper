@@ -171,13 +171,19 @@
     <string name="wiz_done_btn">Continue</string>
     <string name="home_setup_title">Set up SnapKey Mapper</string>
     <string name="home_setup_text">A few steps, once. The app opens each setting for you and checks it.</string>
-    <string name="home_finder">The key does nothing? Another phone: find your key</string>
     <string name="wiz_skip">Already done, continue</string>
     <string name="wiz_notif_title">Turn on notifications</string>
     <string name="wiz_notif_text">The pairing code is typed in a notification of the app. Turn on its notifications, then come back here.</string>
     <string name="wiz_notif_btn">Open notifications</string>
     <string name="menu_diag">Copy the diagnostic</string>
     <string name="diag_copied">Diagnostic copied: paste it in a GitHub issue</string>
-    <string name="diag_stuck">Stuck? Copy the diagnostic for a GitHub issue</string>
+    <string name="report_entry">Doesn\'t work on my phone?</string>
+    <string name="report_find">Find my key myself</string>
+    <string name="report_find_text">Your phone writes something else when you press the key. Record it and pick the line: the app learns your key.</string>
+    <string name="report_fix">Let us fix it</string>
+    <string name="report_fix_text">Opens a GitHub issue (free account) with your phone model, its system and the diagnostic, never what the key opens. You read it before posting it.</string>
+    <string name="report_share">Share your key so it works for everyone</string>
+    <string name="report_share_text">Opens a GitHub issue with your phone model and this pattern only, never the rest of the capture.</string>
+    <string name="report_copied">No browser found: text copied, paste it in a GitHub issue</string>
     <string name="tile_label" translatable="false">SnapKey</string>
 </resources>

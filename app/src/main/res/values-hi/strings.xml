@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">जारी रखें</string>
     <string name="home_setup_title">SnapKey Mapper सेट करें</string>
     <string name="home_setup_text">कुछ चरण, सिर्फ़ एक बार। ऐप हर सेटिंग आपके लिए खोलता है और उसे जाँचता है।</string>
-    <string name="home_finder">बटन कुछ नहीं करता? दूसरा फ़ोन: अपना बटन खोजें</string>
     <string name="wiz_skip">यह हो चुका है, आगे बढ़ें</string>
     <string name="wiz_notif_title">सूचनाएं चालू करें</string>
     <string name="wiz_notif_text">पेयरिंग कोड ऐप की एक सूचना में लिखा जाता है। इसकी सूचनाएं चालू करें, फिर यहां लौटें।</string>
     <string name="wiz_notif_btn">सूचनाएं खोलें</string>
     <string name="menu_diag">डायग्नोस्टिक कॉपी करें</string>
     <string name="diag_copied">डायग्नोस्टिक कॉपी हो गया: इसे GitHub issue में चिपकाएं</string>
-    <string name="diag_stuck">अटक गए? GitHub issue के लिए डायग्नोस्टिक कॉपी करें</string>
+    <string name="report_entry">मेरे फ़ोन पर काम नहीं करता?</string>
+    <string name="report_find">अपना बटन खुद ढूँढें</string>
+    <string name="report_find_text">बटन दबाने पर आपका फ़ोन कुछ और लिखता है। उसे रिकॉर्ड करें और लाइन चुनें: ऐप आपका बटन सीख लेता है।</string>
+    <string name="report_fix">हमें ठीक करने दें</string>
+    <string name="report_fix_text">GitHub issue खोलता है (मुफ़्त खाता) जिसमें फ़ोन का मॉडल, उसका सिस्टम और डायग्नोस्टिक होता है, बटन क्या खोलता है वह कभी नहीं। भेजने से पहले आप इसे पढ़ लेते हैं।</string>
+    <string name="report_share">अपना बटन शेयर करें ताकि यह सबके लिए काम करे</string>
+    <string name="report_share_text">GitHub issue खोलता है जिसमें सिर्फ़ फ़ोन का मॉडल और यह पैटर्न होता है, कैप्चर का बाकी हिस्सा कभी नहीं।</string>
+    <string name="report_copied">कोई ब्राउज़र नहीं मिला: टेक्स्ट कॉपी हो गया, इसे GitHub issue में चिपकाएं</string>
 </resources>

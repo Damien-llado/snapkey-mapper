@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">Tiếp tục</string>
     <string name="home_setup_title">Thiết lập SnapKey Mapper</string>
     <string name="home_setup_text">Vài bước, chỉ một lần. Ứng dụng mở từng mục cài đặt giúp bạn và tự kiểm tra.</string>
-    <string name="home_finder">Phím không phản hồi? Điện thoại khác: tìm phím của bạn</string>
     <string name="wiz_skip">Đã làm rồi, tiếp tục</string>
     <string name="wiz_notif_title">Bật thông báo</string>
     <string name="wiz_notif_text">Mã ghép nối được nhập trong một thông báo của ứng dụng. Hãy bật thông báo của ứng dụng, rồi quay lại đây.</string>
     <string name="wiz_notif_btn">Mở thông báo</string>
     <string name="menu_diag">Sao chép thông tin chẩn đoán</string>
     <string name="diag_copied">Đã sao chép chẩn đoán: dán vào một issue trên GitHub</string>
-    <string name="diag_stuck">Gặp khó? Sao chép chẩn đoán để gửi issue trên GitHub</string>
+    <string name="report_entry">Không hoạt động trên điện thoại của tôi?</string>
+    <string name="report_find">Tự tìm phím của tôi</string>
+    <string name="report_find_text">Điện thoại của bạn ghi một dòng khác khi bạn nhấn phím. Hãy ghi lại và chọn dòng đó: ứng dụng sẽ học phím của bạn.</string>
+    <string name="report_fix">Để chúng tôi sửa</string>
+    <string name="report_fix_text">Mở một issue trên GitHub (tài khoản miễn phí) gồm mẫu điện thoại, hệ thống và thông tin chẩn đoán, không bao giờ có thứ mà phím mở. Bạn đọc lại trước khi đăng.</string>
+    <string name="report_share">Chia sẻ phím của bạn để mọi người đều dùng được</string>
+    <string name="report_share_text">Mở một issue trên GitHub chỉ gồm mẫu điện thoại và mẫu nhận diện này, không bao giờ có phần còn lại của bản ghi.</string>
+    <string name="report_copied">Không tìm thấy trình duyệt: đã sao chép văn bản, dán vào một issue trên GitHub</string>
 </resources>

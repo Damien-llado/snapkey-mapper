@@ -4,7 +4,7 @@ labels: [bug]
 body:
   - type: markdown
     attributes:
-      value: In the app, open the menu (☰) and tap **Copy the diagnostic**, or tap **Stuck? Copy the diagnostic** at the bottom of any setup step. It contains your phone model, system version and the state of each step, never the app or link you chose.
+      value: In the app, tap **Doesn't work on my phone?** at the bottom of the home screen or of any setup step, then **Let us fix it**, which fills in a new issue for you. Or open the menu (☰) and tap **Copy the diagnostic**. It contains your phone model, system version and the state of each step, never the app or link you chose.
   - type: textarea
     id: diagnostic
     attributes:

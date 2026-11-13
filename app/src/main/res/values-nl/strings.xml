@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">Doorgaan</string>
     <string name="home_setup_title">SnapKey Mapper instellen</string>
     <string name="home_setup_text">Een paar stappen, eenmalig. De app opent elke instelling voor je en controleert hem.</string>
-    <string name="home_finder">Doet de toets niets? Andere telefoon: zoek je toets</string>
     <string name="wiz_skip">Al gedaan, doorgaan</string>
     <string name="wiz_notif_title">Meldingen aanzetten</string>
     <string name="wiz_notif_text">De koppelcode typ je in een melding van de app. Zet de meldingen aan en kom dan hier terug.</string>
     <string name="wiz_notif_btn">Meldingen openen</string>
     <string name="menu_diag">Diagnose kopiëren</string>
     <string name="diag_copied">Diagnose gekopieerd: plak hem in een GitHub-issue</string>
-    <string name="diag_stuck">Vast? Kopieer de diagnose voor een GitHub-issue</string>
+    <string name="report_entry">Werkt het niet op mijn telefoon?</string>
+    <string name="report_find">Zelf mijn toets vinden</string>
+    <string name="report_find_text">Je telefoon schrijft iets anders als je op de toets drukt. Neem het op en kies de regel: de app leert je toets.</string>
+    <string name="report_fix">Laat ons het oplossen</string>
+    <string name="report_fix_text">Opent een GitHub-issue (gratis account) met het model van je telefoon, het systeem en de diagnose, nooit wat de toets opent. Je leest het na voordat je het plaatst.</string>
+    <string name="report_share">Deel je toets zodat hij voor iedereen werkt</string>
+    <string name="report_share_text">Opent een GitHub-issue met alleen het model van je telefoon en dit patroon, nooit de rest van de opname.</string>
+    <string name="report_copied">Geen browser gevonden: tekst gekopieerd, plak hem in een GitHub-issue</string>
 </resources>

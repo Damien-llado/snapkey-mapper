@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">Continuer</string>
     <string name="home_setup_title">Configurer SnapKey Mapper</string>
     <string name="home_setup_text">Quelques étapes, une seule fois. L\'appli ouvre chaque réglage pour vous et le vérifie.</string>
-    <string name="home_finder">La touche ne fait rien ? Autre téléphone : trouver votre touche</string>
     <string name="wiz_skip">C\'est déjà fait, continuer</string>
     <string name="wiz_notif_title">Activer les notifications</string>
     <string name="wiz_notif_text">Le code d\'association se saisit dans une notification de l\'appli. Activez ses notifications, puis revenez ici.</string>
     <string name="wiz_notif_btn">Ouvrir les notifications</string>
     <string name="menu_diag">Copier le diagnostic</string>
     <string name="diag_copied">Diagnostic copié : collez-le dans une issue GitHub</string>
-    <string name="diag_stuck">Bloqué ? Copiez le diagnostic pour une issue GitHub</string>
+    <string name="report_entry">Ça ne marche pas sur mon téléphone ?</string>
+    <string name="report_find">Trouver ma touche moi-même</string>
+    <string name="report_find_text">Votre téléphone écrit autre chose quand vous appuyez sur la touche. Enregistrez-le et choisissez la ligne : l\'appli apprend votre touche.</string>
+    <string name="report_fix">Laissez-nous corriger</string>
+    <string name="report_fix_text">Ouvre une issue GitHub (compte gratuit) avec le modèle du téléphone, son système et le diagnostic, jamais ce que la touche ouvre. Vous la relisez avant de la publier.</string>
+    <string name="report_share">Partagez votre touche pour qu\'elle marche chez tout le monde</string>
+    <string name="report_share_text">Ouvre une issue GitHub avec le modèle du téléphone et ce motif seulement, jamais le reste de la capture.</string>
+    <string name="report_copied">Aucun navigateur trouvé : texte copié, collez-le dans une issue GitHub</string>
 </resources>

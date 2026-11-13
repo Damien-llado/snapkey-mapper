@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">続ける</string>
     <string name="home_setup_title">SnapKey Mapper をセットアップ</string>
     <string name="home_setup_text">数ステップを一度だけ行います。アプリが各設定を開いて確認します。</string>
-    <string name="home_finder">キーを押しても何も起きない？別のスマートフォン：キーを見つける</string>
     <string name="wiz_skip">設定済み、続ける</string>
     <string name="wiz_notif_title">通知をオンにする</string>
     <string name="wiz_notif_text">ペア設定コードはアプリの通知に入力します。アプリの通知をオンにしてから、ここに戻ってください。</string>
     <string name="wiz_notif_btn">通知を開く</string>
     <string name="menu_diag">診断情報をコピー</string>
     <string name="diag_copied">診断情報をコピーしました。GitHub の issue に貼り付けてください</string>
-    <string name="diag_stuck">うまくいきませんか？GitHub の issue 用に診断情報をコピー</string>
+    <string name="report_entry">お使いのスマートフォンで動かない？</string>
+    <string name="report_find">自分でキーを見つける</string>
+    <string name="report_find_text">キーを押したとき、お使いのスマートフォンは別の内容をログに書いています。記録して行を選ぶと、アプリがキーを覚えます。</string>
+    <string name="report_fix">修正を依頼する</string>
+    <string name="report_fix_text">スマートフォンの機種、システム、診断情報を入れた GitHub の issue を開きます（無料アカウント）。キーで開くものは含みません。投稿前に内容を確認できます。</string>
+    <string name="report_share">キーを共有して、みんなが使えるようにする</string>
+    <string name="report_share_text">スマートフォンの機種とこのパターンだけを入れた GitHub の issue を開きます。記録のほかの部分は含みません。</string>
+    <string name="report_copied">ブラウザが見つかりません。テキストをコピーしました。GitHub の issue に貼り付けてください</string>
 </resources>

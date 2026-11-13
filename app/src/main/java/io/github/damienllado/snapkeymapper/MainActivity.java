@@ -57,9 +57,9 @@ public class MainActivity extends Activity {
         setup(content);
         gesture(content);
         target(content);
-        TextView finder = Ui.text(this, getString(R.string.home_finder), 14, Ui.accent);
+        TextView finder = Ui.text(this, getString(R.string.report_entry), 14, Ui.accent);
         finder.setPadding(Ui.dp(this, 4), Ui.dp(this, 12), Ui.dp(this, 4), Ui.dp(this, 12));
-        finder.setOnClickListener(v -> startActivity(new Intent(this, FinderActivity.class)));
+        finder.setOnClickListener(v -> startActivity(new Intent(this, ReportActivity.class)));
         finderLink = Ui.add(content, finder, 10);
         // the listener sees the key only if it started while the app was on screen (Android 13+): restart it from here
         TextView help = Ui.body(this, getString(R.string.listen_restart_help));
