@@ -2,6 +2,16 @@
 
 All notable changes to SnapKey Mapper are listed here, newest first. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/).
 
+## [1.0.12] - 2026-11-13
+
+### Changed
+
+- **Doesn't work on my phone?** now starts with the usual fixes: **Restart listening**, and **Restore the original pattern** when the key pattern was changed. Reporting a problem comes last.
+- Key finder: tapping a line no longer replaces a working key pattern without asking. A confirmation shows the current pattern and the new one.
+- Key finder: the suggested pattern is the key code (`KEYCODE_…`) when the line names one.
+- Key finder: the pattern field stays visible above the keyboard.
+- The key finder says that the OPPO Snap Key and the OnePlus Plus Key are already known.
+
 ## [1.0.11] - 2026-11-13
 
 ### Added
@@ -121,6 +131,7 @@ All notable changes to SnapKey Mapper are listed here, newest first. The format 
 
 - First public release.
 
+[1.0.12]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.12
 [1.0.11]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.11
 [1.0.10]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.10
 [1.0.9]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.9
