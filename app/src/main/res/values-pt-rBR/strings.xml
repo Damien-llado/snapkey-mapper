@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">Continuar</string>
     <string name="home_setup_title">Configurar o SnapKey Mapper</string>
     <string name="home_setup_text">Alguns passos, uma única vez. O app abre cada configuração para você e a verifica.</string>
-    <string name="home_finder">A tecla não faz nada? Outro telefone: encontre a sua tecla</string>
     <string name="wiz_skip">Já está feito, continuar</string>
     <string name="wiz_notif_title">Ativar as notificações</string>
     <string name="wiz_notif_text">O código de pareamento é digitado em uma notificação do app. Ative as notificações e volte aqui.</string>
     <string name="wiz_notif_btn">Abrir notificações</string>
     <string name="menu_diag">Copiar o diagnóstico</string>
     <string name="diag_copied">Diagnóstico copiado: cole numa issue do GitHub</string>
-    <string name="diag_stuck">Travou? Copie o diagnóstico para uma issue do GitHub</string>
+    <string name="report_entry">Não funciona no meu celular?</string>
+    <string name="report_find">Encontrar minha tecla sozinho</string>
+    <string name="report_find_text">Seu celular escreve outra coisa quando você aperta a tecla. Grave e escolha a linha: o app aprende a sua tecla.</string>
+    <string name="report_fix">Deixa que a gente resolve</string>
+    <string name="report_fix_text">Abre uma issue no GitHub (conta gratuita) com o modelo do celular, o sistema e o diagnóstico, nunca o que a tecla abre. Você revisa antes de publicar.</string>
+    <string name="report_share">Compartilhe sua tecla para funcionar para todo mundo</string>
+    <string name="report_share_text">Abre uma issue no GitHub só com o modelo do celular e este padrão, nunca o resto da captura.</string>
+    <string name="report_copied">Nenhum navegador encontrado: texto copiado, cole numa issue do GitHub</string>
 </resources>

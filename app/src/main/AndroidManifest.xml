@@ -63,6 +63,7 @@
         <activity android:name=".RecipeActivity" android:exported="false" />
         <activity android:name=".SetupActivity" android:exported="false" />
         <activity android:name=".FinderActivity" android:exported="false" />
+        <activity android:name=".ReportActivity" android:exported="false" />
         <activity android:name=".AppPickerActivity" android:exported="false" />
 
         <service

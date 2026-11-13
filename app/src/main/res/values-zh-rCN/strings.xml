@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">继续</string>
     <string name="home_setup_title">设置 SnapKey Mapper</string>
     <string name="home_setup_text">只需几步，只做一次。应用会为你打开每个设置项并检查。</string>
-    <string name="home_finder">按键没反应？换了手机：找到你的按键</string>
     <string name="wiz_skip">已经完成，继续</string>
     <string name="wiz_notif_title">开启通知</string>
     <string name="wiz_notif_text">配对码需要在应用的通知中输入。请开启它的通知，然后返回这里。</string>
     <string name="wiz_notif_btn">打开通知</string>
     <string name="menu_diag">复制诊断信息</string>
     <string name="diag_copied">诊断信息已复制：粘贴到 GitHub issue 中</string>
-    <string name="diag_stuck">卡住了？复制诊断信息用于 GitHub issue</string>
+    <string name="report_entry">在我的手机上不起作用？</string>
+    <string name="report_find">自己找到我的按键</string>
+    <string name="report_find_text">按下按键时，你的手机在日志里写的是别的内容。录下来并选中那一行：应用就能学会你的按键。</string>
+    <string name="report_fix">让我们来修复</string>
+    <string name="report_fix_text">打开一个 GitHub issue（免费账号），包含手机型号、系统和诊断信息，绝不包含按键打开的内容。发布前你可以先检查。</string>
+    <string name="report_share">分享你的按键，让所有人都能用</string>
+    <string name="report_share_text">打开一个 GitHub issue，只包含手机型号和这个特征，绝不包含录制的其余部分。</string>
+    <string name="report_copied">未找到浏览器：文本已复制，请粘贴到 GitHub issue 中</string>
 </resources>

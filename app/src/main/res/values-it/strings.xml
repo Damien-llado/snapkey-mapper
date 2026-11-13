@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">Continua</string>
     <string name="home_setup_title">Configura SnapKey Mapper</string>
     <string name="home_setup_text">Pochi passaggi, una volta sola. L\'app apre ogni impostazione per te e la controlla.</string>
-    <string name="home_finder">Il tasto non fa nulla? Un altro telefono: trova il tuo tasto</string>
     <string name="wiz_skip">Già fatto, continua</string>
     <string name="wiz_notif_title">Attiva le notifiche</string>
     <string name="wiz_notif_text">Il codice di accoppiamento si inserisce in una notifica dell\'app. Attiva le sue notifiche, poi torna qui.</string>
     <string name="wiz_notif_btn">Apri le notifiche</string>
     <string name="menu_diag">Copia la diagnostica</string>
     <string name="diag_copied">Diagnostica copiata: incollala in una issue su GitHub</string>
-    <string name="diag_stuck">Bloccato? Copia la diagnostica per una issue su GitHub</string>
+    <string name="report_entry">Non funziona sul mio telefono?</string>
+    <string name="report_find">Trovo il mio tasto da solo</string>
+    <string name="report_find_text">Il tuo telefono scrive qualcos\'altro quando premi il tasto. Registralo e scegli la riga: l\'app impara il tuo tasto.</string>
+    <string name="report_fix">Lascia che lo sistemiamo noi</string>
+    <string name="report_fix_text">Apre una issue su GitHub (account gratuito) con il modello del telefono, il suo sistema e la diagnostica, mai quello che apre il tasto. La rileggi prima di pubblicarla.</string>
+    <string name="report_share">Condividi il tuo tasto, così funziona per tutti</string>
+    <string name="report_share_text">Apre una issue su GitHub con il modello del telefono e solo questo schema, mai il resto della registrazione.</string>
+    <string name="report_copied">Nessun browser trovato: testo copiato, incollalo in una issue su GitHub</string>
 </resources>

@@ -109,9 +109,9 @@ public class SetupActivity extends Activity {
                 box.setOnCheckedChangeListener((c, checked) -> { Prefs.nativeKeyOff(this, checked); show(); });
                 Ui.add(page, box, 14);
         }
-        TextView diag = Ui.text(this, getString(R.string.diag_stuck), 14, Ui.accent);
+        TextView diag = Ui.text(this, getString(R.string.report_entry), 14, Ui.accent);
         diag.setPadding(0, Ui.dp(this, 14), 0, Ui.dp(this, 14));
-        diag.setOnClickListener(v -> Diagnostic.copy(this));
+        diag.setOnClickListener(v -> startActivity(new Intent(this, ReportActivity.class)));
         Ui.add(page, diag, 28);
     }
 

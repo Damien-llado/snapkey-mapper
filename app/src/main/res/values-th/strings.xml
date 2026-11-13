@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">ไปต่อ</string>
     <string name="home_setup_title">ตั้งค่า SnapKey Mapper</string>
     <string name="home_setup_text">ไม่กี่ขั้นตอน ทำครั้งเดียว แอปจะเปิดแต่ละการตั้งค่าให้และตรวจสอบให้</string>
-    <string name="home_finder">ปุ่มไม่ทำงาน? ใช้โทรศัพท์รุ่นอื่น: ค้นหาปุ่มของคุณ</string>
     <string name="wiz_skip">ทำแล้ว ไปต่อ</string>
     <string name="wiz_notif_title">เปิดการแจ้งเตือน</string>
     <string name="wiz_notif_text">รหัสการจับคู่ต้องพิมพ์ในการแจ้งเตือนของแอป เปิดการแจ้งเตือนของแอป แล้วกลับมาที่นี่</string>
     <string name="wiz_notif_btn">เปิดการแจ้งเตือน</string>
     <string name="menu_diag">คัดลอกข้อมูลวินิจฉัย</string>
     <string name="diag_copied">คัดลอกข้อมูลวินิจฉัยแล้ว: วางลงใน issue บน GitHub</string>
-    <string name="diag_stuck">ติดขัด? คัดลอกข้อมูลวินิจฉัยเพื่อเปิด issue บน GitHub</string>
+    <string name="report_entry">ใช้กับโทรศัพท์ของฉันไม่ได้?</string>
+    <string name="report_find">ค้นหาปุ่มของฉันเอง</string>
+    <string name="report_find_text">โทรศัพท์ของคุณเขียนข้อความอื่นเมื่อกดปุ่ม บันทึกไว้แล้วเลือกบรรทัด: แอปจะจดจำปุ่มของคุณ</string>
+    <string name="report_fix">ให้เราแก้ไขให้</string>
+    <string name="report_fix_text">เปิด issue บน GitHub (บัญชีฟรี) พร้อมรุ่นโทรศัพท์ ระบบ และข้อมูลวินิจฉัย ไม่มีสิ่งที่ปุ่มเปิดเด็ดขาด คุณอ่านทวนได้ก่อนโพสต์</string>
+    <string name="report_share">แชร์ปุ่มของคุณเพื่อให้ใช้ได้กับทุกคน</string>
+    <string name="report_share_text">เปิด issue บน GitHub ที่มีเพียงรุ่นโทรศัพท์และรูปแบบนี้ ไม่มีส่วนอื่นของการบันทึกเด็ดขาด</string>
+    <string name="report_copied">ไม่พบเบราว์เซอร์: คัดลอกข้อความแล้ว วางลงใน issue บน GitHub</string>
 </resources>

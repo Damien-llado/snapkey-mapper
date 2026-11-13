@@ -171,12 +171,18 @@
     <string name="wiz_done_btn">Lanjutkan</string>
     <string name="home_setup_title">Siapkan SnapKey Mapper</string>
     <string name="home_setup_text">Beberapa langkah, cukup sekali. Aplikasi membuka setiap pengaturan untuk Anda dan memeriksanya.</string>
-    <string name="home_finder">Tombol tidak berfungsi? Ponsel lain: temukan tombol Anda</string>
     <string name="wiz_skip">Sudah dilakukan, lanjutkan</string>
     <string name="wiz_notif_title">Aktifkan notifikasi</string>
     <string name="wiz_notif_text">Kode penyambungan diketik di notifikasi aplikasi. Aktifkan notifikasinya, lalu kembali ke sini.</string>
     <string name="wiz_notif_btn">Buka notifikasi</string>
     <string name="menu_diag">Salin diagnostik</string>
     <string name="diag_copied">Diagnostik disalin: tempelkan di issue GitHub</string>
-    <string name="diag_stuck">Macet? Salin diagnostik untuk issue GitHub</string>
+    <string name="report_entry">Tidak berfungsi di ponsel saya?</string>
+    <string name="report_find">Cari tombol saya sendiri</string>
+    <string name="report_find_text">Ponsel Anda menulis hal lain saat tombol ditekan. Rekam lalu pilih barisnya: aplikasi mempelajari tombol Anda.</string>
+    <string name="report_fix">Biar kami perbaiki</string>
+    <string name="report_fix_text">Membuka issue GitHub (akun gratis) berisi model ponsel, sistemnya, dan diagnostik, tidak pernah apa yang dibuka tombol. Anda membacanya dulu sebelum mengirim.</string>
+    <string name="report_share">Bagikan tombol Anda agar berfungsi untuk semua orang</string>
+    <string name="report_share_text">Membuka issue GitHub hanya berisi model ponsel dan pola ini, tidak pernah sisa rekaman.</string>
+    <string name="report_copied">Browser tidak ditemukan: teks disalin, tempelkan di issue GitHub</string>
 </resources>

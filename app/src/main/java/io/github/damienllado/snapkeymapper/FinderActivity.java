@@ -30,6 +30,7 @@ public class FinderActivity extends Activity {
     private CheckBox all;
     private EditText pattern;
     private ArrayAdapter<String> adapter;
+    private View share;
     private final List<String> captured = new ArrayList<>();
     private Process log;
 
@@ -82,8 +83,20 @@ public class FinderActivity extends Activity {
             pattern.setText(suggestion(adapter.getItem(pos - list.getHeaderViewsCount())));
             save();
             Toast.makeText(this, getString(R.string.toast_pattern_saved), Toast.LENGTH_LONG).show();
+            share.setVisibility(View.VISIBLE);
         });
         root.addView(list, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
+        // a line was picked: offer to send it (that line only) so the next release knows this phone
+        LinearLayout bar = new LinearLayout(this);
+        bar.setOrientation(LinearLayout.VERTICAL);
+        bar.setPadding(side, Ui.dp(this, 10), side, Ui.dp(this, 12));
+        bar.setBackgroundColor(Ui.card);
+        bar.addView(Ui.body(this, getString(R.string.report_share_text)));
+        Ui.add(bar, Ui.button(this, getString(R.string.report_share), true,
+                v -> Diagnostic.shareKey(this, pattern.getText().toString().trim())), 8);
+        bar.setVisibility(View.GONE);
+        share = bar;
+        root.addView(bar);
         setContentView(root);
         Ui.barsAppearance(this);
     }

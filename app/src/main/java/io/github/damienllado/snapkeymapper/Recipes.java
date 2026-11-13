@@ -78,7 +78,11 @@ final class Recipes {
 
     private static String read(Context c, String path) {
         try (InputStream in = c.getAssets().open(path)) {
-            return new String(in.readAllBytes(), StandardCharsets.UTF_8);
+            // InputStream.readAllBytes needs Android 13
+            java.io.ByteArrayOutputStream out = new java.io.ByteArrayOutputStream();
+            byte[] buf = new byte[8192];
+            for (int n; (n = in.read(buf)) > 0; ) out.write(buf, 0, n);
+            return new String(out.toByteArray(), StandardCharsets.UTF_8);
         } catch (IOException e) {
             return null;
         }
