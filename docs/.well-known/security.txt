@@ -1,0 +1,5 @@
+Contact: https://github.com/Damien-llado/snapkey-mapper/security/advisories/new
+Expires: 2027-11-01T00:00:00.000Z
+Preferred-Languages: en, fr
+Canonical: https://remapsnapkey.com/.well-known/security.txt
+Policy: https://github.com/Damien-llado/snapkey-mapper/blob/main/SECURITY.md
