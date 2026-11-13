@@ -37,7 +37,7 @@
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=9">
+<link rel="stylesheet" href="/assets/style.css?v=10">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"让 OPPO Snap Key 按键打开任意应用或链接，无需 root。"}
@@ -102,15 +102,15 @@
   <section class="hero">
     <div class="gridbg" aria-hidden="true"><i class="cell" style="--cx:-6;--cy:1;--c:#2FD39A;--d:0s"></i><i class="cell" style="--cx:5;--cy:2;--c:#5B8DEF;--d:1.2s"></i><i class="cell" style="--cx:-3;--cy:4;--c:#F08A3E;--d:2.4s"></i><i class="cell" style="--cx:7;--cy:5;--c:#8B6CF0;--d:3.1s"></i><i class="cell" style="--cx:-8;--cy:6;--c:#4CC9E0;--d:0.6s"></i><i class="cell" style="--cx:3;--cy:0;--c:#E2557A;--d:4.2s"></i><i class="cell" style="--cx:-5;--cy:9;--c:#2FD39A;--d:1.8s"></i><i class="cell" style="--cx:6;--cy:9;--c:#E3B23C;--d:3.6s"></i><i class="cell" style="--cx:-2;--cy:1;--c:#4CC9E0;--d:5s"></i><i class="cell" style="--cx:9;--cy:3;--c:#2FD39A;--d:2.8s"></i><i class="cell" style="--cx:-9;--cy:3;--c:#E2557A;--d:4.6s"></i><i class="cell" style="--cx:2;--cy:7;--c:#5B8DEF;--d:0.3s"></i></div>
     <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span>开源 · OPPO 和 OnePlus · 无需 root</p>
+      <p class="eyebrow"><span class="dot"></span>开源 · OPPO 和 <a href="/oneplus-plus-key/">OnePlus</a> · 无需 root</p>
       <h1>OPPO Snap Key 快捷键自定义，一键打开<em>任意应用</em></h1>
       <p class="say">按一下，直达 <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper 把 OPPO 的 Snap Key 和 OnePlus 的 Plus Key 侧键变成快捷启动键，打开你选的应用或链接。单击、双击、三击、长按都行，每种手势还能打开不同的东西。</p>
+      <p class="lead">SnapKey Mapper 把 OPPO 的 Snap Key 和 OnePlus 的 Plus Key 侧键变成快捷启动键，打开你选的应用或链接。<a href="#gestures">单击、双击、三击、长按都行</a>，每种手势还能打开不同的东西。</p>
       <ul class="hero-g">
-        <li><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>单击</span></li>
-        <li><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>双击</span></li>
-        <li><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>三击</span></li>
-        <li><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>长按</span></li>
+        <li><a href="#g-single"><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>单击</span></a></li>
+        <li><a href="#g-double"><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>双击</span></a></li>
+        <li><a href="#g-triple"><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>三击</span></a></li>
+        <li><a href="#g-long"><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>长按</span></a></li>
       </ul>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
@@ -167,7 +167,7 @@
   <section id="examples" class="wide" aria-labelledby="ex-h">
     <p class="kicker">示例</p>
     <h2 id="ex-h">一个按键，能用链接打开的都能打开。</h2>
-    <p class="sub">选一个已安装的应用，粘贴一个链接，或者写一条 <code>intent:</code> 链接，调用 Android 能做的任何事。几个点子：</p>
+    <p class="sub">选一个已安装的应用，粘贴一个链接，<a href="#library">选一个现成的快捷方式</a>，或者写一条 <code>intent:</code> 链接，调用 Android 能做的任何事。几个点子：</p>
 
     <ul class="bento" id="bento">
       <li class="tile big dark">
@@ -299,7 +299,7 @@
     <h2 id="ge-h">一个按键，四个快捷方式</h2>
     <p class="sub">从 1.0.9 版起，单击、双击、三击和长按可以各自打开不同的目标。设一个、两个、三个或四个都行。</p>
     <ul class="gestures trio">
-      <li class="single" style="--h:#5B8DEF">
+      <li class="single" id="g-single" style="--h:#5B8DEF">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -313,7 +313,7 @@
         <p>按一下就打开相机。只有设置了双击或三击，单击才会等一小会儿（不到一秒）来区分它们；否则单击立即触发。</p>
         <code>应用：相机</code>
       </li>
-      <li class="double" style="--h:#D97757">
+      <li class="double" id="g-double" style="--h:#D97757">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -327,7 +327,7 @@
         <p>你的 AI 助手，这里是 Claude。放在口袋里误触永远不会打开它。</p>
         <code>应用：Claude</code>
       </li>
-      <li class="triple" style="--h:#8B6CF0">
+      <li class="triple" id="g-triple" style="--h:#8B6CF0">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -341,7 +341,7 @@
         <p>快速按三下，就在 Obsidian 里打开今天的笔记，随时可以写。</p>
         <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
-      <li class="long" style="--h:#E3B23C">
+      <li class="long" id="g-long" style="--h:#E3B23C">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -413,7 +413,7 @@
   <section id="snap-key" class="narrow" aria-labelledby="what-h">
     <p class="kicker">按键</p>
     <h2 id="what-h">OPPO 快捷键（Snap Key）是什么？</h2>
-    <p class="sub">Snap Key 是部分 OPPO 机型机身左侧上方的快捷键（台湾和香港写作“快捷鍵”）。ColorOS 只让它执行固定的几项功能，比如 AI Mind Space 或手电筒。SnapKey Mapper 支持 OPPO Find X9、X10、Reno 16 系列和 Find N6 的 Snap Key，也支持一加手机的 Plus Key。我每天都在 Find X9 Pro 上使用。SnapKey Mapper 补上了缺失的自定义功能。</p>
+    <p class="sub">Snap Key 是部分 OPPO 机型机身左侧上方的快捷键（台湾和香港写作“快捷鍵”）。ColorOS 只让它执行固定的几项功能，比如 AI Mind Space 或手电筒。SnapKey Mapper 支持 OPPO Find X9、X10、Reno 16 系列和 Find N6 的 Snap Key，也支持<a href="/oneplus-plus-key/">一加手机的 Plus Key</a>。我每天都在 Find X9 Pro 上使用。SnapKey Mapper 补上了缺失的自定义功能。想试试？<a href="#setup">直接看设置步骤</a>。</p>
   </section>
 
   <section class="wide" aria-labelledby="how">
@@ -446,11 +446,11 @@
       </ul></div>
       <div><h3>它不能做什么</h3><ul>
         <li>向外发送任何东西：精简版没有联网权限；完整版只在设置时用它和你自己的手机通信一次唯一的例外：如果你勾选“跟随重定向”选项，完整版会在打开时访问你自己的链接，以读取其重定向。</li>
-        <li>访问你的消息、通知或屏幕：它没有这些权限（不过它会读取系统日志，见常见问题）</li>
+        <li>访问你的消息、通知或屏幕：它没有这些权限（不过它会读取系统日志，见<a href="#faq">常见问题</a>）</li>
         <li>显示广告、追踪你或要求注册账号</li>
       </ul></div>
     </div>
-    <p class="muted small">请只从 <a href="https://github.com/Damien-llado/snapkey-mapper/releases">GitHub Releases</a> 下载。想要一个完全无法联网的应用？在同一页面下载<strong>精简版</strong>（<code>snapkey-mapper-lite.apk</code>，约 500 KB，没有联网权限），日志权限需要你自己授予，见第 3 步。每个版本都列出了 APK 的 SHA-256 和签名证书指纹，你可以用 <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a> 校验文件。全部源代码公开。</p>
+    <p class="muted small">请只从 <a href="https://github.com/Damien-llado/snapkey-mapper/releases">GitHub Releases</a> 下载。想要一个完全无法联网的应用？在同一页面下载<strong>精简版</strong>（<code>snapkey-mapper-lite.apk</code>，约 500 KB，没有联网权限），日志权限需要你自己授予，见<a href="#step-3">第 3 步</a>。每个版本都列出了 APK 的 SHA-256 和签名证书指纹，你可以用 <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a> 校验文件。全部源代码公开。</p>
   </section>
 
   <section id="setup" class="narrow" aria-labelledby="setup-h">
@@ -466,7 +466,7 @@
         <h3>安装 APK 并允许受限制的设置</h3>
         <p>下载 APK 并打开。对于 Play 商店以外安装的应用，Android 会屏蔽部分敏感设置：前往 <em>设置 › 应用 › SnapKey Mapper</em>，点 <strong>⋮</strong>，再点 <strong>允许受限制的设置</strong>。</p>
       </li>
-      <li>
+      <li id="step-3">
         <h3>让应用自己获取日志权限</h3>
         <p>在 ColorOS 上，一个隐藏设置不开启时权限会被拦截，而这个设置只有手机语言为英语时才会显示。先把手机语言切换为 English（<em>设置 › 系统与更新 › 语言和区域</em>），然后在设置里搜索 <strong>Disable system</strong>，开启 <strong>Disable system optimisation</strong>（点 <strong>Turn on anyway</strong>）。之后可以把语言改回来。接着连上 Wi-Fi，在应用里点 <strong>打开无线调试</strong>。在 <em>设置 › 系统与更新 › 开发者选项</em> 里点“<strong>无线调试</strong>”这一行（点文字，不要点开关），开启后点 <strong>使用配对码配对设备</strong>，下拉通知，展开它，点 <strong>输入配对码</strong> 并输入 6 位数字。通知提示设置完成后，关闭无线调试。</p>
         <details class="more"><summary>用电脑设置，或使用精简版</summary><p>精简版没有联网权限，不会自动设置：请在电脑上运行下面的命令，或在手机上用 <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a>（专家模式，<em>Shell command</em> 操作，ADB，然后点 <em>Test</em>）。之后可以把 <em>Disable system optimisation</em> 关掉，权限依然保留。</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
@@ -498,7 +498,7 @@
           <tr><td>OPPO Find X9, Find X9 Ultra, Find X9s, Find N6</td><td>ColorOS 16</td><td><span class="st">支持 Snap Key</span></td></tr>
           <tr><td>OPPO Find X10, Find X10 Pro Max</td><td>ColorOS</td><td><span class="st">支持 Snap Key</span></td></tr>
           <tr><td>OPPO Reno 16, Reno 16 Pro, Reno 16 F</td><td>ColorOS</td><td><span class="st">支持 AI Snap Key</span></td></tr>
-          <tr><td>OnePlus 15, 15R, 13s, 13T, Nord 5</td><td>OxygenOS</td><td><span class="st">支持 Plus Key</span></td></tr>
+          <tr><td><a href="/oneplus-plus-key/">OnePlus 15, 15R, 13s, 13T, Nord 5</a></td><td>OxygenOS</td><td><span class="st">支持 Plus Key</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -592,6 +592,7 @@
   <ul>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper">源代码</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">报告问题</a></li>
+    <li><a href="/oneplus-plus-key/">OnePlus Plus Key</a></li>
     <li><a href="/zh/changelog/">更新日志</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">所有版本</a></li>
     <li><a href="https://github.com/sponsors/Damien-llado">支持这个项目</a></li>

@@ -1,0 +1,28 @@
+/* Page /oneplus-plus-key/ : fil d'Ariane, liste des usages. Le reste vient de style.css */
+.crumbs { max-width: calc(var(--wide) + 2 * var(--gut)); margin: 0 auto; padding: 1rem var(--gut) 0; font-size: .92rem; }
+.crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem .5rem; color: var(--muted); }
+.crumbs li + li::before { content: "›"; margin-right: .5rem; color: var(--line-2); }
+.crumbs a { color: var(--muted); }
+.crumbs a:hover { color: var(--ink); }
+.crumbs [aria-current] { color: var(--ink); }
+.op-hero { padding-top: clamp(1.5rem, 5vw, 3.5rem) !important; }
+.uses { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 14px; }
+.uses li { min-width: 0; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .9rem; padding: 1rem 1.1rem; border-radius: 22px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.uses h3 { margin: 0 0 .15rem; }
+.uses p { margin: 0; color: var(--muted); font-size: .95rem; }
+.use-ico { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; background: var(--t-mint); color: var(--accent); overflow: hidden; }
+.use-ico img { width: 100%; height: 100%; display: block; }
+.use-ico svg { width: 26px; height: 26px; }
+.uses .st { white-space: nowrap; }
+@media (max-width: 480px) {
+  .uses li { grid-template-columns: auto minmax(0, 1fr); }
+  .uses .st { grid-column: 2; justify-self: start; }
+}
+.op .narrow > p a, .op .narrow .sub a { overflow-wrap: anywhere; }
+/* Pas de téléphone 3D à côté du texte : en grand écran le héros reste une colonne centrée */
+@media (min-width: 1000px) {
+  .op-hero { display: block; text-align: center; }
+  .op-hero .hero-copy { max-width: 50rem; margin: 0 auto; }
+  .op-hero .ctas { justify-content: center; }
+}
+#adds .cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }

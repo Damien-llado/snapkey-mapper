@@ -37,7 +37,7 @@
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=9">
+<link rel="stylesheet" href="/assets/style.css?v=10">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Faz a Snap Key da OPPO abrir qualquer app ou link, sem root."}
@@ -102,15 +102,15 @@
   <section class="hero">
     <div class="gridbg" aria-hidden="true"><i class="cell" style="--cx:-6;--cy:1;--c:#2FD39A;--d:0s"></i><i class="cell" style="--cx:5;--cy:2;--c:#5B8DEF;--d:1.2s"></i><i class="cell" style="--cx:-3;--cy:4;--c:#F08A3E;--d:2.4s"></i><i class="cell" style="--cx:7;--cy:5;--c:#8B6CF0;--d:3.1s"></i><i class="cell" style="--cx:-8;--cy:6;--c:#4CC9E0;--d:0.6s"></i><i class="cell" style="--cx:3;--cy:0;--c:#E2557A;--d:4.2s"></i><i class="cell" style="--cx:-5;--cy:9;--c:#2FD39A;--d:1.8s"></i><i class="cell" style="--cx:6;--cy:9;--c:#E3B23C;--d:3.6s"></i><i class="cell" style="--cx:-2;--cy:1;--c:#4CC9E0;--d:5s"></i><i class="cell" style="--cx:9;--cy:3;--c:#2FD39A;--d:2.8s"></i><i class="cell" style="--cx:-9;--cy:3;--c:#E2557A;--d:4.6s"></i><i class="cell" style="--cx:2;--cy:7;--c:#5B8DEF;--d:0.3s"></i></div>
     <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span>Open source · OPPO e OnePlus · Sem root</p>
+      <p class="eyebrow"><span class="dot"></span>Open source · OPPO e <a href="/oneplus-plus-key/">OnePlus</a> · Sem root</p>
       <h1>Mude a função da tecla Snap Key da OPPO e abra <em>qualquer app</em></h1>
       <p class="say">Aperte a tecla e caia direto no <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">O SnapKey Mapper transforma a Snap Key dos OPPO e a Plus Key dos OnePlus em um atalho para os apps ou links que você escolher. Pressão simples, dupla, tripla ou longa: cada gesto pode abrir algo diferente.</p>
+      <p class="lead">O SnapKey Mapper transforma a Snap Key dos OPPO e a Plus Key dos OnePlus em um atalho para os apps ou links que você escolher. <a href="#gestures">Pressão simples, dupla, tripla ou longa</a>: cada gesto pode abrir algo diferente.</p>
       <ul class="hero-g">
-        <li><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>Pressão simples</span></li>
-        <li><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>Pressão dupla</span></li>
-        <li><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>Pressão tripla</span></li>
-        <li><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>Pressão longa</span></li>
+        <li><a href="#g-single"><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>Pressão simples</span></a></li>
+        <li><a href="#g-double"><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>Pressão dupla</span></a></li>
+        <li><a href="#g-triple"><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>Pressão tripla</span></a></li>
+        <li><a href="#g-long"><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>Pressão longa</span></a></li>
       </ul>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
@@ -167,7 +167,7 @@
   <section id="examples" class="wide" aria-labelledby="ex-h">
     <p class="kicker">Exemplos</p>
     <h2 id="ex-h">Uma tecla. Tudo o que abre a partir de um link.</h2>
-    <p class="sub">Escolha um app instalado, cole um link ou escreva um link <code>intent:</code> para qualquer coisa que o Android faz. Algumas ideias:</p>
+    <p class="sub">Escolha um app instalado, cole um link, <a href="#library">escolha um atalho pronto</a> ou escreva um link <code>intent:</code> para qualquer coisa que o Android faz. Algumas ideias:</p>
 
     <ul class="bento" id="bento">
       <li class="tile big dark">
@@ -299,7 +299,7 @@
     <h2 id="ge-h">Uma tecla, quatro atalhos</h2>
     <p class="sub">Desde a versão 1.0.9, a pressão simples, a dupla, a tripla e a longa abrem cada uma o seu próprio destino. Defina uma, duas, três ou as quatro.</p>
     <ul class="gestures trio">
-      <li class="single" style="--h:#5B8DEF">
+      <li class="single" id="g-single" style="--h:#5B8DEF">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -313,7 +313,7 @@
         <p>A câmera, com uma pressão só. Ela só espera uma fração de segundo quando a pressão dupla ou a tripla está definida, para distingui-las; sem isso, dispara na hora.</p>
         <code>App: Câmera</code>
       </li>
-      <li class="double" style="--h:#D97757">
+      <li class="double" id="g-double" style="--h:#D97757">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -327,7 +327,7 @@
         <p>Seu assistente de IA, aqui o Claude. Uma pressão no bolso nunca o abre.</p>
         <code>App: Claude</code>
       </li>
-      <li class="triple" style="--h:#8B6CF0">
+      <li class="triple" id="g-triple" style="--h:#8B6CF0">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -341,7 +341,7 @@
         <p>Três pressões rápidas abrem a nota de hoje no Obsidian, pronta para escrever.</p>
         <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
-      <li class="long" style="--h:#E3B23C">
+      <li class="long" id="g-long" style="--h:#E3B23C">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -413,7 +413,7 @@
   <section id="snap-key" class="narrow" aria-labelledby="what-h">
     <p class="kicker">A tecla</p>
     <h2 id="what-h">O que é a Snap Key nos celulares OPPO?</h2>
-    <p class="sub">A Snap Key é o botão na lateral esquerda, no alto, de alguns celulares OPPO. O ColorOS só a deixa fazer uma lista fixa de ações, como AI Mind Space ou a lanterna. O SnapKey Mapper funciona com a Snap Key dos OPPO Find X9, X10 e Reno 16 e do Find N6, e com a Plus Key dos OnePlus. Eu uso todo dia em um Find X9 Pro. O SnapKey Mapper adiciona a personalização que faltava.</p>
+    <p class="sub">A Snap Key é o botão na lateral esquerda, no alto, de alguns celulares OPPO. O ColorOS só a deixa fazer uma lista fixa de ações, como AI Mind Space ou a lanterna. O SnapKey Mapper funciona com a Snap Key dos OPPO Find X9, X10 e Reno 16 e do Find N6, e com <a href="/oneplus-plus-key/">a Plus Key dos OnePlus</a>. Eu uso todo dia em um Find X9 Pro. O SnapKey Mapper adiciona a personalização que faltava. Quer experimentar? <a href="#setup">Vá para os passos de instalação</a>.</p>
   </section>
 
   <section class="wide" aria-labelledby="how">
@@ -446,11 +446,11 @@
       </ul></div>
       <div><h3>O que ele não pode fazer</h3><ul>
         <li>Enviar qualquer coisa para fora: a edição lite não tem permissão de internet; a edição completa só a usa para falar com o seu próprio celular, uma vez, na configuração</li>
-        <li>Acessar suas mensagens, notificações ou tela: ele não tem permissão para isso (mas ele lê o log do sistema, veja as Perguntas)</li>
+        <li>Acessar suas mensagens, notificações ou tela: ele não tem permissão para isso (mas ele lê o log do sistema, veja <a href="#faq">as Perguntas</a>)</li>
         <li>Mostrar anúncios, rastrear você ou pedir uma conta</li>
       </ul></div>
     </div>
-    <p class="muted small">Baixe só pelas <a href="https://github.com/Damien-llado/snapkey-mapper/releases">releases do GitHub</a>. Quer um app que não consiga usar a rede de jeito nenhum? Pegue a <strong>edição lite</strong> na mesma página (<code>snapkey-mapper-lite.apk</code>, cerca de 500 KB, sem permissão de internet); você mesmo concede a permissão de log, veja o passo 3. Cada release lista o SHA-256 do APK e a impressão digital do certificado de assinatura, para você conferir o arquivo com o <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a>. Todo o código-fonte é público.</p>
+    <p class="muted small">Baixe só pelas <a href="https://github.com/Damien-llado/snapkey-mapper/releases">releases do GitHub</a>. Quer um app que não consiga usar a rede de jeito nenhum? Pegue a <strong>edição lite</strong> na mesma página (<code>snapkey-mapper-lite.apk</code>, cerca de 500 KB, sem permissão de internet); você mesmo concede a permissão de log, veja <a href="#step-3">o passo 3</a>. Cada release lista o SHA-256 do APK e a impressão digital do certificado de assinatura, para você conferir o arquivo com o <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a>. Todo o código-fonte é público.</p>
   </section>
 
   <section id="setup" class="narrow" aria-labelledby="setup-h">
@@ -466,7 +466,7 @@
         <h3>Instale o APK e permita as configurações restritas</h3>
         <p>Baixe o APK e abra. O Android bloqueia algumas configurações sensíveis para apps instalados fora da Play Store: vá em <em>Configurações › Apps › SnapKey Mapper</em>, toque em <strong>⋮</strong> e depois em <strong>Permitir configurações restritas</strong>.</p>
       </li>
-      <li>
+      <li id="step-3">
         <h3>Deixe o app conceder a si mesmo a permissão de log</h3>
         <p>No ColorOS, uma permissão fica bloqueada até que um ajuste oculto seja ativado, e esse ajuste só aparece com o celular em inglês. Primeiro mude o celular para English (<em>Configurações › Sistema e atualização › Idioma e região</em>), depois procure <strong>Disable system</strong> nas Configurações e ative <strong>Disable system optimisation</strong> (toque em <strong>Turn on anyway</strong>). Em seguida você pode voltar ao seu idioma. Conecte-se ao Wi-Fi e toque em <strong>Abrir a Depuração por Wi-Fi</strong> no app. Em <em>Configurações › Sistema e atualização › Opções de desenvolvedor</em>, toque na linha <strong>Depuração por Wi-Fi</strong> (o texto, não o interruptor), ative, toque em <strong>Parear o dispositivo com um código de pareamento</strong>, puxe a notificação para baixo, expanda-a, toque em <strong>Digitar código</strong> e digite os 6 dígitos. Quando a notificação disser que está configurado, desligue a depuração por Wi-Fi.</p>
         <details class="more"><summary>Com um computador, ou com a edição lite</summary><p>A edição lite não tem permissão de internet e não se configura sozinha: rode este comando em um computador, ou no próprio celular com o <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (modo Expert, ação <em>Shell command</em>, ADB, depois <em>Test</em>). Depois você pode desativar de novo o <em>"Disable system optimisation"</em>: a permissão continua.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
@@ -498,7 +498,7 @@
           <tr><td>OPPO Find X9, Find X9 Ultra, Find X9s, Find N6</td><td>ColorOS 16</td><td><span class="st">Funciona com a Snap Key</span></td></tr>
           <tr><td>OPPO Find X10, Find X10 Pro Max</td><td>ColorOS</td><td><span class="st">Funciona com a Snap Key</span></td></tr>
           <tr><td>OPPO Reno 16, Reno 16 Pro, Reno 16 F</td><td>ColorOS</td><td><span class="st">Funciona com a AI Snap Key</span></td></tr>
-          <tr><td>OnePlus 15, 15R, 13s, 13T, Nord 5</td><td>OxygenOS</td><td><span class="st">Funciona com a Plus Key</span></td></tr>
+          <tr><td><a href="/oneplus-plus-key/">OnePlus 15, 15R, 13s, 13T, Nord 5</a></td><td>OxygenOS</td><td><span class="st">Funciona com a Plus Key</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -592,6 +592,7 @@
   <ul>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper">Código-fonte</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">Relatar um bug</a></li>
+    <li><a href="/oneplus-plus-key/">OnePlus Plus Key</a></li>
     <li><a href="/pt-br/changelog/">Changelog</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">Todas as versões</a></li>
     <li><a href="https://github.com/sponsors/Damien-llado">Apoiar o projeto</a></li>

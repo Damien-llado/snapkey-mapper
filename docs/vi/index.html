@@ -37,7 +37,7 @@
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=9">
+<link rel="stylesheet" href="/assets/style.css?v=10">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Giúp Snap Key của OPPO mở ứng dụng hoặc liên kết bất kỳ, không cần root."}
@@ -102,15 +102,15 @@
   <section class="hero">
     <div class="gridbg" aria-hidden="true"><i class="cell" style="--cx:-6;--cy:1;--c:#2FD39A;--d:0s"></i><i class="cell" style="--cx:5;--cy:2;--c:#5B8DEF;--d:1.2s"></i><i class="cell" style="--cx:-3;--cy:4;--c:#F08A3E;--d:2.4s"></i><i class="cell" style="--cx:7;--cy:5;--c:#8B6CF0;--d:3.1s"></i><i class="cell" style="--cx:-8;--cy:6;--c:#4CC9E0;--d:0.6s"></i><i class="cell" style="--cx:3;--cy:0;--c:#E2557A;--d:4.2s"></i><i class="cell" style="--cx:-5;--cy:9;--c:#2FD39A;--d:1.8s"></i><i class="cell" style="--cx:6;--cy:9;--c:#E3B23C;--d:3.6s"></i><i class="cell" style="--cx:-2;--cy:1;--c:#4CC9E0;--d:5s"></i><i class="cell" style="--cx:9;--cy:3;--c:#2FD39A;--d:2.8s"></i><i class="cell" style="--cx:-9;--cy:3;--c:#E2557A;--d:4.6s"></i><i class="cell" style="--cx:2;--cy:7;--c:#5B8DEF;--d:0.3s"></i></div>
     <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span>Mã nguồn mở · OPPO và OnePlus · Không cần root</p>
+      <p class="eyebrow"><span class="dot"></span>Mã nguồn mở · OPPO và <a href="/oneplus-plus-key/">OnePlus</a> · Không cần root</p>
       <h1>Tùy chỉnh nút Snap Key OPPO để mở <em>ứng dụng bất kỳ</em></h1>
       <p class="say">Nhấn nút là vào ngay <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper biến Snap Key của OPPO và Plus Key của OnePlus thành nút mở nhanh các ứng dụng hoặc liên kết bạn chọn. Nhấn một lần, hai lần, ba lần hay nhấn giữ: mỗi thao tác có thể mở một thứ khác nhau.</p>
+      <p class="lead">SnapKey Mapper biến Snap Key của OPPO và Plus Key của OnePlus thành nút mở nhanh các ứng dụng hoặc liên kết bạn chọn. <a href="#gestures">Nhấn một lần, hai lần, ba lần hay nhấn giữ</a>: mỗi thao tác có thể mở một thứ khác nhau.</p>
       <ul class="hero-g">
-        <li><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>Nhấn một lần</span></li>
-        <li><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>Nhấn hai lần</span></li>
-        <li><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>Nhấn ba lần</span></li>
-        <li><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>Nhấn giữ</span></li>
+        <li><a href="#g-single"><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>Nhấn một lần</span></a></li>
+        <li><a href="#g-double"><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>Nhấn hai lần</span></a></li>
+        <li><a href="#g-triple"><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>Nhấn ba lần</span></a></li>
+        <li><a href="#g-long"><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>Nhấn giữ</span></a></li>
       </ul>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
@@ -167,7 +167,7 @@
   <section id="examples" class="wide" aria-labelledby="ex-h">
     <p class="kicker">Ví dụ</p>
     <h2 id="ex-h">Một nút. Mọi thứ mở được bằng liên kết.</h2>
-    <p class="sub">Chọn một ứng dụng đã cài, dán một liên kết, hoặc viết liên kết <code>intent:</code> cho bất cứ việc gì Android làm được. Vài ý tưởng:</p>
+    <p class="sub">Chọn một ứng dụng đã cài, dán một liên kết, <a href="#library">chọn một lối tắt có sẵn</a>, hoặc viết liên kết <code>intent:</code> cho bất cứ việc gì Android làm được. Vài ý tưởng:</p>
 
     <ul class="bento" id="bento">
       <li class="tile big dark">
@@ -299,7 +299,7 @@
     <h2 id="ge-h">Một nút, bốn phím tắt</h2>
     <p class="sub">Từ phiên bản 1.0.9, nhấn một lần, hai lần, ba lần và nhấn giữ đều mở đích riêng của mình. Đặt một, hai, ba hoặc cả bốn.</p>
     <ul class="gestures trio">
-      <li class="single" style="--h:#5B8DEF">
+      <li class="single" id="g-single" style="--h:#5B8DEF">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -313,7 +313,7 @@
         <p>Camera, chỉ một lần nhấn. Nút chỉ chờ một chút khi đã đặt nhấn hai lần hoặc ba lần, để phân biệt; nếu không, nó chạy ngay.</p>
         <code>Ứng dụng: Camera</code>
       </li>
-      <li class="double" style="--h:#D97757">
+      <li class="double" id="g-double" style="--h:#D97757">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -327,7 +327,7 @@
         <p>Trợ lý AI của bạn, ở đây là Claude. Lỡ nhấn một lần trong túi sẽ không bao giờ mở nó.</p>
         <code>Ứng dụng: Claude</code>
       </li>
-      <li class="triple" style="--h:#8B6CF0">
+      <li class="triple" id="g-triple" style="--h:#8B6CF0">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -341,7 +341,7 @@
         <p>Ba lần nhấn nhanh mở ghi chú hôm nay trong Obsidian, sẵn sàng để viết.</p>
         <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
-      <li class="long" style="--h:#E3B23C">
+      <li class="long" id="g-long" style="--h:#E3B23C">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -413,7 +413,7 @@
   <section id="snap-key" class="narrow" aria-labelledby="what-h">
     <p class="kicker">Nút bấm</p>
     <h2 id="what-h">Nút Snap Key là gì?</h2>
-    <p class="sub">Snap Key là nút ở cạnh trái, phía trên của một số điện thoại OPPO. ColorOS chỉ cho nút này một danh sách thao tác cố định, như AI Mind Space hoặc đèn pin. SnapKey Mapper chạy với Snap Key của OPPO Find X9, X10, Reno 16 và Find N6, cũng như Plus Key của điện thoại OnePlus. Tôi dùng hằng ngày trên Find X9 Pro. SnapKey Mapper bổ sung phần tùy chỉnh còn thiếu.</p>
+    <p class="sub">Snap Key là nút ở cạnh trái, phía trên của một số điện thoại OPPO. ColorOS chỉ cho nút này một danh sách thao tác cố định, như AI Mind Space hoặc đèn pin. SnapKey Mapper chạy với Snap Key của OPPO Find X9, X10, Reno 16 và Find N6, cũng như <a href="/oneplus-plus-key/">Plus Key của điện thoại OnePlus</a>. Tôi dùng hằng ngày trên Find X9 Pro. SnapKey Mapper bổ sung phần tùy chỉnh còn thiếu. Muốn thử? <a href="#setup">Nhảy tới các bước cài đặt</a>.</p>
   </section>
 
   <section class="wide" aria-labelledby="how">
@@ -446,11 +446,11 @@
       </ul></div>
       <div><h3>Những gì nó không làm được</h3><ul>
         <li>Gửi bất cứ thứ gì ra ngoài: bản lite không có quyền internet; bản đầy đủ chỉ dùng quyền này để nói chuyện với chính điện thoại của bạn, một lần, khi thiết lập</li>
-        <li>Truy cập tin nhắn, thông báo hay màn hình của bạn: nó không có quyền nào cho việc đó (nó có đọc nhật ký hệ thống, xem FAQ)</li>
+        <li>Truy cập tin nhắn, thông báo hay màn hình của bạn: nó không có quyền nào cho việc đó (nó có đọc nhật ký hệ thống, xem <a href="#faq">FAQ</a>)</li>
         <li>Hiện quảng cáo, theo dõi bạn hay đòi tài khoản</li>
       </ul></div>
     </div>
-    <p class="muted small">Chỉ tải từ <a href="https://github.com/Damien-llado/snapkey-mapper/releases">các bản phát hành trên GitHub</a>. Muốn một ứng dụng hoàn toàn không dùng được mạng? Hãy lấy <strong>bản lite</strong> trên cùng trang (<code>snapkey-mapper-lite.apk</code>, khoảng 500 KB, không có quyền internet); bạn tự cấp quyền đọc nhật ký, xem bước 3. Mỗi bản phát hành ghi SHA-256 của APK và dấu vân tay của chứng chỉ ký, để bạn kiểm tra tệp bằng <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a>. Toàn bộ mã nguồn đều công khai.</p>
+    <p class="muted small">Chỉ tải từ <a href="https://github.com/Damien-llado/snapkey-mapper/releases">các bản phát hành trên GitHub</a>. Muốn một ứng dụng hoàn toàn không dùng được mạng? Hãy lấy <strong>bản lite</strong> trên cùng trang (<code>snapkey-mapper-lite.apk</code>, khoảng 500 KB, không có quyền internet); bạn tự cấp quyền đọc nhật ký, xem <a href="#step-3">bước 3</a>. Mỗi bản phát hành ghi SHA-256 của APK và dấu vân tay của chứng chỉ ký, để bạn kiểm tra tệp bằng <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a>. Toàn bộ mã nguồn đều công khai.</p>
   </section>
 
   <section id="setup" class="narrow" aria-labelledby="setup-h">
@@ -466,7 +466,7 @@
         <h3>Cài APK và cho phép các chế độ cài đặt bị hạn chế</h3>
         <p>Tải APK về và mở. Android chặn một số cài đặt nhạy cảm với ứng dụng cài ngoài Play Store: vào <em>Cài đặt › Ứng dụng › SnapKey Mapper</em>, nhấn <strong>⋮</strong> rồi <strong>Cho phép các chế độ cài đặt bị hạn chế</strong>.</p>
       </li>
-      <li>
+      <li id="step-3">
         <h3>Để ứng dụng tự cấp quyền đọc nhật ký</h3>
         <p>Trên ColorOS, một quyền bị chặn cho đến khi một công tắc ẩn được bật, và công tắc đó chỉ hiện khi điện thoại dùng tiếng Anh. Trước hết, chuyển điện thoại sang English (<em>Cài đặt › Hệ thống và cập nhật › Ngôn ngữ và khu vực</em>), rồi trong Cài đặt tìm <strong>Disable system</strong> và bật <strong>Disable system optimisation</strong> (nhấn <strong>Turn on anyway</strong>). Bạn có thể đổi lại ngôn ngữ ngay sau đó. Tiếp theo, kết nối Wi-Fi và nhấn <strong>Mở Gỡ lỗi qua Wi-Fi</strong> trong ứng dụng. Trong <em>Cài đặt › Hệ thống và cập nhật › Tùy chọn nhà phát triển</em>, nhấn vào dòng <strong>Gỡ lỗi qua Wi-Fi</strong> (phần chữ, không phải công tắc), bật lên, nhấn <strong>Ghép nối thiết bị bằng mã ghép nối</strong>, kéo thông báo xuống, mở rộng, nhấn <strong>Nhập mã</strong> và gõ 6 chữ số. Khi thông báo cho biết đã thiết lập xong, hãy tắt Gỡ lỗi qua Wi-Fi.</p>
         <details class="more"><summary>Dùng máy tính, hoặc bản lite</summary><p>Bản lite không có quyền internet và không tự thiết lập được: hãy chạy lệnh này từ máy tính, hoặc từ điện thoại bằng <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (chế độ Expert, thao tác <em>Shell command</em>, ADB, rồi <em>Test</em>). Sau đó bạn có thể tắt lại <em>Disable system optimisation</em>: quyền vẫn còn.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
@@ -498,7 +498,7 @@
           <tr><td>OPPO Find X9, Find X9 Ultra, Find X9s, Find N6</td><td>ColorOS 16</td><td><span class="st">Chạy với Snap Key</span></td></tr>
           <tr><td>OPPO Find X10, Find X10 Pro Max</td><td>ColorOS</td><td><span class="st">Chạy với Snap Key</span></td></tr>
           <tr><td>OPPO Reno 16, Reno 16 Pro, Reno 16 F</td><td>ColorOS</td><td><span class="st">Chạy với AI Snap Key</span></td></tr>
-          <tr><td>OnePlus 15, 15R, 13s, 13T, Nord 5</td><td>OxygenOS</td><td><span class="st">Chạy với Plus Key</span></td></tr>
+          <tr><td><a href="/oneplus-plus-key/">OnePlus 15, 15R, 13s, 13T, Nord 5</a></td><td>OxygenOS</td><td><span class="st">Chạy với Plus Key</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -592,6 +592,7 @@
   <ul>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper">Mã nguồn</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">Báo lỗi</a></li>
+    <li><a href="/oneplus-plus-key/">OnePlus Plus Key</a></li>
     <li><a href="/vi/changelog/">Cập nhật</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">Tất cả phiên bản</a></li>
     <li><a href="https://github.com/sponsors/Damien-llado">Ủng hộ dự án</a></li>

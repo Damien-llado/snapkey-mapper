@@ -134,7 +134,8 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 @media (max-width: 640px) {
   .hero .lead:has(+ .hero-g) { display: none; }
   .hero-g { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; list-style: none; padding: 0; margin: 0 0 1.6rem; }
-  .hero-g li { display: flex; align-items: center; gap: .55rem; padding: .45rem .6rem; border-radius: 14px; background: var(--glass); border: 1px solid var(--line); font: 600 .95rem/1.2 var(--display); color: var(--ink); text-align: left; }
+  .hero-g li { border-radius: 14px; background: var(--glass); border: 1px solid var(--line); font: 600 .95rem/1.2 var(--display); color: var(--ink); text-align: left; }
+  .hero-g a { display: flex; align-items: center; gap: .55rem; padding: .45rem .6rem; color: inherit; text-decoration: none; }
   .hero-g img { width: 32px; height: 32px; border-radius: 9px; flex: none; }
   .gridbg::before { opacity: calc(var(--grid-op) * .45); }
 }
@@ -722,3 +723,7 @@ html:not(.js) .cc-reopen { display: none; }
 @keyframes brd2 { 0%, 43% { opacity: 1; scale: 1.14; box-shadow: 0 0 0 2px var(--accent); } 50%, 93% { opacity: .72; scale: 1; box-shadow: 0 0 0 0 transparent; } 100% { opacity: 1; scale: 1.14; box-shadow: 0 0 0 2px var(--accent); } }
 @keyframes brd3 { 0%, 28.67% { opacity: 1; scale: 1.14; box-shadow: 0 0 0 2px var(--accent); } 33.33%, 95.33% { opacity: .72; scale: 1; box-shadow: 0 0 0 0 transparent; } 100% { opacity: 1; scale: 1.14; box-shadow: 0 0 0 2px var(--accent); } }
 @keyframes brd4 { 0%, 21.5% { opacity: 1; scale: 1.14; box-shadow: 0 0 0 2px var(--accent); } 25%, 96.5% { opacity: .72; scale: 1; box-shadow: 0 0 0 0 transparent; } 100% { opacity: 1; scale: 1.14; box-shadow: 0 0 0 2px var(--accent); } }
+
+/* Cibles des liens d'ancre du corps de page : l'en-tête collant ne les masque pas */
+.gestures > li, .steps > li { scroll-margin-top: calc(var(--navh, 3.7rem) + 1rem); }
+main > section[id] { scroll-margin-top: 1rem; }

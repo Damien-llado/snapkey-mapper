@@ -37,7 +37,7 @@
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=9">
+<link rel="stylesheet" href="/assets/style.css?v=10">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"Membuat Snap Key OPPO membuka aplikasi atau tautan apa saja, tanpa root."}
@@ -102,15 +102,15 @@
   <section class="hero">
     <div class="gridbg" aria-hidden="true"><i class="cell" style="--cx:-6;--cy:1;--c:#2FD39A;--d:0s"></i><i class="cell" style="--cx:5;--cy:2;--c:#5B8DEF;--d:1.2s"></i><i class="cell" style="--cx:-3;--cy:4;--c:#F08A3E;--d:2.4s"></i><i class="cell" style="--cx:7;--cy:5;--c:#8B6CF0;--d:3.1s"></i><i class="cell" style="--cx:-8;--cy:6;--c:#4CC9E0;--d:0.6s"></i><i class="cell" style="--cx:3;--cy:0;--c:#E2557A;--d:4.2s"></i><i class="cell" style="--cx:-5;--cy:9;--c:#2FD39A;--d:1.8s"></i><i class="cell" style="--cx:6;--cy:9;--c:#E3B23C;--d:3.6s"></i><i class="cell" style="--cx:-2;--cy:1;--c:#4CC9E0;--d:5s"></i><i class="cell" style="--cx:9;--cy:3;--c:#2FD39A;--d:2.8s"></i><i class="cell" style="--cx:-9;--cy:3;--c:#E2557A;--d:4.6s"></i><i class="cell" style="--cx:2;--cy:7;--c:#5B8DEF;--d:0.3s"></i></div>
     <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span>Open source · OPPO dan OnePlus · Tanpa root</p>
+      <p class="eyebrow"><span class="dot"></span>Open source · OPPO dan <a href="/oneplus-plus-key/">OnePlus</a> · Tanpa root</p>
       <h1>Ubah fungsi tombol Snap Key OPPO untuk membuka <em>aplikasi apa saja</em></h1>
       <p class="say">Tekan tombolnya, langsung masuk ke <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper mengubah Snap Key di OPPO dan Plus Key di OnePlus menjadi peluncur untuk aplikasi atau tautan pilihan Anda. Tekan sekali, dua kali, tiga kali, atau tekan lama: setiap gerakan bisa membuka hal yang berbeda.</p>
+      <p class="lead">SnapKey Mapper mengubah Snap Key di OPPO dan Plus Key di OnePlus menjadi peluncur untuk aplikasi atau tautan pilihan Anda. <a href="#gestures">Tekan sekali, dua kali, tiga kali, atau tekan lama</a>: setiap gerakan bisa membuka hal yang berbeda.</p>
       <ul class="hero-g">
-        <li><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>Tekan sekali</span></li>
-        <li><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>Tekan dua kali</span></li>
-        <li><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>Tekan tiga kali</span></li>
-        <li><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>Tekan lama</span></li>
+        <li><a href="#g-single"><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>Tekan sekali</span></a></li>
+        <li><a href="#g-double"><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>Tekan dua kali</span></a></li>
+        <li><a href="#g-triple"><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>Tekan tiga kali</span></a></li>
+        <li><a href="#g-long"><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>Tekan lama</span></a></li>
       </ul>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
@@ -167,7 +167,7 @@
   <section id="examples" class="wide" aria-labelledby="ex-h">
     <p class="kicker">Contoh</p>
     <h2 id="ex-h">Satu tombol. Apa pun yang bisa dibuka lewat tautan.</h2>
-    <p class="sub">Pilih aplikasi yang terinstal, tempel tautan, atau tulis tautan <code>intent:</code> untuk apa pun yang bisa dilakukan Android. Beberapa ide:</p>
+    <p class="sub">Pilih aplikasi yang terinstal, tempel tautan, <a href="#library">pilih pintasan siap pakai</a>, atau tulis tautan <code>intent:</code> untuk apa pun yang bisa dilakukan Android. Beberapa ide:</p>
 
     <ul class="bento" id="bento">
       <li class="tile big dark">
@@ -299,7 +299,7 @@
     <h2 id="ge-h">Satu tombol, empat pintasan</h2>
     <p class="sub">Sejak versi 1.0.9, tekan sekali, dua kali, tiga kali, dan tekan lama masing-masing membuka targetnya sendiri. Atur satu, dua, tiga, atau keempatnya.</p>
     <ul class="gestures trio">
-      <li class="single" style="--h:#5B8DEF">
+      <li class="single" id="g-single" style="--h:#5B8DEF">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -313,7 +313,7 @@
         <p>Kamera, dengan sekali tekan. Tombol hanya menunggu sepersekian detik jika tekan dua kali atau tiga kali diatur, untuk membedakannya; selain itu langsung bereaksi.</p>
         <code>Aplikasi: Kamera</code>
       </li>
-      <li class="double" style="--h:#D97757">
+      <li class="double" id="g-double" style="--h:#D97757">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -327,7 +327,7 @@
         <p>Asisten AI Anda, di sini Claude. Tertekan sekali di saku tidak akan pernah membukanya.</p>
         <code>Aplikasi: Claude</code>
       </li>
-      <li class="triple" style="--h:#8B6CF0">
+      <li class="triple" id="g-triple" style="--h:#8B6CF0">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -341,7 +341,7 @@
         <p>Tiga tekanan cepat membuka catatan hari ini di Obsidian, siap untuk ditulis.</p>
         <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
-      <li class="long" style="--h:#E3B23C">
+      <li class="long" id="g-long" style="--h:#E3B23C">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -413,7 +413,7 @@
   <section id="snap-key" class="narrow" aria-labelledby="what-h">
     <p class="kicker">Tombolnya</p>
     <h2 id="what-h">Apa itu tombol Snap Key di OPPO dan apa fungsinya?</h2>
-    <p class="sub">Snap Key adalah tombol di sisi kiri atas sebagian ponsel OPPO. ColorOS hanya memberinya daftar fungsi yang tetap, seperti AI Mind Space atau senter. SnapKey Mapper berfungsi dengan Snap Key pada OPPO Find X9, X10, Reno 16 dan Find N6, serta dengan Plus Key pada ponsel OnePlus. Saya memakainya setiap hari di Find X9 Pro. SnapKey Mapper menambahkan penyesuaian yang selama ini tidak ada.</p>
+    <p class="sub">Snap Key adalah tombol di sisi kiri atas sebagian ponsel OPPO. ColorOS hanya memberinya daftar fungsi yang tetap, seperti AI Mind Space atau senter. SnapKey Mapper berfungsi dengan Snap Key pada OPPO Find X9, X10, Reno 16 dan Find N6, serta dengan <a href="/oneplus-plus-key/">Plus Key pada ponsel OnePlus</a>. Saya memakainya setiap hari di Find X9 Pro. SnapKey Mapper menambahkan penyesuaian yang selama ini tidak ada. Ingin mencobanya? <a href="#setup">Langsung ke langkah penyiapan</a>.</p>
   </section>
 
   <section class="wide" aria-labelledby="how">
@@ -446,11 +446,11 @@
       </ul></div>
       <div><h3>Yang tidak bisa dilakukannya</h3><ul>
         <li>Mengirim apa pun keluar: edisi lite tidak punya izin internet; edisi lengkap memakainya hanya untuk berkomunikasi dengan ponsel Anda sendiri, sekali, saat penyiapan</li>
-        <li>Mengakses pesan, notifikasi, atau layar Anda: aplikasi tidak punya izin untuk itu (aplikasi memang membaca log sistem, lihat FAQ)</li>
+        <li>Mengakses pesan, notifikasi, atau layar Anda: aplikasi tidak punya izin untuk itu (aplikasi memang membaca log sistem, lihat <a href="#faq">FAQ</a>)</li>
         <li>Menampilkan iklan, melacak Anda, atau meminta akun</li>
       </ul></div>
     </div>
-    <p class="muted small">Unduh hanya dari <a href="https://github.com/Damien-llado/snapkey-mapper/releases">rilis GitHub</a>. Ingin aplikasi yang sama sekali tidak bisa memakai jaringan? Ambil <strong>edisi lite</strong> dari halaman yang sama (<code>snapkey-mapper-lite.apk</code>, sekitar 500 KB, tanpa izin internet); izin log Anda berikan sendiri, lihat langkah 3. Setiap rilis mencantumkan SHA-256 APK dan sidik jari sertifikat penandatanganan, jadi Anda bisa memeriksa file dengan <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a>. Seluruh kode sumbernya publik.</p>
+    <p class="muted small">Unduh hanya dari <a href="https://github.com/Damien-llado/snapkey-mapper/releases">rilis GitHub</a>. Ingin aplikasi yang sama sekali tidak bisa memakai jaringan? Ambil <strong>edisi lite</strong> dari halaman yang sama (<code>snapkey-mapper-lite.apk</code>, sekitar 500 KB, tanpa izin internet); izin log Anda berikan sendiri, lihat <a href="#step-3">langkah 3</a>. Setiap rilis mencantumkan SHA-256 APK dan sidik jari sertifikat penandatanganan, jadi Anda bisa memeriksa file dengan <a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a>. Seluruh kode sumbernya publik.</p>
   </section>
 
   <section id="setup" class="narrow" aria-labelledby="setup-h">
@@ -466,7 +466,7 @@
         <h3>Pasang APK dan izinkan setelan terbatas</h3>
         <p>Unduh APK dan buka. Android memblokir beberapa setelan sensitif untuk aplikasi yang dipasang di luar Play Store: buka <em>Pengaturan › Aplikasi › SnapKey Mapper</em>, ketuk <strong>⋮</strong> lalu <strong>Izinkan setelan terbatas</strong>.</p>
       </li>
-      <li>
+      <li id="step-3">
         <h3>Biarkan aplikasi memberi dirinya izin log</h3>
         <p>Di ColorOS, sebuah izin tetap diblokir sampai sakelar tersembunyi diaktifkan, dan sakelar itu hanya muncul saat bahasa ponsel English. Pertama, ubah bahasa ponsel ke English (<em>Pengaturan › Sistem &amp; pembaruan › Bahasa &amp; wilayah</em>), lalu di Pengaturan cari <strong>Disable system</strong> dan aktifkan <strong>Disable system optimisation</strong> (ketuk <strong>Turn on anyway</strong>). Anda bisa langsung mengembalikan bahasa Anda setelahnya. Lalu sambungkan ke Wi-Fi dan ketuk <strong>Buka Proses debug nirkabel</strong> di aplikasi. Di <em>Pengaturan › Sistem &amp; pembaruan › Opsi Pengembang</em>, ketuk baris <strong>Proses debug nirkabel</strong> (teksnya, bukan sakelarnya), aktifkan, ketuk <strong>Sambungkan perangkat dengan kode penyambungan</strong>, tarik notifikasi ke bawah, bentangkan, ketuk <strong>Masukkan kode</strong> dan ketik 6 angkanya. Saat notifikasi menyatakan penyiapan selesai, matikan Proses debug nirkabel.</p>
         <details class="more"><summary>Dengan komputer, atau edisi lite</summary><p>Edisi lite tidak punya izin internet dan tidak bisa menyiapkan dirinya sendiri: jalankan perintah ini dari komputer, atau dari ponsel dengan <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a> (mode Expert, aksi <em>Shell command</em>, ADB, lalu <em>Test</em>). Setelahnya Anda bisa mematikan lagi <em>Disable system optimisation</em>: izinnya tetap ada.</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
@@ -498,7 +498,7 @@
           <tr><td>OPPO Find X9, Find X9 Ultra, Find X9s, Find N6</td><td>ColorOS 16</td><td><span class="st">Berfungsi dengan Snap Key</span></td></tr>
           <tr><td>OPPO Find X10, Find X10 Pro Max</td><td>ColorOS</td><td><span class="st">Berfungsi dengan Snap Key</span></td></tr>
           <tr><td>OPPO Reno 16, Reno 16 Pro, Reno 16 F</td><td>ColorOS</td><td><span class="st">Berfungsi dengan AI Snap Key</span></td></tr>
-          <tr><td>OnePlus 15, 15R, 13s, 13T, Nord 5</td><td>OxygenOS</td><td><span class="st">Berfungsi dengan Plus Key</span></td></tr>
+          <tr><td><a href="/oneplus-plus-key/">OnePlus 15, 15R, 13s, 13T, Nord 5</a></td><td>OxygenOS</td><td><span class="st">Berfungsi dengan Plus Key</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -592,6 +592,7 @@
   <ul>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper">Kode sumber</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">Laporkan bug</a></li>
+    <li><a href="/oneplus-plus-key/">OnePlus Plus Key</a></li>
     <li><a href="/id/changelog/">Changelog</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">Semua versi</a></li>
     <li><a href="https://github.com/sponsors/Damien-llado">Dukung proyek ini</a></li>

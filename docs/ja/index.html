@@ -37,7 +37,7 @@
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=9">
+<link rel="stylesheet" href="/assets/style.css?v=10">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapKey Mapper","applicationCategory":"UtilitiesApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","description":"OPPO の Snap Key で好きなアプリやリンクを開けるようにします。root 不要。"}
@@ -102,15 +102,15 @@
   <section class="hero">
     <div class="gridbg" aria-hidden="true"><i class="cell" style="--cx:-6;--cy:1;--c:#2FD39A;--d:0s"></i><i class="cell" style="--cx:5;--cy:2;--c:#5B8DEF;--d:1.2s"></i><i class="cell" style="--cx:-3;--cy:4;--c:#F08A3E;--d:2.4s"></i><i class="cell" style="--cx:7;--cy:5;--c:#8B6CF0;--d:3.1s"></i><i class="cell" style="--cx:-8;--cy:6;--c:#4CC9E0;--d:0.6s"></i><i class="cell" style="--cx:3;--cy:0;--c:#E2557A;--d:4.2s"></i><i class="cell" style="--cx:-5;--cy:9;--c:#2FD39A;--d:1.8s"></i><i class="cell" style="--cx:6;--cy:9;--c:#E3B23C;--d:3.6s"></i><i class="cell" style="--cx:-2;--cy:1;--c:#4CC9E0;--d:5s"></i><i class="cell" style="--cx:9;--cy:3;--c:#2FD39A;--d:2.8s"></i><i class="cell" style="--cx:-9;--cy:3;--c:#E2557A;--d:4.6s"></i><i class="cell" style="--cx:2;--cy:7;--c:#5B8DEF;--d:0.3s"></i></div>
     <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span>オープンソース · OPPO と OnePlus · root 不要</p>
+      <p class="eyebrow"><span class="dot"></span>オープンソース · OPPO と <a href="/oneplus-plus-key/">OnePlus</a> · root 不要</p>
       <h1>OPPO のスナップキー（Snap Key）に<em>好きなアプリ</em>を設定</h1>
       <p class="say">キーを押せば、すぐに <span class="rot" id="rot">Claude Code</span></p>
-      <p class="lead">SnapKey Mapper は、OPPO の Snap Key と OnePlus の Plus Key を、選んだアプリやリンクを開くランチャーに変えます。1回押し、2回押し、3回押し、長押しのそれぞれで、別のものを開けます。</p>
+      <p class="lead">SnapKey Mapper は、OPPO の Snap Key と OnePlus の Plus Key を、選んだアプリやリンクを開くランチャーに変えます。<a href="#gestures">1回押し、2回押し、3回押し、長押し</a>のそれぞれで、別のものを開けます。</p>
       <ul class="hero-g">
-        <li><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>1回押し</span></li>
-        <li><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>2回押し</span></li>
-        <li><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>3回押し</span></li>
-        <li><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>長押し</span></li>
+        <li><a href="#g-single"><img src="/img/apps/camera.webp" alt="" width="32" height="32"><span>1回押し</span></a></li>
+        <li><a href="#g-double"><img src="/img/apps/claude.webp" alt="" width="32" height="32"><span>2回押し</span></a></li>
+        <li><a href="#g-triple"><img src="/img/apps/obsidian.webp" alt="" width="32" height="32"><span>3回押し</span></a></li>
+        <li><a href="#g-long"><img src="/img/apps/clock.webp" alt="" width="32" height="32"><span>長押し</span></a></li>
       </ul>
       <div class="ctas">
         <a class="btn primary" href="https://github.com/Damien-llado/snapkey-mapper/releases/latest/download/snapkey-mapper.apk">
@@ -167,7 +167,7 @@
   <section id="examples" class="wide" aria-labelledby="ex-h">
     <p class="kicker">使用例</p>
     <h2 id="ex-h">キーはひとつ。リンクで開けるものなら何でも。</h2>
-    <p class="sub">インストール済みのアプリを選ぶか、リンクを貼り付けるか、Android でできることなら何でも <code>intent:</code> リンクで書けます。たとえば：</p>
+    <p class="sub">インストール済みのアプリを選ぶか、リンクを貼り付けるか、<a href="#library">用意されたショートカットを選ぶか</a>、Android でできることなら何でも <code>intent:</code> リンクで書けます。たとえば：</p>
 
     <ul class="bento" id="bento">
       <li class="tile big dark">
@@ -299,7 +299,7 @@
     <h2 id="ge-h">キーはひとつ、ショートカットは 4 つ</h2>
     <p class="sub">バージョン 1.0.9 から、1回押し、2回押し、3回押し、長押しにそれぞれ別の対象を設定できます。1 つでも、2 つでも、3 つでも、4 つ全部でも。</p>
     <ul class="gestures trio">
-      <li class="single" style="--h:#5B8DEF">
+      <li class="single" id="g-single" style="--h:#5B8DEF">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -313,7 +313,7 @@
         <p>1回押しでカメラ。2回押しか3回押しが設定されているときだけ、区別するために一瞬待ちます。それ以外はすぐに反応します。</p>
         <code>アプリ：カメラ</code>
       </li>
-      <li class="double" style="--h:#D97757">
+      <li class="double" id="g-double" style="--h:#D97757">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -327,7 +327,7 @@
         <p>AI アシスタント、ここでは Claude。ポケットの中で1回押してしまっても開きません。</p>
         <code>アプリ：Claude</code>
       </li>
-      <li class="triple" style="--h:#8B6CF0">
+      <li class="triple" id="g-triple" style="--h:#8B6CF0">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -341,7 +341,7 @@
         <p>すばやく 3 回押すと Obsidian の今日のノートが開き、すぐに書き始められます。</p>
         <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
-      <li class="long" style="--h:#E3B23C">
+      <li class="long" id="g-long" style="--h:#E3B23C">
         <div class="stage" aria-hidden="true"><div class="phone">
           <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
           <div class="face"><div class="screen">
@@ -413,7 +413,7 @@
   <section id="snap-key" class="narrow" aria-labelledby="what-h">
     <p class="kicker">キー</p>
     <h2 id="what-h">スナップキー（Snap Key）とは？</h2>
-    <p class="sub">スナップキー（Snap Key）は、一部の OPPO スマートフォンの本体左側面の上部にあるボタンです。ColorOS の設定では、AI Mind Space やライトなど、決まった操作しか選べません。SnapKey Mapper は、OPPO Find X9・X10・Reno 16 シリーズと Find N6 の Snap Key、および OnePlus の Plus Key で使えます。私は Find X9 Pro で毎日使っています。SnapKey Mapper は、足りなかったカスタマイズを追加します。</p>
+    <p class="sub">スナップキー（Snap Key）は、一部の OPPO スマートフォンの本体左側面の上部にあるボタンです。ColorOS の設定では、AI Mind Space やライトなど、決まった操作しか選べません。SnapKey Mapper は、OPPO Find X9・X10・Reno 16 シリーズと Find N6 の Snap Key、および <a href="/oneplus-plus-key/">OnePlus の Plus Key</a> で使えます。私は Find X9 Pro で毎日使っています。SnapKey Mapper は、足りなかったカスタマイズを追加します。試してみたい方は、<a href="#setup">設定の手順へ</a>。</p>
   </section>
 
   <section class="wide" aria-labelledby="how">
@@ -446,11 +446,11 @@
       </ul></div>
       <div><h3>できないこと</h3><ul>
         <li>外部への送信：lite 版にはインターネットの権限がなく、通常版も初期設定中に一度、あなたのスマートフォン自身とやり取りするためだけに使います</li>
-        <li>メッセージ、通知、画面へのアクセス：そのための権限を持っていません（システムログは読みます。FAQ を参照）</li>
+        <li>メッセージ、通知、画面へのアクセス：そのための権限を持っていません（システムログは読みます。<a href="#faq">FAQ</a> を参照）</li>
         <li>広告の表示、トラッキング、アカウントの要求</li>
       </ul></div>
     </div>
-    <p class="muted small">ダウンロードは <a href="https://github.com/Damien-llado/snapkey-mapper/releases">GitHub のリリース</a>からだけにしてください。ネットワークをまったく使えないアプリがいいなら、同じページから <strong>lite 版</strong>を入手してください（<code>snapkey-mapper-lite.apk</code>、約 500 KB、インターネットの権限なし）。ログの権限は自分で付与します（手順 3 を参照）。各リリースには APK の SHA-256 と署名証明書のフィンガープリントが載っているので、<a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a> でファイルを確認できます。ソースコードはすべて公開されています。</p>
+    <p class="muted small">ダウンロードは <a href="https://github.com/Damien-llado/snapkey-mapper/releases">GitHub のリリース</a>からだけにしてください。ネットワークをまったく使えないアプリがいいなら、同じページから <strong>lite 版</strong>を入手してください（<code>snapkey-mapper-lite.apk</code>、約 500 KB、インターネットの権限なし）。ログの権限は自分で付与します（<a href="#step-3">手順 3</a> を参照）。各リリースには APK の SHA-256 と署名証明書のフィンガープリントが載っているので、<a href="https://github.com/soupslurpr/AppVerifier">AppVerifier</a> でファイルを確認できます。ソースコードはすべて公開されています。</p>
   </section>
 
   <section id="setup" class="narrow" aria-labelledby="setup-h">
@@ -466,7 +466,7 @@
         <h3>APK をインストールし、制限付き設定を許可する</h3>
         <p>APK をダウンロードして開きます。Play ストア以外からインストールしたアプリでは、Android が一部の機密性の高い設定をブロックします。<em>設定 › アプリ › SnapKey Mapper</em> を開き、<strong>⋮</strong> をタップしてから<strong>制限付き設定を許可</strong>をタップします。</p>
       </li>
-      <li>
+      <li id="step-3">
         <h3>アプリにログの権限を自分で付与させる</h3>
         <p>ColorOS では、隠しスイッチがオンになるまで権限がブロックされます。このスイッチはスマートフォンが英語のときにしか表示されません。まずスマートフォンを English に切り替え（<em>設定 › システムおよび更新 › 言語と地域</em>）、設定で <strong>Disable system</strong> を検索して <strong>Disable system optimisation</strong> をオンにします（<strong>Turn on anyway</strong> をタップ）。言語はすぐに元に戻してかまいません。次に Wi-Fi に接続し、アプリで<strong>ワイヤレス デバッグを開く</strong>をタップします。<em>設定 › システムおよび更新 › 開発者オプション</em>で、<strong>ワイヤレス デバッグ</strong>の行（スイッチではなく文字）をタップしてオンにし、<strong>ペア設定コードによるデバイスのペア設定</strong>をタップします。通知を引き下ろして展開し、<strong>コードを入力</strong>をタップして 6 桁の数字を入力します。設定が完了したと通知に表示されたら、ワイヤレス デバッグをオフにします。</p>
         <details class="more"><summary>パソコンを使う場合、または lite 版</summary><p>lite 版はインターネットの権限がなく、自動では設定できません。パソコンから、またはスマートフォンで <a href="https://github.com/keymapperorg/KeyMapper">Key Mapper</a>（エキスパートモード、<em>Shell command</em> アクション、ADB、そして <em>Test</em>）を使って、次のコマンドを実行してください。あとで <em>Disable system optimisation</em> をオフに戻してもかまいません。権限は残ります。</p><pre data-copy=""><code>adb shell pm grant io.github.damienllado.snapkeymapper android.permission.READ_LOGS</code></pre></details>
@@ -498,7 +498,7 @@
           <tr><td>OPPO Find X9, Find X9 Ultra, Find X9s, Find N6</td><td>ColorOS 16</td><td><span class="st">Snap Key で動作</span></td></tr>
           <tr><td>OPPO Find X10, Find X10 Pro Max</td><td>ColorOS</td><td><span class="st">Snap Key で動作</span></td></tr>
           <tr><td>OPPO Reno 16, Reno 16 Pro, Reno 16 F</td><td>ColorOS</td><td><span class="st">AI Snap Key で動作</span></td></tr>
-          <tr><td>OnePlus 15, 15R, 13s, 13T, Nord 5</td><td>OxygenOS</td><td><span class="st">Plus Key で動作</span></td></tr>
+          <tr><td><a href="/oneplus-plus-key/">OnePlus 15, 15R, 13s, 13T, Nord 5</a></td><td>OxygenOS</td><td><span class="st">Plus Key で動作</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -592,6 +592,7 @@
   <ul>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper">ソースコード</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">バグを報告</a></li>
+    <li><a href="/oneplus-plus-key/">OnePlus Plus Key</a></li>
     <li><a href="/ja/changelog/">更新履歴</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/releases">すべてのバージョン</a></li>
     <li><a href="https://github.com/sponsors/Damien-llado">プロジェクトを支援</a></li>
