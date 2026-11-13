@@ -51,17 +51,26 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
   new IntersectionObserver(function (e) { document.body.classList.toggle('past-hero', !e[0].isIntersecting && e[0].boundingClientRect.top < 0); }).observe(cta);
 })();
 
+// Icône de l'appli dans le mot qui tourne (décor : la page reste juste sans script)
+(function () {
+  var rot = document.getElementById('rot'); if (!rot) return;
+  var im = document.createElement('img');
+  im.id = 'rot-i'; im.alt = ''; im.width = im.height = 40; im.src = '/img/apps/claude.webp';
+  rot.insertBefore(im, rot.firstChild);
+})();
+
 // Animations : appui sur la Snap Key, l'écran ouvre la cible suivante ; inclinaison au pointeur
 (function () {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches || !document.getElementById('stage')) return;
   var T = [
+    // noms d'applis seulement : la phrase autour est traduite, pas ces mots
     ['Claude Code', 'claude.ai/code/…', '#D97757', 'claude', 'Claude Code'],
-    ['your run playlist', 'spotify:playlist:…', '#1ED760', 'spotify', 'Run playlist'],
-    ['navigation home', 'google.navigation:q=…', '#4285F4', 'maps', 'Maps'],
+    ['Spotify', 'spotify:playlist:…', '#1ED760', 'spotify', 'Run playlist'],
+    ['Google Maps', 'google.navigation:q=…', '#4285F4', 'maps', 'Maps'],
     ['Strava', 'App: Strava', '#FC4C02', 'strava', 'Strava'],
-    ["today's notes", 'docs.google.com/…', '#4285F4', 'gdocs', 'Notes'],
-    ['the garage dashboard', 'homeassistant://navigate/…', '#18BCF2', 'homeassistant', 'Home Assistant'],
-    ['a WhatsApp chat', 'wa.me/…', '#25D366', 'whatsapp', 'WhatsApp']
+    ['Google Docs', 'docs.google.com/…', '#4285F4', 'gdocs', 'Notes'],
+    ['Home Assistant', 'homeassistant://navigate/…', '#18BCF2', 'homeassistant', 'Home Assistant'],
+    ['WhatsApp', 'wa.me/…', '#25D366', 'whatsapp', 'WhatsApp']
   ];
   var i = 0, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
       launch = document.getElementById('launch'), ico = document.getElementById('launch-i');
@@ -77,7 +86,8 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
       document.getElementById('launch-t').textContent = t[4];
       document.getElementById('launch-s').textContent = t[1];
       launch.classList.remove('go'); void launch.offsetWidth; launch.classList.add('go');
-      rot.textContent = t[0];
+      rot.lastChild.textContent = t[0];
+      document.getElementById('rot-i').src = '/img/apps/' + t[3] + '.webp';
       rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
     }, 260);
   }
