@@ -50,8 +50,11 @@ final class Diagnostic {
                 + oplus();
     }
 
+    /** Commercial name when the system gives it (OPPO and OnePlus: "OPPO Find X9 Pro"), with the model code. */
     static String model() {
-        return Build.MANUFACTURER + " " + Build.MODEL;
+        String name = prop("ro.vendor.oplus.market.name");
+        if (name.equals("-")) name = prop("ro.product.marketname");
+        return name.equals("-") ? Build.MANUFACTURER + " " + Build.MODEL : name + " (" + Build.MODEL + ")";
     }
 
     /** The key pattern the user found, for a new phone: only that line, never the capture (it holds other apps' logs). */
