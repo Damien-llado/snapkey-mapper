@@ -413,13 +413,13 @@
   <section id="snap-key" class="narrow" aria-labelledby="what-h">
     <p class="kicker">キー</p>
     <h2 id="what-h">スナップキー（Snap Key）とは？</h2>
-    <p class="sub">スナップキー（Snap Key）は、一部の OPPO スマートフォンの本体左側面の上部にあるボタンです。ColorOS の設定では、AI Mind Space やライトなど、決まった操作しか選べません。SnapKey Mapper は、OPPO Find X9・X10・Reno 16 シリーズと Find N6 の Snap Key、および <a href="/ja/oneplus-plus-key/">OnePlus の Plus Key</a> で使えます。私は Find X9 Pro で毎日使っています。SnapKey Mapper は、足りなかったカスタマイズを追加します。試してみたい方は、<a href="#setup">設定の手順へ</a>。</p>
+    <p class="sub">スナップキー（Snap Key）は、一部の OPPO スマートフォンの本体左側面の上部にあるボタンです。ColorOS の設定では、AI Mind Space やライトなど、決まった操作しか選べません。SnapKey Mapper は、OPPO Find X9・X10・Reno 16 シリーズと Find N6 の Snap Key、および <a href="/ja/oneplus-plus-key/">OnePlus の Plus Key</a> で使えます。私は Find X9 Pro で毎日使っています。SnapKey Mapper は、足りなかったカスタマイズを追加します。初めての方は、<a href="/ja/what-is-snap-key/">Snap Key とは何か、何ができるのか</a>を読むか、<a href="/ja/shortcuts/">12 のショートカットのアイデア</a>から選んでください。試してみたい方は、<a href="#setup">設定の手順へ</a>。</p>
   </section>
 
   <section class="wide" aria-labelledby="how">
     <p class="kicker">しくみ</p>
     <h2 id="how">どう動くのか、正直に</h2>
-    <p class="sub">ColorOS 16 の Snap Key でできるのは、OPPO が用意した操作だけです。AI Mind Space、カメラ、ライト、レコーダー、翻訳、スクリーンショット、サウンドモード、おやすみモード。「アプリを開く」という選択肢はなく、キー割り当てアプリも、デバッグ接続をオンにし続けないとキーを検出できません。SnapKey Mapper は、ColorOS がすでに記録している内容を見ることで、この制約を回避します。</p>
+    <p class="sub">ColorOS 16 の Snap Key でできるのは、OPPO が用意した操作だけです。AI Mind Space、カメラ、ライト、レコーダー、翻訳、スクリーンショット、サウンドモード、サイレントモード。「アプリを開く」という選択肢はなく、キー割り当てアプリも、デバッグ接続をオンにし続けないとキーを検出できません。SnapKey Mapper は、ColorOS がすでに記録している内容を見ることで、この制約を回避します。</p>
     <ul class="cards">
       <li><svg aria-hidden="true"><use href="#g-term"/></svg><h3>ColorOS はキーが押されるたびに記録する</h3><p>システムログに <code>KEYCODE_ACTION_BUTTON_CLICK</code> を含む行が書き込まれます。SnapKey Mapper はログを読み、その行を見つけると、選んだアプリやリンクを開きます。</p></li>
       <li><svg aria-hidden="true"><use href="#g-shield"/></svg><h3>root もユーザー補助も不要</h3><p>ログを読むには <code>READ_LOGS</code> という権限が 1 つ必要で、コマンド 1 回で一度だけ付与します。再起動しても残ります。</p></li>
