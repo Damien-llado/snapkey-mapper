@@ -3,10 +3,10 @@
 > Free, open source Android app (MIT) that makes the Snap Key, the side key of OPPO Find X9, X9 Pro and other ColorOS phones, open any app, link or Android intent with a single, double, triple or long press, each gesture able to open something different. No root. It reads the key press from the system log, so it works without Wi-Fi.
 
 - [Home page and setup guide](https://remapsnapkey.com/): what it does, how to install it in a few steps, compatibility, FAQ.
-- [OnePlus Plus Key guide](https://remapsnapkey.com/oneplus-plus-key/): what the OnePlus Plus Key can do, what the app adds, short setup and FAQ (English only).
-- [What is the Snap Key](https://remapsnapkey.com/what-is-snap-key/): the side key of OPPO phones, what ColorOS lets it do, which phones have it (English only).
-- [Shortcut ideas](https://remapsnapkey.com/shortcuts/): what to put on the key (flashlight, ring mode, voice notes, AI assistants, music, notes, smart home, camera, timers) and how to set each one up (English only).
-- [Setup guide with video](https://remapsnapkey.com/setup/): a one-minute video and the 6 setup steps (English only).
+- [OnePlus Plus Key guide](https://remapsnapkey.com/oneplus-plus-key/): what the OnePlus Plus Key can do, what the app adds, short setup and FAQ (13 languages).
+- [What is the Snap Key](https://remapsnapkey.com/what-is-snap-key/): the side key of OPPO phones, what ColorOS lets it do, which phones have it (13 languages).
+- [Shortcut ideas](https://remapsnapkey.com/shortcuts/): what to put on the key (flashlight, ring mode, voice notes, AI assistants, music, notes, smart home, camera, timers) and how to set each one up (13 languages).
+- [Setup guide with video](https://remapsnapkey.com/setup/): a one-minute video and the 6 setup steps (13 languages).
 - [Source code and downloads](https://github.com/Damien-llado/snapkey-mapper): README, releases with SHA-256, issues.
 
 The home page in 13 languages, with the same content:
@@ -25,6 +25,13 @@ The home page in 13 languages, with the same content:
 - [Vietnamese, Tiếng Việt](https://remapsnapkey.com/vi/)
 - [Thai, ไทย](https://remapsnapkey.com/th/)
 
+The four guides above in the other 12 languages (same address, with the language folder in front, for example https://remapsnapkey.com/fr/setup/):
+
+- OnePlus Plus Key guide: [French, Français](https://remapsnapkey.com/fr/oneplus-plus-key/), [Spanish, Español](https://remapsnapkey.com/es/oneplus-plus-key/), [German, Deutsch](https://remapsnapkey.com/de/oneplus-plus-key/), [Dutch, Nederlands](https://remapsnapkey.com/nl/oneplus-plus-key/), [Portuguese (Brazil), Português (Brasil)](https://remapsnapkey.com/pt-br/oneplus-plus-key/), [Hindi, हिन्दी](https://remapsnapkey.com/hi/oneplus-plus-key/), [Chinese (Simplified), 中文](https://remapsnapkey.com/zh/oneplus-plus-key/), [Indonesian, Bahasa Indonesia](https://remapsnapkey.com/id/oneplus-plus-key/), [Italian, Italiano](https://remapsnapkey.com/it/oneplus-plus-key/), [Japanese, 日本語](https://remapsnapkey.com/ja/oneplus-plus-key/), [Vietnamese, Tiếng Việt](https://remapsnapkey.com/vi/oneplus-plus-key/), [Thai, ไทย](https://remapsnapkey.com/th/oneplus-plus-key/)
+- What is the Snap Key: [French, Français](https://remapsnapkey.com/fr/what-is-snap-key/), [Spanish, Español](https://remapsnapkey.com/es/what-is-snap-key/), [German, Deutsch](https://remapsnapkey.com/de/what-is-snap-key/), [Dutch, Nederlands](https://remapsnapkey.com/nl/what-is-snap-key/), [Portuguese (Brazil), Português (Brasil)](https://remapsnapkey.com/pt-br/what-is-snap-key/), [Hindi, हिन्दी](https://remapsnapkey.com/hi/what-is-snap-key/), [Chinese (Simplified), 中文](https://remapsnapkey.com/zh/what-is-snap-key/), [Indonesian, Bahasa Indonesia](https://remapsnapkey.com/id/what-is-snap-key/), [Italian, Italiano](https://remapsnapkey.com/it/what-is-snap-key/), [Japanese, 日本語](https://remapsnapkey.com/ja/what-is-snap-key/), [Vietnamese, Tiếng Việt](https://remapsnapkey.com/vi/what-is-snap-key/), [Thai, ไทย](https://remapsnapkey.com/th/what-is-snap-key/)
+- Shortcut ideas: [French, Français](https://remapsnapkey.com/fr/shortcuts/), [Spanish, Español](https://remapsnapkey.com/es/shortcuts/), [German, Deutsch](https://remapsnapkey.com/de/shortcuts/), [Dutch, Nederlands](https://remapsnapkey.com/nl/shortcuts/), [Portuguese (Brazil), Português (Brasil)](https://remapsnapkey.com/pt-br/shortcuts/), [Hindi, हिन्दी](https://remapsnapkey.com/hi/shortcuts/), [Chinese (Simplified), 中文](https://remapsnapkey.com/zh/shortcuts/), [Indonesian, Bahasa Indonesia](https://remapsnapkey.com/id/shortcuts/), [Italian, Italiano](https://remapsnapkey.com/it/shortcuts/), [Japanese, 日本語](https://remapsnapkey.com/ja/shortcuts/), [Vietnamese, Tiếng Việt](https://remapsnapkey.com/vi/shortcuts/), [Thai, ไทย](https://remapsnapkey.com/th/shortcuts/)
+- Setup guide with video: [French, Français](https://remapsnapkey.com/fr/setup/), [Spanish, Español](https://remapsnapkey.com/es/setup/), [German, Deutsch](https://remapsnapkey.com/de/setup/), [Dutch, Nederlands](https://remapsnapkey.com/nl/setup/), [Portuguese (Brazil), Português (Brasil)](https://remapsnapkey.com/pt-br/setup/), [Hindi, हिन्दी](https://remapsnapkey.com/hi/setup/), [Chinese (Simplified), 中文](https://remapsnapkey.com/zh/setup/), [Indonesian, Bahasa Indonesia](https://remapsnapkey.com/id/setup/), [Italian, Italiano](https://remapsnapkey.com/it/setup/), [Japanese, 日本語](https://remapsnapkey.com/ja/setup/), [Vietnamese, Tiếng Việt](https://remapsnapkey.com/vi/setup/), [Thai, ไทย](https://remapsnapkey.com/th/setup/)
+
 Compatibility:
 
 - OPPO Find X9 Pro (ColorOS 16, Android 16): works, daily use.
@@ -37,6 +44,6 @@ Not working on yours? Tell us on GitHub: https://github.com/Damien-llado/snapkey
 
 The app comes with a library of ready-made shortcuts (timer, alarm, camera, maps, music, chats and more), each checked on an emulator.
 
-Privacy: the app collects nothing. The website measures its audience with Microsoft Clarity only if the visitor accepts the consent banner, and asks api.github.com for the star count.
+Privacy: the app collects nothing. The website measures its audience with Microsoft Clarity only if the visitor accepts the consent banner, asks api.github.com for the star count, and the setup page embeds a YouTube video (youtube-nocookie.com) that loads when the page opens.
 
 Two editions: the full one sets the log permission up by itself through the phone's own wireless debugging; the lite one has no internet permission and needs one adb command.
