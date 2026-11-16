@@ -2,6 +2,21 @@
 
 All notable changes to SnapKey Mapper are listed here, newest first. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/).
 
+## [1.0.14] - 2026-11-16
+
+### Added
+
+- **Quick settings tile**: SnapKey turns listening on or off. Off stops it at once and the app does not turn it back on. On opens the app, which starts listening.
+- **Several actions on one press**: flashlight, ring mode and music keys can follow one another, up to 3 in a row. Opening an app or a link ends the series. Existing shortcuts keep working as they are.
+- **Recent presses**: the last 20 presses with their time, gesture, what ran and, when it failed, why. Kept on the phone only.
+- **Failure notification**: when an action fails (app not installed, no app opens the link, Do Not Disturb access missing, no flashlight), a notification says why and opens the right screen.
+- **Share a shortcut**: copy what a press does as a short text (`SKM1 ...`) for a message or a comment, and paste one you received. The app shows what it does before keeping it, and refuses a shortcut that is invalid, comes from a newer version or aims at an app you do not have.
+
+### Changed
+
+- Ring, vibrate, silent now says so when silent needs the Do Not Disturb access, instead of going back to ring without a word.
+- An app that is no longer installed now shows an error instead of doing nothing.
+
 ## [1.0.13] - 2026-11-13
 
 ### Added
@@ -142,6 +157,7 @@ All notable changes to SnapKey Mapper are listed here, newest first. The format 
 
 - First public release.
 
+[1.0.14]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.14
 [1.0.13]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.13
 [1.0.12]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.12
 [1.0.11]: https://github.com/Damien-llado/snapkey-mapper/releases/tag/v1.0.11
