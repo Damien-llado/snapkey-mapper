@@ -103,6 +103,24 @@ final class Recipes {
         return null;
     }
 
+    /** The library recipe a link comes from: the exact one, or the one whose fixed start (before its [VALUES]) is the longest match. Null for a link of your own. */
+    static Recipe forLink(Context c, String link) {
+        Recipe best = null;
+        int len = 0;
+        for (App a : load(c)) {
+            for (Recipe r : a.recipes) {
+                int i = r.link.indexOf('[');
+                if (i < 0 && r.link.equals(link)) return r;
+                // a bare "https://" start would match every web link
+                if (i > len && !r.link.substring(0, i).endsWith("://") && link.startsWith(r.link.substring(0, i))) {
+                    best = r;
+                    len = i;
+                }
+            }
+        }
+        return best;
+    }
+
     static int count(Context c) {
         int n = 0;
         for (App a : load(c)) n += a.recipes.size();

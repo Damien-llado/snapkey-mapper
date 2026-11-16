@@ -40,16 +40,17 @@ public class ListenService extends Service {
         if (n > 0) fire(SERIES[n]);
     };
 
-    /** Opens the target of this gesture, if it has one, and says so in the notification. */
+    /** Runs what this gesture does, if anything, and says so in the notification. */
     private void fire(String gesture) {
         if (!Prefs.hasTarget(this, gesture)) return;
         presses++;
+        String failed;
         try {
-            Prefs.openTarget(this, gesture);
-            diagnostic(getString(R.string.diag_requested));
+            failed = History.run(this, gesture, true);
         } catch (RuntimeException e) {
-            diagnostic(getString(R.string.diag_error, e.getClass().getSimpleName()));
+            failed = getString(R.string.fail_other, e.getClass().getSimpleName()); // the listener must survive anything a step does
         }
+        diagnostic(failed != null ? failed : getString(R.string.diag_requested));
     }
 
     @Override

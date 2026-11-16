@@ -213,6 +213,26 @@ final class Ui {
         return v;
     }
 
+    /** The real icon of what a step opens: the app, the library app a link comes from, or the app that handles the link on this phone. Empty when there is none. */
+    static ImageView stepIcon(Context c, Prefs.Step s, int sizeDp) {
+        if (!s.app) {
+            Recipes.Recipe r = Recipes.forLink(c, s.value);
+            if (r != null) return logo(c, r.app, sizeDp);
+        }
+        ImageView v = new ImageView(c);
+        try {
+            if (s.app) {
+                v.setImageDrawable(c.getPackageManager().getApplicationIcon(s.value));
+            } else {
+                android.content.pm.ResolveInfo ri = c.getPackageManager().resolveActivity(Prefs.intent(c, s.value), android.content.pm.PackageManager.MATCH_DEFAULT_ONLY);
+                if (ri != null && !ri.activityInfo.packageName.equals("android")) v.setImageDrawable(ri.activityInfo.applicationInfo.loadIcon(c.getPackageManager()));
+            }
+        } catch (RuntimeException | android.content.pm.PackageManager.NameNotFoundException e) {
+            // no icon: nothing is drawn
+        }
+        return v;
+    }
+
     /** Pill-shaped choice between a few options. */
     static final class Segmented extends LinearLayout {
         interface Choice { void picked(int index); }

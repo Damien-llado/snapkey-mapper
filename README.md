@@ -97,6 +97,10 @@ intent:#Intent;action=android.intent.action.SET_TIMER;i.android.intent.extra.ala
 intent:#Intent;action=android.intent.action.SET_ALARM;i.android.intent.extra.alarm.HOUR=6;i.android.intent.extra.alarm.MINUTES=30;end
 intent:#Intent;action=android.media.action.STILL_IMAGE_CAMERA;end
 ```
+- **Several actions**: a press can run up to 3 built-in actions in a row (flashlight, ring mode, music keys); opening an app or a link ends the series. **Then do another action** adds the next one.
+- **Share a shortcut**: **Copy this shortcut** turns what a press does into a short text (`SKM1 ...`) for a message or a comment; **Paste a shortcut** reads one back, shows what it does and refuses it if it is invalid or aims at an app you do not have.
+- **Recent presses**: the last 20 presses with their time, gesture, target and, when it failed, why. A failed action also shows a notification that opens the right screen (the Do Not Disturb access, the home screen on that press). Everything stays on the phone.
+- **Quick settings tile**: SnapKey turns listening on or off. On opens the app, which starts listening (Android grants the log access only with the app on screen).
 - **Gesture**: one press, two quick presses (default), or long press (500 ms and more). A change applies at once.
 - **Listening starts by itself** as soon as the app is set up and something is chosen to open. A silent notification shows how many presses were seen and what happened at the last one, which makes problems easy to spot.
 

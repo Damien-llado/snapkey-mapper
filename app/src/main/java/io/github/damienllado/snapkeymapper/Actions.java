@@ -18,6 +18,23 @@ final class Actions {
 
     private Actions() {}
 
+    /** An action that could not do its job: the reason to show, and the phone screen that fixes it (null if none). */
+    static final class Failed extends IllegalStateException {
+        final int reason;
+        final String screen;
+
+        Failed(int reason, String screen) {
+            super("action failed");
+            this.reason = reason;
+            this.screen = screen;
+        }
+    }
+
+    private static final java.util.List<String> NAMES = java.util.Arrays.asList("torch", "ringer", "play-pause", "next", "previous");
+
+    /** True for a built-in action this version knows. */
+    static boolean known(String link) { return link.startsWith(SCHEME) && NAMES.contains(link.substring(SCHEME.length())); }
+
     static void run(Context c, String link) {
         switch (link.substring(SCHEME.length())) {
             case "torch": torch(c); break;
@@ -48,7 +65,7 @@ final class Actions {
                     return;
                 }
             }
-            throw new IllegalStateException("no flash");
+            throw new Failed(R.string.fail_no_flash, null);
         } catch (CameraAccessException e) {
             throw new IllegalStateException(e.getMessage(), e);
         }
@@ -63,6 +80,8 @@ final class Actions {
                 : mode == AudioManager.RINGER_MODE_VIBRATE && silentAllowed ? AudioManager.RINGER_MODE_SILENT
                 : AudioManager.RINGER_MODE_NORMAL;
         am.setRingerMode(next);
+        // vibrate goes back to ring when silent is not allowed: say why, once the mode is changed
+        if (mode == AudioManager.RINGER_MODE_VIBRATE && !silentAllowed) throw new Failed(R.string.fail_dnd, android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
     }
 
     /** The key a headset would send: the app playing music reacts to it. */
