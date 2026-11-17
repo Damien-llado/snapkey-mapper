@@ -169,3 +169,22 @@ document.querySelectorAll('[data-copy]').forEach(function (el) {
     var s = document.createElement('script'); s.src = src; s.async = false; document.body.appendChild(s);
   });
 })();
+
+// Provenance du visiteur (moteur, YouTube, Reddit, UTM), gardée pour l'onglet seulement (sessionStorage, rien d'autre) et
+// ajoutée au lien Télécharger : la fonction /download la note avec le clic. Relie « arrivé par Google » à « a téléchargé ».
+(function () {
+  var cle = 'skm-from', from = null;
+  try {
+    from = sessionStorage.getItem(cle);
+    if (!from) {
+      var q = new URLSearchParams(location.search), ref = '';
+      try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+      from = q.get('utm_source') || (ref && ref !== location.hostname ? ref : 'direct');
+      sessionStorage.setItem(cle, from.slice(0, 60));
+    }
+  } catch (e) { return; }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (a && a.hostname === location.hostname && a.pathname === '/download' && from) a.search = '?utm_source=' + encodeURIComponent(from) + '&utm_medium=site';
+  }, true);
+})();
