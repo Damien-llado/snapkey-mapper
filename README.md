@@ -13,7 +13,7 @@ Make the side key of your phone open what you want: the **Snap Key** of OPPO pho
   <img src=".github/readme/history.png" width="200" alt="Recent presses">
 </p>
 
-**[Download the latest release](https://github.com/Damien-llado/snapkey-mapper/releases/latest)** · [Website and FAQ](https://remapsnapkey.com/) · [Changelog](CHANGELOG.md) · [Report a problem](https://github.com/Damien-llado/snapkey-mapper/issues/new/choose)
+**[Download the APK](https://remapsnapkey.com/get/github)** · [All releases](https://github.com/Damien-llado/snapkey-mapper/releases/latest) · [Website and FAQ](https://remapsnapkey.com/) · [Changelog](CHANGELOG.md) · [Report a problem](https://github.com/Damien-llado/snapkey-mapper/issues/new/choose)
 
 ## Contents
 
@@ -61,7 +61,7 @@ The app needs two things: Android 11 or later, and a key press that appears in t
 
 ## Quick start
 
-1. Download `snapkey-mapper.apk` from the [latest release](https://github.com/Damien-llado/snapkey-mapper/releases/latest) and install it.
+1. Download [`snapkey-mapper.apk`](https://remapsnapkey.com/get/github) (the latest version; the lite edition is on the [release page](https://github.com/Damien-llado/snapkey-mapper/releases/latest)) and install it.
 2. Open the app and follow the setup: four steps, once. The app opens each setting for you and ticks it when it is done.
 3. Pick a gesture (single, double, triple, long), then choose what it opens.
 4. Press the key.
