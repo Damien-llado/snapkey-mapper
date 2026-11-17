@@ -13,3 +13,4 @@ signature/
 *.p12
 *.key
 secrets*
+.wrangler/

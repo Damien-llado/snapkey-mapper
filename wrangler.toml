@@ -1,0 +1,10 @@
+# Cloudflare Pages project of remapsnapkey.com: static site in docs/, download links in functions/ (lib/clic.js).
+# Deploy from the repository root: wrangler pages deploy --branch main
+name = "remapsnapkey"
+pages_build_output_dir = "docs"
+compatibility_date = "2026-11-01"
+
+[[d1_databases]]
+binding = "snapkey_clics"
+database_name = "snapkey-clics"
+database_id = "c002cb43-3b5e-4bd7-bec0-a7cf715d3eae"
