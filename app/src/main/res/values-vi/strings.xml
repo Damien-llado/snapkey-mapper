@@ -156,7 +156,7 @@
     <string name="wiz_pair_title">Ghép nối ứng dụng với điện thoại</string>
     <string name="wiz_pair_text">1. Nhấn nút: Gỡ lỗi qua Wi-Fi sẽ mở ra (nếu danh sách Tùy chọn nhà phát triển mở ra, hãy nhấn vào dòng chữ \"Gỡ lỗi qua Wi-Fi\", không phải công tắc).\n2. Bật tính năng và cho phép mạng của bạn.\n3. Nhấn \"Ghép nối thiết bị bằng mã ghép nối\".\n4. Một thông báo SnapKey Mapper hiện xuống: nhấn mũi tên để mở rộng, nhấn \"Nhập mã\" và nhập 6 chữ số. Vậy là xong, ứng dụng sẽ lo phần còn lại.</string>
     <string name="wiz_sysopt_title">Trước tiên, một công tắc ẩn của ColorOS</string>
-    <string name="wiz_sysopt_text">ColorOS chặn quyền này cho đến khi một công tắc ẩn được bật, và công tắc đó chỉ hiện khi điện thoại dùng tiếng Anh.\n1. Chuyển điện thoại sang English (Ngôn ngữ và khu vực).\n2. Trong Cài đặt, tìm \"Disable system\" và bật \"Disable system optimisation\" (Turn on anyway).\n3. Quay lại đây. Sau khi thiết lập xong, bạn có thể chuyển lại tiếng Việt.</string>
+    <string name="wiz_sysopt_text">ColorOS chặn quyền này cho đến khi một công tắc ẩn được bật, và công tắc đó chỉ hiện khi điện thoại dùng tiếng Anh.\n1. Chuyển điện thoại sang English (Ngôn ngữ và khu vực).\n2. Trong Cài đặt, tìm \"Disable\" và bật \"Disable system optimisation\" hoặc \"Disable permission monitoring\" (Turn on anyway).\n3. Quay lại đây. Sau khi thiết lập xong, bạn có thể chuyển lại tiếng Việt.</string>
     <string name="wiz_sysopt_btn">Mở Ngôn ngữ và khu vực</string>
     <string name="wiz_sysopt_btn2">Mở Cài đặt</string>
     <string name="wiz_sysopt_done">Xong, tiếp tục</string>

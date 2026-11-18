@@ -156,7 +156,7 @@
     <string name="wiz_pair_title">Associez l\'appli à votre téléphone</string>
     <string name="wiz_pair_text">1. Touchez le bouton : le débogage sans fil s\'ouvre (si la liste des Options pour les développeurs s\'ouvre à la place, touchez le texte \"Débogage sans fil\", pas l\'interrupteur).\n2. Activez-le et autorisez votre réseau.\n3. Touchez \"Associer l\'appareil avec un code d\'association\".\n4. Une notification SnapKey Mapper s\'affiche : touchez sa flèche pour la déplier, touchez \"Saisir le code\" et tapez les 6 chiffres. C\'est tout, l\'appli fait le reste.</string>
     <string name="wiz_sysopt_title">D\'abord un réglage caché de ColorOS</string>
-    <string name="wiz_sysopt_text">ColorOS bloque la permission tant qu\'un réglage caché n\'est pas activé, et il n\'apparaît que si le téléphone est en anglais.\n1. Passez le téléphone en English (Langue et région).\n2. Dans les Paramètres, cherchez « Disable system » et activez « Disable system optimisation » (Turn on anyway).\n3. Revenez ici. Après l\'installation, vous pourrez remettre le français.</string>
+    <string name="wiz_sysopt_text">ColorOS bloque la permission tant qu\'un réglage caché n\'est pas activé, et il n\'apparaît que si le téléphone est en anglais.\n1. Passez le téléphone en English (Langue et région).\n2. Dans les Paramètres, cherchez « Disable » et activez « Disable system optimisation » ou « Disable permission monitoring » (Turn on anyway).\n3. Revenez ici. Après l\'installation, vous pourrez remettre le français.</string>
     <string name="wiz_sysopt_btn">Ouvrir Langue et région</string>
     <string name="wiz_sysopt_btn2">Ouvrir les Paramètres</string>
     <string name="wiz_sysopt_done">C\'est fait, continuer</string>
