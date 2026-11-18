@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/readme/icon.png" width="96" alt="SnapKey Mapper icon"></p>
+
 # SnapKey Mapper
 
 [![Latest release](https://img.shields.io/github/v/release/Damien-llado/snapkey-mapper)](https://github.com/Damien-llado/snapkey-mapper/releases/latest)
