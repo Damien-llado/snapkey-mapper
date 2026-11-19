@@ -37,8 +37,8 @@
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=10">
-<link rel="stylesheet" href="/assets/oneplus.css?v=3">
+<link rel="stylesheet" href="/assets/style.css?v=11">
+<link rel="stylesheet" href="/assets/oneplus.css?v=4">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://remapsnapkey.com/#app","name":"SnapKey Mapper","description":"OPPO の Snap Key で好きなアプリやリンクを開けるようにします。root 不要。","applicationCategory":"UtilitiesApplication","operatingSystem":"Android 11 or later","softwareVersion":"1.0.14","dateModified":"2026-11-16","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true,"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/ja/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","image":"https://remapsnapkey.com/apple-touch-icon.png","screenshot":["https://remapsnapkey.com/img/main-screen.png","https://remapsnapkey.com/img/library.png","https://remapsnapkey.com/img/recipe.png"],"author":{"@id":"https://remapsnapkey.com/#author"},"sameAs":["https://github.com/Damien-llado/snapkey-mapper","https://www.youtube.com/@snapkeymapper"],"fileSize":"12 MB"},{"@type":"WebSite","@id":"https://remapsnapkey.com/#website","name":"SnapKey Mapper","url":"https://remapsnapkey.com/","publisher":{"@id":"https://remapsnapkey.com/#author"},"sameAs":["https://github.com/Damien-llado/snapkey-mapper","https://www.youtube.com/@snapkeymapper"]},{"@type":"Person","@id":"https://remapsnapkey.com/#author","name":"Damien Llado","url":"https://github.com/Damien-llado","sameAs":["https://github.com/Damien-llado"]},{"@type":"WebPage","@id":"https://remapsnapkey.com/ja/oneplus-plus-key/#webpage","url":"https://remapsnapkey.com/ja/oneplus-plus-key/","name":"OnePlus Plus Key を設定して好きなアプリを開く","description":"OnePlus Plus Key をカスタマイズ。1回押し、2回押し、3回押し、長押しで好きなアプリやリンク、ライトを起動。無料、オープンソース、root 不要。","inLanguage":"ja","isPartOf":{"@id":"https://remapsnapkey.com/#website"},"about":{"@id":"https://remapsnapkey.com/#app"},"dateModified":"2026-11-14","breadcrumb":{"@id":"https://remapsnapkey.com/ja/oneplus-plus-key/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://remapsnapkey.com/ja/oneplus-plus-key/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://remapsnapkey.com/ja/"},{"@type":"ListItem","position":2,"name":"OnePlus Plus Key","item":"https://remapsnapkey.com/ja/oneplus-plus-key/"}]}]}
@@ -76,12 +76,13 @@
 <header class="nav">
   <div class="nav-in">
     <a class="brand" href="/ja/">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="2.5" width="17" height="27" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><rect class="brand-key" x="3.5" y="8" width="3" height="7" rx="1.5"/></svg>
+      <img src="/assets/icon.svg" alt="" width="28" height="28">
       SnapKey Mapper
     </a>
     <nav class="nav-links" aria-label="サイト">
-      <a href="/ja/#examples">使用例</a>
-      <a href="/ja/#setup">設定方法</a>
+      <details class="nav-dd"><summary>対応機種</summary><ul><li><a href="/ja/what-is-snap-key/">OPPO Snap Key</a></li><li><a href="/find-x9-pro-snap-key/">OPPO Find X9 Pro</a></li><li><a href="/ja/oneplus-plus-key/">OnePlus Plus Key</a></li></ul></details>
+      <a href="/ja/setup/">設定方法</a>
+      <a href="/ja/shortcuts/">ショートカット</a>
       <a href="/ja/#faq">FAQ</a>
       <a href="/ja/changelog/">更新履歴</a>
       <a href="https://github.com/sponsors/Damien-llado">♥ Sponsor</a>
@@ -122,6 +123,7 @@
       </div>
       <p class="meta">無料 · MIT ライセンス · Android 11 以降 · root、Shizuku、ユーザー補助サービスは不要</p>
     </div>
+    <div class="stage" aria-hidden="true"><img class="s3d-i on" src="/img/3d/op-key.webp" alt="" width="600" height="635" fetchpriority="high"></div>
   </section>
 
   <section id="what" class="narrow" aria-labelledby="what-h">
@@ -161,12 +163,12 @@
     <h2 id="ideas-h">オーナーが Plus Key に割り当てているもの</h2>
     <p class="sub">キーについての r/oneplus のスレッドから集めました。押し方はあくまで提案です。</p>
     <ul class="uses">
-      <li><span class="use-ico"><svg aria-hidden="true"><use href="#g-torch"/></svg></span><div><h3>ライト</h3><p>いちばん多く挙がる使い方。消えていればオン、点いていればオフ。</p></div><span class="st">1回押し</span></li>
-      <li><span class="use-ico"><svg aria-hidden="true"><use href="#g-bell"/></svg></span><div><h3>着信音・バイブ・サイレント</h3><p>アラートスライダーの代わり。押すたびに次のモードに切り替わります。</p></div><span class="st">2回押し</span></li>
-      <li><span class="use-ico"><img src="/img/apps/camera.webp" alt="" width="40" height="40"></span><div><h3>カメラ</h3><p>シャッターボタンとして、写真も動画も。</p></div><span class="st">1回押し</span></li>
-      <li><span class="use-ico"><img src="/img/apps/recorder.webp" alt="" width="40" height="40"></span><div><h3>音声メモ</h3><p>ワンプッシュでボイスレコーダーを開き、すぐに音声メモを録れます。</p></div><span class="st">3回押し</span></li>
-      <li><span class="use-ico"><img src="/img/apps/spotify.webp" alt="" width="40" height="40"></span><div><h3>音楽のコントロール</h3><p>ひとつの押し方で再生または一時停止、別の押し方で次のトラック。</p></div><span class="st">長押し</span></li>
-      <li><span class="use-ico"><img src="/img/apps/gemini.webp" alt="" width="40" height="40"></span><div><h3>自分の AI アシスタント</h3><p>Mind Space の代わりに Gemini、ChatGPT、Claude、Perplexity。</p></div><span class="st">2回押し</span></li>
+      <li class="u3d"><img class="use-3d" src="/img/3d/op-double.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><div><h3>ライト</h3><p>いちばん多く挙がる使い方。消えていればオン、点いていればオフ。</p></div><span class="st">1回押し</span></li>
+      <li class="u3d"><img class="use-3d" src="/img/3d/op-single.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><div><h3>着信音・バイブ・サイレント</h3><p>アラートスライダーの代わり。押すたびに次のモードに切り替わります。</p></div><span class="st">2回押し</span></li>
+      <li class="u3d"><img class="use-3d" src="/img/3d/op-camera.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><div><h3>カメラ</h3><p>シャッターボタンとして、写真も動画も。</p></div><span class="st">1回押し</span></li>
+      <li class="u3d"><img class="use-3d" src="/img/3d/op-recorder.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><div><h3>音声メモ</h3><p>ワンプッシュでボイスレコーダーを開き、すぐに音声メモを録れます。</p></div><span class="st">3回押し</span></li>
+      <li class="u3d"><img class="use-3d" src="/img/3d/op-triple.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><div><h3>音楽のコントロール</h3><p>ひとつの押し方で再生または一時停止、別の押し方で次のトラック。</p></div><span class="st">長押し</span></li>
+      <li class="u3d"><img class="use-3d" src="/img/3d/op-long.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><div><h3>自分の AI アシスタント</h3><p>Mind Space の代わりに Gemini、ChatGPT、Claude、Perplexity。</p></div><span class="st">2回押し</span></li>
     </ul>
   </section>
 
@@ -251,6 +253,7 @@
     <li><a href="https://github.com/Damien-llado/snapkey-mapper">ソースコード</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">バグを報告</a></li>
     <li><a href="/ja/oneplus-plus-key/" aria-current="page">OnePlus Plus Key</a></li>
+    <li><a href="/find-x9-pro-snap-key/">OPPO Find X9 Pro</a></li>
     <li><a href="/ja/what-is-snap-key/">Snap Keyとは？</a></li>
     <li><a href="/ja/shortcuts/">ショートカットのアイデア</a></li>
     <li><a href="/ja/setup/">動画でセットアップ</a></li>
@@ -263,6 +266,6 @@
   <ul aria-label="言語"><li><a href="/oneplus-plus-key/" hreflang="en" lang="en">English</a></li><li><a href="/fr/oneplus-plus-key/" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/oneplus-plus-key/" hreflang="es" lang="es">Español</a></li><li><a href="/de/oneplus-plus-key/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/oneplus-plus-key/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/oneplus-plus-key/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/oneplus-plus-key/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/oneplus-plus-key/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li><li><a href="/id/oneplus-plus-key/" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="/it/oneplus-plus-key/" hreflang="it" lang="it">Italiano</a></li><li><a href="/ja/oneplus-plus-key/" hreflang="ja" lang="ja" aria-current="page">日本語</a></li><li><a href="/vi/oneplus-plus-key/" hreflang="vi" lang="vi">Tiếng Việt</a></li><li><a href="/th/oneplus-plus-key/" hreflang="th" lang="th">ไทย</a></li></ul>
 </footer>
 
-<script src="/assets/site.js?v=8"></script>
+<script src="/assets/site.js?v=9"></script>
 </body>
 </html>

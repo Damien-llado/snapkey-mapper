@@ -37,7 +37,7 @@
 <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=10">
+<link rel="stylesheet" href="/assets/style.css?v=11">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://remapsnapkey.com/#app","name":"SnapKey Mapper","description":"Fait ouvrir n’importe quelle appli ou lien à la touche Snap Key d’OPPO, sans root.","applicationCategory":"UtilitiesApplication","operatingSystem":"Android 11 or later","softwareVersion":"1.0.14","dateModified":"2026-11-16","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true,"license":"https://opensource.org/licenses/MIT","url":"https://remapsnapkey.com/fr/","downloadUrl":"https://github.com/Damien-llado/snapkey-mapper/releases/latest","image":"https://remapsnapkey.com/apple-touch-icon.png","screenshot":["https://remapsnapkey.com/img/main-screen.png","https://remapsnapkey.com/img/library.png","https://remapsnapkey.com/img/recipe.png"],"author":{"@id":"https://remapsnapkey.com/#author"},"sameAs":["https://github.com/Damien-llado/snapkey-mapper","https://www.youtube.com/@snapkeymapper"],"fileSize":"12 MB"},{"@type":"WebSite","@id":"https://remapsnapkey.com/#website","name":"SnapKey Mapper","url":"https://remapsnapkey.com/","publisher":{"@id":"https://remapsnapkey.com/#author"},"sameAs":["https://github.com/Damien-llado/snapkey-mapper","https://www.youtube.com/@snapkeymapper"]},{"@type":"Person","@id":"https://remapsnapkey.com/#author","name":"Damien Llado","url":"https://github.com/Damien-llado","sameAs":["https://github.com/Damien-llado"]},{"@type":"WebPage","@id":"https://remapsnapkey.com/fr/#webpage","url":"https://remapsnapkey.com/fr/","name":"Touche Snap Key OPPO : la reconfigurer sans root","description":"Reconfigurez la touche Snap Key des OPPO Find X9 et Reno 16 : ouvrez l’appli ou le lien de votre choix en appui simple, double, triple ou long. Sans root.","inLanguage":"fr","isPartOf":{"@id":"https://remapsnapkey.com/#website"},"about":{"@id":"https://remapsnapkey.com/#app"},"dateModified":"2026-11-14","primaryImageOfPage":{"@type":"ImageObject","url":"https://remapsnapkey.com/assets/og.png","width":1200,"height":630}}]}
@@ -74,12 +74,13 @@
 <header class="nav">
   <div class="nav-in">
     <a class="brand" href="/fr/">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="2.5" width="17" height="27" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><rect class="brand-key" x="3.5" y="8" width="3" height="7" rx="1.5"/></svg>
+      <img src="/assets/icon.svg" alt="" width="28" height="28">
       SnapKey Mapper
     </a>
     <nav class="nav-links" aria-label="Site">
-      <a href="#examples">Exemples</a>
-      <a href="#setup">Installation</a>
+      <details class="nav-dd"><summary>Téléphones</summary><ul><li><a href="/fr/what-is-snap-key/">OPPO Snap Key</a></li><li><a href="/find-x9-pro-snap-key/">OPPO Find X9 Pro</a></li><li><a href="/fr/oneplus-plus-key/">OnePlus Plus Key</a></li></ul></details>
+      <a href="/fr/setup/">Installation</a>
+      <a href="/fr/shortcuts/">Raccourcis</a>
       <a href="#faq">FAQ</a>
       <a href="/fr/changelog/">Changelog</a>
       <a href="https://github.com/sponsors/Damien-llado">♥ Sponsor</a>
@@ -125,32 +126,10 @@
       <p class="meta">Version 1.0.14 · Android 11+ · environ 12 Mo · MIT · testé sur Find X9 Pro, ColorOS 16</p>
     </div>
 
-    <!-- Scène 3D : téléphone incliné, Snap Key sur la tranche gauche, objets qui flottent -->
-    <div class="stage" id="stage" aria-hidden="true">
-      <div class="floaters">
-        <span class="cap c1" style="--h:#D97757"><b></b><b></b><b></b><b></b><b><img src="/img/apps/claude.webp" alt="" width="160" height="160" decoding="async"></b></span>
-        <span class="cap c2" style="--h:#FC4C02"><b></b><b></b><b></b><b></b><b><img src="/img/apps/strava.webp" alt="" width="160" height="160" decoding="async"></b></span>
-        <span class="cap c3" style="--h:#4285F4"><b></b><b></b><b></b><b></b><b><img src="/img/apps/maps.webp" alt="" width="160" height="160" decoding="async"></b></span>
-        <span class="cap c4" style="--h:#1ED760;--fg:#0B1A12"><b></b><b></b><b></b><b></b><b><img src="/img/apps/spotify.webp" alt="" width="160" height="160" decoding="async"></b></span>
-        <span class="cap c5" style="--h:#7C9CE0"><b></b><b></b><b></b><b></b><b><img src="/img/apps/gemini.webp" alt="" width="160" height="160" decoding="async"></b></span>
-        <span class="cap c6" style="--h:#5B7CF0"><b></b><b></b><b></b><b></b><b><img src="/img/apps/clock.webp" alt="" width="160" height="160" decoding="async"></b></span>
-        <i class="ring r1"></i><i class="ring r2"></i>
-      </div>
-      <div class="phone">
-        <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i>
-        <i class="snapkey" id="snapkey"></i><i class="ping"></i>
-        <div class="face">
-          <div class="screen">
-            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
-            <div class="apps"><img src="/img/apps/gmail.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/photos.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/calendar.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/chrome.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/keep.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/youtube.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/maps.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/spotify.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/whatsapp.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/strava.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/shazam.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/drive.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/messages.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/contacts.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/calculator.webp" alt="" width="160" height="160" decoding="async"><img src="/img/apps/files.webp" alt="" width="160" height="160" decoding="async"></div>
-            <div class="launch" id="launch" style="--h:#D97757">
-              <span class="launch-ico"><img id="launch-i" src="/img/apps/claude.webp" alt="" width="160" height="160" decoding="async"></span>
-              <strong id="launch-t">Claude Code</strong>
-              <small id="launch-s">claude.ai/code/…</small>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Téléphone 3D des vidéos (rendu Remotion, _outils/snapkey/video/site-images.sh) ; site.js fait défiler les applis ouvertes -->
+    <div class="stage s3d" id="stage" aria-hidden="true">
+      <i class="ring r1"></i><i class="ring r2"></i>
+      <img class="s3d-i on" src="/img/3d/x9-key.webp" alt="" width="600" height="635" fetchpriority="high">
       <p class="stage-label">Snap Key <span>tranche gauche, en haut</span></p>
     </div>
   </section>
@@ -300,56 +279,28 @@
     <p class="sub">Depuis la version 1.0.9, l’appui simple, le double appui, le triple appui et l’appui long ouvrent chacun leur propre cible. Réglez-en un, deux, trois ou les quatre.</p>
     <ul class="gestures trio">
       <li class="single" id="g-single" style="--h:#5B8DEF">
-        <div class="stage" aria-hidden="true"><div class="phone">
-          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
-          <div class="face"><div class="screen">
-            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
-            <div class="apps"><img src="/img/apps/gmail.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/photos.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/calendar.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/chrome.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/keep.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/youtube.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/shazam.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/drive.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/messages.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/contacts.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/calculator.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/files.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></div>
-            <div class="launch"><span class="launch-ico"><img src="/img/apps/camera.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></span></div>
-          </div></div>
-        </div></div>
+        <div class="stage" aria-hidden="true"><img src="/img/3d/x9-idle.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><img class="app" src="/img/3d/x9-camera.webp" alt="" width="380" height="535" loading="lazy" decoding="async"></div>
         <div class="g"><i></i></div>
         <h3>Appui simple</h3>
         <p>L’appareil photo, d’un seul appui. Il n’attend une fraction de seconde que si un double ou un triple appui est réglé, pour les distinguer ; sinon il part tout de suite.</p>
         <code>Appli : Appareil photo</code>
       </li>
       <li class="double" id="g-double" style="--h:#D97757">
-        <div class="stage" aria-hidden="true"><div class="phone">
-          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
-          <div class="face"><div class="screen">
-            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
-            <div class="apps"><img src="/img/apps/gmail.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/photos.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/calendar.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/chrome.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/keep.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/youtube.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/shazam.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/drive.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/messages.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/contacts.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/calculator.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/files.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></div>
-            <div class="launch"><span class="launch-ico"><img src="/img/apps/claude.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></span></div>
-          </div></div>
-        </div></div>
+        <div class="stage" aria-hidden="true"><img src="/img/3d/x9-idle.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><img class="app" src="/img/3d/x9-claude-d.webp" alt="" width="380" height="535" loading="lazy" decoding="async"></div>
         <div class="g g-double"><i></i><i></i></div>
         <h3>Double appui</h3>
         <p>Votre assistant IA, ici Claude. Un appui dans la poche ne l’ouvre jamais.</p>
         <code>Appli : Claude</code>
       </li>
       <li class="triple" id="g-triple" style="--h:#8B6CF0">
-        <div class="stage" aria-hidden="true"><div class="phone">
-          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
-          <div class="face"><div class="screen">
-            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
-            <div class="apps"><img src="/img/apps/gmail.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/photos.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/calendar.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/chrome.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/keep.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/youtube.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/shazam.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/drive.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/messages.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/contacts.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/calculator.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/files.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></div>
-            <div class="launch"><span class="launch-ico"><img src="/img/apps/obsidian.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></span></div>
-          </div></div>
-        </div></div>
+        <div class="stage" aria-hidden="true"><img src="/img/3d/x9-idle.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><img class="app" src="/img/3d/x9-obsidian.webp" alt="" width="380" height="535" loading="lazy" decoding="async"></div>
         <div class="g g-triple"><i></i><i></i><i></i></div>
         <h3>Triple appui</h3>
         <p>Trois appuis rapides ouvrent la note du jour dans Obsidian, prête à écrire.</p>
         <code data-copy="obsidian://daily?vault=[VAULT_NAME]">obsidian://daily?vault=<mark>[VAULT_NAME]</mark></code>
       </li>
       <li class="long" id="g-long" style="--h:#E3B23C">
-        <div class="stage" aria-hidden="true"><div class="phone">
-          <i class="slab s1"></i><i class="slab s2"></i><i class="slab s3"></i><i class="slab s4"></i><i class="snapkey"></i>
-          <div class="face"><div class="screen">
-            <div class="status"><span>9:41</span><span>5G ▮▮▮</span></div>
-            <div class="apps"><img src="/img/apps/gmail.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/photos.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/calendar.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/chrome.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/keep.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/youtube.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/shazam.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/drive.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/messages.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/contacts.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/calculator.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><img src="/img/apps/files.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></div>
-            <div class="launch"><span class="launch-ico"><img src="/img/apps/clock.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></span><strong>25:00</strong></div>
-          </div></div>
-        </div></div>
+        <div class="stage" aria-hidden="true"><img src="/img/3d/x9-idle.webp" alt="" width="380" height="535" loading="lazy" decoding="async"><img class="app" src="/img/3d/x9-timer.webp" alt="" width="380" height="535" loading="lazy" decoding="async"></div>
         <div class="g g-long"><i></i></div>
         <h3>Appui long</h3>
         <p>Maintenez une demi-seconde : un minuteur de 25 minutes démarre.</p>
@@ -547,7 +498,7 @@
 
     <details><summary>Comment savoir si un raccourci marche sur mon téléphone ?</summary><div><p>Les raccourcis sont vérifiés sur un émulateur Android, pas sur tous les téléphones. Les applis Horloge, Appareil photo et Paramètres sont différentes sur ColorOS, et certaines applis demandent un compte. Le bouton de test de chaque raccourci vous le dit en un appui. Si l’un d’eux ne marche pas sur votre téléphone, signalez-le sur GitHub pour que nous puissions le corriger ou le retirer.</p></div></details>
 
-    <details id="privacy"><summary>Ce site me suit-il ?</summary><div><p>Le site mesure son audience avec Microsoft Clarity (clics, défilement, enregistrements de visites), mais seulement si vous acceptez dans le bandeau. Si vous refusez, Clarity n’est pas chargé et ne dépose aucun cookie. Vous pouvez changer d’avis à tout moment avec « Gérer les cookies » en bas de page. La page interroge aussi api.github.com pour afficher les étoiles et les téléchargements, ce qui transmet votre adresse IP à GitHub, et garde ces chiffres une heure dans votre navigateur. La page d’installation intègre une vidéo YouTube (youtube-nocookie.com), qui se charge à l’ouverture de la page. L’appli, elle, ne collecte rien : ni compte, ni traqueur, ni publicité.</p></div></details>
+    <details id="privacy"><summary>Ce site me suit-il ?</summary><div><p>Le site mesure son audience avec Microsoft Clarity (clics, défilement, enregistrements de visites), mais seulement si vous acceptez dans le bandeau. Si vous refusez, Clarity n’est pas chargé et ne dépose aucun cookie. Vous pouvez changer d’avis à tout moment avec « Gérer les cookies » en bas de page. La page interroge aussi api.github.com pour afficher les étoiles et les téléchargements, ce qui transmet votre adresse IP à GitHub, et garde ces chiffres une heure dans votre navigateur. La page d’installation et la page Find X9 Pro intègrent une vidéo YouTube (youtube-nocookie.com), qui se charge à l’ouverture de la page. L’appli, elle, ne collecte rien : ni compte, ni traqueur, ni publicité.</p></div></details>
   </section>
 
   <section id="stories" class="narrow" aria-labelledby="stories-h">
@@ -593,6 +544,7 @@
     <li><a href="https://github.com/Damien-llado/snapkey-mapper">Code source</a></li>
     <li><a href="https://github.com/Damien-llado/snapkey-mapper/issues">Signaler un bug</a></li>
     <li><a href="/fr/oneplus-plus-key/">OnePlus Plus Key</a></li>
+    <li><a href="/find-x9-pro-snap-key/">OPPO Find X9 Pro</a></li>
     <li><a href="/fr/what-is-snap-key/">C’est quoi la Snap Key ?</a></li>
     <li><a href="/fr/shortcuts/">Idées de raccourcis</a></li>
     <li><a href="/fr/setup/">Installation en vidéo</a></li>
@@ -605,6 +557,6 @@
   <ul aria-label="Languages"><li><a href="/" hreflang="en" lang="en">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr" aria-current="page">Français</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li><li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="/it/" hreflang="it" lang="it">Italiano</a></li><li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt</a></li><li><a href="/th/" hreflang="th" lang="th">ไทย</a></li></ul>
 </footer>
 
-<script src="/assets/site.js?v=8"></script>
+<script src="/assets/site.js?v=9"></script>
 </body>
 </html>

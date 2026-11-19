@@ -16,7 +16,7 @@
   --line-2: #C3D0C6;
   --ink: #0E1914;
   --muted: #56665E;
-  --accent: #0A8A63;
+  --accent: #087A57;
   --accent-2: #128FA8;
   --accent-ink: #FFFFFF;
   --warn: #A35A00;
@@ -26,9 +26,9 @@
   --b1: rgb(47 211 154 / .30); --b2: rgb(240 138 62 / .16); --b3: rgb(91 141 239 / .16);
   --grid-op: .32;
   --shadow: 0 1px 2px rgb(14 25 20 / .05), 0 12px 32px -12px rgb(14 25 20 / .18);
-  /* Ces teintes restent sombres dans les deux thèmes : terminal, téléphone, appel final */
+  /* Ces teintes restent sombres dans les deux thèmes : terminal, appel final */
   --term-bg: #0C1310; --term-ink: #D8F3E5; --term-dim: #7E9A8C;
-  --frame: #121815; --final-a: #0B6E50; --final-b: #0C3328; --final-ink: #F0FFF7;
+  --final-a: #0B6E50; --final-b: #0C3328; --final-ink: #F0FFF7;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans CJK SC", "Noto Sans JP", "Noto Sans Devanagari", sans-serif;
   --display: "Bricolage Grotesque", var(--sans);
   --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
@@ -87,8 +87,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   background: color-mix(in oklab, var(--bg) 72%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--line) 70%, transparent); }
 .nav-in { max-width: var(--wide); margin: 0 auto; padding: .7rem var(--gut); display: flex; align-items: center; gap: 1rem; }
 .brand { display: flex; align-items: center; gap: .55rem; font: 700 1.05rem var(--display); color: var(--ink); text-decoration: none; }
-.brand svg { width: 26px; height: 26px; }
-.brand-key { fill: var(--accent); stroke: none; }
+.brand img { display: block; width: 28px; height: 28px; }
 .nav-links { display: flex; gap: 1.4rem; margin-left: auto; font-size: .95rem; }
 .nav-links a { color: var(--muted); text-decoration: none; }
 .nav-links a:hover { color: var(--ink); }
@@ -162,7 +161,7 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .hero-copy > * { animation: fadeUp .6s cubic-bezier(.2, .8, .2, 1) both; }
 .hero-copy > :nth-child(2) { animation-delay: .07s; } .hero-copy > :nth-child(3) { animation-delay: .14s; } .hero-copy > :nth-child(4) { animation-delay: .21s; }
 .hero-copy > :nth-child(5) { animation-delay: .28s; } .hero-copy > :nth-child(6) { animation-delay: .35s; }
-.stage { animation: stageIn 1s cubic-bezier(.2, .8, .2, 1) .3s both; }
+.hero .stage { animation: stageIn 1s cubic-bezier(.2, .8, .2, 1) .3s both; }
 @keyframes stageIn { from { opacity: 0; translate: 0 28px; scale: .95; } }
 @keyframes capIn { from { opacity: 0; scale: .3; } }
 
@@ -177,62 +176,14 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
   background: linear-gradient(135deg, color-mix(in oklab, var(--c) 55%, transparent), transparent); animation: cell 6s ease-in-out var(--d) infinite; }
 @keyframes cell { 0%, 100% { opacity: 0; } 35%, 60% { opacity: .55; } }
 
-/* Scène 3D */
-.stage { position: relative; height: clamp(400px, 62vw, 560px); margin-top: 1.5rem; perspective: 1100px; display: grid; place-items: center; }
-.floaters { position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none; }
-.phone { position: relative; width: clamp(170px, 34vw, 216px); aspect-ratio: 9 / 19; transform-style: preserve-3d;
-  transform: rotateX(calc(10deg - var(--my) * 8deg)) rotateY(calc(26deg + var(--mx) * 16deg)) rotateZ(-3deg);
-  transition: transform .6s cubic-bezier(.2, .8, .2, 1); animation: bob 7s ease-in-out infinite; }
-@keyframes bob { 50% { translate: 0 -12px; } }
-.slab, .face { position: absolute; inset: 0; border-radius: 30px; }
-.slab { background: color-mix(in oklab, var(--frame) 80%, #6b7d74); }
-.s1 { transform: translateZ(-2px); } .s2 { transform: translateZ(-4px); } .s3 { transform: translateZ(-6px); }
-.s4 { transform: translateZ(-8px); background: var(--frame); box-shadow: 0 40px 70px -20px rgb(0 0 0 / .45); }
-.face { background: var(--frame); padding: 7px; box-shadow: inset 0 0 0 1px rgb(255 255 255 / .08); }
-.snapkey { position: absolute; left: -5px; top: 15%; width: 8px; height: 13%; border-radius: 4px; transform: translateZ(-4px);
-  background: linear-gradient(180deg, #4BE3A8, #0A8A63); box-shadow: 0 0 18px #2FD39A; }
-.ping { position: absolute; left: -26px; top: calc(15% + 6.5% - 22px); width: 44px; height: 44px; border-radius: 50%; border: 2px solid #2FD39A; opacity: 0; transform: translateZ(-4px); }
-.snapkey { animation: push .5s ease 1.45s; } .ping { animation: ping .9s ease-out 1.45s; }
-.pressed .snapkey { animation: push .5s ease; }
-.pressed .ping { animation: ping .9s ease-out; }
-@keyframes push { 35% { translate: 3px 0; filter: brightness(1.4); } }
-@keyframes ping { 0% { opacity: .9; scale: .4; } 100% { opacity: 0; scale: 1.6; } }
-.screen { position: relative; height: 100%; border-radius: 23px; overflow: hidden; padding: 12px 12px; display: flex; flex-direction: column; gap: 14px;
-  background: linear-gradient(165deg, #1B3A2E, #0E1A16 55%, #1A2240); color: #EAF5EF; }
-.status { display: flex; justify-content: space-between; font: 600 10px var(--sans); opacity: .8; }
-.apps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: auto; }
-.apps img { animation: capIn .45s cubic-bezier(.3, 1.5, .5, 1) .75s both; display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 24%; }
-.apps img:nth-child(n+5) { animation-delay: .85s; } .apps img:nth-child(n+9) { animation-delay: .95s; } .apps img:nth-child(n+13) { animation-delay: 1.05s; }
-.launch { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 16px;
-  background: radial-gradient(120% 80% at 0% 10%, color-mix(in oklab, var(--h) 75%, white), var(--h) 45%, color-mix(in oklab, var(--h) 45%, black)); color: #fff;
-  transform-origin: 0% 20%; animation: open .6s cubic-bezier(.2, .9, .25, 1) 1.7s both; }
-.launch.go { animation: open .6s cubic-bezier(.2, .9, .25, 1); }
-@keyframes open { from { scale: .12; opacity: 0; border-radius: 40px; } }
-.launch-ico { width: 64px; height: 64px; border-radius: 24%; box-shadow: 0 10px 22px -8px rgb(0 0 0 / .5); }
-.launch-ico img { display: block; width: 100%; height: 100%; border-radius: inherit; }
-.launch strong { font: 700 18px var(--display); letter-spacing: -.01em; }
-.launch small { font: 11px var(--mono); opacity: .85; overflow-wrap: anywhere; }
-.stage-label { position: absolute; left: calc(50% - clamp(170px, 34vw, 216px) - 3.5rem); top: 22%; margin: 0; font: 600 .85rem var(--display); color: var(--accent); text-align: right; }
+/* Scène 3D : téléphone 3D des vidéos en images (docs/img/3d) ; site.js superpose l'appli suivante et fait alterner les deux */
+.stage { position: relative; height: clamp(400px, 62vw, 560px); margin-top: 1.5rem; perspective: 1100px; display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); place-items: center; }
+.stage img { grid-area: 1 / 1; display: block; width: auto; height: 100%; max-width: 100%; object-fit: contain; }
+.s3d-i { opacity: 0; transition: opacity .14s ease, translate .6s cubic-bezier(.2, .8, .2, 1); translate: calc(var(--mx) * 12px) calc(var(--my) * 8px); animation: bob 7s ease-in-out infinite; }
+.s3d-i.on { opacity: 1; transition-delay: .14s, 0s; } /* l'une s'efface, puis l'autre apparaît : pas de double téléphone */
+@keyframes bob { 50% { transform: translateY(-12px); } }
+.stage-label { position: absolute; right: calc(50% + 11.5rem); top: 25%; margin: 0; font: 600 .85rem var(--display); color: var(--accent); text-align: right; }
 .stage-label span { display: block; font: 400 .75rem var(--sans); color: var(--muted); }
-
-/* Objets qui flottent : touches extrudées (5 couches) */
-.cap { --s: 58px; --d: 30; position: absolute; width: var(--s); height: var(--s); transform-style: preserve-3d;
-  translate: calc(var(--mx) * var(--d) * 1px) calc(var(--my) * var(--d) * 1px); transition: translate .8s cubic-bezier(.2, .8, .2, 1);
-  animation: float var(--t, 9s) ease-in-out var(--dl, 0s) infinite alternate, capIn .8s cubic-bezier(.3, 1.5, .5, 1) calc(.7s + var(--k, 0) * .09s) both; }
-.cap b { position: absolute; inset: 0; border-radius: 30%; background: color-mix(in oklab, var(--h) 62%, black); }
-.cap b:nth-child(1) { transform: translateZ(-12px); box-shadow: 0 18px 30px -10px rgb(0 0 0 / .35); }
-.cap b:nth-child(2) { transform: translateZ(-9px); } .cap b:nth-child(3) { transform: translateZ(-6px); } .cap b:nth-child(4) { transform: translateZ(-3px); }
-.cap b:nth-child(5) { display: grid; place-items: center; color: var(--fg, #fff); background: linear-gradient(150deg, color-mix(in oklab, var(--h) 60%, white), var(--h) 60%);
-  box-shadow: inset 0 1px 1px rgb(255 255 255 / .6), inset 0 -2px 6px rgb(0 0 0 / .15); }
-.cap svg { width: 46%; height: 46%; stroke-width: 2.2; }
-.cap b img { display: block; width: 100%; height: 100%; border-radius: inherit; }
-@keyframes float { from { transform: rotateX(var(--rx, 20deg)) rotateY(var(--ry, -25deg)) translateY(0); } to { transform: rotateX(calc(var(--rx, 20deg) - 18deg)) rotateY(calc(var(--ry, -25deg) + 30deg)) translateY(-18px); } }
-.c1 { --k: 0; left: 8%; top: 8%; --s: 64px; --d: 40; --t: 8s; --rx: 24deg; --ry: 28deg; }
-.c2 { --k: 1; right: 9%; top: 14%; --s: 54px; --d: -34; --t: 10s; --dl: -3s; --rx: 16deg; --ry: -30deg; }
-.c3 { --k: 2; left: 14%; bottom: 14%; --s: 50px; --d: 26; --t: 11s; --dl: -5s; }
-.c4 { --k: 3; right: 15%; bottom: 10%; --s: 60px; --d: -44; --t: 9s; --dl: -2s; --rx: 28deg; --ry: 20deg; }
-.c5 { --k: 4; right: 27%; top: 2%; --s: 40px; --d: 18; --t: 12s; --dl: -7s; }
-.c6 { --k: 5; left: 27%; top: 64%; --s: 38px; --d: -20; --t: 10s; --dl: -4s; --ry: 34deg; }
 .ring { position: absolute; left: 50%; top: 50%; width: min(560px, 92vw); aspect-ratio: 1; margin: calc(min(560px, 92vw) / -2) 0 0 calc(min(560px, 92vw) / -2);
   border-radius: 50%; border: 1.5px dashed var(--line-2); transform: rotateX(72deg) rotateZ(0deg); animation: orbit 60s linear infinite; }
 .r2 { width: min(400px, 70vw); margin: calc(min(400px, 70vw) / -2) 0 0 calc(min(400px, 70vw) / -2); border-style: solid; border-color: color-mix(in oklab, var(--accent) 35%, transparent);
@@ -412,27 +363,19 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 @keyframes hold { 0%, 10% { background-position: 100% 0; } 60%, 100% { background-position: 0 0; } }
 .cards svg { width: 30px; height: 30px; color: var(--accent); margin-bottom: .7rem; }
 
-/* Quatre gestes : dans chaque carte, le téléphone du héros réduit par scale ; la touche s'allume une, deux ou trois fois, ou longtemps, puis l'écran s'ouvre.
-   Boucle de 4 s. Sans animation (mouvement réduit), l'état final reste : touche allumée, écran ouvert. */
+/* Quatre gestes : dans chaque carte, le téléphone 3D au repos puis l'appli ouverte ; la touche s'allume une, deux ou trois fois, ou longtemps.
+   Boucle de 4 s. Sans animation (mouvement réduit), l'état final reste : l'appli ouverte. */
 .trio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (min-width: 1100px) { .trio { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .trio { grid-template-columns: minmax(0, 1fr); } }
 .trio li { display: flex; flex-direction: column; gap: .55rem; }
 .trio .g { margin: 0; height: 24px; }
-.trio .stage { height: 220px; margin: 0 0 .3rem; animation: none; background: radial-gradient(closest-side, color-mix(in oklab, var(--h) 22%, transparent), transparent); }
-.trio .phone { position: absolute; left: calc(50% - 90px); top: calc(50% - 190px); width: 180px; scale: .55; }
-.trio .snapkey { left: -10px; width: 14px; box-shadow: 0 0 28px 4px #2FD39A; }
-.trio .snapkey, .trio .g i { animation: k1 4s ease-in-out infinite; }
-.trio .double .snapkey { animation-name: k2; }
-.trio .double .g i:nth-child(2) { animation-delay: .38s; }
-.trio .triple .snapkey { animation-name: k4; }
-.trio .triple .g i:nth-child(1) { animation-delay: -.04s; } .trio .triple .g i:nth-child(2) { animation-delay: .3s; } .trio .triple .g i:nth-child(3) { animation-delay: .64s; }
-.trio .long .snapkey { animation-name: k3; }
-.trio .long .g i { animation: fill 4s ease-in-out infinite; background-position: 0 0; }
-.trio .launch { animation: scr 4s cubic-bezier(.2, .9, .25, 1) var(--o, .7s) infinite both; }
-.trio .double .launch { --o: 1.05s; } .trio .triple .launch { --o: 1.25s; } .trio .long .launch { --o: .95s; }
-.trio .launch-ico { width: 80px; height: 80px; }
-.trio .launch strong { font-size: 30px; }
+.trio .stage { height: 250px; margin: 0 0 .3rem; animation: none; background: radial-gradient(closest-side, color-mix(in oklab, var(--h) 22%, transparent), transparent); }
+.trio .stage img:first-child { opacity: 0; animation: idle3d 4s ease var(--o, .7s) infinite both; }
+.trio .stage .app { animation: app3d 4s ease var(--o, .7s) infinite both; }
+.trio .double { --o: 1.05s; } .trio .triple { --o: 1.25s; } .trio .long { --o: .95s; }
+@keyframes app3d { 0% { opacity: 0; } 6%, 68% { opacity: 1; } 76%, 100% { opacity: 0; } }
+@keyframes idle3d { 0% { opacity: 1; } 6%, 68% { opacity: 0; } 76%, 100% { opacity: 1; } }
 @keyframes k1 { 0%, 7%, 16.5%, 100% { opacity: .3; } 9%, 14.5% { opacity: 1; } }
 @keyframes k2 { 0%, 7%, 16.5%, 26.5%, 100% { opacity: .3; } 9%, 14.5%, 18.5%, 24.5% { opacity: 1; } }
 @keyframes k4 { 0%, 6%, 14.5%, 23%, 31.5%, 100% { opacity: .3; } 8%, 12.5%, 16.5%, 21%, 25%, 29.5% { opacity: 1; } }
@@ -727,3 +670,22 @@ html:not(.js) .cc-reopen { display: none; }
 /* Cibles des liens d'ancre du corps de page : l'en-tête collant ne les masque pas */
 .gestures > li, .steps > li { scroll-margin-top: calc(var(--navh, 3.7rem) + 1rem); }
 main > section[id] { scroll-margin-top: 1rem; }
+
+/* Menu « Phones » de la nav : liste déroulante (details), comme le menu des langues */
+.nav-dd { position: relative; }
+.nav-dd summary { cursor: pointer; list-style: none; color: var(--muted); }
+.nav-dd summary::-webkit-details-marker { display: none; }
+.nav-dd summary::after { content: ""; display: inline-block; width: .36em; height: .36em; margin-left: .45em; border: solid currentColor; border-width: 0 1.5px 1.5px 0; rotate: 45deg; translate: 0 -.2em; }
+.nav-dd summary:hover, .nav-dd[open] summary { color: var(--ink); }
+.nav-dd ul { position: absolute; left: -.9rem; top: 2rem; z-index: 30; margin: 0; padding: .4rem 0; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; min-width: 12rem; box-shadow: var(--shadow); }
+.nav-dd li a { display: block; padding: .4rem .9rem; color: var(--ink); white-space: nowrap; }
+.nav-dd li a:hover { color: var(--accent); }
+/* Sur téléphone, la nav passe sur une seconde ligne sous le logo (elle était cachée) */
+@media (max-width: 900px) {
+  .nav-in { flex-wrap: wrap; row-gap: .25rem; }
+  .nav-links { display: flex; order: 3; flex: 1 0 100%; margin: 0; gap: .4rem 1.1rem; flex-wrap: wrap; font-size: .9rem; }
+  .past-hero .nav-links { display: none; }
+}
+/* La nav sur deux lignes descend le menu des langues : il défile au lieu de sortir de l'écran */
+.lang ul { max-height: calc(100vh - 6rem); overflow-y: auto; }
+@media (min-width: 901px) and (max-width: 1099px) { .nav-links { gap: 1.1rem; } }

@@ -19,10 +19,24 @@
   .uses .st { grid-column: 2; justify-self: start; }
 }
 .op .narrow > p a, .op .narrow .sub a { overflow-wrap: anywhere; }
-/* Pas de téléphone 3D à côté du texte : en grand écran le héros reste une colonne centrée */
+/* Sans téléphone 3D à côté du texte : en grand écran le héros reste une colonne centrée */
 @media (min-width: 1000px) {
   .op-hero { display: block; text-align: center; }
   .op-hero .hero-copy { max-width: 50rem; margin: 0 auto; }
   .op-hero .ctas { justify-content: center; }
 }
 #adds .cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+/* Héros avec le téléphone 3D (OnePlus, Snap Key, Find X9 Pro) : deux colonnes comme l'accueil, image sous le texte sur téléphone */
+.op-hero .stage { height: clamp(300px, 78vw, 420px); margin-top: .5rem; }
+@media (min-width: 1000px) {
+  .op-hero:has(.stage) { display: grid; text-align: left; }
+  .op-hero:has(.stage) .hero-copy { margin: 0; }
+  .op-hero:has(.stage) .ctas { justify-content: flex-start; }
+  .op-hero:has(.stage) .lead { margin-inline: 0; text-align: left; }
+  .op-hero .stage { height: 500px; margin-top: 0; }
+}
+/* Idées illustrées par le téléphone 3D qui fait l'action */
+.uses li.u3d { grid-template-columns: 84px minmax(0, 1fr) auto; padding-block: .6rem; }
+.use-3d { width: 84px; height: auto; display: block; }
+@media (max-width: 480px) { .uses li.u3d { grid-template-columns: 72px minmax(0, 1fr); } .use-3d { width: 72px; } }
+.uses:has(.u3d) { grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); }

@@ -59,40 +59,39 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
   rot.insertBefore(im, rot.firstChild);
 })();
 
-// Animations : appui sur la Snap Key, l'écran ouvre la cible suivante ; inclinaison au pointeur
+// Animations : appui sur la Snap Key (téléphone 3D, touche qui s'allume), puis l'appli suivante ouverte ; inclinaison au pointeur
 (function () {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches || !document.getElementById('stage')) return;
   var T = [
-    // noms d'applis seulement : la phrase autour est traduite, pas ces mots
-    ['Claude Code', 'claude.ai/code/…', '#D97757', 'claude', 'Claude Code'],
-    ['Spotify', 'spotify:playlist:…', '#1ED760', 'spotify', 'Run playlist'],
-    ['Google Maps', 'google.navigation:q=…', '#4285F4', 'maps', 'Maps'],
-    ['Strava', 'App: Strava', '#FC4C02', 'strava', 'Strava'],
-    ['Google Docs', 'docs.google.com/…', '#4285F4', 'gdocs', 'Notes'],
-    ['Home Assistant', 'homeassistant://navigate/…', '#18BCF2', 'homeassistant', 'Home Assistant'],
-    ['WhatsApp', 'wa.me/…', '#25D366', 'whatsapp', 'WhatsApp']
+    // noms d'applis seulement : la phrase autour est traduite, pas ces mots ; image /img/3d/x9-<nom>.webp
+    ['Claude Code', 'claude'], ['Spotify', 'spotify'], ['Google Maps', 'maps'], ['Strava', 'strava'],
+    ['Google Docs', 'gdocs'], ['Home Assistant', 'homeassistant'], ['WhatsApp', 'whatsapp']
   ];
-  var i = 0, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
-      launch = document.getElementById('launch'), ico = document.getElementById('launch-i');
-  T.forEach(function (t) { new Image().src = '/img/apps/' + t[3] + '.webp'; });
+  var i = -1, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
+      cur = stage.querySelector('.s3d-i'), nxt = cur.cloneNode();
+  nxt.classList.remove('on'); nxt.removeAttribute('fetchpriority'); cur.after(nxt);
+  function img(n) { return '/img/3d/x9-' + n + '.webp'; }
+  function show(n, then) {
+    var swap = function () { nxt.onload = null; cur.classList.remove('on'); nxt.classList.add('on'); var t = cur; cur = nxt; nxt = t; if (then) then(); };
+    if (nxt.complete && nxt.getAttribute('src') === img(n)) return swap();
+    nxt.onload = swap; nxt.src = img(n);
+  }
   function cycle() {
     if (document.hidden) return;
     i = (i + 1) % T.length;
-    var t = T[i];
-    stage.classList.remove('pressed'); void stage.offsetWidth; stage.classList.add('pressed');
-    setTimeout(function () {
-      launch.style.setProperty('--h', t[2]);
-      ico.src = '/img/apps/' + t[3] + '.webp';
-      document.getElementById('launch-t').textContent = t[4];
-      document.getElementById('launch-s').textContent = t[1];
-      launch.classList.remove('go'); void launch.offsetWidth; launch.classList.add('go');
-      rot.lastChild.textContent = t[0];
-      document.getElementById('rot-i').src = '/img/apps/' + t[3] + '.webp';
-      rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
-    }, 260);
+    var t = T[i], open = function () {
+      show(t[1], function () {
+        rot.lastChild.textContent = t[0];
+        document.getElementById('rot-i').src = '/img/apps/' + t[1] + '.webp';
+        rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
+      });
+    };
+    // la page s'ouvre sur l'appui, puis Claude Code, déjà écrit dans la phrase : seule l'image change (pas de nouveau rendu du texte)
+    if (i === 0 && !cycle.ran) { cycle.ran = 1; return show(t[1]); }
+    show('key'); setTimeout(open, 450);
   }
-  // La scène d'ouverture joue d'abord (icônes, appui, Claude Code), puis le cycle démarre
-  setTimeout(function () { setInterval(cycle, 2800); }, 1800);
+  addEventListener('load', function () { T.forEach(function (t) { new Image().src = img(t[1]); }); });
+  setTimeout(function () { cycle(); setInterval(cycle, 2800); }, 1800);
 
   if (!matchMedia('(pointer: fine)').matches) return;
   var hero = document.querySelector('.hero'), raf = 0, mx = 0, my = 0;
