@@ -59,20 +59,54 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
   rot.insertBefore(im, rot.firstChild);
 })();
 
+// Quatre gestes : vidéo de chaque appui (sujets anim-<geste>), chargée à l'approche de la section, en pause hors de l'écran.
+// Elle part de l'image 60 (appli ouverte), celle de l'image fixe ; les points sous le téléphone suivent ses appuis (images 18 + début..fin).
+(function () {
+  var cards = document.querySelectorAll('.trio li[id^="g-"]'), v0 = document.createElement('video');
+  if (!cards.length || !window.IntersectionObserver || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (/^((?!chrome|chromium|android).)*safari/i.test(navigator.userAgent) || (navigator.connection && navigator.connection.saveData) || !v0.canPlayType('video/webm; codecs="vp09.00.10.08"')) return;
+  var PR = {single: [[0, 6]], double: [[0, 5], [9, 14]], triple: [[0, 5], [8, 13], [16, 21]], long: [[0, 20]]};
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      var li = e.target, v = li.querySelector('video');
+      if (!e.isIntersecting) { if (v) v.pause(); return; }
+      if (!v) {
+        var g = li.id.slice(2), dots = li.querySelectorAll('.g i'), stage = li.querySelector('.stage');
+        v = document.createElement('video');
+        v.muted = true; v.loop = true; v.playsInline = true; v.width = 380; v.height = 535; v.setAttribute('aria-hidden', 'true');
+        v.src = '/img/3d/x9-trio-' + g + '.webm';
+        v.addEventListener('loadedmetadata', function () { v.currentTime = 2; }, {once: true});
+        v.addEventListener('playing', function () { li.classList.add('vid'); }, {once: true});
+        var tick = function () {
+          var f = v.currentTime * 30 - 18;
+          if (g === 'long') dots[0].style.setProperty('--p', f < 0 || f > 92 ? 0 : Math.min(1, f / 20));
+          else PR[g].forEach(function (p, k) { if (dots[k]) dots[k].classList.toggle('on', f >= p[0] && f <= p[1] + 3); });
+          if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(tick);
+        };
+        if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(tick); else v.addEventListener('timeupdate', tick);
+        stage.appendChild(v);
+      }
+      v.play().catch(function () {});
+    });
+  }, {rootMargin: '200px 0px'});
+  cards.forEach(function (li) { io.observe(li); });
+})();
+
 // Animations : vidéo du téléphone 3D (appui sur la Snap Key, l'appli s'ouvre, comme dans les Shorts) ; inclinaison au pointeur.
 // La vidéo ne se charge qu'après la page, si le mouvement est permis et sans économie de données ; Safari n'a pas la transparence
 // du VP9 : il garde l'image fixe. La phrase « land in … » suit l'appli ouverte (images 29 + 84 n à 30 i/s, sujet anim-heros).
 (function () {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !document.getElementById('stage')) return;
+  var stage = document.querySelector('.hero .stage.s3d'); // accueil et pages OnePlus, Snap Key, Find X9 Pro (data-v : leur vidéo)
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !stage) return;
   var T = [ // noms d'applis seulement : la phrase autour est traduite, pas ces mots
     ['Claude Code', 'claude'], ['Spotify', 'spotify'], ['Google Maps', 'maps'], ['Strava', 'strava'],
     ['Google Docs', 'gdocs'], ['Home Assistant', 'homeassistant'], ['WhatsApp', 'whatsapp']
   ];
-  var stage = document.getElementById('stage'), rot = document.getElementById('rot'), v = document.createElement('video'), cur = 0;
+  var rot = document.getElementById('rot'), v = document.createElement('video'), cur = 0;
   var safari = /^((?!chrome|chromium|android).)*safari/i.test(navigator.userAgent);
   if (safari || (navigator.connection && navigator.connection.saveData) || !v.canPlayType('video/webm; codecs="vp09.00.10.08"')) return;
   function say(i) {
-    if (i === cur) return; cur = i;
+    if (i === cur || !rot) return; cur = i;
     rot.lastChild.textContent = T[i][0];
     document.getElementById('rot-i').src = '/img/apps/' + T[i][1] + '.webp';
     rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
@@ -84,7 +118,7 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
   }
   addEventListener('load', function () {
     v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('aria-hidden', 'true');
-    v.className = 's3d-v'; v.width = 760; v.height = 720; v.src = '/img/3d/x9-heros.webm';
+    v.className = 's3d-v'; v.width = 760; v.height = 720; v.src = stage.dataset.v || '/img/3d/x9-heros.webm';
     v.addEventListener('playing', function () { stage.classList.add('playing'); }, {once: true});
     if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(tick); else v.addEventListener('timeupdate', tick);
     stage.appendChild(v);
@@ -101,7 +135,8 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
   hero.addEventListener('pointerleave', function () { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
 
   // Halo qui suit le pointeur sur les tuiles
-  document.getElementById('bento').addEventListener('pointermove', function (e) {
+  var bento = document.getElementById('bento'); if (!bento) return;
+  bento.addEventListener('pointermove', function (e) {
     var t = e.target.closest('.tile'); if (!t) return;
     var r = t.getBoundingClientRect();
     t.style.setProperty('--x', (e.clientX - r.left) + 'px'); t.style.setProperty('--y', (e.clientY - r.top) + 'px');

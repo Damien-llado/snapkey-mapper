@@ -365,24 +365,19 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 @keyframes hold { 0%, 10% { background-position: 100% 0; } 60%, 100% { background-position: 0 0; } }
 .cards svg { width: 30px; height: 30px; color: var(--accent); margin-bottom: .7rem; }
 
-/* Quatre gestes : dans chaque carte, le téléphone 3D au repos puis l'appli ouverte ; la touche s'allume une, deux ou trois fois, ou longtemps.
-   Boucle de 4 s. Sans animation (mouvement réduit), l'état final reste : l'appli ouverte. */
+/* Quatre gestes : dans chaque carte, la vidéo 3D de l'appui (site.js, chargée à l'approche) ; les points suivent ses appuis.
+   Sans vidéo (Safari, mouvement réduit, économie de données) : l'image de l'appli ouverte et les points allumés. */
 .trio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (min-width: 1100px) { .trio { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .trio { grid-template-columns: minmax(0, 1fr); } }
 .trio li { display: flex; flex-direction: column; gap: .55rem; }
 .trio .g { margin: 0; height: 24px; }
 .trio .stage { height: 250px; margin: 0 0 .3rem; animation: none; background: radial-gradient(closest-side, color-mix(in oklab, var(--h) 22%, transparent), transparent); }
-.trio .stage img:first-child { opacity: 0; animation: idle3d 4s ease var(--o, .7s) infinite both; }
-.trio .stage .app { animation: app3d 4s ease var(--o, .7s) infinite both; }
-.trio .double { --o: 1.05s; } .trio .triple { --o: 1.25s; } .trio .long { --o: .95s; }
-@keyframes app3d { 0% { opacity: 0; } 6%, 68% { opacity: 1; } 76%, 100% { opacity: 0; } }
-@keyframes idle3d { 0% { opacity: 1; } 6%, 68% { opacity: 0; } 76%, 100% { opacity: 1; } }
-@keyframes k1 { 0%, 7%, 16.5%, 100% { opacity: .3; } 9%, 14.5% { opacity: 1; } }
-@keyframes k2 { 0%, 7%, 16.5%, 26.5%, 100% { opacity: .3; } 9%, 14.5%, 18.5%, 24.5% { opacity: 1; } }
-@keyframes k4 { 0%, 6%, 14.5%, 23%, 31.5%, 100% { opacity: .3; } 8%, 12.5%, 16.5%, 21%, 25%, 29.5% { opacity: 1; } }
-@keyframes k3 { 0%, 7%, 36%, 100% { opacity: .3; } 9%, 34% { opacity: 1; } }
-@keyframes fill { 0%, 9% { background-position: 100% 0; } 34%, 82% { background-position: 0 0; } 92%, 100% { background-position: 100% 0; } }
+.trio .stage video { opacity: 0; } .trio .vid .stage video { opacity: 1; } .trio .vid .stage img { visibility: hidden; }
+.trio .g i { animation: none; }
+.trio .g-long i { background-position: 0 0; }
+.trio .vid .g i { opacity: .3; transition: opacity .06s; } .trio .vid .g i.on { opacity: 1; }
+.trio .vid .g-long i { opacity: 1; background-position: calc((1 - var(--p, 0)) * 100%) 0; }
 
 /* Pourquoi */
 .narrow > p { margin: 0 0 1rem; }
