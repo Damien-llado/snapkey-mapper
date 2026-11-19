@@ -409,7 +409,7 @@ th, td { text-align: left; padding: .8rem 1rem; border-bottom: 1px solid var(--l
 tr:last-child td { border-bottom: 0; }
 th { color: var(--muted); font-weight: 600; font-size: .85rem; }
 .st { display: inline-block; padding: .1rem .55rem; border-radius: 999px; font-size: .82rem; background: var(--code-bg); color: var(--muted); }
-.st.ok { background: color-mix(in oklab, var(--accent) 16%, transparent); color: var(--accent); font-weight: 600; }
+.st.ok { background: color-mix(in oklab, var(--accent) 16%, transparent); color: color-mix(in oklab, var(--accent) 78%, var(--ink)); font-weight: 600; } /* contraste 4,5 sur son fond teinté */
 
 /* FAQ, ouverture douce là où le navigateur le permet */
 .faq details { margin: 0 0 .6rem; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); transition: border-color .3s; }
