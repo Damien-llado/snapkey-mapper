@@ -72,7 +72,11 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
   nxt.classList.remove('on'); nxt.removeAttribute('fetchpriority'); cur.after(nxt);
   function img(n) { return '/img/3d/x9-' + n + '.webp'; }
   function show(n, then) {
-    var swap = function () { nxt.onload = null; cur.classList.remove('on'); nxt.classList.add('on'); var t = cur; cur = nxt; nxt = t; if (then) then(); };
+    var swap = function () {
+      nxt.onload = null; var old = cur; old.classList.add('out'); old.classList.remove('on'); nxt.classList.add('on');
+      setTimeout(function () { old.classList.remove('out'); }, 280);
+      cur = nxt; nxt = old; if (then) then();
+    };
     if (nxt.complete && nxt.getAttribute('src') === img(n)) return swap();
     nxt.onload = swap; nxt.src = img(n);
   }

@@ -163,7 +163,6 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 .hero-copy > :nth-child(5) { animation-delay: .28s; } .hero-copy > :nth-child(6) { animation-delay: .35s; }
 .hero .stage { animation: stageIn 1s cubic-bezier(.2, .8, .2, 1) .3s both; }
 @keyframes stageIn { from { opacity: 0; translate: 0 28px; scale: .95; } }
-@keyframes capIn { from { opacity: 0; scale: .3; } }
 
 /* Grille de fond en dégradé de couleurs, quelques cases qui s'allument */
 .gridbg { position: absolute; z-index: -1; top: -4rem; bottom: 0; left: calc(50% - 50vw); width: 100vw; pointer-events: none; overflow: hidden;
@@ -179,8 +178,9 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 /* Scène 3D : téléphone 3D des vidéos en images (docs/img/3d) ; site.js superpose l'appli suivante et fait alterner les deux */
 .stage { position: relative; height: clamp(400px, 62vw, 560px); margin-top: 1.5rem; perspective: 1100px; display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); place-items: center; }
 .stage img { grid-area: 1 / 1; display: block; width: auto; height: 100%; max-width: 100%; object-fit: contain; }
-.s3d-i { opacity: 0; transition: opacity .14s ease, translate .6s cubic-bezier(.2, .8, .2, 1); translate: calc(var(--mx) * 12px) calc(var(--my) * 8px); animation: bob 7s ease-in-out infinite; }
-.s3d-i.on { opacity: 1; transition-delay: .14s, 0s; } /* l'une s'efface, puis l'autre apparaît : pas de double téléphone */
+.s3d-i { opacity: 0; transition: translate .6s cubic-bezier(.2, .8, .2, 1); translate: calc(var(--mx) * 12px) calc(var(--my) * 8px); animation: bob 7s ease-in-out infinite; }
+.s3d-i.on { opacity: 1; z-index: 1; transition: opacity .25s ease, translate .6s cubic-bezier(.2, .8, .2, 1); }
+.s3d-i.out { opacity: 1; } /* l'ancienne reste dessous pendant le fondu de la nouvelle, puis disparaît d'un coup : ni trou ni flash */
 @keyframes bob { 50% { transform: translateY(-12px); } }
 .stage-label { position: absolute; right: calc(50% + 11.5rem); top: 25%; margin: 0; font: 600 .85rem var(--display); color: var(--accent); text-align: right; }
 .stage-label span { display: block; font: 400 .75rem var(--sans); color: var(--muted); }
@@ -381,7 +381,6 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 @keyframes k4 { 0%, 6%, 14.5%, 23%, 31.5%, 100% { opacity: .3; } 8%, 12.5%, 16.5%, 21%, 25%, 29.5% { opacity: 1; } }
 @keyframes k3 { 0%, 7%, 36%, 100% { opacity: .3; } 9%, 34% { opacity: 1; } }
 @keyframes fill { 0%, 9% { background-position: 100% 0; } 34%, 82% { background-position: 0 0; } 92%, 100% { background-position: 100% 0; } }
-@keyframes scr { 0% { opacity: 0; scale: .12; border-radius: 40px; } 10%, 68% { opacity: 1; scale: 1; border-radius: 0; } 76%, 100% { opacity: 0; } }
 
 /* Pourquoi */
 .narrow > p { margin: 0 0 1rem; }
@@ -684,7 +683,6 @@ main > section[id] { scroll-margin-top: 1rem; }
 @media (max-width: 900px) {
   .nav-in { flex-wrap: wrap; row-gap: .25rem; }
   .nav-links { display: flex; order: 3; flex: 1 0 100%; margin: 0; gap: .4rem 1.1rem; flex-wrap: wrap; font-size: .9rem; }
-  .past-hero .nav-links { display: none; }
 }
 /* La nav sur deux lignes descend le menu des langues : il défile au lieu de sortir de l'écran */
 .lang ul { max-height: calc(100vh - 6rem); overflow-y: auto; }
