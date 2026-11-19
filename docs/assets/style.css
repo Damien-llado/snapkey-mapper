@@ -471,7 +471,7 @@ footer ul { list-style: none; padding: 0; margin: .8rem 0; display: flex; flex-w
 }
 /* Sous 760 px, le lien Sponsor ferait passer la nav sur deux lignes (pt-br jusqu'à 711 px) : il va dans le menu des langues */
 @media (max-width: 760px) {
-  .nav-links a:last-child { display: none; }
+  .nav-links > a:last-child { display: none; }
   .lang .lang-sponsor { display: block; }
 }
 @media (max-width: 640px) {
