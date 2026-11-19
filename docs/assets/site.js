@@ -59,43 +59,37 @@ if (storyForm) storyForm.addEventListener('submit', function (e) {
   rot.insertBefore(im, rot.firstChild);
 })();
 
-// Animations : appui sur la Snap Key (téléphone 3D, touche qui s'allume), puis l'appli suivante ouverte ; inclinaison au pointeur
+// Animations : vidéo du téléphone 3D (appui sur la Snap Key, l'appli s'ouvre, comme dans les Shorts) ; inclinaison au pointeur.
+// La vidéo ne se charge qu'après la page, si le mouvement est permis et sans économie de données ; Safari n'a pas la transparence
+// du VP9 : il garde l'image fixe. La phrase « land in … » suit l'appli ouverte (images 29 + 84 n à 30 i/s, sujet anim-heros).
 (function () {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches || !document.getElementById('stage')) return;
-  var T = [
-    // noms d'applis seulement : la phrase autour est traduite, pas ces mots ; image /img/3d/x9-<nom>.webp
+  var T = [ // noms d'applis seulement : la phrase autour est traduite, pas ces mots
     ['Claude Code', 'claude'], ['Spotify', 'spotify'], ['Google Maps', 'maps'], ['Strava', 'strava'],
     ['Google Docs', 'gdocs'], ['Home Assistant', 'homeassistant'], ['WhatsApp', 'whatsapp']
   ];
-  var i = -1, rot = document.getElementById('rot'), stage = document.getElementById('stage'),
-      cur = stage.querySelector('.s3d-i'), nxt = cur.cloneNode();
-  nxt.classList.remove('on'); nxt.removeAttribute('fetchpriority'); cur.after(nxt);
-  function img(n) { return '/img/3d/x9-' + n + '.webp'; }
-  function show(n, then) {
-    var swap = function () {
-      nxt.onload = null; var old = cur; old.classList.add('out'); old.classList.remove('on'); nxt.classList.add('on');
-      setTimeout(function () { old.classList.remove('out'); }, 280);
-      cur = nxt; nxt = old; if (then) then();
-    };
-    if (nxt.complete && nxt.getAttribute('src') === img(n)) return swap();
-    nxt.onload = swap; nxt.src = img(n);
+  var stage = document.getElementById('stage'), rot = document.getElementById('rot'), v = document.createElement('video'), cur = 0;
+  var safari = /^((?!chrome|chromium|android).)*safari/i.test(navigator.userAgent);
+  if (safari || (navigator.connection && navigator.connection.saveData) || !v.canPlayType('video/webm; codecs="vp09.00.10.08"')) return;
+  function say(i) {
+    if (i === cur) return; cur = i;
+    rot.lastChild.textContent = T[i][0];
+    document.getElementById('rot-i').src = '/img/apps/' + T[i][1] + '.webp';
+    rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
   }
-  function cycle() {
-    if (document.hidden) return;
-    i = (i + 1) % T.length;
-    var t = T[i], open = function () {
-      show(t[1], function () {
-        rot.lastChild.textContent = t[0];
-        document.getElementById('rot-i').src = '/img/apps/' + t[1] + '.webp';
-        rot.classList.remove('go'); void rot.offsetWidth; rot.classList.add('go');
-      });
-    };
-    // la page s'ouvre sur l'appui, puis Claude Code, déjà écrit dans la phrase : seule l'image change (pas de nouveau rendu du texte)
-    if (i === 0 && !cycle.ran) { cycle.ran = 1; return show(t[1]); }
-    show('key'); setTimeout(open, 450);
+  function tick() {
+    var n = Math.floor((v.currentTime * 30 - 29) / 84);
+    if (n >= 0 && n < T.length) say(n);
+    if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(tick);
   }
-  addEventListener('load', function () { T.forEach(function (t) { new Image().src = img(t[1]); }); });
-  setTimeout(function () { cycle(); setInterval(cycle, 2800); }, 1800);
+  addEventListener('load', function () {
+    v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('aria-hidden', 'true');
+    v.className = 's3d-v'; v.width = 760; v.height = 720; v.src = '/img/3d/x9-heros.webm';
+    v.addEventListener('playing', function () { stage.classList.add('playing'); }, {once: true});
+    if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(tick); else v.addEventListener('timeupdate', tick);
+    stage.appendChild(v);
+    new IntersectionObserver(function (e) { if (e[0].isIntersecting) v.play().catch(function () {}); else v.pause(); }).observe(stage);
+  });
 
   if (!matchMedia('(pointer: fine)').matches) return;
   var hero = document.querySelector('.hero'), raf = 0, mx = 0, my = 0;

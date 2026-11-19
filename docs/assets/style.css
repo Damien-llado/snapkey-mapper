@@ -88,7 +88,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .nav-in { max-width: var(--wide); margin: 0 auto; padding: .7rem var(--gut); display: flex; align-items: center; gap: 1rem; }
 .brand { display: flex; align-items: center; gap: .55rem; font: 700 1.05rem var(--display); color: var(--ink); text-decoration: none; }
 .brand img { display: block; width: 28px; height: 28px; }
-.nav-links { display: flex; gap: 1.4rem; margin-left: auto; font-size: .95rem; }
+.nav-links { display: flex; gap: 1.1rem; margin-left: auto; font-size: .95rem; }
 .nav-links a { color: var(--muted); text-decoration: none; }
 .nav-links a:hover { color: var(--ink); }
 .nav-end { display: flex; align-items: center; gap: .6rem; }
@@ -177,10 +177,12 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 
 
 /* Scène 3D : téléphone 3D des vidéos en images (docs/img/3d) ; site.js superpose l'appli suivante et fait alterner les deux */
 .stage { position: relative; height: clamp(400px, 62vw, 560px); margin-top: 1.5rem; perspective: 1100px; display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); place-items: center; }
-.stage img { grid-area: 1 / 1; display: block; width: auto; height: 100%; max-width: 100%; object-fit: contain; }
-.s3d-i { opacity: 0; transition: translate .6s cubic-bezier(.2, .8, .2, 1); translate: calc(var(--mx) * 12px) calc(var(--my) * 8px); animation: bob 7s ease-in-out infinite; }
-.s3d-i.on { opacity: 1; z-index: 1; transition: opacity .25s ease, translate .6s cubic-bezier(.2, .8, .2, 1); }
-.s3d-i.out { opacity: 1; } /* l'ancienne reste dessous pendant le fondu de la nouvelle, puis disparaît d'un coup : ni trou ni flash */
+.stage img, .stage video { grid-area: 1 / 1; display: block; width: auto; height: 100%; max-width: 100%; object-fit: contain; }
+.s3d-v { opacity: 0; translate: calc(var(--mx) * 12px) calc(var(--my) * 8px); transition: translate .6s cubic-bezier(.2, .8, .2, 1); }
+.playing .s3d-v { opacity: 1; } .playing .s3d-i { visibility: hidden; } /* la vidéo démarre sur l'image fixe : même première image */
+.s3d-i { opacity: 0; transition: translate .6s cubic-bezier(.2, .8, .2, 1); translate: calc(var(--mx) * 12px) calc(var(--my) * 8px); }
+.hero .stage.s3d { animation: stageIn 1s cubic-bezier(.2, .8, .2, 1) .3s both, bob 7s ease-in-out infinite; } /* le flottement porte la scène : image et vidéo restent calées */
+.s3d-i.on { opacity: 1; }
 @keyframes bob { 50% { transform: translateY(-12px); } }
 .stage-label { position: absolute; right: calc(50% + 11.5rem); top: 25%; margin: 0; font: 600 .85rem var(--display); color: var(--accent); text-align: right; }
 .stage-label span { display: block; font: 400 .75rem var(--sans); color: var(--muted); }
@@ -686,4 +688,6 @@ main > section[id] { scroll-margin-top: 1rem; }
 }
 /* La nav sur deux lignes descend le menu des langues : il défile au lieu de sortir de l'écran */
 .lang ul { max-height: calc(100vh - 6rem); overflow-y: auto; }
-@media (min-width: 901px) and (max-width: 1099px) { .nav-links { gap: 1.1rem; } }
+/* Les entrées de la nav ne se coupent jamais en deux lignes (avec la police de secours, « ♥ Sponsor » passait à la ligne : en-tête plus haut, décalage) */
+.nav-links a, .nav-dd summary, .brand, .gh-pill { white-space: nowrap; }
+.brand { flex: none; }
