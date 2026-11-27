@@ -36,6 +36,7 @@ The four guides above in the other 12 languages (same address, with the language
 App guides, one page per app, with its library shortcuts, setup steps and FAQ (13 languages, same address with the language folder in front, for example https://remapsnapkey.com/fr/shortcuts/camera/):
 
 - [Camera](https://remapsnapkey.com/shortcuts/camera/): How to open the camera with the OPPO Snap Key?
+- [Clock](https://remapsnapkey.com/shortcuts/clock/): How to start a timer with the OPPO Snap Key?
 
 Compatibility:
 
