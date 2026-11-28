@@ -37,6 +37,7 @@ App guides, one page per app, with its library shortcuts, setup steps and FAQ (1
 
 - [Camera](https://remapsnapkey.com/shortcuts/camera/): How to open the camera with the OPPO Snap Key?
 - [Clock](https://remapsnapkey.com/shortcuts/clock/): How to start a timer with the OPPO Snap Key?
+- [Settings](https://remapsnapkey.com/shortcuts/settings/): How to open Wi-Fi or Bluetooth settings with the OPPO Snap Key?
 
 Compatibility:
 
